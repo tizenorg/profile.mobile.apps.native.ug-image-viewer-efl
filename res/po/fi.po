@@ -1,0 +1,996 @@
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Yksityinen"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Nimeä uudelleen"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Tämä video poistetaan."
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Tiedoston nimi jo käytössä."
+
+msgid "IDS_ST_BODY_OFF"
+msgstr "Pois"
+
+msgid "IDS_COM_BODY_DONE"
+msgstr "Valmis"
+
+msgid "IDS_FB_BODY_FACEBOOK"
+msgstr "Facebook"
+
+msgid "IDS_CAM_BODY_FLASH"
+msgstr "Salama"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Lopeta"
+
+msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
+msgstr "%1$s on poistettu tässä sovelluksessa käytöstä. Voit ottaa toiminnon käyttöön siirtymällä kohteeseen %2$s, valitsemalla tämän toiminnon ja sitten valitsemalla tämän sovelluksen."
+
+msgid "IDS_MEDIABR_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_MEDIABR_BUTTON_DONE"
+msgstr "Valmis"
+
+msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
+msgstr "Peruuta"
+
+msgid "IDS_GALLERY_HEADER_ENTER_NAME"
+msgstr "Kirjoita nimi"
+
+msgid "IDS_MEDIABR_POP_NO_NAME"
+msgstr "Ei nimeä"
+
+msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
+msgstr "Albumeita on vain yksi."
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Voit valita enintään %d kohdetta."
+
+msgid "IDS_IV_OPT_DETAILS"
+msgstr "Lisätiedot"
+
+msgid "IDS_IV_OPT_DELETE_ABB"
+msgstr "Poista"
+
+msgid "IDS_IV_POP_DELETE_Q"
+msgstr "Poistetaanko?"
+
+msgid "IDS_IV_BUTTON_CANCEL"
+msgstr "Peruuta"
+
+msgid "IDS_IV_POP_DELETED"
+msgstr "Poistettu."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Suosikit"
+
+msgid "IDS_IV_SK_SAVE"
+msgstr "Tallenna"
+
+msgid "IDS_IV_POP_SAVED"
+msgstr "Tallennettu."
+
+msgid "IDS_IV_BODY_SETTINGS"
+msgstr "Asetukset"
+
+msgid "IDS_IV_BODY_SIZE"
+msgstr "Koko"
+
+msgid "IDS_IV_BODY_UNKNOWN"
+msgstr "Tuntematon"
+
+msgid "IDS_IV_SK_YES"
+msgstr "Kyllä"
+
+msgid "IDS_CAM_BODY_ISO"
+msgstr "ISO"
+
+msgid "IDS_CAM_BODY_FOCAL_LENGTH"
+msgstr "Polttoväli"
+
+msgid "IDS_CAM_BODY_FLASH_ON"
+msgstr "Salama käytössä"
+
+msgid "IDS_COM_POP_IMAGE_VIEWER"
+msgstr "Kuvan katseluohjelma"
+
+msgid "IDS_MEDIABR_OPT_ALL_PICTURES"
+msgstr "Kaikki kuvat"
+
+msgid "IDS_MEDIABR_HEADER_ORIENTATION"
+msgstr "Suuntaus"
+
+msgid "IDS_MEDIABR_BODY_SELECT_PICTURE"
+msgstr "Valitse kuva"
+
+msgid "IDS_MP_BODY_DURATION"
+msgstr "Kesto"
+
+msgid "IDS_ST_POP_SET"
+msgstr "Aseta"
+
+msgid "IDS_GALLERY_BODY_TAGS"
+msgstr "Tunnisteet"
+
+msgid "IDS_IV_SK3_ADD_COMMENT"
+msgstr "Lisää kommentti"
+
+msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Näytä mediasisältö muissa laitteissa lähellä olevien laitteiden avulla."
+
+msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
+msgstr "Videotiedostot eivät sisällä tietoja ihmisistä, sillä ne eivät tue kasvotunnistetoimintoa."
+
+msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
+msgstr "Tätä kuvaa ei voi jakaa. Se on DRM-suojattu."
+
+msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
+msgstr "Tiedostoa ei voi avata."
+
+msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
+msgstr "Tallennetut säätiedot voivat poiketa todellisesta säästä päivitysaikavälin vuoksi."
+
+msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
+msgstr "Leikepöydälle kopioitua henkilökohtaista sisältöä voidaan käyttää uuden sisällön luontiin. Uutta sisältöä ei ehkä piiloteta automaattisesti."
+
+msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
+msgstr "Kuva on liian pieni."
+
+msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
+msgstr "Päivämäärätiedot näytetään vain silloin, kun muut tunnisteet ovat näkyvissä."
+
+msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
+msgstr "Valitse parhaat valokuvat painamalla pienoiskuvia jonkin aikaa."
+
+msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
+msgstr "Kuvaesityksen asetukset"
+
+msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
+msgstr "Määritä alkunäytön ja lukitusnäytön taustakuvat."
+
+msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
+msgstr "Asetetaanko tämä kuva soittajan %s tunnukseksi?"
+
+msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
+msgstr "Aseta soittajan tunnukseksi"
+
+msgid "IDS_IV_POP_SENDING_ING"
+msgstr "Lähetetään..."
+
+msgid "IDS_IV_POP_SELECT_DEVICE"
+msgstr "Valitse laite"
+
+msgid "IDS_IV_POP_SD_CARD_REMOVED"
+msgstr "SD-kortti on poistettu."
+
+msgid "IDS_IV_POP_PERMISSION_DENIED"
+msgstr "Lupa evätty."
+
+msgid "IDS_IV_POP_NO_LOCATION"
+msgstr "Sijaintia ei ole"
+
+msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
+msgstr "Kasvoja ei ole merkitty. Merkitse kuvassa olevat kasvot."
+
+msgid "IDS_IV_POP_NO_FACES_DETECTED"
+msgstr "Kasvoja ei tunnistettu."
+
+msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Muisti ei riitä. Poista joitain kohteita."
+
+msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
+msgstr "Verkkoyhteys epäonnistui."
+
+msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
+msgstr "Merkkien enimmäismäärä (%d) on saavutettu."
+
+msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
+msgstr "Virheellinen kuvatiedosto"
+
+msgid "IDS_IV_POP_FLASH_USED_ABB"
+msgstr "Salama käytössä"
+
+msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
+msgstr "Tiedostomuotoa ei tueta."
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Tyhjä tieto"
+
+msgid "IDS_IV_POP_ENTER_TAG_NAME"
+msgstr "Anna tunnisteen nimi."
+
+msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
+msgstr "Ota automaattinen päivitys säätaustakuvassa käyttöön säätunnisteiden tarkastelua varten."
+
+msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
+msgstr "Lataus valmis"
+
+msgid "IDS_IV_POP_BEST_PHOTO"
+msgstr "Paras valokuva"
+
+msgid "IDS_IV_POP_ADDED"
+msgstr "Lisätty."
+
+msgid "IDS_IV_OPT_WRITE_CAPTION"
+msgstr "Kirjoita otsikko"
+
+msgid "IDS_IV_OPT_USE_MOTION"
+msgstr "Käytä liikettä"
+
+msgid "IDS_IV_OPT_UNFAVOURITE"
+msgstr "Ei-suosikki"
+
+msgid "IDS_IV_OPT_TRIM"
+msgstr "Rajaa"
+
+msgid "IDS_IV_OPT_TAG_FACE_ABB"
+msgstr "Merk. kasvot tunn."
+
+msgid "IDS_IV_OPT_TAG_BUDDY"
+msgstr "Merkitse kaveri"
+
+msgid "IDS_IV_OPT_TAG"
+msgstr "Tunniste"
+
+msgid "IDS_IV_OPT_START_SLIDESHOW"
+msgstr "Käynnistä kuvaesitys"
+
+msgid "IDS_IV_OPT_SLIDE_SHOW"
+msgstr "Diaesitys"
+
+msgid "IDS_IV_OPT_SLIDESHOW_ABB"
+msgstr "Kuvaesitys"
+
+msgid "IDS_IV_OPT_SHOW_ITEMS"
+msgstr "Näytä kohteet"
+
+msgid "IDS_IV_OPT_SHARE"
+msgstr "Jaa"
+
+msgid "IDS_IV_OPT_ROTATE_RIGHT"
+msgstr "Kierrä myötäpäivään"
+
+msgid "IDS_IV_OPT_ROTATE_LEFT"
+msgstr "Kierrä vastapäivään"
+
+msgid "IDS_IV_OPT_REMOVE_TAG"
+msgstr "Poista tunniste"
+
+msgid "IDS_IV_OPT_REFRESH"
+msgstr "Päivitä"
+
+msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
+msgstr "Tulosta Bluetoothin kautta"
+
+msgid "IDS_IV_OPT_MANUALLY_DETECT"
+msgstr "Tunnista manuaalisesti"
+
+msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
+msgstr "Alku- ja lukitusnäytön taustakuva"
+
+msgid "IDS_IV_OPT_HIDDEN_ITEMS"
+msgstr "Piilotetut kohteet"
+
+msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
+msgstr "Hae sijainti"
+
+msgid "IDS_IV_OPT_FILE_TRANSFER"
+msgstr "Tiedostonsiirto"
+
+msgid "IDS_IV_OPT_ERASER"
+msgstr "Pyyhekumi"
+
+msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
+msgstr "Muokkaa säätunnist."
+
+msgid "IDS_IV_OPT_EDIT_TAG"
+msgstr "Muo. tunn."
+
+msgid "IDS_IV_OPT_EDIT_CAPTION"
+msgstr "Muokkaa otsikkoa"
+
+msgid "IDS_IV_OPT_DELETE_CAPTION"
+msgstr "Poista kuvateksti"
+
+msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
+msgstr "Kopioi leikepöydälle"
+
+msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
+msgstr "Yhteystiedot"
+
+msgid "IDS_IV_OPT_CLOUD"
+msgstr "Pilvi"
+
+msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
+msgstr "Kaverien valokuvien jakaminen"
+
+msgid "IDS_IV_OPT_BEST_FACE_ABB"
+msgstr "Parhaat kasvot"
+
+msgid "IDS_IV_OPT_AS_VIDEO_FILES"
+msgstr "Videotiedostoina"
+
+msgid "IDS_IV_OPT_AS_IMAGE_FILES"
+msgstr "Kuvatiedostoina"
+
+msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
+msgstr "Animoitu valokuva"
+
+msgid "IDS_IV_OPT_ADD_WEATHER_TAG_ABB"
+msgstr "Lisää säätunniste"
+
+msgid "IDS_IV_OPT_ADD_NAME_ABB"
+msgstr "Lisää nimi"
+
+msgid "IDS_IV_OPT_ADD_CAPTION"
+msgstr "Lisää kuvateksti"
+
+msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
+msgstr "Diaesityksen musiikki"
+
+msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
+msgstr "Jaa ääni ja kuva -kuvia"
+
+msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
+msgstr "Aseta"
+
+msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
+msgstr "Lähetä kuva hlölle"
+
+msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
+msgstr "Valitse jaettava yhteystieto"
+
+msgid "IDS_IV_HEADER_PLAY_SPEED"
+msgstr "Toistonopeus"
+
+msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
+msgstr "Luk. näytön taustak."
+
+msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
+msgstr "Perehdy kallistukseen"
+
+msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
+msgstr "Alkunäytön taustakuva"
+
+msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
+msgstr "Muokkaa säätunnist."
+
+msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
+msgstr "Muokkaa kuvasarjaa"
+
+msgid "IDS_IV_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Käyt. olevat laitt."
+
+msgid "IDS_IV_HEADER_ALL_ALBUMS"
+msgstr "Kaikki albumit"
+
+msgid "IDS_IV_HEADER_ADD_TAG"
+msgstr "Lisää tunniste"
+
+msgid "IDS_IV_BUTTON_STOP"
+msgstr "Lop."
+
+msgid "IDS_IV_BUTTON_SCAN"
+msgstr "Hae"
+
+msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Voit jakaa mediasisällön muiden laitteiden kanssa lähellä olevien laitteiden avulla."
+
+msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
+msgstr "Henkilön %s ja %d muun kanssa"
+
+msgid "IDS_IV_BODY_WITH_PS"
+msgstr "Mukana %s"
+
+msgid "IDS_IV_BODY_WHITE_BALANCE"
+msgstr "Valkotasapaino"
+
+msgid "IDS_IV_BODY_WEATHER_ABB"
+msgstr "Sää"
+
+msgid "IDS_IV_BODY_WEATHER"
+msgstr "Sää"
+
+msgid "IDS_IV_BODY_VENDOR"
+msgstr "Toimittaja"
+
+msgid "IDS_IV_BODY_VALIDITY"
+msgstr "Kelpoisuus"
+
+msgid "IDS_IV_BODY_UNLIMITED"
+msgstr "Rajoittamaton"
+
+msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
+msgstr "Valokuvaa ei voi ladata."
+
+msgid "IDS_IV_BODY_TIMED_COUNT"
+msgstr "Ajoitettu määrä"
+
+msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
+msgstr "Tallennettuja säätietoja on muokattava manuaalisesti. Laite ei tue tallennettujen säätietojen vastaanottamista sääpienoisohjelmasta."
+
+msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
+msgstr "Napauta kasvoja ihmisten tietojen tarkastelua varten."
+
+msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
+msgstr "Pienennä tai suurenna näyttöä pitämällä kahta pistettä painettuna ja kallistelemalla laitetta edestakaisin."
+
+msgid "IDS_IV_BODY_SUNNY_DAY"
+msgstr "Aurinkoinen päivä"
+
+msgid "IDS_IV_BODY_SNOWY_DAY"
+msgstr "Luminen päivä"
+
+msgid "IDS_IV_BODY_SHARE_VIA"
+msgstr "Jakotapa"
+
+msgid "IDS_IV_BODY_SERVER_NAME"
+msgstr "Palvelimen nimi"
+
+msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
+msgstr "Valitse alue kuvan leikkaamista varten."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
+msgstr "Valittu alue tulostetaan."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
+msgstr "Taustakuvana käytetään valittua aluetta."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
+msgstr "Yhteyshenkilön kuvaan sovelletaan valittua aluetta."
+
+msgid "IDS_IV_BODY_RIGHT_STATUS"
+msgstr "Oikeustila"
+
+msgid "IDS_IV_BODY_RESOLUTION"
+msgstr "Tarkkuus"
+
+msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
+msgstr "Poista suosikeista"
+
+msgid "IDS_IV_BODY_RAINY_DAY"
+msgstr "Sateinen päivä"
+
+msgid "IDS_IV_BODY_PRINT"
+msgstr "Tulosta"
+
+msgid "IDS_IV_BODY_POSSIBLE"
+msgstr "Mahdollinen"
+
+msgid "IDS_IV_BODY_PEOPLE"
+msgstr "Ihmiset"
+
+msgid "IDS_IV_BODY_N_A"
+msgstr "-"
+
+msgid "IDS_IV_BODY_NO_TAG"
+msgstr "Ei tunnistetta"
+
+msgid "IDS_IV_BODY_NEW_TAG"
+msgstr "Uusi tunniste"
+
+msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
+msgstr "Lähellä olevat laitteet"
+
+msgid "IDS_IV_BODY_MY_DEVICE"
+msgstr "Oma laite"
+
+msgid "IDS_IV_BODY_MODEL"
+msgstr "Malli"
+
+msgid "IDS_IV_BODY_ME"
+msgstr "Minä"
+
+msgid "IDS_IV_BODY_MANUFACTURER"
+msgstr "Valmistaja"
+
+msgid "IDS_IV_BODY_LONGITUDE"
+msgstr "Pituusaste"
+
+msgid "IDS_IV_BODY_LOCK_SCREEN"
+msgstr "Lukitusnäyttö"
+
+msgid "IDS_IV_BODY_LOCATION_M_PATH"
+msgstr "Sijainti"
+
+msgid "IDS_IV_BODY_LOCATION_ABB2"
+msgstr "Sijainti"
+
+msgid "IDS_IV_BODY_LOCATIONS"
+msgstr "Sijainnit"
+
+msgid "IDS_IV_BODY_LOCATION"
+msgstr "Sijainti"
+
+msgid "IDS_IV_BODY_LATITUDE"
+msgstr "Leveysaste"
+
+msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
+msgstr "Paikassa %s"
+
+msgid "IDS_IV_BODY_INTERVAL"
+msgstr "Väli"
+
+msgid "IDS_IV_BODY_INDIVIDUAL"
+msgstr "Yksittäinen"
+
+msgid "IDS_IV_BODY_IN"
+msgstr "Sisään"
+
+msgid "IDS_IV_BODY_IMPOSSIBLE"
+msgstr "Mahdoton"
+
+msgid "IDS_IV_BODY_HOME_SCREEN"
+msgstr "Alkunäyttö"
+
+msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
+msgstr "Alku- ja lukitusnäytöt"
+
+msgid "IDS_IV_BODY_FORWARDING"
+msgstr "Edelleenlähetys"
+
+msgid "IDS_IV_BODY_FLASH"
+msgstr "Flash-valikko"
+
+msgid "IDS_IV_BODY_FILE_NAME"
+msgstr "Tiedoston nimi"
+
+msgid "IDS_IV_BODY_FILE_LOCATION"
+msgstr "Tiedoston sijainti"
+
+msgid "IDS_IV_BODY_FILE_FORMAT"
+msgstr "Tiedostomuoto"
+
+msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
+msgstr "Valotusaika"
+
+msgid "IDS_IV_BODY_EXECUTE"
+msgstr "Suorita"
+
+msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
+msgstr "Ota GPS-tunnisteet kamerassa käyttöön sijaintitunnisteiden tarkastelua varten."
+
+msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
+msgstr "Ota automaattinen päivitys sääpienoisohjelmassa käyttöön säätunnisteiden tarkastelua varten."
+
+msgid "IDS_IV_BODY_DURATION"
+msgstr "Kesto"
+
+msgid "IDS_IV_BODY_DRM_INFO"
+msgstr "DRM-tiedot"
+
+msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Älä näytä uudestaan"
+
+msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
+msgstr "Älä kysy uudelleen"
+
+msgid "IDS_IV_BODY_DISPLAY"
+msgstr "Näyttö"
+
+msgid "IDS_IV_BODY_DATE_CREATED"
+msgstr "Luontipäivämäärä"
+
+msgid "IDS_IV_BODY_CROP"
+msgstr "Rajaa"
+
+msgid "IDS_IV_BODY_CREATE_TAG"
+msgstr "Luo tunn."
+
+msgid "IDS_IV_BODY_COUNT"
+msgstr "Määrä"
+
+msgid "IDS_IV_BODY_CLOUDY_DAY"
+msgstr "Pilvinen päivä"
+
+msgid "IDS_IV_BODY_CLEAR_NIGHT"
+msgstr "Kirkas yö"
+
+msgid "IDS_IV_BODY_CALLER_IMAGE"
+msgstr "Soittajan kuva"
+
+msgid "IDS_IV_BODY_BASIC"
+msgstr "Perus"
+
+msgid "IDS_IV_BODY_AVAILABLE_USES"
+msgstr "Jäljellä olevat käyttökerrat"
+
+msgid "IDS_IV_BODY_AUTO"
+msgstr "Auto"
+
+msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
+msgstr "Käytä sovelluksissa vastaavaa väriteemaa."
+
+msgid "IDS_IV_BODY_APERTURE"
+msgstr "Aukko"
+
+msgid "IDS_IV_BODY_ANY"
+msgstr "Mikä tahansa"
+
+msgid "IDS_IV_BODY_ADD_TO_FAVOURITES"
+msgstr "Lisää Suosikkeihin"
+
+msgid "IDS_IV_BODY_ACCUMULATED_TIME"
+msgstr "Kertynyt aika"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Merkkien enimmäismäärä saavutettu."
+
+msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
+msgstr "Epäonnistui"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_ST_BODY_MB"
+msgstr "Mt"
+
+msgid "IDS_ST_BODY_KB"
+msgstr "kt"
+
+msgid "IDS_ST_BODY_GB"
+msgstr "Gt"
+
+msgid "IDS_ST_BODY_EDIT"
+msgstr "Muokkaa"
+
+msgid "IDS_ST_BODY_DATE"
+msgstr "Päivämäärä"
+
+msgid "IDS_EMAIL_OPT_ACCOUNTS"
+msgstr "Tilit"
+
+msgid "IDS_GALLERY_BODY_DOWNLOAD"
+msgstr "Lataa"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
+msgstr "Kun olet lähettänyt kuvia Dropboxiin, kohteet näytetään."
+
+msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
+msgstr "Ladataan..."
+
+msgid "IDS_IV_BODY_ADD_PICTURES"
+msgstr "Lisää kuvia"
+
+msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
+msgstr "Kuvat näytetään, kun olet merkinnyt ne suosikeiksi."
+
+msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
+msgstr "Poistetaanko kasvojen tunnistus?"
+
+msgid "IDS_IV_OPT_ASSIGN_NAME"
+msgstr "Liitä nimi"
+
+msgid "IDS_IV_OPT_CONFIRM_AS_PS"
+msgstr "Vahvista henkilöksi %s"
+
+msgid "IDS_IV_OPT_LAYOUT_M_PICTUERS"
+msgstr "Asettelu"
+
+msgid "IDS_IV_OPT_PD_PICTURES_ADDED"
+msgstr "%d kuvaa lisätty"
+
+msgid "IDS_IV_POP_THE_ALBUM_WILL_BE_CANCELLED"
+msgstr "Albumi peruutetaan."
+
+msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
+msgstr "Lataus käynnistetään..."
+
+msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Muisti ei riitä. Poista joitain kohteita."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Yksityinen tallennustila"
+
+msgid "IDS_IV_BODY_DRAG_HERE"
+msgstr "Vedä tänne."
+
+msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
+msgstr "Lisää kuvia napauttamalla."
+
+msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
+msgstr "Tiedosto on jo olemassa."
+
+msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
+msgstr "Tämä kohde poistetaan."
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
+msgstr "Kun olet lähettänyt kuvia Facebookiin, kohteet näytetään."
+
+msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
+msgstr "Virheellinen merkki"
+
+msgid "IDS_MEDIABR_OPT_MANUAL"
+msgstr "Manuaalinen"
+
+msgid "IDS_ST_BODY_ERROR_VZW"
+msgstr "Error"
+
+msgid "IDS_ST_BUTTON2_PROCESSING_ING"
+msgstr "Käsitellään..."
+
+msgid "IDS_ST_BODY_OK"
+msgstr "OK"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Nim. uud."
+
+msgid "IDS_COM_BODY_NONE"
+msgstr "Ei mitään"
+
+msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
+msgstr "%d valittu"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Laitteen muisti"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD-kortti"
+
+msgid "IDS_ST_BODY_SPEED"
+msgstr "Nopeus"
+
+msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
+msgstr "Taustamusiikki"
+
+msgid "IDS_IV_OPT_1_SEC_ABB"
+msgstr "1 s"
+
+msgid "IDS_IV_OPT_3_SECS_ABB"
+msgstr "3 s"
+
+msgid "IDS_IV_OPT_5_SECS_ABB"
+msgstr "5 s"
+
+msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
+msgstr "Tallennuspaikka"
+
+msgid "IDS_IV_BODY_FILE_SIZE"
+msgstr "Tiedoston koko"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 albumi poistetaan."
+
+msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
+msgstr "Nostalgia"
+
+msgid "IDS_IV_OPT_BLUR_M_EFFECT"
+msgstr "Sumennus"
+
+msgid "IDS_IV_OPT_SOFT_GLOW_M_EFFECT"
+msgstr "Pehmeä hehku"
+
+msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
+msgstr "Tallenna muutokset"
+
+msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
+msgstr "Tallennetaanko muutokset vai hylätäänkö ne?"
+
+msgid "IDS_IV_BUTTON_DISCARD_ABB2"
+msgstr "Hylkää"
+
+msgid "IDS_IV_BUTTON_SAVE"
+msgstr "Tallenna"
+
+msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
+msgstr "Vanha"
+
+msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
+msgstr "Aurinko"
+
+msgid "IDS_IV_OPT_OLD_PHOTO_M_EFFECT"
+msgstr "Vanha valokuva"
+
+msgid "IDS_IV_OPT_RETRO_M_EFFECT"
+msgstr "Retro"
+
+msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
+msgstr "Harmaasävy"
+
+msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
+msgstr "Seepia"
+
+msgid "IDS_IV_OPT_FADED_COLOURS_M_EFFECT"
+msgstr "Haalistuneet värit"
+
+msgid "IDS_IV_OPT_DOWNLIGHT_M_EFFECT"
+msgstr "Valokeila"
+
+msgid "IDS_IV_OPT_YELLOW_GLOW_M_EFFECT"
+msgstr "Keltainen hehku"
+
+msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
+msgstr "Terävöitä"
+
+msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
+msgstr "Luonnos"
+
+msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
+msgstr "Käänteiset värit"
+
+msgid "IDS_IV_OPT_OIL_PAINT_M_EFFECT"
+msgstr "Öljymaalaus"
+
+msgid "IDS_IV_OPT_POSTERISE_M_EFFECT"
+msgstr "Tee julisteeksi"
+
+msgid "IDS_IV_OPT_CARTOON_M_EFFECT"
+msgstr "Sarjakuva"
+
+msgid "IDS_IV_OPT_POP_ART_M_EFFECT"
+msgstr "Poptaide"
+
+msgid "IDS_IV_OPT_MAGIC_PEN_M_EFFECT"
+msgstr "Taikakynä"
+
+msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
+msgstr "Lisätty estoluetteloon."
+
+msgid "IDS_IMGE_BODY_ROTATE"
+msgstr "Kierrä"
+
+msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Laitteen muistissa ei ole tarpeeksi tilaa. Valitse Asetukset > Virta ja tallennus > Tallennus, poista joitain tiedostoja ja yritä uudelleen."
+
+msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
+msgstr "Diojen näyttöväli"
+
+msgid "IDS_IV_MBODY_SLIDE_INTERVAL_ABB"
+msgstr "Diojen näyttöväli"
+
+msgid "IDS_IV_OPT_CONTACT_PICTURE_ABB"
+msgstr "Yhteyshenkilön kuva"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Ei mitään"
+
+msgid "IDS_IV_OPT_EDIT"
+msgstr "Muokkaa"
+
+msgid "IDS_IV_OPT_RENAME"
+msgstr "Nimeä uudelleen"
+
+msgid "IDS_IV_OPT_SET_AS"
+msgstr "Määritä käyttökohteeksi"
+
+msgid "IDS_IV_OPT_DOWNLOAD"
+msgstr "Lataa"
+
+msgid "IDS_IV_HEADER_RENAME"
+msgstr "Nimeä uudelleen"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB"
+msgstr "Nimeä uud."
+
+msgid "IDS_IV_BUTTON_RENAME_ABB2"
+msgstr "Nim. uud."
+
+msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
+msgstr "Kohdekansiossa on jo tämänniminen tiedosto."
+
+msgid "IDS_IV_BUTTON_REPLACE_ABB"
+msgstr "Korvaa"
+
+msgid "IDS_IV_HEADER_SET_AS"
+msgstr "Aseta"
+
+msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
+msgstr "Alkunäytön taustakuva"
+
+msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
+msgstr "Lukitusnäytön taustakuva"
+
+msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
+msgstr "Alku- ja lukitusn. taustakuvat"
+
+msgid "IDS_IV_HEADER_DETAILS"
+msgstr "Lisätiedot"
+
+msgid "IDS_IV_BODY_DATE"
+msgstr "Päivämäärä"
+
+msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
+msgstr "Kuvaa ei voi tallentaa"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
+msgstr "Laitteen muistissa ei ole tarpeeksi tilaa (%d Mt)."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
+msgstr "SD-kortilla ei ole riittävästi tilaa (%d Mt)."
+
+msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Poista joitain tiedostoja ja yritä uudelleen."
+
+msgid "IDS_IV_HEADER_SAVE_IMAGE"
+msgstr "Tallenna kuva"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
+msgstr "Laitteen muistissa ei ole tarpeeksi tilaa (%d Mt jäljellä). Kohde tallennetaan SD-kortille."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
+msgstr "SD-kortilla ei ole tarpeeksi tilaa (%d Mt jäljellä). Kohde tallennetaan laitteen muistiin."
+
+msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
+msgstr "Tämä kuva poistetaan."
+
+msgid "IDS_IV_BUTTON_STOP_ABB4"
+msgstr "Pysäytä"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Poista"
+
+msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
+msgstr "Virhe"
+
+msgid "IDS_GALLERY_HEADER_SELECT_AREA_ABB"
+msgstr "Valitse alue"
+
+msgid "IDS_GALLERY_BUTTON_DONE"
+msgstr "Valmis"
+
+msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
+msgstr "Kohteen lataaminen epäonnistui."
+
+msgid "IDS_CAM_OPT_NEGATIVE"
+msgstr "Negatiivi"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "VALMIS"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "PERUUTA"
+
+msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
+msgstr "Negatiivi"
+
+msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
+msgstr "Galleriaa ei voi avata."
+
+msgid "IDS_360V_TPOP_LOADING_ING"
+msgstr "Ladataan..."
+
+msgid "IDS_IV_HEADER_LOADING_ING"
+msgstr "Ladataan..."
+
+msgid "IDS_IV_POP_LOADING_FAILED"
+msgstr "Lataus epäonnistui."
+
+msgid "IDS_IV_POP_LOADING_IMAGE_ING"
+msgstr "Kuvaa ladataan..."
+
+msgid "IDS_IV_SK_DISCARD"
+msgstr "Hylkää"
+
+msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
+msgstr "Lataus ei onnistu"
+
+msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobiilidata on poistettu käytöstä. Muodosta yhteys Wi-Fi-verkon kautta tai ota mobiilidata käyttöön ja yritä uudelleen."
+
+msgid "IDS_IV_BODY_DO_NOT_SEND"
+msgstr "Älä lähetä"
+
+msgid "IDS_COM_BODY_1_SECOND"
+msgstr "1 sekunti"
+
+msgid "IDS_BODY_PD_SECONDS"
+msgstr "%d sekuntia"
+
+msgid "IDS_IV_BODY_EFFECT"
+msgstr "Tehoste"
+
+msgid "IDS_IMGE_HEARDER_EFFECTS"
+msgstr "Tehosteet"
+
+msgid "IDS_DFRAME_BODY_FLOW_M_EFFECT"
+msgstr "Virtaus"
+
+msgid "IDS_IV_OPT_FADE_M_EFFECT"
+msgstr "Häivytys"
+
+msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
+msgstr "Lähennä"
+

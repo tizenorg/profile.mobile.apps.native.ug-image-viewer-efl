@@ -1,0 +1,208 @@
+/*
+* Copyright (c) 2000-2015  Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#define PADDING_VISIBILITY 0
+
+// SetAsCallerImage
+#define TOOLBAR_LARGE_HEIGHT_INC 98
+
+collections {
+
+#define PROGRESSBAR_WIDTH	100
+#define PROGRESSBAR_HEIGHT	100
+
+   group {
+		name: "setas_view";
+
+		parts{
+			part {
+				name: "bg";
+				type: RECT;
+				scale:1;
+				description {
+					state: "default" 0.0;
+					color: 0 0 0 255;
+					rel1.relative: 0.0 0.0;
+					rel2.relative: 1.0 1.0;
+				}
+			}
+
+			part {
+				name: "setasview.contents";
+				type: SPACER;
+				scale: 1;
+
+				description {
+					state: "default" 0.0;
+					rel1.relative: 0.0 0.0;
+					rel2.relative: 1.0 0.0; rel2.to: "elm.swallow.toolbar";
+				}
+
+			};
+			part { name: "setasview.contents.swallow";
+				type: SWALLOW;
+				scale: 1;
+				repeat_events: 0;
+				description { state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to:"setasview.contents"; }
+					rel2 { relative: 1.0 1.0; to:"setasview.contents"; }
+					visible: 1;
+				}
+			}
+
+			part{
+				name: "setasview.photocam";
+				type: SWALLOW;
+				mouse_events: 1;
+				repeat_events: 0;
+				scale: 1; //allow scaling
+
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.0; to:"setasview.contents"; }
+					rel2 { relative: 1.0 1.0; to:"setasview.contents"; }
+				}
+			 }
+
+			 part{
+				 name: "setasview.thumbnail";
+				 type: SWALLOW;
+				 mouse_events: 1;
+				 repeat_events: 0;
+				 scale: 1; //allow scaling
+				 description {
+					 state: "default" 0.0;
+					 align: 0.5 0.5;
+					 visible: 1;
+					rel1 { relative: 0.0 0.0; to:"setasview.contents"; }
+					rel2 { relative: 1.0 1.0; to:"setasview.contents"; }
+				 }
+			}
+
+			part{
+				name: "setasview.progressbar";
+				type: SWALLOW;
+				scale: 1; //allow scaling
+
+				description {
+					state: "default" 0.0;
+					min: PROGRESSBAR_WIDTH PROGRESSBAR_WIDTH;
+					max: PROGRESSBAR_WIDTH PROGRESSBAR_WIDTH;
+					fixed: 1 1;
+					visible: 1;
+					align: 0.5 0.5;
+					rel1 { relative: 0 0; to:"setasview.photocam"; }
+					rel2 { relative: 1 1; to:"setasview.photocam"; }
+				}
+			 }
+
+			part {
+				name: "event";
+				type: RECT;
+				repeat_events: 1;
+				mouse_events: 1;
+				scale:1;
+				description {
+					state: "default" 0.0;
+					color: 0 0 0 0;
+					visible: 1;
+					rel1.relative: 0.0 0.0;
+					rel2.relative: 1.0 1.0;
+				}
+			}
+
+			part{
+				name: "setasview.scissorbox";
+				type: SWALLOW;
+				mouse_events: 1;
+				repeat_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.0; to:"setasview.contents"; }
+					rel2 { relative: 1.0 1.0; to:"setasview.contents"; }
+				}
+			 }
+			part { name: "setasview.contents.text.notify";
+				type: TEXT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 64;
+					fixed: 0 1;
+					rel1 { relative: 0.0 0.0; to: "notify.pad.16"; }
+					rel2 { relative: 1.0 0.0; to: "notify.pad.16"; }
+					align: 0.5 1.0;
+					color: 250 250 250 255;
+					text {
+						font: "Tizen:style=Roman";
+						size: 32;
+						min: 0 1;
+						align: 0.5 0.5;
+						text_class: "tizen";
+					}
+				}
+			}
+
+			part {
+				name: "notify.pad.16";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 16;
+					fixed: 0 1;
+					align: 0.5 1.0;
+					rel1 { relative: 0.0 0.0; to: "elm.swallow.toolbar"; }
+					rel2 { relative: 1.0 0.0; to: "elm.swallow.toolbar"; }
+				}
+			}
+
+			part {
+				name: "elm.swallow.toolbar";		// Toolbar on bottom side
+				scale: 1;
+				type: SWALLOW;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 TOOLBAR_LARGE_HEIGHT_INC;
+					fixed: 0 1;
+					align: 0.5 1.0;
+					rel1 { relative: 0.0 1.0; to: "bg";}
+					rel2 { relative: 1.0 1.0; to: "bg";}
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+		}
+		programs {
+			program {
+				name: "bg_clicked";
+				signal: "mouse,clicked,1";
+				source: "event";
+				action: SIGNAL_EMIT "setasview,bg,clicked" "edc";
+			}
+		}
+
+	}
+}
+

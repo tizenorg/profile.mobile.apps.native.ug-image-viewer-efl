@@ -1,0 +1,194 @@
+/*
+* Copyright (c) 2000-2015  Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#undef ENALBLE_SELECTED
+
+collections {
+	images {
+		image: "T01-1_thumbnail_focus.PNG" COMP;
+	}
+
+	sounds {
+		sample {
+			name: "button-pressed" RAW;
+			source: "button-pressed.wav";
+		}
+	}
+
+	group {
+		name: "thumblist.item";
+
+		parts {
+
+			part { name: "border";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					color: 63 63 63 255;
+					visible: 1;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 1.0; }
+				}
+			}
+
+			part { name: "bg";
+				type: SPACER;
+				mouse_events: 1;
+				scale: 1;
+				description {
+	              		state: "default" 0.0;
+//					color: 0 0 0 0;
+//	               		visible: 1;
+	               		rel1 { relative: 0.0 0.0; offset: 1 1; }			// Deflate by 1
+	               		rel2 { relative: 1.0 1.0; offset: -2 -2; }
+	            		}
+			}
+
+			part { name: "item";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+	              		state: "default" 0.0;
+	               		visible: 1;
+	               		rel1 { relative: 0.0 0.0;  to: "bg"; }
+	               		rel2 { relative: 1.0 1.0;  to: "bg"; }
+	            		}
+			}
+
+			part { name: "thumblist.vicon";
+				type: SWALLOW;
+				scale: 1;
+				description {
+	              		state: "default" 0.0;
+	               		visible: 0;
+	               		align: 0.5 0.5;
+	               		min: 48 48;
+	               		fixed: 1 1;
+	               		rel1 { relative: 0.5 0.5;  to: "bg"; }
+	               		rel2 { relative: 0.5 0.5;  to: "bg"; }
+	               	}
+
+				description {
+	              		state: "show" 0.0;
+	              		inherit: "default" 0.0;
+	               		visible: 1;
+	               	}
+
+	               }
+
+			part { name: "thumblist.metaphore";
+				type: SWALLOW;
+				scale: 1;
+				description {
+	              		state: "default" 0.0;
+	               		visible: 0;
+	               		align: 0.0 1.0;
+	               		min: 48 48;
+	               		fixed: 1 1;
+	               		rel1 { relative: 0.0 1.0;  to: "bg"; }
+	               		rel2 { relative: 0.0 1.0;  to: "bg"; }
+	               	}
+
+				description {
+	              		state: "show" 0.0;
+	              		inherit: "default" 0.0;
+	               		visible: 1;
+	               	}
+	               }
+
+			part { name: "focus_bg";
+				type: IMAGE;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					rel1.to: "border";
+					rel2.to: "border";
+					image.normal: "T01-1_thumbnail_focus.PNG";
+					image.border: 9 9 9 9;
+				}
+				description {
+					state: "enabled" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+		}	// parts
+
+		programs {
+		    program {
+		        name: "hide_metaphore";
+		        signal: "thumbnail,hide,metaphore";
+		        source: "elm";
+		        action: STATE_SET "default" 0.0;
+		        target: "thumblist.metaphore";
+		    }
+		    program {
+		        name: "show_metaphore";
+		        signal: "thumbnail,show,metaphore";
+		        source: "elm";
+		        action: STATE_SET "show" 0.0;
+		        target: "thumblist.metaphore";
+		    }
+		    program {
+		        name: "hide_vicon";
+		        signal: "thumbnail,hide,vicon";
+		        source: "elm";
+		        action: STATE_SET "default" 0.0;
+		        target: "thumblist.vicon";
+		    }
+		    program {
+		        name: "show_icon";
+		        signal: "thumbnail,show,vicon";
+		        source: "elm";
+		        action: STATE_SET "show" 0.0;
+		        target: "thumblist.vicon";
+		    }
+		    program {
+		    	name: "set_selected";
+		    	signal: "elm,state,selected";
+		    	source: "app";
+		        action: STATE_SET "enabled" 0.0;
+		        target: "focus_bg";
+
+		    }
+		    program {
+		    	name: "set_unselected";
+		    	signal: "elm,state,unselected";
+		    	source: "app";
+		        action: STATE_SET "default" 0.0;
+		        target: "focus_bg";
+
+		    }
+
+			program { name: "play_sound";
+				signal: "mouse,clicked,1";
+				source: "item";
+				after: "play_button_press";
+			}
+				program { name: "play_button_press";
+				action: PLAY_SAMPLE "button-pressed" 1.0;
+			}
+
+		}
+
+	}	// group
+
+}	// collections
+

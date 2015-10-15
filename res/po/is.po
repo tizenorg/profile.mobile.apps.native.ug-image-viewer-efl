@@ -1,0 +1,996 @@
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Einkamál"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Endurnefna"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Myndskeiðinu verður eytt."
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Skráarheitið er þegar í notkun."
+
+msgid "IDS_ST_BODY_OFF"
+msgstr "Slökkt"
+
+msgid "IDS_COM_BODY_DONE"
+msgstr "Lokið"
+
+msgid "IDS_FB_BODY_FACEBOOK"
+msgstr "Facebook"
+
+msgid "IDS_CAM_BODY_FLASH"
+msgstr "Flass"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stöðva"
+
+msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
+msgstr "Slökkt er á %1$s í þessu forriti. Til að gera þennan eiginleika virkan skaltu fara í %2$s, velja eiginleikann og velja svo þetta forrit."
+
+msgid "IDS_MEDIABR_BUTTON_OK"
+msgstr "Í lagi"
+
+msgid "IDS_MEDIABR_BUTTON_DONE"
+msgstr "Lokið"
+
+msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
+msgstr "Hætta v."
+
+msgid "IDS_GALLERY_HEADER_ENTER_NAME"
+msgstr "Rita nafn"
+
+msgid "IDS_MEDIABR_POP_NO_NAME"
+msgstr "Ekkert heiti"
+
+msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
+msgstr "Aðeins eitt albúm."
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Hægt er velja allt að %d hluti."
+
+msgid "IDS_IV_OPT_DETAILS"
+msgstr "Upplýsingar"
+
+msgid "IDS_IV_OPT_DELETE_ABB"
+msgstr "Eyða"
+
+msgid "IDS_IV_POP_DELETE_Q"
+msgstr "Á að eyða?"
+
+msgid "IDS_IV_BUTTON_CANCEL"
+msgstr "Hætta v."
+
+msgid "IDS_IV_POP_DELETED"
+msgstr "Eytt."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Uppáhald"
+
+msgid "IDS_IV_SK_SAVE"
+msgstr "Vista"
+
+msgid "IDS_IV_POP_SAVED"
+msgstr "Vistað."
+
+msgid "IDS_IV_BODY_SETTINGS"
+msgstr "Stillingar"
+
+msgid "IDS_IV_BODY_SIZE"
+msgstr "Stærð"
+
+msgid "IDS_IV_BODY_UNKNOWN"
+msgstr "Óþekkt"
+
+msgid "IDS_IV_SK_YES"
+msgstr "Já"
+
+msgid "IDS_CAM_BODY_ISO"
+msgstr "ISO"
+
+msgid "IDS_CAM_BODY_FOCAL_LENGTH"
+msgstr "Brennivídd"
+
+msgid "IDS_CAM_BODY_FLASH_ON"
+msgstr "Kveikt á flassi"
+
+msgid "IDS_COM_POP_IMAGE_VIEWER"
+msgstr "Myndbirting"
+
+msgid "IDS_MEDIABR_OPT_ALL_PICTURES"
+msgstr "Allar myndir"
+
+msgid "IDS_MEDIABR_HEADER_ORIENTATION"
+msgstr "Stefna"
+
+msgid "IDS_MEDIABR_BODY_SELECT_PICTURE"
+msgstr "Velja mynd"
+
+msgid "IDS_MP_BODY_DURATION"
+msgstr "Tímalengd"
+
+msgid "IDS_ST_POP_SET"
+msgstr "Stilla"
+
+msgid "IDS_GALLERY_BODY_TAGS"
+msgstr "Merki"
+
+msgid "IDS_IV_SK3_ADD_COMMENT"
+msgstr "Skr. athugasemd"
+
+msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Skoðaðu efnið í öðrum tækjum með því að nota nálæg tæki."
+
+msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
+msgstr "Myndskeiðsskrár innihalda ekki upplýsingar um fólk þar sem þær styðja ekki andlitsmerkingar."
+
+msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
+msgstr "Ekki er hægt að deila þessari mynd. Hún er DRM-varin."
+
+msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
+msgstr "Mistókst að opna skrá."
+
+msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
+msgstr "Skráðar veðurupplýsingar endurspegla hugsanlega ekki raunverulegt veður vegna uppfærslutímans."
+
+msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
+msgstr "Persónulega efnið sem afritað var á klippiborðið er hægt að nota til að búa til nýtt efni. Ekki er hægt að fela nýja efnið sjálfkrafa."
+
+msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
+msgstr "Myndin er of lítil."
+
+msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
+msgstr "Dagsetningarupplýsingar birtast aðeins þegar önnur merki eru sýnileg."
+
+msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
+msgstr "Pikkaðu og haltu smámyndum til að velja bestu myndirnar."
+
+msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
+msgstr "Stillingar skyggnusýningar"
+
+msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
+msgstr "Velja veggfóður fyrir heimaskjá og læsa skjá"
+
+msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
+msgstr "Viltu nota þessa mynd sem auðkenni fyrir %s?"
+
+msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
+msgstr "Stilla sem kenni hringjanda"
+
+msgid "IDS_IV_POP_SENDING_ING"
+msgstr "Verið er að senda..."
+
+msgid "IDS_IV_POP_SELECT_DEVICE"
+msgstr "Veldu tæki"
+
+msgid "IDS_IV_POP_SD_CARD_REMOVED"
+msgstr "SD-kortið er ekki í símanum."
+
+msgid "IDS_IV_POP_PERMISSION_DENIED"
+msgstr "Leyfi var hafnað."
+
+msgid "IDS_IV_POP_NO_LOCATION"
+msgstr "Engin staðsetning"
+
+msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
+msgstr "Engin andlit voru merkt. Merktu andlit á myndinni."
+
+msgid "IDS_IV_POP_NO_FACES_DETECTED"
+msgstr "Engin andlit greindust."
+
+msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Ekki er nægt minni. Eyðið nokkrum atriðum."
+
+msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
+msgstr "Nettenging mistókst."
+
+msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
+msgstr "Hámarkfjölda stafa (%d) hefur verið náð."
+
+msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
+msgstr "Ógild myndskrá."
+
+msgid "IDS_IV_POP_FLASH_USED_ABB"
+msgstr "Flass notað"
+
+msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
+msgstr "Skráarsniðið er óstutt."
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Færsla er tóm."
+
+msgid "IDS_IV_POP_ENTER_TAG_NAME"
+msgstr "Sláðu inn heiti fyrir merkið."
+
+msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
+msgstr "Kveiktu á sjálfvirkri uppfærslu í veðurveggfóðrinu til að sjá veðurmerki."
+
+msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
+msgstr "Niðurhali lokið"
+
+msgid "IDS_IV_POP_BEST_PHOTO"
+msgstr "Besta mynd"
+
+msgid "IDS_IV_POP_ADDED"
+msgstr "Bætt við."
+
+msgid "IDS_IV_OPT_WRITE_CAPTION"
+msgstr "Skrifaðu texta"
+
+msgid "IDS_IV_OPT_USE_MOTION"
+msgstr "Nota hreyfingu"
+
+msgid "IDS_IV_OPT_UNFAVOURITE"
+msgstr "Ekki uppáhald"
+
+msgid "IDS_IV_OPT_TRIM"
+msgstr "Snyrta"
+
+msgid "IDS_IV_OPT_TAG_FACE_ABB"
+msgstr "Merkja andlit"
+
+msgid "IDS_IV_OPT_TAG_BUDDY"
+msgstr "Merkjavinur"
+
+msgid "IDS_IV_OPT_TAG"
+msgstr "Merki"
+
+msgid "IDS_IV_OPT_START_SLIDESHOW"
+msgstr "Hefja skyggnusýningu"
+
+msgid "IDS_IV_OPT_SLIDE_SHOW"
+msgstr "Glærusýning"
+
+msgid "IDS_IV_OPT_SLIDESHOW_ABB"
+msgstr "Skyggnusýning"
+
+msgid "IDS_IV_OPT_SHOW_ITEMS"
+msgstr "Sýna atriði"
+
+msgid "IDS_IV_OPT_SHARE"
+msgstr "Samnýta"
+
+msgid "IDS_IV_OPT_ROTATE_RIGHT"
+msgstr "Snúið til hægri"
+
+msgid "IDS_IV_OPT_ROTATE_LEFT"
+msgstr "Snúið til vinstri"
+
+msgid "IDS_IV_OPT_REMOVE_TAG"
+msgstr "Fjarlægja merki"
+
+msgid "IDS_IV_OPT_REFRESH"
+msgstr "Uppfæra"
+
+msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
+msgstr "Prenta með Bluetooth"
+
+msgid "IDS_IV_OPT_MANUALLY_DETECT"
+msgstr "Greina handvirkt"
+
+msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
+msgstr "Veggfóður heima- og lásskjás"
+
+msgid "IDS_IV_OPT_HIDDEN_ITEMS"
+msgstr "Falin atriði"
+
+msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
+msgstr "Fá leiðsögn"
+
+msgid "IDS_IV_OPT_FILE_TRANSFER"
+msgstr "Skráaflutningur"
+
+msgid "IDS_IV_OPT_ERASER"
+msgstr "Strokleður"
+
+msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
+msgstr "Breyta veðurmerki"
+
+msgid "IDS_IV_OPT_EDIT_TAG"
+msgstr "Breyta"
+
+msgid "IDS_IV_OPT_EDIT_CAPTION"
+msgstr "Breyta texta"
+
+msgid "IDS_IV_OPT_DELETE_CAPTION"
+msgstr "Eyða myndatexta"
+
+msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
+msgstr "Afrita á klemmuspjald"
+
+msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
+msgstr "Uppl. um tengingu"
+
+msgid "IDS_IV_OPT_CLOUD"
+msgstr "Ský"
+
+msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
+msgstr "Mynddeiling vina"
+
+msgid "IDS_IV_OPT_BEST_FACE_ABB"
+msgstr "Besta andlit"
+
+msgid "IDS_IV_OPT_AS_VIDEO_FILES"
+msgstr "Sem myndskeiðaskrám"
+
+msgid "IDS_IV_OPT_AS_IMAGE_FILES"
+msgstr "Sem myndaskrám"
+
+msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
+msgstr "Hreyfiljósmynd"
+
+msgid "IDS_IV_OPT_ADD_WEATHER_TAG_ABB"
+msgstr "Bæta við veðurmerki"
+
+msgid "IDS_IV_OPT_ADD_NAME_ABB"
+msgstr "Bæta við nafni"
+
+msgid "IDS_IV_OPT_ADD_CAPTION"
+msgstr "Bæta við texta"
+
+msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
+msgstr "Tónlist skyggnusýningar"
+
+msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
+msgstr "Deila hljóðum og myndum"
+
+msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
+msgstr "Nota sem"
+
+msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
+msgstr "Senda þessa mynd til"
+
+msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
+msgstr "Veldu tengilið til að deila"
+
+msgid "IDS_IV_HEADER_PLAY_SPEED"
+msgstr "Spilunarhraði"
+
+msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
+msgstr "Læsa veggfóðri á skjá"
+
+msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
+msgstr "Um halla"
+
+msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
+msgstr "Veggfóður á heimaskjá"
+
+msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
+msgstr "Breyta veðurmerki"
+
+msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
+msgstr "Breyta raðmynd"
+
+msgid "IDS_IV_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Tiltæk tæki"
+
+msgid "IDS_IV_HEADER_ALL_ALBUMS"
+msgstr "Öll albúm"
+
+msgid "IDS_IV_HEADER_ADD_TAG"
+msgstr "Merkja"
+
+msgid "IDS_IV_BUTTON_STOP"
+msgstr "Stö."
+
+msgid "IDS_IV_BUTTON_SCAN"
+msgstr "Skanna"
+
+msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Þú getur deilt efni með öðrum tækjum með því að nota nálæg tæki."
+
+msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
+msgstr "Með %s og %d aðrir"
+
+msgid "IDS_IV_BODY_WITH_PS"
+msgstr "Með %s"
+
+msgid "IDS_IV_BODY_WHITE_BALANCE"
+msgstr "Ljósgjafi"
+
+msgid "IDS_IV_BODY_WEATHER_ABB"
+msgstr "Veður"
+
+msgid "IDS_IV_BODY_WEATHER"
+msgstr "Veður"
+
+msgid "IDS_IV_BODY_VENDOR"
+msgstr "Seljandi"
+
+msgid "IDS_IV_BODY_VALIDITY"
+msgstr "Gildistími"
+
+msgid "IDS_IV_BODY_UNLIMITED"
+msgstr "Án takmarkana"
+
+msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
+msgstr "Mistókst að hlaða mynd."
+
+msgid "IDS_IV_BODY_TIMED_COUNT"
+msgstr "Tímasett"
+
+msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
+msgstr "The recorded weather information should be edited manually. Your device does not support receiving recorded weather info from the weather widget."
+
+msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
+msgstr "Pikkaðu á andlit til að sjá upplýsingar um fólkið."
+
+msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
+msgstr "Þrýstu á tvo staði í einu og hallaðu tækinu fram og aftur til að minnka eða stækka skjáinn."
+
+msgid "IDS_IV_BODY_SUNNY_DAY"
+msgstr "Sólardagur"
+
+msgid "IDS_IV_BODY_SNOWY_DAY"
+msgstr "Snjóadagur"
+
+msgid "IDS_IV_BODY_SHARE_VIA"
+msgstr "Samnýta um"
+
+msgid "IDS_IV_BODY_SERVER_NAME"
+msgstr "Heiti netþjóns"
+
+msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
+msgstr "Veldu svæði til að skera myndina."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
+msgstr "Valið svæði verður prentað."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
+msgstr "Valið svæði verður notað á veggfóðrið."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
+msgstr "Valið svæði verður notað á tengiliðamyndina."
+
+msgid "IDS_IV_BODY_RIGHT_STATUS"
+msgstr "Rétt staða"
+
+msgid "IDS_IV_BODY_RESOLUTION"
+msgstr "Upplausn"
+
+msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
+msgstr "Taka úr eftirlætum"
+
+msgid "IDS_IV_BODY_RAINY_DAY"
+msgstr "Sólbjartur dagur"
+
+msgid "IDS_IV_BODY_PRINT"
+msgstr "Prenta"
+
+msgid "IDS_IV_BODY_POSSIBLE"
+msgstr "Mögulegt"
+
+msgid "IDS_IV_BODY_PEOPLE"
+msgstr "Fólk"
+
+msgid "IDS_IV_BODY_N_A"
+msgstr "Óþekkt"
+
+msgid "IDS_IV_BODY_NO_TAG"
+msgstr "Ekkert merki"
+
+msgid "IDS_IV_BODY_NEW_TAG"
+msgstr "Nýtt merki"
+
+msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
+msgstr "Nálæg tæki"
+
+msgid "IDS_IV_BODY_MY_DEVICE"
+msgstr "Tækið mitt"
+
+msgid "IDS_IV_BODY_MODEL"
+msgstr "Tegund"
+
+msgid "IDS_IV_BODY_ME"
+msgstr "Ég"
+
+msgid "IDS_IV_BODY_MANUFACTURER"
+msgstr "Framleiðandi"
+
+msgid "IDS_IV_BODY_LONGITUDE"
+msgstr "Lengdargráða"
+
+msgid "IDS_IV_BODY_LOCK_SCREEN"
+msgstr "Lásskjár"
+
+msgid "IDS_IV_BODY_LOCATION_M_PATH"
+msgstr "Staðsetning"
+
+msgid "IDS_IV_BODY_LOCATION_ABB2"
+msgstr "Staður"
+
+msgid "IDS_IV_BODY_LOCATIONS"
+msgstr "Staðsetningar"
+
+msgid "IDS_IV_BODY_LOCATION"
+msgstr "Staðsetning"
+
+msgid "IDS_IV_BODY_LATITUDE"
+msgstr "Breiddargráða"
+
+msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
+msgstr "Í %s"
+
+msgid "IDS_IV_BODY_INTERVAL"
+msgstr "Bil"
+
+msgid "IDS_IV_BODY_INDIVIDUAL"
+msgstr "Stakt"
+
+msgid "IDS_IV_BODY_IN"
+msgstr "Auka"
+
+msgid "IDS_IV_BODY_IMPOSSIBLE"
+msgstr "Ekki hægt"
+
+msgid "IDS_IV_BODY_HOME_SCREEN"
+msgstr "Heimaskjár"
+
+msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
+msgstr "Heima- og lásskjáir"
+
+msgid "IDS_IV_BODY_FORWARDING"
+msgstr "Framsending"
+
+msgid "IDS_IV_BODY_FLASH"
+msgstr "Valmynd leifturljóss"
+
+msgid "IDS_IV_BODY_FILE_NAME"
+msgstr "Skrárheiti"
+
+msgid "IDS_IV_BODY_FILE_LOCATION"
+msgstr "Staðsetning skráar"
+
+msgid "IDS_IV_BODY_FILE_FORMAT"
+msgstr "Skráarsnið"
+
+msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
+msgstr "Lýsingartími"
+
+msgid "IDS_IV_BODY_EXECUTE"
+msgstr "Framkvæma"
+
+msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
+msgstr "Kveiktu á GPS-merkjum í myndavélinni til að sjá staðsetningarmerkingar."
+
+msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
+msgstr "Kveiktu á sjálfvirkri uppfærslu í veðurgræjunni til að sjá veðurmerki."
+
+msgid "IDS_IV_BODY_DURATION"
+msgstr "Tímalengd"
+
+msgid "IDS_IV_BODY_DRM_INFO"
+msgstr "Um stafræn réttindi"
+
+msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Ekki birta aftur"
+
+msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
+msgstr "Ekki spyrja aftur"
+
+msgid "IDS_IV_BODY_DISPLAY"
+msgstr "Skjár"
+
+msgid "IDS_IV_BODY_DATE_CREATED"
+msgstr "Dagsetning búin til"
+
+msgid "IDS_IV_BODY_CROP"
+msgstr "Skera af"
+
+msgid "IDS_IV_BODY_CREATE_TAG"
+msgstr "Búa til"
+
+msgid "IDS_IV_BODY_COUNT"
+msgstr "Fjöldi"
+
+msgid "IDS_IV_BODY_CLOUDY_DAY"
+msgstr "Skýjaður dagur"
+
+msgid "IDS_IV_BODY_CLEAR_NIGHT"
+msgstr "Heiðskýr nótt"
+
+msgid "IDS_IV_BODY_CALLER_IMAGE"
+msgstr "Mynd af viðmælanda"
+
+msgid "IDS_IV_BODY_BASIC"
+msgstr "Venjulegt"
+
+msgid "IDS_IV_BODY_AVAILABLE_USES"
+msgstr "Tiltæk notkun"
+
+msgid "IDS_IV_BODY_AUTO"
+msgstr "Sjálfvirkt"
+
+msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
+msgstr "Nota sama litaþema fyrir forrit."
+
+msgid "IDS_IV_BODY_APERTURE"
+msgstr "Ljósop"
+
+msgid "IDS_IV_BODY_ANY"
+msgstr "Hvað sem er"
+
+msgid "IDS_IV_BODY_ADD_TO_FAVOURITES"
+msgstr "Bæta við uppáhalds"
+
+msgid "IDS_IV_BODY_ACCUMULATED_TIME"
+msgstr "Uppsafnaður tími"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Hámarksfjölda stafa hefur verið náð."
+
+msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
+msgstr "Mistókst"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_ST_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_ST_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_ST_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_ST_BODY_EDIT"
+msgstr "Breyta"
+
+msgid "IDS_ST_BODY_DATE"
+msgstr "Dagsetning"
+
+msgid "IDS_EMAIL_OPT_ACCOUNTS"
+msgstr "Reikningar"
+
+msgid "IDS_GALLERY_BODY_DOWNLOAD"
+msgstr "Hlaða niður"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
+msgstr "Hlutir birtast eftir að myndum hefur verið hlaðið upp á Dropbox."
+
+msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
+msgstr "Verið er að hala niður..."
+
+msgid "IDS_IV_BODY_ADD_PICTURES"
+msgstr "Setja inn myndir"
+
+msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
+msgstr "Myndir birtast eftir að þær hafa verið merktar sem uppáhald."
+
+msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
+msgstr "Fjarlægja andlitsgreiningu?"
+
+msgid "IDS_IV_OPT_ASSIGN_NAME"
+msgstr "Gefa nafn"
+
+msgid "IDS_IV_OPT_CONFIRM_AS_PS"
+msgstr "Staðfesta sem %s"
+
+msgid "IDS_IV_OPT_LAYOUT_M_PICTUERS"
+msgstr "Útlit"
+
+msgid "IDS_IV_OPT_PD_PICTURES_ADDED"
+msgstr "%d myndum bætt við"
+
+msgid "IDS_IV_POP_THE_ALBUM_WILL_BE_CANCELLED"
+msgstr "Hætt verður við albúmið."
+
+msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
+msgstr "Hef niðurhal..."
+
+msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Ekki er nægt minni. Eyðið nokkrum atriðum."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Einkageymsla"
+
+msgid "IDS_IV_BODY_DRAG_HERE"
+msgstr "Dragðu hingað."
+
+msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
+msgstr "Pikkaðu til að bæta við myndum."
+
+msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
+msgstr "Skráin er þegar til."
+
+msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
+msgstr "Þessum hlut verður eytt."
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
+msgstr "Hlutir birtast eftir að myndum hefur verið hlaðið upp á Facebook."
+
+msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
+msgstr "Ógildur stafur."
+
+msgid "IDS_MEDIABR_OPT_MANUAL"
+msgstr "Handvirkt"
+
+msgid "IDS_ST_BODY_ERROR_VZW"
+msgstr "Error"
+
+msgid "IDS_ST_BUTTON2_PROCESSING_ING"
+msgstr "Vinnsla í gangi..."
+
+msgid "IDS_ST_BODY_OK"
+msgstr "Í lagi"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Endurnefna"
+
+msgid "IDS_COM_BODY_NONE"
+msgstr "Ekkert"
+
+msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
+msgstr "%d valið"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Geymsla tækis"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD-kort"
+
+msgid "IDS_ST_BODY_SPEED"
+msgstr "Hraði"
+
+msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
+msgstr "Bakgrunnstónlist"
+
+msgid "IDS_IV_OPT_1_SEC_ABB"
+msgstr "1 sek."
+
+msgid "IDS_IV_OPT_3_SECS_ABB"
+msgstr "3 sek."
+
+msgid "IDS_IV_OPT_5_SECS_ABB"
+msgstr "5 sek."
+
+msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
+msgstr "Geymsla"
+
+msgid "IDS_IV_BODY_FILE_SIZE"
+msgstr "Skráarstærð"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "Einu albúmi verður eytt."
+
+msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
+msgstr "Fortíðarþrá"
+
+msgid "IDS_IV_OPT_BLUR_M_EFFECT"
+msgstr "Óskýrt"
+
+msgid "IDS_IV_OPT_SOFT_GLOW_M_EFFECT"
+msgstr "Mjúkur ljómi"
+
+msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
+msgstr "Vista breytingar"
+
+msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
+msgstr "Hvort viltu vista breytingarnar eða fleygja þeim?"
+
+msgid "IDS_IV_BUTTON_DISCARD_ABB2"
+msgstr "Fleygja"
+
+msgid "IDS_IV_BUTTON_SAVE"
+msgstr "Vista"
+
+msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
+msgstr "Gamaldags"
+
+msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
+msgstr "Sólskin"
+
+msgid "IDS_IV_OPT_OLD_PHOTO_M_EFFECT"
+msgstr "Gömul ljósmynd"
+
+msgid "IDS_IV_OPT_RETRO_M_EFFECT"
+msgstr "Retró"
+
+msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
+msgstr "Grátónar"
+
+msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
+msgstr "Brúnlit"
+
+msgid "IDS_IV_OPT_FADED_COLOURS_M_EFFECT"
+msgstr "Daufir litir"
+
+msgid "IDS_IV_OPT_DOWNLIGHT_M_EFFECT"
+msgstr "Niðurlýst"
+
+msgid "IDS_IV_OPT_YELLOW_GLOW_M_EFFECT"
+msgstr "Gulur ljómi"
+
+msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
+msgstr "Skerpa"
+
+msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
+msgstr "Rissa"
+
+msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
+msgstr "Öfugir litir"
+
+msgid "IDS_IV_OPT_OIL_PAINT_M_EFFECT"
+msgstr "Olíumálning"
+
+msgid "IDS_IV_OPT_POSTERISE_M_EFFECT"
+msgstr "Litafækkun"
+
+msgid "IDS_IV_OPT_CARTOON_M_EFFECT"
+msgstr "Teiknimynd"
+
+msgid "IDS_IV_OPT_POP_ART_M_EFFECT"
+msgstr "Popplist"
+
+msgid "IDS_IV_OPT_MAGIC_PEN_M_EFFECT"
+msgstr "Töfrapenni"
+
+msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
+msgstr "Bætt á Læsingarlista."
+
+msgid "IDS_IMGE_BODY_ROTATE"
+msgstr "Snúa"
+
+msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Ekki er nægt rými í geymslu tækisins. Opnaðu Stillingar > Orka og geymsla > Geymsla til að eyða einhverjum skrám og reyndu svo aftur."
+
+msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
+msgstr "Skyggnuhraði"
+
+msgid "IDS_IV_MBODY_SLIDE_INTERVAL_ABB"
+msgstr "Skyggnuhraði"
+
+msgid "IDS_IV_OPT_CONTACT_PICTURE_ABB"
+msgstr "Mynd tengiliðar"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Engin"
+
+msgid "IDS_IV_OPT_EDIT"
+msgstr "Breyta"
+
+msgid "IDS_IV_OPT_RENAME"
+msgstr "Endurnefna"
+
+msgid "IDS_IV_OPT_SET_AS"
+msgstr "Nota sem"
+
+msgid "IDS_IV_OPT_DOWNLOAD"
+msgstr "Sækja"
+
+msgid "IDS_IV_HEADER_RENAME"
+msgstr "Endurnefna"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB"
+msgstr "Endurnefna"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB2"
+msgstr "Endurn."
+
+msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
+msgstr "Skrá með þetta heiti er þegar til staðar í viðtökumöppunni."
+
+msgid "IDS_IV_BUTTON_REPLACE_ABB"
+msgstr "Skip. út"
+
+msgid "IDS_IV_HEADER_SET_AS"
+msgstr "Nota sem"
+
+msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
+msgstr "Veggfóður heimaskjás"
+
+msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
+msgstr "Veggfóður lásskjás"
+
+msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
+msgstr "Veggfóður heima- og lásskjás"
+
+msgid "IDS_IV_HEADER_DETAILS"
+msgstr "Upplýsingar"
+
+msgid "IDS_IV_BODY_DATE"
+msgstr "Dagsetning"
+
+msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
+msgstr "Ekki er hægt að vista myndina"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
+msgstr "Of lítið pláss (%d MB) er í geymslu tækisins."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
+msgstr "Ekki nægt rými (%d MB) á SD-kortinu."
+
+msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Eyddu einhverjum skrám og reyndu aftur."
+
+msgid "IDS_IV_HEADER_SAVE_IMAGE"
+msgstr "Vista mynd"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
+msgstr "Ekki er nægt rými (%d MB eftir) í geymslu tækisins. Þetta atriði verður vistað á SD-kortinu."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
+msgstr "Ekki er nægt rými (%d MB eftir) á SD-kortinu. Þetta atriði verður vistað í geymslu tækisins."
+
+msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
+msgstr "Þessari mynd verður eytt."
+
+msgid "IDS_IV_BUTTON_STOP_ABB4"
+msgstr "Stöðva"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Eyða"
+
+msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
+msgstr "Villa"
+
+msgid "IDS_GALLERY_HEADER_SELECT_AREA_ABB"
+msgstr "Velja svæði"
+
+msgid "IDS_GALLERY_BUTTON_DONE"
+msgstr "Lokið"
+
+msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
+msgstr "Mistókst að hlaða þetta atriði."
+
+msgid "IDS_CAM_OPT_NEGATIVE"
+msgstr "Negatíft"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "LOKIÐ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "HÆTTA VIÐ"
+
+msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
+msgstr "Negatíft"
+
+msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
+msgstr "Ekki er hægt að opna galleríið."
+
+msgid "IDS_360V_TPOP_LOADING_ING"
+msgstr "Hleð..."
+
+msgid "IDS_IV_HEADER_LOADING_ING"
+msgstr "Hleð..."
+
+msgid "IDS_IV_POP_LOADING_FAILED"
+msgstr "Ekki tókst að hlaða."
+
+msgid "IDS_IV_POP_LOADING_IMAGE_ING"
+msgstr "Verið er að lesa mynd..."
+
+msgid "IDS_IV_SK_DISCARD"
+msgstr "Fleygja"
+
+msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
+msgstr "Ekki er hægt að sækja"
+
+msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Slökkt er á farsímagögnum. Tengstu Wi-Fi neti eða kveiktu á farsímagögnum og reyndu aftur."
+
+msgid "IDS_IV_BODY_DO_NOT_SEND"
+msgstr "Ekki senda"
+
+msgid "IDS_COM_BODY_1_SECOND"
+msgstr "1 sekúnda"
+
+msgid "IDS_BODY_PD_SECONDS"
+msgstr "%d sekúndur"
+
+msgid "IDS_IV_BODY_EFFECT"
+msgstr "Brella"
+
+msgid "IDS_IMGE_HEARDER_EFFECTS"
+msgstr "Brellur"
+
+msgid "IDS_DFRAME_BODY_FLOW_M_EFFECT"
+msgstr "Flæða"
+
+msgid "IDS_IV_OPT_FADE_M_EFFECT"
+msgstr "Dofna"
+
+msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
+msgstr "Auka aðdrátt"
+

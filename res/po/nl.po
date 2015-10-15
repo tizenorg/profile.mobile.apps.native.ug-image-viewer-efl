@@ -1,0 +1,996 @@
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privé"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Naam wijzigen"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Deze video wordt verwijderd."
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Bestandsnaam is al in gebruik."
+
+msgid "IDS_ST_BODY_OFF"
+msgstr "Uit"
+
+msgid "IDS_COM_BODY_DONE"
+msgstr "Gereed"
+
+msgid "IDS_FB_BODY_FACEBOOK"
+msgstr "Facebook"
+
+msgid "IDS_CAM_BODY_FLASH"
+msgstr "Flitser"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stoppen"
+
+msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
+msgstr "%1$s is uitgeschakeld in deze applicatie. Als u deze functie wilt inschakelen, gaat u naar %2$s, selecteert u deze functie en daarna deze applicatie."
+
+msgid "IDS_MEDIABR_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_MEDIABR_BUTTON_DONE"
+msgstr "Gereed"
+
+msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
+msgstr "Annul."
+
+msgid "IDS_GALLERY_HEADER_ENTER_NAME"
+msgstr "Geef de naam in"
+
+msgid "IDS_MEDIABR_POP_NO_NAME"
+msgstr "Geen naam"
+
+msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
+msgstr "Er is slechts één album."
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "U kunt maximaal %d items selecteren."
+
+msgid "IDS_IV_OPT_DETAILS"
+msgstr "Gegevens"
+
+msgid "IDS_IV_OPT_DELETE_ABB"
+msgstr "Wissen"
+
+msgid "IDS_IV_POP_DELETE_Q"
+msgstr "Verwijderen?"
+
+msgid "IDS_IV_BUTTON_CANCEL"
+msgstr "Annuleer"
+
+msgid "IDS_IV_POP_DELETED"
+msgstr "Verwijderd."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Favoriet"
+
+msgid "IDS_IV_SK_SAVE"
+msgstr "Opslaan"
+
+msgid "IDS_IV_POP_SAVED"
+msgstr "Opgeslagen."
+
+msgid "IDS_IV_BODY_SETTINGS"
+msgstr "Instellingen"
+
+msgid "IDS_IV_BODY_SIZE"
+msgstr "Grootte"
+
+msgid "IDS_IV_BODY_UNKNOWN"
+msgstr "Onbekend"
+
+msgid "IDS_IV_SK_YES"
+msgstr "Ja"
+
+msgid "IDS_CAM_BODY_ISO"
+msgstr "ISO"
+
+msgid "IDS_CAM_BODY_FOCAL_LENGTH"
+msgstr "Focusafstand"
+
+msgid "IDS_CAM_BODY_FLASH_ON"
+msgstr "Flitser aan"
+
+msgid "IDS_COM_POP_IMAGE_VIEWER"
+msgstr "Afbeeldingenviewer"
+
+msgid "IDS_MEDIABR_OPT_ALL_PICTURES"
+msgstr "Alle foto's"
+
+msgid "IDS_MEDIABR_HEADER_ORIENTATION"
+msgstr "Richting"
+
+msgid "IDS_MEDIABR_BODY_SELECT_PICTURE"
+msgstr "Foto selecteren"
+
+msgid "IDS_MP_BODY_DURATION"
+msgstr "Duur"
+
+msgid "IDS_ST_POP_SET"
+msgstr "Ingesteld"
+
+msgid "IDS_GALLERY_BODY_TAGS"
+msgstr "Tags"
+
+msgid "IDS_IV_SK3_ADD_COMMENT"
+msgstr "Opmerk. toev."
+
+msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Uw media bekijken op andere apparaten door apparaten in de buurt te gebruiken."
+
+msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
+msgstr "Videobestanden bevatten geen informatie over personen omdat ze de functie voor gezichttags niet ondersteunen."
+
+msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
+msgstr "Kan deze afbeelding niet delen. DRM-beveiliging van kracht."
+
+msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
+msgstr "Kan bestand niet openen."
+
+msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
+msgstr "Het opgenomen weerbericht kan afwijken van het werkelijke weer vanwege het update-interval."
+
+msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
+msgstr "De persoonlijke inhoud die is gekopieerd naar het klembord, kan worden gebruikt voor het maken van nieuwe inhoud. Uw nieuwe inhoud wordt mogelijk niet automatisch verborgen."
+
+msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
+msgstr "Afbeelding is te klein."
+
+msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
+msgstr "De datumgegevens worden alleen weergegeven wanneer andere tags zichtbaar zijn."
+
+msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
+msgstr "Tik op miniaturen en houd vast om de beste foto´s te selecteren."
+
+msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
+msgstr "Instellingen diashow"
+
+msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
+msgstr "Achtergrond instellen voor startscherm en vergrendelscherm"
+
+msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
+msgstr "Deze foto instellen als beller-id voor %s?"
+
+msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
+msgstr "Instellen als beller-id"
+
+msgid "IDS_IV_POP_SENDING_ING"
+msgstr "Verzenden..."
+
+msgid "IDS_IV_POP_SELECT_DEVICE"
+msgstr "Apparaat selecteren"
+
+msgid "IDS_IV_POP_SD_CARD_REMOVED"
+msgstr "SD-kaart verwijderd."
+
+msgid "IDS_IV_POP_PERMISSION_DENIED"
+msgstr "Toestemming geweigerd."
+
+msgid "IDS_IV_POP_NO_LOCATION"
+msgstr "Geen locatie"
+
+msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
+msgstr "Er zijn geen gezichten getagd. Tag gezichten in de foto."
+
+msgid "IDS_IV_POP_NO_FACES_DETECTED"
+msgstr "Geen gezichten gedetecteerd."
+
+msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Onvoldoende geheugen. Wis een aantal items."
+
+msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
+msgstr "Netwerkverbinding mislukt."
+
+msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
+msgstr "Maximumaantal tekens (%d) bereikt."
+
+msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
+msgstr "Ongeldig afbeeldingsbestand."
+
+msgid "IDS_IV_POP_FLASH_USED_ABB"
+msgstr "Flits gebruikt"
+
+msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
+msgstr "Bestandsindeling niet ondersteund."
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Geen gegevens."
+
+msgid "IDS_IV_POP_ENTER_TAG_NAME"
+msgstr "Tagnaam ingeven."
+
+msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
+msgstr "Automatisch vernieuwen in weerachtergrond inschakelen om weertags te zien."
+
+msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
+msgstr "Downloaden voltooid"
+
+msgid "IDS_IV_POP_BEST_PHOTO"
+msgstr "Beste foto"
+
+msgid "IDS_IV_POP_ADDED"
+msgstr "Toegevoegd."
+
+msgid "IDS_IV_OPT_WRITE_CAPTION"
+msgstr "Bijschrift maken"
+
+msgid "IDS_IV_OPT_USE_MOTION"
+msgstr "Beweging gebruiken"
+
+msgid "IDS_IV_OPT_UNFAVOURITE"
+msgstr "Favoriet opheffen"
+
+msgid "IDS_IV_OPT_TRIM"
+msgstr "Bijsnijden"
+
+msgid "IDS_IV_OPT_TAG_FACE_ABB"
+msgstr "Gezicht taggen"
+
+msgid "IDS_IV_OPT_TAG_BUDDY"
+msgstr "Taghulp"
+
+msgid "IDS_IV_OPT_TAG"
+msgstr "Tag"
+
+msgid "IDS_IV_OPT_START_SLIDESHOW"
+msgstr "Diashow starten"
+
+msgid "IDS_IV_OPT_SLIDE_SHOW"
+msgstr "Diapresentatie"
+
+msgid "IDS_IV_OPT_SLIDESHOW_ABB"
+msgstr "Diashow"
+
+msgid "IDS_IV_OPT_SHOW_ITEMS"
+msgstr "Items weergeven"
+
+msgid "IDS_IV_OPT_SHARE"
+msgstr "Delen"
+
+msgid "IDS_IV_OPT_ROTATE_RIGHT"
+msgstr "Rechtsom draaien"
+
+msgid "IDS_IV_OPT_ROTATE_LEFT"
+msgstr "Linksom draaien"
+
+msgid "IDS_IV_OPT_REMOVE_TAG"
+msgstr "Label verwijderen"
+
+msgid "IDS_IV_OPT_REFRESH"
+msgstr "Vernieuwen"
+
+msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
+msgstr "Afdrukken via Bluetooth"
+
+msgid "IDS_IV_OPT_MANUALLY_DETECT"
+msgstr "Handmatig detecteren"
+
+msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
+msgstr "Achtergrond voor start- en vergrendelscherm"
+
+msgid "IDS_IV_OPT_HIDDEN_ITEMS"
+msgstr "Verborgen items"
+
+msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
+msgstr "Routebeschrijving ophalen"
+
+msgid "IDS_IV_OPT_FILE_TRANSFER"
+msgstr "Bestandsoverdracht"
+
+msgid "IDS_IV_OPT_ERASER"
+msgstr "Gum"
+
+msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
+msgstr "Weertag bewerken"
+
+msgid "IDS_IV_OPT_EDIT_TAG"
+msgstr "Bewerk tag"
+
+msgid "IDS_IV_OPT_EDIT_CAPTION"
+msgstr "Bijschrift bewerken"
+
+msgid "IDS_IV_OPT_DELETE_CAPTION"
+msgstr "Bijschrift verwijderen"
+
+msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
+msgstr "Kopiëren naar klembord"
+
+msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
+msgstr "Verbindingsgegevens"
+
+msgid "IDS_IV_OPT_CLOUD"
+msgstr "Cloud"
+
+msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
+msgstr "Foto delen met vrienden"
+
+msgid "IDS_IV_OPT_BEST_FACE_ABB"
+msgstr "Beste gezicht"
+
+msgid "IDS_IV_OPT_AS_VIDEO_FILES"
+msgstr "Als videobestanden"
+
+msgid "IDS_IV_OPT_AS_IMAGE_FILES"
+msgstr "Als afbeeldingsbestanden"
+
+msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
+msgstr "Geanimeerde foto"
+
+msgid "IDS_IV_OPT_ADD_WEATHER_TAG_ABB"
+msgstr "Weertag toevoegen"
+
+msgid "IDS_IV_OPT_ADD_NAME_ABB"
+msgstr "Naam toevoegen"
+
+msgid "IDS_IV_OPT_ADD_CAPTION"
+msgstr "Bijschrift toevoegen"
+
+msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
+msgstr "Muziek diashow"
+
+msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
+msgstr "Foto'met geluid & opname delen"
+
+msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
+msgstr "Instellen als"
+
+msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
+msgstr "Foto verzenden naar"
+
+msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
+msgstr "Selecteer contact om te delen"
+
+msgid "IDS_IV_HEADER_PLAY_SPEED"
+msgstr "Afspeelsnelheid"
+
+msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
+msgstr "Achtergrond vergrendelscherm"
+
+msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
+msgstr "Informatie over draaibeweging"
+
+msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
+msgstr "Achtergrond startscherm"
+
+msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
+msgstr "Weertag bewerken"
+
+msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
+msgstr "Bewerk continu-opname"
+
+msgid "IDS_IV_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Beschikb. apparaten"
+
+msgid "IDS_IV_HEADER_ALL_ALBUMS"
+msgstr "Alle albums"
+
+msgid "IDS_IV_HEADER_ADD_TAG"
+msgstr "Tag toev."
+
+msgid "IDS_IV_BUTTON_STOP"
+msgstr "Stop"
+
+msgid "IDS_IV_BUTTON_SCAN"
+msgstr "Scannen"
+
+msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "U kunt uw media delen met andere apparaten door apparaten in de buurt te gebruiken."
+
+msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
+msgstr "Met %s en %d anderen"
+
+msgid "IDS_IV_BODY_WITH_PS"
+msgstr "Met %s"
+
+msgid "IDS_IV_BODY_WHITE_BALANCE"
+msgstr "Witbalans"
+
+msgid "IDS_IV_BODY_WEATHER_ABB"
+msgstr "Weer"
+
+msgid "IDS_IV_BODY_WEATHER"
+msgstr "Weer"
+
+msgid "IDS_IV_BODY_VENDOR"
+msgstr "Leverancier"
+
+msgid "IDS_IV_BODY_VALIDITY"
+msgstr "Geldigheid"
+
+msgid "IDS_IV_BODY_UNLIMITED"
+msgstr "Onbeperkt"
+
+msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
+msgstr "Kan foto niet laden."
+
+msgid "IDS_IV_BODY_TIMED_COUNT"
+msgstr "Speelduur"
+
+msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
+msgstr "Het opgenomen weerbericht moet handmatig worden bewerkt. Het ontvangen van opgenomen weerberichten van de weerwidget wordt niet ondersteund door uw apparaat."
+
+msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
+msgstr "Tik op gezichten om informatie over mensen weer te geven."
+
+msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
+msgstr "Tik en houd vast op twee punten en kantel het apparaat heen en terug om het scherm te verkleinen/vergroten."
+
+msgid "IDS_IV_BODY_SUNNY_DAY"
+msgstr "Zonnige dag"
+
+msgid "IDS_IV_BODY_SNOWY_DAY"
+msgstr "Sneeuwdag"
+
+msgid "IDS_IV_BODY_SHARE_VIA"
+msgstr "Delen via"
+
+msgid "IDS_IV_BODY_SERVER_NAME"
+msgstr "Servernaam"
+
+msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
+msgstr "Selecteer een gebied om de foto bij te snijden."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
+msgstr "Geselecteerd gebied wordt afgedrukt."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
+msgstr "Geselecteerd gebied wordt toegepast op de achtergrond."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
+msgstr "Geselecteerd gebied wordt toegepast op contactfoto."
+
+msgid "IDS_IV_BODY_RIGHT_STATUS"
+msgstr "Status rechten"
+
+msgid "IDS_IV_BODY_RESOLUTION"
+msgstr "Resolutie"
+
+msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
+msgstr "Verwijderen uit favorieten"
+
+msgid "IDS_IV_BODY_RAINY_DAY"
+msgstr "Regenachtige dag"
+
+msgid "IDS_IV_BODY_PRINT"
+msgstr "Afdrukken"
+
+msgid "IDS_IV_BODY_POSSIBLE"
+msgstr "Mogelijk"
+
+msgid "IDS_IV_BODY_PEOPLE"
+msgstr "Mensen"
+
+msgid "IDS_IV_BODY_N_A"
+msgstr "N.v.t."
+
+msgid "IDS_IV_BODY_NO_TAG"
+msgstr "Geen tag"
+
+msgid "IDS_IV_BODY_NEW_TAG"
+msgstr "Nieuwe tag"
+
+msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
+msgstr "Apparaten in de buurt"
+
+msgid "IDS_IV_BODY_MY_DEVICE"
+msgstr "Mijn apparaat"
+
+msgid "IDS_IV_BODY_MODEL"
+msgstr "Model"
+
+msgid "IDS_IV_BODY_ME"
+msgstr "Ik"
+
+msgid "IDS_IV_BODY_MANUFACTURER"
+msgstr "Fabrikant"
+
+msgid "IDS_IV_BODY_LONGITUDE"
+msgstr "Lengtegraad"
+
+msgid "IDS_IV_BODY_LOCK_SCREEN"
+msgstr "Vergrendelscherm"
+
+msgid "IDS_IV_BODY_LOCATION_M_PATH"
+msgstr "Locatie"
+
+msgid "IDS_IV_BODY_LOCATION_ABB2"
+msgstr "Locatie"
+
+msgid "IDS_IV_BODY_LOCATIONS"
+msgstr "Locaties"
+
+msgid "IDS_IV_BODY_LOCATION"
+msgstr "Locatie"
+
+msgid "IDS_IV_BODY_LATITUDE"
+msgstr "Breedtegraad"
+
+msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
+msgstr "In %s"
+
+msgid "IDS_IV_BODY_INTERVAL"
+msgstr "Interval"
+
+msgid "IDS_IV_BODY_INDIVIDUAL"
+msgstr "Individueel"
+
+msgid "IDS_IV_BODY_IN"
+msgstr "In"
+
+msgid "IDS_IV_BODY_IMPOSSIBLE"
+msgstr "Niet mogelijk"
+
+msgid "IDS_IV_BODY_HOME_SCREEN"
+msgstr "Startscherm"
+
+msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
+msgstr "Start- en vergrendelscherm"
+
+msgid "IDS_IV_BODY_FORWARDING"
+msgstr "Doorsturen"
+
+msgid "IDS_IV_BODY_FLASH"
+msgstr "Flashmenu"
+
+msgid "IDS_IV_BODY_FILE_NAME"
+msgstr "Bestandsnaam"
+
+msgid "IDS_IV_BODY_FILE_LOCATION"
+msgstr "Bestandslocatie"
+
+msgid "IDS_IV_BODY_FILE_FORMAT"
+msgstr "Bestandsindeling"
+
+msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
+msgstr "Belicht.tijd"
+
+msgid "IDS_IV_BODY_EXECUTE"
+msgstr "Uitvoeren"
+
+msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
+msgstr "GPS-tags in Camera inschakelen om locatietags weer te geven."
+
+msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
+msgstr "Automatisch vernieuwen in de weerwidget inschakelen om weertags te zien."
+
+msgid "IDS_IV_BODY_DURATION"
+msgstr "Duur"
+
+msgid "IDS_IV_BODY_DRM_INFO"
+msgstr "DRM-info"
+
+msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Niet meer tonen"
+
+msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
+msgstr "Niet meer vragen"
+
+msgid "IDS_IV_BODY_DISPLAY"
+msgstr "Display"
+
+msgid "IDS_IV_BODY_DATE_CREATED"
+msgstr "Datum gemaakt"
+
+msgid "IDS_IV_BODY_CROP"
+msgstr "Bijsnijden"
+
+msgid "IDS_IV_BODY_CREATE_TAG"
+msgstr "Tag maken"
+
+msgid "IDS_IV_BODY_COUNT"
+msgstr "Aantal"
+
+msgid "IDS_IV_BODY_CLOUDY_DAY"
+msgstr "Bewolkte dag"
+
+msgid "IDS_IV_BODY_CLEAR_NIGHT"
+msgstr "Heldere nacht"
+
+msgid "IDS_IV_BODY_CALLER_IMAGE"
+msgstr "Afbeelding beller"
+
+msgid "IDS_IV_BODY_BASIC"
+msgstr "Basis"
+
+msgid "IDS_IV_BODY_AVAILABLE_USES"
+msgstr "Aantal keer dat het gebruikt mag worden"
+
+msgid "IDS_IV_BODY_AUTO"
+msgstr "Auto"
+
+msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
+msgstr "Pas een bijpassend kleurenthema toe op applicaties."
+
+msgid "IDS_IV_BODY_APERTURE"
+msgstr "Lensopening"
+
+msgid "IDS_IV_BODY_ANY"
+msgstr "Alle"
+
+msgid "IDS_IV_BODY_ADD_TO_FAVOURITES"
+msgstr "Toevoegen aan favorieten"
+
+msgid "IDS_IV_BODY_ACCUMULATED_TIME"
+msgstr "Totale tijd"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximumaantal tekens bereikt."
+
+msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
+msgstr "Mislukt"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_ST_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_ST_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_ST_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_ST_BODY_EDIT"
+msgstr "Bewerken"
+
+msgid "IDS_ST_BODY_DATE"
+msgstr "Datum"
+
+msgid "IDS_EMAIL_OPT_ACCOUNTS"
+msgstr "Accounts"
+
+msgid "IDS_GALLERY_BODY_DOWNLOAD"
+msgstr "Downloaden"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
+msgstr "Nadat u foto's hebt geüpload naar Dropbox, worden items getoond."
+
+msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
+msgstr "Downloaden..."
+
+msgid "IDS_IV_BODY_ADD_PICTURES"
+msgstr "Foto´s toevoegen"
+
+msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
+msgstr "Foto´s worden weergegeven nadat u deze als favoriet hebt getagd."
+
+msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
+msgstr "Gezichtsidentificatie verwijderen?"
+
+msgid "IDS_IV_OPT_ASSIGN_NAME"
+msgstr "Naam toewijzen"
+
+msgid "IDS_IV_OPT_CONFIRM_AS_PS"
+msgstr "Bevestigen als %s"
+
+msgid "IDS_IV_OPT_LAYOUT_M_PICTUERS"
+msgstr "Lay-out"
+
+msgid "IDS_IV_OPT_PD_PICTURES_ADDED"
+msgstr "%d foto´s toegevoegd"
+
+msgid "IDS_IV_POP_THE_ALBUM_WILL_BE_CANCELLED"
+msgstr "Het album wordt geannuleerd."
+
+msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
+msgstr "Download starten..."
+
+msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Onvoldoende geheugen. Wis een aantal items."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Privé-opslag"
+
+msgid "IDS_IV_BODY_DRAG_HERE"
+msgstr "Hiernaartoe slepen."
+
+msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
+msgstr "Tik om afbeeldingen toe te voegen."
+
+msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
+msgstr "Bestand bestaat al."
+
+msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
+msgstr "Dit item wordt verwijderd."
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
+msgstr "Nadat u foto's hebt geüpload naar Facebook, worden items getoond."
+
+msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
+msgstr "Ongeldig teken."
+
+msgid "IDS_MEDIABR_OPT_MANUAL"
+msgstr "Handmatig"
+
+msgid "IDS_ST_BODY_ERROR_VZW"
+msgstr "Error"
+
+msgid "IDS_ST_BUTTON2_PROCESSING_ING"
+msgstr "Verwerken..."
+
+msgid "IDS_ST_BODY_OK"
+msgstr "OK"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Hernoemen"
+
+msgid "IDS_COM_BODY_NONE"
+msgstr "Geen"
+
+msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
+msgstr "%d geselecteerd"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Apparaatopslag"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD-kaart"
+
+msgid "IDS_ST_BODY_SPEED"
+msgstr "Snelheid"
+
+msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
+msgstr "Achtergrondmuziek"
+
+msgid "IDS_IV_OPT_1_SEC_ABB"
+msgstr "1 sec"
+
+msgid "IDS_IV_OPT_3_SECS_ABB"
+msgstr "3 sec"
+
+msgid "IDS_IV_OPT_5_SECS_ABB"
+msgstr "5 sec"
+
+msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
+msgstr "Opslaglocatie"
+
+msgid "IDS_IV_BODY_FILE_SIZE"
+msgstr "Bestandsgrootte"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 album wordt verwijderd."
+
+msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
+msgstr "Nostalgia"
+
+msgid "IDS_IV_OPT_BLUR_M_EFFECT"
+msgstr "Vaag"
+
+msgid "IDS_IV_OPT_SOFT_GLOW_M_EFFECT"
+msgstr "Zachte gloed"
+
+msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
+msgstr "Wijzigingen opslaan"
+
+msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
+msgstr "Uw wijzigingen opslaan of verwijderen?"
+
+msgid "IDS_IV_BUTTON_DISCARD_ABB2"
+msgstr "Wissen"
+
+msgid "IDS_IV_BUTTON_SAVE"
+msgstr "Opslaan"
+
+msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
+msgstr "Vintage"
+
+msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
+msgstr "Zonlicht"
+
+msgid "IDS_IV_OPT_OLD_PHOTO_M_EFFECT"
+msgstr "Oude foto"
+
+msgid "IDS_IV_OPT_RETRO_M_EFFECT"
+msgstr "Retro"
+
+msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
+msgstr "Grijstint"
+
+msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
+msgstr "Sepia"
+
+msgid "IDS_IV_OPT_FADED_COLOURS_M_EFFECT"
+msgstr "Vervaagde kleuren"
+
+msgid "IDS_IV_OPT_DOWNLIGHT_M_EFFECT"
+msgstr "Downlight"
+
+msgid "IDS_IV_OPT_YELLOW_GLOW_M_EFFECT"
+msgstr "Gele gloed"
+
+msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
+msgstr "Scherper"
+
+msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
+msgstr "Schets"
+
+msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
+msgstr "Omgekeerde kleuren"
+
+msgid "IDS_IV_OPT_OIL_PAINT_M_EFFECT"
+msgstr "Olieverf"
+
+msgid "IDS_IV_OPT_POSTERISE_M_EFFECT"
+msgstr "Posterisatie"
+
+msgid "IDS_IV_OPT_CARTOON_M_EFFECT"
+msgstr "Cartoon"
+
+msgid "IDS_IV_OPT_POP_ART_M_EFFECT"
+msgstr "Popart"
+
+msgid "IDS_IV_OPT_MAGIC_PEN_M_EFFECT"
+msgstr "Toverpen"
+
+msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
+msgstr "Toegevoegd aan blokkeerlijst."
+
+msgid "IDS_IMGE_BODY_ROTATE"
+msgstr "Draaien"
+
+msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Er is onvoldoende ruimte in uw apparaatopslag. Ga naar Instellingen > Energie en opslag > Opslag, verwijder een aantal bestanden en probeer het opnieuw."
+
+msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
+msgstr "Interval dia's"
+
+msgid "IDS_IV_MBODY_SLIDE_INTERVAL_ABB"
+msgstr "Interval dia's"
+
+msgid "IDS_IV_OPT_CONTACT_PICTURE_ABB"
+msgstr "Foto contact"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Geen"
+
+msgid "IDS_IV_OPT_EDIT"
+msgstr "Bewerk"
+
+msgid "IDS_IV_OPT_RENAME"
+msgstr "Naam wijzigen"
+
+msgid "IDS_IV_OPT_SET_AS"
+msgstr "Instellen als"
+
+msgid "IDS_IV_OPT_DOWNLOAD"
+msgstr "Downloaden"
+
+msgid "IDS_IV_HEADER_RENAME"
+msgstr "Naam wijzigen"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB"
+msgstr "Naam wijzigen"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB2"
+msgstr "Hernoemen"
+
+msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
+msgstr "Er is al een bestand met deze naam in de bestemmingsmap."
+
+msgid "IDS_IV_BUTTON_REPLACE_ABB"
+msgstr "Vervang"
+
+msgid "IDS_IV_HEADER_SET_AS"
+msgstr "Instellen als"
+
+msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
+msgstr "Achtergrond startscherm"
+
+msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
+msgstr "Achtergrond vergrendelen"
+
+msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
+msgstr "Achtergrond start/vergr.scherm"
+
+msgid "IDS_IV_HEADER_DETAILS"
+msgstr "Gegevens"
+
+msgid "IDS_IV_BODY_DATE"
+msgstr "Datum"
+
+msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
+msgstr "Kan afbeelding niet opslaan"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
+msgstr "Er is onvoldoende ruimte (%d MB) in uw apparaatopslag."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
+msgstr "Er is onvoldoende ruimte (%d MB) op uw SD-kaart."
+
+msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Verwijder een aantal bestanden en probeer het opnieuw."
+
+msgid "IDS_IV_HEADER_SAVE_IMAGE"
+msgstr "Afbeelding opslaan"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
+msgstr "Er is onvoldoende ruimte (%d MB over) in uw apparaatopslag. Dit item wordt opgeslagen op uw SD-kaart."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
+msgstr "Er is onvoldoende ruimte (%d MB over) op de SD-kaart. Dit item wordt opgeslagen in uw apparaatopslag."
+
+msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
+msgstr "Deze afbeelding wordt verwijderd."
+
+msgid "IDS_IV_BUTTON_STOP_ABB4"
+msgstr "Stoppen"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Wissen"
+
+msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
+msgstr "Fout"
+
+msgid "IDS_GALLERY_HEADER_SELECT_AREA_ABB"
+msgstr "Gebied selecteren"
+
+msgid "IDS_GALLERY_BUTTON_DONE"
+msgstr "Gereed"
+
+msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
+msgstr "Kan dit item niet laden."
+
+msgid "IDS_CAM_OPT_NEGATIVE"
+msgstr "Negatief"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "GEREED"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANNULEREN"
+
+msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
+msgstr "Negatief"
+
+msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
+msgstr "Kan Galerij niet openen."
+
+msgid "IDS_360V_TPOP_LOADING_ING"
+msgstr "Laden..."
+
+msgid "IDS_IV_HEADER_LOADING_ING"
+msgstr "Laden..."
+
+msgid "IDS_IV_POP_LOADING_FAILED"
+msgstr "Laden mislukt."
+
+msgid "IDS_IV_POP_LOADING_IMAGE_ING"
+msgstr "Afbeelding laden..."
+
+msgid "IDS_IV_SK_DISCARD"
+msgstr "Verwijderen"
+
+msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
+msgstr "Kan niet downloaden"
+
+msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobiele gegevens zijn uitgeschakeld. Maak verbinding met een Wi-Fi-netwerk of schakel Mobiele gegevens in en probeer het opnieuw."
+
+msgid "IDS_IV_BODY_DO_NOT_SEND"
+msgstr "Niet verzenden"
+
+msgid "IDS_COM_BODY_1_SECOND"
+msgstr "1 seconde"
+
+msgid "IDS_BODY_PD_SECONDS"
+msgstr "%d seconden"
+
+msgid "IDS_IV_BODY_EFFECT"
+msgstr "Effect"
+
+msgid "IDS_IMGE_HEARDER_EFFECTS"
+msgstr "Effecten"
+
+msgid "IDS_DFRAME_BODY_FLOW_M_EFFECT"
+msgstr "Stroom"
+
+msgid "IDS_IV_OPT_FADE_M_EFFECT"
+msgstr "Uitvloeien"
+
+msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
+msgstr "Inzoomen"
+

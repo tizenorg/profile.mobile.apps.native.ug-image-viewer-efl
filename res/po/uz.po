@@ -1,0 +1,996 @@
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Maxfiy"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Nom o‘zgartirish"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Ushbu video o'chiriladi."
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Fayl nomi avvaldan foydalanilmoqda"
+
+msgid "IDS_ST_BODY_OFF"
+msgstr "O‘ch."
+
+msgid "IDS_COM_BODY_DONE"
+msgstr "Bajarildi"
+
+msgid "IDS_FB_BODY_FACEBOOK"
+msgstr "Facebook"
+
+msgid "IDS_CAM_BODY_FLASH"
+msgstr "Flesh"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "To‘xtatish"
+
+msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
+msgstr "Ushbu ilovada %1$s o‘chirilgan. Ushbu funksiyani yoqish uchun %2$sga o‘ting, ushbu funksiyani tanlang va undan so‘ng ushbu ilovani tanlang"
+
+msgid "IDS_MEDIABR_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_MEDIABR_BUTTON_DONE"
+msgstr "OK"
+
+msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
+msgstr "Bekor qilish"
+
+msgid "IDS_GALLERY_HEADER_ENTER_NAME"
+msgstr "Nom kiriting"
+
+msgid "IDS_MEDIABR_POP_NO_NAME"
+msgstr "Nom yo‘q"
+
+msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
+msgstr "Faqat bitta albom mavjud."
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Eng ko‘pi bilan %d element tanlashingiz mumkin."
+
+msgid "IDS_IV_OPT_DETAILS"
+msgstr "Tafsilotlar"
+
+msgid "IDS_IV_OPT_DELETE_ABB"
+msgstr "O'chirish"
+
+msgid "IDS_IV_POP_DELETE_Q"
+msgstr "O'chirilsinmi?"
+
+msgid "IDS_IV_BUTTON_CANCEL"
+msgstr "Bekor qilish"
+
+msgid "IDS_IV_POP_DELETED"
+msgstr "O'chirildi."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Tanlangan"
+
+msgid "IDS_IV_SK_SAVE"
+msgstr "Saqlash"
+
+msgid "IDS_IV_POP_SAVED"
+msgstr "Saqlandi."
+
+msgid "IDS_IV_BODY_SETTINGS"
+msgstr "Parametrlar"
+
+msgid "IDS_IV_BODY_SIZE"
+msgstr "O‘lcham"
+
+msgid "IDS_IV_BODY_UNKNOWN"
+msgstr "Noma’lum"
+
+msgid "IDS_IV_SK_YES"
+msgstr "Ha"
+
+msgid "IDS_CAM_BODY_ISO"
+msgstr "ISO"
+
+msgid "IDS_CAM_BODY_FOCAL_LENGTH"
+msgstr "Fokal uzunlik"
+
+msgid "IDS_CAM_BODY_FLASH_ON"
+msgstr "Flesh yoq."
+
+msgid "IDS_COM_POP_IMAGE_VIEWER"
+msgstr "Rasmni ko‘rib chiqish vositasi"
+
+msgid "IDS_MEDIABR_OPT_ALL_PICTURES"
+msgstr "Barcha rasmlar"
+
+msgid "IDS_MEDIABR_HEADER_ORIENTATION"
+msgstr "Oriyentatsiya"
+
+msgid "IDS_MEDIABR_BODY_SELECT_PICTURE"
+msgstr "Rasm tanlash"
+
+msgid "IDS_MP_BODY_DURATION"
+msgstr "Davomiylik"
+
+msgid "IDS_ST_POP_SET"
+msgstr "O‘rnatish"
+
+msgid "IDS_GALLERY_BODY_TAGS"
+msgstr "Teglar"
+
+msgid "IDS_IV_SK3_ADD_COMMENT"
+msgstr "Sharh qo‘shish"
+
+msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Yaqi-atrofdagi qurilmalar yordamida mediangizni boshqa qurilmalarda ko‘rib chiqing."
+
+msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
+msgstr "Video fayllar odamlar haqidagi ma’lumotlarga ega emas, chunki ular yuz tegi funksiyasini qo‘llab-quvvatlamaydi."
+
+msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
+msgstr "Ushbu tasvirni ulashib bo‘lmaydi. U DRM himoyalangan."
+
+msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
+msgstr "Faylni ochib bo‘lmaydi."
+
+msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
+msgstr "Yangilash intervali sababli joriy ob-havo ma’lumotidan farq qilishi mumkin."
+
+msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
+msgstr "Buferga nusxa olingan shaxsiy tarkibdan yangi tarkibni yaratishda foydalanish mumkin. Yangi tarkibni avtomatik ravishda yashirib bo‘lmaydi."
+
+msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
+msgstr "Tasvir juda kichik."
+
+msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
+msgstr "Boshqa teglar ko‘ringanda, sana ma’lumoti aks ettiriladi."
+
+msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
+msgstr "Eng yaxshi fotosuratlarni tanlash uchun, eskizlarni bosib turing."
+
+msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
+msgstr "Slayd-shou parametrlari"
+
+msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
+msgstr "Asosiy va bloklangan ekran uchun fon rasmi o‘rnatish"
+
+msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
+msgstr "Ushbu rasm %sning qo‘ng‘iroq qiluvchi IDsi sifatida o‘rnatilsinmi?"
+
+msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
+msgstr "Qo‘ng‘iroq qiluvchining IDsi sifatida o‘rnatildi"
+
+msgid "IDS_IV_POP_SENDING_ING"
+msgstr "Yuborilmoqda..."
+
+msgid "IDS_IV_POP_SELECT_DEVICE"
+msgstr "Qurilma tanlang"
+
+msgid "IDS_IV_POP_SD_CARD_REMOVED"
+msgstr "SD-karta olib tashlandi."
+
+msgid "IDS_IV_POP_PERMISSION_DENIED"
+msgstr "Ruxsat rad etildi."
+
+msgid "IDS_IV_POP_NO_LOCATION"
+msgstr "Joylashuv mavjud emas"
+
+msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
+msgstr "Yuzlar teglanmadi. Rasmda yuzlarni teglash"
+
+msgid "IDS_IV_POP_NO_FACES_DETECTED"
+msgstr "Yuzlar aniqlanmadi."
+
+msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Xotira yetarli emas. Ba’zi elementlarni o'chiring"
+
+msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
+msgstr "Tarmoq ulanishi xatosi."
+
+msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
+msgstr "Belgilar soni ruxsat etilgan maksimal miqdorga (%d) yetdi."
+
+msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
+msgstr "Noto‘g‘ri tasvir fayli."
+
+msgid "IDS_IV_POP_FLASH_USED_ABB"
+msgstr "Flesh bilan"
+
+msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
+msgstr "Fayl formati qo‘llab-quvvatlanmaydi."
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Kiritish bo‘sh."
+
+msgid "IDS_IV_POP_ENTER_TAG_NAME"
+msgstr "Teg nomini kiriting."
+
+msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
+msgstr "Ob-havo teglarini ko‘rish uchun ob-havo fon rasmida avtomatik yangilashni yoqing."
+
+msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
+msgstr "Yuklab olish yakunlandi"
+
+msgid "IDS_IV_POP_BEST_PHOTO"
+msgstr "Eng yaxshi foto"
+
+msgid "IDS_IV_POP_ADDED"
+msgstr "Qo‘shildi."
+
+msgid "IDS_IV_OPT_WRITE_CAPTION"
+msgstr "Sarlavha yozish"
+
+msgid "IDS_IV_OPT_USE_MOTION"
+msgstr "Harakatdan foydalanish"
+
+msgid "IDS_IV_OPT_UNFAVOURITE"
+msgstr "Tanlanmagan"
+
+msgid "IDS_IV_OPT_TRIM"
+msgstr "Bezatish"
+
+msgid "IDS_IV_OPT_TAG_FACE_ABB"
+msgstr "Yuzni belgilash"
+
+msgid "IDS_IV_OPT_TAG_BUDDY"
+msgstr "Kontekstli teg"
+
+msgid "IDS_IV_OPT_TAG"
+msgstr "Teg"
+
+msgid "IDS_IV_OPT_START_SLIDESHOW"
+msgstr "Slayd-shouni boshlash"
+
+msgid "IDS_IV_OPT_SLIDE_SHOW"
+msgstr "Slayd-shou"
+
+msgid "IDS_IV_OPT_SLIDESHOW_ABB"
+msgstr "Slayd-shou"
+
+msgid "IDS_IV_OPT_SHOW_ITEMS"
+msgstr "Elementlarni ko‘rsatish"
+
+msgid "IDS_IV_OPT_SHARE"
+msgstr "Ulashish"
+
+msgid "IDS_IV_OPT_ROTATE_RIGHT"
+msgstr "O‘ngga aylantir."
+
+msgid "IDS_IV_OPT_ROTATE_LEFT"
+msgstr "Chapga aylantir."
+
+msgid "IDS_IV_OPT_REMOVE_TAG"
+msgstr "Tegni olib tashlash"
+
+msgid "IDS_IV_OPT_REFRESH"
+msgstr "Yangilash"
+
+msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
+msgstr "Bluetooth orqali chop etish"
+
+msgid "IDS_IV_OPT_MANUALLY_DETECT"
+msgstr "Qo‘lda aniqlash"
+
+msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
+msgstr "Asosiy va bloklash ekrani fon rasmi"
+
+msgid "IDS_IV_OPT_HIDDEN_ITEMS"
+msgstr "Yashirin elementlar"
+
+msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
+msgstr "Yo‘nalishlarni olish"
+
+msgid "IDS_IV_OPT_FILE_TRANSFER"
+msgstr "Faylni uzatish"
+
+msgid "IDS_IV_OPT_ERASER"
+msgstr "O‘chirg‘ich"
+
+msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
+msgstr "Ob-havo tegi tahriri"
+
+msgid "IDS_IV_OPT_EDIT_TAG"
+msgstr "Teg tahrir"
+
+msgid "IDS_IV_OPT_EDIT_CAPTION"
+msgstr "Sarlavha tahriri"
+
+msgid "IDS_IV_OPT_DELETE_CAPTION"
+msgstr "Titrni yo‘q qilish"
+
+msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
+msgstr "Buferga nusxa olish"
+
+msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
+msgstr "Ulanish ma’lumoti"
+
+msgid "IDS_IV_OPT_CLOUD"
+msgstr "Cloud"
+
+msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
+msgstr "O‘rtoq fotosuratini ulashish"
+
+msgid "IDS_IV_OPT_BEST_FACE_ABB"
+msgstr "A‘lo kadr"
+
+msgid "IDS_IV_OPT_AS_VIDEO_FILES"
+msgstr "Video fayllar sifatida"
+
+msgid "IDS_IV_OPT_AS_IMAGE_FILES"
+msgstr "Tasvir fayllari sifatida"
+
+msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
+msgstr "Animatsion foto"
+
+msgid "IDS_IV_OPT_ADD_WEATHER_TAG_ABB"
+msgstr "Ob-havo tegini qo‘shish"
+
+msgid "IDS_IV_OPT_ADD_NAME_ABB"
+msgstr "Nom qo‘shish"
+
+msgid "IDS_IV_OPT_ADD_CAPTION"
+msgstr "Sarlavha qo‘shish"
+
+msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
+msgstr "Slayd-shou musiqasi"
+
+msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
+msgstr "Ovoz kadr rasmini ulash"
+
+msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
+msgstr "O‘rnatish"
+
+msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
+msgstr "Ushbu rasmni yubor"
+
+msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
+msgstr "Ulashish uchun kontaktni tanlang"
+
+msgid "IDS_IV_HEADER_PLAY_SPEED"
+msgstr "Ijro tezligi"
+
+msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
+msgstr "Blok. ekran fon rasmi"
+
+msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
+msgstr "Og‘dirish haqida"
+
+msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
+msgstr "As. ekran fon rasmi"
+
+msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
+msgstr "Ob-havo tegi tahriri"
+
+msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
+msgstr "Fleshli kadr tahriri"
+
+msgid "IDS_IV_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Mavjud qurilmalar"
+
+msgid "IDS_IV_HEADER_ALL_ALBUMS"
+msgstr "Barcha albomlar"
+
+msgid "IDS_IV_HEADER_ADD_TAG"
+msgstr "Teg qo‘shish"
+
+msgid "IDS_IV_BUTTON_STOP"
+msgstr "To‘x."
+
+msgid "IDS_IV_BUTTON_SCAN"
+msgstr "Qidirish"
+
+msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Yaqin-atrofdagi qurilmalar yordamida mediangizni boshqa qurilmalar bilan ulashishingiz mumkin."
+
+msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
+msgstr "%s va boshqa %d bilan"
+
+msgid "IDS_IV_BODY_WITH_PS"
+msgstr "%s bilan"
+
+msgid "IDS_IV_BODY_WHITE_BALANCE"
+msgstr "Oq balans"
+
+msgid "IDS_IV_BODY_WEATHER_ABB"
+msgstr "Ob-havo"
+
+msgid "IDS_IV_BODY_WEATHER"
+msgstr "Ob-havo"
+
+msgid "IDS_IV_BODY_VENDOR"
+msgstr "Ta’minotchi"
+
+msgid "IDS_IV_BODY_VALIDITY"
+msgstr "Amal qilish"
+
+msgid "IDS_IV_BODY_UNLIMITED"
+msgstr "Cheklanmagan"
+
+msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
+msgstr "Fotosuratni yuklab bo‘lmaydi."
+
+msgid "IDS_IV_BODY_TIMED_COUNT"
+msgstr "Vaqti belgilangan sanoq"
+
+msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
+msgstr "The recorded weather information should be edited manually. Your device does not support receiving recorded weather info from the weather widget."
+
+msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
+msgstr "Odamlar haqidagi ma’lumotlarni ko‘rib chiqish uchun yuzlarni cherting."
+
+msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
+msgstr "Ekranni kattalashtirish yoki kichiklashtirish uchun, ikki nuqtani bosib ushlab turgan holda qurilmani orqaga va oldinga og‘diring."
+
+msgid "IDS_IV_BODY_SUNNY_DAY"
+msgstr "Quyoshli kun"
+
+msgid "IDS_IV_BODY_SNOWY_DAY"
+msgstr "Qorli kun"
+
+msgid "IDS_IV_BODY_SHARE_VIA"
+msgstr "Quyidagi orqali ulashish"
+
+msgid "IDS_IV_BODY_SERVER_NAME"
+msgstr "Server nomi"
+
+msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
+msgstr "Rasmni kesib olish uchun sohani tanlang."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
+msgstr "Tanlangan soha chop etildi."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
+msgstr "Tanlangan soha fon rasmiga qo‘llaniladi."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
+msgstr "Tanlangan soha kontakt rasmiga qo‘llaniladi."
+
+msgid "IDS_IV_BODY_RIGHT_STATUS"
+msgstr "Huquq holati"
+
+msgid "IDS_IV_BODY_RESOLUTION"
+msgstr "Rezolyutsiya"
+
+msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
+msgstr "Tanlanganlardan olib tashlash"
+
+msgid "IDS_IV_BODY_RAINY_DAY"
+msgstr "Yomg‘irli kun"
+
+msgid "IDS_IV_BODY_PRINT"
+msgstr "Chop etish"
+
+msgid "IDS_IV_BODY_POSSIBLE"
+msgstr "Taxminiy"
+
+msgid "IDS_IV_BODY_PEOPLE"
+msgstr "Odamlar"
+
+msgid "IDS_IV_BODY_N_A"
+msgstr "YO‘Q"
+
+msgid "IDS_IV_BODY_NO_TAG"
+msgstr "Teg yo‘q"
+
+msgid "IDS_IV_BODY_NEW_TAG"
+msgstr "Yangi teg"
+
+msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
+msgstr "Yaqin-atrof. quril."
+
+msgid "IDS_IV_BODY_MY_DEVICE"
+msgstr "Qurilma"
+
+msgid "IDS_IV_BODY_MODEL"
+msgstr "Model"
+
+msgid "IDS_IV_BODY_ME"
+msgstr "Men"
+
+msgid "IDS_IV_BODY_MANUFACTURER"
+msgstr "Ishlab chiqaruvchi"
+
+msgid "IDS_IV_BODY_LONGITUDE"
+msgstr "Uzunlik"
+
+msgid "IDS_IV_BODY_LOCK_SCREEN"
+msgstr "Bloklash ekrani"
+
+msgid "IDS_IV_BODY_LOCATION_M_PATH"
+msgstr "Joylashuv"
+
+msgid "IDS_IV_BODY_LOCATION_ABB2"
+msgstr "Joylashuv"
+
+msgid "IDS_IV_BODY_LOCATIONS"
+msgstr "Joylashuvlar"
+
+msgid "IDS_IV_BODY_LOCATION"
+msgstr "Joylashuv"
+
+msgid "IDS_IV_BODY_LATITUDE"
+msgstr "Kenglik"
+
+msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
+msgstr "%sda"
+
+msgid "IDS_IV_BODY_INTERVAL"
+msgstr "Muddat"
+
+msgid "IDS_IV_BODY_INDIVIDUAL"
+msgstr "Individual"
+
+msgid "IDS_IV_BODY_IN"
+msgstr "Quyidagida"
+
+msgid "IDS_IV_BODY_IMPOSSIBLE"
+msgstr "Imkonsiz"
+
+msgid "IDS_IV_BODY_HOME_SCREEN"
+msgstr "Asosiy ekran"
+
+msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
+msgstr "Asosiy va bloklash ekranlari"
+
+msgid "IDS_IV_BODY_FORWARDING"
+msgstr "Boshqaga yo‘naltirish"
+
+msgid "IDS_IV_BODY_FLASH"
+msgstr "Flash"
+
+msgid "IDS_IV_BODY_FILE_NAME"
+msgstr "Fayl nomi"
+
+msgid "IDS_IV_BODY_FILE_LOCATION"
+msgstr "Fayl joylashuvi"
+
+msgid "IDS_IV_BODY_FILE_FORMAT"
+msgstr "Fayl formati"
+
+msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
+msgstr "Namoyish vaqti"
+
+msgid "IDS_IV_BODY_EXECUTE"
+msgstr "Amalga oshirish"
+
+msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
+msgstr "Joylashuv teglarini ko‘rish uchun Kamerada GPS teglarini yoqing."
+
+msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
+msgstr "Ob-havo teglarini ko‘rish uchun ob-havo vidjetida avtomatik yangilashni yoqing."
+
+msgid "IDS_IV_BODY_DURATION"
+msgstr "Davomiylik"
+
+msgid "IDS_IV_BODY_DRM_INFO"
+msgstr "DRM ma’lumoti"
+
+msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Boshqa ko‘rsatilmasin"
+
+msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
+msgstr "Boshqa so'ramang"
+
+msgid "IDS_IV_BODY_DISPLAY"
+msgstr "Displey"
+
+msgid "IDS_IV_BODY_DATE_CREATED"
+msgstr "Yaratilgan sana"
+
+msgid "IDS_IV_BODY_CROP"
+msgstr "Kesish"
+
+msgid "IDS_IV_BODY_CREATE_TAG"
+msgstr "Teg yarat"
+
+msgid "IDS_IV_BODY_COUNT"
+msgstr "Hisob"
+
+msgid "IDS_IV_BODY_CLOUDY_DAY"
+msgstr "Bulutli kun"
+
+msgid "IDS_IV_BODY_CLEAR_NIGHT"
+msgstr "Oydin kecha"
+
+msgid "IDS_IV_BODY_CALLER_IMAGE"
+msgstr "Qo‘ng‘iroq qiluvchi rasmi"
+
+msgid "IDS_IV_BODY_BASIC"
+msgstr "Boshlang'ich"
+
+msgid "IDS_IV_BODY_AVAILABLE_USES"
+msgstr "Mavjud foydalanishlar"
+
+msgid "IDS_IV_BODY_AUTO"
+msgstr "Avtomatik"
+
+msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
+msgstr "Ilovalarga mos rang mavzularini qo‘llang."
+
+msgid "IDS_IV_BODY_APERTURE"
+msgstr "Apertura"
+
+msgid "IDS_IV_BODY_ANY"
+msgstr "Har qanday"
+
+msgid "IDS_IV_BODY_ADD_TO_FAVOURITES"
+msgstr "Tanlanganlarga qo‘shish"
+
+msgid "IDS_IV_BODY_ACCUMULATED_TIME"
+msgstr "Yig‘ilgan vaqt"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Belgilar soni ruxsat etilgan maksimal miqdorga yetdi."
+
+msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
+msgstr "Xato"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_ST_BODY_MB"
+msgstr "Mb"
+
+msgid "IDS_ST_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_ST_BODY_GB"
+msgstr "Gb"
+
+msgid "IDS_ST_BODY_EDIT"
+msgstr "Tahrirlash"
+
+msgid "IDS_ST_BODY_DATE"
+msgstr "Sana"
+
+msgid "IDS_EMAIL_OPT_ACCOUNTS"
+msgstr "Hisob qaydnomalari"
+
+msgid "IDS_GALLERY_BODY_DOWNLOAD"
+msgstr "Yuklab olish"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
+msgstr "Dropboxga rasmlarni yuklaganingizdan so‘ng, elementlar ko‘rsatiladi."
+
+msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
+msgstr "Yuklanmoqda..."
+
+msgid "IDS_IV_BODY_ADD_PICTURES"
+msgstr "Rasmlar qo‘shish"
+
+msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
+msgstr "Rasmlarni tanlanganlar sifatida belgilaganingizdan so‘ng, rasmlar ko‘rsatiladi."
+
+msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
+msgstr "Yuzni aniqlash olib tashlansinmi?"
+
+msgid "IDS_IV_OPT_ASSIGN_NAME"
+msgstr "Nomni tayinlash"
+
+msgid "IDS_IV_OPT_CONFIRM_AS_PS"
+msgstr "%s sifatida tasdiqlash"
+
+msgid "IDS_IV_OPT_LAYOUT_M_PICTUERS"
+msgstr "Joylashuv"
+
+msgid "IDS_IV_OPT_PD_PICTURES_ADDED"
+msgstr "%d rasm qo‘shildi"
+
+msgid "IDS_IV_POP_THE_ALBUM_WILL_BE_CANCELLED"
+msgstr "Albom bekor qilinadi."
+
+msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
+msgstr "Yuklab olish boshlanmoqda..."
+
+msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Xotira yetarli emas. Ba’zi elementlarni o'chiring"
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Maxfiy xotira"
+
+msgid "IDS_IV_BODY_DRAG_HERE"
+msgstr "Bu yerga tortib o‘tkazing."
+
+msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
+msgstr "Tasvirlar qo‘shish uchun teging."
+
+msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
+msgstr "Fayl avvaldan mavjud."
+
+msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
+msgstr "Ushbu element yo‘q qilinadi."
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
+msgstr "Facebookka rasmlarni yuklaganingizdan so‘ng, elementlar ko‘rsatiladi."
+
+msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
+msgstr "Noto‘g‘ri belgi."
+
+msgid "IDS_MEDIABR_OPT_MANUAL"
+msgstr "Qo‘lda"
+
+msgid "IDS_ST_BODY_ERROR_VZW"
+msgstr "Error"
+
+msgid "IDS_ST_BUTTON2_PROCESSING_ING"
+msgstr "Bajarilmoqda..."
+
+msgid "IDS_ST_BODY_OK"
+msgstr "OK"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Nom o‘zg."
+
+msgid "IDS_COM_BODY_NONE"
+msgstr "Hech qaysi"
+
+msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
+msgstr "%d tanlandi"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Qurilma xotirasi"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD-karta"
+
+msgid "IDS_ST_BODY_SPEED"
+msgstr "Tezlik"
+
+msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
+msgstr "Fondagi musiqa"
+
+msgid "IDS_IV_OPT_1_SEC_ABB"
+msgstr "1 son."
+
+msgid "IDS_IV_OPT_3_SECS_ABB"
+msgstr "3 son."
+
+msgid "IDS_IV_OPT_5_SECS_ABB"
+msgstr "5 son."
+
+msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
+msgstr "Xotira joylashuvi"
+
+msgid "IDS_IV_BODY_FILE_SIZE"
+msgstr "Fayl o‘lchami"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 albom yo‘q qilinadi."
+
+msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
+msgstr "Nastalgiya"
+
+msgid "IDS_IV_OPT_BLUR_M_EFFECT"
+msgstr "Chaplanish"
+
+msgid "IDS_IV_OPT_SOFT_GLOW_M_EFFECT"
+msgstr "Yoqimli jilva"
+
+msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
+msgstr "O‘zgarishlarni saqlash"
+
+msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
+msgstr "O‘zgartirishlaringiz saqlansinmi yoki tashlab yuborilsinmi?"
+
+msgid "IDS_IV_BUTTON_DISCARD_ABB2"
+msgstr "Rad et"
+
+msgid "IDS_IV_BUTTON_SAVE"
+msgstr "Saqlash"
+
+msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
+msgstr "Vintaj"
+
+msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
+msgstr "Quyosh nuri"
+
+msgid "IDS_IV_OPT_OLD_PHOTO_M_EFFECT"
+msgstr "Eski fotosurat"
+
+msgid "IDS_IV_OPT_RETRO_M_EFFECT"
+msgstr "Retro"
+
+msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
+msgstr "Kulrang shkala"
+
+msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
+msgstr "Sepiya"
+
+msgid "IDS_IV_OPT_FADED_COLOURS_M_EFFECT"
+msgstr "Xira ranglar"
+
+msgid "IDS_IV_OPT_DOWNLIGHT_M_EFFECT"
+msgstr "Chiroq"
+
+msgid "IDS_IV_OPT_YELLOW_GLOW_M_EFFECT"
+msgstr "Sarg‘ish"
+
+msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
+msgstr "Aniqlash"
+
+msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
+msgstr "Eskiz"
+
+msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
+msgstr "O‘girilgan ranglar"
+
+msgid "IDS_IV_OPT_OIL_PAINT_M_EFFECT"
+msgstr "Moy bo‘yoq"
+
+msgid "IDS_IV_OPT_POSTERISE_M_EFFECT"
+msgstr "Sifatini pasaytirish"
+
+msgid "IDS_IV_OPT_CARTOON_M_EFFECT"
+msgstr "Multfilm"
+
+msgid "IDS_IV_OPT_POP_ART_M_EFFECT"
+msgstr "Pop-art"
+
+msgid "IDS_IV_OPT_MAGIC_PEN_M_EFFECT"
+msgstr "Sehrli pero"
+
+msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
+msgstr "Bloklanganlar ro‘yxatiga qo‘shildi."
+
+msgid "IDS_IMGE_BODY_ROTATE"
+msgstr "Aylantirish"
+
+msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Qurilmangiz xotirasida yetarli bo‘sh joy mavjud emas. Parametrlar > Quvvat va xotira > Xotiraga o‘ting, so‘ngra ba’zi fayllarni yo‘q qiling va qayta urinib ko‘ring."
+
+msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
+msgstr "Slayd intervali"
+
+msgid "IDS_IV_MBODY_SLIDE_INTERVAL_ABB"
+msgstr "Slayd intervali"
+
+msgid "IDS_IV_OPT_CONTACT_PICTURE_ABB"
+msgstr "Kontakt rasmi"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Yo‘q"
+
+msgid "IDS_IV_OPT_EDIT"
+msgstr "Tahrirlash"
+
+msgid "IDS_IV_OPT_RENAME"
+msgstr "Nom o‘zgartirish"
+
+msgid "IDS_IV_OPT_SET_AS"
+msgstr "Quyidagi sifatida o‘rnatish"
+
+msgid "IDS_IV_OPT_DOWNLOAD"
+msgstr "Yuklab olish"
+
+msgid "IDS_IV_HEADER_RENAME"
+msgstr "Nom o‘zgartirish"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB"
+msgstr "Nom o‘zgartir"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB2"
+msgstr "Nom o‘zg"
+
+msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
+msgstr "Yakuniy jildda ushbu nomdagi fayl avvaldan mavjud."
+
+msgid "IDS_IV_BUTTON_REPLACE_ABB"
+msgstr "Almasht."
+
+msgid "IDS_IV_HEADER_SET_AS"
+msgstr "Quyidagi sifatida o‘rnatish"
+
+msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
+msgstr "Asosiy ekran fon rasmi"
+
+msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
+msgstr "Bloklash ekrani fon rasmi"
+
+msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
+msgstr "Asos. va blk. ekrani fon rasmi"
+
+msgid "IDS_IV_HEADER_DETAILS"
+msgstr "Tafsilotlar"
+
+msgid "IDS_IV_BODY_DATE"
+msgstr "Sana"
+
+msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
+msgstr "Tasvirni saqlab bo‘lmaydi"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
+msgstr "Qurilmangiz xotirasida yetarli bo‘sh joy (%d Mb) mavjud emas."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
+msgstr "SD-kartangizda yetarli xotira (%d Mb) mavjud emas."
+
+msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Ba’zi fayllarni yo‘q qiling va qayta urinib ko‘ring."
+
+msgid "IDS_IV_HEADER_SAVE_IMAGE"
+msgstr "Rasmni saqlash"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
+msgstr "Qurilmangiz xotirasida yetarli bo‘sh joy (%d Mb qoldi) mavjud emas. Ushbu element SD-kartangizga saqlanadi."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
+msgstr "SD-kartada yetarli bo‘sh joy (%d Mb qoldi) mavjud emas. Ushbu element qurilmangiz xotirasida saqlanadi."
+
+msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
+msgstr "Ushbu tasvir o'chirib tashlanadi."
+
+msgid "IDS_IV_BUTTON_STOP_ABB4"
+msgstr "To‘xtatish"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Yo‘q qilish"
+
+msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
+msgstr "Xato"
+
+msgid "IDS_GALLERY_HEADER_SELECT_AREA_ABB"
+msgstr "Soha tanlash"
+
+msgid "IDS_GALLERY_BUTTON_DONE"
+msgstr "OK"
+
+msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
+msgstr "Ushbu elementni yuklab bo‘lmadi."
+
+msgid "IDS_CAM_OPT_NEGATIVE"
+msgstr "Negativ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "BAJARILDI"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "BEKOR QILISH"
+
+msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
+msgstr "Negativ"
+
+msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
+msgstr "Galereyani ochib bo‘lmaydi."
+
+msgid "IDS_360V_TPOP_LOADING_ING"
+msgstr "Yuklanmoqda..."
+
+msgid "IDS_IV_HEADER_LOADING_ING"
+msgstr "Yuklanmoqda..."
+
+msgid "IDS_IV_POP_LOADING_FAILED"
+msgstr "Yuklash bajarilmadi."
+
+msgid "IDS_IV_POP_LOADING_IMAGE_ING"
+msgstr "Tasvir yuklanmoqda..."
+
+msgid "IDS_IV_SK_DISCARD"
+msgstr "Tashlash"
+
+msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
+msgstr "Yuklab olib bo‘lmaydi"
+
+msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobil ma’lumot o‘chirilgan. Wi-Fi tarmoqqa ulaning yoki Mobil ma’lumotni yoqing va qayta urinib ko‘ring."
+
+msgid "IDS_IV_BODY_DO_NOT_SEND"
+msgstr "Yuborilmasin"
+
+msgid "IDS_COM_BODY_1_SECOND"
+msgstr "1 soniya"
+
+msgid "IDS_BODY_PD_SECONDS"
+msgstr "%d soniya"
+
+msgid "IDS_IV_BODY_EFFECT"
+msgstr "Effekt"
+
+msgid "IDS_IMGE_HEARDER_EFFECTS"
+msgstr "Effektlar"
+
+msgid "IDS_DFRAME_BODY_FLOW_M_EFFECT"
+msgstr "Oqim"
+
+msgid "IDS_IV_OPT_FADE_M_EFFECT"
+msgstr "Xiralashish"
+
+msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
+msgstr "Kattalashtirish"
+

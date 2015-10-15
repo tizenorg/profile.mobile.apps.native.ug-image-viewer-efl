@@ -1,0 +1,996 @@
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privat"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Byt namn"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Det här videoklippet kommer att raderas."
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Filnamnet används redan."
+
+msgid "IDS_ST_BODY_OFF"
+msgstr "Av"
+
+msgid "IDS_COM_BODY_DONE"
+msgstr "Klar"
+
+msgid "IDS_FB_BODY_FACEBOOK"
+msgstr "Facebook"
+
+msgid "IDS_CAM_BODY_FLASH"
+msgstr "Fotolampa"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stopp"
+
+msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
+msgstr "%1$s är inaktiverad i det här programmet. Om du vill aktivera den här funktionen går du till %2$s, väljer den här funktionen och väljer sedan det här programmet."
+
+msgid "IDS_MEDIABR_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_MEDIABR_BUTTON_DONE"
+msgstr "Klar"
+
+msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
+msgstr "Avbryt"
+
+msgid "IDS_GALLERY_HEADER_ENTER_NAME"
+msgstr "Ange namn"
+
+msgid "IDS_MEDIABR_POP_NO_NAME"
+msgstr "Inget namn"
+
+msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
+msgstr "Det finns endast ett album."
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Du kan välja upp till %d objekt."
+
+msgid "IDS_IV_OPT_DETAILS"
+msgstr "Detaljer"
+
+msgid "IDS_IV_OPT_DELETE_ABB"
+msgstr "Radera"
+
+msgid "IDS_IV_POP_DELETE_Q"
+msgstr "Radera?"
+
+msgid "IDS_IV_BUTTON_CANCEL"
+msgstr "Avbryt"
+
+msgid "IDS_IV_POP_DELETED"
+msgstr "Raderad."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Favoriter"
+
+msgid "IDS_IV_SK_SAVE"
+msgstr "Spara"
+
+msgid "IDS_IV_POP_SAVED"
+msgstr "Sparad."
+
+msgid "IDS_IV_BODY_SETTINGS"
+msgstr "Inställningar"
+
+msgid "IDS_IV_BODY_SIZE"
+msgstr "Storlek"
+
+msgid "IDS_IV_BODY_UNKNOWN"
+msgstr "Okänd"
+
+msgid "IDS_IV_SK_YES"
+msgstr "Ja"
+
+msgid "IDS_CAM_BODY_ISO"
+msgstr "ISO"
+
+msgid "IDS_CAM_BODY_FOCAL_LENGTH"
+msgstr "Brännvidd"
+
+msgid "IDS_CAM_BODY_FLASH_ON"
+msgstr "Blixt på"
+
+msgid "IDS_COM_POP_IMAGE_VIEWER"
+msgstr "Bildvisare"
+
+msgid "IDS_MEDIABR_OPT_ALL_PICTURES"
+msgstr "Alla bilder"
+
+msgid "IDS_MEDIABR_HEADER_ORIENTATION"
+msgstr "Orientering"
+
+msgid "IDS_MEDIABR_BODY_SELECT_PICTURE"
+msgstr "Välj bild"
+
+msgid "IDS_MP_BODY_DURATION"
+msgstr "Varaktighet"
+
+msgid "IDS_ST_POP_SET"
+msgstr "Ange"
+
+msgid "IDS_GALLERY_BODY_TAGS"
+msgstr "Taggar"
+
+msgid "IDS_IV_SK3_ADD_COMMENT"
+msgstr "Lägg till komm."
+
+msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Visa media på andra enheter med enheter i närheten."
+
+msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
+msgstr "Videofiler innehåller inte information om personer eftersom de inte stöder funktionen för att tagga ansikten."
+
+msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
+msgstr "Det gick inte att dela denna bild. Den är DRM-skyddad."
+
+msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
+msgstr "Det går inte att öppna filen."
+
+msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
+msgstr "Den registrerade väderinformationen kan skilja sig från det faktiska vädret på grund uppdateringsintervallet."
+
+msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
+msgstr "Privat innehåll som kopieras till Urklipp kan användas för att skapa nytt innehåll. Ditt nya innehåll kan inte döljas automatiskt."
+
+msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
+msgstr "Bilden är för liten."
+
+msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
+msgstr "Datuminformationen visas endast när andra taggar är synliga."
+
+msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
+msgstr "Tryck och håll kvar på miniatyrerna för att välja bästa foton."
+
+msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
+msgstr "Bildspelsinställningar"
+
+msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
+msgstr "Ange bakgrund för hemskärmen och låsskärmen."
+
+msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
+msgstr "Vill du använda bilden som %ss uppringar-ID?"
+
+msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
+msgstr "Använd som Foto-ID"
+
+msgid "IDS_IV_POP_SENDING_ING"
+msgstr "Sänder..."
+
+msgid "IDS_IV_POP_SELECT_DEVICE"
+msgstr "Välj enhet"
+
+msgid "IDS_IV_POP_SD_CARD_REMOVED"
+msgstr "SD-kortet har tagits bort."
+
+msgid "IDS_IV_POP_PERMISSION_DENIED"
+msgstr "Tillstånd nekades."
+
+msgid "IDS_IV_POP_NO_LOCATION"
+msgstr "Ingen plats"
+
+msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
+msgstr "Inga ansikten har taggats. Tagga ansikten i bilden."
+
+msgid "IDS_IV_POP_NO_FACES_DETECTED"
+msgstr "Inga ansikten hittades."
+
+msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Minnet räcker inte. Radera några objekt."
+
+msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
+msgstr "Nätverksanslutningen misslyckades."
+
+msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
+msgstr "Högsta antal tecken (%d) har uppnåtts."
+
+msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
+msgstr "Ogiltig bildfil."
+
+msgid "IDS_IV_POP_FLASH_USED_ABB"
+msgstr "Blixt används"
+
+msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
+msgstr "Filformatet stöds inte."
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Posten är tom."
+
+msgid "IDS_IV_POP_ENTER_TAG_NAME"
+msgstr "Ange taggnamn."
+
+msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
+msgstr "Aktivera Uppdatera automatiskt i väderbakgrunden om du vill visa vädertaggar."
+
+msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
+msgstr "Hämtningen är klar"
+
+msgid "IDS_IV_POP_BEST_PHOTO"
+msgstr "Bästa foto"
+
+msgid "IDS_IV_POP_ADDED"
+msgstr "Tillagd."
+
+msgid "IDS_IV_OPT_WRITE_CAPTION"
+msgstr "Skriv bildtext"
+
+msgid "IDS_IV_OPT_USE_MOTION"
+msgstr "Använd rörelse"
+
+msgid "IDS_IV_OPT_UNFAVOURITE"
+msgstr "Ta bort från favoriter"
+
+msgid "IDS_IV_OPT_TRIM"
+msgstr "Beskär"
+
+msgid "IDS_IV_OPT_TAG_FACE_ABB"
+msgstr "Tagga ansikte"
+
+msgid "IDS_IV_OPT_TAG_BUDDY"
+msgstr "Relaterad sida"
+
+msgid "IDS_IV_OPT_TAG"
+msgstr "Tagg"
+
+msgid "IDS_IV_OPT_START_SLIDESHOW"
+msgstr "Starta bildspel"
+
+msgid "IDS_IV_OPT_SLIDE_SHOW"
+msgstr "Bildspel"
+
+msgid "IDS_IV_OPT_SLIDESHOW_ABB"
+msgstr "Bildspel"
+
+msgid "IDS_IV_OPT_SHOW_ITEMS"
+msgstr "Visa objekt"
+
+msgid "IDS_IV_OPT_SHARE"
+msgstr "Dela"
+
+msgid "IDS_IV_OPT_ROTATE_RIGHT"
+msgstr "Rotera medurs"
+
+msgid "IDS_IV_OPT_ROTATE_LEFT"
+msgstr "Rotera moturs"
+
+msgid "IDS_IV_OPT_REMOVE_TAG"
+msgstr "Ta bort tagg"
+
+msgid "IDS_IV_OPT_REFRESH"
+msgstr "Uppdatera"
+
+msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
+msgstr "Skriv ut via Bluetooth"
+
+msgid "IDS_IV_OPT_MANUALLY_DETECT"
+msgstr "Identifiera manuellt"
+
+msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
+msgstr "Bakgrund för start- och låsskärmen"
+
+msgid "IDS_IV_OPT_HIDDEN_ITEMS"
+msgstr "Dolda objekt"
+
+msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
+msgstr "Hämta vägbeskrivning"
+
+msgid "IDS_IV_OPT_FILE_TRANSFER"
+msgstr "Filöverföring"
+
+msgid "IDS_IV_OPT_ERASER"
+msgstr "Radera"
+
+msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
+msgstr "Redigera vädertagg"
+
+msgid "IDS_IV_OPT_EDIT_TAG"
+msgstr "Red. tagg"
+
+msgid "IDS_IV_OPT_EDIT_CAPTION"
+msgstr "Redigera bildtext"
+
+msgid "IDS_IV_OPT_DELETE_CAPTION"
+msgstr "Ta bort bildtext"
+
+msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
+msgstr "Kopiera till Urklipp"
+
+msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
+msgstr "Anslutningsinfo"
+
+msgid "IDS_IV_OPT_CLOUD"
+msgstr "Moln"
+
+msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
+msgstr "Dela foto med kompis"
+
+msgid "IDS_IV_OPT_BEST_FACE_ABB"
+msgstr "Bästa ansikte"
+
+msgid "IDS_IV_OPT_AS_VIDEO_FILES"
+msgstr "Som videofiler"
+
+msgid "IDS_IV_OPT_AS_IMAGE_FILES"
+msgstr "Som bildfiler"
+
+msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
+msgstr "Animerat foto"
+
+msgid "IDS_IV_OPT_ADD_WEATHER_TAG_ABB"
+msgstr "Lägg till vädertagg"
+
+msgid "IDS_IV_OPT_ADD_NAME_ABB"
+msgstr "Lägg till namn"
+
+msgid "IDS_IV_OPT_ADD_CAPTION"
+msgstr "Lägg till bildtext"
+
+msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
+msgstr "Musik till bildspel"
+
+msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
+msgstr "Dela ljud och bilder"
+
+msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
+msgstr "Använd som"
+
+msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
+msgstr "Skicka bilden till"
+
+msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
+msgstr "Välj en kontakt som du vill dela"
+
+msgid "IDS_IV_HEADER_PLAY_SPEED"
+msgstr "Uppspelningshastighet"
+
+msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
+msgstr "Bakgrund för låsskärm"
+
+msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
+msgstr "Lär dig mer om luta"
+
+msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
+msgstr "Bakg. för hemskärmen"
+
+msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
+msgstr "Redigera vädertagg"
+
+msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
+msgstr "Redigera serietagning"
+
+msgid "IDS_IV_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Tillängliga enheter"
+
+msgid "IDS_IV_HEADER_ALL_ALBUMS"
+msgstr "Alla album"
+
+msgid "IDS_IV_HEADER_ADD_TAG"
+msgstr "Lägg till tagg"
+
+msgid "IDS_IV_BUTTON_STOP"
+msgstr "Stopp"
+
+msgid "IDS_IV_BUTTON_SCAN"
+msgstr "Skanna"
+
+msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Du kan dela media med andra enheter med enheter i närheten."
+
+msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
+msgstr "Med %s och %d andra"
+
+msgid "IDS_IV_BODY_WITH_PS"
+msgstr "Med %s"
+
+msgid "IDS_IV_BODY_WHITE_BALANCE"
+msgstr "Vitbalans"
+
+msgid "IDS_IV_BODY_WEATHER_ABB"
+msgstr "Väder"
+
+msgid "IDS_IV_BODY_WEATHER"
+msgstr "Väder"
+
+msgid "IDS_IV_BODY_VENDOR"
+msgstr "Leverantör"
+
+msgid "IDS_IV_BODY_VALIDITY"
+msgstr "Giltighet"
+
+msgid "IDS_IV_BODY_UNLIMITED"
+msgstr "Obegränsad"
+
+msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
+msgstr "Det går inte att läsa in fotot."
+
+msgid "IDS_IV_BODY_TIMED_COUNT"
+msgstr "Tidsgräns för räkning"
+
+msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
+msgstr "The recorded weather information should be edited manually. Your device does not support receiving recorded weather info from the weather widget."
+
+msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
+msgstr "Tryck på ansikten för att visa information om personerna."
+
+msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
+msgstr "Tryck och håll ned på två punkter och vinkla sedan enheten framåt eller bakåt för att förstora eller förminska skärmen."
+
+msgid "IDS_IV_BODY_SUNNY_DAY"
+msgstr "Sommardag"
+
+msgid "IDS_IV_BODY_SNOWY_DAY"
+msgstr "Snöig dag"
+
+msgid "IDS_IV_BODY_SHARE_VIA"
+msgstr "Dela via"
+
+msgid "IDS_IV_BODY_SERVER_NAME"
+msgstr "Servernamn"
+
+msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
+msgstr "Markera ett område för att beskära bilden."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
+msgstr "Det markerade området kommer att skrivas ut."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
+msgstr "Det markerade området gäller för bakgrund."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
+msgstr "Valt område gäller för kontaktbilden."
+
+msgid "IDS_IV_BODY_RIGHT_STATUS"
+msgstr "Rättighetsstatus"
+
+msgid "IDS_IV_BODY_RESOLUTION"
+msgstr "Upplösning"
+
+msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
+msgstr "Ta bort från Favoriter"
+
+msgid "IDS_IV_BODY_RAINY_DAY"
+msgstr "Regnig dag"
+
+msgid "IDS_IV_BODY_PRINT"
+msgstr "Skriv ut"
+
+msgid "IDS_IV_BODY_POSSIBLE"
+msgstr "Möjlig"
+
+msgid "IDS_IV_BODY_PEOPLE"
+msgstr "Personer"
+
+msgid "IDS_IV_BODY_N_A"
+msgstr "Saknas"
+
+msgid "IDS_IV_BODY_NO_TAG"
+msgstr "Ingen tagg"
+
+msgid "IDS_IV_BODY_NEW_TAG"
+msgstr "Ny tagg"
+
+msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
+msgstr "Enheter i närheten"
+
+msgid "IDS_IV_BODY_MY_DEVICE"
+msgstr "Min enhet"
+
+msgid "IDS_IV_BODY_MODEL"
+msgstr "Modell"
+
+msgid "IDS_IV_BODY_ME"
+msgstr "Mig"
+
+msgid "IDS_IV_BODY_MANUFACTURER"
+msgstr "Tillverkare"
+
+msgid "IDS_IV_BODY_LONGITUDE"
+msgstr "Longitud"
+
+msgid "IDS_IV_BODY_LOCK_SCREEN"
+msgstr "Låsskärm"
+
+msgid "IDS_IV_BODY_LOCATION_M_PATH"
+msgstr "Plats"
+
+msgid "IDS_IV_BODY_LOCATION_ABB2"
+msgstr "Plats"
+
+msgid "IDS_IV_BODY_LOCATIONS"
+msgstr "Platser"
+
+msgid "IDS_IV_BODY_LOCATION"
+msgstr "Plats"
+
+msgid "IDS_IV_BODY_LATITUDE"
+msgstr "Latitud"
+
+msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
+msgstr "I %s"
+
+msgid "IDS_IV_BODY_INTERVAL"
+msgstr "Intervall"
+
+msgid "IDS_IV_BODY_INDIVIDUAL"
+msgstr "Individuell"
+
+msgid "IDS_IV_BODY_IN"
+msgstr "Tum"
+
+msgid "IDS_IV_BODY_IMPOSSIBLE"
+msgstr "Ej möjlig"
+
+msgid "IDS_IV_BODY_HOME_SCREEN"
+msgstr "Hemskärm"
+
+msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
+msgstr "Hem- och låsskärmar"
+
+msgid "IDS_IV_BODY_FORWARDING"
+msgstr "Vidarebefordra"
+
+msgid "IDS_IV_BODY_FLASH"
+msgstr "Flash-meny"
+
+msgid "IDS_IV_BODY_FILE_NAME"
+msgstr "Filnamn"
+
+msgid "IDS_IV_BODY_FILE_LOCATION"
+msgstr "Filplats"
+
+msgid "IDS_IV_BODY_FILE_FORMAT"
+msgstr "Filformat"
+
+msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
+msgstr "Exponeringstid"
+
+msgid "IDS_IV_BODY_EXECUTE"
+msgstr "Exekvera"
+
+msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
+msgstr "Aktivera GPS-taggar i Kamera för att visa platstaggar."
+
+msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
+msgstr "Aktivera Uppdatera automatiskt i väderwidgeten om du vill visa vädertaggar."
+
+msgid "IDS_IV_BODY_DURATION"
+msgstr "Speltid"
+
+msgid "IDS_IV_BODY_DRM_INFO"
+msgstr "DRM-info"
+
+msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Visa inte igen"
+
+msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
+msgstr "Fråga inte igen"
+
+msgid "IDS_IV_BODY_DISPLAY"
+msgstr "Display"
+
+msgid "IDS_IV_BODY_DATE_CREATED"
+msgstr "Skapat den"
+
+msgid "IDS_IV_BODY_CROP"
+msgstr "Beskär"
+
+msgid "IDS_IV_BODY_CREATE_TAG"
+msgstr "Skapa tagg"
+
+msgid "IDS_IV_BODY_COUNT"
+msgstr "Antal"
+
+msgid "IDS_IV_BODY_CLOUDY_DAY"
+msgstr "Molnig dag"
+
+msgid "IDS_IV_BODY_CLEAR_NIGHT"
+msgstr "Klar natt"
+
+msgid "IDS_IV_BODY_CALLER_IMAGE"
+msgstr "Foto-ID"
+
+msgid "IDS_IV_BODY_BASIC"
+msgstr "Grundläggande"
+
+msgid "IDS_IV_BODY_AVAILABLE_USES"
+msgstr "Tillgängliga tillämpningar"
+
+msgid "IDS_IV_BODY_AUTO"
+msgstr "Auto"
+
+msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
+msgstr "Använd ett matchande färgtema för program."
+
+msgid "IDS_IV_BODY_APERTURE"
+msgstr "Bländare"
+
+msgid "IDS_IV_BODY_ANY"
+msgstr "Alla"
+
+msgid "IDS_IV_BODY_ADD_TO_FAVOURITES"
+msgstr "Lägg till i Favoriter"
+
+msgid "IDS_IV_BODY_ACCUMULATED_TIME"
+msgstr "Sammanlagd tid"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximalt antal tecken har använts."
+
+msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
+msgstr "Misslyckad"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_ST_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_ST_BODY_KB"
+msgstr "kB"
+
+msgid "IDS_ST_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_ST_BODY_EDIT"
+msgstr "Redigera"
+
+msgid "IDS_ST_BODY_DATE"
+msgstr "Datum"
+
+msgid "IDS_EMAIL_OPT_ACCOUNTS"
+msgstr "Konton"
+
+msgid "IDS_GALLERY_BODY_DOWNLOAD"
+msgstr "Hämta"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
+msgstr "När du har överfört bilder till Dropbox kommer objekten att visas."
+
+msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
+msgstr "Laddar ned..."
+
+msgid "IDS_IV_BODY_ADD_PICTURES"
+msgstr "Lägg till bilder"
+
+msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
+msgstr "När du har taggat bilder som favoriter visas bilderna."
+
+msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
+msgstr "Ta bort ansiktsidentifiering?"
+
+msgid "IDS_IV_OPT_ASSIGN_NAME"
+msgstr "Tilldela namn"
+
+msgid "IDS_IV_OPT_CONFIRM_AS_PS"
+msgstr "Bekräfta som %s"
+
+msgid "IDS_IV_OPT_LAYOUT_M_PICTUERS"
+msgstr "Layout"
+
+msgid "IDS_IV_OPT_PD_PICTURES_ADDED"
+msgstr "%d bilder tillagda"
+
+msgid "IDS_IV_POP_THE_ALBUM_WILL_BE_CANCELLED"
+msgstr "Albumet avbryts."
+
+msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
+msgstr "Startar hämtning..."
+
+msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Minnet räcker inte. Radera några objekt."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Privat lagring"
+
+msgid "IDS_IV_BODY_DRAG_HERE"
+msgstr "Dra hit."
+
+msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
+msgstr "Tryck för att lägga till bilder."
+
+msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
+msgstr "Filen finns redan."
+
+msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
+msgstr "Det här objektet kommer att raderas."
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
+msgstr "När du överfört bilder till Facebook kommer objekten att visas."
+
+msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
+msgstr "Ogiltigt tecken."
+
+msgid "IDS_MEDIABR_OPT_MANUAL"
+msgstr "Manuellt"
+
+msgid "IDS_ST_BODY_ERROR_VZW"
+msgstr "Error"
+
+msgid "IDS_ST_BUTTON2_PROCESSING_ING"
+msgstr "Bearbetar..."
+
+msgid "IDS_ST_BODY_OK"
+msgstr "OK"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Byt namn"
+
+msgid "IDS_COM_BODY_NONE"
+msgstr "Ingen"
+
+msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
+msgstr "%d valda"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Enhetslagring"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD-kort"
+
+msgid "IDS_ST_BODY_SPEED"
+msgstr "Hastighet"
+
+msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
+msgstr "Bakgrundsmusik"
+
+msgid "IDS_IV_OPT_1_SEC_ABB"
+msgstr "1 sek"
+
+msgid "IDS_IV_OPT_3_SECS_ABB"
+msgstr "3 s"
+
+msgid "IDS_IV_OPT_5_SECS_ABB"
+msgstr "5 s"
+
+msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
+msgstr "Lagringsplats"
+
+msgid "IDS_IV_BODY_FILE_SIZE"
+msgstr "Filstorlek"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 album kommer att tas bort."
+
+msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
+msgstr "Nostalgi"
+
+msgid "IDS_IV_OPT_BLUR_M_EFFECT"
+msgstr "Suddig"
+
+msgid "IDS_IV_OPT_SOFT_GLOW_M_EFFECT"
+msgstr "Mjukt sken"
+
+msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
+msgstr "Spara ändringar"
+
+msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
+msgstr "Vill du spara dina ändringar eller ignorera dem?"
+
+msgid "IDS_IV_BUTTON_DISCARD_ABB2"
+msgstr "Ta bort"
+
+msgid "IDS_IV_BUTTON_SAVE"
+msgstr "Spara"
+
+msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
+msgstr "Antik"
+
+msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
+msgstr "Solsken"
+
+msgid "IDS_IV_OPT_OLD_PHOTO_M_EFFECT"
+msgstr "Gammalt foto"
+
+msgid "IDS_IV_OPT_RETRO_M_EFFECT"
+msgstr "Retro"
+
+msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
+msgstr "Gråskala"
+
+msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
+msgstr "Sepia"
+
+msgid "IDS_IV_OPT_FADED_COLOURS_M_EFFECT"
+msgstr "Tonade färger"
+
+msgid "IDS_IV_OPT_DOWNLIGHT_M_EFFECT"
+msgstr "Downlight"
+
+msgid "IDS_IV_OPT_YELLOW_GLOW_M_EFFECT"
+msgstr "Gult sken"
+
+msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
+msgstr "Gör skarpare"
+
+msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
+msgstr "Skiss"
+
+msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
+msgstr "Inverterade färger"
+
+msgid "IDS_IV_OPT_OIL_PAINT_M_EFFECT"
+msgstr "Oljemålning"
+
+msgid "IDS_IV_OPT_POSTERISE_M_EFFECT"
+msgstr "Färgreduktion"
+
+msgid "IDS_IV_OPT_CARTOON_M_EFFECT"
+msgstr "Tecknat"
+
+msgid "IDS_IV_OPT_POP_ART_M_EFFECT"
+msgstr "Popkonst"
+
+msgid "IDS_IV_OPT_MAGIC_PEN_M_EFFECT"
+msgstr "Magisk penna"
+
+msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
+msgstr "Tillagd i Blockerade."
+
+msgid "IDS_IMGE_BODY_ROTATE"
+msgstr "Rotera"
+
+msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Det finns inte tillräckligt med utrymme på enhetens lagringsutrymme. Gå till Inställningar > Ström och lagring > Lagring och ta bort några filer. Försök sedan igen."
+
+msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
+msgstr "Bildspelsintervall"
+
+msgid "IDS_IV_MBODY_SLIDE_INTERVAL_ABB"
+msgstr "Bildspelsintervall"
+
+msgid "IDS_IV_OPT_CONTACT_PICTURE_ABB"
+msgstr "Kontaktbild"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Ingen"
+
+msgid "IDS_IV_OPT_EDIT"
+msgstr "Redigera"
+
+msgid "IDS_IV_OPT_RENAME"
+msgstr "Byt namn"
+
+msgid "IDS_IV_OPT_SET_AS"
+msgstr "Ange som"
+
+msgid "IDS_IV_OPT_DOWNLOAD"
+msgstr "Hämta"
+
+msgid "IDS_IV_HEADER_RENAME"
+msgstr "Byt namn"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB"
+msgstr "Byt namn"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB2"
+msgstr "Byt namn"
+
+msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
+msgstr "Det finns redan en fil med det namnet i målmappen."
+
+msgid "IDS_IV_BUTTON_REPLACE_ABB"
+msgstr "Ersätt"
+
+msgid "IDS_IV_HEADER_SET_AS"
+msgstr "Ange som"
+
+msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
+msgstr "Bakgrund för hemskärmen"
+
+msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
+msgstr "Bakgrund för låsskärm"
+
+msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
+msgstr "Hem- och låsskärmsbakgrunder"
+
+msgid "IDS_IV_HEADER_DETAILS"
+msgstr "Detaljer"
+
+msgid "IDS_IV_BODY_DATE"
+msgstr "Datum"
+
+msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
+msgstr "Det går inte att spara bilden"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
+msgstr "Det finns inte tillräckligt med utrymme (%d MB) i enhetslagringen."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
+msgstr "Det finns inte tillräckligt med utrymme (%d MB) på SD-kortet."
+
+msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Ta bort några filer och försök igen."
+
+msgid "IDS_IV_HEADER_SAVE_IMAGE"
+msgstr "Spara bild"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
+msgstr "Det finns inte tillräckligt med utrymme i enhetslagringen (%d MB kvar). Det här objektet sparas på SD-kortet."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
+msgstr "Det finns inte tillräckligt med utrymme på SD-kortet (%d MB kvar). Det här objektet sparas i enhetslagringen."
+
+msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
+msgstr "Den här bilden raderas."
+
+msgid "IDS_IV_BUTTON_STOP_ABB4"
+msgstr "Stopp"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Ta bort"
+
+msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
+msgstr "Fel"
+
+msgid "IDS_GALLERY_HEADER_SELECT_AREA_ABB"
+msgstr "Välj område"
+
+msgid "IDS_GALLERY_BUTTON_DONE"
+msgstr "Klar"
+
+msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
+msgstr "Det gick inte att läsa in objektet."
+
+msgid "IDS_CAM_OPT_NEGATIVE"
+msgstr "Negativ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "KLAR"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "AVBRYT"
+
+msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
+msgstr "Negativ"
+
+msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
+msgstr "Kan inte öppna Galleri."
+
+msgid "IDS_360V_TPOP_LOADING_ING"
+msgstr "Laddar..."
+
+msgid "IDS_IV_HEADER_LOADING_ING"
+msgstr "Laddar..."
+
+msgid "IDS_IV_POP_LOADING_FAILED"
+msgstr "Det gick inte att läsa in."
+
+msgid "IDS_IV_POP_LOADING_IMAGE_ING"
+msgstr "Läser in bild..."
+
+msgid "IDS_IV_SK_DISCARD"
+msgstr "Avvisa"
+
+msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
+msgstr "Det går inte att hämta"
+
+msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobildata är har slagits av. Anslut till ett Wi-Fi-nätverk eller slå på Mobildata och försök igen."
+
+msgid "IDS_IV_BODY_DO_NOT_SEND"
+msgstr "Skicka inte"
+
+msgid "IDS_COM_BODY_1_SECOND"
+msgstr "1 sekund"
+
+msgid "IDS_BODY_PD_SECONDS"
+msgstr "%d sekunder"
+
+msgid "IDS_IV_BODY_EFFECT"
+msgstr "Effekt"
+
+msgid "IDS_IMGE_HEARDER_EFFECTS"
+msgstr "Effekter"
+
+msgid "IDS_DFRAME_BODY_FLOW_M_EFFECT"
+msgstr "Flöde"
+
+msgid "IDS_IV_OPT_FADE_M_EFFECT"
+msgstr "Tona"
+
+msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
+msgstr "Zooma in"
+

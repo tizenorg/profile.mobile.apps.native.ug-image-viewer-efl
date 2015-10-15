@@ -1,0 +1,996 @@
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "निजी"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "नाम बदलें"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "यह वीडियो हटाया जाएगा"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "फाइल नाम पहले से ही उपयोग में है।"
+
+msgid "IDS_ST_BODY_OFF"
+msgstr "बंद"
+
+msgid "IDS_COM_BODY_DONE"
+msgstr "पूर्ण"
+
+msgid "IDS_FB_BODY_FACEBOOK"
+msgstr "फेसबुक"
+
+msgid "IDS_CAM_BODY_FLASH"
+msgstr "फ्लैश"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "रोकें"
+
+msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
+msgstr "इस एप्लीकेशन में %1$s अक्षम है। यह फ़ंक्शन सक्षम करने के लिए %2$s पर जाएँ, यह फ़ंक्शन चुनें और फिर यह एप्लीकेशन चुनें।"
+
+msgid "IDS_MEDIABR_BUTTON_OK"
+msgstr "ओके"
+
+msgid "IDS_MEDIABR_BUTTON_DONE"
+msgstr "पूर्ण"
+
+msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
+msgstr "रद्द करें"
+
+msgid "IDS_GALLERY_HEADER_ENTER_NAME"
+msgstr "नाम प्रविष्ट करें"
+
+msgid "IDS_MEDIABR_POP_NO_NAME"
+msgstr "नाम नहीं"
+
+msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
+msgstr "यहाँ केवल एक एल्बम है"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "आप %d मद तक चुन सकते हैं"
+
+msgid "IDS_IV_OPT_DETAILS"
+msgstr "विवरण"
+
+msgid "IDS_IV_OPT_DELETE_ABB"
+msgstr "हटाएँ"
+
+msgid "IDS_IV_POP_DELETE_Q"
+msgstr "हटाएँ?"
+
+msgid "IDS_IV_BUTTON_CANCEL"
+msgstr "रद्द"
+
+msgid "IDS_IV_POP_DELETED"
+msgstr "हटाया।"
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "पसंदीदा"
+
+msgid "IDS_IV_SK_SAVE"
+msgstr "सुरक्षित"
+
+msgid "IDS_IV_POP_SAVED"
+msgstr "सुरक्षित किया।"
+
+msgid "IDS_IV_BODY_SETTINGS"
+msgstr "सेटिंग्स"
+
+msgid "IDS_IV_BODY_SIZE"
+msgstr "आकार"
+
+msgid "IDS_IV_BODY_UNKNOWN"
+msgstr "अज्ञात"
+
+msgid "IDS_IV_SK_YES"
+msgstr "हाँ"
+
+msgid "IDS_CAM_BODY_ISO"
+msgstr "ISO"
+
+msgid "IDS_CAM_BODY_FOCAL_LENGTH"
+msgstr "फ़ोकल लंबाई"
+
+msgid "IDS_CAM_BODY_FLASH_ON"
+msgstr "फ्लैश चालू"
+
+msgid "IDS_COM_POP_IMAGE_VIEWER"
+msgstr "छवि व्यूअर"
+
+msgid "IDS_MEDIABR_OPT_ALL_PICTURES"
+msgstr "सभी चित्र"
+
+msgid "IDS_MEDIABR_HEADER_ORIENTATION"
+msgstr "अभिविन्यास"
+
+msgid "IDS_MEDIABR_BODY_SELECT_PICTURE"
+msgstr "तस्वीर चुनें"
+
+msgid "IDS_MP_BODY_DURATION"
+msgstr "कालावधि"
+
+msgid "IDS_ST_POP_SET"
+msgstr "सेट"
+
+msgid "IDS_GALLERY_BODY_TAGS"
+msgstr "टैग्‍स"
+
+msgid "IDS_IV_SK3_ADD_COMMENT"
+msgstr "टिप्पणी जोड़ें"
+
+msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "नज़दीकी डिवाइसों का उपयोग करके अपना मीडिया अन्य डिवाइसों पर देखें"
+
+msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
+msgstr "वीडियो फ़ाइल्स में लोगों के बारे में जानकारी नहीं होती है क्योंकि वे चेहरा टैग फ़ंक्शन का समर्थन नहीं करती हैं"
+
+msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
+msgstr "यह छवि साझा करने में अक्षम। यह DRM सुरक्षित है।"
+
+msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
+msgstr "फाईल खोलने में अक्षम।"
+
+msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
+msgstr "अपडेट अंतराल के कारण रिकॉर्ड की गई मौसम की जानकारी वास्तविक मौसम से भिन्न हो सकती है।"
+
+msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
+msgstr "क्लिपबोर्ड में कॉपी की गई व्यक्तिगत सामग्री को नई सामग्री बनाने के लिए उपयोग किया जा सकता है। आपकी नई सामग्री स्वचालित रूप से नहीं छुपाई जा सकती।"
+
+msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
+msgstr "छवि बहुत छोटी है।"
+
+msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
+msgstr "केवल अन्य टैग्स दृश्‍यमान होने पर ही तिथि जानकारी प्रदर्शित होती है।"
+
+msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
+msgstr "सर्वश्रेष्ठ फोटो चुनने के लिए थंबनेल्‍स को टैप और होल्ड करें।"
+
+msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
+msgstr "स्लाइडशो सेटिंग्स"
+
+msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
+msgstr "होम स्क्रीन और लॉक स्‍क्रीन के लिए वॉलपेपर सेट करें"
+
+msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
+msgstr "इस तस्वीर को %s की कॉलर ID के रूप में सेट करें?"
+
+msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
+msgstr "कॉलर ID के रूप में सेट करें"
+
+msgid "IDS_IV_POP_SENDING_ING"
+msgstr "भेजा जा रहा है..."
+
+msgid "IDS_IV_POP_SELECT_DEVICE"
+msgstr "डिवाइस चुनें"
+
+msgid "IDS_IV_POP_SD_CARD_REMOVED"
+msgstr "SD कार्ड निकाला गया।"
+
+msgid "IDS_IV_POP_PERMISSION_DENIED"
+msgstr "अनुमति से इनकार।"
+
+msgid "IDS_IV_POP_NO_LOCATION"
+msgstr "स्थान नहीं"
+
+msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
+msgstr "किसी चेहरे को टैग नहीं किया गया है৷ तस्वीर में चेहरों को टैग करें।"
+
+msgid "IDS_IV_POP_NO_FACES_DETECTED"
+msgstr "कोई चेहरा पहचाना नहीं गया।"
+
+msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "पर्याप्त मेमोरी नहीं। कुछ मदें हटाएँ।"
+
+msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
+msgstr "नेटवर्क कनेक्शन असफल।"
+
+msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
+msgstr "वर्णों की अधिकतम संख्या (%d) तक पहुँच गया।"
+
+msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
+msgstr "अमान्य छवि फाइल।"
+
+msgid "IDS_IV_POP_FLASH_USED_ABB"
+msgstr "फ्लैश प्रयुक्त"
+
+msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
+msgstr "फाइल फॉर्मेट समर्थित नहीं।"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "प्रविष्टि खाली है"
+
+msgid "IDS_IV_POP_ENTER_TAG_NAME"
+msgstr "टैग नाम प्रविष्ट करें"
+
+msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
+msgstr "मौसम टैग्स देखने के लिए मौसम वॉलपेपर में स्वतः रीफ्रेश सक्षम करें"
+
+msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
+msgstr "डाउनलोड पूर्ण"
+
+msgid "IDS_IV_POP_BEST_PHOTO"
+msgstr "सर्वश्रेष्ठ फोटो"
+
+msgid "IDS_IV_POP_ADDED"
+msgstr "जोड़ा गया।"
+
+msgid "IDS_IV_OPT_WRITE_CAPTION"
+msgstr "कैप्शन लिखें"
+
+msgid "IDS_IV_OPT_USE_MOTION"
+msgstr "गति का उपयोग करें"
+
+msgid "IDS_IV_OPT_UNFAVOURITE"
+msgstr "पसंदीदा नहीं"
+
+msgid "IDS_IV_OPT_TRIM"
+msgstr "ट्रिम करें"
+
+msgid "IDS_IV_OPT_TAG_FACE_ABB"
+msgstr "चेहरा टैग करें"
+
+msgid "IDS_IV_OPT_TAG_BUDDY"
+msgstr "टैग मित्र"
+
+msgid "IDS_IV_OPT_TAG"
+msgstr "टैग"
+
+msgid "IDS_IV_OPT_START_SLIDESHOW"
+msgstr "स्लाइडशो प्रारंभ करें"
+
+msgid "IDS_IV_OPT_SLIDE_SHOW"
+msgstr "स्लाइड शो"
+
+msgid "IDS_IV_OPT_SLIDESHOW_ABB"
+msgstr "स्लाइडशो"
+
+msgid "IDS_IV_OPT_SHOW_ITEMS"
+msgstr "मदें दिखाएँ"
+
+msgid "IDS_IV_OPT_SHARE"
+msgstr "साझा करें"
+
+msgid "IDS_IV_OPT_ROTATE_RIGHT"
+msgstr "दाएँ घुमाएँ"
+
+msgid "IDS_IV_OPT_ROTATE_LEFT"
+msgstr "बाएँ घुमाएँ"
+
+msgid "IDS_IV_OPT_REMOVE_TAG"
+msgstr "टैग निकालें"
+
+msgid "IDS_IV_OPT_REFRESH"
+msgstr "रीफ्रेश"
+
+msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
+msgstr "ब्लूटूथ द्वारा प्रिंट करें"
+
+msgid "IDS_IV_OPT_MANUALLY_DETECT"
+msgstr "मैनुअल रूप से पता लगाएँ"
+
+msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
+msgstr "होम और लॉक स्क्रीन वॉलपेपर"
+
+msgid "IDS_IV_OPT_HIDDEN_ITEMS"
+msgstr "छिपी हुई मदें"
+
+msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
+msgstr "दिशा प्राप्त करें"
+
+msgid "IDS_IV_OPT_FILE_TRANSFER"
+msgstr "फाइल स्थानांतरण"
+
+msgid "IDS_IV_OPT_ERASER"
+msgstr "रबर"
+
+msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
+msgstr "मौसम टैग संपादित करे"
+
+msgid "IDS_IV_OPT_EDIT_TAG"
+msgstr "टैग संपादन"
+
+msgid "IDS_IV_OPT_EDIT_CAPTION"
+msgstr "कैप्शन संपादित करें"
+
+msgid "IDS_IV_OPT_DELETE_CAPTION"
+msgstr "कैप्शन हटाएँ"
+
+msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
+msgstr "क्लिपबोर्ड में कॉपी करें"
+
+msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
+msgstr "कनेक्शन जानकारी"
+
+msgid "IDS_IV_OPT_CLOUD"
+msgstr "क्लाउड"
+
+msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
+msgstr "मित्र फोटो साझा करना"
+
+msgid "IDS_IV_OPT_BEST_FACE_ABB"
+msgstr "बेस्ट चेहरा"
+
+msgid "IDS_IV_OPT_AS_VIDEO_FILES"
+msgstr "वीडियो फाइलों के रूप में"
+
+msgid "IDS_IV_OPT_AS_IMAGE_FILES"
+msgstr "छवि फाइलों के रूप में"
+
+msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
+msgstr "एनिमेटेड फ़ोटो"
+
+msgid "IDS_IV_OPT_ADD_WEATHER_TAG_ABB"
+msgstr "मौसम टैग जोड़ें"
+
+msgid "IDS_IV_OPT_ADD_NAME_ABB"
+msgstr "नाम जोड़ें"
+
+msgid "IDS_IV_OPT_ADD_CAPTION"
+msgstr "कैप्‍शन जोड़ें"
+
+msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
+msgstr "स्लाइडशो संगीत"
+
+msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
+msgstr "ध्वनि व शॉट तस्वीर साझा करें"
+
+msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
+msgstr "के रूप में सेट करें"
+
+msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
+msgstr "इनको यह तस्वीर भेजें"
+
+msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
+msgstr "साझा करने के लिए कोई संपर्क चुनें"
+
+msgid "IDS_IV_HEADER_PLAY_SPEED"
+msgstr "चलाने की गति"
+
+msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
+msgstr "लॉक स्क्रीन वॉलपेपर"
+
+msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
+msgstr "झुकाव के बारे में अधिक जानें"
+
+msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
+msgstr "होम स्क्रीन वॉलपेपर"
+
+msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
+msgstr "मौसम टैग संपादित करे"
+
+msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
+msgstr "बर्स्ट शॉट संपादित करें"
+
+msgid "IDS_IV_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "उपलब्‍ध डिवाइसेस"
+
+msgid "IDS_IV_HEADER_ALL_ALBUMS"
+msgstr "सभी एलबम्‍स"
+
+msgid "IDS_IV_HEADER_ADD_TAG"
+msgstr "टैग जोड़ें"
+
+msgid "IDS_IV_BUTTON_STOP"
+msgstr "रोकें"
+
+msgid "IDS_IV_BUTTON_SCAN"
+msgstr "स्‍कैन करें"
+
+msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "आप नियर बाइ डिवाइस का उपयोग कर अन्य डिवाइसों के साथ अपनी मीडिया साझा कर सकते हैं"
+
+msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
+msgstr "%s और %d अन्य के साथ"
+
+msgid "IDS_IV_BODY_WITH_PS"
+msgstr "%s के साथ"
+
+msgid "IDS_IV_BODY_WHITE_BALANCE"
+msgstr "व्हाइट बैलेंस"
+
+msgid "IDS_IV_BODY_WEATHER_ABB"
+msgstr "मौसम"
+
+msgid "IDS_IV_BODY_WEATHER"
+msgstr "मौसम"
+
+msgid "IDS_IV_BODY_VENDOR"
+msgstr "विक्रेता"
+
+msgid "IDS_IV_BODY_VALIDITY"
+msgstr "वैधता"
+
+msgid "IDS_IV_BODY_UNLIMITED"
+msgstr "असीमित"
+
+msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
+msgstr "फोटो लोड करने में अक्षम।"
+
+msgid "IDS_IV_BODY_TIMED_COUNT"
+msgstr "समय गणना"
+
+msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
+msgstr "The recorded weather information should be edited manually. Your device does not support receiving recorded weather info from the weather widget."
+
+msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
+msgstr "लोगों के बारे में जानकारी देखने के लिए चेहरों पर टैप करें"
+
+msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
+msgstr "दो बिंदुओं पर टैप करें रखें फिर स्‍क्रीन छोटी या बड़ी करने के लिए पीछे और आगे डिवाइस झुकाएँ।"
+
+msgid "IDS_IV_BODY_SUNNY_DAY"
+msgstr "चमकीला दिन"
+
+msgid "IDS_IV_BODY_SNOWY_DAY"
+msgstr "बर्फीला दिन"
+
+msgid "IDS_IV_BODY_SHARE_VIA"
+msgstr "इसके द्वारा साझा करें"
+
+msgid "IDS_IV_BODY_SERVER_NAME"
+msgstr "सर्वर नाम"
+
+msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
+msgstr "चित्र को क्रॉप करने के लिए एक क्षेत्र का चयन करें"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
+msgstr "चयनित क्षेत्र को प्रिंट किया जाएगा"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
+msgstr "चयनित क्षेत्र को वॉलपेपर के लिए लागू किया जाएगा"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
+msgstr "चयनित क्षेत्र को संपर्क चित्र पर लागू किया जाएगा"
+
+msgid "IDS_IV_BODY_RIGHT_STATUS"
+msgstr "सही स्थिति"
+
+msgid "IDS_IV_BODY_RESOLUTION"
+msgstr "रिजॉल्यूशन"
+
+msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
+msgstr "पसंदीदा से निकालें"
+
+msgid "IDS_IV_BODY_RAINY_DAY"
+msgstr "बरसात वाला दिन"
+
+msgid "IDS_IV_BODY_PRINT"
+msgstr "प्रिंट करें"
+
+msgid "IDS_IV_BODY_POSSIBLE"
+msgstr "संभव"
+
+msgid "IDS_IV_BODY_PEOPLE"
+msgstr "लोग"
+
+msgid "IDS_IV_BODY_N_A"
+msgstr "लागू नहीं"
+
+msgid "IDS_IV_BODY_NO_TAG"
+msgstr "कोई टैग नहीं"
+
+msgid "IDS_IV_BODY_NEW_TAG"
+msgstr "नया टैग"
+
+msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
+msgstr "निकटवर्ती डिवाइसें"
+
+msgid "IDS_IV_BODY_MY_DEVICE"
+msgstr "मेरा डिवाइस"
+
+msgid "IDS_IV_BODY_MODEL"
+msgstr "मॉडल"
+
+msgid "IDS_IV_BODY_ME"
+msgstr "मेरा"
+
+msgid "IDS_IV_BODY_MANUFACTURER"
+msgstr "निर्माता"
+
+msgid "IDS_IV_BODY_LONGITUDE"
+msgstr "देशांतर"
+
+msgid "IDS_IV_BODY_LOCK_SCREEN"
+msgstr "लॉक स्क्रीन"
+
+msgid "IDS_IV_BODY_LOCATION_M_PATH"
+msgstr "स्थान"
+
+msgid "IDS_IV_BODY_LOCATION_ABB2"
+msgstr "स्थान"
+
+msgid "IDS_IV_BODY_LOCATIONS"
+msgstr "स्थान"
+
+msgid "IDS_IV_BODY_LOCATION"
+msgstr "स्थान"
+
+msgid "IDS_IV_BODY_LATITUDE"
+msgstr "अक्षांश"
+
+msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
+msgstr "%s में"
+
+msgid "IDS_IV_BODY_INTERVAL"
+msgstr "अन्तराल"
+
+msgid "IDS_IV_BODY_INDIVIDUAL"
+msgstr "व्यक्तिगत"
+
+msgid "IDS_IV_BODY_IN"
+msgstr "अंदर"
+
+msgid "IDS_IV_BODY_IMPOSSIBLE"
+msgstr "असंभव"
+
+msgid "IDS_IV_BODY_HOME_SCREEN"
+msgstr "होम स्क्रीन"
+
+msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
+msgstr "होम और लॉक स्‍क्रीन"
+
+msgid "IDS_IV_BODY_FORWARDING"
+msgstr "अग्रेषण"
+
+msgid "IDS_IV_BODY_FLASH"
+msgstr "फ्लैश"
+
+msgid "IDS_IV_BODY_FILE_NAME"
+msgstr "फाइल का नाम"
+
+msgid "IDS_IV_BODY_FILE_LOCATION"
+msgstr "फाइल स्थान"
+
+msgid "IDS_IV_BODY_FILE_FORMAT"
+msgstr "फ़ाइल फॉर्मेट"
+
+msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
+msgstr "प्रदर्शन समय"
+
+msgid "IDS_IV_BODY_EXECUTE"
+msgstr "निष्पादित करें"
+
+msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
+msgstr "स्थान टैग्स को देखने के लिए कैमरे में GPS टैग्स सक्षम करें"
+
+msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
+msgstr "मौसम टैग्स देखने के लिए मौसम विजेट में स्वत: ताज़ा करना सक्षम करें"
+
+msgid "IDS_IV_BODY_DURATION"
+msgstr "अवधि"
+
+msgid "IDS_IV_BODY_DRM_INFO"
+msgstr "DRM जानकारी"
+
+msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "दोबारा न दिखाएँ।"
+
+msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
+msgstr "दोबारा न पूछें"
+
+msgid "IDS_IV_BODY_DISPLAY"
+msgstr "प्रदर्शन"
+
+msgid "IDS_IV_BODY_DATE_CREATED"
+msgstr "दिनांक निर्मित"
+
+msgid "IDS_IV_BODY_CROP"
+msgstr "क्रॉप"
+
+msgid "IDS_IV_BODY_CREATE_TAG"
+msgstr "टैग बनाएँ"
+
+msgid "IDS_IV_BODY_COUNT"
+msgstr "गणना"
+
+msgid "IDS_IV_BODY_CLOUDY_DAY"
+msgstr "बादलों भरा दिन"
+
+msgid "IDS_IV_BODY_CLEAR_NIGHT"
+msgstr "साफ रात"
+
+msgid "IDS_IV_BODY_CALLER_IMAGE"
+msgstr "कॉलर छवि"
+
+msgid "IDS_IV_BODY_BASIC"
+msgstr "मूल"
+
+msgid "IDS_IV_BODY_AVAILABLE_USES"
+msgstr "उपलब्ध उपयोग"
+
+msgid "IDS_IV_BODY_AUTO"
+msgstr "स्वतः"
+
+msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
+msgstr "एप्लीकेशंस पर मिलान रंग वाली विषयवस्तु लागू करें।"
+
+msgid "IDS_IV_BODY_APERTURE"
+msgstr "एपरचर"
+
+msgid "IDS_IV_BODY_ANY"
+msgstr "कोई"
+
+msgid "IDS_IV_BODY_ADD_TO_FAVOURITES"
+msgstr "पसंदीदा में जोड़ें"
+
+msgid "IDS_IV_BODY_ACCUMULATED_TIME"
+msgstr "संचित समय"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "वर्णो की संख्‍या अधिकतम पहुँची।"
+
+msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
+msgstr "विफल"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "ड्रॉपबॉक्स"
+
+msgid "IDS_ST_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_ST_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_ST_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_ST_BODY_EDIT"
+msgstr "संपादित करें"
+
+msgid "IDS_ST_BODY_DATE"
+msgstr "तिथि"
+
+msgid "IDS_EMAIL_OPT_ACCOUNTS"
+msgstr "खातें"
+
+msgid "IDS_GALLERY_BODY_DOWNLOAD"
+msgstr "डाउनलोड करें"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
+msgstr "आपके द्वारा ड्रॉपबॉक्स पर तस्वीरें अपलोड करने के बाद, मदें दिखाई जाएगी।"
+
+msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
+msgstr "डाउनलोड हो रहा है..."
+
+msgid "IDS_IV_BODY_ADD_PICTURES"
+msgstr "तस्वीरें जोड़ें"
+
+msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
+msgstr "आपके द्वारा तस्वीरें आपके पसंदीदा के रूप में टैग करने के बाद, तस्वीरें दिखाई जाएँगी।"
+
+msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
+msgstr "चेहरा पहचान निकालें?"
+
+msgid "IDS_IV_OPT_ASSIGN_NAME"
+msgstr "नाम असाइन करें"
+
+msgid "IDS_IV_OPT_CONFIRM_AS_PS"
+msgstr "%s के रूप में पुष्टि करें"
+
+msgid "IDS_IV_OPT_LAYOUT_M_PICTUERS"
+msgstr "लेआउट"
+
+msgid "IDS_IV_OPT_PD_PICTURES_ADDED"
+msgstr "%d तस्वीरें जोड़ी गई"
+
+msgid "IDS_IV_POP_THE_ALBUM_WILL_BE_CANCELLED"
+msgstr "एल्‍बम रद्द किया जाएगा।"
+
+msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
+msgstr "डाउनलोड प्रारंभ कर रहा है..."
+
+msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "पर्याप्त मेमोरी नहीं। कुछ मदें हटाएँ।"
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "निजी स्टोरेज"
+
+msgid "IDS_IV_BODY_DRAG_HERE"
+msgstr "यहाँ खींचें।"
+
+msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
+msgstr "छवियाँ जोड़ने के लिए टैप करें।"
+
+msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
+msgstr "फाइल पहले से मौजूद है।"
+
+msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
+msgstr "यह मद हटाया जाएगा।"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
+msgstr "आपके द्वारा फ़ेसबुक पर तस्वीरें अपलोड करने के बाद, मदें दिखाई जाएगी।"
+
+msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
+msgstr "अमान्य अक्षर।"
+
+msgid "IDS_MEDIABR_OPT_MANUAL"
+msgstr "मैनुअल"
+
+msgid "IDS_ST_BODY_ERROR_VZW"
+msgstr "Error"
+
+msgid "IDS_ST_BUTTON2_PROCESSING_ING"
+msgstr "कार्यवाही कर रहा है..."
+
+msgid "IDS_ST_BODY_OK"
+msgstr "ओके"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "नाम बदलें"
+
+msgid "IDS_COM_BODY_NONE"
+msgstr "कुछ नहीं"
+
+msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
+msgstr "%d चयनित"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "डिवाइस स्टोरेज"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD कार्ड"
+
+msgid "IDS_ST_BODY_SPEED"
+msgstr "गति"
+
+msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
+msgstr "बैकग्राउंड संगीत"
+
+msgid "IDS_IV_OPT_1_SEC_ABB"
+msgstr "1 से"
+
+msgid "IDS_IV_OPT_3_SECS_ABB"
+msgstr "3 से"
+
+msgid "IDS_IV_OPT_5_SECS_ABB"
+msgstr "5 से"
+
+msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
+msgstr "संग्रहण स्‍थान"
+
+msgid "IDS_IV_BODY_FILE_SIZE"
+msgstr "फाइल आकार"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 एल्बम हटाया जाएगा।"
+
+msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
+msgstr "नोस्टाल्जिया"
+
+msgid "IDS_IV_OPT_BLUR_M_EFFECT"
+msgstr "धुंधला"
+
+msgid "IDS_IV_OPT_SOFT_GLOW_M_EFFECT"
+msgstr "हल्की चमक"
+
+msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
+msgstr "परिवर्तन सुरक्षित करें"
+
+msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
+msgstr "अपने बदलावों को सुरक्षित करें या निरस्त करें?"
+
+msgid "IDS_IV_BUTTON_DISCARD_ABB2"
+msgstr "निरस्त"
+
+msgid "IDS_IV_BUTTON_SAVE"
+msgstr "सुरक्षित"
+
+msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
+msgstr "विंटेज"
+
+msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
+msgstr "सनशाइन"
+
+msgid "IDS_IV_OPT_OLD_PHOTO_M_EFFECT"
+msgstr "पुराना फोटो"
+
+msgid "IDS_IV_OPT_RETRO_M_EFFECT"
+msgstr "रिट्रो"
+
+msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
+msgstr "ग्रेस्केल"
+
+msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
+msgstr "सेपिया"
+
+msgid "IDS_IV_OPT_FADED_COLOURS_M_EFFECT"
+msgstr "फीके रंग"
+
+msgid "IDS_IV_OPT_DOWNLIGHT_M_EFFECT"
+msgstr "डाउनलाइट"
+
+msgid "IDS_IV_OPT_YELLOW_GLOW_M_EFFECT"
+msgstr "पीली चमक"
+
+msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
+msgstr "स्पष्ट"
+
+msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
+msgstr "स्केच"
+
+msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
+msgstr "विपरीत रंग"
+
+msgid "IDS_IV_OPT_OIL_PAINT_M_EFFECT"
+msgstr "ऑयल पेन्ट"
+
+msgid "IDS_IV_OPT_POSTERISE_M_EFFECT"
+msgstr "पोस्टराइज"
+
+msgid "IDS_IV_OPT_CARTOON_M_EFFECT"
+msgstr "कार्टून"
+
+msgid "IDS_IV_OPT_POP_ART_M_EFFECT"
+msgstr "पॉप आर्ट"
+
+msgid "IDS_IV_OPT_MAGIC_PEN_M_EFFECT"
+msgstr "मैजिक पेन"
+
+msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
+msgstr "अवरुद्ध सूची में जोड़ा गया।"
+
+msgid "IDS_IMGE_BODY_ROTATE"
+msgstr "घुमाएँ"
+
+msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "आपके डिवाइस स्टोरेज में पर्याप्त स्थान नहीं है। सेटिंग्स > पॉवर और संग्रहण > संग्रहण पर जाएँ, फिर कुछ फाइलें हटाएँ और फिर से प्रयास करें।"
+
+msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
+msgstr "स्लाइड अंतराल"
+
+msgid "IDS_IV_MBODY_SLIDE_INTERVAL_ABB"
+msgstr "स्लाइड अंतराल"
+
+msgid "IDS_IV_OPT_CONTACT_PICTURE_ABB"
+msgstr "संपर्क तस्वीर"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "कोई नहीं"
+
+msgid "IDS_IV_OPT_EDIT"
+msgstr "संपादन"
+
+msgid "IDS_IV_OPT_RENAME"
+msgstr "नाम बदलें"
+
+msgid "IDS_IV_OPT_SET_AS"
+msgstr "के रूप में सेट करें"
+
+msgid "IDS_IV_OPT_DOWNLOAD"
+msgstr "डाउनलोड"
+
+msgid "IDS_IV_HEADER_RENAME"
+msgstr "नाम बदलें"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB"
+msgstr "नाम बदलें"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB2"
+msgstr "नाम बदले"
+
+msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
+msgstr "गंतव्य फोल्डर में इस नाम वाली फाइल पहले से मौजूद है।"
+
+msgid "IDS_IV_BUTTON_REPLACE_ABB"
+msgstr "बदलें"
+
+msgid "IDS_IV_HEADER_SET_AS"
+msgstr "इस रूप में सेट करें"
+
+msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
+msgstr "होम स्क्रीन वालपेपर"
+
+msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
+msgstr "लॉक स्क्रीन वॉलपेपर"
+
+msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
+msgstr "होम और लॉक स्क्रीन वॉलपेपर्स"
+
+msgid "IDS_IV_HEADER_DETAILS"
+msgstr "विवरण"
+
+msgid "IDS_IV_BODY_DATE"
+msgstr "तिथि"
+
+msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
+msgstr "छवि सुरक्षित करने में असमर्थ"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
+msgstr "आपकी डिवाइस स्टोरेज में पर्याप्त स्थान (%d MB) नहीं हैं।"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
+msgstr "आपके SD कार्ड में पर्याप्त स्थान (%d MB) नहीं है"
+
+msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "कुछ फाइलें हटाएँ और फिर प्रयास करें।"
+
+msgid "IDS_IV_HEADER_SAVE_IMAGE"
+msgstr "छवि सुरक्षित करें"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
+msgstr "आपके डिवाइस स्टोरेज में पर्याप्त स्थान (%d MB बाकी) नहीं है। यह मद आपके SD कार्ड में सुरक्षित की जाएगी।"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
+msgstr "आपके SD कार्ड में पर्याप्त स्थान (%d MB बाकी) नहीं है। यह मद आपके डिवाइस स्टोरेज में सुरक्षित की जाएगी।"
+
+msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
+msgstr "यह छवि हटाई जाएगी"
+
+msgid "IDS_IV_BUTTON_STOP_ABB4"
+msgstr "रोकें"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "हटाएँ"
+
+msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
+msgstr "त्रुटि"
+
+msgid "IDS_GALLERY_HEADER_SELECT_AREA_ABB"
+msgstr "क्षेत्र चुनें"
+
+msgid "IDS_GALLERY_BUTTON_DONE"
+msgstr "पूर्ण"
+
+msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
+msgstr "यह मद लोड करने में विफल।"
+
+msgid "IDS_CAM_OPT_NEGATIVE"
+msgstr "नकारात्मक"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "पूर्ण"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "रद्द करें"
+
+msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
+msgstr "नकारात्मक"
+
+msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
+msgstr "गैलरी खोलने में असमर्थ।"
+
+msgid "IDS_360V_TPOP_LOADING_ING"
+msgstr "लोड हो रहा है..."
+
+msgid "IDS_IV_HEADER_LOADING_ING"
+msgstr "लोड हो रहा है..."
+
+msgid "IDS_IV_POP_LOADING_FAILED"
+msgstr "लोड करना विफल।"
+
+msgid "IDS_IV_POP_LOADING_IMAGE_ING"
+msgstr "छवि लोड हो रही है..."
+
+msgid "IDS_IV_SK_DISCARD"
+msgstr "निरस्त"
+
+msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
+msgstr "डाउनलोड करने में अक्षम"
+
+msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "मोबाइल डाटा बंद किया गया है। किसी Wi-Fi नेटवर्क से कनेक्ट करें या मोबाइल डाटा चालू करें और फिर से प्रयास करें।"
+
+msgid "IDS_IV_BODY_DO_NOT_SEND"
+msgstr "न भेजें"
+
+msgid "IDS_COM_BODY_1_SECOND"
+msgstr "1 सेकंड"
+
+msgid "IDS_BODY_PD_SECONDS"
+msgstr "%d सेकंड"
+
+msgid "IDS_IV_BODY_EFFECT"
+msgstr "प्रभाव"
+
+msgid "IDS_IMGE_HEARDER_EFFECTS"
+msgstr "प्रभाव"
+
+msgid "IDS_DFRAME_BODY_FLOW_M_EFFECT"
+msgstr "फ्लो"
+
+msgid "IDS_IV_OPT_FADE_M_EFFECT"
+msgstr "फीका"
+
+msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
+msgstr "जूम अधिक"
+

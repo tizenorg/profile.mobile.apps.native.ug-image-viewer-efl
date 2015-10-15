@@ -1,0 +1,996 @@
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privat"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Canviar nom"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "S'esborrarà aquest vídeo"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "El nom de fitxer està en ús."
+
+msgid "IDS_ST_BODY_OFF"
+msgstr "Desactivat"
+
+msgid "IDS_COM_BODY_DONE"
+msgstr "Finalitzat"
+
+msgid "IDS_FB_BODY_FACEBOOK"
+msgstr "Facebook"
+
+msgid "IDS_CAM_BODY_FLASH"
+msgstr "Flaix"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Aturar"
+
+msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
+msgstr "%1$s s'ha deshabilitat en aquesta aplicació. Per habilitar aquesta funció, vagi a %2$s, seleccioni aquesta funció i, a continuació, seleccioni aquesta aplicació."
+
+msgid "IDS_MEDIABR_BUTTON_OK"
+msgstr "Acceptar"
+
+msgid "IDS_MEDIABR_BUTTON_DONE"
+msgstr "Fet"
+
+msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
+msgstr "Cancel·lar"
+
+msgid "IDS_GALLERY_HEADER_ENTER_NAME"
+msgstr "Introduir nom"
+
+msgid "IDS_MEDIABR_POP_NO_NAME"
+msgstr "Sense nom"
+
+msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
+msgstr "Només hi ha un àlbum"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Pot seleccionar fins a %d elements"
+
+msgid "IDS_IV_OPT_DETAILS"
+msgstr "Detalls"
+
+msgid "IDS_IV_OPT_DELETE_ABB"
+msgstr "Esborrar"
+
+msgid "IDS_IV_POP_DELETE_Q"
+msgstr "Esborrar?"
+
+msgid "IDS_IV_BUTTON_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_IV_POP_DELETED"
+msgstr "Esborrat"
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Preferit"
+
+msgid "IDS_IV_SK_SAVE"
+msgstr "Desar"
+
+msgid "IDS_IV_POP_SAVED"
+msgstr "Desat"
+
+msgid "IDS_IV_BODY_SETTINGS"
+msgstr "Ajustaments"
+
+msgid "IDS_IV_BODY_SIZE"
+msgstr "Mida"
+
+msgid "IDS_IV_BODY_UNKNOWN"
+msgstr "Desconegut"
+
+msgid "IDS_IV_SK_YES"
+msgstr "Sí"
+
+msgid "IDS_CAM_BODY_ISO"
+msgstr "ISO"
+
+msgid "IDS_CAM_BODY_FOCAL_LENGTH"
+msgstr "Distància focal"
+
+msgid "IDS_CAM_BODY_FLASH_ON"
+msgstr "Flaix activat"
+
+msgid "IDS_COM_POP_IMAGE_VIEWER"
+msgstr "Visor d'imatges"
+
+msgid "IDS_MEDIABR_OPT_ALL_PICTURES"
+msgstr "Totes les fotos"
+
+msgid "IDS_MEDIABR_HEADER_ORIENTATION"
+msgstr "Orientació"
+
+msgid "IDS_MEDIABR_BODY_SELECT_PICTURE"
+msgstr "Seleccionar imatge"
+
+msgid "IDS_MP_BODY_DURATION"
+msgstr "Durada"
+
+msgid "IDS_ST_POP_SET"
+msgstr "Definir"
+
+msgid "IDS_GALLERY_BODY_TAGS"
+msgstr "Etiquetes"
+
+msgid "IDS_IV_SK3_ADD_COMMENT"
+msgstr "Afegir coment"
+
+msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Veure el seu multimèdia a altres dispositius mitjançant dispositius propers"
+
+msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
+msgstr "Els fitxers de vídeo no contenen informació sobre persones atès que no admeten la funció d'etiqueta de cara"
+
+msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
+msgstr "No es pot compartir aquesta imatge. Està protegida per DRM."
+
+msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
+msgstr "No s'ha pogut obrir el fitxer"
+
+msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
+msgstr "La informació del temps gravada pot ser diferent de l'actual per l'interval d'actualització"
+
+msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
+msgstr "El contingut personal copiat al porta-retalls es pot utilitzar per crear contingut nou. El seu contingut nou no es pot amagar automàticament."
+
+msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
+msgstr "La imatge és massa petita"
+
+msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
+msgstr "La informació relativa a la data només es visualitza si hi ha altres etiquetes visibles."
+
+msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
+msgstr "Mantingui tocades les miniatures per seleccionar les millors fotos"
+
+msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
+msgstr "Ajustaments de la presentació de diapositives"
+
+msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
+msgstr "Definir fons de la pantalla d'inici i bloquejar pantalla"
+
+msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
+msgstr "Definir aquesta foto com a ID de persona que truca de %s?"
+
+msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
+msgstr "Definir com a ID de la persona que truca"
+
+msgid "IDS_IV_POP_SENDING_ING"
+msgstr "Enviant..."
+
+msgid "IDS_IV_POP_SELECT_DEVICE"
+msgstr "Seleccioni dispositiu"
+
+msgid "IDS_IV_POP_SD_CARD_REMOVED"
+msgstr "Sense targeta SD"
+
+msgid "IDS_IV_POP_PERMISSION_DENIED"
+msgstr "Permís denegat"
+
+msgid "IDS_IV_POP_NO_LOCATION"
+msgstr "Sense ubicació"
+
+msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
+msgstr "No s'han etiquetat cares. Etiqueti cares a la foto."
+
+msgid "IDS_IV_POP_NO_FACES_DETECTED"
+msgstr "No hi ha cares detectades"
+
+msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "No hi ha prou memòria. Esborrar-ne alguns elements."
+
+msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
+msgstr "Ha fallat la connexió de xarxa"
+
+msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
+msgstr "S'ha assolit el nombre màxim de caràcters (%d)"
+
+msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
+msgstr "Arxiu d'imatges no vàlid"
+
+msgid "IDS_IV_POP_FLASH_USED_ABB"
+msgstr "Flaix utilitz"
+
+msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
+msgstr "Format de fitxer no compatible"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "L'entrada és buida"
+
+msgid "IDS_IV_POP_ENTER_TAG_NAME"
+msgstr "Introduir nom d'etiqueta"
+
+msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
+msgstr "Activi l'actualització automàtica al fons de pantalla del temps per veure les etiquetes del temps"
+
+msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
+msgstr "Descàrrega completa"
+
+msgid "IDS_IV_POP_BEST_PHOTO"
+msgstr "Best Photo"
+
+msgid "IDS_IV_POP_ADDED"
+msgstr "Afegit"
+
+msgid "IDS_IV_OPT_WRITE_CAPTION"
+msgstr "Escriure llegenda"
+
+msgid "IDS_IV_OPT_USE_MOTION"
+msgstr "Utilitzar moviment"
+
+msgid "IDS_IV_OPT_UNFAVOURITE"
+msgstr "Treure de preferits"
+
+msgid "IDS_IV_OPT_TRIM"
+msgstr "Acoblar"
+
+msgid "IDS_IV_OPT_TAG_FACE_ABB"
+msgstr "Etiquetar cara"
+
+msgid "IDS_IV_OPT_TAG_BUDDY"
+msgstr "Tag buddy"
+
+msgid "IDS_IV_OPT_TAG"
+msgstr "Etiqueta"
+
+msgid "IDS_IV_OPT_START_SLIDESHOW"
+msgstr "Iniciar presentació de diapositives"
+
+msgid "IDS_IV_OPT_SLIDE_SHOW"
+msgstr "Presentació de diapositives"
+
+msgid "IDS_IV_OPT_SLIDESHOW_ABB"
+msgstr "Presentació diapositives"
+
+msgid "IDS_IV_OPT_SHOW_ITEMS"
+msgstr "Mostrar elements"
+
+msgid "IDS_IV_OPT_SHARE"
+msgstr "Compartir"
+
+msgid "IDS_IV_OPT_ROTATE_RIGHT"
+msgstr "Gira cap a la dreta"
+
+msgid "IDS_IV_OPT_ROTATE_LEFT"
+msgstr "Gira cap a l'esquerra"
+
+msgid "IDS_IV_OPT_REMOVE_TAG"
+msgstr "Eliminar etiqueta"
+
+msgid "IDS_IV_OPT_REFRESH"
+msgstr "Actualitzar"
+
+msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
+msgstr "Imprimir mitjançant Bluetooth"
+
+msgid "IDS_IV_OPT_MANUALLY_DETECT"
+msgstr "Detecció manual"
+
+msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
+msgstr "Fons de pantalla de pantalla d'inici i bloqueig"
+
+msgid "IDS_IV_OPT_HIDDEN_ITEMS"
+msgstr "Elements amagats"
+
+msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
+msgstr "Obtenir indicacions"
+
+msgid "IDS_IV_OPT_FILE_TRANSFER"
+msgstr "Transferència de fitxer"
+
+msgid "IDS_IV_OPT_ERASER"
+msgstr "Goma d'esborrar"
+
+msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
+msgstr "Editar etiq meteo"
+
+msgid "IDS_IV_OPT_EDIT_TAG"
+msgstr "Edit etiq"
+
+msgid "IDS_IV_OPT_EDIT_CAPTION"
+msgstr "Editar llegenda"
+
+msgid "IDS_IV_OPT_DELETE_CAPTION"
+msgstr "Esborrar llegenda"
+
+msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
+msgstr "Copiar al porta-retalls"
+
+msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
+msgstr "Info de connexió"
+
+msgid "IDS_IV_OPT_CLOUD"
+msgstr "Cloud"
+
+msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
+msgstr "Compartir foto d'amic"
+
+msgid "IDS_IV_OPT_BEST_FACE_ABB"
+msgstr "Best face"
+
+msgid "IDS_IV_OPT_AS_VIDEO_FILES"
+msgstr "Com a fitxers de vídeo"
+
+msgid "IDS_IV_OPT_AS_IMAGE_FILES"
+msgstr "Com a fitxers d'imatge"
+
+msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
+msgstr "Foto animada"
+
+msgid "IDS_IV_OPT_ADD_WEATHER_TAG_ABB"
+msgstr "Afegir etiqueta meteorol."
+
+msgid "IDS_IV_OPT_ADD_NAME_ABB"
+msgstr "Afegir nom"
+
+msgid "IDS_IV_OPT_ADD_CAPTION"
+msgstr "Afegir llegenda"
+
+msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
+msgstr "Música de presentació de diapositives"
+
+msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
+msgstr "Comp fotos Sound & shot"
+
+msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
+msgstr "Definir com a"
+
+msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
+msgstr "Enviar aquesta foto a"
+
+msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
+msgstr "Seleccioni un contacte per compartir"
+
+msgid "IDS_IV_HEADER_PLAY_SPEED"
+msgstr "Velocitat de reproducció"
+
+msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
+msgstr "Bloq fons pant inici"
+
+msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
+msgstr "Més info inclinació"
+
+msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
+msgstr "Fons pantalla inici"
+
+msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
+msgstr "Editar etiq meteo"
+
+msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
+msgstr "Editar ràfega"
+
+msgid "IDS_IV_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Dispositius dispon"
+
+msgid "IDS_IV_HEADER_ALL_ALBUMS"
+msgstr "Tots els àlbums"
+
+msgid "IDS_IV_HEADER_ADD_TAG"
+msgstr "Afeg etiq"
+
+msgid "IDS_IV_BUTTON_STOP"
+msgstr "Atur"
+
+msgid "IDS_IV_BUTTON_SCAN"
+msgstr "Escanejar"
+
+msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Pot compartir els seus fitxers multimèdia amb altres dispositius mitjançant dispositius propers"
+
+msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
+msgstr "Amb %s i %d més"
+
+msgid "IDS_IV_BODY_WITH_PS"
+msgstr "Amb %s"
+
+msgid "IDS_IV_BODY_WHITE_BALANCE"
+msgstr "Balanç de blancs"
+
+msgid "IDS_IV_BODY_WEATHER_ABB"
+msgstr "Meteorologia"
+
+msgid "IDS_IV_BODY_WEATHER"
+msgstr "Temps"
+
+msgid "IDS_IV_BODY_VENDOR"
+msgstr "Proveïdor"
+
+msgid "IDS_IV_BODY_VALIDITY"
+msgstr "Validesa"
+
+msgid "IDS_IV_BODY_UNLIMITED"
+msgstr "Il·limitat"
+
+msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
+msgstr "No es pot carregar la foto"
+
+msgid "IDS_IV_BODY_TIMED_COUNT"
+msgstr "Compte contrarellotge"
+
+msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
+msgstr "The recorded weather information should be edited manually. Your device does not support receiving recorded weather info from the weather widget."
+
+msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
+msgstr "Etiqueti les cares per veure informació sobre les persones"
+
+msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
+msgstr "Mantingui tocats dos punts i inclini el dispositiu endavant i endarrere per reduir o ampliar la pantalla"
+
+msgid "IDS_IV_BODY_SUNNY_DAY"
+msgstr "Dia assolellat"
+
+msgid "IDS_IV_BODY_SNOWY_DAY"
+msgstr "Dia nevós"
+
+msgid "IDS_IV_BODY_SHARE_VIA"
+msgstr "Compartir mitjançant"
+
+msgid "IDS_IV_BODY_SERVER_NAME"
+msgstr "Nom del servidor"
+
+msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
+msgstr "Seleccioni una àrea per retallar la foto"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
+msgstr "S'imprimirà l'àrea seleccionada"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
+msgstr "L'àrea seleccionada s'aplicarà al fons de pantalla"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
+msgstr "L'àrea seleccionada s'aplicarà a la foto de contacte"
+
+msgid "IDS_IV_BODY_RIGHT_STATUS"
+msgstr "Estat correcte"
+
+msgid "IDS_IV_BODY_RESOLUTION"
+msgstr "Resolució"
+
+msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
+msgstr "Eliminar de preferits"
+
+msgid "IDS_IV_BODY_RAINY_DAY"
+msgstr "Dia plujós"
+
+msgid "IDS_IV_BODY_PRINT"
+msgstr "Imprimir"
+
+msgid "IDS_IV_BODY_POSSIBLE"
+msgstr "Possible"
+
+msgid "IDS_IV_BODY_PEOPLE"
+msgstr "Gent"
+
+msgid "IDS_IV_BODY_N_A"
+msgstr "N/D"
+
+msgid "IDS_IV_BODY_NO_TAG"
+msgstr "Cap etiqueta"
+
+msgid "IDS_IV_BODY_NEW_TAG"
+msgstr "Nova etiqueta"
+
+msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
+msgstr "Dispositius propers"
+
+msgid "IDS_IV_BODY_MY_DEVICE"
+msgstr "El meu dispositiu"
+
+msgid "IDS_IV_BODY_MODEL"
+msgstr "Model"
+
+msgid "IDS_IV_BODY_ME"
+msgstr "Jo"
+
+msgid "IDS_IV_BODY_MANUFACTURER"
+msgstr "Fabricant"
+
+msgid "IDS_IV_BODY_LONGITUDE"
+msgstr "Longitud"
+
+msgid "IDS_IV_BODY_LOCK_SCREEN"
+msgstr "Bloquejar pantalla"
+
+msgid "IDS_IV_BODY_LOCATION_M_PATH"
+msgstr "Ubicació"
+
+msgid "IDS_IV_BODY_LOCATION_ABB2"
+msgstr "Ubicació"
+
+msgid "IDS_IV_BODY_LOCATIONS"
+msgstr "Ubicacions"
+
+msgid "IDS_IV_BODY_LOCATION"
+msgstr "Ubicació"
+
+msgid "IDS_IV_BODY_LATITUDE"
+msgstr "Latitud"
+
+msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
+msgstr "En %s"
+
+msgid "IDS_IV_BODY_INTERVAL"
+msgstr "Interval"
+
+msgid "IDS_IV_BODY_INDIVIDUAL"
+msgstr "Individual"
+
+msgid "IDS_IV_BODY_IN"
+msgstr "Ampliar"
+
+msgid "IDS_IV_BODY_IMPOSSIBLE"
+msgstr "No és possible"
+
+msgid "IDS_IV_BODY_HOME_SCREEN"
+msgstr "Pantalla d'inici"
+
+msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
+msgstr "Pantalla inici i bloqueig"
+
+msgid "IDS_IV_BODY_FORWARDING"
+msgstr "Reenviant"
+
+msgid "IDS_IV_BODY_FLASH"
+msgstr "Menú flaix"
+
+msgid "IDS_IV_BODY_FILE_NAME"
+msgstr "Nom del fitxer"
+
+msgid "IDS_IV_BODY_FILE_LOCATION"
+msgstr "Ubicació del fitxer"
+
+msgid "IDS_IV_BODY_FILE_FORMAT"
+msgstr "Format del fitxer"
+
+msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
+msgstr "Temps expos"
+
+msgid "IDS_IV_BODY_EXECUTE"
+msgstr "Executar"
+
+msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
+msgstr "Habiliti etiquetes GPS a Càmera per veure les etiquetes d'ubicació"
+
+msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
+msgstr "Activi l'actualització automàtica al widget del temps per veure les etiquetes del temps"
+
+msgid "IDS_IV_BODY_DURATION"
+msgstr "Durada"
+
+msgid "IDS_IV_BODY_DRM_INFO"
+msgstr "Informació de DRM"
+
+msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "No ho tornis a mostrar."
+
+msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
+msgstr "No ho tornis a preguntar"
+
+msgid "IDS_IV_BODY_DISPLAY"
+msgstr "Pantalla"
+
+msgid "IDS_IV_BODY_DATE_CREATED"
+msgstr "Data creació"
+
+msgid "IDS_IV_BODY_CROP"
+msgstr "Retalla"
+
+msgid "IDS_IV_BODY_CREATE_TAG"
+msgstr "Crear etiq"
+
+msgid "IDS_IV_BODY_COUNT"
+msgstr "Comptatge"
+
+msgid "IDS_IV_BODY_CLOUDY_DAY"
+msgstr "Dia nuvolós"
+
+msgid "IDS_IV_BODY_CLEAR_NIGHT"
+msgstr "Nit clara"
+
+msgid "IDS_IV_BODY_CALLER_IMAGE"
+msgstr "Imatge de la persona que truca"
+
+msgid "IDS_IV_BODY_BASIC"
+msgstr "Bàsic"
+
+msgid "IDS_IV_BODY_AVAILABLE_USES"
+msgstr "Usos disponibles"
+
+msgid "IDS_IV_BODY_AUTO"
+msgstr "Auto"
+
+msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
+msgstr "Apliqui un tema de color combinat a les aplicacions."
+
+msgid "IDS_IV_BODY_APERTURE"
+msgstr "Obertura"
+
+msgid "IDS_IV_BODY_ANY"
+msgstr "Qualsevol"
+
+msgid "IDS_IV_BODY_ADD_TO_FAVOURITES"
+msgstr "Afegir a Preferits"
+
+msgid "IDS_IV_BODY_ACCUMULATED_TIME"
+msgstr "Temps acumulat"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "S'ha assolit el nombre màxim de caràcters"
+
+msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
+msgstr "Error"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_ST_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_ST_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_ST_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_ST_BODY_EDIT"
+msgstr "Editar"
+
+msgid "IDS_ST_BODY_DATE"
+msgstr "Data"
+
+msgid "IDS_EMAIL_OPT_ACCOUNTS"
+msgstr "Comptes"
+
+msgid "IDS_GALLERY_BODY_DOWNLOAD"
+msgstr "Descarregar"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
+msgstr "Després de carregar fotos a Dropbox, se'n mostraran els elements"
+
+msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
+msgstr "Descarregant..."
+
+msgid "IDS_IV_BODY_ADD_PICTURES"
+msgstr "Afegir fotos"
+
+msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
+msgstr "Després d'etiquetar fotos com a preferides, es mostraran les seves fotos"
+
+msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
+msgstr "Esborrar identificació de cares?"
+
+msgid "IDS_IV_OPT_ASSIGN_NAME"
+msgstr "Assignar nom"
+
+msgid "IDS_IV_OPT_CONFIRM_AS_PS"
+msgstr "Confirmar com a %s"
+
+msgid "IDS_IV_OPT_LAYOUT_M_PICTUERS"
+msgstr "Disseny"
+
+msgid "IDS_IV_OPT_PD_PICTURES_ADDED"
+msgstr "%d fotos afegides"
+
+msgid "IDS_IV_POP_THE_ALBUM_WILL_BE_CANCELLED"
+msgstr "Es cancel·larà l'àlbum"
+
+msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
+msgstr "Iniciant descàrrega..."
+
+msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "No hi ha prou memòria. Esborrar-ne alguns elements."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Emmagatzematge privat"
+
+msgid "IDS_IV_BODY_DRAG_HERE"
+msgstr "Arrossegui aquí"
+
+msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
+msgstr "Toqui per afegir imatges"
+
+msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
+msgstr "El fitxer ja existeix"
+
+msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
+msgstr "S'esborrarà aquest element"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
+msgstr "Després de carregar fotos a Facebook, se'n mostraran els elements"
+
+msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
+msgstr "Caràcter no vàlid"
+
+msgid "IDS_MEDIABR_OPT_MANUAL"
+msgstr "Manual"
+
+msgid "IDS_ST_BODY_ERROR_VZW"
+msgstr "Error"
+
+msgid "IDS_ST_BUTTON2_PROCESSING_ING"
+msgstr "S'està processant..."
+
+msgid "IDS_ST_BODY_OK"
+msgstr "Acceptar"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Canv. nom"
+
+msgid "IDS_COM_BODY_NONE"
+msgstr "Cap"
+
+msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
+msgstr "%d seleccionats"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Emmagatzematge de dispositiu"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "Targeta SD"
+
+msgid "IDS_ST_BODY_SPEED"
+msgstr "Velocitat"
+
+msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
+msgstr "Música de fons"
+
+msgid "IDS_IV_OPT_1_SEC_ABB"
+msgstr "1 s"
+
+msgid "IDS_IV_OPT_3_SECS_ABB"
+msgstr "3 s"
+
+msgid "IDS_IV_OPT_5_SECS_ABB"
+msgstr "5 s"
+
+msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
+msgstr "Ubicació d'emmagatzematge"
+
+msgid "IDS_IV_BODY_FILE_SIZE"
+msgstr "Mida d'arxiu"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "S'esborrarà 1 àlbum"
+
+msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
+msgstr "Nostàlgia"
+
+msgid "IDS_IV_OPT_BLUR_M_EFFECT"
+msgstr "Desenfocar"
+
+msgid "IDS_IV_OPT_SOFT_GLOW_M_EFFECT"
+msgstr "Resplendor suau"
+
+msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
+msgstr "Desar canvis"
+
+msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
+msgstr "Desar els canvis o descartar-los?"
+
+msgid "IDS_IV_BUTTON_DISCARD_ABB2"
+msgstr "Descart"
+
+msgid "IDS_IV_BUTTON_SAVE"
+msgstr "Desar"
+
+msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
+msgstr "Vintage"
+
+msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
+msgstr "Llum de sol"
+
+msgid "IDS_IV_OPT_OLD_PHOTO_M_EFFECT"
+msgstr "Foto antiga"
+
+msgid "IDS_IV_OPT_RETRO_M_EFFECT"
+msgstr "Retro"
+
+msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
+msgstr "Escala de grisos"
+
+msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
+msgstr "Sèpia"
+
+msgid "IDS_IV_OPT_FADED_COLOURS_M_EFFECT"
+msgstr "Colors esvanits"
+
+msgid "IDS_IV_OPT_DOWNLIGHT_M_EFFECT"
+msgstr "Llum descendent"
+
+msgid "IDS_IV_OPT_YELLOW_GLOW_M_EFFECT"
+msgstr "Brillantor groga"
+
+msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
+msgstr "Enfocar"
+
+msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
+msgstr "Esbós"
+
+msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
+msgstr "Colors invertits"
+
+msgid "IDS_IV_OPT_OIL_PAINT_M_EFFECT"
+msgstr "Pintura oli"
+
+msgid "IDS_IV_OPT_POSTERISE_M_EFFECT"
+msgstr "Posteritzar"
+
+msgid "IDS_IV_OPT_CARTOON_M_EFFECT"
+msgstr "Dibuixos animats"
+
+msgid "IDS_IV_OPT_POP_ART_M_EFFECT"
+msgstr "Art pop"
+
+msgid "IDS_IV_OPT_MAGIC_PEN_M_EFFECT"
+msgstr "Llapis màgic"
+
+msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
+msgstr "Afegit a llista de bloquejats"
+
+msgid "IDS_IMGE_BODY_ROTATE"
+msgstr "Girar"
+
+msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "No hi ha prou espai a l'emmagatzematge del seu dispositiu. Vagi a Ajustaments > Energia i emmagatzematge > Emmagatzematge i esborri alguns fitxers i torni-ho a intentar."
+
+msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
+msgstr "Interval de diapositives"
+
+msgid "IDS_IV_MBODY_SLIDE_INTERVAL_ABB"
+msgstr "Interval de diapositives"
+
+msgid "IDS_IV_OPT_CONTACT_PICTURE_ABB"
+msgstr "Foto de contacte"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Cap"
+
+msgid "IDS_IV_OPT_EDIT"
+msgstr "Editar"
+
+msgid "IDS_IV_OPT_RENAME"
+msgstr "Canviar nom"
+
+msgid "IDS_IV_OPT_SET_AS"
+msgstr "Definir com a"
+
+msgid "IDS_IV_OPT_DOWNLOAD"
+msgstr "Descarregar"
+
+msgid "IDS_IV_HEADER_RENAME"
+msgstr "Canviar nom"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB"
+msgstr "Canviar nom"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB2"
+msgstr "Canv nom"
+
+msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
+msgstr "Ja hi ha un fitxer amb aquest nom a la carpeta de destinació."
+
+msgid "IDS_IV_BUTTON_REPLACE_ABB"
+msgstr "Substit"
+
+msgid "IDS_IV_HEADER_SET_AS"
+msgstr "Definir com a"
+
+msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
+msgstr "Fons de pantalla d'inici"
+
+msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
+msgstr "Fons de pantalla de bloqueig"
+
+msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
+msgstr "Fons pantalla inici i bloqueig"
+
+msgid "IDS_IV_HEADER_DETAILS"
+msgstr "Detalls"
+
+msgid "IDS_IV_BODY_DATE"
+msgstr "Data"
+
+msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
+msgstr "No es pot desar la imatge"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
+msgstr "No hi ha prou espai (%d MB) a l'emmagatzematge del dispositiu."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
+msgstr "No hi ha prou espai (%d MB) a la targeta SD"
+
+msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Esborri alguns fitxers i torni-ho a intentar."
+
+msgid "IDS_IV_HEADER_SAVE_IMAGE"
+msgstr "Desar imatge"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
+msgstr "No hi ha prou espai (queden %d MB) a l'emmagatzematge del dispositiu. L'element es desarà a la targeta SD."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
+msgstr "No hi ha prou espai (queden %d MB) a la targeta SD. L'element es desarà a l'emmagatzematge del dispositiu."
+
+msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
+msgstr "S'esborrarà aquesta imatge"
+
+msgid "IDS_IV_BUTTON_STOP_ABB4"
+msgstr "Aturar"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Esborrar"
+
+msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
+msgstr "Error"
+
+msgid "IDS_GALLERY_HEADER_SELECT_AREA_ABB"
+msgstr "Seleccionar àrea"
+
+msgid "IDS_GALLERY_BUTTON_DONE"
+msgstr "Fet"
+
+msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
+msgstr "Error en carregar aquest element."
+
+msgid "IDS_CAM_OPT_NEGATIVE"
+msgstr "Negatiu"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "REALITZAT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "CANCEL·LAR"
+
+msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
+msgstr "Negatiu"
+
+msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
+msgstr "No es pot obrir la Galeria."
+
+msgid "IDS_360V_TPOP_LOADING_ING"
+msgstr "Carregant..."
+
+msgid "IDS_IV_HEADER_LOADING_ING"
+msgstr "Carregant..."
+
+msgid "IDS_IV_POP_LOADING_FAILED"
+msgstr "Error en carregar"
+
+msgid "IDS_IV_POP_LOADING_IMAGE_ING"
+msgstr "Carregant imatge..."
+
+msgid "IDS_IV_SK_DISCARD"
+msgstr "Descartar"
+
+msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
+msgstr "No es pot descarregar"
+
+msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Les dades mòbils estan desactivades. Connecti's a una xarxa Wi-Fi o activi les dades mòbils i torni-ho a intentar."
+
+msgid "IDS_IV_BODY_DO_NOT_SEND"
+msgstr "No enviar"
+
+msgid "IDS_COM_BODY_1_SECOND"
+msgstr "1 segon"
+
+msgid "IDS_BODY_PD_SECONDS"
+msgstr "%d segons"
+
+msgid "IDS_IV_BODY_EFFECT"
+msgstr "Efecte"
+
+msgid "IDS_IMGE_HEARDER_EFFECTS"
+msgstr "Efectes"
+
+msgid "IDS_DFRAME_BODY_FLOW_M_EFFECT"
+msgstr "Flux"
+
+msgid "IDS_IV_OPT_FADE_M_EFFECT"
+msgstr "Esvanir"
+
+msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
+msgstr "Apropar"
+

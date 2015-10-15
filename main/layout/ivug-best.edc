@@ -1,0 +1,354 @@
+/*
+* Copyright (c) 2000-2015  Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+
+collections {
+group {
+	name: "bestview";
+
+	parts {
+
+		part { name: "background";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 255;
+				//color: 255 255 255 255;
+				visible: 1;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 1.0 1.0;}
+			}
+		}
+
+		part {
+			name: "clip";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0; }
+				visible: 1;
+				color: 255 255 255 255;
+			}
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				color: 255 255 255 0;
+				visible: 0;
+			}
+		}
+
+		part { name: "bestview.navibar";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events : 0;
+			clip_to: "clip";
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.0;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0;}
+			}
+
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				visible: 0;
+			}
+		}
+
+		part { name: "bestview.area";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 0;
+			repeat_events : 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				visible: 1;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 1.0 1.0;}
+			}
+		}
+	}
+
+	programs {
+	    program {
+			name: "main_view_click";
+			signal: "mouse,down,1";
+			source: "bestview";
+			action: SIGNAL_EMIT "elm,action,press" "";
+	    }
+	    program {
+	        name: "hide_menu";
+	        signal: "bestview,hide,menu";
+	        source: "elm";
+	        action: STATE_SET "hide" 0.0;
+	        transition: LINEAR 0.1;
+	        target: "clip";
+	        after: "hide_end";
+	    }
+	    program {
+	        name: "show_menu";
+	        signal: "bestview,show,menu";
+	        source: "elm";
+	        action: STATE_SET "default" 0.0;
+	        transition: LINEAR 0.1;
+	        target: "clip";
+	        after: "show_end";
+	    }
+	    program {
+		name: "show_end";
+		action: SIGNAL_EMIT "menu,show,finished" "edc";
+	    }
+	    program {
+		name: "hide_end";
+		action: SIGNAL_EMIT "menu,hide,finished" "edc";
+	    }
+
+	}
+
+}
+
+group {
+		name: "navi_content";
+
+		images {
+			image: "T01_1_gradient_bg.PNG" COMP;
+		}
+
+		parts {
+			part {
+				name: "base";
+				type: RECT;
+				scale: 1;
+				mouse_events: 1;
+				repeat_events: 0;
+				description {
+					state: "default" 0.0;
+
+					rel1 { relative: 0 0; }
+					rel2 { relative: 1 1; }
+					color: 0 0 0 255;
+				}
+			}
+
+		part{ name: "menu_clipper";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1{ relative : 0.0 0.0; }
+				rel2{ relative : 1.0 1.0; }
+				color: 255 255 255 255;
+				visible: 1;
+			}
+
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				color: 255 255 255 0;
+			}
+		}
+			part { name: "bestview.slider";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+	              		state: "default" 0.0;
+	               		visible: 1;
+	               		rel1 { relative: 0.0 0.0; }
+	               		rel2 { relative: 1.0 1.0; }
+	            		}
+			}
+
+// Title Bar.
+         part { name: "title_bg";
+            type: IMAGE;
+            scale: 1;
+            clip_to: "menu_clipper";
+            description { state: "default" 0.0;
+               min: 1 122;
+               max: -1 122;
+               align: 0.0 0.0;
+               fixed: 0 1;
+               rel1 { relative: 0.0 0.0; to: "base"; }
+               rel2 { relative: 1.0 0.0; to: "base"; }
+               image {
+                  normal: "T01_1_gradient_bg.PNG";
+                  border: 1 1 0 0;
+                  border_scale: 1;
+               }
+            }
+            }
+// Title Text.
+	part {
+		name: "ivug.main.padding.t.14";
+		type: RECT;
+		scale: 1;
+		mouse_events: 0;
+		description {
+			state: "default" 0.0;
+			rel1{ relative : 0.0 0.0; }
+			rel2{ relative : 1.0 0.0; }
+			color: 0 0 0 0 ;
+			align: 0.5 0.0;
+			min: 0 14;
+			fixed: 0 1;
+			visible: 0;
+		}
+	}
+
+	part {
+		name: "ivug.main.padding.r.26";
+		type: RECT;
+		scale: 1;
+		mouse_events: 0;
+		description {
+			state: "default" 0.0;
+			rel1{ relative : 1.0 0.0; }
+			rel2{ relative : 1.0 1.0; }
+			color: 0 0 0 0;
+			align: 1.0 0.5;
+			min: 26 1;
+			fixed: 1 0;
+			visible: 0;
+		}
+	}
+
+// Button
+	part {
+		name: "ivug.swallow.btn1";
+		type: SWALLOW;
+		scale: 1;
+		mouse_events: 1;
+		repeat_events: 0;
+		clip_to: "menu_clipper";
+		description {
+			state: "default" 0.0;
+			rel1{ relative : 0.0 1.0; to_x: "ivug.main.padding.r.26";  to_y: "ivug.main.padding.t.14";  }
+			rel2{ relative : 0.0 1.0; to_x: "ivug.main.padding.r.26";  to_y: "ivug.main.padding.t.14";  }
+			align: 1.0 0.0;
+			min: 63 63;
+			fixed: 1 1;
+			visible: 1;
+		}
+
+		description {
+			state: "hide" 0.0;
+			inherit: "default" 0.0;
+			visible: 0;
+		}
+	}
+
+
+			part {
+				name: "thumblist_bg";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				repeat_events: 0;
+				description {
+					state: "default" 0.0;
+					min: 0 133;
+					fixed: 0 1;
+					rel1 { to_y: "ivug.main.padding.b.40"; relative: 0.0 0.0; }
+					rel2 { to_y: "ivug.main.padding.b.40"; relative: 1.0 0.0; }
+					align: 0.5 1.0;
+					visible: 0;
+				}
+
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+
+			part {
+				name: "ivug.main.padding.b.40";
+				type: RECT;
+				scale : 1;
+				mouse_events:0;
+				description {
+					state: "default" 0.0;
+					min : 0 40;
+					fixed : 0 1;
+					rel1{ relative : 0.0 1.0; }
+					rel2{ relative : 1.0 1.0; }
+					align: 0.5 1.0;
+					color: 0 0 0 0;
+					visible : 0;
+				}
+			}
+
+
+			part {
+				name: "thumblist";
+				type: SWALLOW;
+				scale: 1;
+				mouse_events: 1;
+				repeat_events: 0;
+
+				description {
+					state: "default" 0.0;
+					rel1 { to: "thumblist_bg";  }
+					rel2 { to: "thumblist_bg";  }
+					color: 0 0 0 0;
+					align: 0.5 1.0;
+					visible: 1;
+				}
+
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+		}
+		programs {
+			program { name: "hide_menu";
+				signal: "elm,state,hide";
+				source: "user";
+				action: STATE_SET "hide" 0.0;
+				target: "menu_clipper";
+				target: "thumblist";
+				target: "title_bg";
+				target: "ivug.swallow.btn1";
+
+			}
+
+			program { name: "show_menu";
+				signal: "elm,state,show";
+				source: "user";
+				action: STATE_SET "default" 0.0;
+				target: "menu_clipper";
+				target: "thumblist";
+				target: "title_bg";
+				target: "ivug.swallow.btn1";
+			}
+		}
+
+	}
+
+}

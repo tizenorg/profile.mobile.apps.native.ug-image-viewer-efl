@@ -1,0 +1,996 @@
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privatno"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Preimenuj"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Video će biti obrisan."
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Već postoji naziv datoteke."
+
+msgid "IDS_ST_BODY_OFF"
+msgstr "Isključeno"
+
+msgid "IDS_COM_BODY_DONE"
+msgstr "OK"
+
+msgid "IDS_FB_BODY_FACEBOOK"
+msgstr "Facebook"
+
+msgid "IDS_CAM_BODY_FLASH"
+msgstr "Bljeskalica"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Zaustavi"
+
+msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
+msgstr "%1$s je isključen u ovoj aplikaciji. Da biste tu funkciju uključili, idite na %2$s, odaberite tu funkciju, a zatim odaberite ovu aplikaciju."
+
+msgid "IDS_MEDIABR_BUTTON_OK"
+msgstr "U redu"
+
+msgid "IDS_MEDIABR_BUTTON_DONE"
+msgstr "OK"
+
+msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
+msgstr "Prekid"
+
+msgid "IDS_GALLERY_HEADER_ENTER_NAME"
+msgstr "Unesite ime"
+
+msgid "IDS_MEDIABR_POP_NO_NAME"
+msgstr "Nema imena"
+
+msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
+msgstr "Samo je jedan album."
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Možete odabrati do %d stavki."
+
+msgid "IDS_IV_OPT_DETAILS"
+msgstr "Detalji"
+
+msgid "IDS_IV_OPT_DELETE_ABB"
+msgstr "Obriši"
+
+msgid "IDS_IV_POP_DELETE_Q"
+msgstr "Obrisati?"
+
+msgid "IDS_IV_BUTTON_CANCEL"
+msgstr "Prekid"
+
+msgid "IDS_IV_POP_DELETED"
+msgstr "Obrisano."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Favorit"
+
+msgid "IDS_IV_SK_SAVE"
+msgstr "Spremi"
+
+msgid "IDS_IV_POP_SAVED"
+msgstr "Spremljeno."
+
+msgid "IDS_IV_BODY_SETTINGS"
+msgstr "Postavke"
+
+msgid "IDS_IV_BODY_SIZE"
+msgstr "Veličina"
+
+msgid "IDS_IV_BODY_UNKNOWN"
+msgstr "Nepoznato"
+
+msgid "IDS_IV_SK_YES"
+msgstr "Da"
+
+msgid "IDS_CAM_BODY_ISO"
+msgstr "ISO"
+
+msgid "IDS_CAM_BODY_FOCAL_LENGTH"
+msgstr "Žarišna duljina"
+
+msgid "IDS_CAM_BODY_FLASH_ON"
+msgstr "Bljeskalica uključena"
+
+msgid "IDS_COM_POP_IMAGE_VIEWER"
+msgstr "Preglednik slika"
+
+msgid "IDS_MEDIABR_OPT_ALL_PICTURES"
+msgstr "Sve fotografije"
+
+msgid "IDS_MEDIABR_HEADER_ORIENTATION"
+msgstr "Orijentacija"
+
+msgid "IDS_MEDIABR_BODY_SELECT_PICTURE"
+msgstr "Odaberite sliku"
+
+msgid "IDS_MP_BODY_DURATION"
+msgstr "Trajanje"
+
+msgid "IDS_ST_POP_SET"
+msgstr "Postavi"
+
+msgid "IDS_GALLERY_BODY_TAGS"
+msgstr "Oznake"
+
+msgid "IDS_IV_SK3_ADD_COMMENT"
+msgstr "Dodaj komentar"
+
+msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Pregledajte svoje medijske datoteke na drugim uređajima korištenjem uređaja u blizini."
+
+msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
+msgstr "Videozapisi ne sadrže informacije o ljudima jer ne podržavaju funkciju oznake lica."
+
+msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
+msgstr "Nemoguće podijeliti sliku. Zaštićena je DRM-om."
+
+msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
+msgstr "Nemoguće otvoriti datoteku."
+
+msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
+msgstr "Snimljene vremenske informacije možda će odstupati od stvarnog vremena zbog intervala aktualiziranja."
+
+msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
+msgstr "Osobni sadržaj kopiran na međuspremnik može se koristiti za kreiranje novog sadržaja. Vaš novi sadržaj možda neće automatski biti skriven."
+
+msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
+msgstr "Slika je premala."
+
+msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
+msgstr "Informacije o vremenu prikazuju se samo kad su vidljive druge oznake."
+
+msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
+msgstr "Dodirnite i držite sličice da biste odabrali najbolje fotografije."
+
+msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
+msgstr "Postavke prezentacije"
+
+msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
+msgstr "Postavite pozadinu za početni zaslon i zaslon zaključavanja."
+
+msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
+msgstr "Postaviti ovu sliku kao ID pozivatelja %s?"
+
+msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
+msgstr "Postavi za sliku pozivatelja"
+
+msgid "IDS_IV_POP_SENDING_ING"
+msgstr "Slanje..."
+
+msgid "IDS_IV_POP_SELECT_DEVICE"
+msgstr "Odaberite uređaj"
+
+msgid "IDS_IV_POP_SD_CARD_REMOVED"
+msgstr "SD kartica izvađena."
+
+msgid "IDS_IV_POP_PERMISSION_DENIED"
+msgstr "Dozvola odbijena."
+
+msgid "IDS_IV_POP_NO_LOCATION"
+msgstr "Nema lokacije"
+
+msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
+msgstr "Nije označeno nijedno lice. Označite lica na slici"
+
+msgid "IDS_IV_POP_NO_FACES_DETECTED"
+msgstr "Lica nisu prepoznata."
+
+msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Nedovoljno memorije. Obrišite neke datoteke"
+
+msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
+msgstr "Spajanje s mrežom neuspješno."
+
+msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
+msgstr "Maksimalan broj znakova (%d)."
+
+msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
+msgstr "Neispravna datoteka."
+
+msgid "IDS_IV_POP_FLASH_USED_ABB"
+msgstr "Bljes. okinuta"
+
+msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
+msgstr "Format datoteke nije podržan."
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Unos prazan."
+
+msgid "IDS_IV_POP_ENTER_TAG_NAME"
+msgstr "Unesite naziv oznake."
+
+msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
+msgstr "Omogućite automatsko osvježavanje u pozadini za vrijeme da biste vidjeli oznake vremena."
+
+msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
+msgstr "Skidanje dovršeno"
+
+msgid "IDS_IV_POP_BEST_PHOTO"
+msgstr "Najbolja fotografija"
+
+msgid "IDS_IV_POP_ADDED"
+msgstr "Dodano."
+
+msgid "IDS_IV_OPT_WRITE_CAPTION"
+msgstr "Napiši naslov"
+
+msgid "IDS_IV_OPT_USE_MOTION"
+msgstr "Koristi pokrete"
+
+msgid "IDS_IV_OPT_UNFAVOURITE"
+msgstr "Poništi favorit"
+
+msgid "IDS_IV_OPT_TRIM"
+msgstr "Skrati"
+
+msgid "IDS_IV_OPT_TAG_FACE_ABB"
+msgstr "Označi lice"
+
+msgid "IDS_IV_OPT_TAG_BUDDY"
+msgstr "Označi prijatelja"
+
+msgid "IDS_IV_OPT_TAG"
+msgstr "Oznaka"
+
+msgid "IDS_IV_OPT_START_SLIDESHOW"
+msgstr "Pokreni prezentaciju"
+
+msgid "IDS_IV_OPT_SLIDE_SHOW"
+msgstr "Prezentacija"
+
+msgid "IDS_IV_OPT_SLIDESHOW_ABB"
+msgstr "Prezentacija"
+
+msgid "IDS_IV_OPT_SHOW_ITEMS"
+msgstr "Pokaži stavke"
+
+msgid "IDS_IV_OPT_SHARE"
+msgstr "Dijeli"
+
+msgid "IDS_IV_OPT_ROTATE_RIGHT"
+msgstr "Rotiraj udesno"
+
+msgid "IDS_IV_OPT_ROTATE_LEFT"
+msgstr "Rotiraj ulijevo"
+
+msgid "IDS_IV_OPT_REMOVE_TAG"
+msgstr "Ukloni oznaku"
+
+msgid "IDS_IV_OPT_REFRESH"
+msgstr "Aktualiziraj"
+
+msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
+msgstr "Ispis putem Bluetootha"
+
+msgid "IDS_IV_OPT_MANUALLY_DETECT"
+msgstr "Ručno prepoznavanje"
+
+msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
+msgstr "Pozadina početnog i zaslona zaključavanja"
+
+msgid "IDS_IV_OPT_HIDDEN_ITEMS"
+msgstr "Skrivene stavke"
+
+msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
+msgstr "Preuzmite smjernice"
+
+msgid "IDS_IV_OPT_FILE_TRANSFER"
+msgstr "Prijenos podataka"
+
+msgid "IDS_IV_OPT_ERASER"
+msgstr "Gumica"
+
+msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
+msgstr "Uredi oznaku vremena"
+
+msgid "IDS_IV_OPT_EDIT_TAG"
+msgstr "Uredi oznaku"
+
+msgid "IDS_IV_OPT_EDIT_CAPTION"
+msgstr "Uredi naslov"
+
+msgid "IDS_IV_OPT_DELETE_CAPTION"
+msgstr "Obriši naslov"
+
+msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
+msgstr "Kopiraj u međuspremnik"
+
+msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
+msgstr "Informacije o vezi"
+
+msgid "IDS_IV_OPT_CLOUD"
+msgstr "Oblak"
+
+msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
+msgstr "Dijeljenje foto. s prijateljem"
+
+msgid "IDS_IV_OPT_BEST_FACE_ABB"
+msgstr "Najbolje lice"
+
+msgid "IDS_IV_OPT_AS_VIDEO_FILES"
+msgstr "Kao video datoteke"
+
+msgid "IDS_IV_OPT_AS_IMAGE_FILES"
+msgstr "Kao slikovne datoteke"
+
+msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
+msgstr "Animirana fotografija"
+
+msgid "IDS_IV_OPT_ADD_WEATHER_TAG_ABB"
+msgstr "Dodaj oznaku vremena"
+
+msgid "IDS_IV_OPT_ADD_NAME_ABB"
+msgstr "Dodaj ime"
+
+msgid "IDS_IV_OPT_ADD_CAPTION"
+msgstr "Dodaj naslov"
+
+msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
+msgstr "Glazbena prezentacija"
+
+msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
+msgstr "Dijeli zvuk & slikaj"
+
+msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
+msgstr "Postavi za"
+
+msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
+msgstr "Pošalji sliku"
+
+msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
+msgstr "Odaberite kontakt za dijeljenje"
+
+msgid "IDS_IV_HEADER_PLAY_SPEED"
+msgstr "Brzina reprodukcije"
+
+msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
+msgstr "Pozadina za zaslon zaključavanja"
+
+msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
+msgstr "Info o nagibu"
+
+msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
+msgstr "Pozadina poč. zaslona"
+
+msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
+msgstr "Uredi oznaku vremena"
+
+msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
+msgstr "Uredi uzastopno slik."
+
+msgid "IDS_IV_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Dostupni uređaji"
+
+msgid "IDS_IV_HEADER_ALL_ALBUMS"
+msgstr "Svi albumi"
+
+msgid "IDS_IV_HEADER_ADD_TAG"
+msgstr "Dodaj oznaku"
+
+msgid "IDS_IV_BUTTON_STOP"
+msgstr "Zaustavi"
+
+msgid "IDS_IV_BUTTON_SCAN"
+msgstr "Skeniraj"
+
+msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Možete dijeliti multimediju s drugim uređajima korištenjem uređaja u blizini."
+
+msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
+msgstr "S %s i %d ostalima"
+
+msgid "IDS_IV_BODY_WITH_PS"
+msgstr "Sa %s"
+
+msgid "IDS_IV_BODY_WHITE_BALANCE"
+msgstr "Kor. bijele boje"
+
+msgid "IDS_IV_BODY_WEATHER_ABB"
+msgstr "Vrijeme"
+
+msgid "IDS_IV_BODY_WEATHER"
+msgstr "Prognoza"
+
+msgid "IDS_IV_BODY_VENDOR"
+msgstr "Dobavljač"
+
+msgid "IDS_IV_BODY_VALIDITY"
+msgstr "Valjanost"
+
+msgid "IDS_IV_BODY_UNLIMITED"
+msgstr "Neograničeno"
+
+msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
+msgstr "Nemoguće učitati fotografiju."
+
+msgid "IDS_IV_BODY_TIMED_COUNT"
+msgstr "Preostalo vrijeme"
+
+msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
+msgstr "The recorded weather information should be edited manually. Your device does not support receiving recorded weather info from the weather widget."
+
+msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
+msgstr "Dodirnite lica da biste vidjeli informacije o osobama."
+
+msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
+msgstr "Dotaknite i zadržite na dvije točke, a zatim nagnite uređaj naprijed i natrag za povećavanje i smanjivanje zaslona."
+
+msgid "IDS_IV_BODY_SUNNY_DAY"
+msgstr "Sunčan dan"
+
+msgid "IDS_IV_BODY_SNOWY_DAY"
+msgstr "Snježan dan"
+
+msgid "IDS_IV_BODY_SHARE_VIA"
+msgstr "Dijeljenje preko"
+
+msgid "IDS_IV_BODY_SERVER_NAME"
+msgstr "Ime poslužitelja"
+
+msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
+msgstr "Odaberite područje da biste izrezali sliku."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
+msgstr "Odabrano područje će se ispisati."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
+msgstr "Odabrano područje primijenit će se na pozadinu."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
+msgstr "Odabrano područje primijenit će se na sliku kontakta."
+
+msgid "IDS_IV_BODY_RIGHT_STATUS"
+msgstr "Prava"
+
+msgid "IDS_IV_BODY_RESOLUTION"
+msgstr "Rezolucija"
+
+msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
+msgstr "Ukloni iz favorita"
+
+msgid "IDS_IV_BODY_RAINY_DAY"
+msgstr "Kišan dan"
+
+msgid "IDS_IV_BODY_PRINT"
+msgstr "Ispis"
+
+msgid "IDS_IV_BODY_POSSIBLE"
+msgstr "Moguće"
+
+msgid "IDS_IV_BODY_PEOPLE"
+msgstr "Ljudi"
+
+msgid "IDS_IV_BODY_N_A"
+msgstr "nema"
+
+msgid "IDS_IV_BODY_NO_TAG"
+msgstr "Nema oznaka"
+
+msgid "IDS_IV_BODY_NEW_TAG"
+msgstr "Nova oznaka"
+
+msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
+msgstr "Uređaji u blizini"
+
+msgid "IDS_IV_BODY_MY_DEVICE"
+msgstr "Moj uređaj"
+
+msgid "IDS_IV_BODY_MODEL"
+msgstr "Model"
+
+msgid "IDS_IV_BODY_ME"
+msgstr "Ja"
+
+msgid "IDS_IV_BODY_MANUFACTURER"
+msgstr "Proizvođač"
+
+msgid "IDS_IV_BODY_LONGITUDE"
+msgstr "Geo. duljina"
+
+msgid "IDS_IV_BODY_LOCK_SCREEN"
+msgstr "Zaslon zaključavanja"
+
+msgid "IDS_IV_BODY_LOCATION_M_PATH"
+msgstr "Lokacija"
+
+msgid "IDS_IV_BODY_LOCATION_ABB2"
+msgstr "Lokacija"
+
+msgid "IDS_IV_BODY_LOCATIONS"
+msgstr "Lokacije"
+
+msgid "IDS_IV_BODY_LOCATION"
+msgstr "Lokacija"
+
+msgid "IDS_IV_BODY_LATITUDE"
+msgstr "Geo. širina"
+
+msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
+msgstr "U %s"
+
+msgid "IDS_IV_BODY_INTERVAL"
+msgstr "Interval"
+
+msgid "IDS_IV_BODY_INDIVIDUAL"
+msgstr "Individualno"
+
+msgid "IDS_IV_BODY_IN"
+msgstr "U"
+
+msgid "IDS_IV_BODY_IMPOSSIBLE"
+msgstr "Nemoguće"
+
+msgid "IDS_IV_BODY_HOME_SCREEN"
+msgstr "Početni zaslon"
+
+msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
+msgstr "Početni i zaslon zaključavanja"
+
+msgid "IDS_IV_BODY_FORWARDING"
+msgstr "Prosljeđivanje"
+
+msgid "IDS_IV_BODY_FLASH"
+msgstr "Flash"
+
+msgid "IDS_IV_BODY_FILE_NAME"
+msgstr "Naziv datoteke"
+
+msgid "IDS_IV_BODY_FILE_LOCATION"
+msgstr "Lokacija datoteke"
+
+msgid "IDS_IV_BODY_FILE_FORMAT"
+msgstr "Format datoteke"
+
+msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
+msgstr "Traj. ekspoz."
+
+msgid "IDS_IV_BODY_EXECUTE"
+msgstr "Pokreni"
+
+msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
+msgstr "Uključite GPS oznake u Kameri da biste vidjeli lokacijske oznake."
+
+msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
+msgstr "Omogućite automatsko osvježavanje u widgetu za vrijeme da biste vidjeli oznake vremena."
+
+msgid "IDS_IV_BODY_DURATION"
+msgstr "Trajanje"
+
+msgid "IDS_IV_BODY_DRM_INFO"
+msgstr "Detalji zaštite"
+
+msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Ne prikazuj više"
+
+msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
+msgstr "Ne pitaj više"
+
+msgid "IDS_IV_BODY_DISPLAY"
+msgstr "Zaslon"
+
+msgid "IDS_IV_BODY_DATE_CREATED"
+msgstr "Datum"
+
+msgid "IDS_IV_BODY_CROP"
+msgstr "Izreži"
+
+msgid "IDS_IV_BODY_CREATE_TAG"
+msgstr "Nova oznaka"
+
+msgid "IDS_IV_BODY_COUNT"
+msgstr "Broj"
+
+msgid "IDS_IV_BODY_CLOUDY_DAY"
+msgstr "Oblačan dan"
+
+msgid "IDS_IV_BODY_CLEAR_NIGHT"
+msgstr "Jasna noć"
+
+msgid "IDS_IV_BODY_CALLER_IMAGE"
+msgstr "Slika pozivatelja"
+
+msgid "IDS_IV_BODY_BASIC"
+msgstr "Osnovno"
+
+msgid "IDS_IV_BODY_AVAILABLE_USES"
+msgstr "Preostalo upotreba"
+
+msgid "IDS_IV_BODY_AUTO"
+msgstr "Auto"
+
+msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
+msgstr "Primijenite temu s bojama koje se podudaraju na aplikacije."
+
+msgid "IDS_IV_BODY_APERTURE"
+msgstr "Leća"
+
+msgid "IDS_IV_BODY_ANY"
+msgstr "Bilo koji"
+
+msgid "IDS_IV_BODY_ADD_TO_FAVOURITES"
+msgstr "Spremi u Favorite"
+
+msgid "IDS_IV_BODY_ACCUMULATED_TIME"
+msgstr "Ukupno vrijeme"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maks. broj znakova."
+
+msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
+msgstr "Greška"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_ST_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_ST_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_ST_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_ST_BODY_EDIT"
+msgstr "Uredi"
+
+msgid "IDS_ST_BODY_DATE"
+msgstr "Datum"
+
+msgid "IDS_EMAIL_OPT_ACCOUNTS"
+msgstr "Računi"
+
+msgid "IDS_GALLERY_BODY_DOWNLOAD"
+msgstr "Skidanje"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
+msgstr "Nakon što pošaljete slike u Dropbox, stavke će se prikazati."
+
+msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
+msgstr "Skidanje..."
+
+msgid "IDS_IV_BODY_ADD_PICTURES"
+msgstr "Dodaj slike"
+
+msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
+msgstr "Nakon što označite slike kao omiljene, slike će se prikazati."
+
+msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
+msgstr "Ukloniti prepoznavanje lica?"
+
+msgid "IDS_IV_OPT_ASSIGN_NAME"
+msgstr "Dodijeli ime"
+
+msgid "IDS_IV_OPT_CONFIRM_AS_PS"
+msgstr "Potvrdi kao %s"
+
+msgid "IDS_IV_OPT_LAYOUT_M_PICTUERS"
+msgstr "Izgled"
+
+msgid "IDS_IV_OPT_PD_PICTURES_ADDED"
+msgstr "Dodano %d slika"
+
+msgid "IDS_IV_POP_THE_ALBUM_WILL_BE_CANCELLED"
+msgstr "Kreiranje albuma će se prekinuti."
+
+msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
+msgstr "Pokretanje skidanja..."
+
+msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Nedovoljno memorije. Obrišite neke datoteke"
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Privatna memorija"
+
+msgid "IDS_IV_BODY_DRAG_HERE"
+msgstr "Dovucite ovdje."
+
+msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
+msgstr "Dotaknite za dodavanje slika."
+
+msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
+msgstr "Datoteka postoji."
+
+msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
+msgstr "Ova će stavka biti obrisana."
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
+msgstr "Nakon što pošaljete slike na Facebook, stavke će se prikazati."
+
+msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
+msgstr "Neispravan znak."
+
+msgid "IDS_MEDIABR_OPT_MANUAL"
+msgstr "Ručno"
+
+msgid "IDS_ST_BODY_ERROR_VZW"
+msgstr "Error"
+
+msgid "IDS_ST_BUTTON2_PROCESSING_ING"
+msgstr "Obrađuje se..."
+
+msgid "IDS_ST_BODY_OK"
+msgstr "U redu"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Preimenuj"
+
+msgid "IDS_COM_BODY_NONE"
+msgstr "Ništa"
+
+msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
+msgstr "%d odabrano"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Memorija uređaja"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD kartica"
+
+msgid "IDS_ST_BODY_SPEED"
+msgstr "Brzina"
+
+msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
+msgstr "Pozadinska glazba"
+
+msgid "IDS_IV_OPT_1_SEC_ABB"
+msgstr "1 sek"
+
+msgid "IDS_IV_OPT_3_SECS_ABB"
+msgstr "3 sek"
+
+msgid "IDS_IV_OPT_5_SECS_ABB"
+msgstr "5 sek"
+
+msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
+msgstr "Mjesto spremanja"
+
+msgid "IDS_IV_BODY_FILE_SIZE"
+msgstr "Veličina datoteke"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 album bit će obrisan."
+
+msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
+msgstr "Nostalgija"
+
+msgid "IDS_IV_OPT_BLUR_M_EFFECT"
+msgstr "Zamagljivanje"
+
+msgid "IDS_IV_OPT_SOFT_GLOW_M_EFFECT"
+msgstr "Nježni sjaj"
+
+msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
+msgstr "Spremanje promjena"
+
+msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
+msgstr "Spremiti promjene ili ih odbaciti?"
+
+msgid "IDS_IV_BUTTON_DISCARD_ABB2"
+msgstr "Odbaci"
+
+msgid "IDS_IV_BUTTON_SAVE"
+msgstr "Spremi"
+
+msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
+msgstr "Starinski"
+
+msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
+msgstr "Sunce"
+
+msgid "IDS_IV_OPT_OLD_PHOTO_M_EFFECT"
+msgstr "Stara fotografija"
+
+msgid "IDS_IV_OPT_RETRO_M_EFFECT"
+msgstr "Retro"
+
+msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
+msgstr "Sivi tonovi"
+
+msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
+msgstr "Sepia"
+
+msgid "IDS_IV_OPT_FADED_COLOURS_M_EFFECT"
+msgstr "Blijede boje"
+
+msgid "IDS_IV_OPT_DOWNLIGHT_M_EFFECT"
+msgstr "Svjetlo odozgo"
+
+msgid "IDS_IV_OPT_YELLOW_GLOW_M_EFFECT"
+msgstr "Žuti sjaj"
+
+msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
+msgstr "Izoštravanje"
+
+msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
+msgstr "Skica"
+
+msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
+msgstr "Obrnute boje"
+
+msgid "IDS_IV_OPT_OIL_PAINT_M_EFFECT"
+msgstr "Uljne boje"
+
+msgid "IDS_IV_OPT_POSTERISE_M_EFFECT"
+msgstr "Posterizacija"
+
+msgid "IDS_IV_OPT_CARTOON_M_EFFECT"
+msgstr "Strip"
+
+msgid "IDS_IV_OPT_POP_ART_M_EFFECT"
+msgstr "Pop art"
+
+msgid "IDS_IV_OPT_MAGIC_PEN_M_EFFECT"
+msgstr "Čarobna olovka"
+
+msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
+msgstr "Dodano na popis za blokiranje."
+
+msgid "IDS_IMGE_BODY_ROTATE"
+msgstr "Rotiraj"
+
+msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Nema dovoljno prostora u memoriji uređaja. Idite na Postavke > Baterija i memorija > Memorija, zatim izbrišite neke datoteke i pokušajte ponovno."
+
+msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
+msgstr "Interval slajdova"
+
+msgid "IDS_IV_MBODY_SLIDE_INTERVAL_ABB"
+msgstr "Interval slajdova"
+
+msgid "IDS_IV_OPT_CONTACT_PICTURE_ABB"
+msgstr "Slika kontakta"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Nema"
+
+msgid "IDS_IV_OPT_EDIT"
+msgstr "Uredi"
+
+msgid "IDS_IV_OPT_RENAME"
+msgstr "Promjeni ime"
+
+msgid "IDS_IV_OPT_SET_AS"
+msgstr "Postavi kao"
+
+msgid "IDS_IV_OPT_DOWNLOAD"
+msgstr "Preuzmi"
+
+msgid "IDS_IV_HEADER_RENAME"
+msgstr "Preimenuj"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB"
+msgstr "Preimenuj"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB2"
+msgstr "Preimen."
+
+msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
+msgstr "Datoteka s ovim nazivom već postoji u odredišnoj mapi."
+
+msgid "IDS_IV_BUTTON_REPLACE_ABB"
+msgstr "Zamijeni"
+
+msgid "IDS_IV_HEADER_SET_AS"
+msgstr "Postavljanje za"
+
+msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
+msgstr "Pozadina početnog zaslona"
+
+msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
+msgstr "Pozadina zaslona za zaključav."
+
+msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
+msgstr "Pozadine poč. i zasl. zaključ."
+
+msgid "IDS_IV_HEADER_DETAILS"
+msgstr "Detalji"
+
+msgid "IDS_IV_BODY_DATE"
+msgstr "Datum"
+
+msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
+msgstr "Nemoguće spremiti sliku"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
+msgstr "Nema dovoljno prostora (%d MB) u memoriji uređaja."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
+msgstr "Nema dovoljno prostora (%d MB) na SD kartici."
+
+msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Izbrišite neke datoteke i pokušajte ponovno."
+
+msgid "IDS_IV_HEADER_SAVE_IMAGE"
+msgstr "Spremi sliku"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
+msgstr "Nema dovoljno prostora (preostalo %d MB) u memoriji uređaja. Ova će se stavka spremiti na SD karticu."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
+msgstr "Nema dovoljno prostora (preostalo %d MB) na SD kartici. Ova će se stavka spremiti u memoriju uređaja."
+
+msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
+msgstr "Slika će biti obrisana."
+
+msgid "IDS_IV_BUTTON_STOP_ABB4"
+msgstr "Zaustavi"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Obriši"
+
+msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
+msgstr "Greška"
+
+msgid "IDS_GALLERY_HEADER_SELECT_AREA_ABB"
+msgstr "Odabir područja"
+
+msgid "IDS_GALLERY_BUTTON_DONE"
+msgstr "OK"
+
+msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
+msgstr "Neuspješno učitavanje stavke."
+
+msgid "IDS_CAM_OPT_NEGATIVE"
+msgstr "Negativ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "GOTOVO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ODUSTANI"
+
+msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
+msgstr "Negativ"
+
+msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
+msgstr "Nemoguće otvoriti Galeriju."
+
+msgid "IDS_360V_TPOP_LOADING_ING"
+msgstr "Učitavanje..."
+
+msgid "IDS_IV_HEADER_LOADING_ING"
+msgstr "Učitavanje..."
+
+msgid "IDS_IV_POP_LOADING_FAILED"
+msgstr "Učitavanje neuspješno."
+
+msgid "IDS_IV_POP_LOADING_IMAGE_ING"
+msgstr "Učitavanje slike..."
+
+msgid "IDS_IV_SK_DISCARD"
+msgstr "Odbaci"
+
+msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
+msgstr "Nemoguće skinuti"
+
+msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobilni su podaci isključeni. Spojite se na Wi-Fi mrežu ili uključite Mobilne podatke i pokušajte ponovno."
+
+msgid "IDS_IV_BODY_DO_NOT_SEND"
+msgstr "Ne šalji"
+
+msgid "IDS_COM_BODY_1_SECOND"
+msgstr "1 sek"
+
+msgid "IDS_BODY_PD_SECONDS"
+msgstr "%d sekundi"
+
+msgid "IDS_IV_BODY_EFFECT"
+msgstr "Efekt"
+
+msgid "IDS_IMGE_HEARDER_EFFECTS"
+msgstr "Efekti"
+
+msgid "IDS_DFRAME_BODY_FLOW_M_EFFECT"
+msgstr "Protok"
+
+msgid "IDS_IV_OPT_FADE_M_EFFECT"
+msgstr "Zatamni"
+
+msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
+msgstr "Povećaj"
+

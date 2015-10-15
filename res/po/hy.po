@@ -1,0 +1,996 @@
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Գաղտնի"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Վերանվանել"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Այս տեսանյութը կվերացվի:"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Ֆայլի անունն արդեն գործածվում է"
+
+msgid "IDS_ST_BODY_OFF"
+msgstr "Անջատված է"
+
+msgid "IDS_COM_BODY_DONE"
+msgstr "Կատարված է"
+
+msgid "IDS_FB_BODY_FACEBOOK"
+msgstr "Facebook"
+
+msgid "IDS_CAM_BODY_FLASH"
+msgstr "Բռնկում"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Կանգնել"
+
+msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
+msgstr "%1$s-ը կասեցված է այս ծրագրում: Այս գործառույթն ընձեռելու համար գնացեք %2$s, ընտրեք այս գործառույթը, այնուհետև ընտրեք այս ծրագիրը"
+
+msgid "IDS_MEDIABR_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_MEDIABR_BUTTON_DONE"
+msgstr "Արված է"
+
+msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
+msgstr "Դադարեցնել"
+
+msgid "IDS_GALLERY_HEADER_ENTER_NAME"
+msgstr "Մուտքագրեք անունը"
+
+msgid "IDS_MEDIABR_POP_NO_NAME"
+msgstr "Անուն չկա"
+
+msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
+msgstr "Միայն մեկ ալբոմ կա:"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Կարող եք ընտրել մինչև %d տարր:"
+
+msgid "IDS_IV_OPT_DETAILS"
+msgstr "Մանրամասներ"
+
+msgid "IDS_IV_OPT_DELETE_ABB"
+msgstr "Ջնջել"
+
+msgid "IDS_IV_POP_DELETE_Q"
+msgstr "Ջնջե՞լ"
+
+msgid "IDS_IV_BUTTON_CANCEL"
+msgstr "Չեղարկել"
+
+msgid "IDS_IV_POP_DELETED"
+msgstr "Ջնջված է:"
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Սիրված"
+
+msgid "IDS_IV_SK_SAVE"
+msgstr "Պահել"
+
+msgid "IDS_IV_POP_SAVED"
+msgstr "Պահպանվեց:"
+
+msgid "IDS_IV_BODY_SETTINGS"
+msgstr "Պարամետրեր"
+
+msgid "IDS_IV_BODY_SIZE"
+msgstr "Չափս"
+
+msgid "IDS_IV_BODY_UNKNOWN"
+msgstr "Անհայտ"
+
+msgid "IDS_IV_SK_YES"
+msgstr "Այո"
+
+msgid "IDS_CAM_BODY_ISO"
+msgstr "ISO"
+
+msgid "IDS_CAM_BODY_FOCAL_LENGTH"
+msgstr "Կիզակետային տարածություն"
+
+msgid "IDS_CAM_BODY_FLASH_ON"
+msgstr "Լուսարձակը միացված"
+
+msgid "IDS_COM_POP_IMAGE_VIEWER"
+msgstr "Պատկերների դիտարկիչ"
+
+msgid "IDS_MEDIABR_OPT_ALL_PICTURES"
+msgstr "Բոլոր նկարները"
+
+msgid "IDS_MEDIABR_HEADER_ORIENTATION"
+msgstr "Կողմնորոշում"
+
+msgid "IDS_MEDIABR_BODY_SELECT_PICTURE"
+msgstr "Ընտրեք նկար"
+
+msgid "IDS_MP_BODY_DURATION"
+msgstr "Տևողություն"
+
+msgid "IDS_ST_POP_SET"
+msgstr "Գործադրել"
+
+msgid "IDS_GALLERY_BODY_TAGS"
+msgstr "Հայտանիշեր"
+
+msgid "IDS_IV_SK3_ADD_COMMENT"
+msgstr "Ավլցնլ մկնբնթյն"
+
+msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Ձեր մեդիա ֆայլերը դիտեք այլ սարքերի վրա՝ օգտվելով մոտակա սարքերից:"
+
+msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
+msgstr "Տեսաֆայլերը տեղեկություններ չեն պարունակում մարդկանց մասին, քանի որ դրանք չեն ապահովում դեմքի հատկորոշիչի գործառույթը:"
+
+msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
+msgstr "Անհնար է համօգտագործել այս պատկերը: Այն պաշտպանված է DRM-ով:"
+
+msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
+msgstr "Հնարավոր չէ բացել ֆայլը:"
+
+msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
+msgstr "Հնարավոր է՝ գրանցված եղանակի մասին տեղեկատվությունը տարբերվի փաստացի եղանակից թարմացման ժամանակամիջոցի պատճառով:"
+
+msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
+msgstr "Գզրոցի մեջ պատճենված անձնական բովանդակությունը կարող է օգտագործվել նոր բովանդակություն ստեղծելու նպատակով: Հնարավոր է, որ Ձեր նոր բովանդակությունն ինքնաբերաբար չթաքցվի:"
+
+msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
+msgstr "Պատկերը շատ փոքր է:"
+
+msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
+msgstr "Թվականի տվյալները ցուցադրվում են, միայն երբ տեսանելի են մյուս հատկորոշիչները:"
+
+msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
+msgstr "Թակեք և պահեք մանրապատկերները՝ լավագույն լուսանկարներն ընտրելու համար:"
+
+msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
+msgstr "Սահկահանդեսի ընտրանքները"
+
+msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
+msgstr "Դնել պաստառ հիմնական էկրանի և կողպված էկրանի համար"
+
+msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
+msgstr "Այս նկարը դնե՞լ որպես %sի զանգահարողի ID:"
+
+msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
+msgstr "Սահմանել որպես զանգահարողի ID"
+
+msgid "IDS_IV_POP_SENDING_ING"
+msgstr "Ուղարկում..."
+
+msgid "IDS_IV_POP_SELECT_DEVICE"
+msgstr "Ընտրեք սարք"
+
+msgid "IDS_IV_POP_SD_CARD_REMOVED"
+msgstr "SD քարտը հեռացված է:"
+
+msgid "IDS_IV_POP_PERMISSION_DENIED"
+msgstr "Թույլտվությունը մերժվեց:"
+
+msgid "IDS_IV_POP_NO_LOCATION"
+msgstr "Տեղ չկա"
+
+msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
+msgstr "Դեմքեր չեն հատկորոշվել: Հատկորոշեք նկարի դեմքերը"
+
+msgid "IDS_IV_POP_NO_FACES_DETECTED"
+msgstr "Դեմքեր չեն հայտնաբերվել:"
+
+msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Հիշողությունը չի բավարարում: Ջնջեք որոշ տարրեր"
+
+msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
+msgstr "Ցանցի միացումը ձախողվեց:"
+
+msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
+msgstr "Հասել է նիշերի առավելագույն քանակին (%d):"
+
+msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
+msgstr "Անվավեր պատկերի ֆայլ:"
+
+msgid "IDS_IV_POP_FLASH_USED_ABB"
+msgstr "Լսբռնկչ է օգտ."
+
+msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
+msgstr "Ֆայլի ձևաչափն ապահովված չէ:"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Գրառումը դատարկ է:"
+
+msgid "IDS_IV_POP_ENTER_TAG_NAME"
+msgstr "Մուտքագրել հատկորոշիչի անուն:"
+
+msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
+msgstr "Ընձեռեք ինքնանորացում եղանակի պաստառում՝ եղանակի հատկորոշիչներ տեսնելու համար:"
+
+msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
+msgstr "Ներբեռնումն ավարտվեց"
+
+msgid "IDS_IV_POP_BEST_PHOTO"
+msgstr "Լավագույն լուսանկարը"
+
+msgid "IDS_IV_POP_ADDED"
+msgstr "Ավելացված է:"
+
+msgid "IDS_IV_OPT_WRITE_CAPTION"
+msgstr "Գրել մակագիր"
+
+msgid "IDS_IV_OPT_USE_MOTION"
+msgstr "Օգտագործել շարժում"
+
+msgid "IDS_IV_OPT_UNFAVOURITE"
+msgstr "Չսիրված"
+
+msgid "IDS_IV_OPT_TRIM"
+msgstr "Խուզել"
+
+msgid "IDS_IV_OPT_TAG_FACE_ABB"
+msgstr "Հատկորոշել դեմքը"
+
+msgid "IDS_IV_OPT_TAG_BUDDY"
+msgstr "Հատկորոշել մտերիմին"
+
+msgid "IDS_IV_OPT_TAG"
+msgstr "Հայտանիշ"
+
+msgid "IDS_IV_OPT_START_SLIDESHOW"
+msgstr "Սկսել սլայդերի ցուցադրում"
+
+msgid "IDS_IV_OPT_SLIDE_SHOW"
+msgstr "Սլայդ շոու"
+
+msgid "IDS_IV_OPT_SLIDESHOW_ABB"
+msgstr "Սլայդերի ցուցադրում"
+
+msgid "IDS_IV_OPT_SHOW_ITEMS"
+msgstr "Ցույց տալ տարրերը"
+
+msgid "IDS_IV_OPT_SHARE"
+msgstr "Համատեղ օգտագործում"
+
+msgid "IDS_IV_OPT_ROTATE_RIGHT"
+msgstr "Պտտել աջ"
+
+msgid "IDS_IV_OPT_ROTATE_LEFT"
+msgstr "Պտտել ձախ"
+
+msgid "IDS_IV_OPT_REMOVE_TAG"
+msgstr "Հեռացնել հատկորոշիչ"
+
+msgid "IDS_IV_OPT_REFRESH"
+msgstr "Թարմացնել"
+
+msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
+msgstr "Տպել Bluetooth-ի միջոցով"
+
+msgid "IDS_IV_OPT_MANUALLY_DETECT"
+msgstr "Ձեռքով հայտնաբերել"
+
+msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
+msgstr "Հիմնական և կողպված էկրանի պաստառ"
+
+msgid "IDS_IV_OPT_HIDDEN_ITEMS"
+msgstr "Թաքցված տարրեր"
+
+msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
+msgstr "Ստացեք ուղղություններ"
+
+msgid "IDS_IV_OPT_FILE_TRANSFER"
+msgstr "Ֆայլի փոխանցում"
+
+msgid "IDS_IV_OPT_ERASER"
+msgstr "Ջնջիչ"
+
+msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
+msgstr "Խմբգրլ եղնկի հտկորշչ"
+
+msgid "IDS_IV_OPT_EDIT_TAG"
+msgstr "Խմբգր պիտկ"
+
+msgid "IDS_IV_OPT_EDIT_CAPTION"
+msgstr "Խմբագրել մակագիրը"
+
+msgid "IDS_IV_OPT_DELETE_CAPTION"
+msgstr "Վերացնել մակագիր"
+
+msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
+msgstr "Պատճենել փոխանակման բունկերի մեջ"
+
+msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
+msgstr "Միացման տվյալներ"
+
+msgid "IDS_IV_OPT_CLOUD"
+msgstr "Cloud"
+
+msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
+msgstr "Մտերիմի լուսանկարի համօգտագործում"
+
+msgid "IDS_IV_OPT_BEST_FACE_ABB"
+msgstr "Լավագույն դեմքը"
+
+msgid "IDS_IV_OPT_AS_VIDEO_FILES"
+msgstr "Որպես տեսանիշքեր"
+
+msgid "IDS_IV_OPT_AS_IMAGE_FILES"
+msgstr "Որպես պատկերային նիշքեր"
+
+msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
+msgstr "Կենդանի լուսանկար"
+
+msgid "IDS_IV_OPT_ADD_WEATHER_TAG_ABB"
+msgstr "Ավլցնլ եղանակի հատկորոշիչ"
+
+msgid "IDS_IV_OPT_ADD_NAME_ABB"
+msgstr "Ավելացնել անուն"
+
+msgid "IDS_IV_OPT_ADD_CAPTION"
+msgstr "Ավելացնել մակագիր"
+
+msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
+msgstr "Սլայդերի ցուցադրման երաժշտություն"
+
+msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
+msgstr "Կիսեք ձայն և նկար"
+
+msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
+msgstr "Նշանակել որպես"
+
+msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
+msgstr "Ուղարկել այս նկարը"
+
+msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
+msgstr "Ընտրել կոնտակտ՝ համօգտագործելու համար"
+
+msgid "IDS_IV_HEADER_PLAY_SPEED"
+msgstr "Նվագարկման արագություն"
+
+msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
+msgstr "Կողպված էկրանի պաստառ"
+
+msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
+msgstr "Տեղեկացեք թեքման մասին"
+
+msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
+msgstr "Հիմն. էկրանի պաստառ"
+
+msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
+msgstr "Խմբգրլ եղնկի հտկորշչ"
+
+msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
+msgstr "Խմբագրել նկարաշարքը"
+
+msgid "IDS_IV_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Մատչելի սարքեր"
+
+msgid "IDS_IV_HEADER_ALL_ALBUMS"
+msgstr "Բոլոր ալբոմները"
+
+msgid "IDS_IV_HEADER_ADD_TAG"
+msgstr "Հվլլ պիտակ"
+
+msgid "IDS_IV_BUTTON_STOP"
+msgstr "Կնգնլ"
+
+msgid "IDS_IV_BUTTON_SCAN"
+msgstr "Զննել"
+
+msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Ձեր մեդիա ֆայլերը կարող եք համօգտագործել այլ սարքերի հետ՝ օգտվելով մոտակա սարքերից:"
+
+msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
+msgstr "%sի և %d ուրիշների հետ"
+
+msgid "IDS_IV_BODY_WITH_PS"
+msgstr "%sի հետ"
+
+msgid "IDS_IV_BODY_WHITE_BALANCE"
+msgstr "Սպիտակի հաշվեկշիռ"
+
+msgid "IDS_IV_BODY_WEATHER_ABB"
+msgstr "Եղանակ"
+
+msgid "IDS_IV_BODY_WEATHER"
+msgstr "Եղանակ"
+
+msgid "IDS_IV_BODY_VENDOR"
+msgstr "Մատակարար"
+
+msgid "IDS_IV_BODY_VALIDITY"
+msgstr "Վավերականություն"
+
+msgid "IDS_IV_BODY_UNLIMITED"
+msgstr "Անսահմանափակ"
+
+msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
+msgstr "Անհնար է բեռնել լուսանկարը:"
+
+msgid "IDS_IV_BODY_TIMED_COUNT"
+msgstr "Հաշվարկված հաշիվ"
+
+msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
+msgstr "The recorded weather information should be edited manually. Your device does not support receiving recorded weather info from the weather widget."
+
+msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
+msgstr "Թակեք դեմքերը՝ մարդկանց մասին տեղեկություններ դիտելու համար:"
+
+msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
+msgstr "Թակեք և պահեք երկու կետում, հետո սարքը թեքեք հետ ու առաջ՝ էկրանը փոքրացնելու կամ մեծացնելու համար:"
+
+msgid "IDS_IV_BODY_SUNNY_DAY"
+msgstr "Արևոտ օր"
+
+msgid "IDS_IV_BODY_SNOWY_DAY"
+msgstr "Ձնառատ օր"
+
+msgid "IDS_IV_BODY_SHARE_VIA"
+msgstr "Համօգտագործել հետևյալի միջոցով՝"
+
+msgid "IDS_IV_BODY_SERVER_NAME"
+msgstr "Սերվերի անունը"
+
+msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
+msgstr "Ընտրել մակերես՝ նկարը կադրավորելու համար:"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
+msgstr "Ընտրված մակերեսը կտպվի:"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
+msgstr "Ընտրված մակերեսը կհատկացվի պաստառին:"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
+msgstr "Ընտրված մակերեսը կհատկացվի կոնտակտի նկարին:"
+
+msgid "IDS_IV_BODY_RIGHT_STATUS"
+msgstr "Իրավունքի կարգավիճակ"
+
+msgid "IDS_IV_BODY_RESOLUTION"
+msgstr "Լուծաչափ"
+
+msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
+msgstr "Հեռացնել սիրվածներից"
+
+msgid "IDS_IV_BODY_RAINY_DAY"
+msgstr "Անձրևոտ օր"
+
+msgid "IDS_IV_BODY_PRINT"
+msgstr "Տպել"
+
+msgid "IDS_IV_BODY_POSSIBLE"
+msgstr "Հնարավոր"
+
+msgid "IDS_IV_BODY_PEOPLE"
+msgstr "Մարդիկ"
+
+msgid "IDS_IV_BODY_N_A"
+msgstr "Կիրառելի չէ"
+
+msgid "IDS_IV_BODY_NO_TAG"
+msgstr "Հատկորոշիչ չկա"
+
+msgid "IDS_IV_BODY_NEW_TAG"
+msgstr "Նոր տեգ"
+
+msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
+msgstr "Մոտակա սարքեր"
+
+msgid "IDS_IV_BODY_MY_DEVICE"
+msgstr "Իմ սարքը"
+
+msgid "IDS_IV_BODY_MODEL"
+msgstr "Նմուշ"
+
+msgid "IDS_IV_BODY_ME"
+msgstr "Իմ կողմից"
+
+msgid "IDS_IV_BODY_MANUFACTURER"
+msgstr "Արտադրող"
+
+msgid "IDS_IV_BODY_LONGITUDE"
+msgstr "Երկայնք"
+
+msgid "IDS_IV_BODY_LOCK_SCREEN"
+msgstr "Կողպել էկրանը"
+
+msgid "IDS_IV_BODY_LOCATION_M_PATH"
+msgstr "Գտնվելու վայր"
+
+msgid "IDS_IV_BODY_LOCATION_ABB2"
+msgstr "Տեղը"
+
+msgid "IDS_IV_BODY_LOCATIONS"
+msgstr "Տեղեր"
+
+msgid "IDS_IV_BODY_LOCATION"
+msgstr "Գտնվելու վայր"
+
+msgid "IDS_IV_BODY_LATITUDE"
+msgstr "Լայնք"
+
+msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
+msgstr "%sում"
+
+msgid "IDS_IV_BODY_INTERVAL"
+msgstr "Դադար"
+
+msgid "IDS_IV_BODY_INDIVIDUAL"
+msgstr "Անհատ"
+
+msgid "IDS_IV_BODY_IN"
+msgstr "Մեջ"
+
+msgid "IDS_IV_BODY_IMPOSSIBLE"
+msgstr "Անհնար է"
+
+msgid "IDS_IV_BODY_HOME_SCREEN"
+msgstr "Աշխատասեղան"
+
+msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
+msgstr "Հիմնական և կողպված էկրաններ"
+
+msgid "IDS_IV_BODY_FORWARDING"
+msgstr "Փոխանցում"
+
+msgid "IDS_IV_BODY_FLASH"
+msgstr "Բռնկման մենյու"
+
+msgid "IDS_IV_BODY_FILE_NAME"
+msgstr "Ֆայլի անուն"
+
+msgid "IDS_IV_BODY_FILE_LOCATION"
+msgstr "Ֆայլի տեղը"
+
+msgid "IDS_IV_BODY_FILE_FORMAT"
+msgstr "Նիշքի ձեւաչափը"
+
+msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
+msgstr "Լուսակայման ժկ"
+
+msgid "IDS_IV_BODY_EXECUTE"
+msgstr "Կատարել"
+
+msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
+msgstr "Ընձեռեք GPS հատկորոշիչներ Խցիկում՝ տեղի հատկորոշիչները տեսնելու համար:"
+
+msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
+msgstr "Ընձեռեք ինքնանորացում եղանակի պատկերագրում՝ եղանակի հատկորոշիչներ տեսնելու համար:"
+
+msgid "IDS_IV_BODY_DURATION"
+msgstr "Տևողություն"
+
+msgid "IDS_IV_BODY_DRM_INFO"
+msgstr "DRM տեղեկ."
+
+msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Չցուցադրել կրկին"
+
+msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
+msgstr "Այլևս չհարցնել"
+
+msgid "IDS_IV_BODY_DISPLAY"
+msgstr "Էկրան"
+
+msgid "IDS_IV_BODY_DATE_CREATED"
+msgstr "Ստեղծման ամսաթիվը"
+
+msgid "IDS_IV_BODY_CROP"
+msgstr "Եզրատել"
+
+msgid "IDS_IV_BODY_CREATE_TAG"
+msgstr "Ստեղծ պիտկ"
+
+msgid "IDS_IV_BODY_COUNT"
+msgstr "Քանակ"
+
+msgid "IDS_IV_BODY_CLOUDY_DAY"
+msgstr "Ամպամած օր"
+
+msgid "IDS_IV_BODY_CLEAR_NIGHT"
+msgstr "Պարզկա գիշեր"
+
+msgid "IDS_IV_BODY_CALLER_IMAGE"
+msgstr "Զանգահարողի պատկեր"
+
+msgid "IDS_IV_BODY_BASIC"
+msgstr "Հիմնական"
+
+msgid "IDS_IV_BODY_AVAILABLE_USES"
+msgstr "Հասանելի օգտվողներ"
+
+msgid "IDS_IV_BODY_AUTO"
+msgstr "Ավտոմատ"
+
+msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
+msgstr "Համապատասխանող գույնի թեմա կիրառեք ծրագրերի նկատմամբ:"
+
+msgid "IDS_IV_BODY_APERTURE"
+msgstr "Բացվածք"
+
+msgid "IDS_IV_BODY_ANY"
+msgstr "Ցանկացած"
+
+msgid "IDS_IV_BODY_ADD_TO_FAVOURITES"
+msgstr "Ավելացնել սիրվածներ"
+
+msgid "IDS_IV_BODY_ACCUMULATED_TIME"
+msgstr "Կուտակված ժամանակը"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Հասել եք նիշերի առավելագույն քանակին:"
+
+msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
+msgstr "Չհաջողվեց"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_ST_BODY_MB"
+msgstr "ՄԲ"
+
+msgid "IDS_ST_BODY_KB"
+msgstr "ԿԲ"
+
+msgid "IDS_ST_BODY_GB"
+msgstr "ԳԲ"
+
+msgid "IDS_ST_BODY_EDIT"
+msgstr "Խմբագրել"
+
+msgid "IDS_ST_BODY_DATE"
+msgstr "Ամսաթիվ"
+
+msgid "IDS_EMAIL_OPT_ACCOUNTS"
+msgstr "Հաշիվներ"
+
+msgid "IDS_GALLERY_BODY_DOWNLOAD"
+msgstr "Ներբեռնել"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
+msgstr "Նկարները Dropbox-ում վերբեռնելուց հետո տարրերը կցուցադրվեն:"
+
+msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
+msgstr "Բեռնում..."
+
+msgid "IDS_IV_BODY_ADD_PICTURES"
+msgstr "Ավելացնել նկարներ"
+
+msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
+msgstr "Նկարները որպես սիրվածներ հատկորոշելուց հետո նկարները կցուցադրվեն:"
+
+msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
+msgstr "Հեռացնե՞լ դեմքի նույնականացումը:"
+
+msgid "IDS_IV_OPT_ASSIGN_NAME"
+msgstr "Վերագրել անուն"
+
+msgid "IDS_IV_OPT_CONFIRM_AS_PS"
+msgstr "Հաստատեք որպես %s"
+
+msgid "IDS_IV_OPT_LAYOUT_M_PICTUERS"
+msgstr "Դասավորություն"
+
+msgid "IDS_IV_OPT_PD_PICTURES_ADDED"
+msgstr "%d նկար է ավելացվել"
+
+msgid "IDS_IV_POP_THE_ALBUM_WILL_BE_CANCELLED"
+msgstr "Ալբոմը չեղյալ կհամարվի:"
+
+msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
+msgstr "Ներբեռնումը սկսվում է..."
+
+msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Հիշողությունը չի բավարարում: Ջնջեք որոշ տարրեր"
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Անձնական պահոց"
+
+msgid "IDS_IV_BODY_DRAG_HERE"
+msgstr "Քաշեք այստեղ:"
+
+msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
+msgstr "Թակել՝ պատկերներ ավելացնելու համար:"
+
+msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
+msgstr "Ֆայլն արդեն գոյություն ունի:"
+
+msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
+msgstr "Այս տարրը կվերացվի:"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
+msgstr "Նկարները Facebook-ում վերբեռնելուց հետո տարրերը կցուցադրվեն:"
+
+msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
+msgstr "Անվավեր պայմանանշան:"
+
+msgid "IDS_MEDIABR_OPT_MANUAL"
+msgstr "Ձեռքով"
+
+msgid "IDS_ST_BODY_ERROR_VZW"
+msgstr "Error"
+
+msgid "IDS_ST_BUTTON2_PROCESSING_ING"
+msgstr "Մշակվում է..."
+
+msgid "IDS_ST_BODY_OK"
+msgstr "Ընդունել"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Վրանվանել"
+
+msgid "IDS_COM_BODY_NONE"
+msgstr "Չկա"
+
+msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
+msgstr "%d ընտրված"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Սարքի պահոց"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD քարտ"
+
+msgid "IDS_ST_BODY_SPEED"
+msgstr "Արագություն"
+
+msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
+msgstr "Ֆոնային երաժշտություն"
+
+msgid "IDS_IV_OPT_1_SEC_ABB"
+msgstr "1 վրկ"
+
+msgid "IDS_IV_OPT_3_SECS_ABB"
+msgstr "3 վրկ"
+
+msgid "IDS_IV_OPT_5_SECS_ABB"
+msgstr "5 վրկ"
+
+msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
+msgstr "Պահման տեղը"
+
+msgid "IDS_IV_BODY_FILE_SIZE"
+msgstr "Ֆայլի չափսը"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 ալբոմ կվերացվի:"
+
+msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
+msgstr "Կարոտախտ"
+
+msgid "IDS_IV_OPT_BLUR_M_EFFECT"
+msgstr "Աղոտ"
+
+msgid "IDS_IV_OPT_SOFT_GLOW_M_EFFECT"
+msgstr "Մեղմ փայլ"
+
+msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
+msgstr "Պահպանել փոփոխությունները"
+
+msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
+msgstr "Պահպանե՞լ Ձեր կատարած փոփոխությունները, թե՞ դեն նետել:"
+
+msgid "IDS_IV_BUTTON_DISCARD_ABB2"
+msgstr "Գցել"
+
+msgid "IDS_IV_BUTTON_SAVE"
+msgstr "Պահպանել"
+
+msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
+msgstr "Հնաոճ"
+
+msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
+msgstr "Արևի լույս"
+
+msgid "IDS_IV_OPT_OLD_PHOTO_M_EFFECT"
+msgstr "Հին լուսանկար"
+
+msgid "IDS_IV_OPT_RETRO_M_EFFECT"
+msgstr "Ռետրո"
+
+msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
+msgstr "Գորշ սանդղակ"
+
+msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
+msgstr "Սեպիա"
+
+msgid "IDS_IV_OPT_FADED_COLOURS_M_EFFECT"
+msgstr "Խամրած գույներ"
+
+msgid "IDS_IV_OPT_DOWNLIGHT_M_EFFECT"
+msgstr "Կախովի լապտեր"
+
+msgid "IDS_IV_OPT_YELLOW_GLOW_M_EFFECT"
+msgstr "Դեղնացոլք"
+
+msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
+msgstr "Հստակեցնել"
+
+msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
+msgstr "Ուրվանկար"
+
+msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
+msgstr "Հակադարձ գույներ"
+
+msgid "IDS_IV_OPT_OIL_PAINT_M_EFFECT"
+msgstr "Յուղաներկ"
+
+msgid "IDS_IV_OPT_POSTERISE_M_EFFECT"
+msgstr "Պլակատի էֆեկտ"
+
+msgid "IDS_IV_OPT_CARTOON_M_EFFECT"
+msgstr "Մուլտֆիլմ"
+
+msgid "IDS_IV_OPT_POP_ART_M_EFFECT"
+msgstr "Փոփ արտ"
+
+msgid "IDS_IV_OPT_MAGIC_PEN_M_EFFECT"
+msgstr "Կախարդական գրիչ"
+
+msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
+msgstr "Ավելացված է արգելափակման ցանկում:"
+
+msgid "IDS_IMGE_BODY_ROTATE"
+msgstr "Պտտեցնել"
+
+msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Ձեր սարքի պահոցում բավարար տեղ չկա: Գնացեք Դրվածքներ > Էներգիա և պահոց > Պահոց, հետո վերացրեք որոշ ֆայլեր և նորից փորձեք:"
+
+msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
+msgstr "Սլայդի ժամանակամիջոց"
+
+msgid "IDS_IV_MBODY_SLIDE_INTERVAL_ABB"
+msgstr "Սլայդի ժամանակամիջոց"
+
+msgid "IDS_IV_OPT_CONTACT_PICTURE_ABB"
+msgstr "Կոնտակտի նկար"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Ոչ մեկը"
+
+msgid "IDS_IV_OPT_EDIT"
+msgstr "Խմբագրել"
+
+msgid "IDS_IV_OPT_RENAME"
+msgstr "Վերանվանել"
+
+msgid "IDS_IV_OPT_SET_AS"
+msgstr "Նախադրել որպես"
+
+msgid "IDS_IV_OPT_DOWNLOAD"
+msgstr "Ներբեռնել"
+
+msgid "IDS_IV_HEADER_RENAME"
+msgstr "Վերանվանել"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB"
+msgstr "Վերանվանել"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB2"
+msgstr "Վերանվ-լ"
+
+msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
+msgstr "Այս անունով նիշք արդեն առկա է նշանակված պանակում:"
+
+msgid "IDS_IV_BUTTON_REPLACE_ABB"
+msgstr "Փխրնել"
+
+msgid "IDS_IV_HEADER_SET_AS"
+msgstr "Դնել որպես"
+
+msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
+msgstr "Հիմնական էկրանի պաստառ"
+
+msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
+msgstr "Կողպէկրանի պաստառ"
+
+msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
+msgstr "Հիմն. և կողպ. էկրանի պաստառներ"
+
+msgid "IDS_IV_HEADER_DETAILS"
+msgstr "Մանրամասներ"
+
+msgid "IDS_IV_BODY_DATE"
+msgstr "Ամսաթիվ"
+
+msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
+msgstr "Անհնար է պահպանել պատկերը"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
+msgstr "Ձեր սարքի պահոցում բավարար տեղ չկա (%d ՄԲ):"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
+msgstr "Ձեր SD քարտում բավարար տեղ չկա (%d ՄԲ):"
+
+msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Վերացրեք որոշ ֆայլեր և նորից փորձեք:"
+
+msgid "IDS_IV_HEADER_SAVE_IMAGE"
+msgstr "Պահպանել պատկեր"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
+msgstr "Ձեր սարքի պահոցում բավարար տեղ չկա (մնացել է %d ՄԲ): Այս տարրը կպահպանվի Ձեր SD քարտում:"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
+msgstr "SD քարտում բավարար տեղ չկա (մնացել է %d ՄԲ): Այս տարրը կպահպանվի Ձեր սարքի պահոցում:"
+
+msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
+msgstr "Այս պատկերը կվերացվի:"
+
+msgid "IDS_IV_BUTTON_STOP_ABB4"
+msgstr "Կանգ"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Վերացնել"
+
+msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
+msgstr "Սխալ"
+
+msgid "IDS_GALLERY_HEADER_SELECT_AREA_ABB"
+msgstr "Ընտրել տարածք"
+
+msgid "IDS_GALLERY_BUTTON_DONE"
+msgstr "Արված է"
+
+msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
+msgstr "Չհաջողվեց բեռնել այս տարրը:"
+
+msgid "IDS_CAM_OPT_NEGATIVE"
+msgstr "Բացասական"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ԱՐՎԱԾ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ԴԱԴԱՐԵՑՆԵԼ"
+
+msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
+msgstr "Բացասական"
+
+msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
+msgstr "Անհնար է բացել Պատկերասրահը:"
+
+msgid "IDS_360V_TPOP_LOADING_ING"
+msgstr "Բեռնվում է..."
+
+msgid "IDS_IV_HEADER_LOADING_ING"
+msgstr "Բեռնում է..."
+
+msgid "IDS_IV_POP_LOADING_FAILED"
+msgstr "Բեռնումը ձախողվեց:"
+
+msgid "IDS_IV_POP_LOADING_IMAGE_ING"
+msgstr "Պատկերի բեռնում..."
+
+msgid "IDS_IV_SK_DISCARD"
+msgstr "Մերժել"
+
+msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
+msgstr "Անհնար է ներբեռնել"
+
+msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Շարժական տվյալներն անջատված են: Միացեք Wi-Fi ցանցի կամ միացրեք Շարժական տվյալներն ու նորից փորձեք:"
+
+msgid "IDS_IV_BODY_DO_NOT_SEND"
+msgstr "Չուղարկել"
+
+msgid "IDS_COM_BODY_1_SECOND"
+msgstr "1 վայրկյան"
+
+msgid "IDS_BODY_PD_SECONDS"
+msgstr "%d վայրկյան"
+
+msgid "IDS_IV_BODY_EFFECT"
+msgstr "Էֆեկտ"
+
+msgid "IDS_IMGE_HEARDER_EFFECTS"
+msgstr "Էֆեկտներ"
+
+msgid "IDS_DFRAME_BODY_FLOW_M_EFFECT"
+msgstr "Հոսք"
+
+msgid "IDS_IV_OPT_FADE_M_EFFECT"
+msgstr "Մարել"
+
+msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
+msgstr "Մոտեցնել"
+

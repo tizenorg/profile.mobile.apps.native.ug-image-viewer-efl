@@ -1,0 +1,134 @@
+* Wed Jun 19 2013 Telle-Tiia Pitkanen <telle-tiia.pitkanen@ixonos.com> submit/tizen_2.2/20130619.073932@adfbbce
+- Creating changelog
+
+* Wed Jun 19 2013 Telle-Tiia Pitkanen <telle-tiia.pitkanen@ixonos.com> submit/tizen_2.2/20130619.073932@80869d0
+- Update version number to 1.7.9
+- Merge "Fixes TZSP-5994, TREL-206: Gallery crashes when end it under Task switcher." into tizen_2.1
+- Launch sharing ugs specifically. Fixes TZSP-6016, TDIS-5131
+- Fixes TZSP-5994, TREL-206: Gallery crashes when end it under Task switcher.
+- remove bak file
+- update license
+- fix operation name
+- Merge "fixing the invalid pointer usage" into tizen_2.1
+- Merge "Update license" into tizen_2.1
+- Update license
+- fixing the invalid pointer usage
+- Merge branch 'master' into 2.1
+- change vconf key for slideshow
+- Merge branch 'master' into 2.1
+- add public result at crop
+- Merge branch 'master' into 2.1
+- remove fatal to fail popup, show only one file that not in db
+- Merge branch 'master' into 2.1
+- add print function
+- merge with master
+- update version
+- update name view
+- Tizen 2.1 base
+- fix scissor box parent
+- show fail popup when rename failed
+- Merge branch 'master' into gerrithost/master
+- Fix NABI TDIS-3807
+- Increase version_1
+- Merge "Increase version" into tizen_2.0
+- Increase version
+- Fix for ug is not launched
+- Merge branch 'master' into 2.0
+- apply cnp mode to entry
+- Merge branch 'master' into 2.0
+- add license sentence
+- Merge branch '2.0'
+- fix size evaluation error
+- fix region at setas
+- Merge branch 'master' into 2.0
+- change app icon
+- reset zoom level after rotate by exif
+- rename first before db
+- Merge branch '2.0'
+- Merge branch '2.0'
+- apply round globaly
+- apply round at zoom slider
+- Merge branch '2.0'
+- change return value about exif
+- load slider item when file deleted
+- Merge "add indicator area at setas, crop view" into tizen_2.0
+- Merge branch '2.0'
+- add indicator area at setas, crop view
+- Merge "fix bug(rotate vconf, useless code)" into tizen_2.0
+- fix bug(rotate vconf, useless code)
+- update exif
+- update exif
+- disable rotate when exif is none
+- fix caller id rotate region error
+- fix license install, change font name
+- apply license
+- show cropped file at list
+- Merge branch '2.0'
+- remove vibration
+- Add error check
+- Merge branch '2.0'
+- enable appgadget
+- change ctxpopup to center popup about share
+- reset zoom level when item changed
+- change license url
+- rotate to 0 when rotation is locked
+- remove add to home menu
+- [TEMP] donot resize twice
+- Merge branch 'master' into 2.0
+- abort mouse when pinch
+- Merge branch 'master' into 2.0
+- set null when timer expired
+- Merge branch 'master' into 2.0
+- add reload function
+- apply conformant change
+- remove scroll bar at photocam
+- Merge branch 'master' into 2.0
+- fix crop region bug
+- Merge branch 'master' into 2.0
+- fix app name
+- hide zoom slider at some caces, show video thumbnail
+- remove print option
+- remove thumbnail show
+- merge master
+- change com.samsung to org.tizen
+- fix prevent
+- Merge branch 'master' into 2.0
+- merge from private
+- fix for rsa
+- merge from master
+- Merge remote-tracking branch 'gerrithost/master' into 2.0
+- add image file
+- use photocam at slideshow
+- remove useless code
+- remove useless file
+- fix setas view
+- Squashed commit of the following:
+- remove dependency cont.
+- remove dependency
+- remove 3d dali
+- sync main branch
+- update string
+- save to jpg
+- Merge changes Ib0900870,I00430795
+- apply manifest
+- Remove unused enum string
+- Fix B/S when scrolling in window SDK
+- change scissor box event area
+- fix signal emit layout
+- apply slider update
+- update thumbnail after rename
+- remove timer when back key selected
+- apply zoom icon
+- add window to service, remove popup when share app is nothing
+- fix destroy me, remove danger code
+- fix crop view gui
+- add wallpaper bundle
+- change icon
+- add file:// prefix
+- support "file://" prefix
+- Fix debug macro
+- add missing file
+- initial upload
+- apply FSL(Flora Software License)
+- Initial empty repository
+

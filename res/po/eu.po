@@ -1,0 +1,996 @@
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Pribatua"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Berrizendatu"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Bideo hau ezabatuko da"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Fitxategi izena aurretik erabiltzen ari zara."
+
+msgid "IDS_ST_BODY_OFF"
+msgstr "Desaktibatuta"
+
+msgid "IDS_COM_BODY_DONE"
+msgstr "Amaituta"
+
+msgid "IDS_FB_BODY_FACEBOOK"
+msgstr "Facebook"
+
+msgid "IDS_CAM_BODY_FLASH"
+msgstr "Flasha"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Gelditu"
+
+msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
+msgstr "%1$s desgaituko da aplikazio honetan. Funtzio hori gaitzeko, zoaz %2$s-ra, hautatu funtzio hori eta, ondoren, hautatu aplikazio hau."
+
+msgid "IDS_MEDIABR_BUTTON_OK"
+msgstr "Ados"
+
+msgid "IDS_MEDIABR_BUTTON_DONE"
+msgstr "Egina"
+
+msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
+msgstr "Utzi"
+
+msgid "IDS_GALLERY_HEADER_ENTER_NAME"
+msgstr "Izena idatzi"
+
+msgid "IDS_MEDIABR_POP_NO_NAME"
+msgstr "Izenik gabe"
+
+msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
+msgstr "Album bakarra dago"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "%d elementu arte aukera ditzakezu"
+
+msgid "IDS_IV_OPT_DETAILS"
+msgstr "Xehetasunak"
+
+msgid "IDS_IV_OPT_DELETE_ABB"
+msgstr "Ezabatu"
+
+msgid "IDS_IV_POP_DELETE_Q"
+msgstr "Ezabatu?"
+
+msgid "IDS_IV_BUTTON_CANCEL"
+msgstr "Ezeztatu"
+
+msgid "IDS_IV_POP_DELETED"
+msgstr "Ezabatua"
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Gogokoena"
+
+msgid "IDS_IV_SK_SAVE"
+msgstr "Gorde"
+
+msgid "IDS_IV_POP_SAVED"
+msgstr "Gordeta"
+
+msgid "IDS_IV_BODY_SETTINGS"
+msgstr "Ezarpenak"
+
+msgid "IDS_IV_BODY_SIZE"
+msgstr "Tamaina"
+
+msgid "IDS_IV_BODY_UNKNOWN"
+msgstr "Ezezaguna"
+
+msgid "IDS_IV_SK_YES"
+msgstr "Bai"
+
+msgid "IDS_CAM_BODY_ISO"
+msgstr "ISO"
+
+msgid "IDS_CAM_BODY_FOCAL_LENGTH"
+msgstr "Distantzia-fokala"
+
+msgid "IDS_CAM_BODY_FLASH_ON"
+msgstr "Flasha aktibatuta"
+
+msgid "IDS_COM_POP_IMAGE_VIEWER"
+msgstr "Irudi bisorea"
+
+msgid "IDS_MEDIABR_OPT_ALL_PICTURES"
+msgstr "Irudi guztiak"
+
+msgid "IDS_MEDIABR_HEADER_ORIENTATION"
+msgstr "Orientazioa"
+
+msgid "IDS_MEDIABR_BODY_SELECT_PICTURE"
+msgstr "Argazkia aukeratu"
+
+msgid "IDS_MP_BODY_DURATION"
+msgstr "Iraupena"
+
+msgid "IDS_ST_POP_SET"
+msgstr "Ezarri"
+
+msgid "IDS_GALLERY_BODY_TAGS"
+msgstr "Etiketak"
+
+msgid "IDS_IV_SK3_ADD_COMMENT"
+msgstr "Gehitu iruzkina"
+
+msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Ikusi zure multimedia beste gailu batzuetan gertuko gailuen bidez"
+
+msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
+msgstr "Bideo fitxategiek ez dute pertsonei buruzko informaziorik ez dutelako aurpegi etiketatze funtzioa onartzen"
+
+msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
+msgstr "Ezin da irudi hau partekatu. DRMz babestuta dago."
+
+msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
+msgstr "Ezin izan da fitxategia ireki"
+
+msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
+msgstr "Baliteke grabatutako eguraldi informazioa eta uneko eguraldia ezberdinak izatea eguneraketa tartea dela eta"
+
+msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
+msgstr "Arbelean kopiatutako eduki pertsonala eduki berria sortzeko erabili daiteke. Baliteke zure eduki berria automatikoki ez ezkutatzea."
+
+msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
+msgstr "Irudia txikiegia da"
+
+msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
+msgstr "Dataren informazioa beste etiketa batzuk ikusgai daudenean soilik erakusten da."
+
+msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
+msgstr "Ukitu eta eutsi irudi txikiak Best photo hautatzeko"
+
+msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
+msgstr "Erakusketaren ezarpenak"
+
+msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
+msgstr "Ezarri horma papera hasierako pantailarako eta blokeo pantailarako"
+
+msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
+msgstr "Ezarri argazki %s-(r)en deitzaile ID gisa?"
+
+msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
+msgstr "Dei egilearen ID gisa ezarri"
+
+msgid "IDS_IV_POP_SENDING_ING"
+msgstr "Bidaltzen"
+
+msgid "IDS_IV_POP_SELECT_DEVICE"
+msgstr "Aukeratu gailua"
+
+msgid "IDS_IV_POP_SD_CARD_REMOVED"
+msgstr "SD txartela kenduta"
+
+msgid "IDS_IV_POP_PERMISSION_DENIED"
+msgstr "Baimena ukatuta"
+
+msgid "IDS_IV_POP_NO_LOCATION"
+msgstr "Kokalekurik ez"
+
+msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
+msgstr "Ez da aurpegirik etiketatu. Etiketatu aurpegiak argazkian."
+
+msgid "IDS_IV_POP_NO_FACES_DETECTED"
+msgstr "Ez da aurpegirik antzeman"
+
+msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Ez dago memoria nahikoa. Elementu batzuk ezabatu."
+
+msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
+msgstr "Sareko konexioak huts egin du"
+
+msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
+msgstr "Gehienezko karaktere kopurura (%d) iritsi zara"
+
+msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
+msgstr "Irudi fitxategi baliogabea"
+
+msgid "IDS_IV_POP_FLASH_USED_ABB"
+msgstr "Flash erab."
+
+msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
+msgstr "Fitxategiaren formatua ez da onartzen"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Sarrera hutsik dago"
+
+msgid "IDS_IV_POP_ENTER_TAG_NAME"
+msgstr "Adierazi etiketa izena"
+
+msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
+msgstr "Gaitu freskatze automatikoa eguraldiaren horma paperean eguraldi etiketak ikusteko"
+
+msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
+msgstr "Deskarga osatuta"
+
+msgid "IDS_IV_POP_BEST_PHOTO"
+msgstr "Best photo"
+
+msgid "IDS_IV_POP_ADDED"
+msgstr "Gehituta"
+
+msgid "IDS_IV_OPT_WRITE_CAPTION"
+msgstr "Idatzi epigrafea"
+
+msgid "IDS_IV_OPT_USE_MOTION"
+msgstr "Erabili mugimendua"
+
+msgid "IDS_IV_OPT_UNFAVOURITE"
+msgstr "Gogokoa ez"
+
+msgid "IDS_IV_OPT_TRIM"
+msgstr "Kimatu"
+
+msgid "IDS_IV_OPT_TAG_FACE_ABB"
+msgstr "Etiketatu aurpegia"
+
+msgid "IDS_IV_OPT_TAG_BUDDY"
+msgstr "Tag buddy"
+
+msgid "IDS_IV_OPT_TAG"
+msgstr "Etiketa"
+
+msgid "IDS_IV_OPT_START_SLIDESHOW"
+msgstr "Hasi diaporama"
+
+msgid "IDS_IV_OPT_SLIDE_SHOW"
+msgstr "Diapositiba aurkezpena"
+
+msgid "IDS_IV_OPT_SLIDESHOW_ABB"
+msgstr "Diaporama"
+
+msgid "IDS_IV_OPT_SHOW_ITEMS"
+msgstr "Erakutsi elementuak"
+
+msgid "IDS_IV_OPT_SHARE"
+msgstr "Partekatu"
+
+msgid "IDS_IV_OPT_ROTATE_RIGHT"
+msgstr "Eskuinera biratu"
+
+msgid "IDS_IV_OPT_ROTATE_LEFT"
+msgstr "Ezkerrera biratu"
+
+msgid "IDS_IV_OPT_REMOVE_TAG"
+msgstr "Ezabatu etiketa"
+
+msgid "IDS_IV_OPT_REFRESH"
+msgstr "Eguneratu"
+
+msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
+msgstr "Bluetooth bidez inprimatu"
+
+msgid "IDS_IV_OPT_MANUALLY_DETECT"
+msgstr "Hauteman eskuz"
+
+msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
+msgstr "Pantaila nagusiaren eta blokeo pantailaren horma papera"
+
+msgid "IDS_IV_OPT_HIDDEN_ITEMS"
+msgstr "Ezkutatutako elementuak"
+
+msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
+msgstr "Lortu helbideak"
+
+msgid "IDS_IV_OPT_FILE_TRANSFER"
+msgstr "Fitxategi transferentzia"
+
+msgid "IDS_IV_OPT_ERASER"
+msgstr "Borratzekoa"
+
+msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
+msgstr "Edit. eguraldi etik."
+
+msgid "IDS_IV_OPT_EDIT_TAG"
+msgstr "Edit. etik."
+
+msgid "IDS_IV_OPT_EDIT_CAPTION"
+msgstr "Editatu epigrafea"
+
+msgid "IDS_IV_OPT_DELETE_CAPTION"
+msgstr "Ezabatu epigrafea"
+
+msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
+msgstr "Kopiatu arbelera"
+
+msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
+msgstr "Konexio informazioa"
+
+msgid "IDS_IV_OPT_CLOUD"
+msgstr "Hodeia"
+
+msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
+msgstr "Lagun argazkiak partekatzea"
+
+msgid "IDS_IV_OPT_BEST_FACE_ABB"
+msgstr "Aurpegi onena"
+
+msgid "IDS_IV_OPT_AS_VIDEO_FILES"
+msgstr "Bideo fitxategi gisa"
+
+msgid "IDS_IV_OPT_AS_IMAGE_FILES"
+msgstr "Irudi fitxategi gisa"
+
+msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
+msgstr "Argazki animatua"
+
+msgid "IDS_IV_OPT_ADD_WEATHER_TAG_ABB"
+msgstr "Gehitu eguraldi etiketa"
+
+msgid "IDS_IV_OPT_ADD_NAME_ABB"
+msgstr "Gehitu izena"
+
+msgid "IDS_IV_OPT_ADD_CAPTION"
+msgstr "Gehitu epigrafea"
+
+msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
+msgstr "Diaporama musika"
+
+msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
+msgstr "Part. soinua/atera arg."
+
+msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
+msgstr "Honela zehaztu"
+
+msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
+msgstr "Bidali argazkia honi"
+
+msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
+msgstr "Hautatu partekatzeko kontaktu bat"
+
+msgid "IDS_IV_HEADER_PLAY_SPEED"
+msgstr "Erreprodukzioaren abiadura"
+
+msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
+msgstr "Blokeo pantailako horma papera"
+
+msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
+msgstr "Ikasi inklinatzeari buruz"
+
+msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
+msgstr "Hasierako pantailako horma papera"
+
+msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
+msgstr "Edit. eguraldi etik."
+
+msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
+msgstr "Edit. jarr. ateraldia"
+
+msgid "IDS_IV_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Gailu eskuragarriak"
+
+msgid "IDS_IV_HEADER_ALL_ALBUMS"
+msgstr "Album guztiak"
+
+msgid "IDS_IV_HEADER_ADD_TAG"
+msgstr "Gehi. etik."
+
+msgid "IDS_IV_BUTTON_STOP"
+msgstr "Geld."
+
+msgid "IDS_IV_BUTTON_SCAN"
+msgstr "Eskaneatzea"
+
+msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Zure multimedia beste gailu batzuekin parteka dezakezu gertuko gailuen bidez"
+
+msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
+msgstr "%s eta beste %d-(e)kin"
+
+msgid "IDS_IV_BODY_WITH_PS"
+msgstr "%s-(r)ekin"
+
+msgid "IDS_IV_BODY_WHITE_BALANCE"
+msgstr "Zuri-balantzea"
+
+msgid "IDS_IV_BODY_WEATHER_ABB"
+msgstr "Eguraldia"
+
+msgid "IDS_IV_BODY_WEATHER"
+msgstr "Eguraldia"
+
+msgid "IDS_IV_BODY_VENDOR"
+msgstr "Hornitzailea"
+
+msgid "IDS_IV_BODY_VALIDITY"
+msgstr "Baliozkotasuna"
+
+msgid "IDS_IV_BODY_UNLIMITED"
+msgstr "Mugagabea"
+
+msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
+msgstr "Ezin da argazkia kargatu"
+
+msgid "IDS_IV_BODY_TIMED_COUNT"
+msgstr "Mugatutako zenbaketa"
+
+msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
+msgstr "The recorded weather information should be edited manually. Your device does not support receiving recorded weather info from the weather widget."
+
+msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
+msgstr "Ukitu aurpegiak jendeari buruzko informazioa ikusteko"
+
+msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
+msgstr "Ukituta eutsi bi puntutan, okertu atzera eta aurrera gailua pantaila txikitu edo handitzeko"
+
+msgid "IDS_IV_BODY_SUNNY_DAY"
+msgstr "Egun eguzkitsua"
+
+msgid "IDS_IV_BODY_SNOWY_DAY"
+msgstr "Elur eguna"
+
+msgid "IDS_IV_BODY_SHARE_VIA"
+msgstr "Partekatu honen bidez"
+
+msgid "IDS_IV_BODY_SERVER_NAME"
+msgstr "Zerbitzariaren izena"
+
+msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
+msgstr "Hautatu eremua argazkia mozteko"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
+msgstr "Hautatutako eremua inprimatuko da"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
+msgstr "Hautatutako eremua horma paperari aplikatuko zaio"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
+msgstr "Hautatutako eremua kontaktuaren argazkiari aplikatuko zaio"
+
+msgid "IDS_IV_BODY_RIGHT_STATUS"
+msgstr "Egoera egokia"
+
+msgid "IDS_IV_BODY_RESOLUTION"
+msgstr "Bereizmena"
+
+msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
+msgstr "Gogokoenetatik kendu"
+
+msgid "IDS_IV_BODY_RAINY_DAY"
+msgstr "Egun euritsua"
+
+msgid "IDS_IV_BODY_PRINT"
+msgstr "Inprimatu"
+
+msgid "IDS_IV_BODY_POSSIBLE"
+msgstr "Posible"
+
+msgid "IDS_IV_BODY_PEOPLE"
+msgstr "Jendea"
+
+msgid "IDS_IV_BODY_N_A"
+msgstr "E/A"
+
+msgid "IDS_IV_BODY_NO_TAG"
+msgstr "Eranskailurik ez"
+
+msgid "IDS_IV_BODY_NEW_TAG"
+msgstr "Etiketa berria"
+
+msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
+msgstr "Gertuko gailuak"
+
+msgid "IDS_IV_BODY_MY_DEVICE"
+msgstr "Nire gailua"
+
+msgid "IDS_IV_BODY_MODEL"
+msgstr "Modeloa"
+
+msgid "IDS_IV_BODY_ME"
+msgstr "Nik "
+
+msgid "IDS_IV_BODY_MANUFACTURER"
+msgstr "Fabrikatzailea"
+
+msgid "IDS_IV_BODY_LONGITUDE"
+msgstr "Longitudea"
+
+msgid "IDS_IV_BODY_LOCK_SCREEN"
+msgstr "Blokeo pantaila"
+
+msgid "IDS_IV_BODY_LOCATION_M_PATH"
+msgstr "Kokalekua"
+
+msgid "IDS_IV_BODY_LOCATION_ABB2"
+msgstr "Kokalekua"
+
+msgid "IDS_IV_BODY_LOCATIONS"
+msgstr "Kokapenak"
+
+msgid "IDS_IV_BODY_LOCATION"
+msgstr "Kokalekua"
+
+msgid "IDS_IV_BODY_LATITUDE"
+msgstr "Latitudea"
+
+msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
+msgstr "Non: %s"
+
+msgid "IDS_IV_BODY_INTERVAL"
+msgstr "Tartea"
+
+msgid "IDS_IV_BODY_INDIVIDUAL"
+msgstr "Indibiduala"
+
+msgid "IDS_IV_BODY_IN"
+msgstr "Barruko"
+
+msgid "IDS_IV_BODY_IMPOSSIBLE"
+msgstr "Ezinezkoa"
+
+msgid "IDS_IV_BODY_HOME_SCREEN"
+msgstr "Hasierako pantaila"
+
+msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
+msgstr "Hasiera eta blokeo pantailak"
+
+msgid "IDS_IV_BODY_FORWARDING"
+msgstr "Birbidaltzea"
+
+msgid "IDS_IV_BODY_FLASH"
+msgstr "Flasha"
+
+msgid "IDS_IV_BODY_FILE_NAME"
+msgstr "Fitxategiaren izena"
+
+msgid "IDS_IV_BODY_FILE_LOCATION"
+msgstr "Fitxategi kokapena"
+
+msgid "IDS_IV_BODY_FILE_FORMAT"
+msgstr "Fitxategiaren formatua"
+
+msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
+msgstr "Espos. denbora"
+
+msgid "IDS_IV_BODY_EXECUTE"
+msgstr "Abiarazi"
+
+msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
+msgstr "Gaitu GPS etiketak Kameran kokapen etiketak ikusteko"
+
+msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
+msgstr "Gaitu freskatze automatikoa eguraldiaren widgetean eguraldi etiketak ikusteko"
+
+msgid "IDS_IV_BODY_DURATION"
+msgstr "Iraupena"
+
+msgid "IDS_IV_BODY_DRM_INFO"
+msgstr "DRM informazioa"
+
+msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Ez erakutsi berriro"
+
+msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
+msgstr "Ez galdetu berriz"
+
+msgid "IDS_IV_BODY_DISPLAY"
+msgstr "Pantaila"
+
+msgid "IDS_IV_BODY_DATE_CREATED"
+msgstr "Sortze data"
+
+msgid "IDS_IV_BODY_CROP"
+msgstr "Moztu"
+
+msgid "IDS_IV_BODY_CREATE_TAG"
+msgstr "Sor. etik."
+
+msgid "IDS_IV_BODY_COUNT"
+msgstr "Kontatu"
+
+msgid "IDS_IV_BODY_CLOUDY_DAY"
+msgstr "Egun lainotua"
+
+msgid "IDS_IV_BODY_CLEAR_NIGHT"
+msgstr "Gau oskarbia"
+
+msgid "IDS_IV_BODY_CALLER_IMAGE"
+msgstr "Dei egilearen irudia"
+
+msgid "IDS_IV_BODY_BASIC"
+msgstr "Oinarrizkoa"
+
+msgid "IDS_IV_BODY_AVAILABLE_USES"
+msgstr "Erabilera eskuragarriak"
+
+msgid "IDS_IV_BODY_AUTO"
+msgstr "Auto"
+
+msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
+msgstr "Aplikatu bat datorren kolore gaia aplikazioei."
+
+msgid "IDS_IV_BODY_APERTURE"
+msgstr "Irekidura"
+
+msgid "IDS_IV_BODY_ANY"
+msgstr "Edozein"
+
+msgid "IDS_IV_BODY_ADD_TO_FAVOURITES"
+msgstr "Gehitu gogokoetan"
+
+msgid "IDS_IV_BODY_ACCUMULATED_TIME"
+msgstr "Metatutako denbora"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Gehienezko karaktere kopurura heldu zara"
+
+msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
+msgstr "Huts egin du"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_ST_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_ST_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_ST_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_ST_BODY_EDIT"
+msgstr "Editatu"
+
+msgid "IDS_ST_BODY_DATE"
+msgstr "Data"
+
+msgid "IDS_EMAIL_OPT_ACCOUNTS"
+msgstr "Kontuak"
+
+msgid "IDS_GALLERY_BODY_DOWNLOAD"
+msgstr "Deskargatu"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
+msgstr "Argazkiak Dropboxera igo ondoren, elementuak erakutsiko dira"
+
+msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
+msgstr "Deskargatzen..."
+
+msgid "IDS_IV_BODY_ADD_PICTURES"
+msgstr "Gehitu argazkiak"
+
+msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
+msgstr "Etiketak gogoko moduan etiketatu ondoren, argazkiak erakutsiko dira"
+
+msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
+msgstr "Kendu aurpegi identifikazioa?"
+
+msgid "IDS_IV_OPT_ASSIGN_NAME"
+msgstr "Esleitu izena"
+
+msgid "IDS_IV_OPT_CONFIRM_AS_PS"
+msgstr "Baieztatu %s gisa"
+
+msgid "IDS_IV_OPT_LAYOUT_M_PICTUERS"
+msgstr "Diseinua"
+
+msgid "IDS_IV_OPT_PD_PICTURES_ADDED"
+msgstr "%d argazki gehituta"
+
+msgid "IDS_IV_POP_THE_ALBUM_WILL_BE_CANCELLED"
+msgstr "Albuma ezeztatuko da"
+
+msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
+msgstr "Deskarga hasten..."
+
+msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Ez dago memoria nahikoa. Elementu batzuk ezabatu."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Biltegi pribatua"
+
+msgid "IDS_IV_BODY_DRAG_HERE"
+msgstr "Arrastatu hona"
+
+msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
+msgstr "Sakatu irudiak gehitzeko"
+
+msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
+msgstr "Fitxategia badago lehendik"
+
+msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
+msgstr "Elementu hau ezabatu egingo da"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
+msgstr "Argazkiak Facebookera igo ondoren, elementuak erakutsiko dira"
+
+msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
+msgstr "Karaktere baliogabea"
+
+msgid "IDS_MEDIABR_OPT_MANUAL"
+msgstr "Eskuzkoa"
+
+msgid "IDS_ST_BODY_ERROR_VZW"
+msgstr "Error"
+
+msgid "IDS_ST_BUTTON2_PROCESSING_ING"
+msgstr "Prozesatzen..."
+
+msgid "IDS_ST_BODY_OK"
+msgstr "Onartu"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Berrizendatu"
+
+msgid "IDS_COM_BODY_NONE"
+msgstr "Bat ere ez"
+
+msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
+msgstr "%d aukeratuta"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Gailu biltegia"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD txartela"
+
+msgid "IDS_ST_BODY_SPEED"
+msgstr "Abiadura"
+
+msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
+msgstr "Atzealdeko musika"
+
+msgid "IDS_IV_OPT_1_SEC_ABB"
+msgstr "1 seg."
+
+msgid "IDS_IV_OPT_3_SECS_ABB"
+msgstr "3 seg."
+
+msgid "IDS_IV_OPT_5_SECS_ABB"
+msgstr "5 seg."
+
+msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
+msgstr "Biltegi kokapena"
+
+msgid "IDS_IV_BODY_FILE_SIZE"
+msgstr "Artxiboaren tamaina"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 album ezabatuko da."
+
+msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
+msgstr "Nostalgia"
+
+msgid "IDS_IV_OPT_BLUR_M_EFFECT"
+msgstr "Lausotu"
+
+msgid "IDS_IV_OPT_SOFT_GLOW_M_EFFECT"
+msgstr "Distira leuna"
+
+msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
+msgstr "Gorde aldaketak"
+
+msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
+msgstr "Gorde aldaketak edo baztertu?"
+
+msgid "IDS_IV_BUTTON_DISCARD_ABB2"
+msgstr "Baztertu"
+
+msgid "IDS_IV_BUTTON_SAVE"
+msgstr "Gorde"
+
+msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
+msgstr "Vintage"
+
+msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
+msgstr "Egunsentia"
+
+msgid "IDS_IV_OPT_OLD_PHOTO_M_EFFECT"
+msgstr "Argazki zaharra"
+
+msgid "IDS_IV_OPT_RETRO_M_EFFECT"
+msgstr "Retroa"
+
+msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
+msgstr "Gris eskala"
+
+msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
+msgstr "Sepia"
+
+msgid "IDS_IV_OPT_FADED_COLOURS_M_EFFECT"
+msgstr "Kolore itzaliak"
+
+msgid "IDS_IV_OPT_DOWNLIGHT_M_EFFECT"
+msgstr "Fokua"
+
+msgid "IDS_IV_OPT_YELLOW_GLOW_M_EFFECT"
+msgstr "Distira horia"
+
+msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
+msgstr "Zorroztu"
+
+msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
+msgstr "Zirriborroa"
+
+msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
+msgstr "Alderantzikatutako koloreak"
+
+msgid "IDS_IV_OPT_OIL_PAINT_M_EFFECT"
+msgstr "Olio pintura"
+
+msgid "IDS_IV_OPT_POSTERISE_M_EFFECT"
+msgstr "Posterizatu"
+
+msgid "IDS_IV_OPT_CARTOON_M_EFFECT"
+msgstr "Marrazkia"
+
+msgid "IDS_IV_OPT_POP_ART_M_EFFECT"
+msgstr "Pop art"
+
+msgid "IDS_IV_OPT_MAGIC_PEN_M_EFFECT"
+msgstr "Boligrafo magikoa"
+
+msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
+msgstr "Blokeo zerrendara gehitu da"
+
+msgid "IDS_IMGE_BODY_ROTATE"
+msgstr "Biratu"
+
+msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Ez dago nahikoa espazio gailuaren biltegian. Joan Ezarpenak > Bateria eta biltegia > Biltegia aukerara, ezabatu fitxategi batzuk eta saiatu berriz."
+
+msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
+msgstr "Diapositiba tartea"
+
+msgid "IDS_IV_MBODY_SLIDE_INTERVAL_ABB"
+msgstr "Diapositiba tartea"
+
+msgid "IDS_IV_OPT_CONTACT_PICTURE_ABB"
+msgstr "Kontaktu argazkia"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Batere ez"
+
+msgid "IDS_IV_OPT_EDIT"
+msgstr "Editatu"
+
+msgid "IDS_IV_OPT_RENAME"
+msgstr "Berrizendatu"
+
+msgid "IDS_IV_OPT_SET_AS"
+msgstr "Ezarri honela"
+
+msgid "IDS_IV_OPT_DOWNLOAD"
+msgstr "Deskargatu"
+
+msgid "IDS_IV_HEADER_RENAME"
+msgstr "Berrizendatu"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB"
+msgstr "Berrizendatu"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB2"
+msgstr "Berriz."
+
+msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
+msgstr "Izen bera duen fitxategi bat dago helmuga karpetan."
+
+msgid "IDS_IV_BUTTON_REPLACE_ABB"
+msgstr "Ordeztu"
+
+msgid "IDS_IV_HEADER_SET_AS"
+msgstr "Ezarri honela"
+
+msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
+msgstr "Pantaila nagusiko horma papera"
+
+msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
+msgstr "Blokeo pantailako horma papera"
+
+msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
+msgstr "Bl. pan / pan. nag. hor. pap."
+
+msgid "IDS_IV_HEADER_DETAILS"
+msgstr "Xehetasunak"
+
+msgid "IDS_IV_BODY_DATE"
+msgstr "Data"
+
+msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
+msgstr "Ezin izan da irudia gorde"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
+msgstr "Ez dago nahikoa espazio (%d MB) gailuaren biltegian."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
+msgstr "Ez dago nahikoa espazio (%d MB) zure SD txartelean"
+
+msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Ezabatu hainbat elementu eta saiatu berriz."
+
+msgid "IDS_IV_HEADER_SAVE_IMAGE"
+msgstr "Gorde irudia"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
+msgstr "Ez dago nahikoa espazio (%d MB geratzen dira) zure gailuaren biltegian. Elementu hau zure SD txartelean gordeko da."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
+msgstr "Ez dago nahikoa espazio (%d MB geratzen dira) SD txartelean. Elementu hau zure gailuaren biltegian gordeko da."
+
+msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
+msgstr "Argazki hau ezabatuko da"
+
+msgid "IDS_IV_BUTTON_STOP_ABB4"
+msgstr "Gelditu"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Ezabatu"
+
+msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
+msgstr "Errorea"
+
+msgid "IDS_GALLERY_HEADER_SELECT_AREA_ABB"
+msgstr "Hautatu eremua"
+
+msgid "IDS_GALLERY_BUTTON_DONE"
+msgstr "Egina"
+
+msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
+msgstr "Ezin izan da elementu hau kargatu."
+
+msgid "IDS_CAM_OPT_NEGATIVE"
+msgstr "Negatiboa"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "EGINA"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "UTZI"
+
+msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
+msgstr "Negatiboa"
+
+msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
+msgstr "Ezin da Galeria ireki."
+
+msgid "IDS_360V_TPOP_LOADING_ING"
+msgstr "Kargatzen..."
+
+msgid "IDS_IV_HEADER_LOADING_ING"
+msgstr "Kargatzen..."
+
+msgid "IDS_IV_POP_LOADING_FAILED"
+msgstr "Errorea kargatzerakoan"
+
+msgid "IDS_IV_POP_LOADING_IMAGE_ING"
+msgstr "Irudia kargatzen..."
+
+msgid "IDS_IV_SK_DISCARD"
+msgstr "Baztertu"
+
+msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
+msgstr "Ezin da deskargatu"
+
+msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Datu mugikorrak itzalita daude. Konektatu Wi-Fi sare batera edo piztu datu mugikorrak eta saiatu berriz."
+
+msgid "IDS_IV_BODY_DO_NOT_SEND"
+msgstr "Ez bidali"
+
+msgid "IDS_COM_BODY_1_SECOND"
+msgstr "Segundo 1"
+
+msgid "IDS_BODY_PD_SECONDS"
+msgstr "%d segundo"
+
+msgid "IDS_IV_BODY_EFFECT"
+msgstr "Efektua"
+
+msgid "IDS_IMGE_HEARDER_EFFECTS"
+msgstr "Efektuak"
+
+msgid "IDS_DFRAME_BODY_FLOW_M_EFFECT"
+msgstr "Fluxua"
+
+msgid "IDS_IV_OPT_FADE_M_EFFECT"
+msgstr "Koloregabetu"
+
+msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
+msgstr "Gerturatu"
+

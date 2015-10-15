@@ -1,0 +1,996 @@
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privaatne"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Nimeta ümber"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "See video kustutatakse."
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Failinimi on juba kasutusel"
+
+msgid "IDS_ST_BODY_OFF"
+msgstr "Väljas"
+
+msgid "IDS_COM_BODY_DONE"
+msgstr "Valmis"
+
+msgid "IDS_FB_BODY_FACEBOOK"
+msgstr "Facebook"
+
+msgid "IDS_CAM_BODY_FLASH"
+msgstr "Välk"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Lõpeta"
+
+msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
+msgstr "%1$s on selles rakenduses desaktiveeritud. Selle funktsiooni aktiveerimiseks avage menüü %2$s, valige see funktsioon ja seejärel valige see rakendus."
+
+msgid "IDS_MEDIABR_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_MEDIABR_BUTTON_DONE"
+msgstr "Valmis"
+
+msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
+msgstr "Tühista"
+
+msgid "IDS_GALLERY_HEADER_ENTER_NAME"
+msgstr "Sisestage nimi"
+
+msgid "IDS_MEDIABR_POP_NO_NAME"
+msgstr "Nimi puudub"
+
+msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
+msgstr "Ainult uks album."
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Te voite valida kuni %d uksust."
+
+msgid "IDS_IV_OPT_DETAILS"
+msgstr "Üksikasjad"
+
+msgid "IDS_IV_OPT_DELETE_ABB"
+msgstr "Kustuta"
+
+msgid "IDS_IV_POP_DELETE_Q"
+msgstr "Kustutada?"
+
+msgid "IDS_IV_BUTTON_CANCEL"
+msgstr "Tühista"
+
+msgid "IDS_IV_POP_DELETED"
+msgstr "Kustutatud."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Lemmik"
+
+msgid "IDS_IV_SK_SAVE"
+msgstr "Salvesta"
+
+msgid "IDS_IV_POP_SAVED"
+msgstr "Salvestatud."
+
+msgid "IDS_IV_BODY_SETTINGS"
+msgstr "Seaded"
+
+msgid "IDS_IV_BODY_SIZE"
+msgstr "Suurus"
+
+msgid "IDS_IV_BODY_UNKNOWN"
+msgstr "Tundmatu"
+
+msgid "IDS_IV_SK_YES"
+msgstr "Jah"
+
+msgid "IDS_CAM_BODY_ISO"
+msgstr "ISO"
+
+msgid "IDS_CAM_BODY_FOCAL_LENGTH"
+msgstr "Fookuskaugus"
+
+msgid "IDS_CAM_BODY_FLASH_ON"
+msgstr "Välk sees"
+
+msgid "IDS_COM_POP_IMAGE_VIEWER"
+msgstr "Pildivaatur"
+
+msgid "IDS_MEDIABR_OPT_ALL_PICTURES"
+msgstr "Kõik pildid"
+
+msgid "IDS_MEDIABR_HEADER_ORIENTATION"
+msgstr "Paigutus"
+
+msgid "IDS_MEDIABR_BODY_SELECT_PICTURE"
+msgstr "Vali pilt"
+
+msgid "IDS_MP_BODY_DURATION"
+msgstr "Kestvus"
+
+msgid "IDS_ST_POP_SET"
+msgstr "Määra"
+
+msgid "IDS_GALLERY_BODY_TAGS"
+msgstr "Sildid"
+
+msgid "IDS_IV_SK3_ADD_COMMENT"
+msgstr "Lisa komment"
+
+msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Saate jagada oma meediumi teiste seadmetega, kasutades lahedalolevaid seadmeid."
+
+msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
+msgstr "Videofailid ei sisalda teavet inimeste kohta, kuna failid ei toeta nao sildi funktsiooni."
+
+msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
+msgstr "Seda pilti ei saa jagada. See on DRM-kaitsega."
+
+msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
+msgstr "Faili ei saa avada."
+
+msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
+msgstr "Salvestatud ilmateade voib erineda varskendamise intervalli tottu tegelikust ilmast."
+
+msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
+msgstr "Lõikelauale kopeeritud isiklikku sisu saab kasutada uue sisu loomiseks. Teie uut sisu ei pruugita peita automaatselt."
+
+msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
+msgstr "Pilt on liiga vaike."
+
+msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
+msgstr "Kuupäevateave kuvatakse ainult siis, kui teised sildid on nähtavad."
+
+msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
+msgstr "Toksake ja hoidke sorme pisipiltidel, et valida parimaid fotosid."
+
+msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
+msgstr "Slaidiseansi seaded"
+
+msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
+msgstr "Määra taustpilt avaekraanile ja lukustusekraanile"
+
+msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
+msgstr "Kas määrata see pilt kontakti %s helistajatunnuseks?"
+
+msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
+msgstr "Määra helistaja tunnuseks"
+
+msgid "IDS_IV_POP_SENDING_ING"
+msgstr "Saatmine..."
+
+msgid "IDS_IV_POP_SELECT_DEVICE"
+msgstr "Vali seade"
+
+msgid "IDS_IV_POP_SD_CARD_REMOVED"
+msgstr "SD-kaart on eemaldatud."
+
+msgid "IDS_IV_POP_PERMISSION_DENIED"
+msgstr "Loast keelduti."
+
+msgid "IDS_IV_POP_NO_LOCATION"
+msgstr "Asukohta pole"
+
+msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
+msgstr "Ühtegi nägu pole sildistatud. Sildistage pildil olevad näod"
+
+msgid "IDS_IV_POP_NO_FACES_DETECTED"
+msgstr "Ühtegi nägu ei tuvastatud."
+
+msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Mälu pole piisavalt. Kustutage mõned üksused"
+
+msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
+msgstr "Võrguühendus nurjus."
+
+msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
+msgstr "Maksimaalne tähemärkide arv (%d) on saavutatud."
+
+msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
+msgstr "Vigane pildifail."
+
+msgid "IDS_IV_POP_FLASH_USED_ABB"
+msgstr "Kasut. välku"
+
+msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
+msgstr "Failivormingut ei toetata."
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Kirje on tuhi."
+
+msgid "IDS_IV_POP_ENTER_TAG_NAME"
+msgstr "Sisestage sildi nimi."
+
+msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
+msgstr "Aktiveerige automaatne varskendamine ilmateate taustpildil, et naha ilmasilte."
+
+msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
+msgstr "Allalaadimine on lõpule viidud"
+
+msgid "IDS_IV_POP_BEST_PHOTO"
+msgstr "Parim foto"
+
+msgid "IDS_IV_POP_ADDED"
+msgstr "Lisatud."
+
+msgid "IDS_IV_OPT_WRITE_CAPTION"
+msgstr "Lisage pealdis"
+
+msgid "IDS_IV_OPT_USE_MOTION"
+msgstr "Kasuta liigutusi"
+
+msgid "IDS_IV_OPT_UNFAVOURITE"
+msgstr "Eemalda lemmikutest"
+
+msgid "IDS_IV_OPT_TRIM"
+msgstr "Lõika"
+
+msgid "IDS_IV_OPT_TAG_FACE_ABB"
+msgstr "Sildista nägu"
+
+msgid "IDS_IV_OPT_TAG_BUDDY"
+msgstr "Sõbersilt"
+
+msgid "IDS_IV_OPT_TAG"
+msgstr "Silt"
+
+msgid "IDS_IV_OPT_START_SLIDESHOW"
+msgstr "Käivita slaidiseanss"
+
+msgid "IDS_IV_OPT_SLIDE_SHOW"
+msgstr "Slaidiseanss"
+
+msgid "IDS_IV_OPT_SLIDESHOW_ABB"
+msgstr "Slaidiseanss"
+
+msgid "IDS_IV_OPT_SHOW_ITEMS"
+msgstr "Näita üksusi"
+
+msgid "IDS_IV_OPT_SHARE"
+msgstr "Jaga"
+
+msgid "IDS_IV_OPT_ROTATE_RIGHT"
+msgstr "Pööra paremale"
+
+msgid "IDS_IV_OPT_ROTATE_LEFT"
+msgstr "Pööra vasakule"
+
+msgid "IDS_IV_OPT_REMOVE_TAG"
+msgstr "Eemalda silt"
+
+msgid "IDS_IV_OPT_REFRESH"
+msgstr "Värskenda"
+
+msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
+msgstr "Prindi Bluetoothi kaudu"
+
+msgid "IDS_IV_OPT_MANUALLY_DETECT"
+msgstr "Tuvasta käsitsi"
+
+msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
+msgstr "Ava- ja lukustusekraani taustpilt"
+
+msgid "IDS_IV_OPT_HIDDEN_ITEMS"
+msgstr "Peidetud üksused"
+
+msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
+msgstr "Hankige juhised"
+
+msgid "IDS_IV_OPT_FILE_TRANSFER"
+msgstr "Faili edastamine"
+
+msgid "IDS_IV_OPT_ERASER"
+msgstr "Kustukumm"
+
+msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
+msgstr "Redigeer. ilmasilti"
+
+msgid "IDS_IV_OPT_EDIT_TAG"
+msgstr "Red. silti"
+
+msgid "IDS_IV_OPT_EDIT_CAPTION"
+msgstr "Redigeeri pealdist"
+
+msgid "IDS_IV_OPT_DELETE_CAPTION"
+msgstr "Kustuta pealdis"
+
+msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
+msgstr "Kopeeri lõikelauale"
+
+msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
+msgstr "Ühenduse teave"
+
+msgid "IDS_IV_OPT_CLOUD"
+msgstr "Cloud"
+
+msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
+msgstr "Sõbrafoto jagamine"
+
+msgid "IDS_IV_OPT_BEST_FACE_ABB"
+msgstr "Parim nägu"
+
+msgid "IDS_IV_OPT_AS_VIDEO_FILES"
+msgstr "Videofailidena"
+
+msgid "IDS_IV_OPT_AS_IMAGE_FILES"
+msgstr "Pildifailidena"
+
+msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
+msgstr "Animeeritud foto"
+
+msgid "IDS_IV_OPT_ADD_WEATHER_TAG_ABB"
+msgstr "Lisa ilmasilt"
+
+msgid "IDS_IV_OPT_ADD_NAME_ABB"
+msgstr "Lisa nimi"
+
+msgid "IDS_IV_OPT_ADD_CAPTION"
+msgstr "Lisa pealdis"
+
+msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
+msgstr "Slaidiseansi muusika"
+
+msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
+msgstr "Jaga Heli ja võtte pil."
+
+msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
+msgstr "Määra"
+
+msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
+msgstr "Saada see pilt"
+
+msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
+msgstr "Valige jagamiseks kontakt"
+
+msgid "IDS_IV_HEADER_PLAY_SPEED"
+msgstr "Esituskiirus"
+
+msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
+msgstr "Lukustusekr. taustp."
+
+msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
+msgstr "Kallutamise teave"
+
+msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
+msgstr "Avaekr. taustp."
+
+msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
+msgstr "Redigeer. ilmasilti"
+
+msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
+msgstr "Redigeeri sarivõtet"
+
+msgid "IDS_IV_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Saadaolevad seadmed"
+
+msgid "IDS_IV_HEADER_ALL_ALBUMS"
+msgstr "Kõik albumid"
+
+msgid "IDS_IV_HEADER_ADD_TAG"
+msgstr "Lisa silt"
+
+msgid "IDS_IV_BUTTON_STOP"
+msgstr "Lõpeta"
+
+msgid "IDS_IV_BUTTON_SCAN"
+msgstr "Otsi"
+
+msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Saate jagada oma meediumi teiste seadmetega, kasutades lahedalolevaid seadmeid."
+
+msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
+msgstr "Kontaktiga %s ja veel %d teisega"
+
+msgid "IDS_IV_BODY_WITH_PS"
+msgstr "Koos kontaktiga %s"
+
+msgid "IDS_IV_BODY_WHITE_BALANCE"
+msgstr "Valge tasakaal"
+
+msgid "IDS_IV_BODY_WEATHER_ABB"
+msgstr "Ilm"
+
+msgid "IDS_IV_BODY_WEATHER"
+msgstr "Ilm"
+
+msgid "IDS_IV_BODY_VENDOR"
+msgstr "Tarnija"
+
+msgid "IDS_IV_BODY_VALIDITY"
+msgstr "Kehtivus"
+
+msgid "IDS_IV_BODY_UNLIMITED"
+msgstr "Piiramatu"
+
+msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
+msgstr "Fotot ei saa laadida."
+
+msgid "IDS_IV_BODY_TIMED_COUNT"
+msgstr "Piiratud aeg"
+
+msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
+msgstr "The recorded weather information should be edited manually. Your device does not support receiving recorded weather info from the weather widget."
+
+msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
+msgstr "Toksake nagusid, et kuvada teavet inimeste kohta."
+
+msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
+msgstr "Ekraani vahendamiseks voi suurendamiseks toksake ja hoidke sorme kahel punktil ning seejarel kallutage telefoni edasi-tagasi."
+
+msgid "IDS_IV_BODY_SUNNY_DAY"
+msgstr "Päikesepaisteline päev"
+
+msgid "IDS_IV_BODY_SNOWY_DAY"
+msgstr "Lumine päev"
+
+msgid "IDS_IV_BODY_SHARE_VIA"
+msgstr "Jagamine"
+
+msgid "IDS_IV_BODY_SERVER_NAME"
+msgstr "Serveri nimi"
+
+msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
+msgstr "Valige pildil piirkond, mida karpida."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
+msgstr "Valitud piirkond prinditakse."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
+msgstr "Valitud piirkond rakendatakse taustpildile."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
+msgstr "Valitud piirkond rakendatakse kontakti pildile."
+
+msgid "IDS_IV_BODY_RIGHT_STATUS"
+msgstr "Õiguse olek"
+
+msgid "IDS_IV_BODY_RESOLUTION"
+msgstr "Eraldusvõime"
+
+msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
+msgstr "Eemalda lemmikutest"
+
+msgid "IDS_IV_BODY_RAINY_DAY"
+msgstr "Vihmane päev"
+
+msgid "IDS_IV_BODY_PRINT"
+msgstr "Prindi"
+
+msgid "IDS_IV_BODY_POSSIBLE"
+msgstr "Võimalik"
+
+msgid "IDS_IV_BODY_PEOPLE"
+msgstr "Inimesed"
+
+msgid "IDS_IV_BODY_N_A"
+msgstr "Pole teada"
+
+msgid "IDS_IV_BODY_NO_TAG"
+msgstr "Silti pole"
+
+msgid "IDS_IV_BODY_NEW_TAG"
+msgstr "Uus silt"
+
+msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
+msgstr "Läh. asuvad sead."
+
+msgid "IDS_IV_BODY_MY_DEVICE"
+msgstr "Minu seade"
+
+msgid "IDS_IV_BODY_MODEL"
+msgstr "Mudel"
+
+msgid "IDS_IV_BODY_ME"
+msgstr "Mina"
+
+msgid "IDS_IV_BODY_MANUFACTURER"
+msgstr "Tootja"
+
+msgid "IDS_IV_BODY_LONGITUDE"
+msgstr "Pikkuskraad"
+
+msgid "IDS_IV_BODY_LOCK_SCREEN"
+msgstr "Lukustusekraan"
+
+msgid "IDS_IV_BODY_LOCATION_M_PATH"
+msgstr "Asukoht"
+
+msgid "IDS_IV_BODY_LOCATION_ABB2"
+msgstr "Asukoht"
+
+msgid "IDS_IV_BODY_LOCATIONS"
+msgstr "Asukohad"
+
+msgid "IDS_IV_BODY_LOCATION"
+msgstr "Asukoht"
+
+msgid "IDS_IV_BODY_LATITUDE"
+msgstr "Laiuskraad"
+
+msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
+msgstr "Asukohas %s"
+
+msgid "IDS_IV_BODY_INTERVAL"
+msgstr "Intervall"
+
+msgid "IDS_IV_BODY_INDIVIDUAL"
+msgstr "Individuaalne"
+
+msgid "IDS_IV_BODY_IN"
+msgstr "Lähemale"
+
+msgid "IDS_IV_BODY_IMPOSSIBLE"
+msgstr "Võimatu"
+
+msgid "IDS_IV_BODY_HOME_SCREEN"
+msgstr "Avaleht"
+
+msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
+msgstr "Ava- ja lukustusekraanid"
+
+msgid "IDS_IV_BODY_FORWARDING"
+msgstr "Edastamine"
+
+msgid "IDS_IV_BODY_FLASH"
+msgstr "Flash-menüü"
+
+msgid "IDS_IV_BODY_FILE_NAME"
+msgstr "Failinimi"
+
+msgid "IDS_IV_BODY_FILE_LOCATION"
+msgstr "Faili asukoht"
+
+msgid "IDS_IV_BODY_FILE_FORMAT"
+msgstr "Failivorming"
+
+msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
+msgstr "Säriaeg"
+
+msgid "IDS_IV_BODY_EXECUTE"
+msgstr "Käivita"
+
+msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
+msgstr "Aktiveerige Kaameras GPS-sildid, et naha asukohasilte."
+
+msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
+msgstr "Ilmasiltide nagemiseks aktiveerige ilmavidinas automaatne varskendamine."
+
+msgid "IDS_IV_BODY_DURATION"
+msgstr "Kestus"
+
+msgid "IDS_IV_BODY_DRM_INFO"
+msgstr "DRM-i teave"
+
+msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Ära näita uuesti"
+
+msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
+msgstr "Ära küsi enam"
+
+msgid "IDS_IV_BODY_DISPLAY"
+msgstr "Ekraan"
+
+msgid "IDS_IV_BODY_DATE_CREATED"
+msgstr "Kuupäev loodud"
+
+msgid "IDS_IV_BODY_CROP"
+msgstr "Kärbi"
+
+msgid "IDS_IV_BODY_CREATE_TAG"
+msgstr "Loo silt"
+
+msgid "IDS_IV_BODY_COUNT"
+msgstr "Loendamine"
+
+msgid "IDS_IV_BODY_CLOUDY_DAY"
+msgstr "Pilvine päev"
+
+msgid "IDS_IV_BODY_CLEAR_NIGHT"
+msgstr "Selge öö"
+
+msgid "IDS_IV_BODY_CALLER_IMAGE"
+msgstr "Helistaja pilt"
+
+msgid "IDS_IV_BODY_BASIC"
+msgstr "Põhiline"
+
+msgid "IDS_IV_BODY_AVAILABLE_USES"
+msgstr "Võimalikud kasutusviisid"
+
+msgid "IDS_IV_BODY_AUTO"
+msgstr "Auto."
+
+msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
+msgstr "Saate rakendada ühtiva värviteema rakendustele."
+
+msgid "IDS_IV_BODY_APERTURE"
+msgstr "Ava"
+
+msgid "IDS_IV_BODY_ANY"
+msgstr "Ükskõik milline"
+
+msgid "IDS_IV_BODY_ADD_TO_FAVOURITES"
+msgstr "Lisa Lemmikutesse"
+
+msgid "IDS_IV_BODY_ACCUMULATED_TIME"
+msgstr "Kogunenud aeg"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Lubatud arv märke on täis."
+
+msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
+msgstr "Nurjus"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_ST_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_ST_BODY_KB"
+msgstr "kB"
+
+msgid "IDS_ST_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_ST_BODY_EDIT"
+msgstr "Muuda"
+
+msgid "IDS_ST_BODY_DATE"
+msgstr "Kuupäev"
+
+msgid "IDS_EMAIL_OPT_ACCOUNTS"
+msgstr "Kontod"
+
+msgid "IDS_GALLERY_BODY_DOWNLOAD"
+msgstr "Lae alla"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
+msgstr "Uksused kuvatakse parast piltide uleslaadimist Dropboxi."
+
+msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
+msgstr "Allalaadimine..."
+
+msgid "IDS_IV_BODY_ADD_PICTURES"
+msgstr "Lisage pilte"
+
+msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
+msgstr "Pildid kuvatakse parast nende markimist lemmikutena."
+
+msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
+msgstr "Kas eemaldada näotuvastus?"
+
+msgid "IDS_IV_OPT_ASSIGN_NAME"
+msgstr "Määrake nimi"
+
+msgid "IDS_IV_OPT_CONFIRM_AS_PS"
+msgstr "Kinnita isikuna %s"
+
+msgid "IDS_IV_OPT_LAYOUT_M_PICTUERS"
+msgstr "Paigutus"
+
+msgid "IDS_IV_OPT_PD_PICTURES_ADDED"
+msgstr "Lisati %d pilti"
+
+msgid "IDS_IV_POP_THE_ALBUM_WILL_BE_CANCELLED"
+msgstr "Album tuhistatakse."
+
+msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
+msgstr "Allalaadimise alustamine..."
+
+msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Mälu pole piisavalt. Kustutage mõned üksused"
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Privaatne mälu"
+
+msgid "IDS_IV_BODY_DRAG_HERE"
+msgstr "Lohistage siia."
+
+msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
+msgstr "Toksake piltide lisamiseks."
+
+msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
+msgstr "Fail on juba olemas."
+
+msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
+msgstr "See uksus kustutatakse."
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
+msgstr "Uksused kuvatakse parast piltide uleslaadimist Facebooki."
+
+msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
+msgstr "Kehtetu märk."
+
+msgid "IDS_MEDIABR_OPT_MANUAL"
+msgstr "Käsitsi"
+
+msgid "IDS_ST_BODY_ERROR_VZW"
+msgstr "Error"
+
+msgid "IDS_ST_BUTTON2_PROCESSING_ING"
+msgstr "Töötlemine..."
+
+msgid "IDS_ST_BODY_OK"
+msgstr "OK"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Nim. ümb."
+
+msgid "IDS_COM_BODY_NONE"
+msgstr "Puudub"
+
+msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
+msgstr "%d on valitud"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Seadme mälu"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD-kaart"
+
+msgid "IDS_ST_BODY_SPEED"
+msgstr "Kiirus"
+
+msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
+msgstr "Taustamuusika"
+
+msgid "IDS_IV_OPT_1_SEC_ABB"
+msgstr "1 sek"
+
+msgid "IDS_IV_OPT_3_SECS_ABB"
+msgstr "3 sek"
+
+msgid "IDS_IV_OPT_5_SECS_ABB"
+msgstr "5 sek"
+
+msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
+msgstr "Salvestamiskoht"
+
+msgid "IDS_IV_BODY_FILE_SIZE"
+msgstr "Faili suurus"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 album kustutatakse."
+
+msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
+msgstr "Nostalgia"
+
+msgid "IDS_IV_OPT_BLUR_M_EFFECT"
+msgstr "Hägusus"
+
+msgid "IDS_IV_OPT_SOFT_GLOW_M_EFFECT"
+msgstr "Pehme helendus"
+
+msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
+msgstr "Muudatuste salvestamine"
+
+msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
+msgstr "Kas salvestada muudatused või loobuda nendest?"
+
+msgid "IDS_IV_BUTTON_DISCARD_ABB2"
+msgstr "Loobu"
+
+msgid "IDS_IV_BUTTON_SAVE"
+msgstr "Salvesta"
+
+msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
+msgstr "Retro"
+
+msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
+msgstr "Päikesepaiste"
+
+msgid "IDS_IV_OPT_OLD_PHOTO_M_EFFECT"
+msgstr "Vana foto"
+
+msgid "IDS_IV_OPT_RETRO_M_EFFECT"
+msgstr "Retro"
+
+msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
+msgstr "Halltoonid"
+
+msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
+msgstr "Seepia"
+
+msgid "IDS_IV_OPT_FADED_COLOURS_M_EFFECT"
+msgstr "Hajutatud värvid"
+
+msgid "IDS_IV_OPT_DOWNLIGHT_M_EFFECT"
+msgstr "Allvalgus"
+
+msgid "IDS_IV_OPT_YELLOW_GLOW_M_EFFECT"
+msgstr "Kollane kuma"
+
+msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
+msgstr "Teravusta"
+
+msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
+msgstr "Visand"
+
+msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
+msgstr "Pööratud värvid"
+
+msgid "IDS_IV_OPT_OIL_PAINT_M_EFFECT"
+msgstr "Õlimaal"
+
+msgid "IDS_IV_OPT_POSTERISE_M_EFFECT"
+msgstr "Plakatiefekt"
+
+msgid "IDS_IV_OPT_CARTOON_M_EFFECT"
+msgstr "Karikatuur"
+
+msgid "IDS_IV_OPT_POP_ART_M_EFFECT"
+msgstr "Popkunst"
+
+msgid "IDS_IV_OPT_MAGIC_PEN_M_EFFECT"
+msgstr "Maagiline pliiats"
+
+msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
+msgstr "Lisatud blokeeritute loendisse."
+
+msgid "IDS_IMGE_BODY_ROTATE"
+msgstr "Pööra"
+
+msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Seadme mälus pole piisavalt ruumi. Avage menüü Seaded > Toide ja mälu > Mälu, seejärel kustutage mõned failid ja proovige uuesti."
+
+msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
+msgstr "Slaidide intervall"
+
+msgid "IDS_IV_MBODY_SLIDE_INTERVAL_ABB"
+msgstr "Slaidide intervall"
+
+msgid "IDS_IV_OPT_CONTACT_PICTURE_ABB"
+msgstr "Kontakti pilt"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Puudub"
+
+msgid "IDS_IV_OPT_EDIT"
+msgstr "Redigeeri"
+
+msgid "IDS_IV_OPT_RENAME"
+msgstr "Nimeta ümber"
+
+msgid "IDS_IV_OPT_SET_AS"
+msgstr "Määra"
+
+msgid "IDS_IV_OPT_DOWNLOAD"
+msgstr "Laadi alla"
+
+msgid "IDS_IV_HEADER_RENAME"
+msgstr "Nimeta ümber"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB"
+msgstr "Nimeta ümber"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB2"
+msgstr "Nim. üm."
+
+msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
+msgstr "Sellenimeline fail on sihtkaustas juba olemas."
+
+msgid "IDS_IV_BUTTON_REPLACE_ABB"
+msgstr "Asenda"
+
+msgid "IDS_IV_HEADER_SET_AS"
+msgstr "Määra"
+
+msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
+msgstr "Avaekraani taustpilt"
+
+msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
+msgstr "Lukustusekraani taustpilt"
+
+msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
+msgstr "Ava- ja luk.ekr. taustpildid"
+
+msgid "IDS_IV_HEADER_DETAILS"
+msgstr "Üksikasjad"
+
+msgid "IDS_IV_BODY_DATE"
+msgstr "Kuupäev"
+
+msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
+msgstr "Pilti ei saa salvestada"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
+msgstr "Seadme mälus pole piisavalt ruumi (%d MB)."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
+msgstr "SD-kaardil pole piisavalt ruumi (%d MB)."
+
+msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Kustutage mõned failid ja proovige uuesti."
+
+msgid "IDS_IV_HEADER_SAVE_IMAGE"
+msgstr "Pildi salvestamine"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
+msgstr "Seadme mälus pole piisavalt ruumi (%d MB on jäänud). See üksus salvestatakse teie SD-kaardile."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
+msgstr "SD-kaardil pole piisavalt ruumi (%d MB on jäänud). See üksus salvestatakse seadme mällu."
+
+msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
+msgstr "See pilt kustutatakse."
+
+msgid "IDS_IV_BUTTON_STOP_ABB4"
+msgstr "Lõpeta"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Kustuta"
+
+msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
+msgstr "Tõrge"
+
+msgid "IDS_GALLERY_HEADER_SELECT_AREA_ABB"
+msgstr "Piirkonna valimine"
+
+msgid "IDS_GALLERY_BUTTON_DONE"
+msgstr "Valmis"
+
+msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
+msgstr "Üksuse laadimine nurjus."
+
+msgid "IDS_CAM_OPT_NEGATIVE"
+msgstr "Negatiiv"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "VALMIS"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "TÜHISTA"
+
+msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
+msgstr "Negatiiv"
+
+msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
+msgstr "Galeriid ei saa avada."
+
+msgid "IDS_360V_TPOP_LOADING_ING"
+msgstr "Laadimine..."
+
+msgid "IDS_IV_HEADER_LOADING_ING"
+msgstr "Laadimine..."
+
+msgid "IDS_IV_POP_LOADING_FAILED"
+msgstr "Laadimine nurjus."
+
+msgid "IDS_IV_POP_LOADING_IMAGE_ING"
+msgstr "Pildi laadimine..."
+
+msgid "IDS_IV_SK_DISCARD"
+msgstr "Hülga"
+
+msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
+msgstr "Ei saa alla laadida"
+
+msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobiilne andmeside on välja lülitatud. Looge ühendus Wi-Fi võrguga või lülitage mobiilne andmeside sisse ja proovige uuesti."
+
+msgid "IDS_IV_BODY_DO_NOT_SEND"
+msgstr "Ära saada"
+
+msgid "IDS_COM_BODY_1_SECOND"
+msgstr "1 sekund"
+
+msgid "IDS_BODY_PD_SECONDS"
+msgstr "%d sekundit"
+
+msgid "IDS_IV_BODY_EFFECT"
+msgstr "Efekt"
+
+msgid "IDS_IMGE_HEARDER_EFFECTS"
+msgstr "Efektid"
+
+msgid "IDS_DFRAME_BODY_FLOW_M_EFFECT"
+msgstr "Kiirus"
+
+msgid "IDS_IV_OPT_FADE_M_EFFECT"
+msgstr "Hajumine"
+
+msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
+msgstr "Suurenda"
+

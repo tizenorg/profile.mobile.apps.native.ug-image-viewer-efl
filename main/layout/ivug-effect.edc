@@ -1,0 +1,149 @@
+/*
+* Copyright (c) 2000-2015  Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#define LAYOUT_INDICATOR_HEIGHT_INC 60
+
+collections {
+	group {
+		name: "ivug_effect";
+		parts {
+			part {
+				name: "indication";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 0.0; }
+					min: 0 0;
+					fixed: 0 1;
+					align: 0.5 0.0;
+					visible: 0;
+				}
+
+				description {
+					state: "show" 0.0;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 0.0; }
+					min: 0 LAYOUT_INDICATOR_HEIGHT_INC;
+					fixed: 0 1;
+					align: 0.5 0.0;
+					visible: 0;
+				}
+
+			}
+
+			part {
+				name: "clip";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 1 1;  to_y: "indication";}
+					rel2 { relative: 2 1; }
+					color: 255 255 255 0;
+				}
+				description {
+					state: "show" 0.0;
+					rel1 { relative: 0 1;  to_y: "indication";}
+					rel2 { relative: 1 1; }
+					color: 255 255 255 255;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				clip_to: "clip";
+				scale: 1;
+				description {
+					rel1.to: "clip";
+					rel2.to: "clip";
+				}
+			}
+			part {
+				name: "event_blocker";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 0 0 0 0;
+					visible: 1;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+				}
+				description {
+					state: "disabled" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+		}
+		programs {
+			program {
+				name: "show.indicator";
+				source: "app";
+				signal: "elm,show,indicator";
+				action: STATE_SET "show" 0.0;
+				target: "indication";
+			}
+
+			program {
+				name: "show";
+				signal: "elm,state,show";
+				source: "app";
+				action: STATE_SET "show" 0.0;
+				target: "clip";
+				target: "event_blocker";
+				transition: "DECELERATE" 0.3;
+				after: "show_end";
+			}
+			program {
+				name: "hide";
+				signal: "elm,state,hide";
+				source: "app";
+				action: STATE_SET "default" 0.0;
+				target: "clip";
+				target: "event_blocker";
+				transition: "ACCELERATE" 0.3;
+				after: "hide_end";
+			}
+			program {
+				name: "disable_event_blocker";
+				signal: "elm,state,blocker,disabled";
+				action: STATE_SET "disabled" 0.0;
+				target: "event_blocker";
+			}
+			program {
+				name: "disable_blocker";
+				action: SIGNAL_EMIT "elm,state,blocker,disabled" "";
+			}
+			program {
+				name: "show_end";
+				action: SIGNAL_EMIT "elm,action,show,finished" "elm";
+				after: "disable_blocker";
+			}
+			program {
+				name: "hide_end";
+				action: SIGNAL_EMIT "elm,action,hide,finished" "elm";
+				after: "disable_blocker";
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,996 @@
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privé"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Renommer"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Cette vidéo va être supprimée."
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Le nom de fichier est déjà utilisé."
+
+msgid "IDS_ST_BODY_OFF"
+msgstr "Désactivé"
+
+msgid "IDS_COM_BODY_DONE"
+msgstr "OK"
+
+msgid "IDS_FB_BODY_FACEBOOK"
+msgstr "Facebook"
+
+msgid "IDS_CAM_BODY_FLASH"
+msgstr "Flash"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Arrêter"
+
+msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
+msgstr "La fonction %1$s est désactivée dans cette application. Pour l'activer, accédez à %2$s, sélectionnez la fonction, puis cette application."
+
+msgid "IDS_MEDIABR_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_MEDIABR_BUTTON_DONE"
+msgstr "OK"
+
+msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
+msgstr "Annuler"
+
+msgid "IDS_GALLERY_HEADER_ENTER_NAME"
+msgstr "Saisir un nom"
+
+msgid "IDS_MEDIABR_POP_NO_NAME"
+msgstr "Aucun nom"
+
+msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
+msgstr "Un seul album existant."
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Vous pouvez sélectionner jusqu'à %d éléments."
+
+msgid "IDS_IV_OPT_DETAILS"
+msgstr "Détails"
+
+msgid "IDS_IV_OPT_DELETE_ABB"
+msgstr "Supprimer"
+
+msgid "IDS_IV_POP_DELETE_Q"
+msgstr "Supprimer ?"
+
+msgid "IDS_IV_BUTTON_CANCEL"
+msgstr "Annuler"
+
+msgid "IDS_IV_POP_DELETED"
+msgstr "Supprimé."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Favori"
+
+msgid "IDS_IV_SK_SAVE"
+msgstr "Sauv."
+
+msgid "IDS_IV_POP_SAVED"
+msgstr "Enregistré."
+
+msgid "IDS_IV_BODY_SETTINGS"
+msgstr "Réglages"
+
+msgid "IDS_IV_BODY_SIZE"
+msgstr "Taille"
+
+msgid "IDS_IV_BODY_UNKNOWN"
+msgstr "Inconnu"
+
+msgid "IDS_IV_SK_YES"
+msgstr "Oui"
+
+msgid "IDS_CAM_BODY_ISO"
+msgstr "ISO"
+
+msgid "IDS_CAM_BODY_FOCAL_LENGTH"
+msgstr "Distance focale"
+
+msgid "IDS_CAM_BODY_FLASH_ON"
+msgstr "Flash activé"
+
+msgid "IDS_COM_POP_IMAGE_VIEWER"
+msgstr "Visualiseur d'images"
+
+msgid "IDS_MEDIABR_OPT_ALL_PICTURES"
+msgstr "Toutes les photos"
+
+msgid "IDS_MEDIABR_HEADER_ORIENTATION"
+msgstr "Orientation"
+
+msgid "IDS_MEDIABR_BODY_SELECT_PICTURE"
+msgstr "Sélectionner une photo"
+
+msgid "IDS_MP_BODY_DURATION"
+msgstr "Durée"
+
+msgid "IDS_ST_POP_SET"
+msgstr "Appliqué"
+
+msgid "IDS_GALLERY_BODY_TAGS"
+msgstr "Libellés"
+
+msgid "IDS_IV_SK3_ADD_COMMENT"
+msgstr "Commenter"
+
+msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Visionnez vos médias sur d'autres appareils à l'aide de la fonction Appareils à proximité."
+
+msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
+msgstr "Puisqu'ils ne prennent pas en charge la fonction d'identification du visage, les fichiers vidéos ne contiennent aucune information sur les personnes."
+
+msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
+msgstr "Impossible de partager cette image. Elle est protégée par GDN."
+
+msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
+msgstr "Impossible d'ouvrir le fichier."
+
+msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
+msgstr "Les informations météo enregistrées peuvent être différentes de la météo actuelle en raison de l'intervalle de mise à jour."
+
+msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
+msgstr "Vous pouvez utiliser le contenu personnel copié dans le presse-papier pour créer un nouveau contenu. Votre nouveau contenu risque de ne pas être masqué automatiquement."
+
+msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
+msgstr "Image trop petite"
+
+msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
+msgstr "La date est affichée uniquement lorsque d'autres libellés sont visibles."
+
+msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
+msgstr "Touchez longuement les miniatures pour sélectionner les meilleures photos."
+
+msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
+msgstr "Paramètres du diaporama"
+
+msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
+msgstr "Définir un papier peint pour les écrans d'accueil et de verrouillage"
+
+msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
+msgstr "Définir cette image comme ID appelant de %s ?"
+
+msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
+msgstr "Définir comme ID appelant"
+
+msgid "IDS_IV_POP_SENDING_ING"
+msgstr "Envoi ..."
+
+msgid "IDS_IV_POP_SELECT_DEVICE"
+msgstr "Sélectionnez l'appareil"
+
+msgid "IDS_IV_POP_SD_CARD_REMOVED"
+msgstr "Carte SD retirée."
+
+msgid "IDS_IV_POP_PERMISSION_DENIED"
+msgstr "Autorisation refusée."
+
+msgid "IDS_IV_POP_NO_LOCATION"
+msgstr "Pas d'emplacement"
+
+msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
+msgstr "Aucun visage n'a été identifié. Identifiez des visages dans l'image"
+
+msgid "IDS_IV_POP_NO_FACES_DETECTED"
+msgstr "Aucun visage détecté."
+
+msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Mémoire insuffisante. Supprimez certains éléments"
+
+msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
+msgstr "Échec de connexion réseau."
+
+msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
+msgstr "Nombre maximum de caractères (%d) atteint"
+
+msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
+msgstr "Fichier image non valide"
+
+msgid "IDS_IV_POP_FLASH_USED_ABB"
+msgstr "Flash utilisé"
+
+msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
+msgstr "Format de fichier non pris en charge."
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Entrée vide"
+
+msgid "IDS_IV_POP_ENTER_TAG_NAME"
+msgstr "Entrer un libellé."
+
+msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
+msgstr "Activez l'actualisation automatique dans le fond d'écran météo pour voir les tags météo."
+
+msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
+msgstr "Téléchargement terminé"
+
+msgid "IDS_IV_POP_BEST_PHOTO"
+msgstr "Meilleure photo"
+
+msgid "IDS_IV_POP_ADDED"
+msgstr "Ajouté."
+
+msgid "IDS_IV_OPT_WRITE_CAPTION"
+msgstr "Écrire une légende"
+
+msgid "IDS_IV_OPT_USE_MOTION"
+msgstr "Utiliser les mouvements"
+
+msgid "IDS_IV_OPT_UNFAVOURITE"
+msgstr "Retirer des favoris"
+
+msgid "IDS_IV_OPT_TRIM"
+msgstr "Rogner"
+
+msgid "IDS_IV_OPT_TAG_FACE_ABB"
+msgstr "Libellé de portrait"
+
+msgid "IDS_IV_OPT_TAG_BUDDY"
+msgstr "Identification contextuelle"
+
+msgid "IDS_IV_OPT_TAG"
+msgstr "Étiqueter"
+
+msgid "IDS_IV_OPT_START_SLIDESHOW"
+msgstr "Lancer le diaporama"
+
+msgid "IDS_IV_OPT_SLIDE_SHOW"
+msgstr "Diaporama"
+
+msgid "IDS_IV_OPT_SLIDESHOW_ABB"
+msgstr "Diaporama"
+
+msgid "IDS_IV_OPT_SHOW_ITEMS"
+msgstr "Afficher les éléments"
+
+msgid "IDS_IV_OPT_SHARE"
+msgstr "Partager"
+
+msgid "IDS_IV_OPT_ROTATE_RIGHT"
+msgstr "Pivoter vers la droite"
+
+msgid "IDS_IV_OPT_ROTATE_LEFT"
+msgstr "Pivoter vers la gauche"
+
+msgid "IDS_IV_OPT_REMOVE_TAG"
+msgstr "Supprimer le libellé"
+
+msgid "IDS_IV_OPT_REFRESH"
+msgstr "Actualiser"
+
+msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
+msgstr "Imprimer via Bluetooth"
+
+msgid "IDS_IV_OPT_MANUALLY_DETECT"
+msgstr "Détecter manuellement"
+
+msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
+msgstr "Fond d'écran de verrouillage et accueil"
+
+msgid "IDS_IV_OPT_HIDDEN_ITEMS"
+msgstr "Éléments masqués"
+
+msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
+msgstr "Obtenir des itinéraires"
+
+msgid "IDS_IV_OPT_FILE_TRANSFER"
+msgstr "Transfert de fichiers"
+
+msgid "IDS_IV_OPT_ERASER"
+msgstr "Gomme"
+
+msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
+msgstr "Modif. libellé météo"
+
+msgid "IDS_IV_OPT_EDIT_TAG"
+msgstr "Modifier l'identification"
+
+msgid "IDS_IV_OPT_EDIT_CAPTION"
+msgstr "Modifier la légende"
+
+msgid "IDS_IV_OPT_DELETE_CAPTION"
+msgstr "Supprimer les sous-titres"
+
+msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
+msgstr "Copier dans le presse-papier"
+
+msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
+msgstr "Infos connexion"
+
+msgid "IDS_IV_OPT_CLOUD"
+msgstr "Nuage"
+
+msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
+msgstr "Partage de photo d'ami"
+
+msgid "IDS_IV_OPT_BEST_FACE_ABB"
+msgstr "Meilleure pose"
+
+msgid "IDS_IV_OPT_AS_VIDEO_FILES"
+msgstr "En tant que fichiers vidéos"
+
+msgid "IDS_IV_OPT_AS_IMAGE_FILES"
+msgstr "En tant que fichiers image"
+
+msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
+msgstr "Photo animée"
+
+msgid "IDS_IV_OPT_ADD_WEATHER_TAG_ABB"
+msgstr "Ajouter un libellé météo"
+
+msgid "IDS_IV_OPT_ADD_NAME_ABB"
+msgstr "Ajouter un nom"
+
+msgid "IDS_IV_OPT_ADD_CAPTION"
+msgstr "Ajouter une légende"
+
+msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
+msgstr "Musique du diaporama"
+
+msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
+msgstr "Part. imag. Son & prise"
+
+msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
+msgstr "Définir comme"
+
+msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
+msgstr "Envoyer cette image à"
+
+msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
+msgstr "Sélectionner un contact pour partager"
+
+msgid "IDS_IV_HEADER_PLAY_SPEED"
+msgstr "Vitesse de lecture"
+
+msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
+msgstr "Fond d'écran verr."
+
+msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
+msgstr "Informations sur l'inclinaison"
+
+msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
+msgstr "Papier peint d'accueil"
+
+msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
+msgstr "Modif. libellé météo"
+
+msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
+msgstr "Modifier rafale"
+
+msgid "IDS_IV_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Appareils disponibles"
+
+msgid "IDS_IV_HEADER_ALL_ALBUMS"
+msgstr "Tous les albums"
+
+msgid "IDS_IV_HEADER_ADD_TAG"
+msgstr "Libellé"
+
+msgid "IDS_IV_BUTTON_STOP"
+msgstr "Arrêter"
+
+msgid "IDS_IV_BUTTON_SCAN"
+msgstr "Rechercher"
+
+msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "Vous pouvez partager vos médias avec d'autres appareils à l'aide de la fonction appareils à proximité."
+
+msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
+msgstr "Avec %s et %d autres personnes"
+
+msgid "IDS_IV_BODY_WITH_PS"
+msgstr "Avec %s"
+
+msgid "IDS_IV_BODY_WHITE_BALANCE"
+msgstr "Équilibre des blancs"
+
+msgid "IDS_IV_BODY_WEATHER_ABB"
+msgstr "Météo"
+
+msgid "IDS_IV_BODY_WEATHER"
+msgstr "Météo"
+
+msgid "IDS_IV_BODY_VENDOR"
+msgstr "Fournisseur"
+
+msgid "IDS_IV_BODY_VALIDITY"
+msgstr "Validité"
+
+msgid "IDS_IV_BODY_UNLIMITED"
+msgstr "Illimité"
+
+msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
+msgstr "Impossible de charger la photo."
+
+msgid "IDS_IV_BODY_TIMED_COUNT"
+msgstr "Temps restant"
+
+msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
+msgstr "Les informations météorologiques enregistrées doivent être modifiées manuellement. Votre appareil ne prend pas en charge la réception d'informations météo enregistrées depuis le widget Météo."
+
+msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
+msgstr "Appuyez sur les visages pour afficher des informations sur les personnes."
+
+msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
+msgstr "Touchez longuement deux points, puis inclinez le périphérique d'avant en arrière pour réduire ou agrandir l'écran."
+
+msgid "IDS_IV_BODY_SUNNY_DAY"
+msgstr "Ensoleillé"
+
+msgid "IDS_IV_BODY_SNOWY_DAY"
+msgstr "Jour neigeux"
+
+msgid "IDS_IV_BODY_SHARE_VIA"
+msgstr "Partager via"
+
+msgid "IDS_IV_BODY_SERVER_NAME"
+msgstr "Nom du serveur"
+
+msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
+msgstr "Sélectionnez une zone pour rogner l'image."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
+msgstr "La zone sélectionnée sera imprimée."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
+msgstr "La zone sélectionnée sera appliquée au fond d'écran."
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
+msgstr "La zone sélectionnée sera appliquée à l'image du contact."
+
+msgid "IDS_IV_BODY_RIGHT_STATUS"
+msgstr "Information sur les droits"
+
+msgid "IDS_IV_BODY_RESOLUTION"
+msgstr "Résolution"
+
+msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
+msgstr "Supprimer des favoris"
+
+msgid "IDS_IV_BODY_RAINY_DAY"
+msgstr "Pluvieux"
+
+msgid "IDS_IV_BODY_PRINT"
+msgstr "Imprimer"
+
+msgid "IDS_IV_BODY_POSSIBLE"
+msgstr "Possible"
+
+msgid "IDS_IV_BODY_PEOPLE"
+msgstr "Personnes"
+
+msgid "IDS_IV_BODY_N_A"
+msgstr "s.o."
+
+msgid "IDS_IV_BODY_NO_TAG"
+msgstr "Aucun tag"
+
+msgid "IDS_IV_BODY_NEW_TAG"
+msgstr "Nouveau libellé"
+
+msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
+msgstr "Appareils à proximité"
+
+msgid "IDS_IV_BODY_MY_DEVICE"
+msgstr "Mon appareil"
+
+msgid "IDS_IV_BODY_MODEL"
+msgstr "Modèle"
+
+msgid "IDS_IV_BODY_ME"
+msgstr "Moi"
+
+msgid "IDS_IV_BODY_MANUFACTURER"
+msgstr "Fabricant"
+
+msgid "IDS_IV_BODY_LONGITUDE"
+msgstr "Longitude"
+
+msgid "IDS_IV_BODY_LOCK_SCREEN"
+msgstr "Écran verrouillé"
+
+msgid "IDS_IV_BODY_LOCATION_M_PATH"
+msgstr "Emplacement"
+
+msgid "IDS_IV_BODY_LOCATION_ABB2"
+msgstr "Position"
+
+msgid "IDS_IV_BODY_LOCATIONS"
+msgstr "Emplacements"
+
+msgid "IDS_IV_BODY_LOCATION"
+msgstr "Localisation"
+
+msgid "IDS_IV_BODY_LATITUDE"
+msgstr "Latitude"
+
+msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
+msgstr "%s"
+
+msgid "IDS_IV_BODY_INTERVAL"
+msgstr "Intervalle"
+
+msgid "IDS_IV_BODY_INDIVIDUAL"
+msgstr "Individuel"
+
+msgid "IDS_IV_BODY_IN"
+msgstr "Avant"
+
+msgid "IDS_IV_BODY_IMPOSSIBLE"
+msgstr "Impossible"
+
+msgid "IDS_IV_BODY_HOME_SCREEN"
+msgstr "Écran d'accueil"
+
+msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
+msgstr "Écran d'accueil et écran verrouillé"
+
+msgid "IDS_IV_BODY_FORWARDING"
+msgstr "Transfert"
+
+msgid "IDS_IV_BODY_FLASH"
+msgstr "Menu flash"
+
+msgid "IDS_IV_BODY_FILE_NAME"
+msgstr "Nom de fichier"
+
+msgid "IDS_IV_BODY_FILE_LOCATION"
+msgstr "Emplacement du fichier"
+
+msgid "IDS_IV_BODY_FILE_FORMAT"
+msgstr "Format de fichier"
+
+msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
+msgstr "Temps d'expo."
+
+msgid "IDS_IV_BODY_EXECUTE"
+msgstr "Exécuter"
+
+msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
+msgstr "Activer les balises GPS pour voir les balises de localisation."
+
+msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
+msgstr "Activez l'actualisation auto dans le widget météo pour afficher les tags météo."
+
+msgid "IDS_IV_BODY_DURATION"
+msgstr "Durée"
+
+msgid "IDS_IV_BODY_DRM_INFO"
+msgstr "Infos GDN"
+
+msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Ne plus afficher"
+
+msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
+msgstr "Ne plus demander"
+
+msgid "IDS_IV_BODY_DISPLAY"
+msgstr "Affichage"
+
+msgid "IDS_IV_BODY_DATE_CREATED"
+msgstr "Date de création"
+
+msgid "IDS_IV_BODY_CROP"
+msgstr "Rogner"
+
+msgid "IDS_IV_BODY_CREATE_TAG"
+msgstr "Nv libellé"
+
+msgid "IDS_IV_BODY_COUNT"
+msgstr "Compte"
+
+msgid "IDS_IV_BODY_CLOUDY_DAY"
+msgstr "Nuageux"
+
+msgid "IDS_IV_BODY_CLEAR_NIGHT"
+msgstr "Nuit claire"
+
+msgid "IDS_IV_BODY_CALLER_IMAGE"
+msgstr "Image de l'appelant"
+
+msgid "IDS_IV_BODY_BASIC"
+msgstr "Basique"
+
+msgid "IDS_IV_BODY_AVAILABLE_USES"
+msgstr "Utilisations disponibles"
+
+msgid "IDS_IV_BODY_AUTO"
+msgstr "Auto"
+
+msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
+msgstr "Appliquez un thème de couleurs aux applications."
+
+msgid "IDS_IV_BODY_APERTURE"
+msgstr "Ouverture"
+
+msgid "IDS_IV_BODY_ANY"
+msgstr "N'importe"
+
+msgid "IDS_IV_BODY_ADD_TO_FAVOURITES"
+msgstr "Ajouter aux favoris"
+
+msgid "IDS_IV_BODY_ACCUMULATED_TIME"
+msgstr "Temps accumulé"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Nb max de caractères atteint."
+
+msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
+msgstr "Échec"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_ST_BODY_MB"
+msgstr "Mo"
+
+msgid "IDS_ST_BODY_KB"
+msgstr "Ko"
+
+msgid "IDS_ST_BODY_GB"
+msgstr "Go"
+
+msgid "IDS_ST_BODY_EDIT"
+msgstr "Modifier"
+
+msgid "IDS_ST_BODY_DATE"
+msgstr "Date"
+
+msgid "IDS_EMAIL_OPT_ACCOUNTS"
+msgstr "Comptes"
+
+msgid "IDS_GALLERY_BODY_DOWNLOAD"
+msgstr "Télécharger"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
+msgstr "Les images s'afficheront après leur chargement sur Dropbox."
+
+msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
+msgstr "Téléchargement..."
+
+msgid "IDS_IV_BODY_ADD_PICTURES"
+msgstr "Ajouter des images"
+
+msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
+msgstr "Une fois les photos favorites identifiées, celles-ci s'afficheront."
+
+msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
+msgstr "Supprimer l'identification des visages ?"
+
+msgid "IDS_IV_OPT_ASSIGN_NAME"
+msgstr "Attribuer un nom"
+
+msgid "IDS_IV_OPT_CONFIRM_AS_PS"
+msgstr "Confirmer en tant que %s"
+
+msgid "IDS_IV_OPT_LAYOUT_M_PICTUERS"
+msgstr "Mise en forme"
+
+msgid "IDS_IV_OPT_PD_PICTURES_ADDED"
+msgstr "%d images ajoutées"
+
+msgid "IDS_IV_POP_THE_ALBUM_WILL_BE_CANCELLED"
+msgstr "L'album sera annulé."
+
+msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
+msgstr "Début du téléchargement..."
+
+msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Mémoire insuffisante. Supprimez certains éléments"
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Stockage privé"
+
+msgid "IDS_IV_BODY_DRAG_HERE"
+msgstr "Glissez ici."
+
+msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
+msgstr "Touchez pour ajouter des images."
+
+msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
+msgstr "Le fichier existe déjà."
+
+msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
+msgstr "Cet élément va être supprimé."
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
+msgstr "Les images s'afficheront après leur chargement sur Facebook."
+
+msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
+msgstr "Caractère non valide."
+
+msgid "IDS_MEDIABR_OPT_MANUAL"
+msgstr "Manuel"
+
+msgid "IDS_ST_BODY_ERROR_VZW"
+msgstr "Erreur"
+
+msgid "IDS_ST_BUTTON2_PROCESSING_ING"
+msgstr "Traitement..."
+
+msgid "IDS_ST_BODY_OK"
+msgstr "OK"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Renommer"
+
+msgid "IDS_COM_BODY_NONE"
+msgstr "Aucun"
+
+msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
+msgstr "%d sélectionné(s)"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Espace sur l'appareil"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "Carte SD"
+
+msgid "IDS_ST_BODY_SPEED"
+msgstr "Vitesse"
+
+msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
+msgstr "Musique en arrière-plan"
+
+msgid "IDS_IV_OPT_1_SEC_ABB"
+msgstr "1 s"
+
+msgid "IDS_IV_OPT_3_SECS_ABB"
+msgstr "3 s"
+
+msgid "IDS_IV_OPT_5_SECS_ABB"
+msgstr "5 s"
+
+msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
+msgstr "Emplacement de stockage"
+
+msgid "IDS_IV_BODY_FILE_SIZE"
+msgstr "Taille du fichier"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 album sera supprimé."
+
+msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
+msgstr "Nostalgie"
+
+msgid "IDS_IV_OPT_BLUR_M_EFFECT"
+msgstr "Flouter"
+
+msgid "IDS_IV_OPT_SOFT_GLOW_M_EFFECT"
+msgstr "Éclat"
+
+msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
+msgstr "Enregistrer les modifications"
+
+msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
+msgstr "Enregistrer vos modifications ou annuler ?"
+
+msgid "IDS_IV_BUTTON_DISCARD_ABB2"
+msgstr "Ignorer"
+
+msgid "IDS_IV_BUTTON_SAVE"
+msgstr "Enregistrer"
+
+msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
+msgstr "Ancien"
+
+msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
+msgstr "Soleil"
+
+msgid "IDS_IV_OPT_OLD_PHOTO_M_EFFECT"
+msgstr "Vieille photo"
+
+msgid "IDS_IV_OPT_RETRO_M_EFFECT"
+msgstr "Rétro"
+
+msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
+msgstr "Échelle de gris"
+
+msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
+msgstr "Sépia"
+
+msgid "IDS_IV_OPT_FADED_COLOURS_M_EFFECT"
+msgstr "Couleurs atténuées"
+
+msgid "IDS_IV_OPT_DOWNLIGHT_M_EFFECT"
+msgstr "Spot"
+
+msgid "IDS_IV_OPT_YELLOW_GLOW_M_EFFECT"
+msgstr "Lueur jaune"
+
+msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
+msgstr "Améliorer la netteté"
+
+msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
+msgstr "Croquis"
+
+msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
+msgstr "Couleurs interverties"
+
+msgid "IDS_IV_OPT_OIL_PAINT_M_EFFECT"
+msgstr "Peinture à l’huile"
+
+msgid "IDS_IV_OPT_POSTERISE_M_EFFECT"
+msgstr "Postériser"
+
+msgid "IDS_IV_OPT_CARTOON_M_EFFECT"
+msgstr "Dessin animé"
+
+msgid "IDS_IV_OPT_POP_ART_M_EFFECT"
+msgstr "Pop art"
+
+msgid "IDS_IV_OPT_MAGIC_PEN_M_EFFECT"
+msgstr "Stylo magique"
+
+msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
+msgstr "Ajouté à la liste de noms bloqués"
+
+msgid "IDS_IMGE_BODY_ROTATE"
+msgstr "Pivoter"
+
+msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Espace insuffisant sur votre appareil. Accédez à Paramètres > Alimentation et stockage > Stockage, supprimez des fichiers, puis réessayez."
+
+msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
+msgstr "Intervalle entre les diapos"
+
+msgid "IDS_IV_MBODY_SLIDE_INTERVAL_ABB"
+msgstr "Intervalle entre les diapos"
+
+msgid "IDS_IV_OPT_CONTACT_PICTURE_ABB"
+msgstr "Photo du contact"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Aucune"
+
+msgid "IDS_IV_OPT_EDIT"
+msgstr "Modifier"
+
+msgid "IDS_IV_OPT_RENAME"
+msgstr "Renommer"
+
+msgid "IDS_IV_OPT_SET_AS"
+msgstr "Définir comme"
+
+msgid "IDS_IV_OPT_DOWNLOAD"
+msgstr "Télécharger"
+
+msgid "IDS_IV_HEADER_RENAME"
+msgstr "Renommer"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB"
+msgstr "Renommer"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB2"
+msgstr "Renommer"
+
+msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
+msgstr "Un fichier portant ce nom se trouve déjà dans le dossier de destination."
+
+msgid "IDS_IV_BUTTON_REPLACE_ABB"
+msgstr "Rempl."
+
+msgid "IDS_IV_HEADER_SET_AS"
+msgstr "Définir comme"
+
+msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
+msgstr "Fond d'écran d'accueil"
+
+msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
+msgstr "Fond d'écran verrouillé"
+
+msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
+msgstr "Fonds d'écran accueil et verr."
+
+msgid "IDS_IV_HEADER_DETAILS"
+msgstr "Détails"
+
+msgid "IDS_IV_BODY_DATE"
+msgstr "Date"
+
+msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
+msgstr "Impos. d'enregistrer l'image"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
+msgstr "L'espace est insuffisant (%d Mo) sur votre appareil."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
+msgstr "Espace insuffisant (%d Mo) sur votre carte SD."
+
+msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "Supprimez des éléments et réessayez."
+
+msgid "IDS_IV_HEADER_SAVE_IMAGE"
+msgstr "Enregistrer l'image"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
+msgstr "L'espace sur votre appareil est insuffisant (%d Mo restant). L'élément va être enregistré sur votre carte SD."
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
+msgstr "L'espace sur votre carte SD est insuffisant (%d Mo restant). L'élément va être enregistré dans votre appareil."
+
+msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
+msgstr "Cette image sera supprimée."
+
+msgid "IDS_IV_BUTTON_STOP_ABB4"
+msgstr "Arrêter"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Supprimer"
+
+msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
+msgstr "Erreur"
+
+msgid "IDS_GALLERY_HEADER_SELECT_AREA_ABB"
+msgstr "Sélect. une zone"
+
+msgid "IDS_GALLERY_BUTTON_DONE"
+msgstr "OK"
+
+msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
+msgstr "Le chargement de cet élément a échoué."
+
+msgid "IDS_CAM_OPT_NEGATIVE"
+msgstr "Négatif"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "OK"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANNULER"
+
+msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
+msgstr "Négatif"
+
+msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
+msgstr "Impossible d'ouvrir la galerie."
+
+msgid "IDS_360V_TPOP_LOADING_ING"
+msgstr "Chargement..."
+
+msgid "IDS_IV_HEADER_LOADING_ING"
+msgstr "Chargement..."
+
+msgid "IDS_IV_POP_LOADING_FAILED"
+msgstr "Échec du chargement."
+
+msgid "IDS_IV_POP_LOADING_IMAGE_ING"
+msgstr "Chargement de l'image..."
+
+msgid "IDS_IV_SK_DISCARD"
+msgstr "Ignorer"
+
+msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
+msgstr "Téléchargement impossible"
+
+msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Les données mobiles sont désactivées. Connectez-vous à un réseau Wifi ou activez les données mobiles, puis réessayez."
+
+msgid "IDS_IV_BODY_DO_NOT_SEND"
+msgstr "Ne pas envoyer"
+
+msgid "IDS_COM_BODY_1_SECOND"
+msgstr "1 seconde"
+
+msgid "IDS_BODY_PD_SECONDS"
+msgstr "%d secondes"
+
+msgid "IDS_IV_BODY_EFFECT"
+msgstr "Effets"
+
+msgid "IDS_IMGE_HEARDER_EFFECTS"
+msgstr "Effets"
+
+msgid "IDS_DFRAME_BODY_FLOW_M_EFFECT"
+msgstr "Circulation"
+
+msgid "IDS_IV_OPT_FADE_M_EFFECT"
+msgstr "Fondu"
+
+msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
+msgstr "Zoom avant"
+

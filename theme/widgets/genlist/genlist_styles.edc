@@ -1,0 +1,158 @@
+/*
+* Copyright (c) 2000-2015  Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+// -------------------------------------------------------------------
+// 1 line -------------------------------------------------------
+// -------------------------------------------------------------------
+// 2.2.2.1
+   // 2.2.2.1
+
+  // 2.2.4.3
+	 group { GENLIST_NAME("ivug/multiline/2text/default")
+		GENLIST_PROLOG_NORMAL
+		data.item: "texts" "elm.text.1 elm.text.2";
+
+		parts {
+		   GENLIST_PART_BASE
+		   GENLIST_PART_BG_NORMAL
+		   GENLIST_PART_BOTTOM_LINE
+		   GENLIST_PART_PADDING_LEFT
+		   GENLIST_PART_PADDING_RIGHT
+		   GENLIST_PART_PADDING_TOP_2LINE
+		   GENLIST_PART_PADDING_BOTTOM_2LINE
+
+		   GENLIST_PART_TEXT("elm.text.1",
+			  GENLIST_DESCRIPTION_LRT("elm.padding.left", "elm.padding.right", "elm.padding.top",
+				 GENLIST_PARAM_LISTITEM
+				 min: 0 GENLIST_HEIGHT_2LINE_MAIN;
+				 fixed: 0 1;
+			  )
+			  GENLIST_DESCRIPTION_LISTITEM_OTHERS
+		   )
+//		   GENLIST_PART_PADDING_T_SIZE("elm.padding.text1.bottom", "elm.text.1", 16)
+		   GENLIST_PART_TEXTBLOCK("elm.text.2",
+			  GENLIST_DESCRIPTION("elm.padding.left", "elm.padding.right", "elm.text.1", "elm.padding.bottom",
+				 GENLIST_PARAM_SUBITEM_DEFAULT_TB_WRAP
+				 min: 0 GENLIST_HEIGHT_MULTILINE_SUB;
+			  )
+			  GENLIST_DESCRIPTION_SUBITEM_DEFAULT_OTHERS_TB_WRAP
+		   )
+		   GENLIST_PART_FLIP
+		   GENLIST_PART_FOCUS
+		}
+		GENLIST_PROGRAMS_NORMAL( target: "elm.text.1"; target: "elm.text.2"; )
+		//GENLIST_PROGRAM_SOUND("elm.text.1")
+		//GENLIST_PROGRAM_SOUND("elm.text.2")
+	 }
+
+  // 2.2.4.4
+	 group { GENLIST_NAME("ivug/multiline/2text.5icon/default")
+		// FIXME: deprecated name, wiil be removed
+		alias: "elm/genlist/item/multiline/2text.1icon/default";
+		alias: "elm/genlist/item_odd/multiline/2ext.1icon/default";
+		alias: "elm/genlist/item_compress/multiline/2text.1icon/default";
+		alias: "elm/genlist/item_compress_odd/multiline/2text.1icon/default";
+
+		GENLIST_PROLOG_NORMAL
+		data.item: "texts" "elm.text.1 elm.text.2";
+		data.item: "contents" "elm.icon.1 elm.icon.2 elm.icon.3 elm.icon.4 elm.icon.5";
+
+		parts {
+		   GENLIST_PART_BASE
+		   GENLIST_PART_BG_NORMAL
+		   GENLIST_PART_BOTTOM_LINE
+		   GENLIST_PART_PADDING_LEFT
+		   GENLIST_PART_PADDING_RIGHT
+		   GENLIST_PART_PADDING_TOP_SIZE( 0 )
+		   GENLIST_PART_PADDING_BOTTOM_SIZE( 26 )
+
+		   GENLIST_PART_LISTITEM("elm.text.1",
+			  GENLIST_DESCRIPTION_LRT("elm.padding.left", "elm.padding.icon5.left", "elm.padding.top",
+				 GENLIST_PARAM_LISTITEM
+				 min: 0 GENLIST_HEIGHT_2LINE_MAIN; )
+			  GENLIST_DESCRIPTION_LISTITEM_OTHERS
+		   )
+		   GENLIST_PART_PADDING_R("elm.padding.icon5.left", "elm.icon.5")
+		   GENLIST_PART_ICON_CIRCLE_RTB("elm.icon.5",
+			  "elm.icon.4", "elm.padding.top", "elm.text.2")
+		   GENLIST_PART_ICON_CIRCLE_RTB("elm.icon.4",
+			  "elm.icon.3", "elm.padding.top", "elm.text.2")
+		   GENLIST_PART_ICON_CIRCLE_RTB("elm.icon.3",
+			  "elm.icon.2", "elm.padding.top", "elm.text.2")
+		   GENLIST_PART_ICON_CIRCLE_RTB("elm.icon.2",
+			  "elm.icon.1", "elm.padding.top", "elm.text.2")
+		   GENLIST_PART_ICON_CIRCLE_RTB("elm.icon.1",
+			  "elm.padding.right", "elm.padding.top", "elm.padding.bottom")
+
+
+//		   GENLIST_PART_PADDING_T_SIZE("elm.padding.text1.bottom", "elm.text.1", 16)
+		   GENLIST_PART_TEXTBLOCK("elm.text.2",
+			  GENLIST_DESCRIPTION("elm.padding.left", "elm.icon.1", "elm.text.1", "elm.padding.bottom",
+			  GENLIST_PARAM_SUBITEM_DEFAULT_TB_WRAP
+			  min: 0 GENLIST_HEIGHT_MULTILINE_SUB; )
+			  GENLIST_DESCRIPTION_SUBITEM_DEFAULT_OTHERS_TB_WRAP
+		   )
+		   GENLIST_PART_FLIP
+		   GENLIST_PART_FOCUS
+		}
+		GENLIST_PROGRAMS_NORMAL( target: "elm.text.1"; target: "elm.text.2"; )
+		//GENLIST_PROGRAM_SOUND("elm.text.1")
+		//GENLIST_PROGRAM_SOUND("elm.text.2")
+	 }
+
+  // 2.4.4.1 group title
+	 group { GENLIST_NAME("dialogue/ivug/grouptitle/default")
+		alias: "elm/layout/dialogue/grouptitle";
+
+		// FIXME: deprecated name, will be removed
+		alias : "elm/genlist/item/dialogue/title/default";
+		alias: "elm/genlist/item_odd/dialogue/title/default";
+		alias: "elm/genlist/item_compress/dialogue/title/default";
+		alias: "elm/genlist/item_compress_odd/dialogue/title/default";
+		alias: "elm/layout/dialogue/title";
+
+		GENLIST_PROLOG
+		data.item: "texts" "elm.text";
+		data.item: "contents" "elm.icon";
+		parts {
+		   GENLIST_PART_BASE
+		   GENLIST_PART_BG_NORMAL
+		   GENLIST_PART_PADDING_LEFT_SIZE( DIALOGUE_PADDING_SIZE_LEFT )
+		   GENLIST_PART_PADDING_TOP_SIZE( 0 )
+		   GENLIST_PART_PADDING_BOTTOM_SIZE( 12 )
+		   GENLIST_PART_PADDING_RIGHT_SIZE( 12 )
+
+		   GENLIST_PART_TEXT("elm.text",
+			  GENLIST_DESCRIPTION("elm.padding.left", "elm.icon",
+				 "elm.padding.top", "elm.padding.bottom",
+				 GENLIST_PARAM_DIALOGUE_GROUP_TITLE
+				 min: 0 GENLIST_HEIGHT_GROUPTITLE;
+			  )
+		   )
+
+		   GENLIST_PART_ICON("elm.icon",
+			  GENLIST_DESCRIPTION_RTB("elm.padding.right",
+				 "elm.padding.top", "elm.padding.bottom",
+				 max: 32 32;
+				 fixed: 1 0;
+			  )
+		   )
+		   GENLIST_PART_FLIP
+		}
+		GENLIST_PROGRAM_DISABLED( target: "elm.text"; target: "elm.icon"; )
+	 }
+

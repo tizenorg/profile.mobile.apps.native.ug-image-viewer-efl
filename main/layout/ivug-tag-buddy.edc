@@ -1,0 +1,298 @@
+/*
+* Copyright (c) 2000-2015  Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#define PADDING_COLOR 255 0 0 0
+
+#define DOCK_PART_PADDING_LEFT(param_name, param_padding_size ) \
+         part { name: param_name; \
+            type: SPACER; \
+            scale: 1; \
+            description { state: "default" 0.0; \
+               min: param_padding_size 0; \
+               fixed: 1 0; \
+               rel1.relative: 0.0 0.0; \
+               rel2.relative: 0.0 1.0; \
+               align: 0.0 0.5; \
+            } \
+         }
+//"elm.padding.right"
+#define DOCK_PART_PADDING_RIGHT(param_name, param_padding_size ) \
+       part { name: param_name; \
+            type: SPACER; \
+            scale: 1; \
+            description { state: "default" 0.0; \
+               min: param_padding_size 0; \
+               fixed: 1 0; \
+               rel1.relative: 1.0  0.0; \
+               rel2.relative: 1.0  1.0; \
+               align: 1.0 0.5; \
+            } \
+         }
+//"elm.padding.top"
+#define DOCK_PART_PADDING_TOP(param_name, param_padding_size ) \
+       part { name: param_name; \
+            type: SPACER; \
+            scale: 1; \
+            description { state: "default" 0.0; \
+               min: 0 param_padding_size; \
+               fixed: 0 1; \
+               rel2.relative: 1.0 0.0; \
+               align: 0.5 0.0; \
+            } \
+         }
+//"elm.padding.bottom"
+#define DOCK_PART_PADDING_BOTTOM(param_name, param_padding_size ) \
+       part { name: param_name; \
+            type: SPACER; \
+            scale: 1; \
+            description { state: "default" 0.0; \
+               min: 0 param_padding_size; \
+               fixed: 0 1; \
+               rel1.relative: 0.0 1.0; \
+               rel2.relative: 1.0 1.0; \
+               align: 0.5 1.0; \
+            } \
+         }
+
+
+collections {
+
+  group {
+		name: "tag_buddy";
+		parts{
+			part { name: "clipper";
+				type: RECT;
+				scale:1;
+				description {
+					state: "default" 0.0;
+					color: 255 255 255 255;
+					visible: 1;
+					rel1.to: "bg";
+					rel2.to: "bg";
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					color: 255 255 255 0;
+				}
+			}
+
+			part {
+				name: "bg";
+				type: RECT;
+				scale: 1;
+				clip_to: "clipper";
+				description {
+					state: "default" 0.0;
+					rel1 {
+						relative: 0.0 0.0;
+						to_y: "top.pad.16";
+					}
+
+					rel2 {
+						relative: 1.0 1.0;
+					}
+					color: 0 0 0 128;
+					visible: 0;
+				}
+
+				description {
+					state: "hide" 0.0;		// only name is hide. actually this is shown state.
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+
+				description {
+					state: "show" 0.0;		// only name is hide. actually this is shown state.
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+
+			}
+
+			DOCK_PART_PADDING_BOTTOM("tag_buddy_bottom", 56);
+
+	         part { name: "tag_buddy_left";
+	            type: SPACER;
+	            scale: 1;
+	            description { state: "default" 0.0;
+	               min: 24 0;
+	               fixed: 1 0;
+	               rel1.relative: 0.0 0.0;
+	               rel2.relative: 0.0 1.0;
+	               align: 0.0 0.5;
+	            }
+	         }
+
+       part { name: "tag_buddy_right";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 24 0;
+               fixed: 1 0;
+               rel1.relative: 1.0  0.0;
+               rel2.relative: 1.0  1.0;
+               align: 1.0 0.5;
+            }
+         }
+			part {
+				name: "top.pad.16";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 {
+						relative: 0.0 0.0;
+						to_y: "content";
+					}
+					rel2 {
+						relative: 1.0 0.0;
+						to_y: "content";
+					}
+					align: 0.5 1.0;
+					min: 0 16;
+					fixed: 0 1;
+				}
+			}
+
+			part {
+				name: "content";
+				type: SWALLOW;
+				mouse_events: 1;
+				repeat_events: 1;
+				scale:1;
+				clip_to: "clipper";
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					fixed: 1 1;
+					align: 0.5 1.0;
+						rel1 { relative: 1.0 0.0;
+					         to_x: "tag_buddy_left";
+					         to_y: "tag_buddy_bottom";
+					}
+
+					rel2 { relative: 0.0 0.0;
+						to_x: "tag_buddy_right";
+						to_y: "tag_buddy_bottom";
+					}
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+
+				description {
+					state: "show" 0.0;		// only name is hide. actually this is shown state.
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+		}
+		programs {
+		    program {
+				name: "click";
+				signal: "mouse,down,1";
+				source: "content";
+				action: SIGNAL_EMIT "elm,action,press" "";
+		    }
+		    program {
+		        name: "hide_content";
+		        signal: "tag_buddy,hide";
+		        source: "elm";
+		        action: STATE_SET "hide" 0.0;
+		        transition: LINEAR 0.3;
+			target: "clipper";
+			after: "hide_finished";
+		    }
+
+		    program {
+		        name: "hide_finished";
+		        action: STATE_SET "hide" 0.0;
+			 target: "bg";
+ 			 target: "content";
+ 			 after: "show_finished";
+		    }
+
+		    program {
+		        name: "show_content";
+		        signal: "tag_buddy,show";
+		        source: "elm";
+		        action: STATE_SET "default" 0.0;
+		        transition: LINEAR 0.3;
+			target: "clipper";
+			after: "show_finished";
+		    }
+
+		    program {
+		        name: "show_finished";
+		        action: STATE_SET "show" 0.0;
+			 target: "bg";
+ 			 target: "content";
+
+		   }
+		}
+	}		// End of Group
+
+	styles {
+		style { name: "comment_font_style";
+		base: "font=Tizen:style=Medium font_size=32 valign=top align=center ellipsis=1.0";
+		tag:  "br" "\n";
+		tag:  "tab" "\t";
+		}
+	}
+
+	group {
+		name: "comment";
+
+		parts {
+			part { name: "comment.bg";
+				type: RECT;
+				scale: 1;
+				description { state: "default" 0.0;
+					color: 0 0 0 0;
+					visible: 1;
+					rel1.to: "comment";
+					rel2.to: "comment";
+				}
+			}
+
+			part {
+				name: "comment";
+				type: TEXTBLOCK;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 1.0; }
+					text {
+						style: "comment_font_style";
+						min: 0 0;
+						max: 0 0;
+						align: 0.5 0.0;
+						ellipsis: 1.0;
+					}
+					color: 255 255 255 255;
+				}
+			}
+
+		}
+	}		// End of Group - comment
+}
+

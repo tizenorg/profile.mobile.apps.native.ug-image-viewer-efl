@@ -1,0 +1,996 @@
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "プライベート"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "名前を変更"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "この動画を削除します。"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "ファイル名は既に使用されています。"
+
+msgid "IDS_ST_BODY_OFF"
+msgstr "OFF"
+
+msgid "IDS_COM_BODY_DONE"
+msgstr "完了"
+
+msgid "IDS_FB_BODY_FACEBOOK"
+msgstr "Facebook"
+
+msgid "IDS_CAM_BODY_FLASH"
+msgstr "フラッシュ"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "停止"
+
+msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
+msgstr "%1$sはこのアプリケーションでは無効です。この機能を有効にするには、%2$sに移動した後、このアプリケーションを選択してください。"
+
+msgid "IDS_MEDIABR_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_MEDIABR_BUTTON_DONE"
+msgstr "完了"
+
+msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
+msgstr "キャンセル"
+
+msgid "IDS_GALLERY_HEADER_ENTER_NAME"
+msgstr "名前を入力"
+
+msgid "IDS_MEDIABR_POP_NO_NAME"
+msgstr "名前なし"
+
+msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
+msgstr "1つのアルバムしかありません。"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "%dアイテムまで選択できます。"
+
+msgid "IDS_IV_OPT_DETAILS"
+msgstr "詳細"
+
+msgid "IDS_IV_OPT_DELETE_ABB"
+msgstr "削除"
+
+msgid "IDS_IV_POP_DELETE_Q"
+msgstr "削除しますか？"
+
+msgid "IDS_IV_BUTTON_CANCEL"
+msgstr "キャンセル"
+
+msgid "IDS_IV_POP_DELETED"
+msgstr "削除しました。"
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "お気に入り"
+
+msgid "IDS_IV_SK_SAVE"
+msgstr "保存"
+
+msgid "IDS_IV_POP_SAVED"
+msgstr "保存しました。"
+
+msgid "IDS_IV_BODY_SETTINGS"
+msgstr "設定"
+
+msgid "IDS_IV_BODY_SIZE"
+msgstr "サイズ"
+
+msgid "IDS_IV_BODY_UNKNOWN"
+msgstr "不明"
+
+msgid "IDS_IV_SK_YES"
+msgstr "はい"
+
+msgid "IDS_CAM_BODY_ISO"
+msgstr "ISO"
+
+msgid "IDS_CAM_BODY_FOCAL_LENGTH"
+msgstr "焦点距離"
+
+msgid "IDS_CAM_BODY_FLASH_ON"
+msgstr "フラッシュON"
+
+msgid "IDS_COM_POP_IMAGE_VIEWER"
+msgstr "画像ビューア"
+
+msgid "IDS_MEDIABR_OPT_ALL_PICTURES"
+msgstr "全ての画像"
+
+msgid "IDS_MEDIABR_HEADER_ORIENTATION"
+msgstr "向き"
+
+msgid "IDS_MEDIABR_BODY_SELECT_PICTURE"
+msgstr "画像を選択"
+
+msgid "IDS_MP_BODY_DURATION"
+msgstr "再生時間"
+
+msgid "IDS_ST_POP_SET"
+msgstr "設定しました。"
+
+msgid "IDS_GALLERY_BODY_TAGS"
+msgstr "タグ"
+
+msgid "IDS_IV_SK3_ADD_COMMENT"
+msgstr "コメントを追加"
+
+msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "[近くのデバイス]を利用して他の端末でメディアを表示できます。"
+
+msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
+msgstr "動画ファイルはフェイスタグ機能に対応していないため、人物の情報は含まれません。"
+
+msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
+msgstr "この画像を共有できません。DRMで保護されています。"
+
+msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
+msgstr "ファイルを開くことができません。"
+
+msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
+msgstr "記録された気象情報は、情報の更新間隔によって実際の気象と異なる場合があります。"
+
+msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
+msgstr "クリップボードにコピーしたパーソナルコンテンツを利用して新しくコンテンツを作成した場合、新しいコンテンツを自動的に非表示にできない可能性があります。"
+
+msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
+msgstr "画像が小さすぎます。"
+
+msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
+msgstr "他のタグが表示可能になったときにのみ、日時情報が表示されます。"
+
+msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
+msgstr "ベストフォトを選択するには、サムネイルを長押ししてください。"
+
+msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
+msgstr "スライドショーの設定"
+
+msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
+msgstr "ホーム画面やロック画面の壁紙を設定"
+
+msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
+msgstr "%sの発信者IDとしてこの写真を設定しますか？"
+
+msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
+msgstr "連絡先の画像として設定"
+
+msgid "IDS_IV_POP_SENDING_ING"
+msgstr "送信中..."
+
+msgid "IDS_IV_POP_SELECT_DEVICE"
+msgstr "デバイスを選択"
+
+msgid "IDS_IV_POP_SD_CARD_REMOVED"
+msgstr "外部SDカードを安全に取り外すことができます。"
+
+msgid "IDS_IV_POP_PERMISSION_DENIED"
+msgstr "承認が拒否されました。"
+
+msgid "IDS_IV_POP_NO_LOCATION"
+msgstr "位置情報がありません。"
+
+msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
+msgstr "タグ付けされた顔がありません。写真上の顔にタグ付けしてください。"
+
+msgid "IDS_IV_POP_NO_FACES_DETECTED"
+msgstr "顔が検出されません。"
+
+msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "メモリが不足しています。不要なアイテムを削除してください。"
+
+msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
+msgstr "ネットワーク接続失敗"
+
+msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
+msgstr "最大文字数(%d文字)に達しました。"
+
+msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
+msgstr "画像ファイルが無効です。"
+
+msgid "IDS_IV_POP_FLASH_USED_ABB"
+msgstr "フラッシュON"
+
+msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
+msgstr "対応していないファイル形式です。"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "入力されていません。"
+
+msgid "IDS_IV_POP_ENTER_TAG_NAME"
+msgstr "タグ名を入力"
+
+msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
+msgstr "気象情報タグを表示するには、気象情報壁紙の自動更新を有効にします。"
+
+msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
+msgstr "ダウンロード完了"
+
+msgid "IDS_IV_POP_BEST_PHOTO"
+msgstr "ベストフォト"
+
+msgid "IDS_IV_POP_ADDED"
+msgstr "追加しました。"
+
+msgid "IDS_IV_OPT_WRITE_CAPTION"
+msgstr "キャプションを入力"
+
+msgid "IDS_IV_OPT_USE_MOTION"
+msgstr "モーションを使用"
+
+msgid "IDS_IV_OPT_UNFAVOURITE"
+msgstr "お気に入りを解除"
+
+msgid "IDS_IV_OPT_TRIM"
+msgstr "トリミング"
+
+msgid "IDS_IV_OPT_TAG_FACE_ABB"
+msgstr "フェイスタグ"
+
+msgid "IDS_IV_OPT_TAG_BUDDY"
+msgstr "タグバディ"
+
+msgid "IDS_IV_OPT_TAG"
+msgstr "タグ"
+
+msgid "IDS_IV_OPT_START_SLIDESHOW"
+msgstr "スライドショーを開始"
+
+msgid "IDS_IV_OPT_SLIDE_SHOW"
+msgstr "スライドショー"
+
+msgid "IDS_IV_OPT_SLIDESHOW_ABB"
+msgstr "スライドショー"
+
+msgid "IDS_IV_OPT_SHOW_ITEMS"
+msgstr "アイテムを表示"
+
+msgid "IDS_IV_OPT_SHARE"
+msgstr "共有"
+
+msgid "IDS_IV_OPT_ROTATE_RIGHT"
+msgstr "右に回転"
+
+msgid "IDS_IV_OPT_ROTATE_LEFT"
+msgstr "左に回転"
+
+msgid "IDS_IV_OPT_REMOVE_TAG"
+msgstr "タグを削除"
+
+msgid "IDS_IV_OPT_REFRESH"
+msgstr "更新"
+
+msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
+msgstr "Bluetoothで印刷"
+
+msgid "IDS_IV_OPT_MANUALLY_DETECT"
+msgstr "手動で編集"
+
+msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
+msgstr "ホーム画面/ロック画面用壁紙"
+
+msgid "IDS_IV_OPT_HIDDEN_ITEMS"
+msgstr "非表示アイテム"
+
+msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
+msgstr "経路を取得"
+
+msgid "IDS_IV_OPT_FILE_TRANSFER"
+msgstr "ファイル転送"
+
+msgid "IDS_IV_OPT_ERASER"
+msgstr "消しゴム"
+
+msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
+msgstr "気象情報タグを編集"
+
+msgid "IDS_IV_OPT_EDIT_TAG"
+msgstr "タグを編集"
+
+msgid "IDS_IV_OPT_EDIT_CAPTION"
+msgstr "キャプションを編集"
+
+msgid "IDS_IV_OPT_DELETE_CAPTION"
+msgstr "キャプションを削除"
+
+msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
+msgstr "クリップボードにコピー"
+
+msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
+msgstr "接続情報"
+
+msgid "IDS_IV_OPT_CLOUD"
+msgstr "クラウド"
+
+msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
+msgstr "メンバーに​画像共有"
+
+msgid "IDS_IV_OPT_BEST_FACE_ABB"
+msgstr "ベストフェイス"
+
+msgid "IDS_IV_OPT_AS_VIDEO_FILES"
+msgstr "動画ファイルとして"
+
+msgid "IDS_IV_OPT_AS_IMAGE_FILES"
+msgstr "画像ファイルとして"
+
+msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
+msgstr "アニメーション写真"
+
+msgid "IDS_IV_OPT_ADD_WEATHER_TAG_ABB"
+msgstr "気象情報タグを追加"
+
+msgid "IDS_IV_OPT_ADD_NAME_ABB"
+msgstr "名前を追加"
+
+msgid "IDS_IV_OPT_ADD_CAPTION"
+msgstr "キャプションを追加"
+
+msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
+msgstr "スライドショー音楽"
+
+msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
+msgstr "ｻｳﾝﾄﾞ&ｼｮｯﾄ写真を共有"
+
+msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
+msgstr "登録"
+
+msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
+msgstr "この画像を送信"
+
+msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
+msgstr "共有する連絡先を選択してください。"
+
+msgid "IDS_IV_HEADER_PLAY_SPEED"
+msgstr "再生スピード"
+
+msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
+msgstr "画面ロック時の壁紙"
+
+msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
+msgstr "端末を傾ける操作について"
+
+msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
+msgstr "ホーム画面の壁紙"
+
+msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
+msgstr "気象情報タグを編集"
+
+msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
+msgstr "連写を編集"
+
+msgid "IDS_IV_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "接続可能デバイス"
+
+msgid "IDS_IV_HEADER_ALL_ALBUMS"
+msgstr "全てのアルバム"
+
+msgid "IDS_IV_HEADER_ADD_TAG"
+msgstr "タグを追加"
+
+msgid "IDS_IV_BUTTON_STOP"
+msgstr "停止"
+
+msgid "IDS_IV_BUTTON_SCAN"
+msgstr "スキャン"
+
+msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
+msgstr "[近くのデバイス]を利用して他の端末とメディアを共有できます。"
+
+msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
+msgstr "%s、他%d人"
+
+msgid "IDS_IV_BODY_WITH_PS"
+msgstr "%sと"
+
+msgid "IDS_IV_BODY_WHITE_BALANCE"
+msgstr "ホワイト​バランス"
+
+msgid "IDS_IV_BODY_WEATHER_ABB"
+msgstr "気象情報"
+
+msgid "IDS_IV_BODY_WEATHER"
+msgstr "天気予報"
+
+msgid "IDS_IV_BODY_VENDOR"
+msgstr "提供元"
+
+msgid "IDS_IV_BODY_VALIDITY"
+msgstr "有効回数"
+
+msgid "IDS_IV_BODY_UNLIMITED"
+msgstr "制限なし"
+
+msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
+msgstr "画像を読み込めません。"
+
+msgid "IDS_IV_BODY_TIMED_COUNT"
+msgstr "時間カウント"
+
+msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
+msgstr "記録された気象情報は、手動で編集する必要があります。お使いの端末は、気象ウィジェットから気象情報を受信する機能に対応していません。"
+
+msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
+msgstr "人物の情報を表示するには、顔をタップします。"
+
+msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
+msgstr "画面の2箇所を押しながら端末を前後に傾けると、拡大/縮小します。"
+
+msgid "IDS_IV_BODY_SUNNY_DAY"
+msgstr "晴れの日"
+
+msgid "IDS_IV_BODY_SNOWY_DAY"
+msgstr "雪の日"
+
+msgid "IDS_IV_BODY_SHARE_VIA"
+msgstr "共有"
+
+msgid "IDS_IV_BODY_SERVER_NAME"
+msgstr "サーバー名です。"
+
+msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
+msgstr "トリミングする画像の領域を選択してください。"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
+msgstr "選択した領域が印刷されます。"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
+msgstr "選択した領域が壁紙に適用されます。"
+
+msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
+msgstr "選択した領域が連絡先の画像に適用されます。"
+
+msgid "IDS_IV_BODY_RIGHT_STATUS"
+msgstr "権限の状態"
+
+msgid "IDS_IV_BODY_RESOLUTION"
+msgstr "解像度"
+
+msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
+msgstr "お気に入りから削除"
+
+msgid "IDS_IV_BODY_RAINY_DAY"
+msgstr "雨の日"
+
+msgid "IDS_IV_BODY_PRINT"
+msgstr "印刷"
+
+msgid "IDS_IV_BODY_POSSIBLE"
+msgstr "可能"
+
+msgid "IDS_IV_BODY_PEOPLE"
+msgstr "人物"
+
+msgid "IDS_IV_BODY_N_A"
+msgstr "なし"
+
+msgid "IDS_IV_BODY_NO_TAG"
+msgstr "タグなし"
+
+msgid "IDS_IV_BODY_NEW_TAG"
+msgstr "新しい​タグ"
+
+msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
+msgstr "近くの​デバイス"
+
+msgid "IDS_IV_BODY_MY_DEVICE"
+msgstr "マイデバイス"
+
+msgid "IDS_IV_BODY_MODEL"
+msgstr "モデル"
+
+msgid "IDS_IV_BODY_ME"
+msgstr "自分"
+
+msgid "IDS_IV_BODY_MANUFACTURER"
+msgstr "製造社"
+
+msgid "IDS_IV_BODY_LONGITUDE"
+msgstr "経度"
+
+msgid "IDS_IV_BODY_LOCK_SCREEN"
+msgstr "ロック画面"
+
+msgid "IDS_IV_BODY_LOCATION_M_PATH"
+msgstr "保存先"
+
+msgid "IDS_IV_BODY_LOCATION_ABB2"
+msgstr "位置情報"
+
+msgid "IDS_IV_BODY_LOCATIONS"
+msgstr "位置情報"
+
+msgid "IDS_IV_BODY_LOCATION"
+msgstr "場所"
+
+msgid "IDS_IV_BODY_LATITUDE"
+msgstr "緯度"
+
+msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
+msgstr "%sで"
+
+msgid "IDS_IV_BODY_INTERVAL"
+msgstr "間隔"
+
+msgid "IDS_IV_BODY_INDIVIDUAL"
+msgstr "個人"
+
+msgid "IDS_IV_BODY_IN"
+msgstr "ズームイン"
+
+msgid "IDS_IV_BODY_IMPOSSIBLE"
+msgstr "不可"
+
+msgid "IDS_IV_BODY_HOME_SCREEN"
+msgstr "ホーム画面"
+
+msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
+msgstr "ホーム画面と​ロック画面"
+
+msgid "IDS_IV_BODY_FORWARDING"
+msgstr "転送"
+
+msgid "IDS_IV_BODY_FLASH"
+msgstr "Flash"
+
+msgid "IDS_IV_BODY_FILE_NAME"
+msgstr "ファイル名"
+
+msgid "IDS_IV_BODY_FILE_LOCATION"
+msgstr "ファイルの場所"
+
+msgid "IDS_IV_BODY_FILE_FORMAT"
+msgstr "ファイル形式"
+
+msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
+msgstr "露光時間"
+
+msgid "IDS_IV_BODY_EXECUTE"
+msgstr "実行"
+
+msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
+msgstr "位置情報タグを表示するには、カメラのGPSタグを有効にします。"
+
+msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
+msgstr "気象情報タグを表示するには、気象情報ウィジェットの自動更新を有効にします。"
+
+msgid "IDS_IV_BODY_DURATION"
+msgstr "期間"
+
+msgid "IDS_IV_BODY_DRM_INFO"
+msgstr "DRM情報"
+
+msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "今後表示しない"
+
+msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
+msgstr "次回から確認しない"
+
+msgid "IDS_IV_BODY_DISPLAY"
+msgstr "画面"
+
+msgid "IDS_IV_BODY_DATE_CREATED"
+msgstr "作成日付"
+
+msgid "IDS_IV_BODY_CROP"
+msgstr "トリミング"
+
+msgid "IDS_IV_BODY_CREATE_TAG"
+msgstr "タグを作成"
+
+msgid "IDS_IV_BODY_COUNT"
+msgstr "回数"
+
+msgid "IDS_IV_BODY_CLOUDY_DAY"
+msgstr "曇りの日"
+
+msgid "IDS_IV_BODY_CLEAR_NIGHT"
+msgstr "晴れた夜"
+
+msgid "IDS_IV_BODY_CALLER_IMAGE"
+msgstr "発信者画像"
+
+msgid "IDS_IV_BODY_BASIC"
+msgstr "標準"
+
+msgid "IDS_IV_BODY_AVAILABLE_USES"
+msgstr "使用可能"
+
+msgid "IDS_IV_BODY_AUTO"
+msgstr "自動"
+
+msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
+msgstr "アプリケーションに一致するカラーテーマを適用"
+
+msgid "IDS_IV_BODY_APERTURE"
+msgstr "絞り"
+
+msgid "IDS_IV_BODY_ANY"
+msgstr "どれか"
+
+msgid "IDS_IV_BODY_ADD_TO_FAVOURITES"
+msgstr "お気に入りに追加"
+
+msgid "IDS_IV_BODY_ACCUMULATED_TIME"
+msgstr "累積時間"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "最大文字数に達しました。"
+
+msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
+msgstr "失敗"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_ST_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_ST_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_ST_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_ST_BODY_EDIT"
+msgstr "編集"
+
+msgid "IDS_ST_BODY_DATE"
+msgstr "日付"
+
+msgid "IDS_EMAIL_OPT_ACCOUNTS"
+msgstr "アカウント"
+
+msgid "IDS_GALLERY_BODY_DOWNLOAD"
+msgstr "ダウンロード"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
+msgstr "Dropboxに画像をアップロードした後、アイテムが表示されます。"
+
+msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
+msgstr "ダウンロード中..."
+
+msgid "IDS_IV_BODY_ADD_PICTURES"
+msgstr "画像を追加"
+
+msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
+msgstr "お気に入りとして写真をタグ付けした後に、写真が表示されます。"
+
+msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
+msgstr "顔認証を削除しますか？"
+
+msgid "IDS_IV_OPT_ASSIGN_NAME"
+msgstr "名前を割り当て"
+
+msgid "IDS_IV_OPT_CONFIRM_AS_PS"
+msgstr "%sとして確認"
+
+msgid "IDS_IV_OPT_LAYOUT_M_PICTUERS"
+msgstr "レイアウト"
+
+msgid "IDS_IV_OPT_PD_PICTURES_ADDED"
+msgstr "%d件の画像を追加済み"
+
+msgid "IDS_IV_POP_THE_ALBUM_WILL_BE_CANCELLED"
+msgstr "アルバム作成をキャンセルします。"
+
+msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
+msgstr "ダウンロードを開始中..."
+
+msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "メモリが不足しています。不要なアイテムを削除してください。"
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "プライベートストレージ"
+
+msgid "IDS_IV_BODY_DRAG_HERE"
+msgstr "ここにドラッグ"
+
+msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
+msgstr "画像を追加してください。"
+
+msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
+msgstr "ファイルが既にあります。"
+
+msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
+msgstr "このアイテムを削除します。"
+
+msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
+msgstr "Facebookに画像をアップロードした後、アイテムが表示されます。"
+
+msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
+msgstr "無効な文字です。"
+
+msgid "IDS_MEDIABR_OPT_MANUAL"
+msgstr "手動"
+
+msgid "IDS_ST_BODY_ERROR_VZW"
+msgstr "Error"
+
+msgid "IDS_ST_BUTTON2_PROCESSING_ING"
+msgstr "処理中..."
+
+msgid "IDS_ST_BODY_OK"
+msgstr "OK"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "名前変更"
+
+msgid "IDS_COM_BODY_NONE"
+msgstr "なし"
+
+msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
+msgstr "%d件選択"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "システムメモリ(本体)"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "外部SDカード"
+
+msgid "IDS_ST_BODY_SPEED"
+msgstr "速度"
+
+msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
+msgstr "BGM"
+
+msgid "IDS_IV_OPT_1_SEC_ABB"
+msgstr "1秒"
+
+msgid "IDS_IV_OPT_3_SECS_ABB"
+msgstr "3秒"
+
+msgid "IDS_IV_OPT_5_SECS_ABB"
+msgstr "5秒"
+
+msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
+msgstr "保存場所"
+
+msgid "IDS_IV_BODY_FILE_SIZE"
+msgstr "ファイルサイズ"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1件のアルバムを削除します。"
+
+msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
+msgstr "ノスタルジア"
+
+msgid "IDS_IV_OPT_BLUR_M_EFFECT"
+msgstr "ぼかし"
+
+msgid "IDS_IV_OPT_SOFT_GLOW_M_EFFECT"
+msgstr "ソフトグロー"
+
+msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
+msgstr "変更を保存"
+
+msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
+msgstr "変更を保存または破棄しますか？"
+
+msgid "IDS_IV_BUTTON_DISCARD_ABB2"
+msgstr "破棄"
+
+msgid "IDS_IV_BUTTON_SAVE"
+msgstr "保存"
+
+msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
+msgstr "ビンテージ"
+
+msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
+msgstr "サンシャイン"
+
+msgid "IDS_IV_OPT_OLD_PHOTO_M_EFFECT"
+msgstr "古い写真"
+
+msgid "IDS_IV_OPT_RETRO_M_EFFECT"
+msgstr "レトロ"
+
+msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
+msgstr "グレースケール"
+
+msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
+msgstr "セピア"
+
+msgid "IDS_IV_OPT_FADED_COLOURS_M_EFFECT"
+msgstr "色あせ"
+
+msgid "IDS_IV_OPT_DOWNLIGHT_M_EFFECT"
+msgstr "ダウンライト"
+
+msgid "IDS_IV_OPT_YELLOW_GLOW_M_EFFECT"
+msgstr "イエローグロー"
+
+msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
+msgstr "シャープ"
+
+msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
+msgstr "スケッチ"
+
+msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
+msgstr "色反転"
+
+msgid "IDS_IV_OPT_OIL_PAINT_M_EFFECT"
+msgstr "油絵"
+
+msgid "IDS_IV_OPT_POSTERISE_M_EFFECT"
+msgstr "ポスタライズ"
+
+msgid "IDS_IV_OPT_CARTOON_M_EFFECT"
+msgstr "マンガ調"
+
+msgid "IDS_IV_OPT_POP_ART_M_EFFECT"
+msgstr "ポップアート"
+
+msgid "IDS_IV_OPT_MAGIC_PEN_M_EFFECT"
+msgstr "マジックペン"
+
+msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
+msgstr "ブロックリストに追加しました。"
+
+msgid "IDS_IMGE_BODY_ROTATE"
+msgstr "回転"
+
+msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "システムメモリ(本体)の空き容量が低下しています。[設定] > [電源とストレージ] > [ストレージ]に移動して不要なファイルを削除した後、再度実行してください。"
+
+msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
+msgstr "スライド間隔"
+
+msgid "IDS_IV_MBODY_SLIDE_INTERVAL_ABB"
+msgstr "スライド間隔"
+
+msgid "IDS_IV_OPT_CONTACT_PICTURE_ABB"
+msgstr "連絡先の画像"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "点灯状態を保つ"
+
+msgid "IDS_IV_OPT_EDIT"
+msgstr "編集"
+
+msgid "IDS_IV_OPT_RENAME"
+msgstr "名前を変更"
+
+msgid "IDS_IV_OPT_SET_AS"
+msgstr "設定"
+
+msgid "IDS_IV_OPT_DOWNLOAD"
+msgstr "ダウンロード"
+
+msgid "IDS_IV_HEADER_RENAME"
+msgstr "名前を変更"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB"
+msgstr "名前を変更"
+
+msgid "IDS_IV_BUTTON_RENAME_ABB2"
+msgstr "名称変更"
+
+msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
+msgstr "既に同じ名前のファイルがコピー先フォルダに存在します。"
+
+msgid "IDS_IV_BUTTON_REPLACE_ABB"
+msgstr "置き換え"
+
+msgid "IDS_IV_HEADER_SET_AS"
+msgstr "登録"
+
+msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
+msgstr "ホーム画面の壁紙"
+
+msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
+msgstr "ロック画面の壁紙"
+
+msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
+msgstr "ホーム画面とロック画面の壁紙"
+
+msgid "IDS_IV_HEADER_DETAILS"
+msgstr "詳細"
+
+msgid "IDS_IV_BODY_DATE"
+msgstr "日付"
+
+msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
+msgstr "画像の保存不可"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
+msgstr "システムメモリ(本体)の空き容量が低下しています(%dMB)。"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
+msgstr "外部SDカードの空き容量が低下しています(%dMB)。"
+
+msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
+msgstr "いくつかのファイルを削除し、再度実行してください。"
+
+msgid "IDS_IV_HEADER_SAVE_IMAGE"
+msgstr "画像を保存"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
+msgstr "システムメモリ(本体)の空き容量が低下しています(残り%dMB)。このアイテムは外部SDカードに保存されます。"
+
+msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
+msgstr "外部SDカードの空き容量が低下しています(残り%dMB)。このアイテムはシステムメモリ(本体)に保存されます。"
+
+msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
+msgstr "この画像は削除されます。"
+
+msgid "IDS_IV_BUTTON_STOP_ABB4"
+msgstr "ストップ"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "削除"
+
+msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
+msgstr "エラー"
+
+msgid "IDS_GALLERY_HEADER_SELECT_AREA_ABB"
+msgstr "領域を選択"
+
+msgid "IDS_GALLERY_BUTTON_DONE"
+msgstr "完了"
+
+msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
+msgstr "アイテムの読み込みに失敗しました。"
+
+msgid "IDS_CAM_OPT_NEGATIVE"
+msgstr "ネガポジ反転"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "完了"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "キャンセル"
+
+msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
+msgstr "ネガポジ反転"
+
+msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
+msgstr "[ギャラリー]を開くことができません。"
+
+msgid "IDS_360V_TPOP_LOADING_ING"
+msgstr "読み込み中..."
+
+msgid "IDS_IV_HEADER_LOADING_ING"
+msgstr "読み込み中..."
+
+msgid "IDS_IV_POP_LOADING_FAILED"
+msgstr "読み込みに失敗しました。"
+
+msgid "IDS_IV_POP_LOADING_IMAGE_ING"
+msgstr "画像を読み込み中..."
+
+msgid "IDS_IV_SK_DISCARD"
+msgstr "破棄"
+
+msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
+msgstr "ダウンロード不可"
+
+msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "モバイルデータがOFFになっています。Wi-Fiネットワークで接続するか、モバイルデータをONにして再度お試しください。"
+
+msgid "IDS_IV_BODY_DO_NOT_SEND"
+msgstr "送出しない"
+
+msgid "IDS_COM_BODY_1_SECOND"
+msgstr "1秒"
+
+msgid "IDS_BODY_PD_SECONDS"
+msgstr "%d秒"
+
+msgid "IDS_IV_BODY_EFFECT"
+msgstr "効果"
+
+msgid "IDS_IMGE_HEARDER_EFFECTS"
+msgstr "エフェクト"
+
+msgid "IDS_DFRAME_BODY_FLOW_M_EFFECT"
+msgstr "フロー"
+
+msgid "IDS_IV_OPT_FADE_M_EFFECT"
+msgstr "フェード"
+
+msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
+msgstr "拡大"
+

@@ -1,0 +1,668 @@
+/*
+* Copyright (c) 2000-2015  Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+collections {
+	base_scale: 2.4;
+
+	group {
+		name: "slideshow_overlay";
+		images {
+			image: "viwer_video_play.png" COMP;
+			image: "viwer_video_play_press.png" COMP;
+			image: "Image_viewer_popup_bg.#.png" COMP;
+			image: "Image_viewer_popup_bg_stroke.#.png" COMP;
+		}
+
+		plugins {
+			plugin {
+				name: "touch_sound";
+				source: "feedback";
+				param: "FEEDBACK_TYPE_SOUND FEEDBACK_PATTERN_TAP";
+			}
+		}
+
+		script {
+			public show = 0;
+		}
+
+		parts {
+			part {
+				name: "bg";
+				type: SPACER;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+				}
+			}
+			part {
+				name: "elm.padding.left";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; to: "bg";}
+					rel2 {relative: 0.0 1.0; to: "bg";}
+					align: 0 0.5;
+					min: 15 0;
+					fixed: 1 0;
+				}
+			}
+			part {
+				name: "elm.padding.right";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 {relative: 1.0 0.0; to: "bg";}
+					rel2 {relative: 1.0 1.0; to: "bg";}
+					align: 1 0.5;
+					min: 15 0;
+					fixed: 1 0;
+				}
+			}
+			part {
+				name: "elm.padding.top";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; to: "bg";}
+					rel2 {relative: 1.0 0.0; to: "bg";}
+					align: 0 0;
+					min: 0 18;
+					fixed: 0 1;
+				}
+			}
+			part {
+				name: "elm.padding.bottom";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 {relative: 0.0 1.0; to: "bg";}
+					rel2 {relative: 1.0 1.0; to: "bg";}
+					align: 0 1;
+					min: 0 16;
+					fixed: 0 1;
+				}
+			}
+			/*play icon*/
+			part {
+				name: "play.icon";
+				type: IMAGE;
+				mouse_events: 1;
+				repeat_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.5 0.5;
+					visible: 1;
+					fixed: 1 1;
+					max: 140 140;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 1.0; }
+					image.normal: "viwer_video_play.png";
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+					image.normal: "viwer_video_play.png";
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+					image.normal: "viwer_video_play_press.png";
+				}
+			}
+			part {
+				name: "bottom_icon_area";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 194;
+					fixed: 1 1;
+					rel1 {relative: 0.0 0.793; to: "bg";}
+					rel2 {relative: 1.0 1.0; to: "elm.padding.bottom";}
+					color: 0 0 0 0;
+				}
+			}
+			/*stop icon*/
+			part {
+				name: "stop.icon.bg";
+				type: IMAGE;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.5 1;
+					visible: 1;
+					min: 0 78;
+					max: 360 78;
+					fixed: 1 1;
+					rel1 { relative: 0.25 0; to: "bottom_icon_area"; }
+					rel2 { relative: 0.75 0.313; to: "bottom_icon_area"; }
+					image.normal: "Image_viewer_popup_bg.#.png";
+					color: 255 255 255 128;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+					color: 255 255 255 128;
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+					color: 255 255 255 191;
+				}
+			}
+			part {
+				name: "stop.icon.bg.storke";
+				type: IMAGE;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.0 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.0; to: "stop.icon.bg";}
+					rel2 { relative: 1.0 1.0; to: "stop.icon.bg";}
+					image.normal: "Image_viewer_popup_bg_stroke.#.png";
+					color: 255 255 255 128;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+			part {
+				name: "stop.icon.text";
+				type: TEXT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.5 0.5;
+					rel1 { relative: 0.0 0.0; to: "stop.icon.bg"; }
+					rel2 { relative: 1.0 1.0; to: "stop.icon.bg"; }
+					color: 255 255 255 255;
+					visible: 1;
+					text {
+						font: "Tizen:style=Regular";
+						size: 30;
+						align: 0.5 0.5;
+						max: 1 1;
+					}
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+					color: 255 255 255 255;
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+					color: 255 255 255 77;
+				}
+			}
+			part {
+				name: "stop.icon.click";
+				type: RECT;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "stop.icon.bg"; }
+					rel2 { relative: 1.0 1.0; to: "stop.icon.bg"; }
+					color: 0 0 0 0;
+					visible: 1;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+			/*effect icon*/
+			part {
+				name: "effect.icon.bg";
+				type: IMAGE;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.5 1;
+					visible: 1;
+					min: 0 78;
+					max: 306 78;
+					fixed: 1 1;
+					rel1 { relative: 0.050 0.486; to: "bottom_icon_area"; }
+					rel2 { relative: 0.475 0.799; to: "bottom_icon_area"; }
+					image.normal: "Image_viewer_popup_bg.#.png";
+					color: 255 255 255 128;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+					color: 255 255 255 128;
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+					color: 255 255 255 191;
+				}
+			}
+			part {
+				name: "effect.icon.bg.storke";
+				type: IMAGE;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.0 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.0; to: "effect.icon.bg";}
+					rel2 { relative: 1.0 1.0; to: "effect.icon.bg";}
+					image.normal: "Image_viewer_popup_bg_stroke.#.png";
+					color: 255 255 255 128;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+			part {
+				name: "effect.icon.text";
+				type: TEXT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.5 0.5;
+					rel1 { relative: 0.0 0.0; to: "effect.icon.bg"; }
+					rel2 { relative: 1.0 1.0; to: "effect.icon.bg"; }
+					color: 255 255 255 255;
+					visible: 1;
+					text {
+						font: "Tizen:style=Regular";
+						size: 30;
+						align: 0.5 0.5;
+						max: 1 1;
+					}
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+					color: 255 255 255 255;
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+					color: 255 255 255 77;
+				}
+			}
+			part {
+				name: "effect.icon.click";
+				type: RECT;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "effect.icon.bg"; }
+					rel2 { relative: 1.0 1.0; to: "effect.icon.bg"; }
+					color: 0 0 0 0;
+					visible: 1;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+			/*slide interval setting icon*/
+			part {
+				name: "slide_interval_setting.icon.bg";
+				type: IMAGE;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.5 1;
+					visible: 1;
+					min: 0 78;
+					max: 306 78;
+					fixed: 1 1;
+					rel1 { relative: 0.525 0.486; to: "bottom_icon_area"; }
+					rel2 { relative: 0.950 0.799; to: "bottom_icon_area"; }
+					image.normal: "Image_viewer_popup_bg.#.png";
+					color: 255 255 255 128;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+					color: 255 255 255 128;
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+					color: 255 255 255 191;
+				}
+			}
+			part {
+				name: "slide_interval_setting.icon.bg.storke";
+				type: IMAGE;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.0 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.0; to: "slide_interval_setting.icon.bg";}
+					rel2 { relative: 1.0 1.0; to: "slide_interval_setting.icon.bg";}
+					image.normal: "Image_viewer_popup_bg_stroke.#.png";
+					color: 255 255 255 128;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+			part {
+				name: "slide_interval_setting.icon.text";
+				type: TEXT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.5 0.5;
+					rel1 { relative: 0.1 0.0; to: "slide_interval_setting.icon.bg"; }
+					rel2 { relative: 0.9 1.0; to: "slide_interval_setting.icon.bg"; }
+					color: 255 255 255 255;
+					visible: 1;
+					text {
+						font: "Tizen:style=Regular";
+						size: 30;
+						align: 0.5 0.5;
+						max: 1 1;
+					}
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+					color: 255 255 255 255;
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+					color: 255 255 255 77;
+				}
+			}
+			part {
+				name: "slide_interval_setting.icon.click";
+				type: RECT;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "slide_interval_setting.icon.bg"; }
+					rel2 { relative: 1.0 1.0; to: "slide_interval_setting.icon.bg"; }
+					color: 0 0 0 0;
+					visible: 1;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+		}
+		programs {
+			program {
+				name: "play_icon_clicked";
+				signal: "mouse,clicked,1";
+				source: "play.icon";
+				action: RUN_PLUGIN "touch_sound";
+			}
+			program {
+				name: "stop_icon_clicked";
+				signal: "mouse,clicked,1";
+				source: "stop.icon.click";
+				action: RUN_PLUGIN "touch_sound";
+			}
+			program {
+				name: "effect_icon_clicked";
+				signal: "mouse,clicked,1";
+				source: "effect.icon.click";
+				action: RUN_PLUGIN "touch_sound";
+			}
+			program {
+				name: "slide_interval_setting_icon_clicked";
+				signal: "mouse,clicked,1";
+				source: "slide_interval_setting.icon.click";
+				action: RUN_PLUGIN "touch_sound";
+			}
+			program {
+				name: "hide_slideshow_pause";
+				signal: "elm,state,hide";
+				source: "*";
+				script {
+					set_int(show, 0);
+
+					set_state(PART:"play.icon", "hide", 0.0);
+					set_state(PART:"stop.icon.bg", "hide", 0.0);
+					set_state(PART:"stop.icon.bg.storke", "hide", 0.0);
+					set_state(PART:"stop.icon.text", "hide", 0.0);
+					set_state(PART:"stop.icon.click", "hide", 0.0);
+					set_state(PART:"slide_interval_setting.icon.bg", "hide", 0.0);
+					set_state(PART:"slide_interval_setting.icon.bg.storke", "hide", 0.0);
+					set_state(PART:"slide_interval_setting.icon.text", "hide", 0.0);
+					set_state(PART:"slide_interval_setting.icon.click", "hide", 0.0);
+					set_state(PART:"effect.icon.bg", "hide", 0.0);
+					set_state(PART:"effect.icon.bg.storke", "hide", 0.0);
+					set_state(PART:"effect.icon.text", "hide", 0.0);
+					set_state(PART:"effect.icon.click", "hide", 0.0);
+				}
+			}
+		}
+	}
+
+	group {
+		name: "view.slideshow";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				scale: 1;
+				mouse_events: 1;
+				repeat_events: 1;
+				description {
+					state: "default" 0.0;
+					color: 0 0 0 255;
+					visible: 1;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+				}
+			}
+		}
+	}
+
+	group {
+		name: "slayout";
+		images {
+			image: "T01-1_album_video_play.png" COMP;
+			image: "image_viewer_ic_video.png" COMP;
+			image: "image_viewer_ic_video_ef.png" COMP;
+		}
+		parts {
+			/* add bg to unsend events to slider layer */
+			part {
+				name: "content";
+				type: SWALLOW;
+				scale: 1;
+				mouse_events: 1;
+				repeat_events: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+				}
+			}
+			part {
+				name: "bg";
+				type: RECT;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					color: 0 0 0 0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+				}
+			}
+			part {
+				name: "elm.padding.top";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; to: "bg";}
+					rel2 {relative: 1.0 0.0; to: "bg";}
+					align: 0 0;
+					min: 0 13;
+					fixed: 0 1;
+				}
+			}
+			part {
+				name: "elm.padding.right";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 {relative: 1.0 0.0; to: "bg";}
+					rel2 {relative: 1.0 1.0; to: "bg";}
+					align: 1 0;
+					min: 10 0;
+					fixed: 1 0;
+				}
+			}
+			part {
+				name: "video.icon";
+				type: IMAGE;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 1.0 0.0;
+					visible: 1;
+					fixed: 1 1;
+					min: 80 80;
+					max: 80 80;
+					rel1 { relative: 0.0 1.0; to_x: "elm.padding.right"; to_y: "elm.padding.top";}
+					rel2 { relative: 0.0 1.0; to_x: "elm.padding.right"; to_y: "elm.padding.top";}
+					image.normal: "image_viewer_ic_video.png";
+					color: 255 255 255 255;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+			part {
+				name: "video.icon.ef";
+				type: IMAGE;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 1.0 0.0;
+					visible: 1;
+					fixed: 1 1;
+					min: 80 80;
+					max: 80 80;
+					rel1 { relative: 0.0 1.0; to_x: "elm.padding.right"; to_y: "elm.padding.top";}
+					rel2 { relative: 0.0 1.0; to_x: "elm.padding.right"; to_y: "elm.padding.top";}
+					image.normal: "image_viewer_ic_video_ef.png";
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+			part {
+				name: "elm.swallow.overlay";
+				type: SWALLOW;
+				scale: 1;
+				mouse_events: 1;
+				repeat_events: 0;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+				}
+			}
+		}
+		programs {
+			program {
+				name: "mouse_up";
+				signal: "mouse,up,1";
+				source: "elm.rect.event";
+				action: SIGNAL_EMIT "mouse,up,1" "elm";
+			}
+			program {
+				name: "hide_video_icon";
+				signal: "elm,state,hide";
+				source: "*";
+				script {
+					set_state(PART:"video.icon", "hide", 0.0);
+					set_state(PART:"video.icon.ef", "hide", 0.0);
+				}
+			}
+			program {
+				name: "show_video_icon";
+				signal: "elm,state,show";
+				source: "*";
+				script {
+					set_state(PART:"video.icon", "default", 0.0);
+					set_state(PART:"video.icon.ef", "default", 0.0);
+				}
+			}
+		}
+	}
+}

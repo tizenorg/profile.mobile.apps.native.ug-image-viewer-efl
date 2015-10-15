@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-10-12 09:32+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/util/mb_util.c:318
+msgid "IDS_COM_SK_DELETE"
+msgstr ""
+
+#: src/util/mb_util.c:321
+msgid "IDS_COM_POP_CLOSE_A"
+msgstr ""
+
+#: src/util/mb_util.c:474 src/features/slide_view.c:3238
+msgid "Done"
+msgstr ""
+
+#. UI_contextpopup_insert_text( context_popup, 3, _("Message"), _("Email"), _("Bluetooth"));
+#: src/util/mb_util.c:812 src/util/mb_util.c:819
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr ""
+
+#: src/util/mb_util.c:813 src/util/mb_util.c:820
+msgid "IDS_COM_BODY_EMAIL"
+msgstr ""
+
+#: src/util/mb_util.c:814
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr ""
+
+#. UI_contextpopup_insert_text( context_popup, 2, _("Wallpaper"), _("Caller ID"));
+#: src/util/mb_util.c:825
+msgid "IDS_MEDIABR_OPT_WALLPAPER"
+msgstr ""
+
+#: src/util/mb_util.c:826
+msgid "IDS_MEDIABR_OPT2_CALLER_ID"
+msgstr ""
+
+#. struct appdata *pAppData = (struct appdata*)pUserData;
+#: video/MpUtil.c:300 video/MpUtil.c:303 video/MpVideoAppCtrl.c:165
+#: video/MpVideoAppCtrl.c:169
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr ""
+
+#: video/MpUtil.c:886
+msgid "IDS_COM_SK_OK"
+msgstr ""
+
+#: video/MpUtil.c:901 src/features/set_as.c:504
+msgid "IDS_IMGE_BUTTON_CANCEL"
+msgstr ""
+
+#: video/MpVideoAppCtrl.c:189
+msgid "IDS_SL_HEADER_CONFIRM"
+msgstr ""
+
+#: video/MpVideoAppCtrl.c:189 video/MpVideoAppCtrl.c:358
+msgid "Current mode is silent mode<br> Continue play?"
+msgstr ""
+
+#: video/MpVideoAppCtrl.c:358
+msgid "Confirm"
+msgstr ""
+
+#. Popup
+#: video/MpVideoAppCtrl.c:1144
+msgid "Bluetooth disconnected"
+msgstr ""
+
+#. 6.
+#: video/PlayViewCtrl.c:929
+msgid "IDS_VPL_DETAILS_BACK"
+msgstr ""
+
+#: video/PlayViewCtrl.c:1045
+msgid "<Prev"
+msgstr ""
+
+#: video/PlayViewCtrl.c:1080
+msgid "IDS_IMGE_OPT2_SHARE"
+msgstr ""
+
+#. chenhanwu
+#: video/PlayViewCtrl.c:1081 src/features/set_as.c:491
+#: src/features/set_as.c:502
+msgid "IDS_ST_POP_SET_AS"
+msgstr ""
+
+#. chenhanwu
+#. chenhanwu
+#: video/PlayViewCtrl.c:1083 src/features/slide_view.c:2829
+msgid "IDS_COM_BODY_DELETE"
+msgstr ""
+
+#: video/PlayViewCtrl.c:1102
+msgid "IDS_VPL_HEADER_VIDEO_LIST"
+msgstr ""
+
+#: video/PlayViewCtrl.c:1103
+msgid "IDS_VPL_OPT_KEEP_ASPECT_RATIO"
+msgstr ""
+
+#. elm_softkey_panel_item_add(pAppData->pSoftkey, NULL, _("IDS_VPL_OPT_CONNECTED_HOME"), SoftkeyAllshare_cb, pAppData);
+#: video/PlayViewCtrl.c:1108
+msgid "IDS_VPL_OPT_SUBTITLES"
+msgstr ""
+
+#: video/PlayViewCtrl.c:1111
+msgid "IDS_VPL_OPT_DETAILS"
+msgstr ""
+
+#. edje_edit_state_text_set(pAppData->pSubtitlePopupEdj, "subtitle_popup_text", "default 0.0", _("IDS_VPL_OPT_DISPLAY_SUBTITLE"));
+#: video/PlayViewCtrl.c:1431 video/PlayViewCtrl.c:1583
+msgid "IDS_VPL_OPT_DISPLAY_SUBTITLE"
+msgstr ""
+
+#. chenhanwu
+#: src/features/set_as.c:503
+msgid "IDS_COM_SK_DONE"
+msgstr ""
+
+#: src/features/slide_view.c:1952 src/features/slide_view.c:2002
+msgid "Prev"
+msgstr ""
+
+#: src/features/slide_view.c:3242
+msgid "IDS_COM_SK_CANCEL"
+msgstr ""

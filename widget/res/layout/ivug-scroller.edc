@@ -1,0 +1,327 @@
+/*
+* Copyright (c) 2000-2015  Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#define DECO_WIDTH (10)
+
+#define VISIBILITY 1
+
+#undef EDJE_DEBUG
+
+collections {
+	group {
+		name: "scroller";
+
+		script {
+			public gValue;			// Glow value
+/*
+		This makes edje crash...
+			const Message_ID {
+				glow = 0,
+				show,
+				hide,
+			};
+*/
+			public message(Msg_Type:type, id, ...) {
+				if( (type==MSG_INT_SET) && (id==0) )		// Glow
+				{
+					new alpha;
+
+					alpha = getarg(2);
+
+					gValue = alpha;
+
+					glow(alpha);
+				}
+				else if( (type==MSG_STRING_INT) && (id==0) )		// Glow Part
+				{
+					new alpha;
+					new  partname[31];
+
+					snprintf(partname, 31, "%s",getarg(2));
+
+#ifdef EDJE_DEBUG
+					set_text(PART:"dbg", partname);
+#endif
+					glow_part(partname, alpha);
+
+
+				}
+				else if( (type==MSG_STRING) && (id==1) )		// MSG Show
+				{
+					new  partname[31];
+
+					snprintf(partname, 31, "%s",getarg(2));
+					set_state(get_part_id(partname), "default", 0.0);
+				}
+				else if( (type==MSG_STRING) && (id==2) )		// MSG Hide
+				{
+					new  partname[31];
+
+					snprintf(partname, 31, "%s",getarg(2));
+
+					// set_text(PART:"dbg", partname);
+
+					set_state(get_part_id(partname), "hide", 0.0);
+
+				}
+			}
+
+			public glow_part(partname[], value) {
+				new part_id;
+
+				part_id = get_part_id(partname);
+
+				custom_state(part_id, "default", 0.0);
+				set_state_val(part_id, STATE_COLOR, 255, 255, 255, value);
+				set_state(part_id, "custom", 0.0);
+			}
+
+			public glow(value) {
+				glow_part("clip_t", value);
+				glow_part("clip_b", value);
+				glow_part("clip_l", value);
+				glow_part("clip_r", value);
+			}
+
+			public unglow(value) {
+				glow_part("clip_t", value);
+				glow_part("clip_b", value);
+				glow_part("clip_l", value);
+				glow_part("clip_r", value);
+			}
+		}
+
+		parts {
+			part {
+				name: "elm.rect.bg";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 1.0; }
+					color: 0 0 0 0;
+				}
+			}
+
+#ifdef EDJE_DEBUG
+       part {
+            name: "dbg";
+            type: TEXT;
+            description {
+               min: 50 50;
+               state: "default" 0.0;
+               color: 0 0 255 255; /* blue */
+               rel1.relative: 0.0 0.0;
+               rel2.relative: 1.0 1.0;
+               align: 0.2 0.5;
+               visible: 0;
+               text {
+                  font: "arial";
+                  size: 22;
+                  min: 1 1;
+               }
+            }
+         }
+#endif
+
+			part {
+				name: "glow_t";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				clip_to: "clip_t";
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1.to: "clip_t";
+					rel2.to: "clip_t";
+					color: 255 0 0 255;
+				}
+			}
+
+			part {
+				name: "glow_b";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				clip_to: "clip_b";
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1.to: "clip_b";
+					rel2.to: "clip_b";
+					color: 255 0 0 255;
+				}
+			}
+
+
+			part {
+				name: "glow_l";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				clip_to: "clip_l";
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1.to: "clip_l";
+					rel2.to: "clip_l";
+					color: 255 0 0 255;
+				}
+			}
+
+			part {
+				name: "glow_r";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				clip_to: "clip_r";
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1.to: "clip_r";
+					rel2.to: "clip_r";
+					color: 255 0 0 255;
+				}
+			}
+
+			part {
+				name: "clip_t";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 0.0; }
+					align: 0.5 0.0;
+					min: 0 DECO_WIDTH;
+					color: 255 255 255 0;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					color: 255 255 255 0;
+				}
+			}
+
+			part {
+				name: "clip_b";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 1.0; }
+					rel2 { relative: 1.0 1.0; }
+					align: 0.5 1.0;
+					min: 0 DECO_WIDTH;
+					color: 255 255 255 0;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					color: 255 255 255 0;
+				}
+			}
+
+
+			part {
+				name: "clip_l";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 1.0; to_y: "clip_t"; }
+					rel2 { relative: 0.0 0.0; to_y: "clip_b";}
+					align: 0.0 0.5;
+					fixed: 1 1;
+					min: DECO_WIDTH 0;
+					color: 255 255 255 0;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					color: 255 255 255 0;
+				}
+			}
+
+			part {
+				name: "clip_r";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 1.0 1.0; to_y: "clip_t"; }
+					rel2 { relative: 1.0 0.0; to_y: "clip_b";}
+					align: 1.0 0.5;
+					fixed: 1 1;
+					min: DECO_WIDTH 0;
+					color: 255 255 255 0;
+				}
+
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					color: 255 255 255 0;
+				}
+
+			}
+		}		// End of parts
+
+		programs {
+			program { name: "show";
+				signal: "glow.show";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "clip_t";
+				target: "clip_b";
+				target: "clip_l";
+				target: "clip_r";
+			}
+			program { name: "hide";
+				signal: "glow.hide";
+				source: "elm";
+				action: STATE_SET "hide" 0.0;
+				target: "clip_t";
+				target: "clip_b";
+				target: "clip_l";
+				target: "clip_r";
+			}
+		}
+
+	}
+}
+
+/*
+	Operation
+
+	glow.[r/l/b/t].[show/hide]  : Visibility
+	glow.[r/l/b/t].[glow]  : Glow Effect. with value(0~255)
+
+
+*/
+

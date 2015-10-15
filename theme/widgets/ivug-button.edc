@@ -1,0 +1,264 @@
+/*
+* Copyright (c) 2000-2015  Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#define GENERAL_PROGRAMS(part_name, source_name) \
+	program { 	\
+		name: "mouse_down_"part_name;	\
+		signal: "mouse,down,1";			\
+		source: part_name"_event";				\
+		script {	\
+			new st[31];		\
+			new Float:vl;	\
+			get_state(PART:part_name, st, 30, vl);	\
+			if (strcmp(st, "default") == 0)	{			\
+ 				set_state(PART:part_name, "press", 0.0);	\
+			}	\
+			emit( part_name"_press", source_name );		\
+		}	\
+	}	\
+	program {	\
+		name: "mouse_up_"part_name;	\
+		signal: "mouse,up,1";	\
+		source: part_name"_event";	\
+		script {	\
+			new st[31];		\
+			new Float:vl;	\
+			get_state(PART:part_name, st, 30, vl);	\
+			if (strcmp(st, "press") == 0) {			\
+				set_state(PART:part_name, "default", 0.0);	\
+			}	\
+			emit( part_name"_release", source_name );		\
+		}	\
+	}	\
+	program {	\
+		name: "mouse_clicked_"part_name;	\
+		signal: "mouse,clicked,1";	\
+		source: part_name"_event";	\
+		script {	\
+			new st[31];		\
+			new Float:vl;	\
+			get_state(PART:part_name, st, 30, vl);	\
+			if (strcmp(st, "default") == 0)				\
+				emit( part_name"_click", source_name );	\
+		}	\
+	}	\
+	program {	\
+		name: "mouse_out_"part_name;	\
+		signal: "mouse,out";	\
+		source: part_name"_event";	\
+		script {	\
+			new st[31];		\
+			new Float:vl;	\
+			get_state(PART:part_name, st, 30, vl);	\
+			emit( part_name"_out", source_name );	\
+		}	\
+	}	\
+	program { \
+		name: part_name",normal"; \
+		source: "prog"; \
+		signal: part_name",normal"; \
+		script: { \
+			set_state(PART:part_name, "default", 0.0); \
+			set_state(PART:part_name"_event", "default", 0.0); \
+		} \
+	} \
+	program { \
+		name: part_name",press"; \
+		source: "prog"; \
+		signal: part_name",press"; \
+		script: { \
+			set_state(PART:part_name, "press", 0.0); \
+		} \
+	} \
+	program { \
+		name: part_name",dim"; \
+		source: "prog"; \
+		signal: part_name",dim"; \
+		script: { \
+			set_state(PART:part_name, "dim", 0.0); \
+		} \
+	}
+
+#define BTN_PAD (11)
+
+#define GENERAL_BUTTON(part_name, img_normal, img_press, img_dim) \
+        part {  \
+                name: part_name"_event";        \
+                type: RECT;            \
+                mouse_events: 1;        \
+                repeat_events: 0;        \
+                description {	\
+                	state: "default" 0.0; \
+                	color: 0 0 0 0; \
+			rel1 { relative: 0.0 0.0; offset: 0-BTN_PAD 0-BTN_PAD; }     \
+			rel2 { relative: 1.0 1.0; offset: -1+BTN_PAD -1+BTN_PAD; } \
+			visible: 1; \
+                } \
+	} \
+        part {  \
+                name: part_name;        \
+                type: IMAGE;            \
+                mouse_events: 0;        \
+                description {           \
+                        state: "default" 0.0;   \
+                        rel1 { relative: 0.0 0.0; }     \
+                        rel2 { relative: 1.0 1.0; }\
+                        image { normal: img_normal; }   \
+                }       \
+                description {           \
+                        state: "press" 0.0;                     \
+                        inherit: "default" 0.0;         \
+                        image { normal: img_press; }\
+                }       \
+                description {           \
+                        state: "dim" 0.0;                       \
+                        inherit: "default" 0.0;         \
+                        image { normal: img_dim; }\
+                }       \
+        }
+
+
+
+/*
+	Edit/Play/Share/NearBy/Delete
+*/
+
+	images {
+		image: "T01-1_icon_Edit.png" COMP;
+		image: "T01-1_icon_Edit_dim.png" COMP;
+		image: "T01-1_icon_Edit_press.png" COMP;
+		image: "T01_1_icon_Share.png" COMP;
+		image: "T01_1_icon_Share_dim.png" COMP;
+		image: "T01_1_icon_Share_press.png" COMP;
+		image: "T01_1_icon_nearby_Delete.png" COMP;
+		image: "T01_1_icon_nearby_Delete_dim.png" COMP;
+		image: "T01_1_icon_nearby_Delete_press.png" COMP;
+		image: "T01_1_icon_nearby_device.png" COMP;
+		image: "T01_1_icon_nearby_device_dim.png" COMP;
+		image: "T01_1_icon_nearby_device_press.png" COMP;
+		image: "T01_1_icon_play.png" COMP;
+		image: "T01_1_icon_play_dim.png" COMP;
+		image: "T01_1_icon_play_press.png" COMP;
+		image: "T01-1_icon_save.png" COMP;
+		image: "T01-1_icon_save_press.png" COMP;
+		image: "T01-1_icon_connection_info.png" COMP;
+		image: "T01-1_details_icon_close.png" COMP;
+		image: "T01-1_icon_burst_shot_edit.png" COMP;
+		image: "T01-1_icon_burst_shot_edit_dim.png" COMP;
+		image: "T01-1_icon_burst_shot_edit_press.png" COMP;
+	}
+
+	group {
+		name: "ivug.btn.burstedit";
+
+		parts {
+			GENERAL_BUTTON("image", "T01-1_icon_burst_shot_edit.png", "T01-1_icon_burst_shot_edit_press.png", "T01-1_icon_burst_shot_edit_dim.png")
+		}
+		programs {
+			GENERAL_PROGRAMS("image", "ivug.btn.burstedit")
+		}
+ 	}
+
+	group {
+		name: "ivug.btn.edit";
+
+		parts {
+			GENERAL_BUTTON("image", "T01-1_icon_Edit.png", "T01-1_icon_Edit_press.png", "T01-1_icon_Edit_dim.png")
+		}
+		programs {
+			GENERAL_PROGRAMS("image", "ivug.btn.edit")
+		}
+ 	}
+
+	group {
+		name: "ivug.btn.share";
+
+		parts {
+			GENERAL_BUTTON("image", "T01_1_icon_Share.png", "T01_1_icon_Share_press.png", "T01_1_icon_Share_dim.png")
+		}
+		programs {
+			GENERAL_PROGRAMS("image", "ivug.btn.share")
+		}
+ 	}
+
+	group {
+		name: "ivug.btn.nearby";
+
+		parts {
+			GENERAL_BUTTON("image", "T01_1_icon_nearby_device.png", "T01_1_icon_nearby_device_press.png", "T01_1_icon_nearby_device_dim.png")
+		}
+		programs {
+			GENERAL_PROGRAMS("image", "ivug.btn.nearby")
+		}
+ 	}
+
+	group {
+		name: "ivug.btn.play";
+
+		parts {
+			GENERAL_BUTTON("image", "T01_1_icon_play.png", "T01_1_icon_play_press.png", "T01_1_icon_play_dim.png")
+		}
+		programs {
+			GENERAL_PROGRAMS("image", "ivug.btn.play")
+		}
+ 	}
+
+	group {
+		name: "ivug.btn.delete";
+
+		parts {
+			GENERAL_BUTTON("image", "T01_1_icon_nearby_Delete.png", "T01_1_icon_nearby_Delete_press.png", "T01_1_icon_nearby_Delete_dim.png")
+		}
+		programs {
+			GENERAL_PROGRAMS("image", "ivug.btn.delete")
+		}
+ 	}
+
+	group {
+		name: "ivug.btn.save";
+
+		parts {
+			GENERAL_BUTTON("image", "T01-1_icon_save.png", "T01-1_icon_save_press.png", "T01-1_icon_save.png")
+		}
+		programs {
+			GENERAL_PROGRAMS("image", "ivug.btn.save")
+		}
+ 	}
+
+	group {
+		name: "ivug.btn.info";
+
+		parts {
+			GENERAL_BUTTON("image", "T01-1_icon_connection_info.png", "T01-1_icon_connection_info.png", "T01-1_icon_connection_info.png")
+		}
+		programs {
+			GENERAL_PROGRAMS("image", "ivug.btn.info")
+		}
+ 	}
+
+	group {
+		name: "ivug.btn.close";
+
+		parts {
+			GENERAL_BUTTON("image", "T01-1_details_icon_close.png", "T01-1_details_icon_close.png", "T01-1_details_icon_close.png")
+		}
+		programs {
+			GENERAL_PROGRAMS("image", "ivug.btn.close")
+		}
+ 	}
+
+

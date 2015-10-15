@@ -1,0 +1,181 @@
+/*
+* Copyright (c) 2000-2015  Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#define DEFINE_ICON(_name, _fname)        \
+images { image: _fname COMP; }                   \
+collections { group { name: _name;                    \
+      parts { part { name: "icon";                          \
+            type: IMAGE; mouse_events: 1;                   \
+            scale: 1; \
+            description { state: "default" 0.0;             \
+               align: 0.5 0.5;       \
+               fixed: 1 1;						\
+               aspect: 1.0 1.0;                             \
+               aspect_preference: VERTICAL;                 \
+               image.normal: _fname;             \
+}}}}}
+
+#define DEFINE_ICON_SIZE(_name, _fname, w, h)        \
+images { image: _fname COMP; }                   \
+collections { group { name: _name;                    \
+      parts { part { name: "icon";                          \
+            type: IMAGE; mouse_events: 1;                   \
+            scale: 1; \
+            description { state: "default" 0.0;             \
+               align: 0.5 0.5;       \
+		min: (w) (h); \
+		max: (w) (h); \
+               fixed: 1 1;						\
+               aspect: 1.0 1.0;                             \
+               image.normal: _fname;             \
+}}}}}
+
+
+
+#define ICON_FACEBOOK			"T01_Facebook.png"
+#define ICON_MESSAGE			"icon_message.png"
+#define ICON_EMAIL				"icon_email.png"
+
+#define ICON_NEARBY_PHONE		"U04_device_Mobile.png"
+#define ICON_NEARBY_TV		"T02_Player_Nearby_device_02.png"
+#define ICON_NEARBY_UNKNOWN		"U04_device_None_DNS.png"
+
+DEFINE_ICON("icon.facebook",			ICON_FACEBOOK)
+DEFINE_ICON("icon.message",				ICON_MESSAGE)
+DEFINE_ICON("icon.email",				ICON_EMAIL)
+
+DEFINE_ICON("icon.nearby.phone",		ICON_NEARBY_PHONE)
+DEFINE_ICON("icon.nearby.tv",			ICON_NEARBY_TV)
+DEFINE_ICON("icon.nearby.unknown",	ICON_NEARBY_UNKNOWN)
+
+
+#define ICON_ASF_UNKNOWN 		"asf_icon/U04_device_None_DNS.png"
+#define ICON_ASF_MOBILE 		"asf_icon/U04_device_Mobile.png"
+#define ICON_ASF_PC				"asf_icon/U04_device_PC.png"
+#define ICON_ASF_TV 			"asf_icon/U04_device_TV.png"
+#define ICON_ASF_STB 			"asf_icon/U04_device_STB.png"
+#define ICON_ASF_CAMERA 		"asf_icon/U04_device_Camera.png"
+#define ICON_ASF_CAMCORDER 	"asf_icon/U04_device_Camcorder.png"
+#define ICON_ASF_TABLET 		"asf_icon/U04_device_Tablet.png"
+#define ICON_ASF_LFD 		"asf_icon/U04_device_LFD.png"
+
+DEFINE_ICON("icon.asf.unknown",	ICON_NEARBY_UNKNOWN)
+DEFINE_ICON("icon.asf.mobile",		ICON_ASF_MOBILE)
+DEFINE_ICON("icon.asf.pc",		ICON_ASF_PC)
+DEFINE_ICON("icon.asf.tv",			ICON_ASF_TV)
+DEFINE_ICON("icon.asf.stb",		ICON_ASF_STB)
+DEFINE_ICON("icon.asf.camera",	ICON_ASF_CAMERA)
+DEFINE_ICON("icon.asf.camcorder",	ICON_ASF_CAMCORDER)
+DEFINE_ICON("icon.asf.tablet",		ICON_ASF_TABLET)
+DEFINE_ICON("icon.asf.lfd",		ICON_ASF_LFD)
+
+#define ICON_MAINMENU_ADDTAG 		"ctx_icon/T01-1_popup_icon_addtag.png"
+#define ICON_MAINMENU_ADD_CAPTION	"ctx_icon/T01-1_popup_icon_add_caption.png"
+#define ICON_MAINMENU_CROP		"ctx_icon/T01-1_popup_icon_crop.png"
+#define ICON_MAINMENU_DETAIL		"ctx_icon/T01-1_popup_icon_detail.png"
+#define ICON_MAINMENU_DETECT_TEXT	"ctx_icon/T01-1_popup_icon_detect_text.png"
+#define ICON_MAINMENU_EDIT_WEATHER	"ctx_icon/T01-1_popup_icon_edit_weather_tag.png"
+#define ICON_MAINMENU_FACETAG		"ctx_icon/T01-1_popup_icon_face_tag.png"
+#define ICON_MAINMENU_GET_DIRECTIONS	"ctx_icon/T01-1_popup_icon_get_directions.png"
+#define ICON_MAINMENU_PRINT		"ctx_icon/T01-1_popup_icon_Print.png"
+#define ICON_MAINMENU_ROT_CCW 		"ctx_icon/T01-1_popup_icon_Roteteright.png"
+#define ICON_MAINMENU_ROT_CW		"ctx_icon/T01-1_popup_icon_Roteteleft.png"
+#define ICON_MAINMENU_SETAS		"ctx_icon/T01-1_popup_icon_setas.png"
+#define ICON_MAINMENU_SLIDESHOW 		"ctx_icon/T01-1_popup_icon_slideshow.png"
+#define ICON_MAINMENU_TAGBUDDY		"ctx_icon/T01-1_popup_icon_tagbuddy.png"
+#define ICON_MAINMENU_TRIM		"ctx_icon/T01_popup_icon_trim.png"
+#define ICON_MAINMENU_TRANSPARENT		"ctx_icon/T01_popup_icon_transparent.png"
+#define ICON_MAINMENU_PLAY_BURSTSHOT	"ctx_icon/T01-1_icon_burst_shot_45x45.png"
+#define ICON_MAINMENU_COPY_TO_CLIPBOARD	"ctx_icon/T06_more_poup_icon_copy.png"
+
+DEFINE_ICON("icon.mainmenu.addtag",	ICON_MAINMENU_ADDTAG)
+DEFINE_ICON("icon.mainmenu.addcaption", ICON_MAINMENU_ADD_CAPTION)
+DEFINE_ICON("icon.mainmenu.crop",		ICON_MAINMENU_CROP)
+DEFINE_ICON("icon.mainmenu.detail",		ICON_MAINMENU_DETAIL)
+DEFINE_ICON("icon.mainmenu.detexttext", 	ICON_MAINMENU_DETECT_TEXT)
+DEFINE_ICON("icon.mainmenu.editweather", 	ICON_MAINMENU_EDIT_WEATHER)
+DEFINE_ICON("icon.mainmenu.facetag", 	ICON_MAINMENU_FACETAG)
+DEFINE_ICON("icon.mainmenu.getdirections",	ICON_MAINMENU_GET_DIRECTIONS)
+DEFINE_ICON("icon.mainmenu.print", 	ICON_MAINMENU_PRINT)
+DEFINE_ICON("icon.mainmenu.rot.ccw",			ICON_MAINMENU_ROT_CCW)
+DEFINE_ICON("icon.mainmenu.rot.cw",		ICON_MAINMENU_ROT_CW)
+DEFINE_ICON("icon.mainmenu.setas",	ICON_MAINMENU_SETAS)
+DEFINE_ICON("icon.mainmenu.slideshow",	ICON_MAINMENU_SLIDESHOW)
+DEFINE_ICON("icon.mainmenu.tagbuddy",		ICON_MAINMENU_TAGBUDDY)
+DEFINE_ICON("icon.mainmenu.trim",		ICON_MAINMENU_TRIM)
+DEFINE_ICON("icon.mainmenu.transparent",		ICON_MAINMENU_TRANSPARENT)
+DEFINE_ICON("icon.mainmenu.playburstshot",		ICON_MAINMENU_PLAY_BURSTSHOT)
+DEFINE_ICON("icon.mainmenu.copytoclipboard",		ICON_MAINMENU_COPY_TO_CLIPBOARD)
+
+
+#define ICON_BURSTPLAY_SPEED_1_5TH 			"burstspeed/T01-1_icon_burstshot_speed_01.png"
+#define ICON_BURSTPLAY_SPEED_1_5TH_DIM 		"burstspeed/T01-1_icon_burstshot_speed_01_dim.png"
+#define ICON_BURSTPLAY_SPEED_1_5TH_PRESS 	"burstspeed/T01-1_icon_burstshot_speed_01_press.png"
+
+#define ICON_BURSTPLAY_SPEED_1_2TH 			"burstspeed/T01-1_icon_burstshot_speed_02.png"
+#define ICON_BURSTPLAY_SPEED_1_2TH_DIM 		"burstspeed/T01-1_icon_burstshot_speed_02_dim.png"
+#define ICON_BURSTPLAY_SPEED_1_2TH_PRESS 	"burstspeed/T01-1_icon_burstshot_speed_02_press.png"
+
+#define ICON_BURSTPLAY_SPEED_1 				"burstspeed/T01-1_icon_burstshot_speed_03.png"
+#define ICON_BURSTPLAY_SPEED_1_DIM 			"burstspeed/T01-1_icon_burstshot_speed_03_dim.png"
+#define ICON_BURSTPLAY_SPEED_1_PRESS 		"burstspeed/T01-1_icon_burstshot_speed_03_press.png"
+
+#define ICON_BURSTPLAY_SPEED_2 				"burstspeed/T01-1_icon_burstshot_speed_04.png"
+#define ICON_BURSTPLAY_SPEED_2_DIM 			"burstspeed/T01-1_icon_burstshot_speed_04_dim.png"
+#define ICON_BURSTPLAY_SPEED_2_PRESS 		"burstspeed/T01-1_icon_burstshot_speed_04_press.png"
+
+DEFINE_ICON("icon.burstspeed.1.5th",			ICON_BURSTPLAY_SPEED_1_5TH)
+DEFINE_ICON("icon.burstspeed.1.5th.press",		ICON_BURSTPLAY_SPEED_1_5TH_PRESS)
+
+DEFINE_ICON("icon.burstspeed.1.2th",			ICON_BURSTPLAY_SPEED_1_2TH)
+DEFINE_ICON("icon.burstspeed.1.2th.press",		ICON_BURSTPLAY_SPEED_1_2TH_PRESS)
+
+DEFINE_ICON("icon.burstspeed.1",				ICON_BURSTPLAY_SPEED_1)
+DEFINE_ICON("icon.burstspeed.1.press",			ICON_BURSTPLAY_SPEED_1_PRESS)
+
+DEFINE_ICON("icon.burstspeed.2",				ICON_BURSTPLAY_SPEED_2)
+DEFINE_ICON("icon.burstspeed.2.press",			ICON_BURSTPLAY_SPEED_2_PRESS)
+
+#define ICON_PLAY_VIDEO_260x260		"metaphore/T01-1_album_video_play.png"
+#define ICON_PLAY_VIDEO_80x80			"metaphore/T01_btn_play.png"
+
+#define ICON_BURST						"metaphore/T01-1_icon_burst_shot.png"
+#define ICON_BURST_DIM						"metaphore/T01-1_icon_burst_shot_dim.png"
+#define ICON_BURST_PRESS						"metaphore/T01-1_icon_burst_shot_press.png"
+
+#define ICON_PANORAMA					"metaphore/T01-1_icon_panorama_shot.png"
+#define ICON_SHOWITEM					"metaphore/T01-1_icon_show_item.png"
+
+#define ICON_SOUND_SCENE				"metaphore/T01-1_icon_sound_shot.png"
+#define ICON_SOUND_SCENE_DIM			"metaphore/T01-1_icon_sound_shot_dim.png"
+#define ICON_SOUND_SCENE_PRESS			"metaphore/T01-1_icon_sound_shot_press.png"
+
+DEFINE_ICON("btn.video.play.260.260",		ICON_PLAY_VIDEO_260x260)
+DEFINE_ICON("btn.video.play.80.80",		ICON_PLAY_VIDEO_80x80)
+
+DEFINE_ICON("icon.sound_scene",			ICON_SOUND_SCENE)
+DEFINE_ICON("icon.sound_scene.dim",		ICON_SOUND_SCENE_DIM)
+DEFINE_ICON("icon.sound_scene.press",		ICON_SOUND_SCENE_PRESS)
+
+DEFINE_ICON("icon.burst",					ICON_BURST)
+DEFINE_ICON("icon.burst.dim",				ICON_BURST_DIM)
+DEFINE_ICON("icon.burst.press",			ICON_BURST_PRESS)
+
+DEFINE_ICON("icon.panorama",				ICON_PANORAMA)
+DEFINE_ICON("icon.showitem",				ICON_SHOWITEM)
+
+
