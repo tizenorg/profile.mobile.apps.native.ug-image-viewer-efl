@@ -19,7 +19,6 @@
 #include <algorithm>    // std::swap
 
 #include <pthread.h>
-//#include <Ecore_X.h>
 
 #include "ivug-common.h"
 #include "ivug-slider-new.h"

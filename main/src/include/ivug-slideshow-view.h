@@ -23,7 +23,6 @@
 
 #include "ivug-slideshow.h"
 
-//#include <Ecore_X.h>
 
 typedef struct {
 	Evas_Object *parent;

@@ -21,7 +21,6 @@
 #include "ivug-slideshow-view.h"
 
 #include <ui-gadget-module.h>
-//#include <Ecore_X.h>
 #include <device/power.h>
 
 #include "ivug-filter.h"
