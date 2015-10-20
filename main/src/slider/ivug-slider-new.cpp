@@ -862,22 +862,23 @@ void ivug_slider_new_change_view_size(Ivug_SliderNew *slider_new, int w, int h)
 
 	int rot = elm_win_rotation_get((Evas_Object *)ug_get_window());
 
-	int fw, fh;
-#if 1//Tizen3.0 Build error
-	fw = 480;
-	fh = 800;
-#else
-	ecore_x_window_size_get(ecore_x_window_root_first_get(), &fw, &fh);		// Portrait size.
-#endif
+	int screen_x = 0;
+	int screen_y = 0;
+	int screen_w = 0;
+	int screen_h = 0;
+
+	elm_win_screen_size_get((Evas_Object *)ug_get_window(), &screen_x, &screen_y, &screen_w, &screen_h);
+	MSG_HIGH("screen_Size : Win(%d,%d,%d,%d)", screen_x, screen_y, screen_w, screen_h);
+
 	if ((rot % 180) != 0 )
 	{
-		std::swap(fw,fh);
+		std::swap(screen_w,screen_h);
 	}
 
 // Landscape Mode -> SIP visible --> Window geometry is 1280x729....
 // Rotate in E-mail.. WH=1225x1280
 
-	MSG_HIGH("Set new Size : Win(%d,%d,%d,%d) WH(%d,%d)", wx, wy, ww, wh, fw, fh);
+	MSG_HIGH("Set new Size : Win(%d,%d,%d,%d) WH(%d,%d)", wx, wy, ww, wh, screen_w, screen_h);
 }
 
 void ivug_slider_new_delete_cur_image(Ivug_SliderNew *slider_new)
