@@ -36,8 +36,6 @@ pkg_check_modules(${PROJECT_NAME}_pkgs REQUIRED
 	eina
 	evas
 	dlog
-	#ecore-x
-	#xext
 	ui-gadget-1
 	capi-appfw-application
 	capi-media-player

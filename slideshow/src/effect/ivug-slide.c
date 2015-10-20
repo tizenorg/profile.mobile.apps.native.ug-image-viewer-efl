@@ -62,14 +62,12 @@ static void _ivug_slide_get_screen_dimension(int *width, int *height)
 {
 	int rotation = elm_win_rotation_get((Evas_Object *)ug_get_window());
 
+	int screen_x = 0;
+	int screen_y = 0;
 	int screen_w = 0;
 	int screen_h = 0;
-#if 1//Tizen3.0 Build error
-	screen_w = 480;
-	screen_h = 800;
-#else
-	ecore_x_window_size_get(ecore_x_window_root_first_get(), &screen_w, &screen_h);
-#endif
+
+	elm_win_screen_size_get((Evas_Object *)ug_get_window(), &screen_x, &screen_y, &screen_w, &screen_h);
 	if (rotation == 0 || rotation == 180)
 	{
 		*width = screen_w;

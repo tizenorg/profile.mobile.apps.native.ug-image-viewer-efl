@@ -26,7 +26,6 @@
 	if bSlideFirst == EINA_FALSE, wait interval time and then slide
 */
 #include <Elementary.h>
-//#include <Ecore_X.h>
 #include <player.h>
 #include <glib.h>
 

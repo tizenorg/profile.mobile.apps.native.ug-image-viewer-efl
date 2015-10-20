@@ -77,9 +77,7 @@ pkg_check_modules(${PROJECT_NAME}_pkgs REQUIRED
 	eina
 	dlog
 	ecore
-	ecore-file
 	ecore-imf
-	#ecore-x
 	ecore-input
 	ecore-evas
 	ui-gadget-1
