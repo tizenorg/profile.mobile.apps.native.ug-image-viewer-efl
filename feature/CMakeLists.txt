@@ -26,7 +26,6 @@ INCLUDE(FindPkgConfig)
 pkg_check_modules(${PROJECT_NAME}_pkgs REQUIRED
 	evas
 	ecore
-	#ecore-x
 	elementary
 	dlog
 	ui-gadget-1

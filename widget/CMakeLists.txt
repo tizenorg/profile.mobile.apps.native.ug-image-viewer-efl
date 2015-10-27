@@ -29,7 +29,6 @@ pkg_check_modules(${PROJECT_NAME}_pkgs REQUIRED
 	eina
 	evas
 	dlog
-	cairo
 	ui-gadget-1
 	efl-extension
 )

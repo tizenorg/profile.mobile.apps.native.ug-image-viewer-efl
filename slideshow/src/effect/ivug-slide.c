@@ -19,7 +19,6 @@
 #include "ivug-effect.h"
 #include <ui-gadget.h>
 #include <ui-gadget-module.h>
-//#include <Ecore_X.h>
 
 
 typedef struct {
