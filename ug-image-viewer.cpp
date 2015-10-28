@@ -36,16 +36,14 @@
 #ifdef TRACE_MEMORY
 #include <unistd.h>
 #endif
-#if 0//Tizen3.0 Build error
+
 static int nRunCount = 0;
 
 extern "C" UG_MODULE_API int UG_MODULE_INIT(struct ug_module_ops *ops)
 {
 	ug_data *ugd;
 
-	const char *gEngine = elm_config_preferred_engine_get();
-
-	MSG_IMAGEVIEW_HIGH("UG_MODULE_INIT. Ver=12.0. RunCount=%d Graphic=%s", nRunCount, gEngine);
+	MSG_IMAGEVIEW_HIGH("UG_MODULE_INIT. Ver=12.0. RunCount=%d", nRunCount);
 
 	if (!ops) {
 		MSG_IMAGEVIEW_ERROR("OPS Pointer is NULL");
@@ -171,7 +169,6 @@ _DESTRUCTOR void _DLLExit(void)
 {
 	MSG_IMAGEVIEW_HIGH("Image Viewer - Called DLL destructor");
 }
-#endif
 
 int main()
 {

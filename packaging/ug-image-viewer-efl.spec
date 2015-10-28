@@ -1,5 +1,5 @@
 %define cflags	" -Wall -Werror -Wextra -g -fPIC -O3 -Wno-unused-parameter -Wno-missing-field-initializers -fvisibility=hidden -finstrument-functions -Wl,--as-needed -fdata-sections -ffunction-sections -Wl,--gc-sections -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
-%define cxxflags	" -Wall -Werror -Wextra -g -fPIC -O3 -Wno-unused-parameter -Wno-missing-field-initializers -fvisibility=hidden -fvisibility-inlines-hidden -finstrument-functions -Wl,--as-needed -fdata-sections -ffunction-sections -Wl,--gc-sections -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
+%define cxxflags	" -Wall -Wextra -g -fPIC -fpermissive -O3 -Wno-unused-parameter -Wno-missing-field-initializers -fvisibility=hidden -fvisibility-inlines-hidden -finstrument-functions -Wl,--as-needed -fdata-sections -ffunction-sections -Wl,--gc-sections -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
 
 %define _usrdir	/usr
 %define _ugdir	%{_usrdir}/ug
