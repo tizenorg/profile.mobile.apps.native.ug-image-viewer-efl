@@ -224,10 +224,10 @@ _on_popup_btn_click(void *data, Evas_Object *obj, void *event_info)
 
 	ListPopup *pListPopup = data;
 
-	int nIndex = (int)evas_object_data_get(obj, "_index");
-	MSG_HIGH("Genlist Popup Btn click. pListPopup=0x%08x Index=%d", pListPopup, nIndex);
+	void *nIndex = evas_object_data_get(obj, "_index");
+	MSG_HIGH("Genlist Popup Btn click. pListPopup=0x%08x Index=%p", pListPopup, nIndex);
 
-	evas_object_smart_callback_call(pListPopup->obj, "popup,btn,selected", (void *)nIndex);
+	evas_object_smart_callback_call(pListPopup->obj, "popup,btn,selected", nIndex);
 }
 
 static void _on_listpopup_deleted(void * data, Evas * e, Evas_Object * obj, void * event_info)
