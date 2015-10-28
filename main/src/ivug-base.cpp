@@ -68,8 +68,7 @@ bool getSupportedStorages_cb(int storageId, storage_type_e type, storage_state_e
 path, void *userData)
 {
 	MSG_NOTI_ERROR("");
-	if (type == STORAGE_TYPE_EXTERNAL)
-	{
+	if (type == STORAGE_TYPE_EXTERNAL) {
 		__externalStorageId = storageId;
 		return false;
 	}
@@ -183,23 +182,20 @@ static bool _is_mmc_inserted(void)
 {
 	int error = storage_foreach_device_supported(getSupportedStorages_cb, NULL);
 
-	if (error == STORAGE_ERROR_NONE)
-	{
+	if (error == STORAGE_ERROR_NONE) {
 		storage_state_e mmc_state;
 		int ret = storage_get_state(__externalStorageId, &mmc_state);
-		if (ret != STORAGE_ERROR_NONE) // failed
-		{
+		if (ret != STORAGE_ERROR_NONE) {
 			MSG_NOTI_ERROR("storage_get_state %d is failed", mmc_state);
 			return false;
 		}
-		if (mmc_state == STORAGE_STATE_MOUNTED)
-		{
+
+		if (mmc_state == STORAGE_STATE_MOUNTED) {
 			return true;
 		}
 	}
 
 	return false;
-
 }
 
 static void _on_mmc_state_changed(int storage_id, storage_state_e state, void *user_data)
@@ -207,36 +203,26 @@ static void _on_mmc_state_changed(int storage_id, storage_state_e state, void *u
 	ug_data *ugd = (ug_data *)user_data;
 	IV_ASSERT(ugd != NULL);
 
-	if(_is_mmc_inserted() == false)
-	{
+	if (_is_mmc_inserted() == false) {
 		MSG_IMAGEVIEW_WARN("MMC Removed!");
-		if(strncmp(ugd->ivug_param->filepath, PATH_SDCARD, strlen(PATH_SDCARD)) != 0
+		if (strncmp(ugd->ivug_param->filepath, PATH_SDCARD, strlen(PATH_SDCARD)) != 0
 			&& ugd->ivug_param->view_by != IVUG_VIEW_BY_ALL
-			&& ugd->ivug_param->view_by != IVUG_VIEW_BY_HIDDEN_ALL)
-		{
+			&& ugd->ivug_param->view_by != IVUG_VIEW_BY_HIDDEN_ALL) {
 			return;
 		}
 
 		MSG_IMAGEVIEW_WARN("Request destroy UG=0x%08x", gGetUGHandle());
 
-		if(ugd->main_view)
-		{
+		if (ugd->main_view) {
 			_ivug_main_on_mmc_state_changed(ugd->main_view);
-		}
-		else if(ugd->ss_view)
-		{
+		} else if (ugd->ss_view) {
 			_ivug_slideshow_view_on_mmc_state_changed(ugd->ss_view);
-		}
-		else
-		{
-			if(ugd->exit_timer == NULL)
-			{
+		} else {
+			if (ugd->exit_timer == NULL) {
 				ugd->exit_timer = ecore_timer_add(0.2, _on_exit_timer_expired, ugd);
 			}
 		}
-	}
-	else
-	{
+	} else {
 		MSG_IMAGEVIEW_WARN("MMC Inserted!");
 	}
 }
@@ -253,34 +239,29 @@ static void _destroy_manually(void *priv)
 	MSG_IMAGEVIEW_HIGH("_destroy_manually ugd=0x%08x", ugd);
 
 	int error_code = storage_unset_state_changed_cb(__externalStorageId, _on_mmc_state_changed);
-	if (error_code != STORAGE_ERROR_NONE)
-	{
+	if (error_code != STORAGE_ERROR_NONE) {
 		MSG_MAIN_ERROR("storage_unset_state_changed_cb() failed!!");
 	}
 
-	if(ugd->bErrMsg)
-	{
+	if (ugd->bErrMsg) {
 		free(ugd->bErrMsg);
 		ugd->bErrMsg = NULL;
 	}
 
-	if(ugd->crop_ug)
-	{
+	if (ugd->crop_ug) {
 		ivug_crop_ug_destroy(ugd->crop_ug);
 		ugd->crop_ug = NULL;
 	}
 
 	//destroy main view.
-	if (ugd->main_view )
-	{
+	if (ugd->main_view) {
 		PERF_CHECK_BEGIN(LVL1, "MainView");
 		ivug_main_view_destroy(ugd->main_view);
 		ugd->main_view = NULL;
 		PERF_CHECK_END(LVL1, "MainView");
 	}
 
-	if (ugd->ss_view )
-	{
+	if (ugd->ss_view) {
 		PERF_CHECK_BEGIN(LVL1, "SlideShowView");
 		ivug_slideshow_view_destroy(ugd->ss_view);
 		ugd->ss_view = NULL;
@@ -288,14 +269,12 @@ static void _destroy_manually(void *priv)
 	}
 
 	//delete param.
-	if(ugd->ivug_param)
-	{
+	if (ugd->ivug_param) {
 		ivug_param_delete(ugd->ivug_param);
 		ugd->ivug_param = NULL;
 	}
 
-	if (ugd->base)
-	{
+	if (ugd->base) {
 		PERF_CHECK_BEGIN(LVL1, "Base layout");
 		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_DEL, _on_base_deleted);
 		evas_object_del(ugd->base);
@@ -310,8 +289,7 @@ static Evas_Object *create_fullview(Evas_Object *win, ug_data *ugd)
 
 	/* Create Full view */
 	base = EFL::create_layout(win, EDJ_PATH"/ivug-base.edj", "ivug_base");
-	if (base == NULL)
-	{
+	if (base == NULL) {
 		MSG_IMAGEVIEW_HIGH("Cannot set layout. EDJ=%s Group=%s", EDJ_PATH"/ivug-base.edj", "ivug_base");
 		return NULL;
 	}
@@ -334,16 +312,6 @@ static Evas_Object *create_frameview(Evas_Object *parent, ug_data *ugd)
 
 	return base;
 }
-
-
-#if 0
-static void
-_on_base_backkey(void *data, Evas_Object *obj, void *event_info)
-{
-	MSG_SETAS_HIGH("Ignore back key");
-}
-#endif
-
 
 void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *priv)
 {
@@ -491,27 +459,6 @@ void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *
 			return NULL;
 
 		}
-#if 0//Dead code
-		if(ugd->crop_ug == NULL)
-		{
-			MSG_IMAGEVIEW_ERROR("SetAS UG creation failed Type:%d", ugd->ivug_param->setas_type);
-			ugd->bError = true;
-			ugd->bErrMsg = strdup("Layout Loading Fail");
-			goto ON_CREATE_ERROR;
-		}
-
-		Evas_Object *layout = NULL;
-
-		if(ugd->crop_ug)
-		{
-			layout = ivug_crop_ug_get_layout(ugd->crop_ug);
-		}
-
-// SetAs -> Caller image -> Ok -> Immediately Back key
-		eext_object_event_callback_add(ugd->base, EEXT_CALLBACK_BACK, _on_base_backkey, NULL);
-
-		elm_object_part_content_set(ugd->base, "elm.swallow.content", layout);	//swallow
-#endif
 	} else {
 		PERF_CHECK_BEGIN(LVL1, "main_view_create");
 
@@ -591,8 +538,7 @@ void on_start(ui_gadget_h ug, app_control_h service, void *priv)
 
 	PERF_CHECK_BEGIN(LVL0, "On Start");
 
-	if (!ug || !priv)
-	{
+	if (!ug || !priv) {
 		MSG_IMAGEVIEW_ERROR("Invalid UG. UG=0x%08x Priv=0x%08x", ug, priv);
 		return ;
 	}
@@ -605,8 +551,7 @@ void on_start(ui_gadget_h ug, app_control_h service, void *priv)
 
 	MSG_IMAGEVIEW_HIGH("Image Viewer : %s BaseGeometry(%d,%d,%d,%d)", __func__, ux, uy, uw, uh);
 
-	if(ugd->bError == true)
-	{
+	if (ugd->bError == true) {
 		PERF_CHECK_END(LVL0, "On Start");
 		MSG_IMAGEVIEW_ERROR("UG create has ERROR");
 		notification_status_message_post(GET_STR(IDS_UNABLE_TO_OPEN_FILE));
@@ -614,25 +559,11 @@ void on_start(ui_gadget_h ug, app_control_h service, void *priv)
 		return;
 	}
 
-	if (ugd->ivug_param->mode == IVUG_MODE_SLIDESHOW || ugd->ivug_param->footsteps)
-	{
-		PERF_CHECK_BEGIN(LVL1, "slideshow_view_start");
-		ivug_slideshow_view_start(ugd->ss_view);
-		PERF_CHECK_END(LVL1, "slideshow_view_start");
-	}
-	else if (ugd->main_view )
-	{
-		// Force render only for main view.
-		MSG_IMAGEVIEW_HIGH("BEGIN : Force Render");
-		// evas_render(evas_object_evas_get(ugd->base));
-		MSG_IMAGEVIEW_HIGH("END   : Force Render");
-
+	if (ugd->main_view) {
 		PERF_CHECK_BEGIN(LVL1, "main_view_start");
 		ivug_main_view_start(ugd->main_view, service);
 		PERF_CHECK_END(LVL1, "main_view_start");
-	}
-	else if (ugd->crop_ug )
-	{
+	} else if (ugd->crop_ug) {
 		ivug_crop_ug_start(ugd->crop_ug);
 	}
 
@@ -642,8 +573,7 @@ void on_start(ui_gadget_h ug, app_control_h service, void *priv)
 
 	MSG_IMAGEVIEW_HIGH("Image Viewer END:%s, ug=0x%08x, data=0x%08x", __func__, ug, priv);
 
-	if(ugd->ivug_param->bStandalone == true)
-	{
+	if (ugd->ivug_param->bStandalone == true) {
 		_send_result_to_caller(ug);
 	}
 }
@@ -652,36 +582,26 @@ void on_pause(ui_gadget_h ug, app_control_h service, void *priv)
 {
 	MSG_IMAGEVIEW_HIGH("Image Viewer : %s, ug=0x%08x, data=0x%08x", __func__, ug, priv);
 
-	if (!ug || !priv)
-	{
+	if (!ug || !priv) {
 		MSG_IMAGEVIEW_ERROR("Invalid UG. UG=0x%08x Priv=0x%08x", ug, priv);
 		return ;
 	}
 
-	if(gGetDestroying() == true)
-	{
+	if (gGetDestroying() == true) {
 		MSG_IMAGEVIEW_WARN("Image Viewer is destroying");
 		return;
 	}
 
 	ug_data *ugd = (ug_data *)priv;
 
-	if(ugd->ivug_param == NULL)
-	{
+	if (ugd->ivug_param == NULL) {
 		MSG_IMAGEVIEW_ERROR("UG is destroying");
 		return;
 	}
 
-	if (ugd->ivug_param->mode == IVUG_MODE_SLIDESHOW || ugd->ivug_param->footsteps)
-	{
-		ivug_slideshow_view_pause(ugd->ss_view);
-	}
-	else if (ugd->main_view )
-	{
+	if (ugd->main_view) {
 		ivug_main_view_pause(ugd->main_view);
-	}
-	else
-	{
+	} else {
 		MSG_IMAGEVIEW_HIGH("don't need to pause");
 	}
 }
@@ -690,24 +610,16 @@ void on_resume(ui_gadget_h ug, app_control_h service, void *priv)
 {
 	MSG_IMAGEVIEW_HIGH("Image Viewer : %s, ug=0x%08x, data=0x%08x", __func__, ug, priv);
 
-	if (!ug || !priv)
-	{
+	if (!ug || !priv) {
 		IVUG_DEBUG_MSG("Invalid UG. UG=0x%08x Priv=0x%08x", ug, priv);
 		return ;
 	}
 
 	ug_data *ugd = (ug_data *)priv;
 
-	if (ugd->ivug_param->mode == IVUG_MODE_SLIDESHOW || ugd->ivug_param->footsteps)
-	{
-		ivug_slideshow_view_resume(ugd->ss_view);
-	}
-	else if (ugd->main_view )
-	{
+	if (ugd->main_view) {
 		ivug_main_view_resume(ugd->main_view);
-	}
-	else
-	{
+	} else {
 		MSG_IMAGEVIEW_HIGH("don't need to resume");
 	}
 
@@ -719,8 +631,7 @@ void on_destroy(ui_gadget_h ug, app_control_h service, void *priv)
 
 	PERF_CHECK_BEGIN(LVL0, "On Destroy");
 
-	if (!ug || !priv)
-	{
+	if (!ug || !priv) {
 		MSG_IMAGEVIEW_ERROR("Invalid UG. UG=0x%08x Priv=0x%08x", ug, priv);
 		return ;
 	}
@@ -729,29 +640,25 @@ void on_destroy(ui_gadget_h ug, app_control_h service, void *priv)
 
 	MSG_IMAGEVIEW_HIGH("On Destroy : ug=0x%08x", ug);
 
-	if(ugd->bErrMsg)
-	{
+	if (ugd->bErrMsg) {
 		free(ugd->bErrMsg);
 		ugd->bErrMsg = NULL;
 	}
 
-	if(ugd->crop_ug)
-	{
+	if (ugd->crop_ug) {
 		ivug_crop_ug_destroy(ugd->crop_ug);
 		ugd->crop_ug = NULL;
 	}
 
 	//destroy main view.
-	if (ugd->main_view )
-	{
+	if (ugd->main_view) {
 		PERF_CHECK_BEGIN(LVL1, "MainView");
 		ivug_main_view_destroy(ugd->main_view);
 		ugd->main_view = NULL;
 		PERF_CHECK_END(LVL1, "MainView");
 	}
 
-	if (ugd->ss_view )
-	{
+	if (ugd->ss_view) {
 		PERF_CHECK_BEGIN(LVL1, "SlideShowView");
 		ivug_slideshow_view_destroy(ugd->ss_view);
 		ugd->ss_view = NULL;
@@ -759,22 +666,19 @@ void on_destroy(ui_gadget_h ug, app_control_h service, void *priv)
 	}
 
 	//delete param.
-	if(ugd->ivug_param)
-	{
+	if (ugd->ivug_param) {
 		ivug_param_delete(ugd->ivug_param);
 		ugd->ivug_param = NULL;
 	}
 
 	//finalize data
 	PERF_CHECK_BEGIN(LVL1, "Context");
-	if (!ivug_context_deinit(ug))
-	{
+	if (!ivug_context_deinit(ug)) {
 		MSG_IMAGEVIEW_ERROR("ivug_main_deinit failed");
 	}
 	PERF_CHECK_END(LVL1, "Context");
 
-	if (ugd->base)
-	{
+	if (ugd->base) {
 		PERF_CHECK_BEGIN(LVL1, "Base layout");
 		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_DEL, _on_base_deleted);
 		evas_object_del(ugd->base);
@@ -804,16 +708,14 @@ void on_message(ui_gadget_h ug, app_control_h msg, app_control_h service, void *
 {
 	MSG_IMAGEVIEW_HIGH("Image Viewer : %s UG=0x%08x", __func__, ug);	//on message
 
-	if (!ug || !priv)
-	{
+	if (!ug || !priv) {
 		MSG_IMAGEVIEW_ERROR("Invalid UG. UG=0x%08x Priv=0x%08x", ug, priv);
 		return;
 	}
 
 	int ret = app_control_foreach_extra_data(msg, _data_print, NULL);
 
-	if(APP_CONTROL_ERROR_NONE != ret)
-	{
+	if (APP_CONTROL_ERROR_NONE != ret) {
 		MSG_IVUG_ERROR("app_control_foreach_extra_data ERROR");
 	}
 
@@ -821,16 +723,14 @@ void on_message(ui_gadget_h ug, app_control_h msg, app_control_h service, void *
 
 	//ivug_msg_type msg_type = IVUG_MSG_NONE;
 
-	if(ugd->main_view == NULL)
-	{
+	if (ugd->main_view == NULL) {
 		MSG_IMAGEVIEW_ERROR("main view is NULL");
 		return;
 	}
 
 	char *value = NULL;
 	app_control_get_extra_data(msg, "Destroy", &value);
-	if(value != NULL)
-	{
+	if (value != NULL) {
 		MSG_IMAGEVIEW_HIGH("_destroy_manually msg received");
 		_destroy_manually(priv);
 		free(value);
@@ -844,8 +744,7 @@ void on_message(ui_gadget_h ug, app_control_h msg, app_control_h service, void *
 
 void on_event(ui_gadget_h ug, enum ug_event event, app_control_h service, void *priv)
 {
-	if (!ug || !priv)
-	{
+	if (!ug || !priv) {
 		MSG_IMAGEVIEW_ERROR("Invalid UG. UG=0x%08x Priv=0x%08x", ug, priv);
 		return;
 	}
@@ -887,15 +786,13 @@ void on_destroying(ui_gadget_h ug, app_control_h service, void *priv)
 {
 	MSG_IMAGEVIEW_HIGH("Image Viewer : %s UG=0x%08x", __func__, ug);
 
-	if (!ug || !priv)
-	{
+	if (!ug || !priv) {
 		MSG_IMAGEVIEW_ERROR("Invalid UG. UG=0x%08x Priv=0x%08x", ug, priv);
 		return;
 	}
 
 	int error_code = storage_unset_state_changed_cb(__externalStorageId, _on_mmc_state_changed);
-	if (error_code != STORAGE_ERROR_NONE)
-	{
+	if (error_code != STORAGE_ERROR_NONE) {
 		MSG_MAIN_ERROR("storage_unset_state_changed_cb() failed!!");
 	}
 

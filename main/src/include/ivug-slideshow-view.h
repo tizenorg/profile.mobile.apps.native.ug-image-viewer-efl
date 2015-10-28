@@ -52,15 +52,6 @@ extern "C" {
 #endif
 
 void
-ivug_slideshow_view_start(Ivug_SlideShowView *pSSView);
-
-void
-ivug_slideshow_view_resume(Ivug_SlideShowView *pSSView);
-
-void
-ivug_slideshow_view_pause(Ivug_SlideShowView *pSSView);
-
-void
 ivug_slideshow_view_destroy(Ivug_SlideShowView *pSSView);
 
 void
