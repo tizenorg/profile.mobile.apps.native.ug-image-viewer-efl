@@ -13,20 +13,13 @@ SET(SRCS
 # Entry point
 	src/ivug-base.cpp
 
-#Event	
-	src/view/ivug-smart-event-box.c
-
 # View related
 	src/view/ivug-main-view.cpp
 	src/view/ivug-main-view-toolbar.cpp
 	src/view/ivug-main-view-menu.cpp
-
 	src/view/ivug-slideshow-view.cpp
-
 	src/view/ivug-name-view.c
-	src/view/ivug-buddy-view.c
-
-   src/view/ivug-photocam.cpp 
+	src/view/ivug-photocam.cpp
 
 # Slider
 	src/slider/ivug-slider-new.cpp
