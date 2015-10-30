@@ -95,7 +95,7 @@ mkdir -p %{buildroot}/usr/share/license
 mkdir -p %{buildroot}%{_sharedir}
 mkdir -p %{buildroot}%{_privatedatadir}
 cp LICENSE %{buildroot}/usr/share/license/ug-image-viewer-efl
-execstack -c %{buildroot}%{_ugdir}/lib/libug-image-viewer-efl.so.0.1.0
+#execstack -c %{buildroot}%{_ugdir}/lib/libug-image-viewer-efl.so.0.1.0
 
 %post
 chown -R 5000:5000 %{_datadir}/ug-image-viewer-efl
