@@ -107,7 +107,7 @@ static void _send_result_to_caller(ui_gadget_h ug)
 	if (ret != APP_CONTROL_ERROR_NONE) {
 		MSG_IMAGEVIEW_HIGH("app_control_add_extra_data failed");
 	}
-	ug_send_result(ug, (service_h)service);
+	ug_send_result(ug, service);
 
 	app_control_destroy(service);
 

@@ -137,7 +137,7 @@ _send_result(ui_gadget_h ug, const char *key1, const char *val1, const char *key
 		}
 	}
 
-	ug_send_result(gGetUGHandle(), (service_h)service);
+	ug_send_result(gGetUGHandle(), service);
 
 	app_control_destroy(service);
 }

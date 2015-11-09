@@ -114,7 +114,7 @@ static void _on_btn_selectok_clicked(void *data, Evas_Object *obj, const char *e
 	if (retcode != APP_CONTROL_ERROR_NONE) {
 		MSG_MAIN_HIGH("app_control_add_extra_data failed");
 	}
-	ug_send_result(gGetUGHandle(), (service_h)service);
+	ug_send_result(gGetUGHandle(), service);
 
 	app_control_destroy(service);
 

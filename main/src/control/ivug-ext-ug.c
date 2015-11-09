@@ -250,7 +250,7 @@ ui_gadget_h _ivug_ext_launch_ug(const char *pkgname, app_control_h service, ug_d
 	cbs.end_cb = _ivug_ext_ug_end_cb;
 	cbs.priv = ug_struct;
 
-	ug = ug_create(NULL, pkgname, UG_MODE_FULLVIEW, (service_h)service, &cbs);
+	ug = ug_create(NULL, pkgname, UG_MODE_FULLVIEW, service, &cbs);
 
 	return ug;
 }
@@ -277,7 +277,7 @@ ui_gadget_h _ivug_ext_launch_ug_with_result(const char *pkgname,
 	cbs.end_cb = _ivug_ext_ug_end_cb;
 	cbs.priv = ug_struct;
 
-	ug = ug_create(NULL, pkgname, UG_MODE_FULLVIEW, (service_h)service, &cbs);
+	ug = ug_create(NULL, pkgname, UG_MODE_FULLVIEW, service, &cbs);
 
 	return ug;
 }
@@ -1742,7 +1742,7 @@ bool ivug_ext_launch_setting_gallery(ug_result_cb resultcb,ug_destroy_cb destory
 	cbs.end_cb = _ivug_ext_ug_end_cb;
 	cbs.priv = ug_struct;
 
-	ug_create(NULL, "setting-gallery-efl", UG_MODE_FULLVIEW, (service_h)service, &cbs);
+	ug_create(NULL, "setting-gallery-efl", UG_MODE_FULLVIEW, service, &cbs);
 
 	app_control_destroy(service);
 	return true;

@@ -717,7 +717,7 @@ _idler_delete(void *data)
 			if (ret != APP_CONTROL_ERROR_NONE) {
 				MSG_MAIN_HIGH("app_control_add_extra_data failed");
 			}
-			ug_send_result(gGetUGHandle(), (service_h)service);
+			ug_send_result(gGetUGHandle(), service);
 
 			app_control_destroy(service);
 

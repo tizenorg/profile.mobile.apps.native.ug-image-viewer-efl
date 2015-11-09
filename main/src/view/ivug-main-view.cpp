@@ -304,7 +304,7 @@ static Eina_Bool _on_btn_back_clicked(void *data, Elm_Object_Item *it)
 		} else {
 			app_control_add_extra_data_array(service, "Selected index", (const char **)files, count_selected);
 		}
-		ug_send_result(gGetUGHandle(), (service_h)service);
+		ug_send_result(gGetUGHandle(), service);
 		app_control_destroy(service);
 		free(files);
 	}
@@ -377,7 +377,7 @@ static Eina_Bool _on_btn_back_clicked(void *data, Elm_Object_Item *it)
 			app_control_destroy(service);
 			return EINA_FALSE;
 		}
-		ug_send_result(gGetUGHandle(), (service_h)service);
+		ug_send_result(gGetUGHandle(), service);
 		app_control_destroy(service);
 	}
 
@@ -412,7 +412,7 @@ static void _on_save_btn_clicked(void *data, Evas_Object *obj, const char * s, c
 		app_control_destroy(service);
 		return;
 	}
-	ug_send_result(gGetUGHandle(), (service_h)service);
+	ug_send_result(gGetUGHandle(), service);
 
 	app_control_destroy(service);
 	DESTROY_ME();
