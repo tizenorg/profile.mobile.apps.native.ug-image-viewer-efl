@@ -24,7 +24,7 @@
 #include "ivug-main-view.h"
 #include "ivug-main-view-toolbar.h"
 #include "ivug-main-view-menu.h"
-#include "ivug-photocam.h"   
+#include "ivug-photocam.h"
 #include "ivug-filter.h"
 #include "ivug-ext-ug.h"
 #include "ivug-db.h"
@@ -73,8 +73,8 @@ static bool _destory_slideshow_and_ug(Ivug_MainView *pMainView, int state, bool 
 static void _on_slideshow_finished(void *data, Evas_Object *obj, void *event_info);
 
 #ifdef USE_THUMBLIST
-static void _on_receive_mouse_down (void *data, Evas *e, Evas_Object *obj, void *event_info);
-static void _on_receive_mouse_up (void *data, Evas *e, Evas_Object *obj, void *event_info);
+static void _on_receive_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info);
+static void _on_receive_mouse_up(void *data, Evas *e, Evas_Object *obj, void *event_info);
 static void _thumb_realized_cb(void *data, Evas_Object *obj, void *event_info);
 #endif
 
@@ -105,16 +105,16 @@ _check_changed_cb(void *data, Evas_Object *obj, void *event_info)
 	}
 
 	if (state == true) {
-		pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list,mdata->filepath);
+		pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list, mdata->filepath);
 		pMainView->total_selected++;
-		evas_object_color_set(obj,255,255,255,255);
+		evas_object_color_set(obj, 255, 255, 255, 255);
 		elm_check_state_set(obj, EINA_TRUE);
 	} else {
-		pMainView->selected_path_list = eina_list_remove(pMainView->selected_path_list,mdata->filepath);
-		if ((pMainView->total_selected-1)>=0) {
+		pMainView->selected_path_list = eina_list_remove(pMainView->selected_path_list, mdata->filepath);
+		if ((pMainView->total_selected - 1) >= 0) {
 			pMainView->total_selected--;
 		}
-		evas_object_color_set(obj,128,138,137,255);
+		evas_object_color_set(obj, 128, 138, 137, 255);
 		elm_check_state_set(obj, EINA_FALSE);
 	}
 	_update_check_title(pMainView);
@@ -230,42 +230,34 @@ _on_longpress_popup_selected(void *data, Evas_Object *obj, void *event_info)
 	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
 
-	if (mdata == NULL)
-	{
+	if (mdata == NULL) {
 		MSG_MAIN_ERROR("slider data is NULL");
 		return;
 	}
 
-	if(response == LPPOPUP_RESPONSE_COPY)
-	{
+	if (response == LPPOPUP_RESPONSE_COPY) {
 		//get current file path.
 		int len = 0;
 		// This Will add to the article
 		char buf[IVUG_MAX_FILE_PATH_LEN] = {0,};
 		{
-			len = strlen(mdata->filepath)+strlen("file://")+1;
+			len = strlen(mdata->filepath) + strlen("file://") + 1;
 			snprintf(buf, IVUG_MAX_FILE_PATH_LEN, "file://%s", mdata->filepath);
 		}
 
-		if (len < IVUG_MAX_FILE_PATH_LEN)
-		{
+		if (len < IVUG_MAX_FILE_PATH_LEN) {
 			MSG_MAIN_HIGH("CNP : Buf=\"%s\" len=%d", buf, strlen(buf));
 
 			Eina_Bool bRet;
 
 			bRet = elm_cnp_selection_set(pMainView->layout, ELM_SEL_TYPE_CLIPBOARD, ELM_SEL_FORMAT_IMAGE, buf, strlen(buf));
 
-			if (bRet == EINA_FALSE)
-			{
+			if (bRet == EINA_FALSE) {
 				MSG_MAIN_ERROR("CNP Selection is failed");
-			}
-			else
-			{
+			} else {
 				MSG_MAIN_HIGH("CNP Selection is Success");
 			}
-		}
-		else
-		{
+		} else {
 			MSG_MAIN_ERROR("slider file path is too long. len=%d", len);
 // No need failed????
 		}
@@ -299,7 +291,7 @@ static Eina_Bool _on_btn_back_clicked(void *data, Elm_Object_Item *it)
 			}
 		}
 		app_control_create(&service);
-		if(pMainView->view_by == IVUG_VIEW_BY_FAVORITES) {
+		if (pMainView->view_by == IVUG_VIEW_BY_FAVORITES) {
 			app_control_add_extra_data_array(service, "Selected index fav", (const char **)files, count_selected);
 		} else {
 			app_control_add_extra_data_array(service, "Selected index", (const char **)files, count_selected);
@@ -309,31 +301,26 @@ static Eina_Bool _on_btn_back_clicked(void *data, Elm_Object_Item *it)
 		free(files);
 	}
 
-	if(pMainView->bPreventBackKey == true)
-	{
+	if (pMainView->bPreventBackKey == true) {
 		MSG_MAIN_WARN("Back key is blocked");
 		return EINA_FALSE;
 	}
 
-	if(pMainView->transcoding_thread)
-	{
+	if (pMainView->transcoding_thread) {
 		ecore_thread_cancel(pMainView->transcoding_thread);
 		pMainView->transcoding_thread = NULL;
 	}
 
 #ifdef USE_THUMBLIST
-	if (pMainView->thumbs )
-	{
-		if (ivug_thumblist_get_edit_mode(pMainView->thumbs) == EINA_TRUE )
-		{
+	if (pMainView->thumbs) {
+		if (ivug_thumblist_get_edit_mode(pMainView->thumbs) == EINA_TRUE) {
 			ivug_thumblist_set_edit_mode(pMainView->thumbs, EINA_FALSE);
 			return EINA_FALSE;
 		}
 	}
 #endif
 
-	if (pMainView->bTestMode)		// Test mode.
-	{
+	if (pMainView->bTestMode) {	// Test mode.
 		MSG_MAIN_HIGH("Test Mode. Removing all views. pMainView=0x%08x", pMainView);
 		_on_remove_main_view_ui(pMainView);
 
@@ -342,10 +329,8 @@ static Eina_Bool _on_btn_back_clicked(void *data, Elm_Object_Item *it)
 		return EINA_TRUE;
 	}
 
-	if (pMainView->mode != IVUG_MODE_SAVE)
-	{
-		if(pMainView->bStandAlone == true)
-		{
+	if (pMainView->mode != IVUG_MODE_SAVE) {
+		if (pMainView->bStandAlone == true) {
 			MSG_MAIN_HIGH("appsvc hide");
 
 			elm_win_lower((Evas_Object *)ug_get_window());
@@ -355,14 +340,12 @@ static Eina_Bool _on_btn_back_clicked(void *data, Elm_Object_Item *it)
 
 		_on_remove_main_view_ui(pMainView);
 
-	}
-	else		// Mode is save view
-	{
+	} else {	// Mode is save view
 		MSG_MAIN_HIGH("Select Cancel");
 
 		_on_remove_main_view_ui(pMainView);
 
-	//send result to caller
+		//send result to caller
 		int ret = 0;
 		app_control_h service = NULL;
 		ret = app_control_create(&service);
@@ -462,19 +445,18 @@ static Eina_Bool _on_exit_timer_expired(void *data)
 	return ECORE_CALLBACK_CANCEL;
 }
 
-static void _on_layout_resize(void *data, Evas_Object *obj, void *event_info )
+static void _on_layout_resize(void *data, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = static_cast<Ivug_MainView *>(data);
 	IV_ASSERT(pMainView != NULL);
 
-	Evas_Coord x,y,w,h;
+	Evas_Coord x, y, w, h;
 	evas_object_geometry_get(obj, &x, &y, &w, &h);
 	/**
 	*  during slideshow, after rotation, resize cb of slideshow obj cannot be invoked,
 	    so invoke it manually
 	*/
-	if(pMainView->ssHandle)
-	{
+	if (pMainView->ssHandle) {
 		ivug_ss_resize(pMainView->ssHandle);
 		// Need return????
 	}
@@ -482,15 +464,11 @@ static void _on_layout_resize(void *data, Evas_Object *obj, void *event_info )
 	int rot = gGetRotationDegree();
 	MSG_MAIN_HIGH("MainView resized geomtery XYWH(%d,%d,%d,%d) Rotate=%d", x, y, w, h, rot);
 
-	if(pMainView->ctx_popup)	// when rotated context popup will disapper at EFL
-	{
-		if(ivug_listpopup_context_get_rotate_enable(pMainView->ctx_popup) == false)
-		{
+	if (pMainView->ctx_popup) {	// when rotated context popup will disapper at EFL
+		if (ivug_listpopup_context_get_rotate_enable(pMainView->ctx_popup) == false) {
 			evas_object_del(pMainView->ctx_popup);
 			pMainView->ctx_popup = NULL;
-		}
-		else
-		{
+		} else {
 			Evas_Object *win = (Evas_Object *)ug_get_window();
 			elm_win_screen_size_get(win, NULL, NULL, &w, &h);
 
@@ -502,22 +480,18 @@ static void _on_layout_resize(void *data, Evas_Object *obj, void *event_info )
 		}
 	}
 
-	if (pMainView->pSliderNew )
-	{
+	if (pMainView->pSliderNew) {
 		MSG_HIGH("Inslide sn layout ");
 		ivug_slider_new_change_view_size(pMainView->pSliderNew, w, h);
 		Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
-		if(rot == 270 || rot == 90)
-		{
+		if (rot == 270 || rot == 90) {
 			MSG_HIGH("Rotation portrait");
 			if (pMainView->mode == IVUG_MODE_SELECT) {
 				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_select_view_landscape", "glsurface");
 			} else {
 				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_landscape", "glsurface");
 			}
-		}
-		else
-		{
+		} else {
 			MSG_HIGH("Rotation Landscape");
 			if (pMainView->mode == IVUG_MODE_SELECT) {
 				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_select_view_portrait", "glsurface");
@@ -529,19 +503,17 @@ static void _on_layout_resize(void *data, Evas_Object *obj, void *event_info )
 }
 
 static bool _destory_slideshow_and_ug(Ivug_MainView *pMainView,
-	int state,
-	bool bMmc_out)
+                                      int state,
+                                      bool bMmc_out)
 {
 	IV_ASSERT(pMainView != NULL);
 	evas_object_smart_callback_del_full(ivug_ss_object_get(pMainView->ssHandle),
-		"slideshow,finished", _on_slideshow_finished, pMainView);
+	                                    "slideshow,finished", _on_slideshow_finished, pMainView);
 
 //	ivug_allow_lcd_off();
 	/*from gallery ablum*/
-	if(bMmc_out)
-	{
-		if (pMainView->ssHandle)
-		{
+	if (bMmc_out) {
+		if (pMainView->ssHandle) {
 			MSG_MAIN_HIGH("image viewer end cause slide show ended");
 			ivug_ss_delete(pMainView->ssHandle);
 			pMainView->ssHandle = NULL;
@@ -562,18 +534,15 @@ void _ivug_main_on_mmc_state_changed(void *data)
 		return;
 	}
 
-	if (pMainView->ext_ug )
-	{
+	if (pMainView->ext_ug) {
 		MSG_IMAGEVIEW_HIGH("Extern UG is running");
 	}
 
-	if(pMainView->ssHandle)
-	{
+	if (pMainView->ssHandle) {
 		ivug_ss_set_stop(pMainView->ssHandle);
 		_destory_slideshow_and_ug(pMainView, SLIDE_SHOW_STOPPED, true);
 	} else {
-		if(pMainView->exit_timer == NULL)
-		{
+		if (pMainView->exit_timer == NULL) {
 			pMainView->exit_timer = ecore_timer_add(0.2, _on_exit_timer_expired, data);
 		}
 	}
@@ -623,8 +592,7 @@ _on_slider_playvideo_icon_clicked(void *data, Evas_Object *obj, const char *sour
 
 	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
-	if (mdata == NULL)
-	{
+	if (mdata == NULL) {
 		MSG_MAIN_ERROR("slide data is NULL");
 		return;
 	}
@@ -647,24 +615,22 @@ _on_slider_clicked(void *data, Evas_Object *obj, void *event_info)
 	MSG_MAIN_HIGH("On Slider Clicked. pMainView=0x%08x", pMainView);
 
 #ifdef USE_THUMBLIST
-	if (pMainView->thumbs)
-	{
-		if(ivug_thumblist_get_edit_mode(pMainView->thumbs) == EINA_TRUE)
-		{
+	if (pMainView->thumbs) {
+		if (ivug_thumblist_get_edit_mode(pMainView->thumbs) == EINA_TRUE) {
 			MSG_WARN("Ignore click when Edit mode");
 			return;
 		}
 	}
 #endif
 
-FIXME("Bug. menu bar is blinking when stopping slide show.")
-if (pMainView->mode != IVUG_MODE_SELECT && pMainView->mode != IVUG_MODE_EMAIL) {
-	if (pMainView->bShowMenu) {
-		ivug_main_view_hide_menu_bar(pMainView);
-	} else {
-		ivug_main_view_show_menu_bar(pMainView);
+	FIXME("Bug. menu bar is blinking when stopping slide show.")
+	if (pMainView->mode != IVUG_MODE_SELECT && pMainView->mode != IVUG_MODE_EMAIL) {
+		if (pMainView->bShowMenu) {
+			ivug_main_view_hide_menu_bar(pMainView);
+		} else {
+			ivug_main_view_show_menu_bar(pMainView);
+		}
 	}
-}
 
 }
 
@@ -679,10 +645,8 @@ static Eina_Bool _ivug_long_press_timer_expired(void *data)
 
 	pMainView->popup_timer = NULL;
 
-	if(pMainView->bLongpressEnd == false)	// still press
-	{
-		if(pMainView->longpress_popup)
-		{
+	if (pMainView->bLongpressEnd == false) {	// still press
+		if (pMainView->longpress_popup) {
 			IVUG_DEBUG_WARNING("copy popup remove");
 			evas_object_del(pMainView->longpress_popup);
 			pMainView->longpress_popup = NULL;
@@ -697,7 +661,7 @@ static void
 _on_slider_long_press_start(void *data, Evas_Object *obj, void *event_info)
 {
 	Elm_Gesture_Taps_Info *p = (Elm_Gesture_Taps_Info *) event_info;
-	ivug_ret_if(!data||!p);
+	ivug_ret_if(!data || !p);
 
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 
@@ -706,8 +670,7 @@ _on_slider_long_press_start(void *data, Evas_Object *obj, void *event_info)
 
 	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
-	if(mdata == NULL)
-	{
+	if (mdata == NULL) {
 		MSG_MAIN_ERROR("mdata is NULL");
 		return;
 	}
@@ -718,37 +681,32 @@ _on_slider_long_press_start(void *data, Evas_Object *obj, void *event_info)
 		return;
 	}*/
 
-	if(mdata->slide_type != SLIDE_TYPE_IMAGE)
-	{
+	if (mdata->slide_type != SLIDE_TYPE_IMAGE) {
 		MSG_MAIN_ERROR("Long pressed. but it is not image");
 		return;
 	}
 
 	bool bUseExtMenu = !(ivug_is_agif(mdata->filepath));	//agif cannot use manual tag
-	if(pMainView->mode == IVUG_MODE_DISPLAY)
-	{
+	if (pMainView->mode == IVUG_MODE_DISPLAY) {
 		bUseExtMenu = false;	//disable manualtag at display mode
 	}
 
-	if(pMainView->longpress_popup)
-	{
+	if (pMainView->longpress_popup) {
 		evas_object_del(pMainView->longpress_popup);
 	}
 
 	MSG_MAIN_HIGH("LongPressed. Show popup XY(%d,%d)", x, y);
 
 	pMainView->longpress_popup = ivug_longpress_popup_show(pMainView->layout, x, y,
-			bUseExtMenu, _on_longpress_popup_selected, pMainView);
-	if (pMainView->longpress_popup == NULL)
-	{
+	                             bUseExtMenu, _on_longpress_popup_selected, pMainView);
+	if (pMainView->longpress_popup == NULL) {
 		IVUG_DEBUG_WARNING("long press popup create failed");
 		return ;
 	}
 
 	pMainView->bLongpressEnd = false;
 
-	if(pMainView->popup_timer)
-	{
+	if (pMainView->popup_timer) {
 		ecore_timer_del(pMainView->popup_timer);
 	}
 	pMainView->popup_timer = ecore_timer_add(LONGTAP_TIMEOUT, _ivug_long_press_timer_expired, pMainView);
@@ -765,16 +723,13 @@ _on_slider_long_press_end(void *data, Evas_Object *obj, void *event_info)
 
 	pMainView->bLongpressEnd = true;
 
-	if(pMainView->popup_timer)
-	{
+	if (pMainView->popup_timer) {
 		ecore_timer_del(pMainView->popup_timer);
 		pMainView->popup_timer = NULL;
 	}
 
-	if((int)event_info == LONGTAP_CANCELED)
-	{
-		if(pMainView->longpress_popup)
-		{
+	if ((int)event_info == LONGTAP_CANCELED) {
+		if (pMainView->longpress_popup) {
 			IVUG_DEBUG_WARNING("copy popup remove");
 			evas_object_del(pMainView->longpress_popup);
 			pMainView->longpress_popup = NULL;
@@ -783,7 +738,7 @@ _on_slider_long_press_end(void *data, Evas_Object *obj, void *event_info)
 }
 
 #ifdef USE_THUMBLIST
-static void _on_receive_mouse_down (void *data, Evas *e, Evas_Object *obj, void *event_info)
+static void _on_receive_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	if (NULL == pMainView) {
@@ -797,10 +752,10 @@ static void _on_receive_mouse_down (void *data, Evas *e, Evas_Object *obj, void 
 
 	ivug_main_view_del_hide_timer(pMainView);
 
-	MSG_MAIN_HIGH("Event layer clicked : %s %s Layer=%d",evas_object_name_get(obj), evas_object_type_get(obj), evas_object_layer_get(obj));
+	MSG_MAIN_HIGH("Event layer clicked : %s %s Layer=%d", evas_object_name_get(obj), evas_object_type_get(obj), evas_object_layer_get(obj));
 }
 
-static void _on_receive_mouse_up (void *data, Evas *e, Evas_Object *obj, void *event_info)
+static void _on_receive_mouse_up(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	if (NULL == pMainView) {
@@ -826,12 +781,9 @@ _on_menu_state_changed(void *data, Evas_Object *obj, const char *emission, const
 
 	MSG_MAIN_HIGH("Receive %s %s", emission, source);
 
-	if (strncmp(emission, "menu,show,finished", strlen(emission)) == 0 )
-	{
+	if (strncmp(emission, "menu,show,finished", strlen(emission)) == 0) {
 		//enable menu
-	}
-	else
-	{
+	} else {
 		//disable menu
 	}
 }
@@ -853,8 +805,7 @@ static char * _ivug_get_folder_name(char *filepath)
 	char *result = NULL;
 
 	name = strrchr(folder, '/');
-	if ((name != NULL) && ((name+1) != NULL) )
-	{
+	if ((name != NULL) && ((name + 1) != NULL)) {
 		result = strdup(name + 1);
 		free(folder);
 		return result;
@@ -942,17 +893,14 @@ static void
 _thumb_realized_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	Media_Item *mitem = (Media_Item *)event_info;
-	if(mitem == NULL)
-	{
+	if (mitem == NULL) {
 		MSG_SDATA_ERROR("data already removed");
 		return;
 	}
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
 
-	if(strcmp(mdata->thumbnail_path, DEFAULT_THUMBNAIL_PATH) == 0)
-	{
-		if(mdata->thumb_handle == NULL)
-		{
+	if (strcmp(mdata->thumbnail_path, DEFAULT_THUMBNAIL_PATH) == 0) {
+		if (mdata->thumb_handle == NULL) {
 			mdata->thumb_handle = ivug_db_create_thumbnail(mdata->m_handle, _ivug_main_view_thumbnail_cb, (void *)mdata);
 		}
 	}
@@ -963,12 +911,9 @@ _edit_item_selected_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 
-	if(ivug_thumblist_checked_item_is(pMainView->thumbs) == EINA_FALSE)
-	{
+	if (ivug_thumblist_checked_item_is(pMainView->thumbs) == EINA_FALSE) {
 		edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,hide,toolbtn", "user");
-	}
-	else
-	{
+	} else {
 		edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,show,toolbtn1", "user");
 	}
 }
@@ -980,23 +925,17 @@ _thumb_mode_changed_cb(void *data, Evas_Object *obj, void *event_info)
 
 	const char *mode = (const char *)event_info;
 
-	if (strcmp(mode, "edit") == 0 )
-	{
+	if (strcmp(mode, "edit") == 0) {
 		ivug_main_view_del_hide_timer(pMainView);
 
-		if(ivug_thumblist_checked_item_is(pMainView->thumbs) == EINA_FALSE)
-		{
+		if (ivug_thumblist_checked_item_is(pMainView->thumbs) == EINA_FALSE) {
 			edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,hide,toolbtn", "user");
 		}
-	}
-	else if (strcmp(mode, "list") == 0 )
-	{
+	} else if (strcmp(mode, "list") == 0) {
 		ivug_main_view_set_hide_timer(pMainView);
 
 		edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,show,toolbtn", "user");
-	}
-	else
-	{
+	} else {
 		MSG_MAIN_WARN("Unknown Mode. %s", mode);
 	}
 
@@ -1075,7 +1014,7 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 	PERF_CHECK_BEGIN(LVL2, "Create layout");
 
 //create main view layout
-	Ivug_MainView *pMainView = (Ivug_MainView *)calloc(1, sizeof(Ivug_MainView) );
+	Ivug_MainView *pMainView = (Ivug_MainView *)calloc(1, sizeof(Ivug_MainView));
 	IV_ASSERT(pMainView != NULL);
 
 // Set default value
@@ -1099,16 +1038,16 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 	PERF_CHECK_END(LVL2, "Create layout");
 
 	edje_object_signal_callback_add(_EDJ(pMainView->layout),
-				"menu,hide,finished",
-				"edc",
-				_on_menu_state_changed,
-				(void *)pMainView);
+	                                "menu,hide,finished",
+	                                "edc",
+	                                _on_menu_state_changed,
+	                                (void *)pMainView);
 
 	edje_object_signal_callback_add(_EDJ(pMainView->layout),
-				"menu,show,finished",
-				"edc",
-				_on_menu_state_changed,
-				(void *)pMainView);
+	                                "menu,show,finished",
+	                                "edc",
+	                                _on_menu_state_changed,
+	                                (void *)pMainView);
 
 // Navigation bar
 	PERF_CHECK_BEGIN(LVL2, "elm_naviframe_add");
@@ -1133,21 +1072,21 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 // Because for ex, "Add tag" view is pushed, then previous view is removed. so app control life cycle directly.  --> Not true
 //	elm_naviframe_content_preserve_on_pop_set(pMainView->navi_bar, EINA_TRUE);
 
-if (pMainView->mode != IVUG_MODE_SETAS) {
+	if (pMainView->mode != IVUG_MODE_SETAS) {
 #if 1
 #ifdef USE_CUSTOM_STYLE
-	elm_object_theme_set(pMainView->navi_bar, gGetSystemTheme() );
+		elm_object_theme_set(pMainView->navi_bar, gGetSystemTheme());
 #endif
-	const char *profile = elm_config_profile_get();
-	if (!strcmp(profile,"mobile")) {
-		elm_object_style_set(pMainView->navi_bar, "ivug-main/default");
-	} else if (!strcmp(profile,"desktop")) {
-		elm_object_style_set(pMainView->navi_bar, "ivug-main/default");
-	} else {
-		MSG_MAIN_ERROR("Unknown profile : %s", profile);
+		const char *profile = elm_config_profile_get();
+		if (!strcmp(profile, "mobile")) {
+			elm_object_style_set(pMainView->navi_bar, "ivug-main/default");
+		} else if (!strcmp(profile, "desktop")) {
+			elm_object_style_set(pMainView->navi_bar, "ivug-main/default");
+		} else {
+			MSG_MAIN_ERROR("Unknown profile : %s", profile);
+		}
+#endif
 	}
-#endif
-}
 	elm_object_part_content_set(layout, "mainview.navibar", pMainView->navi_bar);	//swallow
 
 	PERF_CHECK_END(LVL2, "elm_naviframe_add");
@@ -1162,7 +1101,7 @@ if (pMainView->mode != IVUG_MODE_SETAS) {
 	}
 
 	evas_object_name_set(pMainView->lyContent, "Navi content");
-	PERF_CHECK_END(LVL2,"elm_layout_add");
+	PERF_CHECK_END(LVL2, "elm_layout_add");
 
 #ifdef BACK_BTN
 	PERF_CHECK_BEGIN(LVL2, "ivug_button_add");
@@ -1182,7 +1121,7 @@ if (pMainView->mode != IVUG_MODE_SETAS) {
 	Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
 	if (pMainView->mode == IVUG_MODE_SELECT) {
 		int rot = gGetRotationDegree();
-		if(rot == 270 || rot == 90) {
+		if (rot == 270 || rot == 90) {
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_select_view_landscape", "glsurface");
 		} else {
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_select_view_portrait", "glsurface");
@@ -1241,7 +1180,7 @@ if (pMainView->mode != IVUG_MODE_SETAS) {
 //	PERF_CHECK_END(LVL2, "Register callback");
 
 	if ((pMainView->view_by != IVUG_VIEW_BY_FILE)
-		&& (pMainView->view_by != IVUG_VIEW_BY_INVAILD)) {
+	        && (pMainView->view_by != IVUG_VIEW_BY_INVAILD)) {
 		PERF_CHECK_BEGIN(LVL2, "Create thumblist");
 
 #ifdef USE_THUMBLIST
@@ -1253,7 +1192,7 @@ if (pMainView->mode != IVUG_MODE_SETAS) {
 			return NULL;
 		}
 
-		elm_object_theme_set(pMainView->thumbs, gGetSystemTheme() );
+		elm_object_theme_set(pMainView->thumbs, gGetSystemTheme());
 		evas_object_name_set(pMainView->thumbs, "Thumblist");
 
 //		elm_object_part_content_set(pMainView->lyContent, "thumblist", pMainView->thumbs);
@@ -1296,15 +1235,15 @@ if (pMainView->mode != IVUG_MODE_SETAS) {
 
 	MSG_MAIN_HIGH("MainView Layout(0x%08x) Created. (%d,%d,%d,%d)", pMainView->layout, bx, by, bw, bh);
 
-	
+
 
 	// creating photo cam
 	ivug_create_new_photocam_image(pMainView, &pMainView->photocam, "imageview_area");
-	ivug_slider_new_set_photocam(pMainView->pSliderNew,pMainView->photocam);
+	ivug_slider_new_set_photocam(pMainView->pSliderNew, pMainView->photocam);
 	edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_temp_invsible", "imageview_area_temp2");
 
 	if ((pMainView->mode == IVUG_MODE_NORMAL || pMainView->mode == IVUG_MODE_CAMERA || pMainView->view_by == IVUG_VIEW_BY_FOLDER || pMainView->view_by == IVUG_VIEW_BY_ALL)
-			&& pMainView->mode != IVUG_MODE_SETAS && pMainView->mode != IVUG_MODE_SELECT && pMainView->mode != IVUG_MODE_HIDDEN) {
+	        && pMainView->mode != IVUG_MODE_SETAS && pMainView->mode != IVUG_MODE_SELECT && pMainView->mode != IVUG_MODE_HIDDEN) {
 		pMainView->btn_favorite = _create_favorite_button(pMainView->lyContent);
 		evas_object_smart_callback_add(pMainView->btn_favorite, "clicked", _on_btn_favorite_cb, pMainView);
 		elm_object_part_content_set(pMainView->lyContent, "elm.swallow.favorite", pMainView->btn_favorite); //swallow
@@ -1330,8 +1269,7 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 	}
 
 	Media_List *mlist = ivug_medialist_create();
-	if (mlist == NULL)
-	{
+	if (mlist == NULL) {
 		MSG_MAIN_ERROR("Creating media list failed");
 		return false;
 	}
@@ -1339,8 +1277,7 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 	PERF_CHECK_BEGIN(LVL2, "create filter");
 
 	Filter_struct *filter = ivug_param_create_filter(ivug_param);
-	if (filter == NULL)
-	{
+	if (filter == NULL) {
 		MSG_MAIN_ERROR("Creating filter failed");
 		ivug_medialist_del(mlist);
 		return false;
@@ -1354,15 +1291,13 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 	Media_Data *pData = NULL;
 	current = ivug_medialist_load(mlist, filter);
 
-	if(current == NULL)
-	{
+	if (current == NULL) {
 		MSG_MAIN_ERROR("Media list load failed");
 		goto LOAD_LIST_FAILED;
 	}
 
 	pData = ivug_medialist_get_data(current);
-	if(pData == NULL)
-	{
+	if (pData == NULL) {
 		MSG_MAIN_ERROR("current data is NULL");
 		goto LOAD_LIST_FAILED;
 	}
@@ -1370,26 +1305,22 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 	ivug_medialist_set_current_item(mlist, current);
 	//ULC changes
 
-	if(pData->fileurl == NULL)
-	{
+	if (pData->fileurl == NULL) {
 		MSG_MAIN_ERROR("current fileurl is NULL");
 		goto LOAD_LIST_FAILED;
 	}
 
 #ifdef USE_RESCAN_FILE_PATH_AT_LIST
 	{
-		if(strncmp(pData->fileurl, ivug_param->filepath, strlen(pData->fileurl)) != 0)
-		{
+		if (strncmp(pData->fileurl, ivug_param->filepath, strlen(pData->fileurl)) != 0) {
 			current = ivug_medialist_find_item_by_filename(mlist, ivug_param->filepath);
-			if(current == NULL)
-			{
+			if (current == NULL) {
 				MSG_MAIN_ERROR("Media list load failed, %s is not exist at list", ivug_param->filepath);
 				goto LOAD_LIST_FAILED;
 			}
 
 			pData = ivug_medialist_get_data(current);
-			if(pData == NULL)
-			{
+			if (pData == NULL) {
 				MSG_MAIN_ERROR("current data is NULL");
 				goto LOAD_LIST_FAILED;
 			}
@@ -1397,8 +1328,7 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 			ivug_medialist_set_current_item(mlist, current);
 			//ULC changes
 
-			if(pData->fileurl == NULL)
-			{
+			if (pData->fileurl == NULL) {
 				MSG_MAIN_ERROR("current fileurl is NULL");
 				goto LOAD_LIST_FAILED;
 			}
@@ -1406,16 +1336,11 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 	}
 #endif
 
-	if(filter->view_by == IVUG_VIEW_BY_ALL)
-	{
+	if (filter->view_by == IVUG_VIEW_BY_ALL) {
 		pMainView->album_name = strdup(IDS_ALL_ALBUMS);
-	}
-	else if(filter->view_by == IVUG_VIEW_BY_HIDDEN_ALL)
-	{
+	} else if (filter->view_by == IVUG_VIEW_BY_HIDDEN_ALL) {
 		pMainView->album_name = strdup(IDS_HIDDEN);
-	}
-	else if(filter->view_by == IVUG_VIEW_BY_FOLDER)
-	{
+	} else if (filter->view_by == IVUG_VIEW_BY_FOLDER) {
 		TODO("it is not run!! DB problem!!!")
 		/*
 		media_handle m_handle = ivug_db_get_folder_handle(ivug_dir_get(ivug_param->filepath));
@@ -1431,9 +1356,7 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 		if (pMainView->album_name == NULL) {
 			pMainView->album_name = strdup(IDS_NO_NAME);
 		}
-	}
-	else if(filter->view_by == IVUG_VIEW_BY_HIDDEN_FOLDER)
-	{
+	} else if (filter->view_by == IVUG_VIEW_BY_HIDDEN_FOLDER) {
 		TODO("it is not run!! DB problem!!!")
 		/*
 		media_handle m_handle = ivug_db_get_folder_handle(ivug_dir_get(ivug_param->filepath));
@@ -1453,15 +1376,12 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 	pMainView->mList = mlist;
 	PERF_CHECK_BEGIN(LVL2, "media list set");
 
-	if(ivug_medialist_get_count(mlist) == 1)
-	{
-		if(ivug_param->mode == IVUG_MODE_DISPLAY)
-		{
+	if (ivug_medialist_get_count(mlist) == 1) {
+		if (ivug_param->mode == IVUG_MODE_DISPLAY) {
 			ivug_slider_new_set_mode(pMainView->pSliderNew, SLIDER_MODE_SINGLE);
 		}
 		// temp code, please remove later
-		else if(ivug_param->view_by == IVUG_VIEW_BY_FILE)
-		{
+		else if (ivug_param->view_by == IVUG_VIEW_BY_FILE) {
 			ivug_slider_new_set_mode(pMainView->pSliderNew, SLIDER_MODE_SINGLE);
 		}
 	}
@@ -1474,14 +1394,14 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 		for (i = 0; i < count; i++) {
 			temp = (char *)eina_list_nth(ivug_param->selected_list, i);
 			if (temp) {
-			Media_Item *mitem = ivug_medialist_find_item_by_filename(mlist,temp);
-			if (mitem) {
-				Media_Data *mdata = ivug_medialist_get_data(mitem);
-				pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list,mdata->filepath);
-			} else {
-				pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list,temp);
+				Media_Item *mitem = ivug_medialist_find_item_by_filename(mlist, temp);
+				if (mitem) {
+					Media_Data *mdata = ivug_medialist_get_data(mitem);
+					pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list, mdata->filepath);
+				} else {
+					pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list, temp);
+				}
 			}
-		}
 		}
 		pMainView->total_selected = ivug_param->total_selected ;
 	}
@@ -1493,8 +1413,9 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 	return true;
 
 LOAD_LIST_FAILED:
-	if(mlist)
+	if (mlist) {
 		ivug_medialist_del(mlist);
+	}
 	pMainView->mList = NULL;
 	return false;
 }
@@ -1558,7 +1479,7 @@ static Eina_Bool _ivug_db_update_idler(void *data)
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	IV_ASSERT(pMainView != NULL);
 	ivug_update_list(pMainView);
-	if(pMainView->db_idler != NULL) {
+	if (pMainView->db_idler != NULL) {
 		ecore_timer_del(pMainView->db_idler);
 		pMainView->db_idler = NULL;
 	}
@@ -1571,7 +1492,7 @@ static Eina_Bool _ivug_db_update_timer_cb(void *data)
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	IV_ASSERT(pMainView != NULL);
 
-	if(pMainView->db_idler != NULL) {
+	if (pMainView->db_idler != NULL) {
 		ecore_timer_del(pMainView->db_idler);
 		pMainView->db_idler = NULL;
 	}
@@ -1590,18 +1511,18 @@ static int _ivug_db_update_add_timer(void *data)
 
 static int
 _ivug_db_update_op(media_content_error_e error, int pid,
-				 media_content_db_update_item_type_e update_item,
-				 media_content_db_update_type_e update_type,
-				 media_content_type_e media_type, char *uuid,
-				 char *path, char *mime_type, void *data)
+                   media_content_db_update_item_type_e update_item,
+                   media_content_db_update_type_e update_type,
+                   media_content_type_e media_type, char *uuid,
+                   char *path, char *mime_type, void *data)
 {
 	if (MEDIA_CONTENT_ERROR_NONE != error) {
 		MSG_MAIN_ERROR("Update db error[%d]!", error);
 		return -1;
 	}
 	if (update_item == MEDIA_ITEM_FILE &&
-		MEDIA_CONTENT_TYPE_IMAGE != media_type &&
-		MEDIA_CONTENT_TYPE_VIDEO != media_type) {
+	        MEDIA_CONTENT_TYPE_IMAGE != media_type &&
+	        MEDIA_CONTENT_TYPE_VIDEO != media_type) {
 		MSG_MAIN_HIGH("Media type is wrong");
 		return -1;
 	}
@@ -1612,17 +1533,17 @@ _ivug_db_update_op(media_content_error_e error, int pid,
 
 static void
 __ivug_db_update_cb(media_content_error_e error, int pid,
-				  media_content_db_update_item_type_e update_item,
-				  media_content_db_update_type_e update_type,
-				  media_content_type_e media_type, char *uuid,
-				  char *path, char *mime_type, void *data)
+                    media_content_db_update_item_type_e update_item,
+                    media_content_db_update_type_e update_type,
+                    media_content_type_e media_type, char *uuid,
+                    char *path, char *mime_type, void *data)
 {
 	MSG_MAIN_HIGH("update_item[%d], update_type[%d], media_type[%d]", update_item,
-		   update_type, media_type);
+	              update_type, media_type);
 
 	MSG_MAIN_HIGH("uuid[%s], path[%s]", uuid, path);
 	_ivug_db_update_op(error, pid, update_item, update_type, media_type,
-			  uuid, path, mime_type, data);
+	                   uuid, path, mime_type, data);
 }
 
 static bool _ivug_db_update_reg_cb(Ivug_MainView *pMainView)
@@ -1632,8 +1553,9 @@ static bool _ivug_db_update_reg_cb(Ivug_MainView *pMainView)
 
 	MSG_MAIN_HIGH("Set db updated callback");
 	ret = media_content_set_db_updated_cb(__ivug_db_update_cb, pMainView);
-	if (ret != MEDIA_CONTENT_ERROR_NONE)
+	if (ret != MEDIA_CONTENT_ERROR_NONE) {
 		MSG_MAIN_ERROR("Set db updated cb failed[%d]!", ret);
+	}
 	return true;
 }
 
@@ -1655,8 +1577,9 @@ static int _ivug_data_init(Ivug_MainView *pMainView)
 {
 	IV_ASSERT(pMainView != NULL);
 	int err = _ivug_local_data_connect();
-	if (err != 0)
+	if (err != 0) {
 		MSG_MAIN_ERROR("Connect to media-content DB failed!");
+	}
 	return err;
 }
 
@@ -1671,7 +1594,7 @@ _ivug_main_view_reg_idler_cb(void *data)
 	/* Register db monitor */
 	_ivug_db_update_reg_cb(pMainView);
 
-	if(pMainView->reg_idler != NULL) {
+	if (pMainView->reg_idler != NULL) {
 		ecore_timer_del(pMainView->reg_idler);
 		pMainView->reg_idler = NULL;
 	}
@@ -1684,7 +1607,7 @@ int ivug_add_reg_idler(Ivug_MainView *pMainView)
 	IV_ASSERT(pMainView != NULL);
 	MSG_MAIN_HIGH("Register idler!");
 	pMainView->reg_idler = ecore_timer_add(0.6f, _ivug_main_view_reg_idler_cb,
-											 (void *)pMainView);
+	                                       (void *)pMainView);
 	return 0;
 }
 
@@ -1695,7 +1618,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 	MSG_MAIN_HIGH("ivug_main_view_start");
 
 	Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
-	int count= -1;
+	int count = -1;
 	int currentindex = -1;
 	Evas_Load_Error e = EVAS_LOAD_ERROR_NONE;
 
@@ -1713,7 +1636,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 			ivug_main_view_set_hide_timer(pMainView);
 		}
 
-		MSG_MAIN_HIGH("mdata->filepath = %s",mdata->filepath);
+		MSG_MAIN_HIGH("mdata->filepath = %s", mdata->filepath);
 		if (mdata->slide_type == SLIDE_TYPE_VIDEO) {
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "show,icon", "video_play_icon");
 			pMainView->is_play_Icon = true;
@@ -1721,9 +1644,9 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 		} else {
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "hide,icon", "video_play_icon");
 			pMainView->is_play_Icon = false;
-			int bx=0,by=0,bw=0,bh=0;
+			int bx = 0, by = 0, bw = 0, bh = 0;
 			e = elm_photocam_file_set(pMainView->photocam, mdata->filepath);
-			MSG_MAIN_HIGH("photocam_file_set Error = %d",e);
+			MSG_MAIN_HIGH("photocam_file_set Error = %d", e);
 
 			if (EVAS_LOAD_ERROR_NONE != e) {
 				MSG_HIGH("Loading default Thumbnail");
@@ -1735,7 +1658,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 		evas_object_show(pMainView->photocam);
 
 		e = evas_object_image_load_error_get(elm_image_object_get(pMainView->photocam));
-		MSG_MAIN_HIGH("image_load_error = %d",e);
+		MSG_MAIN_HIGH("image_load_error = %d", e);
 
 		ivug_slider_update_icon_layer(pMainView->pSliderNew);
 
@@ -1773,7 +1696,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "hide,icon", "video_play_icon");
 
 		char *hidden_file_path = NULL;
-		int ret = app_control_get_extra_data (service, "Path", &hidden_file_path);
+		int ret = app_control_get_extra_data(service, "Path", &hidden_file_path);
 		if (ret != APP_CONTROL_ERROR_NONE) {
 			MSG_HIGH("app_control_get_extra_data failed");
 		}
@@ -1799,7 +1722,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 			PERF_CHECK_END(LVL5, "Update main view");
 		}
 
-		if (count != -1 && currentindex != -1 && currentindex+1 < count) {
+		if (count != -1 && currentindex != -1 && currentindex + 1 < count) {
 			Media_Item *next_mitem = ivug_medialist_get_next(pMainView->mList, pMainView->cur_mitem);
 			Media_Data *pData = ivug_medialist_get_data(next_mitem);
 
@@ -1838,11 +1761,11 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_left", "imageview_area_temp0");
 		}
 		edje_object_signal_callback_add(elm_layout_edje_get(sn_layout), "left_transit_done", "*",
-										_ivug_main_view_left_transit_by_item_complete_cb, pMainView);
+		                                _ivug_main_view_left_transit_by_item_complete_cb, pMainView);
 		edje_object_signal_callback_add(elm_layout_edje_get(sn_layout), "right_transit_done", "*",
-										_ivug_main_view_right_transit_by_item_complete_cb, pMainView);
+		                                _ivug_main_view_right_transit_by_item_complete_cb, pMainView);
 
-		edje_object_signal_callback_add(elm_layout_edje_get(pMainView->lyContent), "button_clicked", "elm",_back_button_clicked, pMainView);
+		edje_object_signal_callback_add(elm_layout_edje_get(pMainView->lyContent), "button_clicked", "elm", _back_button_clicked, pMainView);
 	}
 	if (pMainView->mode == IVUG_MODE_SELECT) {
 		Evas_Object *sel_bar = EFL::create_layout(pMainView->layout, IVUG_MAIN_EDJ, "select_bar");
@@ -1854,7 +1777,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 		Evas_Object *check = elm_check_add(sel_bar);
 		elm_check_state_set(check, EINA_FALSE);
 		elm_object_style_set(check, "default");
-		evas_object_color_set(check,128,138,137,255);
+		evas_object_color_set(check, 128, 138, 137, 255);
 		elm_layout_content_set(sel_bar, "swallow.check", check); //swallow
 		pMainView->check = check;
 		evas_object_smart_callback_add(check, "changed", _check_changed_cb, (void *)pMainView);
@@ -1868,18 +1791,18 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 		int i = 0 ;
 		files = (char **)malloc(sizeof(char *) * pMainView->total_selected);
 		if (files) {
-		if (pMainView->selected_path_list) {
-			EINA_LIST_FOREACH(pMainView->selected_path_list, l, data) {
-				files[i] = strdup((char *)data);
-				Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
-				Media_Data *mdata = ivug_medialist_get_data(mitem);
-				if (strcmp(mdata->filepath, files[i]) == 0) {
-					evas_object_color_set(pMainView->check,255,255,255,255);
-					elm_check_state_set(pMainView->check,EINA_TRUE);
+			if (pMainView->selected_path_list) {
+				EINA_LIST_FOREACH(pMainView->selected_path_list, l, data) {
+					files[i] = strdup((char *)data);
+					Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
+					Media_Data *mdata = ivug_medialist_get_data(mitem);
+					if (strcmp(mdata->filepath, files[i]) == 0) {
+						evas_object_color_set(pMainView->check, 255, 255, 255, 255);
+						elm_check_state_set(pMainView->check, EINA_TRUE);
+					}
+					i++;
 				}
-				i++;
 			}
-		}
 		}
 		free(files);
 		elm_object_part_text_set(pMainView->select_bar, "elm.text.title", buf);
@@ -1915,11 +1838,11 @@ ivug_main_view_resume(Ivug_MainView *pMainView)
 		} else {
 			MSG_MAIN_ERROR("Center file is not exist. stype=%d name=%s", mdata->slide_type, mdata->filepath);
 			Media_Item *nxt_item = ivug_medialist_get_next(pMainView->mList, mitem);
-			if(nxt_item) {
+			if (nxt_item) {
 				ivug_medialist_set_current_item(pMainView->mList, nxt_item);
 			} else {
 				Media_Item *prv_item = ivug_medialist_get_prev(pMainView->mList, mitem);
-				if(prv_item) {
+				if (prv_item) {
 					ivug_medialist_set_current_item(pMainView->mList, prv_item);
 				} else {
 					DESTROY_ME();
@@ -1933,11 +1856,9 @@ ivug_main_view_resume(Ivug_MainView *pMainView)
 		MSG_MAIN_ERROR("Unhandled slide type : %d", mdata->slide_type);
 	}
 
-	if(ivug_medialist_need_update(pMainView->mList) == true)
-	{
+	if (ivug_medialist_need_update(pMainView->mList) == true) {
 #ifdef USE_THUMBLIST
-		if (pMainView->thumbs )
-		{
+		if (pMainView->thumbs) {
 			ivug_thumblist_clear_items(pMainView->thumbs);
 		}
 #endif
@@ -1948,9 +1869,8 @@ ivug_main_view_resume(Ivug_MainView *pMainView)
 	ivug_main_view_set_hide_timer(pMainView);
 
 // When resume, menu bar will be appeared.
-	if(!(pMainView->pNameView
-		|| pMainView->pCropView) && pMainView->mode != IVUG_MODE_SELECT && pMainView->mode != IVUG_MODE_EMAIL)	//if child view is not exist
-	{
+	if (!(pMainView->pNameView
+	        || pMainView->pCropView) && pMainView->mode != IVUG_MODE_SELECT && pMainView->mode != IVUG_MODE_EMAIL) {	//if child view is not exist
 		ivug_main_view_show_menu_bar(pMainView);
 	}
 }
@@ -1960,13 +1880,11 @@ ivug_main_view_pause(Ivug_MainView *pMainView)
 {
 	IV_ASSERT(pMainView != NULL);
 
-	if(ivug_slider_new_get_mode(pMainView->pSliderNew) != SLIDER_MODE_SINGLE)
-	{
+	if (ivug_slider_new_get_mode(pMainView->pSliderNew) != SLIDER_MODE_SINGLE) {
 		ivug_medialist_set_update_callback(pMainView->mList);
 	}
 
-	if (pMainView->ssHandle )
-	{
+	if (pMainView->ssHandle) {
 		ivug_ss_stop(pMainView->ssHandle);
 	}
 
@@ -1984,85 +1902,72 @@ ivug_main_view_destroy(Ivug_MainView *pMainView)
 
 
 	ivug_main_view_del_hide_timer(pMainView);
-	if (pMainView->ssHandle)
-	{
+	if (pMainView->ssHandle) {
 		MSG_MAIN_HIGH("image viewer end cause slide show ended");
 		ivug_ss_delete(pMainView->ssHandle);
 		pMainView->ssHandle = NULL;
 	}
 
-	if(pMainView->back_timer)
-	{
+	if (pMainView->back_timer) {
 		ecore_timer_del(pMainView->back_timer);
 		pMainView->back_timer = NULL;
 	}
 
-	if (pMainView->popup_timer)
-	{
+	if (pMainView->popup_timer) {
 		ecore_timer_del(pMainView->popup_timer);
 		pMainView->popup_timer = NULL;
 	}
 
-	if (pMainView->delete_idler)
-	{
+	if (pMainView->delete_idler) {
 		ecore_idler_del(pMainView->delete_idler);
 		pMainView->delete_idler = NULL;
 	}
 
-	if (pMainView->tagbuddy_idler )
-	{
+	if (pMainView->tagbuddy_idler) {
 		ecore_timer_del(pMainView->tagbuddy_idler);
 		pMainView->tagbuddy_idler = NULL;
 	}
 
-	if (pMainView->ctx_popup)
-	{
+	if (pMainView->ctx_popup) {
 		evas_object_del(pMainView->ctx_popup);
 		pMainView->ctx_popup = NULL;
 	}
 
-	if (pMainView->popup)
-	{
+	if (pMainView->popup) {
 		evas_object_del(pMainView->popup);
 		pMainView->popup = NULL;
 	}
 
-	if (pMainView->access_popup)
-	{
+	if (pMainView->access_popup) {
 		evas_object_del(pMainView->access_popup);
 		pMainView->access_popup = NULL;
 	}
 
-	if (pMainView->ext_ug)
-	{
+	if (pMainView->ext_ug) {
 		MSG_MAIN_HIGH("External UG Destroy");
 		ug_destroy(pMainView->ext_ug);
 		pMainView->ext_ug = NULL;
 	}
 
-	if(pMainView->ext_svc)
-	{
+	if (pMainView->ext_svc) {
 		app_control_send_terminate_request(pMainView->ext_svc);
 		app_control_destroy(pMainView->ext_svc);
 		pMainView->ext_svc = NULL;
 	}
 
-	if (pMainView->exit_timer)
-	{
+	if (pMainView->exit_timer) {
 		ecore_timer_del(pMainView->exit_timer);
 		pMainView->exit_timer = NULL;
 	}
 
 	MSG_MAIN_HIGH("Unregister system notifications");
 
-	if(pMainView->keydown_handler)
-	{
+	if (pMainView->keydown_handler) {
 		ecore_event_handler_del(pMainView->keydown_handler);
 		pMainView->keydown_handler = NULL;
 	}
 
-	if(pMainView->album_name)
-	{
+	if (pMainView->album_name) {
 		free(pMainView->album_name);
 		pMainView->album_name = NULL;
 	}
@@ -2083,16 +1988,15 @@ void ivug_main_view_reload(Ivug_MainView *pMainView)
 	Media_Data *pData = NULL;
 	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
 	pData = ivug_medialist_get_data(mitem);
-	
-	if (pData->slide_type == SLIDE_TYPE_VIDEO )
-		elm_photocam_file_set(pMainView->photocam, pData->thumbnail_path);	 
-	else
-	{
+
+	if (pData->slide_type == SLIDE_TYPE_VIDEO) {
+		elm_photocam_file_set(pMainView->photocam, pData->thumbnail_path);
+	} else {
 		elm_photocam_file_set(pMainView->photocam, NULL);
 		elm_photocam_file_set(pMainView->photocam, pData->filepath);
 	}
 	ivug_slider_update_icon_layer(pMainView->pSliderNew);
-	
+
 }
 
 void _ivug_main_view_set_hide_timer(Ivug_MainView *pMainView, const char *func, int line)
@@ -2100,8 +2004,8 @@ void _ivug_main_view_set_hide_timer(Ivug_MainView *pMainView, const char *func, 
 	IV_ASSERT(pMainView != NULL);
 
 	if (pMainView->mode == IVUG_MODE_DISPLAY
-		|| pMainView->mode == IVUG_MODE_SAVE
-		|| pMainView->mode == IVUG_MODE_SETAS) {
+	        || pMainView->mode == IVUG_MODE_SAVE
+	        || pMainView->mode == IVUG_MODE_SETAS) {
 
 		return;
 	}
@@ -2135,8 +2039,7 @@ void _ivug_main_view_del_hide_timer(Ivug_MainView *pMainView, const char *func, 
 
 	pMainView->hide_count--;
 
-	if(pMainView->hide_timer)
-	{
+	if (pMainView->hide_timer) {
 		ecore_timer_del(pMainView->hide_timer);
 		pMainView->hide_timer = NULL;
 	}
@@ -2151,7 +2054,7 @@ ivug_main_view_show_menu_bar(Ivug_MainView *pMainView)
 		return;
 	}
 
-	if (pMainView->bShowMenu == true ) {
+	if (pMainView->bShowMenu == true) {
 		MSG_MAIN_WARN("Menu is Already shown");
 		return;
 	}
@@ -2193,7 +2096,7 @@ ivug_main_view_hide_menu_bar(Ivug_MainView *pMainView)
 		return;
 	}
 
-	if (pMainView->bShowMenu == false ) {
+	if (pMainView->bShowMenu == false) {
 		MSG_MAIN_WARN("Menu is Already hidden");
 		return;
 	}

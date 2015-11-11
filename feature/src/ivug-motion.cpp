@@ -36,14 +36,15 @@ using namespace std;
 #undef LOG_CAT
 #define LOG_CAT "IV-MOTION"
 
-class CClient {
+class CClient
+{
 
- private:
+private:
 	CClient() {
 		throw "Use CClient(motion_callback_t func, void *data)";
 	};
 
- public:
+public:
 	CClient(motion_callback_t func, void *data): cb_func(func), cb_data(data) {
 	};
 
@@ -57,37 +58,40 @@ class CClient {
 	};
 
 	bool operator==(const CClient & value) const {
-		if ((value.cb_func == cb_func) && (value.cb_data == cb_data))
+		if ((value.cb_func == cb_func) && (value.cb_data == cb_data)) {
 			return true;
+		}
 
 		return false;
 	};
- private:
+private:
 	motion_callback_t cb_func;
 	void *cb_data;
 };
 
-class CComparator {
- public:
+class CComparator
+{
+public:
 	CComparator(const CClient & data): client(data) {
 	};
 
-	bool operator() (const CClient * value)const {
-		if (client == *value)
+	bool operator()(const CClient * value)const {
+		if (client == *value) {
 			return true;
+		}
 
 		return false;
 	};
- private:
+private:
 
 	const CClient & client;
 };
 
 //#define USE_SENSOR_THREAD
-class CMotion {
-  private:
-	static void thSensorStartBlockingTilt(void *data, Ecore_Thread *thread)
-	{
+class CMotion
+{
+private:
+	static void thSensorStartBlockingTilt(void *data, Ecore_Thread *thread) {
 		CMotion *thiz = (CMotion *)data;
 
 		thiz->start_tilt();
@@ -95,8 +99,7 @@ class CMotion {
 		MSG_HIGH("Tilt Sensor start in thread!");
 	};
 
-	static void thSensorStartBlockingPanning(void *data, Ecore_Thread *thread)
-	{
+	static void thSensorStartBlockingPanning(void *data, Ecore_Thread *thread) {
 		CMotion *thiz = (CMotion *)data;
 
 		thiz->start_panning();
@@ -104,13 +107,11 @@ class CMotion {
 		MSG_HIGH("Panning Sensor start in thread!");
 	};
 
-	static void thSensorStartCancel(void *data, Ecore_Thread *thread)
-	{
+	static void thSensorStartCancel(void *data, Ecore_Thread *thread) {
 		MSG_HIGH("Sensor start cancelled!.");
 	};
 
-	static void thSensorStartEnd(void *data, Ecore_Thread *thread)
-	{
+	static void thSensorStartEnd(void *data, Ecore_Thread *thread) {
 		MSG_HIGH("Sensor start end!.");
 	};
 
@@ -118,8 +119,7 @@ class CMotion {
 
 public:
 	bool start_tilt() {
-		if (bInit_tilt == false )
-		{
+		if (bInit_tilt == false) {
 			MSG_ERROR("Tilt Sensor already started");
 			return false;
 		}
@@ -143,8 +143,7 @@ public:
 	}
 
 	bool start_panning() {
-		if (bInit_panning == false )
-		{
+		if (bInit_panning == false) {
 			MSG_ERROR("Panning Sensor already started");
 			return false;
 		}
@@ -178,8 +177,7 @@ public:
 		return true;
 	}
 
-	bool stop_async_tilt()
-	{
+	bool stop_async_tilt() {
 		if (m_thread_tilt) {
 			ecore_thread_cancel(m_thread_tilt);
 			m_thread_tilt = NULL;
@@ -187,8 +185,7 @@ public:
 		return true;
 	}
 
-	bool stop_async_panning()
-	{
+	bool stop_async_panning() {
 		if (m_thread_panning) {
 			ecore_thread_cancel(m_thread_panning);
 			m_thread_panning = NULL;
@@ -197,8 +194,7 @@ public:
 	}
 
 	bool stop_tilt() {
-		if (bInit_tilt == false )
-		{
+		if (bInit_tilt == false) {
 			MSG_ERROR("Tilt Sensor already stopped");
 			return false;
 		}
@@ -218,8 +214,7 @@ public:
 	}
 
 	bool stop_panning() {
-		if (bInit_panning == false )
-		{
+		if (bInit_panning == false) {
 			MSG_ERROR("Panning Sensor already stopped");
 			return false;
 		}
@@ -239,9 +234,9 @@ public:
 		return true;
 	}
 
- public:
+public:
 	CMotion() : rotate(0), bStarted_tilt(false), bStarted_panning(false), bInit_tilt(false), bInit_panning(false),
-			m_thread_tilt(NULL), m_thread_panning(NULL) {
+		m_thread_tilt(NULL), m_thread_panning(NULL) {
 	};
 	virtual ~ CMotion() {
 		// it is called after main loop end, because motion var is static
@@ -285,7 +280,7 @@ public:
 		}
 
 		MSG_HIGH("Add client. Client=%d Handle=0x%08x",
-				client_list.size(), client);
+		         client_list.size(), client);
 
 		return client;
 	}
@@ -320,7 +315,7 @@ public:
 		}
 
 		MSG_HIGH("Add client. Client=%d Handle=0x%08x",
-				client_list.size(), client);
+		         client_list.size(), client);
 
 		return client;
 	}
@@ -340,19 +335,16 @@ public:
 		if (client_list.size() == 0) {
 			MSG_HIGH("Stop tilt sensor");
 
-			if (stop_tilt() == true )
-			{
+			if (stop_tilt() == true) {
 				bStarted_tilt = true;
-			}
-			else
-			{
+			} else {
 				bStarted_tilt = false;
 			}
 			stop_async_tilt();
 		}
 
 		MSG_HIGH("Remove client. Client=%d Handle=0x%08x",
-				client_list.size(), client);
+		         client_list.size(), client);
 
 		delete client;
 	}
@@ -372,19 +364,16 @@ public:
 		if (client_list.size() == 0) {
 			MSG_HIGH("Stop panning sensor");
 
-			if (stop_panning() == true )
-			{
+			if (stop_panning() == true) {
 				bStarted_panning = true;
-			}
-			else
-			{
+			} else {
 				bStarted_panning = false;
 			}
 			stop_async_panning();
 		}
 
 		MSG_HIGH("Remove client. Client=%d Handle=0x%08x",
-				client_list.size(), client);
+		         client_list.size(), client);
 
 		delete client;
 	}
@@ -401,8 +390,7 @@ public:
 
 	void inform_client(int dx, int dy) {
 
-		if (bStarted_panning == false && bStarted_tilt == false)
-		{
+		if (bStarted_panning == false && bStarted_tilt == false) {
 			MSG_HIGH("ignore motion event.");
 			return ;
 		}
@@ -425,7 +413,7 @@ public:
 		}
 
 		for (list < CClient * >::iterator it = client_list.begin(); it != client_list.end(); it++) {
-			(*it)->call( static_cast<motion_handle_t>(*it), dx, dy);
+			(*it)->call(static_cast<motion_handle_t>(*it), dx, dy);
 		}
 
 		MSG_HIGH("x:y = [%5d:%5d] rot=%d", dx, dy, rotate);
@@ -435,7 +423,7 @@ public:
 		this->rotate = rotate;
 	};
 
- private:
+private:
 	sensor_h mhandle_tilt;		// Motion tilt handle
 	sensor_h mhandle_panning;		// Motion panning handle
 
@@ -509,7 +497,7 @@ bool CMotion::init_sensor_panning()
 {
 //	int ret = -1;
 
-	if (bInit_panning== true) {
+	if (bInit_panning == true) {
 		MSG_WARN("already sensor is initialized");
 		return true;
 	}
@@ -550,7 +538,9 @@ bool CMotion::deinit_sensor_tilt()
 {
 //	int ret = -1;
 
-	if (bInit_tilt == false ) return true;
+	if (bInit_tilt == false) {
+		return true;
+	}
 
 	if (client_list.size() != 0) {
 		MSG_HIGH("Client is remain");
@@ -580,7 +570,9 @@ bool CMotion::deinit_sensor_panning()
 {
 //	int ret = -1;
 
-	if (bInit_panning == false ) return true;
+	if (bInit_panning == false) {
+		return true;
+	}
 
 	if (client_list.size() != 0) {
 		MSG_HIGH("Client is remain");
@@ -610,20 +602,17 @@ bool CMotion::deinit_sensor_panning()
 CMotion motion;
 
 extern "C" motion_handle_t ivug_motion_register_sensor(motion_type_e type, motion_callback_t
-						       cb_func, void *data)
+        cb_func, void *data)
 {
 	CClient *client = NULL;
 
-	if(type == IV_MOTION_TILT)
-	{
+	if (type == IV_MOTION_TILT) {
 		motion.init_sensor_tilt();
 
 		PERF_CHECK_BEGIN(LVL4, "register_sensor");
 		client = motion.register_sensor_tilt(cb_func, data);
 		PERF_CHECK_END(LVL4, "register_sensor");
-	}
-	else if(type == IV_MOTION_PANNING)
-	{
+	} else if (type == IV_MOTION_PANNING) {
 		motion.init_sensor_panning();
 
 		PERF_CHECK_BEGIN(LVL4, "register_sensor");
@@ -639,14 +628,11 @@ extern "C" void ivug_motion_unregister_sensor(motion_type_e type, motion_handle_
 {
 	CClient *client = (CClient *) handle;
 
-	if(type == IV_MOTION_TILT)
-	{
+	if (type == IV_MOTION_TILT) {
 		motion.unregister_sensor_tilt(client);
 
 		motion.deinit_sensor_tilt();
-	}
-	else if(type == IV_MOTION_PANNING)
-	{
+	} else if (type == IV_MOTION_PANNING) {
 		motion.unregister_sensor_panning(client);
 
 		motion.deinit_sensor_panning();

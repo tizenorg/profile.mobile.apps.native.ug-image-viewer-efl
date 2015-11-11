@@ -36,21 +36,18 @@ static bool _is_bestpic(const char *file)
 
 	find = strrchr(file, '.');
 
-	if(find == NULL)
-	{
+	if (find == NULL) {
 		// All files should have extension
 		return false;
 	}
 
 	unsigned int dist = find - file;
 
-	if (dist < sizeof(szBest) -1)
-	{
+	if (dist < sizeof(szBest) - 1) {
 		return false;
 	}
 
-	if (strncmp(find - sizeof(szBest) + 1 , szBest , sizeof(szBest) - 1) == 0 )
-	{
+	if (strncmp(find - sizeof(szBest) + 1 , szBest , sizeof(szBest) - 1) == 0) {
 		return true;
 	}
 
@@ -66,14 +63,12 @@ static bool _is_soundscene(const char *file)
 
 extern "C" MImageType MINfo_GetMediaType(const char *fname)
 {
-	if (_is_bestpic(fname) == true )
-	{
+	if (_is_bestpic(fname) == true) {
 		MSG_HIGH("Bestphoto : %s", fname);
 		return MIMAGE_TYPE_BESTSHOT;
 	}
 
-	if (_is_soundscene(fname) == true )
-	{
+	if (_is_soundscene(fname) == true) {
 		MSG_HIGH("Soundscene : %s", fname);
 		return MIMAGE_TYPE_SOUNDSCENE;
 	}

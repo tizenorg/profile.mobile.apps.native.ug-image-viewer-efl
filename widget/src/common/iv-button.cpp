@@ -27,7 +27,8 @@
 #define EDJ_PATH PREFIX"/res/edje/"PACKAGE
 #define IMG_PATH PREFIX"/res/images/"PACKAGE
 
-namespace iv {
+namespace iv
+{
 
 
 template<>
@@ -44,13 +45,12 @@ Evas_Object *CButton::CreateObject(Evas_Object *parent)
 
 	m_edje = edje_object_add(evas_object_evas_get(parent));
 
-	if (!edje_object_file_set(m_edje, EDJ_PATH"/ivug-widget-button.edj", "iv/button") )
-	{
-	   Edje_Load_Error err = edje_object_load_error_get(m_edje);
-	   const char *errmsg = edje_load_error_str(err);
-	   MSG_ERROR("could not load 'group_name' from theme.edj: %s",  errmsg);
-	   evas_object_del(m_edje);
-	   return NULL;
+	if (!edje_object_file_set(m_edje, EDJ_PATH"/ivug-widget-button.edj", "iv/button")) {
+		Edje_Load_Error err = edje_object_load_error_get(m_edje);
+		const char *errmsg = edje_load_error_str(err);
+		MSG_ERROR("could not load 'group_name' from theme.edj: %s",  errmsg);
+		evas_object_del(m_edje);
+		return NULL;
 	}
 
 	evas_object_smart_member_add(m_edje, sObj);
@@ -62,13 +62,11 @@ Evas_Object *CButton::CreateObject(Evas_Object *parent)
 
 void CButton::UpdateButtons(eButtonSate newstate)
 {
-	if (m_state == newstate )
-	{
+	if (m_state == newstate) {
 		return;
 	}
 
-	if (m_img[m_state] != NULL)
-	{
+	if (m_img[m_state] != NULL) {
 		evas_object_hide(m_img[m_state]);
 	}
 
@@ -78,8 +76,7 @@ void CButton::UpdateButtons(eButtonSate newstate)
 
 	m_state = newstate;
 
-	if (obj == NULL)
-	{
+	if (obj == NULL) {
 		MSG_WARN("No icon for state(%d)", newstate);
 		return;
 	}
@@ -126,18 +123,15 @@ void CButton::OnMouseClick()
 void CButton::SetImage(Evas_Object *normal, Evas_Object *press, Evas_Object *dim)
 {
 // Remove Old icons
-	if (m_img[STATE_DEFAULT] != NULL)
-	{
+	if (m_img[STATE_DEFAULT] != NULL) {
 		evas_object_del(m_img[STATE_DEFAULT]);
 	}
 
-	if (m_img[STATE_PRESS] != NULL)
-	{
+	if (m_img[STATE_PRESS] != NULL) {
 		evas_object_del(m_img[STATE_PRESS]);
 	}
 
-	if (m_img[STATE_DIM] != NULL)
-	{
+	if (m_img[STATE_DIM] != NULL) {
 		evas_object_del(m_img[STATE_DIM]);
 	}
 
@@ -147,27 +141,24 @@ void CButton::SetImage(Evas_Object *normal, Evas_Object *press, Evas_Object *dim
 
 	MSG_HIGH("SetImage");
 
-	if (m_img[STATE_DEFAULT] != NULL)
-	{
+	if (m_img[STATE_DEFAULT] != NULL) {
 		evas_object_pass_events_set(m_img[STATE_DEFAULT], EINA_TRUE);
-		evas_object_smart_member_add(m_img[STATE_DEFAULT], GetObject() );
+		evas_object_smart_member_add(m_img[STATE_DEFAULT], GetObject());
 	}
 
-	if (m_img[STATE_PRESS] != NULL)
-	{
+	if (m_img[STATE_PRESS] != NULL) {
 		evas_object_pass_events_set(m_img[STATE_PRESS], EINA_TRUE);
-		evas_object_smart_member_add(m_img[STATE_PRESS], GetObject() );
+		evas_object_smart_member_add(m_img[STATE_PRESS], GetObject());
 	}
 
-	if (m_img[STATE_DIM] != NULL)
-	{
+	if (m_img[STATE_DIM] != NULL) {
 		evas_object_pass_events_set(m_img[STATE_PRESS], EINA_TRUE);
-		evas_object_smart_member_add(m_img[STATE_DIM], GetObject() );
+		evas_object_smart_member_add(m_img[STATE_DIM], GetObject());
 	}
 
-	edje_object_signal_callback_add (m_edje, "mouse,up,*", "event", _on_edje_up_cb, this);
-	edje_object_signal_callback_add (m_edje, "mouse,down,*", "event", _on_edje_down_cb, this);
-	edje_object_signal_callback_add (m_edje, "mouse,clicked,*", "event", _on_edje_click_cb, this);
+	edje_object_signal_callback_add(m_edje, "mouse,up,*", "event", _on_edje_up_cb, this);
+	edje_object_signal_callback_add(m_edje, "mouse,down,*", "event", _on_edje_down_cb, this);
+	edje_object_signal_callback_add(m_edje, "mouse,clicked,*", "event", _on_edje_click_cb, this);
 
 	UpdateButtons(STATE_DEFAULT);
 

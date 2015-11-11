@@ -14,7 +14,7 @@
 * limitations under the License.
 *
 */
- 
+
 #include "ivug-common.h"
 #include "ivug-main-view.h"
 #include "ivug-main-view-toolbar.h"
@@ -116,7 +116,7 @@ static void _launch_share_app(Ivug_MainView *pMainView, const char* filepath)
 #endif
 }
 
-bool ivug_is_agif (const char *filepath)
+bool ivug_is_agif(const char *filepath)
 {
 	Evas_Object *obj = evas_object_image_add(evas_object_evas_get((Evas_Object *)ug_get_window()));
 	evas_object_image_file_set(obj, filepath, NULL);
@@ -133,7 +133,7 @@ static void _on_add_tag_view_destroy(void *data, Evas_Object *obj, void *event_i
 	pMainView->pNameView = NULL;
 
 	evas_object_smart_callback_del(pMainView->navi_bar, "transition,finished",
-				_on_add_tag_view_destroy);
+	                               _on_add_tag_view_destroy);
 }
 
 static void _on_add_tag_view_response(Ivug_NameView *pView, ivug_name_response resp, const char *str, void *pClientData)
@@ -144,7 +144,7 @@ static void _on_add_tag_view_response(Ivug_NameView *pView, ivug_name_response r
 	case NAME_VIEW_RESPONSE_OK:
 
 		evas_object_smart_callback_add(pMainView->navi_bar, "transition,finished",
-				_on_add_tag_view_destroy, pMainView);
+		                               _on_add_tag_view_destroy, pMainView);
 
 		elm_naviframe_item_pop(pMainView->navi_bar);
 
@@ -154,7 +154,7 @@ static void _on_add_tag_view_response(Ivug_NameView *pView, ivug_name_response r
 	case NAME_VIEW_RESPONSE_CANCEL:
 		MSG_MAIN_HIGH("Add tag is canceled");
 		evas_object_smart_callback_add(pMainView->navi_bar, "transition,finished",
-				_on_add_tag_view_destroy, pMainView);
+		                               _on_add_tag_view_destroy, pMainView);
 
 		elm_naviframe_item_pop(pMainView->navi_bar);
 
@@ -176,7 +176,7 @@ static void _on_edit_weather_view_destroy(void *data, Evas_Object *obj, void *ev
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 
 	evas_object_smart_callback_del(pMainView->navi_bar, "transition,finished",
-				_on_edit_weather_view_destroy);
+	                               _on_edit_weather_view_destroy);
 }
 
 
@@ -209,7 +209,7 @@ static void _ivug_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, void *ev
 #ifdef USE_THUMBLIST
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
 	if (pMainView->thumbs) {
-		bool bVideo =( mdata->slide_type == SLIDE_TYPE_VIDEO);
+		bool bVideo = (mdata->slide_type == SLIDE_TYPE_VIDEO);
 		Image_Object *img = ivug_thumblist_prepend_item(pMainView->thumbs, mdata->thumbnail_path, bVideo, mitem);
 		ivug_thumblist_select_item(pMainView->thumbs, img);	// set focus to cropped image
 	}
@@ -278,16 +278,16 @@ void _on_setas_selected(void *data, Evas_Object *obj, void *event_info)
 	if (strncmp(label, IDS_CALLER_IMAGE, strlen(label)) == 0) {
 		pMainView->ext_ug = ivug_ext_launch_contact(mdata->filepath, _on_ext_ug_destroy_cb, data);
 	} else if (strncmp(label, IDS_DYNAMIC_BOX, strlen(label)) == 0) {
-		char str[IVUG_MAX_FILE_PATH_LEN+SHORTCUT_PREFIX_LEN] = {0,};
-		snprintf(str, IVUG_MAX_FILE_PATH_LEN+SHORTCUT_PREFIX_LEN,
-			SHORTCUT_PREFIX"%s", mdata->fileurl);
+		char str[IVUG_MAX_FILE_PATH_LEN + SHORTCUT_PREFIX_LEN] = {0,};
+		snprintf(str, IVUG_MAX_FILE_PATH_LEN + SHORTCUT_PREFIX_LEN,
+		         SHORTCUT_PREFIX"%s", mdata->fileurl);
 
 		shortcut_add_to_home(mdata->fileurl,
-				LAUNCH_BY_APP,
-				str,
-				mdata->thumbnail_path,
-				1, //allow duplicate
-				_on_addhome_result_cb, NULL);
+		                     LAUNCH_BY_APP,
+		                     str,
+		                     mdata->thumbnail_path,
+		                     1, //allow duplicate
+		                     _on_addhome_result_cb, NULL);
 	}
 
 	evas_object_del(pMainView->ctx_popup2);
@@ -373,8 +373,7 @@ void _on_addtag_selected(void *data, Evas_Object *obj, void *event_info)
 
 		ivug_name_view_set_focus(pMainView->pNameView);
 	} else if (strncmp(label, IDS_FAVOURITE, strlen(label)) == 0) {
-		if (ivug_mediadata_set_favorite(mdata, true) == false)
-		{
+		if (ivug_mediadata_set_favorite(mdata, true) == false) {
 			MSG_MAIN_ERROR("Error!. Set favorite for ID=%s", uuid_getchar(mdata->mediaID));
 			goto ADD_FAIL;
 		}
@@ -419,8 +418,7 @@ static bool _save_to_folder(Ivug_MainView *pMainView, const char *path, const ch
 	if (ivug_is_dir_empty(folder) == -1) {
 		MSG_MAIN_WARN("Destination path doesn't exist. %s", folder);
 		if (mkdir(folder, DIR_MASK_DEFAULT) != 0) {
-			if (errno != EEXIST)
-			{
+			if (errno != EEXIST) {
 				//err = strerror_r(errno, error_msg, sizeof(error_msg));
 				MSG_MAIN_ERROR("Cannot make dir=%s error=%s", DIR_MASK_DEFAULT, strerror_r(errno, error_msg, sizeof(error_msg)));
 				// return false;	// TODO: Need to test.
@@ -463,7 +461,7 @@ static void _on_save_view_destroy(void *data, Evas_Object *obj, void *event_info
 	pMainView->pNameView = NULL;
 
 	evas_object_smart_callback_del(pMainView->navi_bar, "transition,finished",
-				_on_save_view_destroy);
+	                               _on_save_view_destroy);
 }
 
 static void _on_save_view_response(Ivug_NameView *pView, ivug_name_response resp, const char *str, void *pClientData)
@@ -474,8 +472,7 @@ static void _on_save_view_response(Ivug_NameView *pView, ivug_name_response resp
 
 	char buf[IVUG_MAX_FILE_PATH_LEN];
 
-	switch(resp)
-	{
+	switch (resp) {
 	case NAME_VIEW_RESPONSE_OK:
 		mitem = ivug_medialist_get_current_item(pMainView->mList);
 		mdata = ivug_medialist_get_data(mitem);
@@ -485,7 +482,7 @@ static void _on_save_view_response(Ivug_NameView *pView, ivug_name_response resp
 		_save_to_folder(pMainView, mdata->filepath, buf);
 
 		evas_object_smart_callback_add(pMainView->navi_bar, "transition,finished",
-				_on_save_view_destroy, pMainView);
+		                               _on_save_view_destroy, pMainView);
 
 		elm_naviframe_item_pop(pMainView->navi_bar);
 
@@ -495,7 +492,7 @@ static void _on_save_view_response(Ivug_NameView *pView, ivug_name_response resp
 	case NAME_VIEW_RESPONSE_CANCEL:
 		MSG_MAIN_HIGH("Create album is canceled");
 		evas_object_smart_callback_add(pMainView->navi_bar, "transition,finished",
-				_on_save_view_destroy, pMainView);
+		                               _on_save_view_destroy, pMainView);
 
 		elm_naviframe_item_pop(pMainView->navi_bar);
 
@@ -613,8 +610,9 @@ void _on_save_selected(void *data, Evas_Object *obj, void *event_info)
 		ivug_db_destroy_file_handle(m_handle);
 	}
 
-	if (dst_path)
+	if (dst_path) {
 		free(dst_path);
+	}
 
 	evas_object_del(pMainView->popup);
 	pMainView->popup = NULL;
@@ -624,8 +622,9 @@ void _on_save_selected(void *data, Evas_Object *obj, void *event_info)
 	return;
 
 SAVE_FAIL:
-	if (dst_path)
+	if (dst_path) {
 		free(dst_path);
+	}
 
 	evas_object_del(pMainView->popup);
 	pMainView->popup = NULL;
@@ -783,20 +782,16 @@ _on_delete_selected(void *data, Evas_Object *obj, void *event_info)
 	/* First, remove thumbnail and delete item */
 
 #ifdef USE_THUMBLIST
-	if (pMainView->thumbs)
-	{
+	if (pMainView->thumbs) {
 		Image_Object *deleted = ivug_thumblist_get_selected_item(pMainView->thumbs);
 		pMainView->delete_list = ivug_thumblist_get_items_checked(pMainView->thumbs);
-		if (pMainView->delete_list)	/* remove selected list item */
-		{
+		if (pMainView->delete_list) {	/* remove selected list item */
 			pMainView->cur_mitem = ivug_medialist_get_current_item(pMainView->mList);
 			pMainView->delete_total = eina_list_count(pMainView->delete_list);
 			pMainView->progress_popup = ivug_progress_popup_show(pMainView->layout, (char *)IDS_DELETE, _progress_delete_end_cb, pMainView);
 			pMainView->delete_idler = ecore_idler_add(_idler_delete, pMainView);
 			return;
-		}
-		else if (deleted)	/* remove current thumbnail item */
-		{
+		} else if (deleted) {	/* remove current thumbnail item */
 			ivug_thumblist_delete_item(pMainView->thumbs, deleted);
 		}
 	}
@@ -804,8 +799,7 @@ _on_delete_selected(void *data, Evas_Object *obj, void *event_info)
 
 	/* remove current item only */
 	ret = _delete_mitem(pMainView, mitem);
-	if (ret == false)
-	{
+	if (ret == false) {
 		return;
 	}
 
@@ -837,8 +831,7 @@ static void _dismissed_cb(void *data, Evas_Object *obj, void *event_info)
 
 	edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,enable,toolbtn", "user");
 
-	if (pMainView->ctx_popup)
-	{
+	if (pMainView->ctx_popup) {
 		MSG_MAIN_HIGH("Removing CtxPopup(0x%08x)", pMainView->ctx_popup);
 		evas_object_del(pMainView->ctx_popup);
 		pMainView->ctx_popup = NULL;
@@ -926,7 +919,7 @@ void on_btn_copy_clicked(void *data, Evas_Object *obj, void *event_info)
 	int len = 0;
 	// This Will add to the article
 	char buf[IVUG_MAX_FILE_PATH_LEN] = {0,};
-	len = strlen(mdata->filepath)+strlen("file://")+1;
+	len = strlen(mdata->filepath) + strlen("file://") + 1;
 	snprintf(buf, IVUG_MAX_FILE_PATH_LEN, "file://%s", mdata->filepath);
 
 
@@ -961,21 +954,21 @@ static void _on_name_view_destroy(void *data, Evas_Object *obj, void *event_info
 	pMainView->pNameView = NULL;// Will removed in add tag view.
 
 	evas_object_smart_callback_del(pMainView->navi_bar, "transition,finished",
-				_on_name_view_destroy);
+	                               _on_name_view_destroy);
 }
 
 static bool _is_exist(Media_Data *mdata, const char *file)
 {
-	IV_ASSERT(mdata!=NULL);
+	IV_ASSERT(mdata != NULL);
 	char *old_dir = ivug_get_directory(mdata->filepath);
 	char *ext = ivug_fileinfo_get_file_extension(mdata->filepath);
 	char new_fullpath[IVUG_MAX_FILE_PATH_LEN] = {0,};
 	struct stat info = {0,};
 	if (ext) {
-		snprintf(new_fullpath, sizeof(new_fullpath),"%s/%s.%s", old_dir, file, ext);
+		snprintf(new_fullpath, sizeof(new_fullpath), "%s/%s.%s", old_dir, file, ext);
 		free(ext);
 	} else {
-		snprintf(new_fullpath, sizeof(new_fullpath),"%s/%s", old_dir, file);
+		snprintf(new_fullpath, sizeof(new_fullpath), "%s/%s", old_dir, file);
 	}
 
 	//Check if File Exists
@@ -993,7 +986,7 @@ static bool _is_exist(Media_Data *mdata, const char *file)
 
 static bool _rename(Media_Data *mdata, const char *str)
 {
-	IV_ASSERT(mdata!=NULL);
+	IV_ASSERT(mdata != NULL);
 
 	if (mdata->filepath == NULL || mdata->thumbnail_path == NULL) {
 		MSG_MAIN_ERROR("filepath is NULL");
@@ -1006,16 +999,16 @@ static bool _rename(Media_Data *mdata, const char *str)
 
 	char new_fullpath[IVUG_MAX_FILE_PATH_LEN] = {0,};
 	if (ext) {
-		snprintf(new_fullpath, sizeof(new_fullpath),"%s/%s.%s", old_dir, str, ext);
+		snprintf(new_fullpath, sizeof(new_fullpath), "%s/%s.%s", old_dir, str, ext);
 		free(ext);
 	} else {
-		snprintf(new_fullpath, sizeof(new_fullpath),"%s/%s", old_dir, str);
+		snprintf(new_fullpath, sizeof(new_fullpath), "%s/%s", old_dir, str);
 	}
 	if (old_dir) {
 		free(old_dir);
 	}
 	if (old_fullpath) {
-		if (!strcmp(old_fullpath,new_fullpath)) {
+		if (!strcmp(old_fullpath, new_fullpath)) {
 			MSG_MAIN_HIGH("duplicate name, no need to rename!");
 			return true;
 		}
@@ -1032,9 +1025,9 @@ static bool _rename(Media_Data *mdata, const char *str)
 
 	ivug_db_destroy_file_handle(mdata->m_handle);
 
-/*
-	ivug_db_rename() Ŀ Media UUID  ʴ´.
-*/
+	/*
+		ivug_db_rename() Ŀ Media UUID  ʴ´.
+	*/
 	mdata->m_handle = ivug_db_get_file_handle_from_media_id(mdata->mediaID);
 
 	MSG_MAIN_SEC("Rename %s -> %s", old_fullpath, new_fullpath);
@@ -1198,10 +1191,11 @@ _on_btn_download_clicked(void *data)
 	char buf[IVUG_MAX_FILE_PATH_LEN] = {0,};
 	snprintf(buf, (size_t)sizeof(buf), "%s", DEFAULT_DOWNLOADS_FOLDER);
 	MSG_MAIN_HIGH("%s", buf);
-	if (_save_to_folder(pMainView, mdata->filepath, buf))
+	if (_save_to_folder(pMainView, mdata->filepath, buf)) {
 		MSG_MAIN_HIGH("File Downloaded");
-	else
+	} else {
 		MSG_MAIN_HIGH("File  Not Downloaded");
+	}
 
 }
 
@@ -1221,16 +1215,16 @@ void _on_mainview_delete(Ivug_MainView *pMainView)
 
 	if (mdata->slide_type == SLIDE_TYPE_IMAGE) {
 		pMainView->popup = ivug_deletepopup_show(pMainView->navi_bar,
-											GET_STR(IDS_DELETE_IMAGE),
-											GET_STR(IDS_DELETE_IMAGE_MESSAGE),
-											_on_delete_selected,
-											pMainView);
+		                   GET_STR(IDS_DELETE_IMAGE),
+		                   GET_STR(IDS_DELETE_IMAGE_MESSAGE),
+		                   _on_delete_selected,
+		                   pMainView);
 	} else {
 		pMainView->popup = ivug_deletepopup_show(pMainView->navi_bar,
-											GET_STR(IDS_DELETE_IMAGE),
-											GET_STR(IDS_DELETE_VIDEO_MESSAGE),
-											_on_delete_selected,
-											pMainView);
+		                   GET_STR(IDS_DELETE_IMAGE),
+		                   GET_STR(IDS_DELETE_VIDEO_MESSAGE),
+		                   _on_delete_selected,
+		                   pMainView);
 	}
 
 	return;
@@ -1323,7 +1317,7 @@ void _on_mainview_save(Ivug_MainView *pMainView)
 
 	bool ret = ivug_db_get_all_folder_list(_iter_album_list, items);
 	if (ret == false) {
-		MSG_SDATA_ERROR( "ivug_db_get_all_folder_list failed: %d", ret);
+		MSG_SDATA_ERROR("ivug_db_get_all_folder_list failed: %d", ret);
 		return;
 	}
 
@@ -1339,7 +1333,7 @@ static void _ivug_slideshow_ext_ug_destroy_cb(ui_gadget_h ug, void *priv)
 	IV_ASSERT(priv != NULL);
 	Ivug_MainView *pMainView = (Ivug_MainView *)priv;
 
-    ug_destroy(ug);
+	ug_destroy(ug);
 	//__gl_ext_destroy_ug(ad);
 	/*Enable the focus permission of the app layout,or else the app layout can't flick the highlight*/
 	elm_object_tree_focus_allow_set(pMainView->layout, EINA_TRUE);
@@ -1506,7 +1500,7 @@ _on_slideshow_finished(void *data, Evas_Object *obj, void *event_info)
 	//int ss_state = (int)event_info;
 
 	evas_object_smart_callback_del_full(ivug_ss_object_get(pMainView->ssHandle),
-		"slideshow,finished", _on_slideshow_finished, pMainView);
+	                                    "slideshow,finished", _on_slideshow_finished, pMainView);
 
 	if (pMainView->ssHandle) {
 		ivug_ss_delete(pMainView->ssHandle);
@@ -1548,8 +1542,7 @@ void on_btn_slideshow_clicked(void *data, Evas_Object *obj, void *event_info)
 
 		char *filepath = NULL;	// start file path
 
-		EINA_LIST_FOREACH(list, l, l_data)
-		{
+		EINA_LIST_FOREACH(list, l, l_data) {
 			img = (Image_Object *)l_data;
 			mitem = (Media_Item *)ivug_thumblist_get_item_data(pMainView->thumbs, img);
 			mdata = ivug_medialist_get_data(mitem);
@@ -1579,7 +1572,7 @@ void on_btn_slideshow_clicked(void *data, Evas_Object *obj, void *event_info)
 
 		// Register callback
 		evas_object_smart_callback_add(ivug_ss_object_get(pMainView->ssHandle),
-			"slideshow,finished", _on_slideshow_finished, pMainView);
+		                               "slideshow,finished", _on_slideshow_finished, pMainView);
 
 //		ivug_allow_lcd_off();
 
@@ -1607,20 +1600,19 @@ static void _ivug_ext_app_control_reply_cb(app_control_h request, app_control_h 
 // Enable menu again
 	edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,enable,toolbtn", "user");
 
-	switch (result)
-	{
-		case APP_CONTROL_RESULT_SUCCEEDED:
-			MSG_IMAGEVIEW_HIGH("APP_CONTROL_RESULT_SUCCEEDED");
-			break;
-		case APP_CONTROL_RESULT_FAILED:
-			MSG_IMAGEVIEW_HIGH("APP_CONTROL_RESULT_FAILED");
-			break;
-		case APP_CONTROL_RESULT_CANCELED:
-			MSG_IMAGEVIEW_HIGH("APP_CONTROL_RESULT_CANCELED");
-			break;
-		default:
-			MSG_IMAGEVIEW_ERROR("unhandled value %d", result);
-			break;
+	switch (result) {
+	case APP_CONTROL_RESULT_SUCCEEDED:
+		MSG_IMAGEVIEW_HIGH("APP_CONTROL_RESULT_SUCCEEDED");
+		break;
+	case APP_CONTROL_RESULT_FAILED:
+		MSG_IMAGEVIEW_HIGH("APP_CONTROL_RESULT_FAILED");
+		break;
+	case APP_CONTROL_RESULT_CANCELED:
+		MSG_IMAGEVIEW_HIGH("APP_CONTROL_RESULT_CANCELED");
+		break;
+	default:
+		MSG_IMAGEVIEW_ERROR("unhandled value %d", result);
+		break;
 	}
 
 	pMainView->ext_svc = NULL;
@@ -1658,7 +1650,7 @@ static void _on_add_comment_view_destroy(void *data, Evas_Object *obj, void *eve
 	pMainView->pNameView = NULL;	// Will removed in add tag view.
 
 	evas_object_smart_callback_del(pMainView->navi_bar, "transition,finished",
-				_on_add_comment_view_destroy);
+	                               _on_add_comment_view_destroy);
 }
 
 static void _on_more_selected(void *data, Evas_Object *obj, void *event_info)
@@ -1752,7 +1744,7 @@ void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 	int rot = gGetRotationDegree();
 
 #ifdef BACK_BTN
-	ivug_listpopup_context_show(popup, pMainView->layout, x+w/2, y+h/2);
+	ivug_listpopup_context_show(popup, pMainView->layout, x + w / 2, y + h / 2);
 #else
 	Evas_Object *win = (Evas_Object *)ug_get_window();
 	elm_win_screen_size_get(win, NULL, NULL, &w, &h);

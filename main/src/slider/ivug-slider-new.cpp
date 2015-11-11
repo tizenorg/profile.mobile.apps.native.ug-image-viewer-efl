@@ -48,7 +48,7 @@
 
 #define SLIDER_NEW_EDJ_FILE EDJ_PATH"/ivug-slider-new.edj"
 #define SLIDER_NEW_HD_EDJ_FILE EDJ_PATH"/ivug-slider-new-hd.edj"
-typedef struct _Ivug_SliderNew{
+typedef struct _Ivug_SliderNew {
 	Evas_Object *parent;
 	Evas_Object *layout;
 	Evas_Object *gesture;
@@ -58,7 +58,7 @@ typedef struct _Ivug_SliderNew{
 	int prev_y;
 
 	int curpc;
-       bool curpcm_state;//current photocam move state;
+	bool curpcm_state;//current photocam move state;
 	bool pcreset; //photocam reset
 	bool bLongtapEnable;
 	bool bMomentumStarted;
@@ -100,7 +100,7 @@ typedef struct _Ivug_SliderNew{
 
 	int orientation;
 	Ivug_MainView *pMainView;
-}Ivug_SliderNew;
+} Ivug_SliderNew;
 
 
 #if (1)
@@ -109,18 +109,16 @@ static void _on_obj_resize(void *data, Evas *e, Evas_Object *obj, void *event_in
 {
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
 
-	Evas_Coord x,y,w,h;
+	Evas_Coord x, y, w, h;
 	evas_object_geometry_get(obj, &x, &y, &w, &h);
 
 #if 1
-	if (w == 0 || h == 0 )
-	{
+	if (w == 0 || h == 0) {
 		MSG_WARN("Not ready for update XYWH(%d,%d,%d,%d)", x, y, w, h);
 		return;
 	}
 
-	if(slider_new->icon_layer)
-	{
+	if (slider_new->icon_layer) {
 		evas_object_show(slider_new->icon_layer);
 	}
 #endif
@@ -132,18 +130,16 @@ static void _on_obj_move(void *data, Evas *e, Evas_Object *obj, void *event_info
 {
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
 
-	Evas_Coord x,y,w,h;
+	Evas_Coord x, y, w, h;
 	evas_object_geometry_get(obj, &x, &y, &w, &h);
 
 #if 1
-	if (w == 0 || h == 0 )
-	{
+	if (w == 0 || h == 0) {
 		MSG_WARN("Not ready for update XYWH(%d,%d,%d,%d)", x, y, w, h);
 		return;
 	}
 
-	if(slider_new->icon_layer)
-	{
+	if (slider_new->icon_layer) {
 		evas_object_show(slider_new->icon_layer);
 	}
 #endif
@@ -166,42 +162,32 @@ static void _on_obj_hide(void *data, Evas *e, Evas_Object *obj, void *event_info
 void ivug_slider_update_icon_layer(Ivug_SliderNew *slider_new)
 {
 
-	int x,y,w,h;
-	evas_object_geometry_get(slider_new->photocam,&x,&y,&w,&h);
-	evas_object_move(slider_new->icon_layer, (w/2 -ICON_PLAY_SIZE/2) , (h/2 -ICON_PLAY_SIZE/2));
+	int x, y, w, h;
+	evas_object_geometry_get(slider_new->photocam, &x, &y, &w, &h);
+	evas_object_move(slider_new->icon_layer, (w / 2 - ICON_PLAY_SIZE / 2) , (h / 2 - ICON_PLAY_SIZE / 2));
 	evas_object_resize(slider_new->icon_layer, ICON_PLAY_SIZE, ICON_PLAY_SIZE);
 	Media_Item *mitem = ivug_medialist_get_current_item(slider_new->mList);
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
 
-	if(mdata->slide_type == SLIDE_TYPE_VIDEO
-		)
-	{
+	if (mdata->slide_type == SLIDE_TYPE_VIDEO
+	   ) {
 		ivug_decolayer_set_type(slider_new->icon_layer, IVUG_DECO_VIDEO);
-	}
-	else if(mdata->iType == MIMAGE_TYPE_BESTSHOT)
-	{
+	} else if (mdata->iType == MIMAGE_TYPE_BESTSHOT) {
 		ivug_decolayer_set_type(slider_new->icon_layer, IVUG_DECO_BESTPIC);
-	}
-	else if(mdata->iType == MIMAGE_TYPE_SOUNDSCENE)
-	{
+	} else if (mdata->iType == MIMAGE_TYPE_SOUNDSCENE) {
 		ivug_decolayer_set_type(slider_new->icon_layer, IVUG_DECO_SOUNDPIC);
-	}
-	else if (mdata->m_handle && ivug_db_is_burstshot(mdata->m_handle) == true )
-	{
+	} else if (mdata->m_handle && ivug_db_is_burstshot(mdata->m_handle) == true) {
 		ivug_decolayer_set_type(slider_new->icon_layer, IVUG_DECO_BURST);
-	}
-	else
-	{
+	} else {
 		ivug_decolayer_set_type(slider_new->icon_layer, IVUG_DECO_NONE);
 	}
 
 }
 
 
-typedef struct _SliderCB
-{
+typedef struct _SliderCB {
 	Ivug_SliderNew *slider_new;
-	int x,y,w,h;		// Location CB
+	int x, y, w, h;		// Location CB
 	Media_Item *mItem;	// Changed CB
 
 	void *handle;
@@ -212,15 +198,13 @@ static void _ivug_slider_new_changed_cb(void *handle, Media_Item *mItem, void *d
 {
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
 
-	if(slider_new->changed_cb)
-	{
+	if (slider_new->changed_cb) {
 		MSG_LOW("START : Item Changed");
 		slider_new->changed_cb(NULL, mItem, slider_new->changed_data);
 		MSG_LOW("END   : Item Changed");
 	}
 
-	if(mItem)
-	{
+	if (mItem) {
 		ivug_slider_update_icon_layer(slider_new);
 	}
 
@@ -284,7 +268,9 @@ static Evas_Event_Flags n_finger_tap_end(void *data , void *event_info)
 
 	MSG_MED("Finger tab end. Time=%d", p->timestamp);
 
-	if (p->n != 1 ) return EVAS_EVENT_FLAG_NONE;
+	if (p->n != 1) {
+		return EVAS_EVENT_FLAG_NONE;
+	}
 
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
 	MSG_ASSERT(slider_new != NULL);
@@ -293,31 +279,24 @@ static Evas_Event_Flags n_finger_tap_end(void *data , void *event_info)
 
 	icon = ivug_decolayer_check_icon(slider_new->icon_layer, p->x, p->y);
 
-	if (icon == IVUG_DECO_ICON_VIDEO )
-	{
+	if (icon == IVUG_DECO_ICON_VIDEO) {
 		evas_object_smart_callback_call(slider_new->layout, "slider,playvideo", slider_new); // Clicked video icon
-	}
-	else if (icon == IVUG_DECO_ICON_SOUNDPIC )
-	{
-		if (slider_new->icon_layer )
-		{
+	} else if (icon == IVUG_DECO_ICON_SOUNDPIC) {
+		if (slider_new->icon_layer) {
 			ivug_decolayer_start_blinking(slider_new->icon_layer);
 		}
-	}
-	else if (icon == IVUG_DECO_ICON_BURST_PLAY)
-	{
+	} else if (icon == IVUG_DECO_ICON_BURST_PLAY) {
 		MSG_HIGH("Burst play!!!!");
 		evas_object_smart_callback_call(slider_new->layout, "slider,playburst", slider_new); // Clicked video icon
 	}
-/*	else if (icon == IVUG_DECO_ICON_BURST_PLAYSPEED)
-	{
-		MSG_HIGH("Burst play speed");
-		Evas_Object *popup = ivug_playspeed_popup_add(slider_new->layout);
+	/*	else if (icon == IVUG_DECO_ICON_BURST_PLAYSPEED)
+		{
+			MSG_HIGH("Burst play speed");
+			Evas_Object *popup = ivug_playspeed_popup_add(slider_new->layout);
 
-		evas_object_smart_callback_add(popup, "playspeed,changed", _on_playspeed_changed, slider_new);
-	}*/
-	else
-	{
+			evas_object_smart_callback_add(popup, "playspeed,changed", _on_playspeed_changed, slider_new);
+		}*/
+	else {
 		evas_object_smart_callback_call(slider_new->layout, "slider,clicked", slider_new);
 	}
 
@@ -351,7 +330,7 @@ static Evas_Event_Flags _dbl_click_end(void *data , void *event_info)
 		slider_new->bSliding = false;
 		slider_new->zoom_level = elm_photocam_zoom_get(slider_new->photocam);
 		elm_photocam_zoom_mode_set(slider_new->photocam,  ELM_PHOTOCAM_ZOOM_MODE_MANUAL);
-		elm_photocam_zoom_set(slider_new->photocam, slider_new->zoom_level - 0.4 );
+		elm_photocam_zoom_set(slider_new->photocam, slider_new->zoom_level - 0.4);
 	} else {
 
 		slider_new->bSliding = true ;
@@ -370,7 +349,7 @@ static Evas_Event_Flags _dbl_click_abort(void *data , void *event_info)
 	MSG_ASSERT(slider_new != NULL);
 
 	if (!slider_new->bZooming) {
-			slider_new->bSliding = true ;
+		slider_new->bSliding = true ;
 	}
 
 	return EVAS_EVENT_FLAG_NONE;
@@ -382,7 +361,9 @@ Evas_Event_Flags n_long_tap_start(void *data , void *event_info)
 
 	MSG_HIGH("Long tab start, x=%d, y=%d", p->x, p->y);
 
-	if (p->n != 1 ) return EVAS_EVENT_FLAG_NONE;
+	if (p->n != 1) {
+		return EVAS_EVENT_FLAG_NONE;
+	}
 
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
 	MSG_ASSERT(slider_new != NULL);
@@ -392,13 +373,13 @@ Evas_Event_Flags n_long_tap_start(void *data , void *event_info)
 	return EVAS_EVENT_FLAG_NONE;
 }
 
-void ivug_slider_set_current_Photocam(Ivug_SliderNew *slider_new,int pc)
+void ivug_slider_set_current_Photocam(Ivug_SliderNew *slider_new, int pc)
 {
-    slider_new->curpc =pc;
+	slider_new->curpc = pc;
 }
-void ivug_slider_set_Photocam_moved(Ivug_SliderNew *slider_new,bool pcm)
+void ivug_slider_set_Photocam_moved(Ivug_SliderNew *slider_new, bool pcm)
 {
-    slider_new->curpcm_state = pcm;
+	slider_new->curpcm_state = pcm;
 }
 
 Evas_Event_Flags _zoom_start(void *data, void *event_info)
@@ -443,17 +424,17 @@ Evas_Event_Flags _zoom_start(void *data, void *event_info)
 		//elm_photocam_zoom_mode_set(slider_new->photocam,  ELM_PHOTOCAM_ZOOM_MODE_MANUAL);
 		//lider_new->bZooming = true;
 		//slider_new->zoom_level = elm_photocam_zoom_get(slider_new->photocam);
-		int width,height;
-		elm_photocam_image_size_get(slider_new->photocam,&width,&height);
+		int width, height;
+		elm_photocam_image_size_get(slider_new->photocam, &width, &height);
 		slider_new->zoom_internal_level = 0;
-		MSG_MAIN_HIGH(" width= %d  height = %d", width,height);
-		if (width <= 50 && height <=50) {
+		MSG_MAIN_HIGH(" width= %d  height = %d", width, height);
+		if (width <= 50 && height <= 50) {
 			slider_new->max_zoom_level = 3;
-		} else if (width <= 200 && height <=200) {
+		} else if (width <= 200 && height <= 200) {
 			slider_new->max_zoom_level = 5;
-		} else if (width <= 500 && height <=500) {
+		} else if (width <= 500 && height <= 500) {
 			slider_new->max_zoom_level = 8;
-		} else if (width <= 1000 && height <=1000) {
+		} else if (width <= 1000 && height <= 1000) {
 			slider_new->max_zoom_level = 12;
 		} else if (width > 1000 && height > 1000) {
 			slider_new->max_zoom_level = 20;
@@ -484,7 +465,7 @@ Evas_Event_Flags _zoom_move(void *data, void *event_info)
 	}
 
 	if (zoom_level <= 1.0) {
-		elm_photocam_gesture_enabled_set(slider_new->photocam,EINA_TRUE);
+		elm_photocam_gesture_enabled_set(slider_new->photocam, EINA_TRUE);
 
 		if (!slider_new->bZooming) {
 			slider_new->bZooming = true;
@@ -492,20 +473,20 @@ Evas_Event_Flags _zoom_move(void *data, void *event_info)
 			slider_new->zoom_level = elm_photocam_zoom_get(slider_new->photocam);
 		}
 		zoom_level = elm_photocam_zoom_get(slider_new->photocam);
-		double zoomfactordiff = (p->zoom - slider_new->zoom_factor_prev );
+		double zoomfactordiff = (p->zoom - slider_new->zoom_factor_prev);
 
 		if (zoomfactordiff >= 0.1) {
 			if (slider_new->zoom_internal_level <= slider_new->max_zoom_level) {
 				slider_new->zoom_factor_prev = p->zoom;
 				slider_new->zoom_internal_level++;
-				elm_photocam_zoom_set(slider_new->photocam,zoom_level - 0.2 );
+				elm_photocam_zoom_set(slider_new->photocam, zoom_level - 0.2);
 			}
 		} else if (zoomfactordiff <= -0.1) {
 			elm_photocam_zoom_mode_set(slider_new->photocam,  ELM_PHOTOCAM_ZOOM_MODE_AUTO_FIT);
 			if (slider_new->zoom_internal_level > 0 &&  zoom_level  !=  slider_new->zoom_level) {
 				slider_new->zoom_factor_prev = p->zoom;
 				slider_new->zoom_internal_level--;
-				elm_photocam_zoom_set(slider_new->photocam,zoom_level + 0.2);
+				elm_photocam_zoom_set(slider_new->photocam, zoom_level + 0.2);
 			}
 		}
 	}
@@ -522,7 +503,7 @@ Evas_Event_Flags _zoom_end(void *data, void *event_info)
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
 	MSG_ASSERT(slider_new != NULL);
 	MSG_ASSERT(slider_new->pMainView != NULL);
-	if(slider_new->pMainView->slide_state /*|| slider_new->pMainView->is_moved*/) {
+	if (slider_new->pMainView->slide_state /*|| slider_new->pMainView->is_moved*/) {
 		MSG_MAIN_HIGH("Sliding, no Zoom should happen");
 		return EVAS_EVENT_FLAG_NONE;
 	}
@@ -532,11 +513,10 @@ Evas_Event_Flags _zoom_end(void *data, void *event_info)
 		slider_new->bSliding = true;
 	}
 
-	if(slider_new->zoom_internal_level == 0 || zoom_level == slider_new->zoom_level )
-	{
+	if (slider_new->zoom_internal_level == 0 || zoom_level == slider_new->zoom_level) {
 		ivug_reset_zoom(slider_new);
 
-	 }
+	}
 	return EVAS_EVENT_FLAG_NONE;
 }
 
@@ -548,7 +528,7 @@ Evas_Event_Flags _zoom_abort(void *data, void *event_info)
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
 	MSG_ASSERT(slider_new != NULL);
 	MSG_ASSERT(slider_new->pMainView != NULL);
-	if(slider_new->pMainView->slide_state) {
+	if (slider_new->pMainView->slide_state) {
 		MSG_MAIN_HIGH("Sliding, no Zoom should happen");
 		return EVAS_EVENT_FLAG_NONE;
 	}
@@ -611,8 +591,7 @@ void ivug_enable_gesture(Ivug_SliderNew *slider_new)
 Ivug_SliderNew * ivug_slider_new_init(Evas_Object *parent, void *pMainView)
 {
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)calloc(1, sizeof(Ivug_SliderNew));
-	if (slider_new == NULL)
-	{
+	if (slider_new == NULL) {
 		MSG_ERROR("Cannot allocate memory");
 		return NULL;
 	}
@@ -631,18 +610,14 @@ Ivug_SliderNew * ivug_slider_new_init(Evas_Object *parent, void *pMainView)
 	int wx, wy, ww, wh;
 
 	evas_object_geometry_get(win, &wx, &wy, &ww, &wh);
-	if(ww == 720 && wh == 1280)
-	{
+	if (ww == 720 && wh == 1280) {
 		MSG_WARN("HD Loading");
 		slider_new->layout = ivug_layout_add2(parent, SLIDER_NEW_HD_EDJ_FILE, "slider_new");
+	} else {
+		MSG_WARN("WVGA Loading");
+		slider_new->layout = ivug_layout_add2(parent, SLIDER_NEW_EDJ_FILE, "slider_new");
 	}
-    else
-     {
-    	MSG_WARN("WVGA Loading");
-	    slider_new->layout = ivug_layout_add2(parent, SLIDER_NEW_EDJ_FILE, "slider_new");
-      }
-	if (slider_new->layout == NULL)
-	{
+	if (slider_new->layout == NULL) {
 		MSG_WARN("layout sawllow failed");
 		free(slider_new);
 		return NULL;
@@ -662,8 +637,7 @@ Ivug_SliderNew * ivug_slider_new_init(Evas_Object *parent, void *pMainView)
 	Evas_Object *gesture = elm_gesture_layer_add(slider_new->layout);
 	elm_gesture_layer_hold_events_set(gesture, EINA_FALSE);
 
-	if (elm_gesture_layer_attach(gesture, event) == EINA_FALSE)
-	{
+	if (elm_gesture_layer_attach(gesture, event) == EINA_FALSE) {
 		MSG_ERROR("Cannot attach event rect");
 	}
 
@@ -717,7 +691,7 @@ Ivug_SliderNew * ivug_slider_new_init(Evas_Object *parent, void *pMainView)
 
 	PERF_CHECK_BEGIN(LVL3, "QPhotoAPI::create()");
 
-	 //Qphoto_init();
+	//Qphoto_init();
 
 #if (1)
 	evas_object_event_callback_add(slider_new->layout, EVAS_CALLBACK_RESIZE, _on_obj_resize, slider_new);
@@ -736,22 +710,19 @@ void ivug_slider_new_destroy(Ivug_SliderNew * slider_new)
 
 	slider_new->bDeleting = true;
 
-	if(slider_new->gesture)
-	{
+	if (slider_new->gesture) {
 		evas_object_del(slider_new->gesture);
 		slider_new->gesture = NULL;
 	}
 
-	if(slider_new->icon_layer)
-	{
+	if (slider_new->icon_layer) {
 		evas_object_del(slider_new->icon_layer);
 		slider_new->icon_layer = NULL;
 	}
-	
+
 	MSG_HIGH("Qphoto destroy. [END]");
 
-	if(slider_new->layout)
-	{
+	if (slider_new->layout) {
 		evas_object_del(slider_new->layout);
 		slider_new->layout = NULL;
 	}
@@ -774,7 +745,7 @@ void ivug_slider_new_set_list(Ivug_SliderNew * slider_new, Media_List *mList, Me
 	slider_new->mList = mList;
 }
 
-void ivug_slider_new_set_photocam(Ivug_SliderNew *slider_new,Evas_Object * photocam)
+void ivug_slider_new_set_photocam(Ivug_SliderNew *slider_new, Evas_Object * photocam)
 {
 	slider_new->photocam = photocam;
 }
@@ -823,7 +794,7 @@ bool  ivug_isphotocam_reset(Ivug_SliderNew *slider_new)
 
 void  ivug_set_photocam_reset(Ivug_SliderNew *slider_new)
 {
-     slider_new->pcreset = false;
+	slider_new->pcreset = false;
 }
 
 void ivug_slider_new_move_item(Ivug_SliderNew *slider_new, Media_Item *item)
@@ -870,9 +841,8 @@ void ivug_slider_new_change_view_size(Ivug_SliderNew *slider_new, int w, int h)
 	elm_win_screen_size_get((Evas_Object *)ug_get_window(), &screen_x, &screen_y, &screen_w, &screen_h);
 	MSG_HIGH("screen_Size : Win(%d,%d,%d,%d)", screen_x, screen_y, screen_w, screen_h);
 
-	if ((rot % 180) != 0 )
-	{
-		std::swap(screen_w,screen_h);
+	if ((rot % 180) != 0) {
+		std::swap(screen_w, screen_h);
 	}
 
 // Landscape Mode -> SIP visible --> Window geometry is 1280x729....

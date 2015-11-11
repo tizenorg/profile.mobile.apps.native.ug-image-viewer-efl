@@ -31,7 +31,7 @@
 #define LOG_CAT "IV-PHOTOCAM"
 
 /*initialize the values on finger touch to the screen*/
-void _on_slider_mouse_down (void *data, Evas *e, Evas_Object *obj, void *event_info)
+void _on_slider_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
 	IV_ASSERT(data != NULL);
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
@@ -43,18 +43,18 @@ void _on_slider_mouse_down (void *data, Evas *e, Evas_Object *obj, void *event_i
 	MSG_MAIN_HIGH("mouse down (%d,%d)", ev->output.x, ev->output.y);
 }
 /*Move the photocam images along with the finger*/
-void _on_slider_mouse_moved (void *data, Evas *e, Evas_Object *obj, void *event_info)
+void _on_slider_mouse_moved(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
 	IV_ASSERT(data != NULL);
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	Evas_Event_Mouse_Move *ev = (Evas_Event_Mouse_Move *) event_info;
-	MSG_MAIN_LOW("mouse moved current(%d,%d)  prev (%d,%d)", ev->cur.output.x, ev->cur.output.y,ev->prev.output.x, ev->prev.output.y);
-	int bx=0;
-	int by=0;
-	int bw=0;
-	int bh=0;
+	MSG_MAIN_LOW("mouse moved current(%d,%d) prev(%d,%d)", ev->cur.output.x, ev->cur.output.y, ev->prev.output.x, ev->prev.output.y);
+	int bx = 0;
+	int by = 0;
+	int bw = 0;
+	int bh = 0;
 
-	int count= -1;
+	int count = -1;
 	int currentindex = -1;
 	if (pMainView->slide_state == true) {
 		MSG_MAIN_HIGH("Sliding is happening");
@@ -72,16 +72,16 @@ void _on_slider_mouse_moved (void *data, Evas *e, Evas_Object *obj, void *event_
 	if (pMainView->prev_mouse_point != 0 &&  currentindex != -1 && count != -1 && ivug_isslide_enabled(pMainView->pSliderNew) && pMainView->bmultitouchsliding == false) {
 		if (pMainView->currentphotocam == PHOTOCAM_0) {
 			evas_object_geometry_get(pMainView->photocam0, &bx, &by, &bw, &bh);
-		} else if(pMainView->currentphotocam == PHOTOCAM_1) {
+		} else if (pMainView->currentphotocam == PHOTOCAM_1) {
 			evas_object_geometry_get(pMainView->photocam, &bx, &by, &bw, &bh);
-		} else if(pMainView->currentphotocam == PHOTOCAM_2) {
+		} else if (pMainView->currentphotocam == PHOTOCAM_2) {
 			evas_object_geometry_get(pMainView->photocam2, &bx, &by, &bw, &bh);
 		}
 
-		MSG_HIGH("current index = %d , diff %d",currentindex, ev->cur.output.x - pMainView->prev_mouse_point);
-		if ((ev->cur.output.x - pMainView->prev_mouse_point < 0 && ( currentindex + 1 < count
-		|| (currentindex + 1 == count  && bx > 0 ) ) ) || ( ev->cur.output.x - pMainView->prev_mouse_point > 0
-		 &&  (currentindex > 0 ))) {
+		MSG_HIGH("current index = %d , diff %d", currentindex, ev->cur.output.x - pMainView->prev_mouse_point);
+		if ((ev->cur.output.x - pMainView->prev_mouse_point < 0 && (currentindex + 1 < count
+		        || (currentindex + 1 == count  && bx > 0))) || (ev->cur.output.x - pMainView->prev_mouse_point > 0
+		                && (currentindex > 0))) {
 			pMainView->is_moved = true;
 
 			int diffX = pMainView->last_prev_mouse_point - ev->cur.output.x ;
@@ -90,46 +90,46 @@ void _on_slider_mouse_moved (void *data, Evas *e, Evas_Object *obj, void *event_
 				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "hide,icon", "video_play_icon");
 			}
 
-			ivug_slider_set_current_Photocam(pMainView->pSliderNew,pMainView->currentphotocam);
-			ivug_slider_set_Photocam_moved(pMainView->pSliderNew,pMainView->is_moved);
+			ivug_slider_set_current_Photocam(pMainView->pSliderNew, pMainView->currentphotocam);
+			ivug_slider_set_Photocam_moved(pMainView->pSliderNew, pMainView->is_moved);
 			if (pMainView->currentphotocam == PHOTOCAM_0) {
 				evas_object_geometry_get(pMainView->photocam0, &bx, &by, &bw, &bh);
-				MSG_HIGH("_on_slider_mouse_moved current x,y %d,%d",bx,by);
-				evas_object_move(pMainView->photocam0,bx+(ev->cur.output.x - pMainView->prev_mouse_point ) ,by);
-				if (currentindex+1 != count) {
+				MSG_HIGH("_on_slider_mouse_moved current x,y %d,%d", bx, by);
+				evas_object_move(pMainView->photocam0, bx + (ev->cur.output.x - pMainView->prev_mouse_point) , by);
+				if (currentindex + 1 != count) {
 					evas_object_geometry_get(pMainView->photocam, &bx, &by, &bw, &bh);
-					evas_object_move(pMainView->photocam,bx+(ev->cur.output.x - pMainView->prev_mouse_point ) ,by);
+					evas_object_move(pMainView->photocam, bx + (ev->cur.output.x - pMainView->prev_mouse_point) , by);
 				}
 
 				if (currentindex != 0) {
 					evas_object_geometry_get(pMainView->photocam2, &bx, &by, &bw, &bh);
-					evas_object_move(pMainView->photocam2,bx+(ev->cur.output.x - pMainView->prev_mouse_point ) ,by);
+					evas_object_move(pMainView->photocam2, bx + (ev->cur.output.x - pMainView->prev_mouse_point) , by);
 				}
 			} else if (pMainView->currentphotocam == PHOTOCAM_1) {
 				evas_object_geometry_get(pMainView->photocam, &bx, &by, &bw, &bh);
-				MSG_HIGH("_on_slider_mouse_moved current x,y %d,%d",bx,by);
-				evas_object_move(pMainView->photocam,bx+(ev->cur.output.x - pMainView->prev_mouse_point ) ,by);
-				if (currentindex+1 != count) {
+				MSG_HIGH("_on_slider_mouse_moved current x,y %d,%d", bx, by);
+				evas_object_move(pMainView->photocam, bx + (ev->cur.output.x - pMainView->prev_mouse_point) , by);
+				if (currentindex + 1 != count) {
 					evas_object_geometry_get(pMainView->photocam2, &bx, &by, &bw, &bh);
-					evas_object_move(pMainView->photocam2,bx+(ev->cur.output.x - pMainView->prev_mouse_point ) ,by);
+					evas_object_move(pMainView->photocam2, bx + (ev->cur.output.x - pMainView->prev_mouse_point) , by);
 				}
 
 				if (currentindex != 0) {
 					evas_object_geometry_get(pMainView->photocam0, &bx, &by, &bw, &bh);
-					evas_object_move(pMainView->photocam0,bx+(ev->cur.output.x - pMainView->prev_mouse_point ) ,by);
+					evas_object_move(pMainView->photocam0, bx + (ev->cur.output.x - pMainView->prev_mouse_point) , by);
 				}
 			} else if (pMainView->currentphotocam == PHOTOCAM_2) {
 				evas_object_geometry_get(pMainView->photocam2, &bx, &by, &bw, &bh);
-				MSG_HIGH("_on_slider_mouse_moved current x,y %d,%d",bx,by);
-				evas_object_move(pMainView->photocam2,bx+(ev->cur.output.x - pMainView->prev_mouse_point ) ,by);
-				if (currentindex+1 != count) {
+				MSG_HIGH("_on_slider_mouse_moved current x,y %d,%d", bx, by);
+				evas_object_move(pMainView->photocam2, bx + (ev->cur.output.x - pMainView->prev_mouse_point) , by);
+				if (currentindex + 1 != count) {
 					evas_object_geometry_get(pMainView->photocam0, &bx, &by, &bw, &bh);
-					evas_object_move(pMainView->photocam0,bx+(ev->cur.output.x - pMainView->prev_mouse_point ) ,by);
+					evas_object_move(pMainView->photocam0, bx + (ev->cur.output.x - pMainView->prev_mouse_point) , by);
 				}
 
 				if (currentindex != 0) {
 					evas_object_geometry_get(pMainView->photocam, &bx, &by, &bw, &bh);
-					evas_object_move(pMainView->photocam,bx+(ev->cur.output.x - pMainView->prev_mouse_point ) ,by);
+					evas_object_move(pMainView->photocam, bx + (ev->cur.output.x - pMainView->prev_mouse_point) , by);
 				}
 			}
 		}
@@ -141,7 +141,7 @@ void _on_slider_mouse_moved (void *data, Evas *e, Evas_Object *obj, void *event_
 		 * then video play icon should appear
 		 */
 		Media_Data *pData = ivug_medialist_get_data(pMainView->cur_mitem);
-		if (( pMainView->last_prev_mouse_point - ev->cur.output.x > -10 ) && ( pMainView->is_play_Icon == false ) && ( currentindex + 1 == count ) && ( pData->slide_type == SLIDE_TYPE_VIDEO )){
+		if ((pMainView->last_prev_mouse_point - ev->cur.output.x > -10) && (pMainView->is_play_Icon == false) && (currentindex + 1 == count) && (pData->slide_type == SLIDE_TYPE_VIDEO)) {
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "show,icon", "video_play_icon");
 			pMainView->is_play_Icon = true;
 		}
@@ -170,17 +170,17 @@ void update_check(Ivug_MainView *pMainView)
 	if (pMainView->selected_path_list) {
 		EINA_LIST_FOREACH(pMainView->selected_path_list, l, data) {
 			files[i] = strdup((char *)data);
-			MSG_MAIN_HIGH("file is %s",files[i]);
-			if (strcmp(mdata->filepath,files[i])==0) {
-				evas_object_color_set(pMainView->check,255,255,255,255);
-				elm_check_state_set(pMainView->check,EINA_TRUE);
+			MSG_MAIN_HIGH("file is %s", files[i]);
+			if (strcmp(mdata->filepath, files[i]) == 0) {
+				evas_object_color_set(pMainView->check, 255, 255, 255, 255);
+				elm_check_state_set(pMainView->check, EINA_TRUE);
 				check = 1;
 			}
 			i++;
 		}
 		if (check == 0) {
-			evas_object_color_set(pMainView->check,128,138,137,255);
-			elm_check_state_set(pMainView->check,EINA_FALSE);
+			evas_object_color_set(pMainView->check, 128, 138, 137, 255);
+			elm_check_state_set(pMainView->check, EINA_FALSE);
 		}
 	}
 	free(files);
@@ -190,7 +190,7 @@ void update_check(Ivug_MainView *pMainView)
 	elm_layout_text_set(pMainView->select_bar, "elm.text.title", buf);
 }
 /*Do the respective operation on releasing the finger from the screen*/
-void _on_slider_mouse_up (void *data, Evas *e, Evas_Object *obj, void *event_info)
+void _on_slider_mouse_up(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
 	IV_ASSERT(data != NULL);
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
@@ -200,7 +200,7 @@ void _on_slider_mouse_up (void *data, Evas *e, Evas_Object *obj, void *event_inf
 		MSG_MAIN_HIGH("Sliding is happening");
 		return ;//Do not accept the flick event  if transition is not completed
 	}
-	int count= -1;
+	int count = -1;
 	int currentindex = -1;
 	pMainView->prevphotocam = pMainView->currentphotocam;
 
@@ -210,7 +210,7 @@ void _on_slider_mouse_up (void *data, Evas *e, Evas_Object *obj, void *event_inf
 			count = ivug_medialist_get_count(pMainView->mList);
 			Media_Data *pData = ivug_medialist_get_data(pMainView->cur_mitem);
 			currentindex =  pData->index;
-			MSG_MAIN_HIGH(" _main_view_eventbox_flick_left_cb currentindex = %d count =%d ",currentindex,count);
+			MSG_MAIN_HIGH(" _main_view_eventbox_flick_left_cb currentindex = %d count =%d ", currentindex, count);
 		}
 
 		int diffX = pMainView->last_prev_mouse_point - ev->output.x ;
@@ -218,7 +218,7 @@ void _on_slider_mouse_up (void *data, Evas *e, Evas_Object *obj, void *event_inf
 		if (diffX > 10) {
 			//left flick  code
 
-			if (count != -1 && currentindex != -1 && currentindex+1 < count) {
+			if (count != -1 && currentindex != -1 && currentindex + 1 < count) {
 				if (pMainView->currentphotocam == PHOTOCAM_1) {
 					pMainView->currentphotocam = PHOTOCAM_2;
 				} else if (pMainView->currentphotocam == PHOTOCAM_2) {
@@ -227,7 +227,7 @@ void _on_slider_mouse_up (void *data, Evas *e, Evas_Object *obj, void *event_inf
 					pMainView->currentphotocam = PHOTOCAM_1;
 				}
 
-				MSG_MAIN_HIGH	("prevphotocam = %d  current photocam %d",pMainView->prevphotocam, pMainView->currentphotocam);
+				MSG_MAIN_HIGH("prevphotocam = %d current photocam %d", pMainView->prevphotocam, pMainView->currentphotocam);
 				pMainView->cur_mitem = ivug_medialist_get_next(pMainView->mList, pMainView->cur_mitem);
 				ivug_medialist_set_current_item(pMainView->mList, pMainView->cur_mitem);
 
@@ -244,7 +244,7 @@ void _on_slider_mouse_up (void *data, Evas *e, Evas_Object *obj, void *event_inf
 					pMainView->slide_move_timer = NULL;
 				}
 
-				pMainView->slide_move_timer = ecore_timer_add(PC_MOVE_INTERVAL_TIME,_ivug_left_move_interval,pMainView);
+				pMainView->slide_move_timer = ecore_timer_add(PC_MOVE_INTERVAL_TIME, _ivug_left_move_interval, pMainView);
 				pMainView->slide_state = true;//set it to true until the tranition completes.
 #ifdef USE_THUMBLIST
 				if (pMainView->thumbs) {
@@ -259,8 +259,7 @@ void _on_slider_mouse_up (void *data, Evas *e, Evas_Object *obj, void *event_inf
 				}
 #endif
 			}
-		}
-		else if (diffX < (-10)) {
+		} else if (diffX < (-10)) {
 			// right flick code
 
 			if (currentindex != -1 && currentindex > 0) {
@@ -289,7 +288,7 @@ void _on_slider_mouse_up (void *data, Evas *e, Evas_Object *obj, void *event_inf
 					pMainView->slide_move_timer = NULL;
 				}
 
-				pMainView->slide_move_timer = ecore_timer_add(PC_MOVE_INTERVAL_TIME,_ivug_right_move_interval,pMainView);
+				pMainView->slide_move_timer = ecore_timer_add(PC_MOVE_INTERVAL_TIME, _ivug_right_move_interval, pMainView);
 				pMainView->slide_state = true;//set it to true until the tranition completes.
 #ifdef USE_THUMBLIST
 				if (pMainView->thumbs) {
@@ -341,14 +340,13 @@ Eina_Bool _ivug_left_move_interval(void *data)
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "left_transit_done", "imageview_area");
 		Media_Item *next_mitem = ivug_medialist_get_next(pMainView->mList, pMainView->cur_mitem);
 
-		if(next_mitem){
+		if (next_mitem) {
 			Media_Data *pData = ivug_medialist_get_data(next_mitem);
 
 			if (pData->slide_type == SLIDE_TYPE_IMAGE) {
 				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "hide,icon", "video_play_icon");
 				pMainView->is_play_Icon = false;
-			}
-			else{
+			} else {
 				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "show,icon", "video_play_icon");
 				pMainView->is_play_Icon = true;
 			}
@@ -391,14 +389,13 @@ Eina_Bool _ivug_right_move_interval(void *data)
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "right_transit_done", "imageview_area");
 		Media_Item *prev_mitem = ivug_medialist_get_prev(pMainView->mList, pMainView->cur_mitem);
 
-		if(prev_mitem){
+		if (prev_mitem) {
 			Media_Data *pmData = ivug_medialist_get_data(prev_mitem);
 
 			if (pmData->slide_type == SLIDE_TYPE_IMAGE) {
 				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "hide,icon", "video_play_icon");
 				pMainView->is_play_Icon = false;
-			}
-			else{
+			} else {
 				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "show,icon", "video_play_icon");
 				pMainView->is_play_Icon = true;
 			}
@@ -412,15 +409,15 @@ Eina_Bool _ivug_right_move_interval(void *data)
 }
 
 /* Move the image until image fits the screen*/
-bool _main_view_object_move_ (Ivug_MainView *pMainView, Evas_Object *obj, int photocampos)
+bool _main_view_object_move_(Ivug_MainView *pMainView, Evas_Object *obj, int photocampos)
 {
-	int bx,by,bw,bh;
+	int bx, by, bw, bh;
 	evas_object_geometry_get(obj, &bx, &by, &bw, &bh);
 	Evas_Object *win = (Evas_Object *)ug_get_window();
 	int wx, wy, ww, wh;
 	evas_object_geometry_get(win, &wx, &wy, &ww, &wh);
 
-	MSG_MAIN_LOW("_main_view_object_move_ enter,ww =%d wh = %d",ww,wh);
+	MSG_MAIN_LOW("_main_view_object_move_ enter,ww =%d wh = %d", ww, wh);
 	int pixelmovx = 15;
 	int pixelmovy;
 	if (pMainView->mode == IVUG_MODE_SELECT) {
@@ -429,56 +426,53 @@ bool _main_view_object_move_ (Ivug_MainView *pMainView, Evas_Object *obj, int ph
 		pixelmovy = 0;
 	}
 
-	if(	photocampos  == PC_POSITION_LEFT) //left   -240
-	{
-		int rem= ww - ABS(bx);
+	if (photocampos  == PC_POSITION_LEFT) { //left   -240
+		int rem = ww - ABS(bx);
 		int rempixels = rem % pixelmovx;
 		int count = rem / pixelmovx;
-		if(count >0 )
-		{	
-			evas_object_move(obj,bx-pixelmovx,pixelmovy);
-			evas_object_geometry_get(obj, &bx, &by, &bw, &bh);		   
+		if (count > 0) {
+			evas_object_move(obj, bx - pixelmovx, pixelmovy);
+			evas_object_geometry_get(obj, &bx, &by, &bw, &bh);
 		}
-		evas_object_move(obj,bx-rempixels,pixelmovy);
-		if(count  == 0 )
-			return false;		
-	}
-	else if(	photocampos == PC_POSITION_CENTER) //centre   0
-	{
+		evas_object_move(obj, bx - rempixels, pixelmovy);
+		if (count  == 0) {
+			return false;
+		}
+	} else if (photocampos == PC_POSITION_CENTER) { //centre   0
 		int rem =  ABS(bx);
 		int rempixels = rem % pixelmovx;
 		int count = rem / pixelmovx;
-		if(count >0 )
-		{	
-			if( bx > 0 )
-				evas_object_move(obj,bx-pixelmovx,pixelmovy);
-			else
-				evas_object_move(obj,bx+pixelmovx,pixelmovy);
-			evas_object_geometry_get(obj, &bx, &by, &bw, &bh);		   
+		if (count > 0) {
+			if (bx > 0) {
+				evas_object_move(obj, bx - pixelmovx, pixelmovy);
+			} else {
+				evas_object_move(obj, bx + pixelmovx, pixelmovy);
+			}
+			evas_object_geometry_get(obj, &bx, &by, &bw, &bh);
 		}
-		if( bx > 0 )
-			evas_object_move(obj,bx-rempixels,pixelmovy);
-		else
-			evas_object_move(obj,bx+rempixels,pixelmovy);
-		if(count  == 0 )
-			return false;		
+		if (bx > 0) {
+			evas_object_move(obj, bx - rempixels, pixelmovy);
+		} else {
+			evas_object_move(obj, bx + rempixels, pixelmovy);
+		}
+		if (count  == 0) {
+			return false;
+		}
 
-	}
-	else if(	photocampos == PC_POSITION_RIGHT) //right   240
-	{
-		int rem= ww - ABS(bx);
+	} else if (photocampos == PC_POSITION_RIGHT) { //right   240
+		int rem = ww - ABS(bx);
 		int rempixels = rem % pixelmovx;
 		int count = rem / pixelmovx;
-		if(count >0 )
-		{	
-			evas_object_move(obj,bx+pixelmovx,pixelmovy);
-			evas_object_geometry_get(obj, &bx, &by, &bw, &bh);		   
+		if (count > 0) {
+			evas_object_move(obj, bx + pixelmovx, pixelmovy);
+			evas_object_geometry_get(obj, &bx, &by, &bw, &bh);
 		}
-		evas_object_move(obj,bx+rempixels,pixelmovy);
-		if(count  == 0 )
-			return false;		
+		evas_object_move(obj, bx + rempixels, pixelmovy);
+		if (count  == 0) {
+			return false;
+		}
 	}
-	return true;	   
+	return true;
 }
 
 /* When the left transition is completed Rearrange the photocam images*/
@@ -491,15 +485,15 @@ _ivug_main_view_left_transit_by_item_complete_cb(void *data, Evas_Object * obj, 
 
 	ivug_enable_gesture(pMainView->pSliderNew);
 
-	if(pMainView->prevphotocam == PHOTOCAM_1) {
+	if (pMainView->prevphotocam == PHOTOCAM_1) {
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_stop", "imageview_area_temp2");
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_left", "imageview_area");
 
-	} else if(pMainView->prevphotocam == PHOTOCAM_2) {
+	} else if (pMainView->prevphotocam == PHOTOCAM_2) {
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_stop", "imageview_area_temp0");
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_left", "imageview_area_temp2");
 
-	} else if(pMainView->prevphotocam == PHOTOCAM_0) {
+	} else if (pMainView->prevphotocam == PHOTOCAM_0) {
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_stop", "imageview_area");
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_left", "imageview_area_temp0");
 	}
@@ -517,26 +511,26 @@ _ivug_main_view_left_transit_by_item_complete_cb(void *data, Evas_Object * obj, 
 		}
 	}
 
-	if(pMainView->currentphotocam == PHOTOCAM_2) {
+	if (pMainView->currentphotocam == PHOTOCAM_2) {
 		MSG_MAIN_HIGH("TC currentphotocam == 2");
-		ivug_slider_new_set_photocam(pMainView->pSliderNew,pMainView->photocam2);
+		ivug_slider_new_set_photocam(pMainView->pSliderNew, pMainView->photocam2);
 		const char *prev_iva = "imageview_area";
 		const char *next_iva = "imageview_area_temp0";
-		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam,&pMainView->photocam0,prev_iva,next_iva);
+		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam, &pMainView->photocam0, prev_iva, next_iva);
 	}
-	if(pMainView->currentphotocam == PHOTOCAM_0) {
+	if (pMainView->currentphotocam == PHOTOCAM_0) {
 		MSG_MAIN_HIGH("TR currentphotocam == 0");
-		ivug_slider_new_set_photocam(pMainView->pSliderNew,pMainView->photocam0);
+		ivug_slider_new_set_photocam(pMainView->pSliderNew, pMainView->photocam0);
 		const char *prev_iva = "imageview_area_temp2";
 		const char *next_iva = "imageview_area";
-		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam2,&pMainView->photocam,prev_iva,next_iva);
+		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam2, &pMainView->photocam, prev_iva, next_iva);
 	}
-	if(pMainView->currentphotocam == PHOTOCAM_1) {
+	if (pMainView->currentphotocam == PHOTOCAM_1) {
 		MSG_MAIN_HIGH("TR currentphotocam == 1");
-		ivug_slider_new_set_photocam(pMainView->pSliderNew,pMainView->photocam);
+		ivug_slider_new_set_photocam(pMainView->pSliderNew, pMainView->photocam);
 		const char *prev_iva = "imageview_area_temp0";
 		const char *next_iva = "imageview_area_temp2";
-		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam0,&pMainView->photocam2,prev_iva,next_iva);
+		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam0, &pMainView->photocam2, prev_iva, next_iva);
 	}
 	pMainView->slide_state = false;//Transition is completed.
 }
@@ -551,19 +545,19 @@ _ivug_main_view_right_transit_by_item_complete_cb(void *data, Evas_Object * obj,
 
 	ivug_enable_gesture(pMainView->pSliderNew);
 
-	if(pMainView->prevphotocam == PHOTOCAM_1) {
+	if (pMainView->prevphotocam == PHOTOCAM_1) {
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_stop", "imageview_area_temp0");
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_right", "imageview_area");
-	} else if(pMainView->prevphotocam == PHOTOCAM_2) {
+	} else if (pMainView->prevphotocam == PHOTOCAM_2) {
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_stop", "imageview_area");
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_right", "imageview_area_temp2");
-	} else if(pMainView->prevphotocam == PHOTOCAM_0) {
+	} else if (pMainView->prevphotocam == PHOTOCAM_0) {
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_stop", "imageview_area_temp2");
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_right", "imageview_area_temp0");
 	}
 
 	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
-	if(mitem){
+	if (mitem) {
 		Media_Data *mData = ivug_medialist_get_data(mitem);
 
 		if (mData->slide_type == SLIDE_TYPE_IMAGE) {
@@ -575,23 +569,23 @@ _ivug_main_view_right_transit_by_item_complete_cb(void *data, Evas_Object * obj,
 		}
 	}
 
-	if(pMainView->currentphotocam == PHOTOCAM_2) {
-		ivug_slider_new_set_photocam(pMainView->pSliderNew,pMainView->photocam2);
+	if (pMainView->currentphotocam == PHOTOCAM_2) {
+		ivug_slider_new_set_photocam(pMainView->pSliderNew, pMainView->photocam2);
 		const char *prev_iva = "imageview_area";
 		const char *next_iva = "imageview_area_temp0";
-		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam,&pMainView->photocam0,prev_iva,next_iva);
+		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam, &pMainView->photocam0, prev_iva, next_iva);
 	}
-	if(pMainView->currentphotocam == PHOTOCAM_0) {
-		ivug_slider_new_set_photocam(pMainView->pSliderNew,pMainView->photocam0);
+	if (pMainView->currentphotocam == PHOTOCAM_0) {
+		ivug_slider_new_set_photocam(pMainView->pSliderNew, pMainView->photocam0);
 		const char *prev_iva = "imageview_area_temp2";
 		const char *next_iva = "imageview_area";
-		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam2,&pMainView->photocam,prev_iva,next_iva);
+		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam2, &pMainView->photocam, prev_iva, next_iva);
 	}
-	if(pMainView->currentphotocam == PHOTOCAM_1) {
-		ivug_slider_new_set_photocam(pMainView->pSliderNew,pMainView->photocam);
+	if (pMainView->currentphotocam == PHOTOCAM_1) {
+		ivug_slider_new_set_photocam(pMainView->pSliderNew, pMainView->photocam);
 		const char *prev_iva = "imageview_area_temp0";
 		const char *next_iva = "imageview_area_temp2";
-		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam0,&pMainView->photocam2,prev_iva,next_iva);
+		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam0, &pMainView->photocam2, prev_iva, next_iva);
 	}
 	pMainView->slide_state = false;//Transition is completed.
 }
@@ -603,19 +597,19 @@ void ivug_create_new_photocam_image(void *data, Evas_Object **cur_pc, const char
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
 	*cur_pc = elm_photocam_add(sn_layout);
-	elm_photocam_gesture_enabled_set(*cur_pc,EINA_TRUE);
+	elm_photocam_gesture_enabled_set(*cur_pc, EINA_TRUE);
 	evas_object_size_hint_expand_set(*cur_pc, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(*cur_pc, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	elm_object_part_content_set(sn_layout, cur_iva, *cur_pc);
 	elm_photocam_zoom_mode_set(*cur_pc, ELM_PHOTOCAM_ZOOM_MODE_AUTO_FIT);
 	elm_photocam_paused_set(*cur_pc, EINA_TRUE);
 	evas_object_size_hint_weight_set(*cur_pc, EVAS_HINT_EXPAND,
-			EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 
 }
 
 /*Make the  previous and next photocam images ready for smooth movement of images*/
-void ivug_set_prev_next_photocam_images(void *data, Evas_Object **prev_pc,Evas_Object **next_pc, const char *prev_iva,const char *next_iva)
+void ivug_set_prev_next_photocam_images(void *data, Evas_Object **prev_pc, Evas_Object **next_pc, const char *prev_iva, const char *next_iva)
 {
 	MSG_MAIN_HIGH("  ivug_main_view_set_prev_next_photocam_images");
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
@@ -636,7 +630,7 @@ void ivug_set_prev_next_photocam_images(void *data, Evas_Object **prev_pc,Evas_O
 			ivug_create_new_photocam_image(pMainView, prev_pc, prev_iva);
 		}
 
-		if (pmData->slide_type == SLIDE_TYPE_VIDEO ) {
+		if (pmData->slide_type == SLIDE_TYPE_VIDEO) {
 			elm_photocam_file_set(*prev_pc, pmData->thumbnail_path);
 		} else {
 			err = elm_photocam_file_set(*prev_pc, pmData->filepath);
@@ -675,6 +669,6 @@ void ivug_set_prev_next_photocam_images(void *data, Evas_Object **prev_pc,Evas_O
 			}
 		}
 		evas_object_show(*next_pc);
-		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_right",next_iva);
+		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_right", next_iva);
 	}
 }

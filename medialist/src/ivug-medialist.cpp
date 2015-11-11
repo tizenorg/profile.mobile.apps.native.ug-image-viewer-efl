@@ -94,23 +94,20 @@ static int _db_updated_callback(media_handle media, const char *path, Ivug_DB_Up
 {
 	_Media_List *_mList = (_Media_List *)user_data;
 
-	if(type == IV_DB_UPDATE_UPDATE)
-	{
+	if (type == IV_DB_UPDATE_UPDATE) {
 		UUID uuid = ivug_db_get_file_id(media);
 
 		Media_Item *mitem = ivug_medialist_find_item_by_uuid((Media_List*)_mList, uuid);
 
 		uuid_free(uuid);
 
-		if(mitem == NULL)
-		{
+		if (mitem == NULL) {
 			MSG_SDATA_HIGH("cannot find in media list, updated path = %s", path);
 			return -1;
 		}
 
 		Media_Data *mdata = ivug_medialist_get_data(mitem);
-		if(mdata == NULL)
-		{
+		if (mdata == NULL) {
 			MSG_SDATA_ERROR("mdata is NULL");
 			return -1;
 		}
@@ -122,14 +119,10 @@ static int _db_updated_callback(media_handle media, const char *path, Ivug_DB_Up
 		mdata->thumbnail_path = ivug_db_get_thumbnail_path(media);
 
 		ivug_db_destroy_file_handle(media);
-	}
-	else if(type == IV_DB_UPDATE_INSERT)
-	{
+	} else if (type == IV_DB_UPDATE_INSERT) {
 		//TODO later
 		_mList->bNeedUpdate = true;
-	}
-	else if(type == IV_DB_UPDATE_DELETE)
-	{
+	} else if (type == IV_DB_UPDATE_DELETE) {
 		//TODO later
 		_mList->bNeedUpdate = true;
 	}
@@ -143,13 +136,10 @@ static Eina_List *_load_partial(const Filter_struct *filter, int stp, int endp)
 
 #ifdef UT_USE_DB
 	{
-		if(filter->selected_list)
-		{
+		if (filter->selected_list) {
 			//header = ivug_list_load_DB_items_list(filter, filter->selected_list);
 			header = ivug_list_load_DB_items(filter, stp, endp);
-		}
-		else
-		{
+		} else {
 			header = ivug_list_load_DB_items(filter, stp, endp);
 		}
 	}
@@ -159,8 +149,7 @@ static Eina_List *_load_partial(const Filter_struct *filter, int stp, int endp)
 	int i;
 	Media_Data *data;
 
-	for (i = stp; i <= endp; i++)
-	{
+	for (i = stp; i <= endp; i++) {
 		data = malloc(sizeof(Media_Data));
 		data->index = i;
 
@@ -181,8 +170,7 @@ static void _job_send_cb(void *data)
 
 	_mList->callback_job = NULL;
 
-	if(_mList->cb)
-	{
+	if (_mList->cb) {
 		_mList->cb(_mList, _mList->data);
 	}
 }
@@ -195,8 +183,7 @@ void ivug_media_list_free(Media_List *mList)
 	Eina_List *l;
 	void *data;
 
-	EINA_LIST_FOREACH(_mList->header, l, data)
-	{
+	EINA_LIST_FOREACH(_mList->header, l, data) {
 		free(data);
 		data = NULL;
 	}
@@ -204,17 +191,16 @@ void ivug_media_list_free(Media_List *mList)
 
 static bool _ivug_medialist_set_medialist_to_media_item(Media_List *mList)
 {
-/*
-	Need to optimize.
-*/
+	/*
+		Need to optimize.
+	*/
 	_Media_List *_mList = (_Media_List *)mList;
 	IV_ASSERT(_mList != NULL);
 
 	Eina_List *l;
 	void *data;
 
-	EINA_LIST_FOREACH(_mList->header, l, data)
-	{
+	EINA_LIST_FOREACH(_mList->header, l, data) {
 		Media_Data *mdata = (Media_Data *)data;
 		mdata->p_mList = mList;
 	}
@@ -226,8 +212,7 @@ static void _call_loaded_callback(_Media_List *_mList)
 {
 	IV_ASSERT(_mList != NULL);
 
-	if(_mList->callback_job)
-	{
+	if (_mList->callback_job) {
 		ecore_job_del(_mList->callback_job);
 	}
 
@@ -247,76 +232,65 @@ static void _doLoad(Ecore_Thread *thread, _Media_List *_mList, const Filter_stru
 
 	MSG_SDATA_HIGH("Total=%d lBound=%d uBound=%d", Total, lBound, uBound);
 
-	if (lBound == 0 )
-	{
+	if (lBound == 0) {
 		bLeftEnd = true;
 	}
 
-	if (uBound == Total - 1 )
-	{
+	if (uBound == Total - 1) {
 		bRightEnd = true;
 	}
 
-	while((bLeftEnd && bRightEnd) == false)
-	{
+	while ((bLeftEnd && bRightEnd) == false) {
 // Do Right Loading
-		if (bRightEnd == false )
-		{
+		if (bRightEnd == false) {
 			stp  = uBound + 1;
-			endp = std::min( uBound + LOAD_BLOCK_COUNT / 2, Total - 1) ;
+			endp = std::min(uBound + LOAD_BLOCK_COUNT / 2, Total - 1) ;
 
 			right = _load_partial(filter, stp, endp);
 			uBound = endp;
 
-			if (endp == Total -1 )
-			{
+			if (endp == Total - 1) {
 				bRightEnd = true;
 			}
 
 #ifdef USE_ECORE_CHECK
-			if (ecore_thread_check(thread) == EINA_TRUE )		// if pending cancelation
-			{
+			if (ecore_thread_check(thread) == EINA_TRUE) {	// if pending cancelation
 				MSG_SDATA_HIGH("Check True");
 				ivug_list_delete_items(right);
 				break;
 			}
 #else
-			if (_mList->bTerminate == EINA_TRUE )
-			{
+			if (_mList->bTerminate == EINA_TRUE) {
 				MSG_SDATA_HIGH("Check True");
 				ivug_list_delete_items(right);
 				return;
 			}
 #endif
 			IV_ASSERT(right != NULL);
-			_mList->header = eina_list_merge (_mList->header, right);
+			_mList->header = eina_list_merge(_mList->header, right);
 			_ivug_medialist_set_medialist_to_media_item((Media_List *)_mList);
 		}
 
 // Do Left Loading
-		if (bLeftEnd == false)		// Check whether need load
-		{
-			stp  = std::max( lBound - LOAD_BLOCK_COUNT / 2, 0);
+		if (bLeftEnd == false) {	// Check whether need load
+			stp  = std::max(lBound - LOAD_BLOCK_COUNT / 2, 0);
 			endp = lBound - 1;
 
 			left = _load_partial(filter, stp, endp);
 			lBound = stp;
 
-			if (stp == 0 )
-			{
+			if (stp == 0) {
 				bLeftEnd = true;
 			}
 
 #ifdef USE_ECORE_CHECK
-			if (ecore_thread_check(thread) == EINA_TRUE )		// if pending cancelation
-			{
+			if (ecore_thread_check(thread) == EINA_TRUE) {	// if pending cancelation
 				MSG_SDATA_HIGH("Check True");
 				ivug_list_delete_items(left);
 				break;
 			}
 #else
-			if (_mList->bTerminate == EINA_TRUE )
-			{
+			if (_mList->bTerminate == EINA_TRUE) {
 				MSG_SDATA_HIGH("Check True");
 				ivug_list_delete_items(left);
 				return;
@@ -324,7 +298,7 @@ static void _doLoad(Ecore_Thread *thread, _Media_List *_mList, const Filter_stru
 #endif
 			IV_ASSERT(left != NULL);
 
-			_mList->header = eina_list_merge (left, _mList->header);
+			_mList->header = eina_list_merge(left, _mList->header);
 			_ivug_medialist_set_medialist_to_media_item((Media_List *)_mList);
 
 		}
@@ -356,14 +330,12 @@ static void loader_heavy(void *data, Ecore_Thread *thread)
 	IV_ASSERT(pParam != NULL);
 
 #ifdef USE_ECORE_CHECK
-	if (ecore_thread_check(thread) == EINA_TRUE )	// // if pending cancelation
-	{
+	if (ecore_thread_check(thread) == EINA_TRUE) {	// // if pending cancelation
 		MSG_SDATA_HIGH("Pending thread cancelation");
 		return;
 	}
 #else
-	if (pParam->_mList->bTerminate == EINA_TRUE )
-	{
+	if (pParam->_mList->bTerminate == EINA_TRUE) {
 		MSG_SDATA_HIGH("Check True");
 		return;
 	}
@@ -372,15 +344,11 @@ static void loader_heavy(void *data, Ecore_Thread *thread)
 	Eina_Bool ret = EINA_FALSE;
 
 	ret = eina_lock_new(&pParam->_mList->mutex);
-	if(ret == EINA_FALSE)
-	{
+	if (ret == EINA_FALSE) {
 		MSG_SDATA_FATAL("eina_lock_new failed");
-	}
-	else
-	{
+	} else {
 		ret = eina_condition_new(&pParam->_mList->condition, &pParam->_mList->mutex);
-		if(ret == EINA_FALSE)
-		{
+		if (ret == EINA_FALSE) {
 			MSG_SDATA_FATAL("eina_condition_new failed");
 		}
 	}
@@ -389,23 +357,21 @@ static void loader_heavy(void *data, Ecore_Thread *thread)
 
 	MSG_SDATA_HIGH("Load : Begin");
 
-	_doLoad(thread, pParam->_mList, pParam->filter_str, pParam->TotalCount ,pParam->lowerBnd, pParam->upperBnd);
+	_doLoad(thread, pParam->_mList, pParam->filter_str, pParam->TotalCount , pParam->lowerBnd, pParam->upperBnd);
 
 	MSG_SDATA_HIGH("Load : End");
 
 	pParam->_mList->thread = NULL;
 
 #ifdef USE_ECORE_CHECK
-	if (ecore_thread_check(thread) == EINA_FALSE )
+	if (ecore_thread_check(thread) == EINA_FALSE)
 #else
-	if(pParam->_mList->bTerminate == EINA_FALSE)
+	if (pParam->_mList->bTerminate == EINA_FALSE)
 #endif
 	{
 		MSG_SDATA_HIGH("Inform loaded callback to user. Total=%d", pParam->_mList->count);
 		_call_loaded_callback(pParam->_mList);
-	}
-	else
-	{
+	} else {
 		MSG_SDATA_HIGH("list is terminating, did not call loaded callback");
 	}
 
@@ -449,12 +415,10 @@ static Media_Item *_find_item(Media_List *mList, int index)
 	Eina_List *l;
 	void *data;
 
-	EINA_LIST_FOREACH(_mList->header, l, data)
-	{
+	EINA_LIST_FOREACH(_mList->header, l, data) {
 		Media_Data *mdata = (Media_Data *)data;
 
-		if (mdata->index == index)
-		{
+		if (mdata->index == index) {
 			return (Media_Item *)l;
 		}
 	}
@@ -474,8 +438,7 @@ static void _dump_list(Eina_List *list, void (*func)(void *))
 	Eina_List *l;
 	void *data;
 
-	EINA_LIST_FOREACH(list, l, data)
-	{
+	EINA_LIST_FOREACH(list, l, data) {
 		func(data);
 	}
 
@@ -495,8 +458,7 @@ static void _create_shuffle_list(_Media_List *_mList)
 {
 	int i;
 	_mList->shufflelist = NULL;
-	for ( i = 0; i < _mList->count; i++)
-	{
+	for (i = 0; i < _mList->count; i++) {
 		_mList->shufflelist = eina_list_append(_mList->shufflelist, (void *)i);
 	}
 
@@ -535,11 +497,9 @@ Media_Item * ivug_medialist_find_item_by_filename(Media_List *mList, const char*
 	Eina_List *l;
 	void *data;
 
-	EINA_LIST_FOREACH(_mList->header, l, data)
-	{
+	EINA_LIST_FOREACH(_mList->header, l, data) {
 		Media_Data *mdata = (Media_Data *)data;
-		if(strncmp(mdata->fileurl, filepath, strlen(mdata->fileurl)) == 0)
-		{
+		if (strncmp(mdata->fileurl, filepath, strlen(mdata->fileurl)) == 0) {
 			return (Media_Item *)l;
 		}
 	}
@@ -556,12 +516,10 @@ Media_Item * ivug_medialist_find_item_by_uuid(Media_List *mList, UUID uuid)
 	Eina_List *l;
 	void *data;
 
-	EINA_LIST_FOREACH(_mList->header, l, data)
-	{
+	EINA_LIST_FOREACH(_mList->header, l, data) {
 		Media_Data *mdata = (Media_Data *)data;
 
-		if(strncmp(mdata->mediaID, uuid, strlen(mdata->mediaID)) == 0)
-		{
+		if (strncmp(mdata->mediaID, uuid, strlen(mdata->mediaID)) == 0) {
 			return (Media_Item *)l;
 		}
 	}
@@ -576,8 +534,7 @@ static Media_Item *_ivug_medialist_load_from_directory(Media_List *mList, const 
 
 	MSG_SDATA_HIGH("Create slide data list. index=%d", filter->index);
 
-	if (_mList->header != NULL)
-	{
+	if (_mList->header != NULL) {
 		MSG_SDATA_FATAL("Header is not NULL");
 		return NULL;
 	}
@@ -589,8 +546,7 @@ static Media_Item *_ivug_medialist_load_from_directory(Media_List *mList, const 
 	_mList->header = ivug_list_load_dir_items(filter->dir_filter->basedir);
 
 	_mList->count = eina_list_count(_mList->header);
-	if (_mList->count == 0 )
-	{
+	if (_mList->count == 0) {
 		MSG_SDATA_ERROR("No file founded");
 		PERF_CHECK_END(LVL3, "MediaList - Get list count");
 		return NULL;
@@ -606,22 +562,19 @@ static Media_Item *_ivug_medialist_load_from_directory(Media_List *mList, const 
 	Media_Item *cur = NULL;
 	int i = 0;
 
-	EINA_LIST_FOREACH(_mList->header, l, data)
-	{
+	EINA_LIST_FOREACH(_mList->header, l, data) {
 		Media_Data *pData = (Media_Data *)data;
 
 		pData->index = i;
 		i++;
 
-		if (strcmp(pData->fileurl, filter->dir_filter->current) == 0)
-		{
+		if (strcmp(pData->fileurl, filter->dir_filter->current) == 0) {
 			cur = (Media_Item *)l;
 		}
 	}
 	PERF_CHECK_END(LVL3, "MediaList - Get list count");
 
-	if(cur == NULL)
-	{
+	if (cur == NULL) {
 		MSG_SDATA_ERROR("Not found current");
 		return NULL;
 	}
@@ -639,7 +592,7 @@ static void _ivug_media_load_list_thread(Media_List *mList, const Filter_struct 
 	int active_thread = ecore_thread_active_get();
 
 	MSG_SDATA_HIGH("Thread status. CPU=%d Max=%d Active=%d Available=%d", eina_cpu_count(), max_thread, active_thread, avail_thread);
-	ecore_thread_max_set(16*2);
+	ecore_thread_max_set(16 * 2);
 
 	max_thread = ecore_thread_max_get();
 	avail_thread = ecore_thread_available_get();
@@ -647,16 +600,14 @@ static void _ivug_media_load_list_thread(Media_List *mList, const Filter_struct 
 
 	MSG_SDATA_HIGH("Thread status. CPU=%d Max=%d Active=%d Available=%d", eina_cpu_count(), max_thread, active_thread, avail_thread);
 
-	if(avail_thread <= 0)
-	{
+	if (avail_thread <= 0) {
 		MSG_SDATA_WARN("Thread will be enter to queue");
 	}
 
 	ThreadParam *pParam = NULL;
 
 	pParam = (ThreadParam *)malloc(sizeof(ThreadParam));
-	if(pParam == NULL)
-	{
+	if (pParam == NULL) {
 		MSG_SDATA_ERROR("malloc ERROR");
 		return;
 	}
@@ -693,8 +644,7 @@ static Media_Item *_ivug_media_load_list(Media_List *mList, const Filter_struct 
 	int db_idx = index;
 	Eina_List *header = NULL;
 
-	if (_mList->count < db_idx)
-	{
+	if (_mList->count < db_idx) {
 		MSG_SDATA_ERROR("Invalid param. TotalCount=%d, DbIndex=%d", _mList->count, db_idx);
 		return NULL;
 	}
@@ -724,8 +674,7 @@ static Media_Item *_ivug_media_load_list(Media_List *mList, const Filter_struct 
 
 	PERF_CHECK_END(LVL3, "MediaList - load first block");
 
-	if(header == NULL)
-	{
+	if (header == NULL) {
 		//MSG_SDATA_FATAL("MediaList is NULL");
 		MSG_SDATA_ERROR("MediaList is NULL");
 		return NULL;
@@ -742,8 +691,7 @@ static Media_Item *_ivug_media_load_list(Media_List *mList, const Filter_struct 
 
 	PERF_CHECK_END(LVL3, "MediaList - Find current");
 
-	if(current == NULL)
-	{
+	if (current == NULL) {
 		MSG_SDATA_HIGH("current is NULL");
 		return NULL;
 	}
@@ -757,8 +705,7 @@ static Media_Item *_ivug_media_load_list(Media_List *mList, const Filter_struct 
 	// _dump_list(_mList->shufflelist, _print_shuffle);
 	//  MSG_SDATA_HIGH("ParamPath=%s CurrentPath=%s", param->filepath, _mList->current->filepath);
 
-	if ((lBound == 0) && (uBound == (_mList->count - 1) ))
-	{
+	if ((lBound == 0) && (uBound == (_mList->count - 1))) {
 		MSG_SDATA_HIGH("Deffered loading is not needed. LoadedCount=%d", eina_list_count(header));
 		_call_loaded_callback(_mList);
 		return (Media_Item *)current;
@@ -778,15 +725,13 @@ static Media_Item *_ivug_medialist_load_default(Media_List *mList, const Filter_
 
 	MSG_SDATA_HIGH("Create slide data list. Title index=%d", filter->index);
 
-	if (_mList->header != NULL)
-	{
+	if (_mList->header != NULL) {
 		MSG_SDATA_FATAL("Header is not NULL");
 		return NULL;
 	}
 //	_mList->filter = ivug_data_filter_copy(filter);
 
-	if(filter->view_by == IVUG_VIEW_BY_HIDDEN_ALL || filter->view_by == IVUG_VIEW_BY_HIDDEN_FOLDER)
-	{
+	if (filter->view_by == IVUG_VIEW_BY_HIDDEN_ALL || filter->view_by == IVUG_VIEW_BY_HIDDEN_FOLDER) {
 		_mList->bHidden = true;
 	}
 
@@ -798,11 +743,9 @@ static Media_Item *_ivug_medialist_load_default(Media_List *mList, const Filter_
 #else
 	PERF_CHECK_BEGIN(LVL3, "MediaList - Get list count");
 
-	if(filter->file_list)
-	{
+	if (filter->file_list) {
 		_mList->count = eina_list_count(filter->file_list);
-		if (_mList->count == 0 )
-		{
+		if (_mList->count == 0) {
 			MSG_SDATA_ERROR("No file founded");
 			PERF_CHECK_END(LVL3, "MediaList - Get list count");
 			return NULL;
@@ -810,8 +753,7 @@ static Media_Item *_ivug_medialist_load_default(Media_List *mList, const Filter_
 		PERF_CHECK_BEGIN(LVL3, "MediaList - load file list");
 		_mList->header = ivug_list_load_file_list(filter, filter->file_list);	 // Load all
 		PERF_CHECK_END(LVL3, "MediaList - load file list");
-		if(_mList->header == NULL)
-		{
+		if (_mList->header == NULL) {
 			MSG_SDATA_ERROR("MediaList is NULL");
 			PERF_CHECK_END(LVL3, "MediaList - Get list count");
 			return NULL;
@@ -825,20 +767,17 @@ static Media_Item *_ivug_medialist_load_default(Media_List *mList, const Filter_
 		return cur;
 	}
 
-	if((filter->view_by == IVUG_VIEW_BY_FOLDER && filter->index == IVUG_INVALID_INDEX) || filter->selected_list)
-	{
+	if ((filter->view_by == IVUG_VIEW_BY_FOLDER && filter->index == IVUG_INVALID_INDEX) || filter->selected_list) {
 		_mList->count = ivug_list_get_item_cnt(filter);
-		if (_mList->count == 0 )
-		{
+		if (_mList->count == 0) {
 			MSG_SDATA_ERROR("No file founded");
 			PERF_CHECK_END(LVL3, "MediaList - Get list count");
 			return NULL;
 		}
 		PERF_CHECK_BEGIN(LVL3, "MediaList - load all block");
-		_mList->header = _load_partial(filter, 0, _mList->count-1);	 // Load all
+		_mList->header = _load_partial(filter, 0, _mList->count - 1);	 // Load all
 		PERF_CHECK_END(LVL3, "MediaList - load all block");
-		if(_mList->header == NULL)
-		{
+		if (_mList->header == NULL) {
 			MSG_SDATA_ERROR("MediaList is NULL");
 			PERF_CHECK_END(LVL3, "MediaList - Get list count");
 			return NULL;
@@ -850,9 +789,7 @@ static Media_Item *_ivug_medialist_load_default(Media_List *mList, const Filter_
 		_call_loaded_callback(_mList);
 		PERF_CHECK_END(LVL3, "MediaList - Get list count");
 		return cur;
-	}
-	else
-	{
+	} else {
 		_mList->count = ivug_list_get_item_cnt(filter);
 	}
 
@@ -878,18 +815,17 @@ Media_Item *ivug_medialist_load(Media_List *mList, Filter_struct *filter)
 
 	_ivug_medialist_set_filter(mList, filter);
 
-	switch(filter->view_by)
-	{
-		case IVUG_VIEW_BY_DIRECTORY :
-			PERF_CHECK_BEGIN(LVL2, "media list load - directory");
-			current = _ivug_medialist_load_from_directory(mList, filter);
-			PERF_CHECK_END(LVL2, "media list load - directory");
-			break;
-		default:
-			PERF_CHECK_BEGIN(LVL2, "media list load");
-			current = _ivug_medialist_load_default(mList, filter);
-			PERF_CHECK_END(LVL2, "media list load");
-			break;
+	switch (filter->view_by) {
+	case IVUG_VIEW_BY_DIRECTORY :
+		PERF_CHECK_BEGIN(LVL2, "media list load - directory");
+		current = _ivug_medialist_load_from_directory(mList, filter);
+		PERF_CHECK_END(LVL2, "media list load - directory");
+		break;
+	default:
+		PERF_CHECK_BEGIN(LVL2, "media list load");
+		current = _ivug_medialist_load_default(mList, filter);
+		PERF_CHECK_END(LVL2, "media list load");
+		break;
 	}
 	return current;
 }
@@ -909,8 +845,7 @@ Media_Item *ivug_medialist_reload(Media_List *mList, Media_Item *current)
 	Media_Item *new_current = NULL;
 
 	Media_Data *mdata = ivug_medialist_get_data(current);
-	if(mdata == NULL)
-	{
+	if (mdata == NULL) {
 		MSG_SDATA_ERROR("mdata is NULL");
 		return NULL;
 	}
@@ -919,46 +854,42 @@ Media_Item *ivug_medialist_reload(Media_List *mList, Media_Item *current)
 
 	bool bUseThread = false;
 
-	switch(filter->view_by)
-	{
-		case IVUG_VIEW_BY_DIRECTORY :
-			PERF_CHECK_BEGIN(LVL2, "media list load - directory");
-			list = ivug_list_load_dir_items(filter->dir_filter->basedir);
-			count = eina_list_count(list);
-			PERF_CHECK_END(LVL2, "media list load - directory");
-			break;
-		case IVUG_VIEW_BY_FOLDER:
-		case IVUG_VIEW_BY_HIDDEN_FOLDER:
-			PERF_CHECK_BEGIN(LVL2, "media list load");
-			count = ivug_list_get_item_cnt(filter);
-			list = _load_partial(filter, 0, count-1);	 // Load all
-			PERF_CHECK_END(LVL2, "media list load");
-			break;
-		default:
-		{
-			PERF_CHECK_BEGIN(LVL2, "media list load");
-			count = ivug_list_get_item_cnt(filter);
+	switch (filter->view_by) {
+	case IVUG_VIEW_BY_DIRECTORY :
+		PERF_CHECK_BEGIN(LVL2, "media list load - directory");
+		list = ivug_list_load_dir_items(filter->dir_filter->basedir);
+		count = eina_list_count(list);
+		PERF_CHECK_END(LVL2, "media list load - directory");
+		break;
+	case IVUG_VIEW_BY_FOLDER:
+	case IVUG_VIEW_BY_HIDDEN_FOLDER:
+		PERF_CHECK_BEGIN(LVL2, "media list load");
+		count = ivug_list_get_item_cnt(filter);
+		list = _load_partial(filter, 0, count - 1);	 // Load all
+		PERF_CHECK_END(LVL2, "media list load");
+		break;
+	default: {
+		PERF_CHECK_BEGIN(LVL2, "media list load");
+		count = ivug_list_get_item_cnt(filter);
 
-			int lBound;
-			int uBound;
+		int lBound;
+		int uBound;
 
-			lBound = std::max( cur_index - LOAD_BLOCK_COUNT / 2, 0 );
-			uBound = std::min( cur_index + LOAD_BLOCK_COUNT / 2, _mList->count - 1) ;
+		lBound = std::max(cur_index - LOAD_BLOCK_COUNT / 2, 0);
+		uBound = std::min(cur_index + LOAD_BLOCK_COUNT / 2, _mList->count - 1) ;
 
-			list = _load_partial(filter, lBound, uBound);
+		list = _load_partial(filter, lBound, uBound);
 
-			PERF_CHECK_END(LVL2, "media list load");
+		PERF_CHECK_END(LVL2, "media list load");
 
-			if ((lBound != 0) && (uBound != (_mList->count - 1)))
-			{
-				bUseThread = true;
-			}
+		if ((lBound != 0) && (uBound != (_mList->count - 1))) {
+			bUseThread = true;
 		}
-			break;
+	}
+	break;
 	}
 
-	if(list == NULL)
-	{
+	if (list == NULL) {
 		MSG_SDATA_ERROR("new list is NULL");
 		return NULL;
 	}
@@ -976,8 +907,7 @@ Media_Item *ivug_medialist_reload(Media_List *mList, Media_Item *current)
 	_ivug_medialist_set_medialist_to_media_item(mList);
 
 	new_current = ivug_medialist_find_item_by_uuid(mList, mdata->mediaID);
-	if(new_current == NULL)
-	{
+	if (new_current == NULL) {
 		MSG_SDATA_ERROR("current is not exist at list");
 		//TODO : free data
 		return NULL;
@@ -988,12 +918,9 @@ Media_Item *ivug_medialist_reload(Media_List *mList, Media_Item *current)
 	ivug_medialist_set_current_item(mList, new_current);
 
 // thread loading
-	if(bUseThread == true)
-	{
+	if (bUseThread == true) {
 		_ivug_media_load_list_thread(mList, filter);
-	}
-	else
-	{
+	} else {
 		_call_loaded_callback(_mList);
 	}
 
@@ -1010,8 +937,7 @@ ivug_medialist_del(Media_List *mList)
 
 	MSG_SDATA_HIGH("Removing all media data. mList=0x%08x", mList);
 
-	if(_mList->callback_job)
-	{
+	if (_mList->callback_job) {
 		ecore_job_del(_mList->callback_job);
 		_mList->callback_job = NULL;
 	}
@@ -1020,40 +946,31 @@ ivug_medialist_del(Media_List *mList)
 
 	_mList->cb = NULL;	// remove loaded callback
 
-	if (_mList->thread )
-	{
+	if (_mList->thread) {
 		MSG_SDATA_HIGH("1. Thread cancel. Ecore tID=0x%08x", _mList->thread);
 
-		if (ecore_thread_cancel(_mList->thread) == EINA_TRUE )
-		{
+		if (ecore_thread_cancel(_mList->thread) == EINA_TRUE) {
 			MSG_SDATA_HIGH("Thread canceled");
-		}
-		else
-		{
+		} else {
 			MSG_SDATA_ERROR("Thread cancel failed.");
 		}
 
 		_mList->bTerminate = EINA_TRUE;
 
-		if(_mList->bStarted)
-		{
+		if (_mList->bStarted) {
 			ret = eina_condition_wait(&_mList->condition);
-			if(ret == EINA_FALSE)
-			{
+			if (ret == EINA_FALSE) {
 				MSG_SDATA_ERROR("eina_condition_wait error");
 			}
 			ret = eina_lock_release(&_mList->mutex);
-			if(ret == EINA_FALSE)
-			{
+			if (ret == EINA_FALSE) {
 				MSG_SDATA_ERROR("eina_lock_release error");
 			}
 			eina_condition_free(&_mList->condition);
 			eina_lock_free(&_mList->mutex);
 
 			ecore_thread_local_data_del(_mList->thread, "pParam");
-		}
-		else
-		{
+		} else {
 			MSG_SDATA_HIGH("Thread is not started");
 		}
 
@@ -1067,8 +984,7 @@ ivug_medialist_del(Media_List *mList)
 	eina_list_free(_mList->shufflelist);
 	_mList->shufflelist = NULL;
 
-	if(_mList->filter_str)
-	{
+	if (_mList->filter_str) {
 		ivug_data_filter_delete(_mList->filter_str);
 		_mList->filter_str = NULL;
 	}
@@ -1220,15 +1136,13 @@ Media_Item *ivug_medialist_get_shuffle_item(Media_List *mList, Media_Item *item)
 
 	Eina_List *found = eina_list_data_find_list(_mList->shufflelist, (void *)pData->index);
 
-	if (found != NULL)
-	{
+	if (found != NULL) {
 		Media_Item *next;
 		Eina_List *iter;
 
 		iter = eina_list_next(found);
 
-		if (iter == NULL)
-		{
+		if (iter == NULL) {
 			int nFirstIdx = (int)eina_list_data_get(_mList->shufflelist);
 
 			next = _find_item(mList, nFirstIdx);
@@ -1241,19 +1155,18 @@ Media_Item *ivug_medialist_get_shuffle_item(Media_List *mList, Media_Item *item)
 		do {
 			next = _find_item(mList, (int)eina_list_data_get(iter));
 
-			if (next == NULL)
-			{
+			if (next == NULL) {
 				MSG_SDATA_HIGH("Index : %d is not loaded", (int)eina_list_data_get(iter));
 				_mList->shufflelist = eina_list_demote_list(_mList->shufflelist, iter);
 			}
 
 			iter = eina_list_next(found);
 
-		} while(next == NULL);
+		} while (next == NULL);
 
 		Media_Data *nData = (Media_Data *)eina_list_data_get((Eina_List *)next);
 
-		MSG_SDATA_HIGH("Shuffle : %d->%d", pData->index, nData->index );
+		MSG_SDATA_HIGH("Shuffle : %d->%d", pData->index, nData->index);
 
 //		_dump_list(_mList->shufflelist, _print_shuffle);
 		return next;
@@ -1275,16 +1188,13 @@ ivug_medialist_find_item_by_index(Media_List *mList, int index)
 	Eina_List *l = NULL;
 	void *data;
 
-	EINA_LIST_FOREACH(_mList->header, l, data)
-	{
+	EINA_LIST_FOREACH(_mList->header, l, data) {
 		Media_Data *mdata = (Media_Data *)data;
-		if(mdata == NULL)
-		{
+		if (mdata == NULL) {
 			MSG_IVUG_ERROR("album list is NULL");
 			break;
 		}
-		if(mdata->index == index)
-		{
+		if (mdata->index == index) {
 			return (Media_Item *)l;
 		}
 	}
@@ -1307,8 +1217,7 @@ Media_Item * ivug_medialist_append_item(Media_List *mList, const char *filepath)
 	Eina_List *l;
 	void *data;
 
-	EINA_LIST_FOREACH(_mList->header, l, data)
-	{
+	EINA_LIST_FOREACH(_mList->header, l, data) {
 		Media_Data *mdata = (Media_Data *)data;
 
 		mdata->index = index++;
@@ -1334,8 +1243,7 @@ Media_Item * ivug_medialist_prepend_item(Media_List *mList, const char *filepath
 
 	void *data;
 
-	EINA_LIST_FOREACH(_mList->header, l, data)
-	{
+	EINA_LIST_FOREACH(_mList->header, l, data) {
 		Media_Data *mdata = (Media_Data *)data;
 
 		mdata->index = index++;
@@ -1380,8 +1288,7 @@ void ivug_medialist_set_update_callback(Media_List *mList)
 
 	MSG_SDATA_HIGH("ivug_medialist_set_update_callback 0x%08x, handle 0x%08x", _db_updated_callback, _mList->db_handle);
 
-	if(_mList->db_handle)
-	{
+	if (_mList->db_handle) {
 		MSG_SDATA_WARN("update_callback already exist");
 		return;
 	}
@@ -1398,8 +1305,7 @@ void ivug_medialist_del_update_callback(Media_List *mList)
 
 	MSG_SDATA_HIGH("ivug_medialist_del_update_callback 0x%08x, handle 0x%08x", _db_updated_callback, _mList->db_handle);
 
-	if(_mList->db_handle == NULL)
-	{
+	if (_mList->db_handle == NULL) {
 		MSG_SDATA_WARN("update_callback already removed");
 		return;
 	}
@@ -1439,7 +1345,7 @@ Eina_List *ivug_medialist_get_burst_item_list(Media_List *mList, const char *bur
 
 	int total_cnt = ivug_list_get_burst_item_cnt(_mList->filter_str, burst_id);
 
-	Eina_List *list = ivug_list_load_burst_items(_mList->filter_str, burst_id, 0, total_cnt-1);
+	Eina_List *list = ivug_list_load_burst_items(_mList->filter_str, burst_id, 0, total_cnt - 1);
 
 	return list;
 }

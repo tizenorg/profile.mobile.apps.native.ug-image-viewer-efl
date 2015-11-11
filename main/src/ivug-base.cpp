@@ -39,7 +39,7 @@
 
 typedef struct _ug_data ug_data;
 
-struct _ug_data{
+struct _ug_data {
 	Evas_Object *base;			// UG layout
 
 // View Data;
@@ -65,7 +65,7 @@ struct _ug_data{
 static int __externalStorageId = 0;
 
 bool getSupportedStorages_cb(int storageId, storage_type_e type, storage_state_e state, const char *
-path, void *userData)
+                             path, void *userData)
 {
 	MSG_NOTI_ERROR("");
 	if (type == STORAGE_TYPE_EXTERNAL) {
@@ -117,7 +117,7 @@ static void _send_result_to_caller(ui_gadget_h ug)
 #ifdef TRACE_WINDOW
 static void _on_win_resize(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
-	Evas_Coord x,y,w,h;
+	Evas_Coord x, y, w, h;
 	evas_object_geometry_get(obj, &x, &y, &w, &h);
 
 	MSG_IMAGEVIEW_HIGH("Parent win(0x%08x) resized geomtery XYWH(%d,%d,%d,%d) angle=%d", obj, x, y, w, h, elm_win_rotation_get((Evas_Object *)ug_get_window()));
@@ -125,7 +125,7 @@ static void _on_win_resize(void *data, Evas *e, Evas_Object *obj, void *event_in
 
 static void _on_win_move(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
-	Evas_Coord x,y,w,h;
+	Evas_Coord x, y, w, h;
 	evas_object_geometry_get(obj, &x, &y, &w, &h);
 
 	MSG_IMAGEVIEW_HIGH("Parent win(0x%08x) moved geomtery XYWH(%d,%d,%d,%d) angle=%d", obj, x, y, w, h, elm_win_rotation_get((Evas_Object *)ug_get_window()));
@@ -135,7 +135,7 @@ static void _on_win_move(void *data, Evas *e, Evas_Object *obj, void *event_info
 
 static void _on_base_resize(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
-	Evas_Coord x,y,w,h;
+	Evas_Coord x, y, w, h;
 	evas_object_geometry_get(obj, &x, &y, &w, &h);
 
 	MSG_IMAGEVIEW_HIGH("Base layout(0x%08x) resized geomtery XYWH(%d,%d,%d,%d) angle=%d", obj, x, y, w, h, elm_win_rotation_get((Evas_Object *)ug_get_window()));
@@ -143,7 +143,7 @@ static void _on_base_resize(void *data, Evas *e, Evas_Object *obj, void *event_i
 
 static void _on_base_move(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
-	Evas_Coord x,y,w,h;
+	Evas_Coord x, y, w, h;
 	evas_object_geometry_get(obj, &x, &y, &w, &h);
 
 	MSG_IMAGEVIEW_HIGH("Base layout(0x%08x) moved geomtery XYWH(%d,%d,%d,%d) angle=%d", obj, x, y, w, h, elm_win_rotation_get((Evas_Object *)ug_get_window()));
@@ -160,9 +160,9 @@ static void _on_base_hide(void *data, Evas *e, Evas_Object *obj, void *event_inf
 	MSG_IMAGEVIEW_HIGH("Base(0x%08x) layout hide", obj);
 }
 
-static void _on_receive_mouse_down (void *data, Evas *e, Evas_Object *obj, void *event_info)
+static void _on_receive_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
-	MSG_MAIN_HIGH("Base layout(0x%08x) clicked : %s Layer=%d",obj, evas_object_name_get(obj), evas_object_layer_get(obj));
+	MSG_MAIN_HIGH("Base layout(0x%08x) clicked : %s Layer=%d", obj, evas_object_name_get(obj), evas_object_layer_get(obj));
 }
 
 static Eina_Bool _on_exit_timer_expired(void *data)
@@ -206,8 +206,8 @@ static void _on_mmc_state_changed(int storage_id, storage_state_e state, void *u
 	if (_is_mmc_inserted() == false) {
 		MSG_IMAGEVIEW_WARN("MMC Removed!");
 		if (strncmp(ugd->ivug_param->filepath, PATH_SDCARD, strlen(PATH_SDCARD)) != 0
-			&& ugd->ivug_param->view_by != IVUG_VIEW_BY_ALL
-			&& ugd->ivug_param->view_by != IVUG_VIEW_BY_HIDDEN_ALL) {
+		        && ugd->ivug_param->view_by != IVUG_VIEW_BY_ALL
+		        && ugd->ivug_param->view_by != IVUG_VIEW_BY_HIDDEN_ALL) {
 			return;
 		}
 
@@ -327,7 +327,7 @@ void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *
 	PERF_CHECK_BEGIN(LVL0, "On Create");
 
 	MSG_IMAGEVIEW_HIGH("on_create. UG & PRIV");
-		
+
 	if (!ug || !priv) {
 		MSG_IMAGEVIEW_ERROR("Error. ug=0x%08x priv=0x%08x", ug, priv);
 		return NULL;
@@ -335,7 +335,7 @@ void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *
 
 	ugd = (ug_data *)priv;
 
-	MSG_IMAGEVIEW_HIGH("Image Viewer : %s ug=0x%08x, data=0x%08x", __func__, ug, ugd );
+	MSG_IMAGEVIEW_HIGH("Image Viewer : %s ug=0x%08x, data=0x%08x", __func__, ug, ugd);
 
 	Evas_Object *win = (Evas_Object *)ug_get_window();
 
@@ -345,7 +345,7 @@ void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *
 	evas_object_geometry_get(win, &wx, &wy, &ww, &wh);
 
 	MSG_IMAGEVIEW_HIGH("Parent Info. Layout(0x%08x) Win(0x%08x) Size(%d,%d,%d,%d) rotation=%d",
-			ug_get_parent_layout(ug), win, wx, wy, ww, wh,  elm_win_rotation_get(win));
+	                   ug_get_parent_layout(ug), win, wx, wy, ww, wh,  elm_win_rotation_get(win));
 
 	PERF_CHECK_BEGIN(LVL1, "init context");
 	//init
@@ -358,7 +358,7 @@ void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *
 	PERF_CHECK_BEGIN(LVL1, "parse bundle");
 
 	ugd->ivug_param = ivug_param_create_from_bundle(service);
-	if ( ugd->ivug_param == NULL) {
+	if (ugd->ivug_param == NULL) {
 		MSG_IMAGEVIEW_ERROR("Cannot parse parameter");
 		ugd->bError = true;
 		ugd->bErrMsg = strdup(IDS_UNABLE_TO_OPEN_FILE);
@@ -415,7 +415,7 @@ void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *
 		ugd->ivug_param->setas_type = IVUG_SET_AS_UG_TYPE_CROP;
 		ugd->ivug_param->width = 450;
 		ugd->ivug_param->height = 300;
-		ugd->ivug_param->bRatioFix= true;
+		ugd->ivug_param->bRatioFix = true;
 #endif
 		MSG_IMAGEVIEW_HIGH("UG types=%d", ugd->ivug_param->setas_type);
 
@@ -762,7 +762,7 @@ void on_event(ui_gadget_h ug, enum ug_event event, app_control_h service, void *
 		ivug_language_mgr_update(gGetLanguageHandle());
 		break;
 
-	// Rotate event is not used now.. plz, use only resized callback.
+		// Rotate event is not used now.. plz, use only resized callback.
 	case UG_EVENT_ROTATE_PORTRAIT:
 		MSG_IMAGEVIEW_HIGH("Get Event : rotate portrait");
 		break;

@@ -119,8 +119,7 @@ _send_result(ui_gadget_h ug, const char *key1, const char *val1, const char *key
 		MSG_ERROR("app_control_create failed");
 	}
 
-	if (key1 && val1)
-	{
+	if (key1 && val1) {
 		MSG_SEC("Bundle 1 : [%s = %s]", key1, val1);
 		ret = app_control_add_extra_data(service, key1, val1);
 		if (ret != APP_CONTROL_ERROR_NONE) {
@@ -128,8 +127,7 @@ _send_result(ui_gadget_h ug, const char *key1, const char *val1, const char *key
 		}
 	}
 
-	if (key2 && val2)
-	{
+	if (key2 && val2) {
 		MSG_SEC("Bundle 2 : [%s = %s]", key2, val2);
 		ret = app_control_add_extra_data(service, key2, val2);
 		if (ret != APP_CONTROL_ERROR_NONE) {
@@ -150,17 +148,13 @@ static void  _ivug_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, void *e
 
 	evas_object_smart_callback_del(obj, "ok,clicked", _ivug_crop_view_ok_clicked_cb);
 
-	if (crop_ug->bAddtoDB == true )
-	{
+	if (crop_ug->bAddtoDB == true) {
 		media_handle m_handle = NULL;
 
 		m_handle = ivug_db_insert_file_to_DB(path);
-		if(m_handle == NULL)
-		{
+		if (m_handle == NULL) {
 			MSG_ERROR("ivug_db_insert_file_to_DB failed %s", path);
-		}
-		else
-		{
+		} else {
 			ivug_db_destroy_file_handle(m_handle);
 		}
 	}
@@ -191,20 +185,15 @@ static void _ivug_setas_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, vo
 	const char* homescreen_path = IVUG_HOME_SCREEN_PATH;
 	const char* lockscreen_path = IVUG_LOCK_SCREEN_PATH;
 
-	if(type == IVUG_CTRLBAR_SET_SCREEN_HOME)
-	{
+	if (type == IVUG_CTRLBAR_SET_SCREEN_HOME) {
 		ivug_copy_file(path, homescreen_path);
 
 		_send_result(gGetUGHandle(), "homescreen_path", homescreen_path, NULL, NULL);
-	}
-	else if(type == IVUG_CTRLBAR_SET_SCREEN_LOCK)
-	{
+	} else if (type == IVUG_CTRLBAR_SET_SCREEN_LOCK) {
 		ivug_copy_file(path, lockscreen_path);
 
 		_send_result(gGetUGHandle(), "lockscreen_path", lockscreen_path, NULL, NULL);
-	}
-	else if(type == IVUG_CTRLBAR_SET_SCREEN_BOTH)
-	{
+	} else if (type == IVUG_CTRLBAR_SET_SCREEN_BOTH) {
 		ivug_copy_file(path, homescreen_path);
 		ivug_config_set_homescreen_image(homescreen_path);
 		ivug_copy_file(path, lockscreen_path);
@@ -248,8 +237,7 @@ bool ivug_crop_ug_destroy(IvugCropUG * crop_ug)
 {
 	IV_ASSERT(crop_ug != NULL);
 
-	if(crop_ug->filepath)
-	{
+	if (crop_ug->filepath) {
 		free(crop_ug->filepath);
 		crop_ug->filepath = NULL;
 	}

@@ -39,8 +39,8 @@ bool EnumFilesInDir(const char *dir, EnumFilesCB pFunc, void *data)
 	char fullpath[PATH_MAX];
 
 	while ((readdir_r(dirp, &ent_struct, &dptr) == 0) && dptr) {
-		if (dptr->d_type == DT_REG ) {		// Only for gegular file
-			if (pFunc ) {
+		if (dptr->d_type == DT_REG) {		// Only for gegular file
+			if (pFunc) {
 				snprintf(fullpath, PATH_MAX, "%s/%s", dir, dptr->d_name);
 				pFunc(fullpath, data);
 			}
@@ -67,7 +67,7 @@ int GetFilesCountInDir(const char *dir)
 	int nCount = 0;
 
 	while ((readdir_r(dirp, &ent_struct, &dptr) == 0) && dptr) {
-		if (dptr->d_type == DT_REG ) {		// Only for gegular file
+		if (dptr->d_type == DT_REG) {		// Only for gegular file
 			nCount++;
 		}
 	}

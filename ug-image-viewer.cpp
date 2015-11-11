@@ -60,14 +60,14 @@ extern "C" UG_MODULE_API int UG_MODULE_INIT(struct ug_module_ops *ops)
 	MSG_IMAGEVIEW_HIGH("UG_MODULE_INIT. NO IMG VIEW ERRORS");
 #ifdef TRACE_MEMORY
 
-		MSG_IMAGEVIEW_HIGH("UG_MODULE_INIT. IN TRACE MEOMRY");
+	MSG_IMAGEVIEW_HIGH("UG_MODULE_INIT. IN TRACE MEOMRY");
 	if ((nRunCount) % 10 == 0) {
 		char cmd[256];
 
-		snprintf(cmd, 256, "echo \"Count=%d\" >> %s/mem.%d.%d.txt", nRunCount, "/var/tmp", getpid(), nRunCount );
+		snprintf(cmd, 256, "echo \"Count=%d\" >> %s/mem.%d.%d.txt", nRunCount, "/var/tmp", getpid(), nRunCount);
 		MSG_IMAGEVIEW_HIGH("CMD : %s", cmd);
 
-		if (system(cmd) < 0 ) {
+		if (system(cmd) < 0) {
 			MSG_IMAGEVIEW_ERROR("Cannot run '%s'", cmd);
 		}
 
@@ -75,24 +75,24 @@ extern "C" UG_MODULE_API int UG_MODULE_INIT(struct ug_module_ops *ops)
 
 		MSG_IMAGEVIEW_HIGH("CMD : %s", cmd);
 
-		if (system(cmd) < 0 ) {
+		if (system(cmd) < 0) {
 			MSG_IMAGEVIEW_ERROR("Cannot run '%s'", cmd);
 		}
 
-		snprintf(cmd, 256, "echo Count=%d Pid=%d >> %s",  nRunCount, getpid(), DATADIR"/"PACKAGE"/memlog.txt" );
+		snprintf(cmd, 256, "echo Count=%d Pid=%d >> %s",  nRunCount, getpid(), DATADIR"/"PACKAGE"/memlog.txt");
 
 		MSG_IMAGEVIEW_HIGH("CMD : %s", cmd);
 
-		if (system(cmd) < 0 ) {
+		if (system(cmd) < 0) {
 			MSG_IMAGEVIEW_ERROR("Cannot run '%s'", cmd);
 		}
 
 
-		snprintf(cmd, 256, "memps -s %d >> %s", getpid(), DATADIR"/"PACKAGE"/memlog.txt" );
+		snprintf(cmd, 256, "memps -s %d >> %s", getpid(), DATADIR"/"PACKAGE"/memlog.txt");
 
 		MSG_IMAGEVIEW_HIGH("CMD : %s", cmd);
 
-		if (system(cmd) < 0 ) {
+		if (system(cmd) < 0) {
 			MSG_IMAGEVIEW_ERROR("Cannot run '%s'", cmd);
 		}
 
@@ -172,6 +172,6 @@ _DESTRUCTOR void _DLLExit(void)
 
 int main()
 {
-/*	For detecting undefined symbol */
+	/*	For detecting undefined symbol */
 	return -1;
 }

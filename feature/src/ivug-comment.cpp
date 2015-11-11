@@ -27,8 +27,7 @@ extern "C" Handle ivug_comment_loadfile(const char *fname)
 
 	CJPEG *pJpeg = new CJPEG();
 
-	if (pJpeg->ParseJPEG(fname) == false )
-	{
+	if (pJpeg->ParseJPEG(fname) == false) {
 		delete pJpeg;
 		return NULL;
 	}

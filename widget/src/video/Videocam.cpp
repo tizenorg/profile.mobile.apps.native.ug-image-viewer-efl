@@ -32,7 +32,7 @@ const Evas_Smart_Cb_Description CEvasSmartObject<CVideocam>::_signals[] = {
 
 void CVideocam::OnPlayerStarted(int w, int h)
 {
-	video_->SetSize(CSize(w,h));
+	video_->SetSize(CSize(w, h));
 
 	evas_object_smart_callback_call(GetObject(), SIG_STARTED, NULL);
 
@@ -57,7 +57,7 @@ void CVideocam::OnPlayerEOS(void)
 
 void CVideocam::move(int x, int y)
 {
-	CEvasSmartObject<CVideocam>::move(x,y);
+	CEvasSmartObject<CVideocam>::move(x, y);
 
 	MSG_HIGH("Move to %d,%d", x, y);
 
@@ -66,7 +66,7 @@ void CVideocam::move(int x, int y)
 
 void CVideocam::resize(int w, int h)
 {
-	CEvasSmartObject<CVideocam>::resize(w,h);
+	CEvasSmartObject<CVideocam>::resize(w, h);
 
 	MSG_HIGH("Resize to %d,%d", w, h);
 	evas_object_resize(scroller_->GetObject(), w, h);
@@ -116,9 +116,9 @@ void CVideocam::remove()
 	MSG_ERROR("Videocam Deleted");
 
 	delete scroller_;
-	scroller_= NULL;
+	scroller_ = NULL;
 
-	EFL::dump_obj(GetObject() ,0);
+	EFL::dump_obj(GetObject() , 0);
 
 	delete video_;
 }

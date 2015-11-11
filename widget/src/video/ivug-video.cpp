@@ -106,12 +106,20 @@ IVAPI void ivug_video_region_get(const Evas_Object *obj, int *x, int *y, int *w,
 
 	const CRect &rect = video->GetDisplayGeometry();
 
-	if(x) *x = rect.Left();
-	if(y) *y = rect.Top();
-	if(w) *w = rect.Width();
-	if(h) *h = rect.Height();
+	if (x) {
+		*x = rect.Left();
+	}
+	if (y) {
+		*y = rect.Top();
+	}
+	if (w) {
+		*w = rect.Width();
+	}
+	if (h) {
+		*h = rect.Height();
+	}
 
-	MSG_HIGH("Region size XYWH(%d,%d,%d,%d)", rect.Left(), rect.Top(), rect.Width(), rect.Height() );
+	MSG_HIGH("Region size XYWH(%d,%d,%d,%d)", rect.Left(), rect.Top(), rect.Width(), rect.Height());
 }
 
 IVAPI void ivug_video_hold_set(const Evas_Object *obj, Eina_Bool hold)
@@ -140,7 +148,7 @@ IVAPI Eina_Bool ivug_video_is_playing(Evas_Object *obj)
 	CVideocam *video = VIDEO_CLASS(obj);
 	MSG_ASSERT(video != NULL);
 
-	if (video->IsPlaying() == true ) {
+	if (video->IsPlaying() == true) {
 		return  EINA_TRUE;
 	}
 

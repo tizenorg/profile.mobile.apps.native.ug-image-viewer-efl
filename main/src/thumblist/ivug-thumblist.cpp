@@ -93,7 +93,7 @@ struct _Thumbnail {
 #define INVALID_IMAGE (PREFIX"/res/images/"PACKAGE"/T01_Nocontents_broken.png")
 
 #define IV_THUMBLIST(obj) \
-		static_cast<ThumbList *>(evas_object_data_get((obj), "CMyThumbList"))
+	static_cast<ThumbList *>(evas_object_data_get((obj), "CMyThumbList"))
 
 #define THUMB_SIZE (45)
 
@@ -112,8 +112,7 @@ static Evas_Object *create_contents(Evas_Object *parent, const char *path)
 	evas_object_image_smooth_scale_set(image, EINA_TRUE);
 
 //	evas_object_image_load_scale_down_set(image, 2);
-	if(path == NULL)
-	{
+	if (path == NULL) {
 		MSG_WARN("thumbnail is not loaded yet");
 		return image;
 	}
@@ -123,16 +122,14 @@ static Evas_Object *create_contents(Evas_Object *parent, const char *path)
 	MSG_LOW("Load image : %s", ivug_get_filename(path));
 	Evas_Load_Error err = evas_object_image_load_error_get(image);
 
-	if (EVAS_LOAD_ERROR_NONE != err )
-	{
+	if (EVAS_LOAD_ERROR_NONE != err) {
 		MSG_ERROR("Cannot load file : Err(%d) %s", err, path);
 		// Load default.
 		evas_object_image_file_set(image, INVALID_IMAGE, NULL);
 
 		Evas_Load_Error err = evas_object_image_load_error_get(image);
 
-		if (EVAS_LOAD_ERROR_NONE != err )
-		{
+		if (EVAS_LOAD_ERROR_NONE != err) {
 			MSG_FATAL("Cannot load default image");
 			return NULL;
 		}
@@ -144,19 +141,15 @@ static Evas_Object *create_contents(Evas_Object *parent, const char *path)
 
 	MSG_LOW("Img Size : WH(%dx%d)", imgW, imgH);
 
-	if (imgW != 0 && imgH != 0 )
-	{
+	if (imgW != 0 && imgH != 0) {
 		int fX, fY, fW, fH;
-		if (imgW < imgH )
-		{
+		if (imgW < imgH) {
 			fW = THUMB_SIZE;
 			fH = fW * imgH / imgW;
 
 			fX = 0;
 			fY = (THUMB_SIZE - fH) / 2;
-		}
-		else
-		{
+		} else {
 			fH = THUMB_SIZE;
 			fW = fH * imgW / imgH;
 
@@ -183,8 +176,7 @@ static Evas_Object *create_edje_content(Evas_Object *parent, const char *path)
 
 	layout = elm_layout_add(parent);
 
-	if (elm_layout_file_set(layout, EDJ_THUMBLIST, "thumblist.item") == EINA_FALSE)
-	{
+	if (elm_layout_file_set(layout, EDJ_THUMBLIST, "thumblist.item") == EINA_FALSE) {
 		MSG_ERROR("Cannot load thumlist edj");
 		return NULL;
 	}
@@ -195,8 +187,7 @@ static Evas_Object *create_edje_content(Evas_Object *parent, const char *path)
 	evas_object_show(layout);
 	Evas_Object *image = create_contents(layout, path);
 
-	if (image == NULL)
-	{
+	if (image == NULL) {
 		MSG_FATAL("Cannot create thumb item");
 	}
 
@@ -207,8 +198,7 @@ static Evas_Object *create_edje_content(Evas_Object *parent, const char *path)
 
 static void _set_highlighted(Thumbnail *thm)
 {
-	if(thm->content)	//before contents callback it will be null
-	{
+	if (thm->content) {	//before contents callback it will be null
 		edje_object_signal_emit(elm_layout_edje_get(thm->content), "elm,state,selected", "app");
 	}
 
@@ -234,18 +224,16 @@ grid_content_get(void *data, Evas_Object *obj, const char *part)
 // TODO : For bestshot, use edje.
 	MSG_LOW("Content get : %s", part);
 
-	if (!strcmp(part, "elm.swallow.icon"))
-	{
+	if (!strcmp(part, "elm.swallow.icon")) {
 		Evas_Object *contents = create_edje_content(obj, (thm->path));
 
 		thm->content = contents;
 
 		Evas_Object *icon = NULL;
 
-		switch(thm->tMetaphor)
-		{
+		switch (thm->tMetaphor) {
 		case THUMBLIST_NONE:
-			edje_object_signal_emit(elm_layout_edje_get(contents), "thumbnail,hide,metaphore","elm");
+			edje_object_signal_emit(elm_layout_edje_get(contents), "thumbnail,hide,metaphore", "elm");
 			break;
 
 		case THUMBLIST_SOUNDPIC:
@@ -253,14 +241,13 @@ grid_content_get(void *data, Evas_Object *obj, const char *part)
 			elm_image_no_scale_set(icon, EINA_TRUE);
 			elm_image_aspect_fixed_set(icon, EINA_TRUE);
 
-			if (elm_image_file_set(icon, EDJ_ICON, "icon.sound_scene") == EINA_FALSE)
-			{
+			if (elm_image_file_set(icon, EDJ_ICON, "icon.sound_scene") == EINA_FALSE) {
 				MSG_ERROR("Cannot load EDJ_ICON");
 			}
 
 			elm_layout_content_set(contents, "thumblist.metaphore", icon);
 
-			edje_object_signal_emit(elm_layout_edje_get(contents), "thumbnail,show,metaphore","elm");
+			edje_object_signal_emit(elm_layout_edje_get(contents), "thumbnail,show,metaphore", "elm");
 			break;
 
 
@@ -269,14 +256,13 @@ grid_content_get(void *data, Evas_Object *obj, const char *part)
 			elm_image_no_scale_set(icon, EINA_TRUE);
 			elm_image_aspect_fixed_set(icon, EINA_TRUE);
 
-			if (elm_image_file_set(icon, EDJ_ICON, "icon.panorama") == EINA_FALSE)
-			{
+			if (elm_image_file_set(icon, EDJ_ICON, "icon.panorama") == EINA_FALSE) {
 				MSG_ERROR("Cannot load EDJ_ICON");
 			}
 
 			elm_layout_content_set(contents, "thumblist.metaphore", icon);
 
-			edje_object_signal_emit(elm_layout_edje_get(contents), "thumbnail,show,metaphore","elm");
+			edje_object_signal_emit(elm_layout_edje_get(contents), "thumbnail,show,metaphore", "elm");
 			break;
 
 
@@ -285,52 +271,42 @@ grid_content_get(void *data, Evas_Object *obj, const char *part)
 			elm_image_no_scale_set(icon, EINA_TRUE);
 			elm_image_aspect_fixed_set(icon, EINA_TRUE);
 
-			if (elm_image_file_set(icon, EDJ_ICON, "icon.burst") == EINA_FALSE)
-			{
+			if (elm_image_file_set(icon, EDJ_ICON, "icon.burst") == EINA_FALSE) {
 				MSG_ERROR("Cannot load EDJ_ICON");
 			}
 
 			elm_layout_content_set(contents, "thumblist.metaphore", icon);
 
-			edje_object_signal_emit(elm_layout_edje_get(contents), "thumbnail,show,metaphore","elm");
+			edje_object_signal_emit(elm_layout_edje_get(contents), "thumbnail,show,metaphore", "elm");
 			break;
 
 		default:
 			MSG_ERROR("Unknwon metaphore(%d)", thm->tMetaphor);
 		}
 
-		if (thm->bVideo == true )
-		{
+		if (thm->bVideo == true) {
 			icon = elm_icon_add(contents);
 			elm_image_no_scale_set(icon, EINA_TRUE);
 			elm_image_aspect_fixed_set(icon, EINA_TRUE);
 
-			if (elm_image_file_set(icon, EDJ_ICON, "btn.video.play.80.80") == EINA_FALSE)
-			{
+			if (elm_image_file_set(icon, EDJ_ICON, "btn.video.play.80.80") == EINA_FALSE) {
 				MSG_ERROR("Cannot load EDJ_ICON");
 			}
 
 			elm_layout_content_set(contents, "thumblist.vicon", icon);
 
-			edje_object_signal_emit(elm_layout_edje_get(contents), "thumbnail,show,vicon","elm");
-		}
-		else
-		{
-			edje_object_signal_emit(elm_layout_edje_get(contents), "thumbnail,hide,vicon","elm");
+			edje_object_signal_emit(elm_layout_edje_get(contents), "thumbnail,show,vicon", "elm");
+		} else {
+			edje_object_signal_emit(elm_layout_edje_get(contents), "thumbnail,hide,vicon", "elm");
 		}
 
-		if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT )
-		{
-			if (thm->thmlist->eSelected == thm)
-			{
-				_set_highlighted( thm->thmlist->eSelected );
+		if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT) {
+			if (thm->thmlist->eSelected == thm) {
+				_set_highlighted(thm->thmlist->eSelected);
 			}
-		}
-		else
-		{
+		} else {
 #ifdef FEATURE_HIGHLIGHT
-			if (elm_gengrid_item_selected_get(thm->item) == EINA_TRUE )
-			{
+			if (elm_gengrid_item_selected_get(thm->item) == EINA_TRUE) {
 
 				edje_object_signal_emit(elm_layout_edje_get(thm->content), "elm,state,selected", "app");
 			}
@@ -338,26 +314,23 @@ grid_content_get(void *data, Evas_Object *obj, const char *part)
 		}
 
 		return contents;
-	}
-	else if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT && !strcmp(part, "elm.swallow.end") )
-	{
-			MSG_MED("Checked ! %d", thm->bChecked);
+	} else if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT && !strcmp(part, "elm.swallow.end")) {
+		MSG_MED("Checked ! %d", thm->bChecked);
 
-			Evas_Object *ck = elm_check_add(obj);
-			elm_object_style_set(ck, "grid");
+		Evas_Object *ck = elm_check_add(obj);
+		elm_object_style_set(ck, "grid");
 
-			evas_object_propagate_events_set(ck, EINA_FALSE);
-			elm_check_state_set(ck, thm->bChecked);
+		evas_object_propagate_events_set(ck, EINA_FALSE);
+		elm_check_state_set(ck, thm->bChecked);
 
-			if (!elm_config_access_get()) {
-				evas_object_smart_callback_add(ck, "changed", _item_check_changed_cb, data);
-			}
-			else {
-				evas_object_repeat_events_set(ck, EINA_TRUE);
-				elm_access_object_unregister(ck);
-			}
+		if (!elm_config_access_get()) {
+			evas_object_smart_callback_add(ck, "changed", _item_check_changed_cb, data);
+		} else {
+			evas_object_repeat_events_set(ck, EINA_TRUE);
+			elm_access_object_unregister(ck);
+		}
 
-			return ck;
+		return ck;
 	}
 
 	return NULL;
@@ -367,8 +340,7 @@ static void grid_content_del(void *data, Evas_Object *obj)
 {
 	Thumbnail *thm = (Thumbnail *)data;
 
-	if (thm->thmlist->eSelected == thm)
-	{
+	if (thm->thmlist->eSelected == thm) {
 		thm->thmlist->eSelected = NULL;
 	}
 
@@ -385,8 +357,7 @@ grid_longpress(void *data, Evas_Object *obj, void *event_info)
 
 	MSG_ERROR("Long pressed!. %s", (thm->path));
 
-	if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_LIST )
-	{
+	if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_LIST) {
 #ifdef TEST_EDIT_MODE
 // Change to Edit mode.
 		ivug_thumblist_set_edit_mode(obj, TRUE);		// Set Edit Mode
@@ -396,9 +367,7 @@ grid_longpress(void *data, Evas_Object *obj, void *event_info)
 #endif
 		//evas_object_smart_callback_call(thm->thmlist->gengrid, "changed,mode", (void *)"edit");
 		return;
-	}
-	else if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT )
-	{
+	} else if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT) {
 		MSG_ERROR("Long press in Edit Mode");
 
 		Evas_Object *check;
@@ -406,7 +375,9 @@ grid_longpress(void *data, Evas_Object *obj, void *event_info)
 // Toggle check box
 //		elm_gengrid_item_selected_set(thm->item, EINA_FALSE);
 		check = elm_object_item_part_content_get(thm->item, "elm.swallow.end");
-		if (!check) return;
+		if (!check) {
+			return;
+		}
 
 		thm->bChecked = !elm_check_state_get(check);
 		elm_check_state_set(check, thm->bChecked);
@@ -414,8 +385,7 @@ grid_longpress(void *data, Evas_Object *obj, void *event_info)
 		return;
 	}
 
-	if (thm->tMetaphor == THUMBLIST_BESTPIC )
-	{
+	if (thm->tMetaphor == THUMBLIST_BESTPIC) {
 		thm->tMetaphor = THUMBLIST_NONE;
 		elm_gengrid_item_update(item);
 
@@ -423,9 +393,7 @@ grid_longpress(void *data, Evas_Object *obj, void *event_info)
 
 		// Change to selected item.
 		elm_gengrid_item_selected_set(thm->item, EINA_TRUE);
-	}
-	else
-	{
+	} else {
 		thm->tMetaphor = THUMBLIST_BESTPIC;
 		elm_gengrid_item_update(item);
 
@@ -450,29 +418,29 @@ static void _on_del(void *data, Evas *e, Evas_Object *obj, void *event_info)
 
 static void _on_resized(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
-	Evas_Coord x,y,w,h;
+	Evas_Coord x, y, w, h;
 	evas_object_geometry_get(obj, &x, &y, &w, &h);
 
-	if (w == 0  || h == 0 ) return;
+	if (w == 0  || h == 0) {
+		return;
+	}
 
 	MSG_MED("Thumblist resized resized geomtery XYWH(%d,%d,%d,%d)", x, y, w, h);
-/*
-	double scale = elm_config_scale_get();
-	int w = (int)((8*scale)+(162*scale)+(8*scale)); // width L + W + R
-	int h = (int)((9*scale)+(162*scale)+(9*scale)); // height U + H + D
-*/
+	/*
+		double scale = elm_config_scale_get();
+		int w = (int)((8*scale)+(162*scale)+(8*scale)); // width L + W + R
+		int h = (int)((9*scale)+(162*scale)+(9*scale)); // height U + H + D
+	*/
 //	elm_gengrid_item_size_set(thmlist->gengrid, h * elm_config_scale_get(), h * elm_config_scale_get());
 
 	Elm_Object_Item *item = elm_gengrid_selected_item_get(obj);
 
-	if (item != NULL)
-	{
+	if (item != NULL) {
 		elm_gengrid_item_update(item);
 		Thumbnail *thm = (Thumbnail *)elm_object_item_data_get(item);
 
 #ifdef FEATURE_HIGHLIGHT
-		if (thm->content != NULL)
-		{
+		if (thm->content != NULL) {
 			edje_object_signal_emit(elm_layout_edje_get(thm->content), "elm,state,selected", "app");
 		}
 #endif
@@ -488,13 +456,14 @@ void _on_item_selected(void *data, Evas_Object *obj, void *event_info)
 
 	MSG_SEC("Item selected. %s", ivug_get_filename((thm->path)));
 
-	if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT )
-	{
+	if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT) {
 		Evas_Object *check;
 
 // Toggle check box
 		check = elm_object_item_part_content_get(thm->item, "elm.swallow.end");
-		if (!check) return;
+		if (!check) {
+			return;
+		}
 
 		thm->bChecked = !elm_check_state_get(check);
 		elm_check_state_set(check, thm->bChecked);
@@ -507,12 +476,9 @@ void _on_item_selected(void *data, Evas_Object *obj, void *event_info)
 	}
 
 #ifdef FEATURE_HIGHLIGHT
-	if(thm->content)
-	{
+	if (thm->content) {
 		edje_object_signal_emit(elm_layout_edje_get(thm->content), "elm,state,selected", "app");
-	}
-	else
-	{
+	} else {
 		MSG_ERROR("Contents is NULL. in selected callback");
 	}
 #endif
@@ -528,19 +494,15 @@ void _on_item_unselected(void *data, Evas_Object *obj, void *event_info)
 
 	MSG_SEC("Item Unselected. %s thm->content 0x%08x", ivug_get_filename((thm->path)), thm->content);
 
-	if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT )
-	{
+	if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT) {
 // Toggle check box
 		return;
 	}
 
 #ifdef FEATURE_HIGHLIGHT
-	if(thm->content)
-	{
+	if (thm->content) {
 		edje_object_signal_emit(elm_layout_edje_get(thm->content), "elm,state,unselected", "app");
-	}
-	else
-	{
+	} else {
 		MSG_ERROR("Contents is NULL. in unselected callback");
 	}
 #endif
@@ -558,8 +520,7 @@ void _on_item_realized(void *data, Evas_Object *obj, void *event_info)
 
 	thm->bRealized = true;
 #ifdef FEATURE_HIGHLIGHT
-	if (elm_gengrid_item_selected_get(item) == EINA_TRUE )
-	{
+	if (elm_gengrid_item_selected_get(item) == EINA_TRUE) {
 		edje_object_signal_emit(elm_layout_edje_get(thm->content), "elm,state,selected", "app");
 	}
 #endif
@@ -588,8 +549,7 @@ void _on_item_changed(void *data, Evas_Object *obj, void *event_info)
 
 	Thumbnail *thm = (Thumbnail *)elm_object_item_data_get(item);
 
-	if (thm->thmlist->eGridMode != IV_THUMBLIST_MODE_EDIT )
-	{
+	if (thm->thmlist->eGridMode != IV_THUMBLIST_MODE_EDIT) {
 		MSG_MED("Selected from gengrid. thm=0x%08x", thm);
 		evas_object_smart_callback_call(thm->thmlist->gengrid, "item,selected", item);
 	}
@@ -673,12 +633,9 @@ ivug_thumblist_set_bestpic_mode(Evas_Object *obj, Eina_Bool bBestPicMode)
 	ThumbList *thmlist = IV_THUMBLIST(obj);
 	MSG_ASSERT(thmlist != NULL);
 
-	if (bBestPicMode == EINA_TRUE )
-	{
+	if (bBestPicMode == EINA_TRUE) {
 		thmlist->eGridMode = IV_THUMBLIST_MODE_BESTPIC;
-	}
-	else
-	{
+	} else {
 		thmlist->eGridMode = IV_THUMBLIST_MODE_LIST;
 	}
 }
@@ -690,15 +647,13 @@ ivug_thumblist_set_edit_mode(Evas_Object *obj, Eina_Bool bEditMode)
 	ThumbList *thmlist = IV_THUMBLIST(obj);
 	MSG_ASSERT(thmlist != NULL);
 
-	if (bEditMode == EINA_TRUE )
-	{
+	if (bEditMode == EINA_TRUE) {
 		Elm_Object_Item *iter;
 		Thumbnail *thm;
 
 		iter = elm_gengrid_first_item_get(obj);
 
-		while (iter != NULL)
-		{
+		while (iter != NULL) {
 			thm = (Thumbnail *)elm_object_item_data_get(iter);
 
 			thm->bChecked = false;
@@ -706,7 +661,7 @@ ivug_thumblist_set_edit_mode(Evas_Object *obj, Eina_Bool bEditMode)
 		}
 
 		thmlist->eGridMode = IV_THUMBLIST_MODE_EDIT;
-		elm_gengrid_select_mode_set(thmlist->gengrid, ELM_OBJECT_SELECT_MODE_ALWAYS );
+		elm_gengrid_select_mode_set(thmlist->gengrid, ELM_OBJECT_SELECT_MODE_ALWAYS);
 
 		Elm_Object_Item *item = elm_gengrid_selected_item_get(obj);
 
@@ -714,19 +669,16 @@ ivug_thumblist_set_edit_mode(Evas_Object *obj, Eina_Bool bEditMode)
 		thmlist->eSelected = thm;		// Store currented selected
 
 		evas_object_smart_callback_call(thmlist->gengrid, "changed,mode", (void *)"edit");
-	}
-	else
-	{
-		if (thmlist->eSelected )		// Highlighted item
-		{
+	} else {
+		if (thmlist->eSelected) {	// Highlighted item
 			elm_gengrid_item_selected_set(thmlist->eSelected->item, EINA_TRUE);
 			elm_gengrid_item_show(thmlist->eSelected->item, ELM_GENGRID_ITEM_SCROLLTO_IN);
 		}
 
 		thmlist->eGridMode = IV_THUMBLIST_MODE_LIST;
-		elm_gengrid_select_mode_set(thmlist->gengrid, ELM_OBJECT_SELECT_MODE_DEFAULT );
+		elm_gengrid_select_mode_set(thmlist->gengrid, ELM_OBJECT_SELECT_MODE_DEFAULT);
 
-	// Update gengrid
+		// Update gengrid
 		elm_gengrid_realized_items_update(thmlist->gengrid);
 
 		thmlist->eSelected = NULL;
@@ -741,7 +693,7 @@ Eina_Bool ivug_thumblist_get_edit_mode(Evas_Object *obj)
 	ThumbList *thmlist = IV_THUMBLIST(obj);
 	MSG_ASSERT(thmlist != NULL);
 
-	return thmlist->eGridMode ==IV_THUMBLIST_MODE_EDIT ? EINA_TRUE : EINA_FALSE;
+	return thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT ? EINA_TRUE : EINA_FALSE;
 }
 
 
@@ -753,12 +705,9 @@ Image_Object *ivug_thumblist_append_item(Evas_Object *obj, const char *thumbnail
 
 	Thumbnail *thm = _alloc_thumb(thmlist);
 
-	if(thumbnail_path == NULL)
-	{
+	if (thumbnail_path == NULL) {
 		thm->path = strdup(DEFAULT_THUMBNAIL_PATH);
-	}
-	else
-	{
+	} else {
 		thm->path = strdup(thumbnail_path);
 	}
 	thm->data = item_data;
@@ -780,12 +729,9 @@ Image_Object *ivug_thumblist_prepend_item(Evas_Object *obj, const char *thumbnai
 
 	Thumbnail *thm = _alloc_thumb(thmlist);
 
-	if(thumbnail_path == NULL)
-	{
+	if (thumbnail_path == NULL) {
 		thm->path = strdup(DEFAULT_THUMBNAIL_PATH);
-	}
-	else
-	{
+	} else {
 		thm->path = strdup(thumbnail_path);
 	}
 	thm->data = item_data;
@@ -817,12 +763,9 @@ ivug_thumblist_update_item(Evas_Object* obj, Image_Object *img, const char *thum
 	Thumbnail *thm = (Thumbnail *)elm_object_item_data_get(item);
 
 	free(thm->path);
-	if(thumbnail_path == NULL)
-	{
+	if (thumbnail_path == NULL) {
 		thm->path = strdup(DEFAULT_THUMBNAIL_PATH);
-	}
-	else
-	{
+	} else {
 		thm->path = strdup(thumbnail_path);
 	}
 	thm->data = item_data;
@@ -865,10 +808,8 @@ ivug_thumblist_select_item(Evas_Object *obj, Image_Object *img)
 
 	Thumbnail *thm = (Thumbnail *)elm_object_item_data_get(item);
 
-	if (thm->thmlist->eGridMode != IV_THUMBLIST_MODE_EDIT )
-	{
-		if (ivug_thumblist_get_selected_item(obj) == img )
-		{
+	if (thm->thmlist->eGridMode != IV_THUMBLIST_MODE_EDIT) {
+		if (ivug_thumblist_get_selected_item(obj) == img) {
 			MSG_WARN("Same center.");
 			return;
 		}
@@ -879,42 +820,34 @@ ivug_thumblist_select_item(Evas_Object *obj, Image_Object *img)
 
 	bool bRealized = false;
 
-	if (thm->bRealized == true )
-	{
+	if (thm->bRealized == true) {
 		bRealized = true;
 	}
 
 #if 1   // BRING_IN is not working..
-	if (bRealized == true )		// If distance is near(??).
-	{
+	if (bRealized == true) {	// If distance is near(??).
 		// Animated scroll to item.
 		elm_gengrid_item_bring_in(thm->item, ELM_GENGRID_ITEM_SCROLLTO_IN);
-	}
-	else
+	} else
 #endif
 	{
 		// Jump and show item/.
 		elm_gengrid_item_show(thm->item, ELM_GENGRID_ITEM_SCROLLTO_IN);
 	}
 
-	if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT )
-	{
+	if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT) {
 		MSG_MED("Selected item in Edit mode");
 
 // UnHighlight Old.
 #if 1
 		Thumbnail *old = thm->thmlist->eSelected;
 
-		if (old != NULL)
-		{
+		if (old != NULL) {
 			elm_gengrid_item_selected_set(old->item, EINA_FALSE);		// Item can be selected continously. so we set as unselected
 
-			if(old->content)
-			{
+			if (old->content) {
 				edje_object_signal_emit(elm_layout_edje_get(old->content), "elm,state,unselected", "app");
-			}
-			else
-			{
+			} else {
 				MSG_ERROR("Contents is NULL. in unselected callback");
 			}
 
@@ -934,8 +867,7 @@ ivug_thumblist_select_item(Evas_Object *obj, Image_Object *img)
 	elm_gengrid_item_selected_set(thm->item, EINA_TRUE);
 
 #ifdef FEATURE_HIGHLIGHT
-	if(thm->content)	//before contents callback it will be null
-	{
+	if (thm->content) {	//before contents callback it will be null
 		edje_object_signal_emit(elm_layout_edje_get(thm->content), "elm,state,selected", "app");
 	}
 #endif
@@ -1000,12 +932,10 @@ ivug_thumblist_find_item_by_data(Evas_Object* obj, void *item_data)
 
 	iter = elm_gengrid_first_item_get(obj);
 
-	while (iter != NULL)
-	{
+	while (iter != NULL) {
 		thm = (Thumbnail *)elm_object_item_data_get(iter);
 
-		if (thm->data == item_data )
-		{
+		if (thm->data == item_data) {
 			MSG_SEC("Found Item: %s Data=0x%08x", ivug_get_filename((thm->path)), item_data);
 			return (Image_Object *)iter;
 		}
@@ -1028,12 +958,10 @@ ivug_thumblist_get_items_bestpic(Evas_Object* obj)
 
 	iter = elm_gengrid_first_item_get(obj);
 
-	while (iter != NULL)
-	{
+	while (iter != NULL) {
 		thm = (Thumbnail *)elm_object_item_data_get(iter);
 
-		if (thm->tMetaphor == THUMBLIST_BESTPIC)
-		{
+		if (thm->tMetaphor == THUMBLIST_BESTPIC) {
 			MSG_SEC("Found Best pic Item: %s", ivug_get_filename((thm->path)));
 			result = eina_list_append(result, iter);
 		}
@@ -1056,12 +984,10 @@ ivug_thumblist_get_items_checked(Evas_Object* obj)
 
 	iter = elm_gengrid_first_item_get(obj);
 
-	while (iter != NULL)
-	{
+	while (iter != NULL) {
 		thm = (Thumbnail *)elm_object_item_data_get(iter);
 
-		if (thm->bChecked == true)
-		{
+		if (thm->bChecked == true) {
 			MSG_SEC("Found Checked Item: %s", ivug_get_filename((thm->path)));
 			result = eina_list_append(result, iter);
 		}
@@ -1081,12 +1007,10 @@ ivug_thumblist_checked_item_is(Evas_Object* obj)
 
 	iter = elm_gengrid_first_item_get(obj);
 
-	while (iter != NULL)
-	{
+	while (iter != NULL) {
 		thm = (Thumbnail *)elm_object_item_data_get(iter);
 
-		if (thm->bChecked == true)
-		{
+		if (thm->bChecked == true) {
 			MSG_SEC("Found Checked Item: %s", ivug_get_filename((thm->path)));
 			return EINA_TRUE;
 		}

@@ -45,8 +45,7 @@
 #define ICON_EDJ_PATH EDJ_PATH"/ivug-icons.edj"
 
 
-static const char *szPlaySpeedIcon[] =
-{
+static const char *szPlaySpeedIcon[] = {
 	"icon.burstspeed.1.5th", 	"icon.burstspeed.1.5th.press",
 	"icon.burstspeed.1.2th", 	"icon.burstspeed.1.2th.press",
 	"icon.burstspeed.1", 		"icon.burstspeed.1.press",
@@ -54,9 +53,9 @@ static const char *szPlaySpeedIcon[] =
 };
 
 
-class CDecolayer : public CEvasSmartObject<CDecolayer> {
-	static Eina_Bool _timer_cb(void *data)
-	{
+class CDecolayer : public CEvasSmartObject<CDecolayer>
+{
+	static Eina_Bool _timer_cb(void *data) {
 		CDecolayer *thiz = (CDecolayer *)data;
 
 		thiz->OnTimer();
@@ -65,17 +64,15 @@ class CDecolayer : public CEvasSmartObject<CDecolayer> {
 	}
 
 #if (LOG_LVL & DBG_MSG_LVL_DEBUG)
-	static void _on_receive_mouse_event(void *data, Evas *e, Evas_Object *obj, void *event_info)
-	{
+	static void _on_receive_mouse_event(void *data, Evas *e, Evas_Object *obj, void *event_info) {
 		char *str = (char *)data;
 
-		MSG_HIGH("Decolayer(0x%08x):%s %s",obj, str, evas_object_name_get(obj));
+		MSG_HIGH("Decolayer(0x%08x):%s %s", obj, str, evas_object_name_get(obj));
 	}
 #endif
 
 public:
-	CDecolayer() : CEvasSmartObject<CDecolayer>(), icon_w(THUMB_ICON_SIZE), icon_h(THUMB_ICON_SIZE), bVisible(false), m_event(NULL), m_ico_soundpic(NULL), m_ico_play(NULL), m_ico_burstplay(NULL), m_ico_burstspeed(NULL)
-	{
+	CDecolayer() : CEvasSmartObject<CDecolayer>(), icon_w(THUMB_ICON_SIZE), icon_h(THUMB_ICON_SIZE), bVisible(false), m_event(NULL), m_ico_soundpic(NULL), m_ico_play(NULL), m_ico_burstplay(NULL), m_ico_burstspeed(NULL) {
 		CEvasSmartObject<CDecolayer>::SetClassName("DecoLayer");
 
 		m_timer = NULL;
@@ -107,97 +104,83 @@ public:
 		return GetObject();
 	};
 
-	void UpdateIcon()
-	{
+	void UpdateIcon() {
 		MSG_MED("Update Icon!");
 		SetType(m_deco, true);
 	}
 
 // IMG_PATH"/bestpic/gallery_icon_bestpic.png"
-	bool SetType(Ivug_Deco deco, bool bForce = false)
-	{
+	bool SetType(Ivug_Deco deco, bool bForce = false) {
 		MSG_HIGH("Set decoration type(%d --> %d) bForce=%d", m_deco, deco, bForce);
 
-		if (bForce == false )
-		{
-			if (m_deco == deco ) return true;
+		if (bForce == false) {
+			if (m_deco == deco) {
+				return true;
+			}
 		}
 
-		switch(m_deco)		// Old type
-		{
-			case IVUG_DECO_VIDEO:
-				if (m_ico_play )
-				{
-					evas_object_hide(m_ico_play);
-				}
-				break;
-			case IVUG_DECO_PANORAMA:
-				break;
-			case IVUG_DECO_SOUNDPIC:
-				if (m_timer )		// Remove soundpic timer..
-				{
-					ecore_timer_del(m_timer);
-					m_timer = NULL;
-				}
+		switch (m_deco) {	// Old type
+		case IVUG_DECO_VIDEO:
+			if (m_ico_play) {
+				evas_object_hide(m_ico_play);
+			}
+			break;
+		case IVUG_DECO_PANORAMA:
+			break;
+		case IVUG_DECO_SOUNDPIC:
+			if (m_timer) {	// Remove soundpic timer..
+				ecore_timer_del(m_timer);
+				m_timer = NULL;
+			}
 
-				if (m_ico_soundpic )
-				{
-					evas_object_hide(m_ico_soundpic);
-				}
-				break;
-			case IVUG_DECO_BURST:
-				if (m_ico_burstplay)
-				{
-					evas_object_hide(m_ico_burstplay);
-				}
+			if (m_ico_soundpic) {
+				evas_object_hide(m_ico_soundpic);
+			}
+			break;
+		case IVUG_DECO_BURST:
+			if (m_ico_burstplay) {
+				evas_object_hide(m_ico_burstplay);
+			}
 
-				if (m_ico_burstspeed )
-				{
-					evas_object_hide(m_ico_burstspeed);
-				}
+			if (m_ico_burstspeed) {
+				evas_object_hide(m_ico_burstspeed);
+			}
 
-				break;
+			break;
 
-			case IVUG_DECO_NONE:
-				if (m_ico_play )
-				{
-					evas_object_hide(m_ico_play);
-				}
-				if (m_ico_soundpic )
-				{
-					evas_object_hide(m_ico_soundpic);
-				}
+		case IVUG_DECO_NONE:
+			if (m_ico_play) {
+				evas_object_hide(m_ico_play);
+			}
+			if (m_ico_soundpic) {
+				evas_object_hide(m_ico_soundpic);
+			}
 
-				if (m_ico_burstplay)
-				{
-					evas_object_hide(m_ico_burstplay);
-				}
+			if (m_ico_burstplay) {
+				evas_object_hide(m_ico_burstplay);
+			}
 
-				if (m_ico_burstspeed )
-				{
-					evas_object_hide(m_ico_burstspeed);
+			if (m_ico_burstspeed) {
+				evas_object_hide(m_ico_burstspeed);
 
-				}
+			}
 
-				break;
-			default:
-				MSG_ERROR("Unknown media type : %d", m_deco);
-				return false;
+			break;
+		default:
+			MSG_ERROR("Unknown media type : %d", m_deco);
+			return false;
 		}
 
 		m_deco = deco;
 
-		if (m_deco == IVUG_DECO_BURST )
-		{
+		if (m_deco == IVUG_DECO_BURST) {
 			eConfigPlaySpeed cState;
 
-			if (ivug_config_get_playspeed(&cState) == false )
-			{
+			if (ivug_config_get_playspeed(&cState) == false) {
 				cState = PLAYSPEED_1;
 			}
 
-			if (m_speed != cState )
-			{
+			if (m_speed != cState) {
 				evas_object_del(m_ico_burstspeed);		// Can change plaspeed icon. so remove object
 				m_ico_burstspeed = NULL;
 
@@ -214,8 +197,7 @@ public:
 
 	bool StartBlink() {
 		MSG_MED("Start Blinking");
-		if (m_timer )
-		{
+		if (m_timer) {
 			ecore_timer_del(m_timer);
 			m_timer = NULL;
 		}
@@ -228,117 +210,113 @@ public:
 
 	bool StopBlink() {
 		MSG_MED("Stop Blinking");
-		if (m_timer )
-		{
+		if (m_timer) {
 			ecore_timer_del(m_timer);
 			m_timer = NULL;
 		}
 
-		if (m_ico_soundpic && ( bVisible == true ))
-		{
+		if (m_ico_soundpic && (bVisible == true)) {
 			evas_object_show(m_ico_soundpic);
 		}
 
 		return true;
 	}
 
-	bool CheckVIcon(int cx, int cy)
-	{
-		if (m_ico_play == NULL) return false;
-		if (m_deco != IVUG_DECO_VIDEO ) return false;
+	bool CheckVIcon(int cx, int cy) {
+		if (m_ico_play == NULL) {
+			return false;
+		}
+		if (m_deco != IVUG_DECO_VIDEO) {
+			return false;
+		}
 
-		int x,y,w,h;
+		int x, y, w, h;
 
 		evas_object_geometry_get(m_ico_play, &x, &y, &w, &h);
 
-		MSG_HIGH("Check video icon Geo(%d,%d,%d,%d) Point(%d,%d)", x,y,w,h,cx,cy);
-		if ((x < cx) && (cx < (x + w)) && (y < cy) && (cy < (y + h) ) )
+		MSG_HIGH("Check video icon Geo(%d,%d,%d,%d) Point(%d,%d)", x, y, w, h, cx, cy);
+		if ((x < cx) && (cx < (x + w)) && (y < cy) && (cy < (y + h))) {
 			return true;
+		}
 
 		return false;
 	}
 
-	bool CheckSoundIcon(int cx, int cy)
-	{
-		if (m_ico_soundpic == NULL) return false;
-		if (m_deco != IVUG_DECO_SOUNDPIC ) return false;
+	bool CheckSoundIcon(int cx, int cy) {
+		if (m_ico_soundpic == NULL) {
+			return false;
+		}
+		if (m_deco != IVUG_DECO_SOUNDPIC) {
+			return false;
+		}
 
-		int x,y,w,h;
+		int x, y, w, h;
 
 		evas_object_geometry_get(m_ico_soundpic, &x, &y, &w, &h);
 
-		MSG_HIGH("Check Sound icon Geo(%d,%d,%d,%d) Point(%d,%d)", x,y,w,h,cx,cy);
-		if ((x < cx) && (cx < (x + w)) && (y < cy) && (cy < (y + h) ) )
+		MSG_HIGH("Check Sound icon Geo(%d,%d,%d,%d) Point(%d,%d)", x, y, w, h, cx, cy);
+		if ((x < cx) && (cx < (x + w)) && (y < cy) && (cy < (y + h))) {
 			return true;
+		}
 
 		return false;
 	}
 
-	ivug_deco_icon_e CheckIcon(int cx, int cy)
-	{
-		int x,y,w,h;
+	ivug_deco_icon_e CheckIcon(int cx, int cy) {
+		int x, y, w, h;
 
-		switch(m_deco)
-		{
+		switch (m_deco) {
 		case IVUG_DECO_SOUNDPIC:
-			if (m_ico_soundpic == NULL)
-			{
+			if (m_ico_soundpic == NULL) {
 				MSG_WARN("Debug ME!! m_deco:%d", m_deco);
 				return IVUG_DECO_ICON_NONE;
 			}
 
 			evas_object_geometry_get(m_ico_soundpic, &x, &y, &w, &h);
 
-			MSG_HIGH("Check Sound icon Geo(%d,%d,%d,%d) Point(%d,%d)", x,y,w,h,cx,cy);
-			if ((x < cx) && (cx < (x + w)) && (y < cy) && (cy < (y + h) ) )
-			{
+			MSG_HIGH("Check Sound icon Geo(%d,%d,%d,%d) Point(%d,%d)", x, y, w, h, cx, cy);
+			if ((x < cx) && (cx < (x + w)) && (y < cy) && (cy < (y + h))) {
 				return IVUG_DECO_ICON_SOUNDPIC;
 			}
 
 			break;
 		case IVUG_DECO_BURST:
-			if (m_ico_burstplay == NULL)
-			{
+			if (m_ico_burstplay == NULL) {
 				MSG_WARN("Debug ME!! m_deco:%d", m_deco);
 				return IVUG_DECO_ICON_NONE;
 			}
 
-			if (m_ico_burstspeed == NULL)
-			{
+			if (m_ico_burstspeed == NULL) {
 				MSG_WARN("Debug ME!! m_deco:%d", m_deco);
 				return IVUG_DECO_ICON_NONE;
 			}
 
 			evas_object_geometry_get(m_ico_burstplay, &x, &y, &w, &h);
 
-			MSG_HIGH("Check Burst icon play Geo(%d,%d,%d,%d) Point(%d,%d)", x,y,w,h,cx,cy);
-			if ((x < cx) && (cx < (x + w)) && (y < cy) && (cy < (y + h) ) )
-			{
+			MSG_HIGH("Check Burst icon play Geo(%d,%d,%d,%d) Point(%d,%d)", x, y, w, h, cx, cy);
+			if ((x < cx) && (cx < (x + w)) && (y < cy) && (cy < (y + h))) {
 				return IVUG_DECO_ICON_BURST_PLAY;
 			}
 
 			evas_object_geometry_get(m_ico_burstspeed, &x, &y, &w, &h);
 
-			MSG_HIGH("Check Burst speed icon Geo(%d,%d,%d,%d) Point(%d,%d)", x,y,w,h,cx,cy);
-			if ((x < cx) && (cx < (x + w)) && (y < cy) && (cy < (y + h) ) )
-			{
+			MSG_HIGH("Check Burst speed icon Geo(%d,%d,%d,%d) Point(%d,%d)", x, y, w, h, cx, cy);
+			if ((x < cx) && (cx < (x + w)) && (y < cy) && (cy < (y + h))) {
 				return IVUG_DECO_ICON_BURST_PLAYSPEED;
 			}
 
 
 			break;
 		case IVUG_DECO_VIDEO:
-			if (m_ico_play == NULL)
-			{
+			if (m_ico_play == NULL) {
 				MSG_WARN("Debug ME!! m_deco:%d", m_deco);
 				return IVUG_DECO_ICON_NONE;
 			}
 
 			evas_object_geometry_get(m_ico_play, &x, &y, &w, &h);
 
-			MSG_HIGH("Check video icon Geo(%d,%d,%d,%d) Point(%d,%d)", x,y,w,h,cx,cy);
-			if ((x < cx) && (cx < (x + w)) && (y < cy) && (cy < (y + h) ) )
-			{
+			MSG_HIGH("Check video icon Geo(%d,%d,%d,%d) Point(%d,%d)", x, y, w, h, cx, cy);
+			if ((x < cx) && (cx < (x + w)) && (y < cy) && (cy < (y + h))) {
 				return IVUG_DECO_ICON_VIDEO;
 			}
 
@@ -353,10 +331,8 @@ public:
 
 	}
 
-	void hide_icon_play()
-	{
-		if (m_ico_play )
-		{
+	void hide_icon_play() {
+		if (m_ico_play) {
 			evas_object_hide(m_ico_play);
 		}
 	}
@@ -364,23 +340,19 @@ public:
 protected:
 	virtual void clip_set(Evas_Object *clipper) {
 
-		if (m_ico_soundpic )
-		{
+		if (m_ico_soundpic) {
 			evas_object_clip_set(m_ico_soundpic, clipper);
 		}
 
-		if (m_ico_play )
-		{
+		if (m_ico_play) {
 			evas_object_clip_set(m_ico_play, clipper);
 		}
 
-		if (m_ico_burstplay )
-		{
+		if (m_ico_burstplay) {
 			evas_object_clip_set(m_ico_burstplay, clipper);
 		}
 
-		if (m_ico_burstspeed )
-		{
+		if (m_ico_burstspeed) {
 			evas_object_clip_set(m_ico_burstspeed, clipper);
 		}
 
@@ -388,23 +360,19 @@ protected:
 
 	virtual void clip_unset() {
 
-		if (m_ico_soundpic )
-		{
+		if (m_ico_soundpic) {
 			evas_object_clip_unset(m_ico_soundpic);
 		}
 
-		if (m_ico_play )
-		{
+		if (m_ico_play) {
 			evas_object_clip_unset(m_ico_play);
 		}
 
-		if (m_ico_burstplay )
-		{
+		if (m_ico_burstplay) {
 			evas_object_clip_unset(m_ico_burstplay);
 		}
 
-		if (m_ico_burstspeed )
-		{
+		if (m_ico_burstspeed) {
 			evas_object_clip_unset(m_ico_burstspeed);
 		}
 
@@ -415,37 +383,32 @@ protected:
 
 		MSG_LOW("Draw XYWH(%d,%d,%d,%d) Visible=%d", m_rect.Left(), m_rect.Top(), m_rect.Width(), m_rect.Height(), bVisible);
 
-		if (m_deco == IVUG_DECO_NONE)
-		{
+		if (m_deco == IVUG_DECO_NONE) {
 			MSG_LOW("No need to draw. Deco is NONE");
 			return ;
 		}
 
-		if (m_rect.Width() == 0 || m_rect.Height() == 0 )
-		{
+		if (m_rect.Width() == 0 || m_rect.Height() == 0) {
 			MSG_WARN("No need to draw");
 			return ;
 		}
 
-		if (bVisible == false )
-		{
+		if (bVisible == false) {
 			MSG_WARN("Decolayer visible is false");
 			return;
 		}
 
 // smart_member_add()�� _del() �� ȭ�� blinking �� ����Ű�� �� ��.
-		if (m_deco == IVUG_DECO_SOUNDPIC )
-		{
-			if (m_ico_soundpic == NULL)
-			{
+		if (m_deco == IVUG_DECO_SOUNDPIC) {
+			if (m_ico_soundpic == NULL) {
 //				m_ico_soundpic = load_icon(ICON_EDJ_PATH, "icon.sound_scene");
 
-				iv::CButton *pBtn = iv::CButton::ObjectFactory( GetObject());
+				iv::CButton *pBtn = iv::CButton::ObjectFactory(GetObject());
 
 				pBtn->SetImage(
-					load_icon(ICON_EDJ_PATH, "icon.sound_scene"),
-					load_icon(ICON_EDJ_PATH, "icon.sound_scene.press"),
-					load_icon(ICON_EDJ_PATH, NULL)
+				    load_icon(ICON_EDJ_PATH, "icon.sound_scene"),
+				    load_icon(ICON_EDJ_PATH, "icon.sound_scene.press"),
+				    load_icon(ICON_EDJ_PATH, NULL)
 				);
 
 				m_ico_soundpic = pBtn->GetObject();
@@ -463,24 +426,21 @@ protected:
 			evas_object_resize(m_ico_soundpic, icon_w, icon_h);
 			evas_object_move(m_ico_soundpic, x, y);
 
-			if (bVisible == true )
-			{
+			if (bVisible == true) {
 				evas_object_show(m_ico_soundpic);
 			}
 		}
 
-		if (m_deco == IVUG_DECO_BURST)
-		{
-			if (m_ico_burstplay == NULL)
-			{
+		if (m_deco == IVUG_DECO_BURST) {
+			if (m_ico_burstplay == NULL) {
 //				m_ico_burstplay = load_icon(ICON_EDJ_PATH, "icon.burst");
 
-				iv::CButton *pBtn = iv::CButton::ObjectFactory( GetObject());
+				iv::CButton *pBtn = iv::CButton::ObjectFactory(GetObject());
 
 				pBtn->SetImage(
-					load_icon(ICON_EDJ_PATH, "icon.burst"),
-					load_icon(ICON_EDJ_PATH, "icon.burst.press"),
-					load_icon(ICON_EDJ_PATH, "icon.burst.dim")
+				    load_icon(ICON_EDJ_PATH, "icon.burst"),
+				    load_icon(ICON_EDJ_PATH, "icon.burst.press"),
+				    load_icon(ICON_EDJ_PATH, "icon.burst.dim")
 				);
 
 				m_ico_burstplay = pBtn->GetObject();
@@ -489,16 +449,15 @@ protected:
 				evas_object_smart_member_add(m_ico_burstplay, GetObject());
 			}
 
-			if (m_ico_burstspeed == NULL)
-			{
+			if (m_ico_burstspeed == NULL) {
 //				m_ico_burstspeed = load_icon(ICON_EDJ_PATH, "icon.burstspeed.1.5th");
 
-				iv::CButton *pBtn = iv::CButton::ObjectFactory( GetObject());
+				iv::CButton *pBtn = iv::CButton::ObjectFactory(GetObject());
 
 				pBtn->SetImage(
-					load_icon(ICON_EDJ_PATH, szPlaySpeedIcon[((int)m_speed -1) * 2] ),
-					load_icon(ICON_EDJ_PATH, szPlaySpeedIcon[((int)m_speed -1) * 2 + 1]),
-					NULL
+				    load_icon(ICON_EDJ_PATH, szPlaySpeedIcon[((int)m_speed - 1) * 2]),
+				    load_icon(ICON_EDJ_PATH, szPlaySpeedIcon[((int)m_speed - 1) * 2 + 1]),
+				    NULL
 				);
 
 				m_ico_burstspeed = pBtn->GetObject();
@@ -509,7 +468,7 @@ protected:
 
 			int x, y;
 
-			x = std::min ( (std::max(m_rect.Left(), 0) + IMG_MARGIN), m_rect.Right() - (IMG_MARGIN + icon_w + IMG_MARGIN + icon_w + IMG_MARGIN) );
+			x = std::min((std::max(m_rect.Left(), 0) + IMG_MARGIN), m_rect.Right() - (IMG_MARGIN + icon_w + IMG_MARGIN + icon_w + IMG_MARGIN));
 			y = std::max(m_rect.Top(), TOP_OFFSET) + IMG_MARGIN;
 
 			MSG_MED("Draw Burst Play XY(%d,%d)", x, y);
@@ -520,8 +479,7 @@ protected:
 			evas_object_resize(m_ico_burstspeed, icon_w, icon_h);
 			evas_object_move(m_ico_burstspeed, x + icon_w + IMG_MARGIN, y);
 
-			if (bVisible == true )
-			{
+			if (bVisible == true) {
 				evas_object_show(m_ico_burstplay);
 				evas_object_show(m_ico_burstspeed);
 			}
@@ -531,42 +489,36 @@ protected:
 	virtual void remove() {
 		MSG_HIGH("Remove Decolayer(0x%08x)", this);
 
-		if (m_timer )
-		{
+		if (m_timer) {
 			ecore_timer_del(m_timer);
 			m_timer = NULL;
 		}
 
-		if (m_ico_soundpic )
-		{
+		if (m_ico_soundpic) {
 			evas_object_smart_member_del(m_ico_soundpic);
 			evas_object_del(m_ico_soundpic);
 			m_ico_soundpic = NULL;
 		}
 
-		if (m_ico_play )
-		{
+		if (m_ico_play) {
 			evas_object_smart_member_del(m_ico_play);
 			evas_object_del(m_ico_play);
 			m_ico_play = NULL;
 		}
 
-		if (m_ico_burstplay )
-		{
+		if (m_ico_burstplay) {
 			evas_object_smart_member_del(m_ico_burstplay);
 			evas_object_del(m_ico_burstplay);
 			m_ico_burstplay = NULL;
 		}
 
-		if (m_ico_burstspeed )
-		{
+		if (m_ico_burstspeed) {
 			evas_object_smart_member_del(m_ico_burstspeed);
 			evas_object_del(m_ico_burstspeed);
 			m_ico_burstspeed = NULL;
 		}
 
-		if (m_event )
-		{
+		if (m_event) {
 			evas_object_del(m_event);
 			m_event = NULL;
 		}
@@ -574,31 +526,26 @@ protected:
 		delete this;
 	};
 
-	virtual void show()
-	{
+	virtual void show() {
 		MSG_MED("Show!");
 
 		bVisible = true;
 	}
 
-	virtual void hide()
-	{
+	virtual void hide() {
 		MSG_MED("Hide!");
 
 		bVisible = false;
 
-		if (m_ico_soundpic )
-		{
+		if (m_ico_soundpic) {
 			evas_object_hide(m_ico_soundpic);
 		}
 
-		if (m_ico_burstplay)
-		{
+		if (m_ico_burstplay) {
 			evas_object_hide(m_ico_burstplay);
 		}
 
-		if (m_ico_burstspeed )
-		{
+		if (m_ico_burstspeed) {
 			evas_object_hide(m_ico_burstspeed);
 		}
 
@@ -610,8 +557,7 @@ protected:
 
 		MSG_LOW("Moved XY(%d,%d)", x, y);
 
-		if (m_event )
-		{
+		if (m_event) {
 			evas_object_move(m_event, x, y);
 		}
 		evas_object_smart_changed(GetObject());
@@ -623,8 +569,7 @@ protected:
 
 		MSG_LOW("Resized WH(%d,%d)", w, h);
 
-		if (m_event )
-		{
+		if (m_event) {
 			evas_object_resize(m_event, w, h);
 		}
 
@@ -635,32 +580,25 @@ protected:
 private:
 
 	void OnTimer() {
-		if (m_ico_soundpic == NULL)
-		{
+		if (m_ico_soundpic == NULL) {
 			return;
 		}
 
-		if (bVisible == true )
-		{
-			if (evas_object_visible_get(m_ico_soundpic) == false )
-			{
+		if (bVisible == true) {
+			if (evas_object_visible_get(m_ico_soundpic) == false) {
 				evas_object_show(m_ico_soundpic);
-			}
-			else
-			{
+			} else {
 				evas_object_hide(m_ico_soundpic);
 			}
 		}
 	}
 
-	Evas_Object *load_icon(const char *edj_file, const char *part)
-	{
+	Evas_Object *load_icon(const char *edj_file, const char *part) {
 		Evas_Object *icon;
 
 		icon = EFL::create_icon(GetObject(), edj_file, part);
 
-		if (icon == NULL)
-		{
+		if (icon == NULL) {
 			MSG_ERROR("Cannot load icon : %s,%s", edj_file, part);
 			return NULL;
 		}

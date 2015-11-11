@@ -93,13 +93,10 @@ void ivug_ss_get_screen_size(int *width, int *height)
 	elm_win_screen_size_get((Evas_Object *)ug_get_window(), &screen_x, &screen_y, &screen_w, &screen_h);
 	MSG_HIGH("screen_Size : Win(%d,%d,%d,%d)", screen_x, screen_y, screen_w, screen_h);
 
-	if(rotation == 0 || rotation == 180)
-	{
+	if (rotation == 0 || rotation == 180) {
 		*width = screen_w;
 		*height = screen_h;
-	}
-	else if(rotation == 90 || rotation == 270)
-	{
+	} else if (rotation == 90 || rotation == 270) {
 		*width = screen_h;
 		*height = screen_w;
 	}
@@ -111,9 +108,9 @@ int _ivug_ss_get_sort(int *val)
 }
 
 Media_Item *ivug_ss_get_next_item(Media_List *mList,
-			Media_Item *header,
-			Media_Item *current,
-			slide_show_mode mode)
+                                  Media_Item *header,
+                                  Media_Item *current,
+                                  slide_show_mode mode)
 {
 	Media_Item *item = NULL;
 	int sort_value = 0;
@@ -121,27 +118,19 @@ Media_Item *ivug_ss_get_next_item(Media_List *mList,
 	MSG_HIGH("Get Next Item : Header=0x%08x Current=0x%08x", header, current);
 
 	MSG_HIGH("Get Next : Header=0x%08x Current=0x%08x",
-			 header, current);
-	switch(mode)
-	{
+	         header, current);
+	switch (mode) {
 	case SLIDE_SHOW_MODE_REPEAT:
 		_ivug_ss_get_sort(&sort_value);
-		if(sort_value == 1)
-		{
+		if (sort_value == 1) {
 			item = ivug_medialist_get_prev(mList, current);
-		}
-		else
-		{
+		} else {
 			item = ivug_medialist_get_next(mList, current);
 		}
-		if (item == NULL)
-		{
-			if(sort_value == 1)
-			{
+		if (item == NULL) {
+			if (sort_value == 1) {
 				item = ivug_medialist_get_last(mList);
-			}
-			else
-			{
+			} else {
 				item = ivug_medialist_get_first(mList);
 			}
 		}
@@ -149,28 +138,23 @@ Media_Item *ivug_ss_get_next_item(Media_List *mList,
 
 	case SLIDE_SHOW_MODE_NORMAL:
 		_ivug_ss_get_sort(&sort_value);
-		if(sort_value == 1)
-		{
+		if (sort_value == 1) {
 			item = ivug_medialist_get_prev(mList, current);
-		}
-		else
-		{
+		} else {
 			item = ivug_medialist_get_next(mList, current);
 		}
 		break;
 
 	case SLIDE_SHOW_MODE_SHUFFLE_REPEAT:
 		item = ivug_medialist_get_shuffle_item(mList, current);
-		if (item == NULL)
-		{
+		if (item == NULL) {
 			MSG_ERROR("Never touch here");
 		}
 		break;
 
 	case SLIDE_SHOW_MODE_SHUFFLE:
 		item = ivug_medialist_get_shuffle_item(mList, current);
-		if (item == header )
-		{
+		if (item == header) {
 			MSG_ERROR("Reach end");
 			return NULL;
 		}
@@ -248,7 +232,7 @@ static bool _ivug_ss_set_content(Slide_Layout *pSlide, Media_Item *item)
 	if (mdata->slide_type == SLIDE_TYPE_VIDEO) {
 		ret = elm_photocam_file_set(pSlide->photocam, mdata->thumbnail_path);
 
-		if(EVAS_LOAD_ERROR_NONE != ret) {
+		if (EVAS_LOAD_ERROR_NONE != ret) {
 			MSG_HIGH("elm_photocam_file_set failed");
 			return false;
 		}
@@ -262,19 +246,19 @@ static bool _ivug_ss_set_content(Slide_Layout *pSlide, Media_Item *item)
 		}
 
 		if (elm_image_file_set(pSlide->thumbnail, mdata->thumbnail_path, NULL)
-				== EINA_FALSE) {
+		        == EINA_FALSE) {
 			MSG_ERROR("Cannot load thumbnail : %s", mdata->thumbnail_path);
 		} else {
 			edje_object_signal_emit(_EDJ(pSlide->layout),
-									"elm,state,show_thumbnail", "slideshow");
+			                        "elm,state,show_thumbnail", "slideshow");
 		}
 	}
 	MSG_SEC("Load : %s", mdata->filepath);
 	elm_photocam_zoom_mode_set(pSlide->photocam,
-							   ELM_PHOTOCAM_ZOOM_MODE_AUTO_FIT);
+	                           ELM_PHOTOCAM_ZOOM_MODE_AUTO_FIT);
 	elm_photocam_paused_set(pSlide->photocam, true);
 	evas_object_size_hint_weight_set(pSlide->photocam, EVAS_HINT_EXPAND,
-									 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 
 	return true;
 }
@@ -306,8 +290,8 @@ static void _ivug_ss_update_pos(SlideShow *pSlideShow, Evas_Coord x, Evas_Coord 
 
 	evas_object_move(sLyCurrent->layout, x, y);
 	evas_object_move(sLyNext->layout,
-				x + pSlideShow->screen_w + IVUG_IMAGE_BETWEEN_MARGIN ,
-				y);
+	                 x + pSlideShow->screen_w + IVUG_IMAGE_BETWEEN_MARGIN ,
+	                 y);
 }
 static bool _ivug_ss_load_next_image(SlideShow *pSlideShow)
 {
@@ -321,18 +305,18 @@ static bool _ivug_ss_load_next_image(SlideShow *pSlideShow)
 	Media_Item *current = sLyCurrent->mitem;
 	do {
 		next = ivug_ss_get_next_item(pSlideShow->media_list,
-				pSlideShow->ss_Header,
-				current,
-				pSlideShow->ss_mode);
+		                             pSlideShow->ss_Header,
+		                             current,
+		                             pSlideShow->ss_mode);
 
-		if(next == NULL) {
+		if (next == NULL) {
 			sLy->mitem = NULL;
 			return false;
 		}
 		current = next;
-	}while(!_ivug_ss_set_content(sLy, next));
+	} while (!_ivug_ss_set_content(sLy, next));
 
-	if(next) {
+	if (next) {
 		evas_object_show(sLy->layout);
 	}
 
@@ -345,8 +329,7 @@ void _ivug_ss_effect_finished(void *data)
 	SlideShow *pSlideShow = (SlideShow *) data;
 	MSG_HIGH("slideshow Effect ended");
 
-	if(pSlideShow->effect_engine)
-	{
+	if (pSlideShow->effect_engine) {
 		MSG_HIGH("ivug_effect_finalize");
 		ivug_effect_finalize(pSlideShow->effect_engine);
 		pSlideShow->effect_engine = NULL;
@@ -362,11 +345,11 @@ void _ivug_ss_effect_finished(void *data)
 	Media_Item *next = NULL;
 
 	next = ivug_ss_get_next_item(pSlideShow->media_list,
-			pSlideShow->ss_Header,
-			sLyCurrent->mitem,
-			pSlideShow->ss_mode);
+	                             pSlideShow->ss_Header,
+	                             sLyCurrent->mitem,
+	                             pSlideShow->ss_mode);
 
-	if(next == NULL) {
+	if (next == NULL) {
 		sLyNext->mitem = NULL;
 		MSG_ERROR("Cannot find next item");
 		return;
@@ -380,8 +363,7 @@ void _ivug_ss_effect_finished(void *data)
 
 	MSG_HIGH("pSlideShow->bSS_StopFlag = %d", pSlideShow->bSS_StopFlag);
 
-	if(pSlideShow->bSS_StopFlag == EINA_TRUE)
-	{
+	if (pSlideShow->bSS_StopFlag == EINA_TRUE) {
 		pSlideShow->state = SLIDE_SHOW_STOPPED;
 		pSlideShow->ss_Header = NULL;
 		evas_object_smart_callback_call(ivug_ss_object_get(pSlideShow), "slideshow,finished", (void *)SLIDE_SHOW_STOPPED);
@@ -403,8 +385,7 @@ Evas_Object *_ivug_ss_create_layout(Evas_Object *parent, const char *edj_path, c
 
 	ivug_retv_if(!ly, NULL);
 
-	if (elm_layout_file_set(ly , edj_path, group ) == EINA_FALSE)
-	{
+	if (elm_layout_file_set(ly , edj_path, group) == EINA_FALSE) {
 		MSG_ERROR("Cannot create layout. %s %s", edj_path, group);
 		evas_object_del(ly);
 		return NULL;
@@ -425,8 +406,7 @@ static Eina_Bool _ivug_ss_on_slide_interval(void *data)
 
 	MSG_HIGH("On Slide Interval");
 	/* stopped by other operation */
-	if (pSlideShow->state == SLIDE_SHOW_STOPPED)
-	{
+	if (pSlideShow->state == SLIDE_SHOW_STOPPED) {
 		pSlideShow->ss_timer = NULL;
 		MSG_ERROR("Slide show already stopped");
 		return ECORE_CALLBACK_CANCEL;
@@ -439,8 +419,7 @@ static Eina_Bool _ivug_ss_on_slide_interval(void *data)
 	_ivug_ss_video_icon(pSlideShow->sLayout[pSlideShow->sCurrent].layout, mitem);
 
 	/* Next item is NULL */
-	if(sLyNext->mitem == NULL)
-	{
+	if (sLyNext->mitem == NULL) {
 		MSG_HIGH("Next item is NULL");
 		pSlideShow->ss_timer = NULL;
 		pSlideShow->ss_Header = NULL;
@@ -464,8 +443,7 @@ static Eina_Bool _ivug_ss_on_slide_interval(void *data)
 	int rotation = elm_win_rotation_get((Evas_Object *)ug_get_window());
 	ivug_ss_get_screen_size(&pSlideShow->screen_w, &pSlideShow->screen_h);
 
-	if(ivug_effect_set_size(pSlideShow->effect_engine, pSlideShow->screen_w, pSlideShow->screen_h, rotation) == false)
-	{
+	if (ivug_effect_set_size(pSlideShow->effect_engine, pSlideShow->screen_w, pSlideShow->screen_h, rotation) == false) {
 		pSlideShow->ss_timer = NULL;
 		ivug_effect_finalize(pSlideShow->effect_engine);
 		return ECORE_CALLBACK_CANCEL;
@@ -485,14 +463,13 @@ static Eina_Bool _ivug_ss_on_slide_interval(void *data)
 static Effect_Type _ivug_ss_get_trans_effect(ivug_effect_type type)
 {
 	MSG_MED("type %d", type);
-	switch(type)
-	{
-		case IVUG_EFFECT_TYPE_SLIDE:
-			return EFFECT_SLIDE;
-		case IVUG_EFFECT_TYPE_DISSOLVE_FADE:
-			return EFFECT_DISSOLVE_FADE;
-		default:
-			break;
+	switch (type) {
+	case IVUG_EFFECT_TYPE_SLIDE:
+		return EFFECT_SLIDE;
+	case IVUG_EFFECT_TYPE_DISSOLVE_FADE:
+		return EFFECT_DISSOLVE_FADE;
+	default:
+		break;
 	}
 	return EFFECT_NONE;
 }
@@ -501,7 +478,7 @@ static Effect_Type _ivug_ss_get_trans_effect(ivug_effect_type type)
 
 
 void _ivug_ss_on_mouse_down(void *data, Evas *e,
-	Evas_Object *obj, void *event_info)
+                            Evas_Object *obj, void *event_info)
 {
 	SlideShow *pSlideShow = (SlideShow *) data;
 
@@ -514,7 +491,7 @@ void _ivug_ss_on_mouse_down(void *data, Evas *e,
 }
 
 void _ivug_ss_on_mouse_move(void *data, Evas *e,
-	Evas_Object *obj, void *event_info)
+                            Evas_Object *obj, void *event_info)
 {
 	MSG_LOW("_ivug_ss_on_mouse_move");
 	return;
@@ -530,7 +507,7 @@ static Eina_Bool _ivug_ss_clicked_timer_cb(void *data)
 
 	pSlideShow->click_timer = NULL;
 
-	if((pSlideShow->state == SLIDE_SHOW_RUNNING) && (pSlideShow->bPlayButton == false)) {
+	if ((pSlideShow->state == SLIDE_SHOW_RUNNING) && (pSlideShow->bPlayButton == false)) {
 		ivug_ss_pause(pSlideShow);
 		return ECORE_CALLBACK_CANCEL;
 	}
@@ -540,7 +517,7 @@ static Eina_Bool _ivug_ss_clicked_timer_cb(void *data)
 }
 
 void _ivug_ss_on_mouse_up(void *data, Evas *e,
-	Evas_Object *obj, void *event_info)
+                          Evas_Object *obj, void *event_info)
 {
 	SlideShow *pSlideShow = (SlideShow *)data;
 	if (NULL == pSlideShow) {
@@ -549,8 +526,7 @@ void _ivug_ss_on_mouse_up(void *data, Evas *e,
 	MSG_HIGH("_ivug_ss_on_mouse_up, pSlideShow->v is %d", pSlideShow->state);
 
 	if (pSlideShow->bMouse_event) {
-		if(pSlideShow->click_timer)
-		{
+		if (pSlideShow->click_timer) {
 			ecore_timer_del(pSlideShow->click_timer);
 			pSlideShow->click_timer = NULL;
 		}
@@ -580,31 +556,28 @@ _ivug_ss_photocam_loaded_cb(void *data, Evas_Object *obj, void *event_info)
 	Slide_Layout* sLy = static_cast<Slide_Layout*>(data);
 	SlideShow *pSlideShow = (SlideShow *)sLy->pSlideshow;
 
-	if (sLy->mitem == NULL)
-	{
+	if (sLy->mitem == NULL) {
 		MSG_ERROR("Debug Me! Data item is NULL.");
 		return;
 	}
 
 	Media_Data* mdata = ivug_medialist_get_data(sLy->mitem);
-	if(mdata == NULL)
-	{
+	if (mdata == NULL) {
 		MSG_ERROR("ivug_medialist_get_data failed.");
 		return;
 	}
 
 	Evas_Load_Error error = static_cast<Evas_Load_Error>(reinterpret_cast<int>(event_info));
-	if (error != EVAS_LOAD_ERROR_NONE )
-	{
+	if (error != EVAS_LOAD_ERROR_NONE) {
 		MSG_SEC("Image loading failed. Error=%d File=%s",
-				error, mdata->filepath);
+		        error, mdata->filepath);
 		_ivug_ss_load_next_image((SlideShow *)sLy->pSlideshow);
 		return;
 	}
 	edje_object_signal_emit(_EDJ(pSlideShow->sLayout[pSlideShow->sCurrent].layout), "elm,state,hide_thumbnail", "slideshow");
 
 	MSG_SEC("Photocam Pre-loaded. File=%s",
-			ivug_get_filename(mdata->filepath));
+	        ivug_get_filename(mdata->filepath));
 
 	return;
 }
@@ -614,7 +587,7 @@ static bool _ivug_ss_create_image_layout(Evas_Object *parent, Slide_Layout *sLay
 	/* Create Layout for the current item */
 	sLayout->layout = _ivug_ss_create_layout(parent, IVUG_SS_LY_EDJ_PATH, "slayout");
 
-	if(sLayout->layout == NULL) {
+	if (sLayout->layout == NULL) {
 		MSG_ERROR("Cannot create current layout");
 		return false;
 	}
@@ -630,9 +603,9 @@ static bool _ivug_ss_create_image_layout(Evas_Object *parent, Slide_Layout *sLay
 	elm_photocam_paused_set(sLayout->photocam, EINA_TRUE);
 
 	evas_object_smart_callback_add(sLayout->photocam,
-					"loaded",
-					_ivug_ss_photocam_loaded_cb,
-					sLayout);
+	                               "loaded",
+	                               _ivug_ss_photocam_loaded_cb,
+	                               sLayout);
 
 	evas_object_show(sLayout->photocam);
 	evas_object_show(sLayout->layout);
@@ -645,7 +618,7 @@ SlideShow *ivug_ss_create(Evas_Object *parent)
 	SlideShow *pSlideShow = NULL;
 	MSG_HIGH("ivug_ss_create");
 
-	pSlideShow = (SlideShow*)calloc(1,sizeof(SlideShow));
+	pSlideShow = (SlideShow*)calloc(1, sizeof(SlideShow));
 	IV_ASSERT(pSlideShow != NULL);
 
 	pSlideShow->state = SLIDE_SHOW_STOPPED;
@@ -653,9 +626,9 @@ SlideShow *ivug_ss_create(Evas_Object *parent)
 	ivug_effect_type ivug_effect = IVUG_EFFECT_TYPE_SLIDE;
 
 	ivug_config_get_slideshow_setting(&(pSlideShow->ss_mode),
-			&(pSlideShow->ss_interval_time), &ivug_effect);
+	                                  &(pSlideShow->ss_interval_time), &ivug_effect);
 
-	if(ivug_effect == IVUG_EFFECT_TYPE_UNKNOWN) {
+	if (ivug_effect == IVUG_EFFECT_TYPE_UNKNOWN) {
 		free(pSlideShow);
 		pSlideShow = NULL;
 		return NULL;
@@ -669,8 +642,7 @@ SlideShow *ivug_ss_create(Evas_Object *parent)
 	evas_object_name_set(pSlideShow->obj, "slideshow");
 
 	/* Create Layout for the current item */
-	if (_ivug_ss_create_image_layout(pSlideShow->obj, &pSlideShow->sLayout[0]) == false)
-	{
+	if (_ivug_ss_create_image_layout(pSlideShow->obj, &pSlideShow->sLayout[0]) == false) {
 		MSG_ERROR("Cannot create current layout");
 		free(pSlideShow);
 		return NULL;
@@ -679,8 +651,7 @@ SlideShow *ivug_ss_create(Evas_Object *parent)
 	evas_object_name_set(pSlideShow->sLayout[0].layout, "Layout 0");
 
 	/* Create Layout for the next item */
-	if (_ivug_ss_create_image_layout(pSlideShow->obj, &pSlideShow->sLayout[1]) == false)
-	{
+	if (_ivug_ss_create_image_layout(pSlideShow->obj, &pSlideShow->sLayout[1]) == false) {
 		MSG_ERROR("Cannot create current layout");
 		elm_object_part_content_unset(pSlideShow->sLayout[0].layout, "content");
 		evas_object_del(pSlideShow->sLayout[0].photocam);
@@ -695,7 +666,7 @@ SlideShow *ivug_ss_create(Evas_Object *parent)
 	/* Event rect */
 	pSlideShow->event = evas_object_rectangle_add(evas_object_evas_get(parent));
 	evas_object_name_set(pSlideShow->event, "ss_event");
-	evas_object_color_set(pSlideShow->event, 0,0,0,0);
+	evas_object_color_set(pSlideShow->event, 0, 0, 0, 0);
 
 	evas_object_show(pSlideShow->event);
 	evas_object_repeat_events_set(pSlideShow->event, EINA_TRUE);
@@ -753,7 +724,7 @@ bool ivug_ss_start(SlideShow *pSlideShow , Media_Item *current, Media_List *list
 
 	MSG_ASSERT(pSlideShow->obj != NULL);
 	pSlideShow->bMouse_event = true;
-	evas_object_move(pSlideShow->obj, 0,0);
+	evas_object_move(pSlideShow->obj, 0, 0);
 	evas_object_resize(pSlideShow->obj, pSlideShow->screen_w, pSlideShow->screen_h);
 
 	_ivug_ss_update_pos(pSlideShow, 0, 0);
@@ -769,9 +740,9 @@ bool ivug_ss_start(SlideShow *pSlideShow , Media_Item *current, Media_List *list
 	Media_Item *next = NULL;
 
 	next = ivug_ss_get_next_item(pSlideShow->media_list,
-			pSlideShow->ss_Header,
-			sLyCurrent->mitem,
-			pSlideShow->ss_mode);
+	                             pSlideShow->ss_Header,
+	                             sLyCurrent->mitem,
+	                             pSlideShow->ss_mode);
 
 	if (next == NULL) {
 		/* if last image is tapped, then after some time, back to main view directly */
@@ -870,8 +841,7 @@ bool ivug_ss_resume(SlideShow *pSlideShow)
 		pSlideShow->pauseLayout2 = NULL;
 	}
 
-	if(pSlideShow->ss_timer)
-	{
+	if (pSlideShow->ss_timer) {
 		ecore_timer_thaw(pSlideShow->ss_timer);
 	}
 
@@ -887,7 +857,7 @@ static void _play_icon_cb(void *data, Evas_Object *obj, const char *emission, co
 	SlideShow *pSlideShow = (SlideShow *)data;
 	pSlideShow->bPlayButton = true;
 
-	if(pSlideShow->state == SLIDE_SHOW_PAUSE) {
+	if (pSlideShow->state == SLIDE_SHOW_PAUSE) {
 		elm_object_signal_emit(pSlideShow->pauseLayout, "elm,state,hide", "");
 		ivug_ss_resume(pSlideShow);
 
@@ -911,7 +881,7 @@ _gl_text_get_effect_type(void *data, Evas_Object *obj, const char *part)
 	int index = (int) data;
 	char buf[255] = {0, };
 
-	switch(index) {
+	switch (index) {
 	case 0:
 		snprintf(buf, sizeof(buf), "%s", GET_STR(IDS_SLIDESHOW_FLOW_EFFECT));
 		break;
@@ -932,7 +902,7 @@ _gl_text_get_slide_interval(void *data, Evas_Object *obj, const char *part)
 	char buf[50] = {0, };
 	char *str = NULL;
 
-	switch(index) {
+	switch (index) {
 	case 0:
 		str = GET_STR(IDS_SLIDE_SECOND);
 		snprintf(buf, sizeof(buf), "%s", str);
@@ -1021,7 +991,7 @@ gl_radio_slide_interval_content_get_cb(void *data, Evas_Object *obj, const char 
 		}
 
 		elm_radio_value_set(radio, radio_index);
-		evas_object_size_hint_weight_set(radio, EVAS_HINT_EXPAND,EVAS_HINT_EXPAND);
+		evas_object_size_hint_weight_set(radio, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 		evas_object_size_hint_align_set(radio, EVAS_HINT_FILL, EVAS_HINT_FILL);
 		evas_object_propagate_events_set(radio, EINA_TRUE);
 		return radio;
@@ -1042,12 +1012,12 @@ gl_radio_effects_content_get_cb(void *data, Evas_Object *obj, const char *part)
 
 		int radio_index = 0;
 		char *effect = ivug_config_get_slideshow_effect_type();
-		if (!strcmp(effect,"DissolveFade")) {
+		if (!strcmp(effect, "DissolveFade")) {
 			radio_index = 1;
 		}
 
 		elm_radio_value_set(radio, radio_index);
-		evas_object_size_hint_weight_set(radio, EVAS_HINT_EXPAND,EVAS_HINT_EXPAND);
+		evas_object_size_hint_weight_set(radio, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 		evas_object_size_hint_align_set(radio, EVAS_HINT_FILL, EVAS_HINT_FILL);
 		evas_object_propagate_events_set(radio, EINA_TRUE);
 		return radio;
@@ -1180,7 +1150,7 @@ static void ivug_show_pause_state_layout(SlideShow *pSlideShow)
 	elm_object_signal_callback_add(pSlideShow->pauseLayout, "mouse,clicked,1", "slide_interval_setting.icon.click", _setting_icon_cb, (void *)pSlideShow);
 	elm_object_signal_callback_add(pSlideShow->pauseLayout, "mouse,clicked,1", "effect.icon.click", _effect_icon_cb, (void *)pSlideShow);
 
-	elm_object_part_content_set(pSlideShow->sLayout[0].layout, "elm.swallow.overlay",pSlideShow->pauseLayout );
+	elm_object_part_content_set(pSlideShow->sLayout[0].layout, "elm.swallow.overlay", pSlideShow->pauseLayout);
 
 	evas_object_show(pSlideShow->pauseLayout);
 
@@ -1204,7 +1174,7 @@ static void ivug_show_pause_state_layout(SlideShow *pSlideShow)
 	elm_object_signal_callback_add(pSlideShow->pauseLayout2, "mouse,clicked,1", "slide_interval_setting.icon.click", _setting_icon_cb, (void *)pSlideShow);
 	elm_object_signal_callback_add(pSlideShow->pauseLayout2, "mouse,clicked,1", "effect.icon.click", _effect_icon_cb, (void *)pSlideShow);
 
-	elm_object_part_content_set(pSlideShow->sLayout[1].layout, "elm.swallow.overlay",pSlideShow->pauseLayout2 );
+	elm_object_part_content_set(pSlideShow->sLayout[1].layout, "elm.swallow.overlay", pSlideShow->pauseLayout2);
 
 	evas_object_show(pSlideShow->pauseLayout2);
 
@@ -1217,8 +1187,7 @@ bool ivug_ss_pause(SlideShow *pSlideShow)
 
 	MSG_ASSERT(pSlideShow != NULL);
 
-	if(pSlideShow->ss_timer)
-	{
+	if (pSlideShow->ss_timer) {
 		ecore_timer_freeze(pSlideShow->ss_timer);
 	}
 
@@ -1294,8 +1263,8 @@ void ivug_ss_delete(SlideShow *pSlideShow)
 
 		if (pSlideShow->sLayout[(pSlideShow->sCurrent) % 2].layout) {
 			pSlideShow->sLayout[(pSlideShow->sCurrent) % 2].photocam =
-				elm_object_part_content_unset(pSlideShow->sLayout[(pSlideShow->sCurrent) % 2].layout,
-				"content");
+			    elm_object_part_content_unset(pSlideShow->sLayout[(pSlideShow->sCurrent) % 2].layout,
+			                                  "content");
 		}
 
 		if (pSlideShow->sLayout[(pSlideShow->sCurrent) % 2].photocam) {
@@ -1305,8 +1274,8 @@ void ivug_ss_delete(SlideShow *pSlideShow)
 
 		if (pSlideShow->sLayout[(pSlideShow->sCurrent + 1) % 2].layout) {
 			pSlideShow->sLayout[(pSlideShow->sCurrent + 1) % 2].photocam =
-				elm_object_part_content_unset(pSlideShow->sLayout[(pSlideShow->sCurrent + 1) % 2].layout,
-				"content");
+			    elm_object_part_content_unset(pSlideShow->sLayout[(pSlideShow->sCurrent + 1) % 2].layout,
+			                                  "content");
 		}
 
 		if (pSlideShow->sLayout[i].layout) {
@@ -1335,32 +1304,29 @@ void ivug_ss_delete(SlideShow *pSlideShow)
 void ivug_ss_resize(SlideShow *pSlideShow)
 {
 	IVUG_FUNC_ENTER();
-/*This interface only used for 2d slideshow,
-  *So disable it when current is dali-slideshow.
-  *resize slide show layout and move them to right pos after rotation
-  */
+	/*This interface only used for 2d slideshow,
+	  *So disable it when current is dali-slideshow.
+	  *resize slide show layout and move them to right pos after rotation
+	  */
 	if (!pSlideShow) {
 		return;
 	}
 
- if((pSlideShow->obj) && (pSlideShow->event)) {
+	if ((pSlideShow->obj) && (pSlideShow->event)) {
 		ivug_ss_get_screen_size(&pSlideShow->screen_w, &pSlideShow->screen_h);
 		evas_object_resize(pSlideShow->obj, pSlideShow->screen_w, pSlideShow->screen_h);
 		Evas_Coord ox, oy, ow, oh;
 		evas_object_geometry_get(pSlideShow->obj, &ox, &oy, &ow, &oh);
 
 		//MSG_HIGH("Moved (%d,%d,%d,%d)", ox, oy, ow, oh);
-		if(pSlideShow->event)
-		{
+		if (pSlideShow->event) {
 			evas_object_move(pSlideShow->event, ox, oy);
 		}
 
-		if(pSlideShow->sLayout[pSlideShow->sCurrent].layout)
-		{
+		if (pSlideShow->sLayout[pSlideShow->sCurrent].layout) {
 			evas_object_move(pSlideShow->sLayout[pSlideShow->sCurrent].layout, ox, oy);
 		}
-		if(pSlideShow->sLayout[(pSlideShow->sCurrent + 1) % 2].layout)
-		{
+		if (pSlideShow->sLayout[(pSlideShow->sCurrent + 1) % 2].layout) {
 			evas_object_move(pSlideShow->sLayout[(pSlideShow->sCurrent + 1) % 2].layout, ox + pSlideShow->screen_w + IVUG_IMAGE_BETWEEN_MARGIN, oy);
 		}
 		//MSG_HIGH("_ivug_ss_resize_obj, Moved (%d,%d,%d,%d)", ox, oy, ow, oh);

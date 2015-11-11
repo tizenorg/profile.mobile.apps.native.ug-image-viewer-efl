@@ -56,14 +56,12 @@ _send_result(ui_gadget_h ug, const char *key1, const char *val1, const char *key
 		return;
 	}
 
-	if (key1 && val1)
-	{
+	if (key1 && val1) {
 		MSG_SEC("Bundle 1 : [%s = %s]", key1, val1);
 		app_control_add_extra_data(service, key1, val1);
 	}
 
-	if(key2 && val2)
-	{
+	if (key2 && val2) {
 		MSG_SEC("Bundle 2 : [%s = %s]", key2, val2);
 		app_control_add_extra_data(service, key2, val2);
 	}
@@ -74,26 +72,23 @@ _send_result(ui_gadget_h ug, const char *key1, const char *val1, const char *key
 }
 
 static bool _destory_slideshow_and_ug(Ivug_SlideShowView *pSSView,
-	int state,
-	bool bMmc_out)
+                                      int state,
+                                      bool bMmc_out)
 {
 	IV_ASSERT(pSSView != NULL);
 	evas_object_smart_callback_del_full(ivug_ss_object_get(pSSView->ssHandle),
-		"slideshow,finished", _on_slideshow_finished, pSSView);
+	                                    "slideshow,finished", _on_slideshow_finished, pSSView);
 
 //	ivug_allow_lcd_off();
 	/* send msg to caller */
-	if(state == SLIDE_SHOW_STOPPED)
-	{
+	if (state == SLIDE_SHOW_STOPPED) {
 		_send_result(gGetUGHandle(), "EXIT", "NORMAL", NULL, NULL);
 	}
 
 	/*from gallery ablum*/
 	// when standalone, slideshow window have to be capture, so don't destroy here
-	if(pSSView->bStandAlone == false)
-	{
-		if (pSSView->ssHandle )
-		{
+	if (pSSView->bStandAlone == false) {
+		if (pSSView->ssHandle) {
 			MSG_HIGH("image viewer end cause slide show ended");
 			ivug_ss_delete(pSSView->ssHandle);
 		}
