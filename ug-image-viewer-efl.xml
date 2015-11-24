@@ -55,7 +55,7 @@
 	<author email="jcastle.ahn@samsung.com" href="www.samsung.com">Jisung Ahn</author>
 	<author email="hw4444.kim@samsung.com" href="www.samsung.com">Hyunwoo Kim</author>
 	<description>Image viewer Application</description>
-	<ui-application appid="image-viewer-efl" exec="/usr/ug/bin/image-viewer-efl" nodisplay="true" multiple="true" type="capp" taskmanage="false">
+	<ui-application appid="image-viewer-efl" exec="/usr/ug/bin/image-viewer-efl" hw-acceleration="use-GL" nodisplay="true" multiple="true" type="capp" taskmanage="false" process-pool="true"  launch_mode="caller">
 		<icon>ug-image-viewer-efl.png</icon>
 		<label>Image viewer</label>
 		<label xml:lang="ar-ae">عرض الصور</label>
@@ -109,17 +109,24 @@
 		<label xml:lang="zh-hk">圖像檢視器</label>
 		<label xml:lang="zh-sg">图片浏览器</label>
 		<label xml:lang="zh-tw">影像檢視器</label>
-		<application-service>
+		<app-control>
 			<operation name="http://tizen.org/appcontrol/operation/view"/>
 			<mime name="image/jpeg"/>
 			<mime name="image/png"/>
 			<mime name="image/bmp"/>
 			<mime name="image/gif"/>
 			<mime name="image/vnd.wap.wbmp"/>
-		</application-service>
-		<application-service>
+		</app-control>
+		<app-control>
 			<operation name="http://tizen.org/appcontrol/operation/view"/>
 			<uri name="file"/>
-		</application-service>
+		</app-control>
 	</ui-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/messaging.write</privilege>
+		<privilege>http://tizen.org/privilege/contact.read</privilege>
+		<privilege>http://tizen.org/privilege/contact.write</privilege>
+		<privilege>http://tizen.org/privilege/mediastorage</privilege>
+		<privilege>http://tizen.org/privilege/display</privilege>
+	</privileges>
 </manifest>

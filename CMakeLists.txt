@@ -130,7 +130,7 @@ TARGET_LINK_LIBRARIES(${PROJECT_NAME}
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 
 # Install manifest
-INSTALL(FILES app.xml DESTINATION /usr/share/packages RENAME image-viewer-efl.xml)
+INSTALL(FILES ug-image-viewer-efl.xml DESTINATION /usr/share/packages RENAME image-viewer-efl.xml)
 
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/res/appicon/icon.png DESTINATION
 ${CMAKE_INSTALL_PREFIX}/res/images/ug-image-viewer-efl
