@@ -6,8 +6,8 @@ SET(IVUG_PACKAGE_NAME "ug-image-viewer-efl")
 
 SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
 
-SET(CMAKE_INSTALL_PREFIX "/usr/ug")
-SET(IVUG_DATA_DIR "/opt/usr/ug/data/ug-image-viewer-efl")
+SET(CMAKE_INSTALL_PREFIX ${TZ_SYS_RO_UG})
+#SET(IVUG_DATA_DIR "/opt/usr/ug/data/ug-image-viewer-efl")
 # BUILD_TC can have TRUE or FALSE
 #SET(BUILD_TC TRUE)
 
@@ -97,6 +97,7 @@ pkg_check_modules(pkgs REQUIRED
 	efl-extension
 	capi-system-runtime-info
 	capi-system-system-settings
+	libtzplatform-config
 )
 INCLUDE_DIRECTORIES(
 	include
@@ -130,12 +131,4 @@ TARGET_LINK_LIBRARIES(${PROJECT_NAME}
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 
 # Install manifest
-INSTALL(FILES ug-image-viewer-efl.xml DESTINATION /usr/share/packages RENAME image-viewer-efl.xml)
-
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/res/appicon/icon.png DESTINATION
-${CMAKE_INSTALL_PREFIX}/res/images/ug-image-viewer-efl
-RENAME ${IVUG_PACKAGE_NAME}.png)
-
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/res/appicon/icon.png DESTINATION
-/usr/share/icons/default/small RENAME ${IVUG_PACKAGE_NAME}.png)
-
+INSTALL(FILES ug-image-viewer-efl.xml DESTINATION ${TZ_SYS_RO_PACKAGES} RENAME image-viewer-efl.xml)
