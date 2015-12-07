@@ -1,12 +1,6 @@
 %define cflags	" -Wall -Wextra -g -fPIC -O3 -Wno-unused-parameter -Wno-missing-field-initializers -fvisibility=hidden -finstrument-functions -Wl,--as-needed -fdata-sections -ffunction-sections -Wl,--gc-sections -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
 %define cxxflags	" -Wall -Wextra -g -fPIC -fpermissive -O3 -Wno-unused-parameter -Wno-missing-field-initializers -fvisibility=hidden -fvisibility-inlines-hidden -finstrument-functions -Wl,--as-needed -fdata-sections -ffunction-sections -Wl,--gc-sections -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
 
-%define _usrdir	/usr
-%define _ugdir	%{_usrdir}/ug
-%define _datadir /opt%{_ugdir}/data
-%define _sharedir /opt/usr/media/.iv
-%define _privatedatadir /opt/usr/apps/image-viewer-efl/data/
-
 Name:       ug-image-viewer-efl
 Summary:    Image Viewer UI Gadget v1.0
 Version:    2.0.73
@@ -61,6 +55,7 @@ BuildRequires: pkgconfig(efl-extension)
 BuildRequires: pkgconfig(capi-system-runtime-info)
 BuildRequires: pkgconfig(capi-system-system-settings)
 BuildRequires: pkgconfig(storage)
+BuildRequires: pkgconfig(libtzplatform-config)
 %description
 Description: Image Viewer UI Gadget v1.0
 
@@ -68,6 +63,8 @@ Description: Image Viewer UI Gadget v1.0
 %setup -q
 
 %build
+
+%define _app_license_dir          %{TZ_SYS_SHARE}/license
 
 CFLAGS+=%cflags
 CXXFLAGS+=%cxxflags
@@ -83,7 +80,9 @@ CFLAGS+=" -D_ARCH_ARM_ -mfpu=neon "
 export CXXFLAGS
 export CFLAGS
 
-cmake . -DCMAKE_INSTALL_PREFIX=%{_ugdir}/ -DCMAKE_DATA_DIR=%{_datadir} -DARCH=%{ARCH}
+cmake . -DCMAKE_INSTALL_PREFIX=%{TZ_SYS_RO_UG} \
+				-DARCH=%{ARCH} \
+				-DTZ_SYS_RO_PACKAGES=%{TZ_SYS_RO_PACKAGES}
 
 make %{?jobs:-j%jobs}
 
@@ -91,34 +90,29 @@ make %{?jobs:-j%jobs}
 %install
 rm -rf %{buildroot}
 %make_install
-mkdir -p %{buildroot}/usr/share/license
-mkdir -p %{buildroot}%{_sharedir}
-mkdir -p %{buildroot}%{_privatedatadir}
-cp LICENSE %{buildroot}/usr/share/license/ug-image-viewer-efl
+mkdir -p %{buildroot}%{_app_license_dir}
+cp LICENSE %{buildroot}%{_app_license_dir}/ug-image-viewer-efl
+mkdir -p %{buildroot}%{TZ_SYS_APP_PREINSTALL}/image-viewer-efl/data/
 #execstack -c %{buildroot}%{_ugdir}/lib/libug-image-viewer-efl.so.0.1.0
 
 %post
-chown -R 5000:5000 %{_datadir}/ug-image-viewer-efl
+#chown -R 5000:5000 /opt/usr/ug/data/ug-image-viewer-efl
 mkdir -p /usr/ug/bin/
-ln -sf /usr/bin/ug-client /usr/ug/bin/image-viewer-efl
+ln -sf /usr/bin/ug-client %{TZ_SYS_RO_UG}/bin/image-viewer-efl
 
 %files
 %manifest ug-image-viewer-efl.manifest
 %defattr(-,root,root,-)
-%dir %{_datadir}/ug-image-viewer-efl
+#%dir /opt/usr/ug/data/ug-image-viewer-efl
 
 %defattr(-,root,root,-)
-%{_ugdir}/lib/libug-image-viewer-efl.so*
-%{_ugdir}/res/edje/ug-image-viewer-efl/*
-%{_ugdir}/res/images/ug-image-viewer-efl/*
-%{_ugdir}/res/locale/*/*/ug-image-viewer-efl.mo
+%{TZ_SYS_RO_UG}/lib/libug-image-viewer-efl.so*
+%{TZ_SYS_RO_UG}/res/edje/ug-image-viewer-efl/*
+%{TZ_SYS_RO_UG}/res/images/ug-image-viewer-efl/*
+%{TZ_SYS_RO_UG}/res/locale/*/*/ug-image-viewer-efl.mo
 
-/usr/share/license/ug-image-viewer-efl
-/usr/share/packages/image-viewer-efl.xml
-/usr/share/icons/default/small/ug-image-viewer-efl.png
+%{TZ_SYS_SHARE}/license/ug-image-viewer-efl
+%{TZ_SYS_RO_PACKAGES}/image-viewer-efl.xml
 
-%attr(775,root,root) /opt/etc/dump.d/module.d/dump-image-viewer.sh
-%attr(775,app,app) %dir %{_sharedir}
-%attr(777,app,app) %dir %{_privatedatadir}
-
-%{_datadir}/ug-image-viewer-efl/*
+%attr(777,app,app) %dir %{TZ_SYS_APP_PREINSTALL}/image-viewer-efl/data/
+#/opt/usr/ug/data/ug-image-viewer-efl/*
