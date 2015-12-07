@@ -1,11 +1,4 @@
 <manifest>
-	<define>
-		<domain name="ug-image-viewer-efl" policy="shared"/>
-	</define>
-	<assign>
-	    <filesystem path="/opt/usr/ug/data/ug-image-viewer-efl/" label="ug-image-viewer-efl" type="transmutable"/>
-	    <filesystem path="/usr/share/icons/default/small/ug-image-viewer-efl.png" label="_" />
-	</assign>
 	<request>
 		<domain name="_"/>
 	</request>
