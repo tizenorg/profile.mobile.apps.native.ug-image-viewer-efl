@@ -890,7 +890,7 @@ bool ivug_listpopup_context_show(Evas_Object *obj, Evas_Object *hover, int x, in
 
 	pListPopup->popup = ctxpopup;
 
-	elm_object_style_set(ctxpopup, "more/default");	// for more
+//	elm_object_style_set(ctxpopup, "more/default");	// for more
 
 	elm_ctxpopup_hover_parent_set(ctxpopup, hover);
 

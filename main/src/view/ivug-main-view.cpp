@@ -425,6 +425,8 @@ static Eina_Bool _on_key_down(void *user_data, int type, void *event)
 		if (pMainView->ssHandle) {
 			ivug_ss_stop(pMainView->ssHandle);
 		}
+	} else if (!strcmp(key_event->keyname, "XF86Menu")) {
+		MSG_IMAGEVIEW_HIGH("Menu key");
 	}
 
 	MSG_IMAGEVIEW_LOW("Key down : %s", key_event->keyname);

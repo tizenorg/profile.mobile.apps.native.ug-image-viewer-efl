@@ -147,10 +147,6 @@ ivug_slideshow_view_destroy(Ivug_SlideShowView *pSSView)
 		evas_object_del(pSSView->layout);
 		pSSView->layout = NULL;
 	}
-	if (pSSView->keydown_handler) {
-		ecore_event_handler_del(pSSView->keydown_handler);
-		pSSView->keydown_handler = NULL;
-	}
 
 	if (pSSView->mList) {
 		MSG_MAIN_HIGH("Remove media list");
