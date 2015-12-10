@@ -36,8 +36,6 @@ typedef struct {
 // List
 	Media_List *mList;
 
-	Ecore_Event_Handler *keydown_handler;
-
 // Slide show;
 	Media_Item *ss_curItem;
 	SlideShow *ssHandle;
