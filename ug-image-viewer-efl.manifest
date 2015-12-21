@@ -1,4 +1,4 @@
-<manifest>
+<manifest xmlns="http://tizen.org/ns/packages" package="${PKGNAME}" api-version="2.4" version="${PKGVERSION}">
 	<request>
 		<domain name="_"/>
 	</request>
