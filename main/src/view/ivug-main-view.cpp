@@ -1689,7 +1689,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 
 			if (EVAS_LOAD_ERROR_NONE != e) {
 				MSG_HIGH("Loading default Thumbnail");
-				elm_photocam_file_set(pMainView->photocam, DEFAULT_THUMBNAIL);
+				elm_photocam_file_set(pMainView->photocam, DEFAULT_THUMBNAIL_PATH);
 			}
 		}
 	} else {
