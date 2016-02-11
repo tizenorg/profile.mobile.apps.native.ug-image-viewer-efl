@@ -29,6 +29,7 @@
 
 #undef LOG_CAT
 #define LOG_CAT "IV-PHOTOCAM"
+#define PHOTOCAM_PIXELY_MOVE 88
 
 /*initialize the values on finger touch to the screen*/
 void _on_slider_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
@@ -423,7 +424,7 @@ bool _main_view_object_move_(Ivug_MainView *pMainView, Evas_Object *obj, int pho
 	if (pMainView->mode == IVUG_MODE_SELECT) {
 		pixelmovy = by;
 	} else {
-		pixelmovy = 0;
+		pixelmovy = PHOTOCAM_PIXELY_MOVE;
 	}
 
 	if (photocampos  == PC_POSITION_LEFT) { //left   -240
