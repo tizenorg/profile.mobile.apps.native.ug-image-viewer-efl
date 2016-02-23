@@ -67,7 +67,7 @@ static void _ivug_slide_get_screen_dimension(int *width, int *height)
 	int screen_h = 0;
 
 	elm_win_screen_size_get((Evas_Object *)ug_get_window(), &screen_x, &screen_y, &screen_w, &screen_h);
-	MSG_HIGH("screen_Size : Win(%d,%d,%d,%d)", screen_x, screen_y, screen_w, screen_h);
+	//MSG_HIGH("screen_Size : Win(%d,%d,%d,%d)", screen_x, screen_y, screen_w, screen_h);
 	if (rotation == 0 || rotation == 180)
 	{
 		*width = screen_w;

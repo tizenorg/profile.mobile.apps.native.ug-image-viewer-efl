@@ -345,7 +345,7 @@ extern "C" bool ivug_trancoder_convert_video(const char *jpg, const char *wav, c
 #else
 extern "C" bool ivug_trancoder_convert_video(const char *jpg, const char *wav, const char *outfile, IVTransConfig *config)
 {
-	MSG_ERROR("Feature is disabled");
+	//MSG_ERROR("Feature is disabled");
 	return false;
 }
 #endif

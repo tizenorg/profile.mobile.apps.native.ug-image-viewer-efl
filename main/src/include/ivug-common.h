@@ -46,9 +46,9 @@ Definition "PREFIX" is declared in CMakelist.txt
 */
 
 #define LOCALE_PATH 					PREFIX"/res/locale"
-#define IMAGE_PATH						PREFIX"/res/images/"PACKAGE
-#define EDJ_PATH 						PREFIX"/res/edje/"PACKAGE
-#define DATA_PATH 						DATADIR"/"PACKAGE
+#define IMAGE_PATH						PREFIX"/res/images/" PACKAGE
+#define EDJ_PATH 						PREFIX"/res/edje/" PACKAGE
+#define DATA_PATH 						DATADIR"/" PACKAGE
 
 /*
 	Home screen and Lock screen image should be put in DATA_PATH.

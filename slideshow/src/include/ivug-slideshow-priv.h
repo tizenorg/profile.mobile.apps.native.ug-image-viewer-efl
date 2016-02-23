@@ -37,7 +37,7 @@
 
 using namespace std;
 
-#define DATA_PATH 						DATADIR"/"PACKAGE
+#define DATA_PATH 						DATADIR"/" PACKAGE
 
 typedef struct
 {

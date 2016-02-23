@@ -139,14 +139,14 @@ extern "C" UG_MODULE_API void UG_MODULE_EXIT(struct ug_module_ops *ops)
 #ifdef TA_SAVETO_FILE
 	FILE *fp = NULL;
 
-	fp = fopen(DATADIR"/"PACKAGE"/TimeAnal", "a");
+	fp = fopen(DATADIR"/" PACKAGE"/TimeAnal", "a");
 
 	if (fp != NULL) {
 		PERF_SHOW_RESULT(fp);
 
 		fclose(fp);
 	} else {
-		MSG_IMAGEVIEW_HIGH("Cannot open file : %s", DATADIR"/"PACKAGE"/TimeAnal");
+		MSG_IMAGEVIEW_HIGH("Cannot open file : %s", DATADIR "/" PACKAGE"/TimeAnal");
 	}
 #else
 	PERF_SHOW_RESULT(stderr);

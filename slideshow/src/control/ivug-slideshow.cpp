@@ -66,7 +66,7 @@
 		Not test except slide effect.
 
 */
-#define EDJ_PATH PREFIX"/res/edje/"PACKAGE
+#define EDJ_PATH PREFIX"/res/edje/" PACKAGE
 #define IVUG_SS_LY_EDJ_PATH 	EDJ_PATH"/ivug-ss-ly.edj"
 
 #define IVUG_IMAGE_BETWEEN_MARGIN 	(30)

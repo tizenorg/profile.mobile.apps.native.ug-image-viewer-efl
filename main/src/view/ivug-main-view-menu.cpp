@@ -35,7 +35,6 @@
 
 #include <ui-gadget-module.h>
 #include <shortcut_manager.h>
-#include <media-thumbnail.h>
 #include <app_manager.h>
 #include <notification.h>
 #include <string>
@@ -278,7 +277,7 @@ void _on_setas_selected(void *data, Evas_Object *obj, void *event_info)
 	if (strncmp(label, IDS_CALLER_IMAGE, strlen(label)) == 0) {
 		pMainView->ext_ug = ivug_ext_launch_contact(mdata->filepath, _on_ext_ug_destroy_cb, data);
 	} else if (strncmp(label, IDS_DYNAMIC_BOX, strlen(label)) == 0) {
-		char str[IVUG_MAX_FILE_PATH_LEN + SHORTCUT_PREFIX_LEN] = {0,};
+		char str[IVUG_MAX_FILE_PATH_LEN + SHORTCUT_PREFIX_LEN];
 		snprintf(str, IVUG_MAX_FILE_PATH_LEN + SHORTCUT_PREFIX_LEN,
 		         SHORTCUT_PREFIX"%s", mdata->fileurl);
 
