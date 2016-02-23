@@ -34,11 +34,11 @@
 #undef LOG_CAT
 #define LOG_CAT "IV-THUMB"
 
-#define IMAGE_PATH		PREFIX"/res/images/"PACKAGE
+#define IMAGE_PATH		PREFIX"/res/images/" PACKAGE
 #define DEFAULT_THUMBNAIL_PATH		IMAGE_PATH"/T01_Nocontents_broken.png"
 
-#define EDJ_THUMBLIST 	PREFIX"/res/edje/"PACKAGE"/ivug-thumblist.edj"
-#define EDJ_ICON 		PREFIX"/res/edje/"PACKAGE"/ivug-icons.edj"
+#define EDJ_THUMBLIST 	PREFIX"/res/edje/" PACKAGE"/ivug-thumblist.edj"
+#define EDJ_ICON 		PREFIX"/res/edje/" PACKAGE"/ivug-icons.edj"
 
 
 //#undef TEST_EDIT_MODE
@@ -90,7 +90,7 @@ struct _Thumbnail {
 	void *data;
 } ;
 
-#define INVALID_IMAGE (PREFIX"/res/images/"PACKAGE"/T01_Nocontents_broken.png")
+#define INVALID_IMAGE (PREFIX"/res/images/" PACKAGE"/T01_Nocontents_broken.png")
 
 #define IV_THUMBLIST(obj) \
 	static_cast<ThumbList *>(evas_object_data_get((obj), "CMyThumbList"))

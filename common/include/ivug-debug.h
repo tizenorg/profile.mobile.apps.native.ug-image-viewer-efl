@@ -289,7 +289,7 @@ enum {
 #define ivug_retm_if(expr, fmt, args...) \
 	do { \
 		if(expr) { \
-			MSG_IVUG_ERROR("[%s] Return, message "fmt, #expr, ##args );\
+			MSG_IVUG_ERROR("[%s] Return, message ",fmt, #expr, ##args );\
 			return; \
 		} \
 	} while (0)
@@ -297,7 +297,7 @@ enum {
 #define ivug_retvm_if(expr, val, fmt, args...) \
 	do { \
 		if(expr) { \
-			MSG_IVUG_ERROR("[%s] Return value, message "fmt, #expr, ##args );\
+			MSG_IVUG_ERROR("[%s] Return value, message ",fmt, #expr, ##args );\
 			return (val); \
 		} \
 	} while (0)
@@ -308,7 +308,7 @@ enum {
 #define IV_RET_IF(expr, fmt, args...) \
 			do { \
 				if(expr) { \
-					MSG_IVUG_FATAL("[%s] Return, message "fmt, #expr, ##args );\
+					MSG_IVUG_FATAL("[%s] Return, message ",fmt, #expr, ##args );\
 					return; \
 				} \
 			} while (0)
@@ -316,7 +316,7 @@ enum {
 #define IV_RETV_IF(expr, val, fmt, args...) \
 			do { \
 				if(expr) { \
-					MSG_IVUG_FATAL("[%s] Return value, message "fmt, #expr, ##args );\
+					MSG_IVUG_FATAL("[%s] Return value, message ",fmt, #expr, ##args );\
 					return (val); \
 				} \
 			} while (0)

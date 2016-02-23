@@ -77,7 +77,7 @@ Effect_Engine *ivug_xxx_add(void)
 	eng_spin->func.animate = &__ivug_anim;
 	eng_spin->func.pause = &__ivug_pause;
 	eng_spin->func.resume = &__ivug_resume;
-	eng_spin->func.finalize = &__ivug_finialize;
+	eng_spin->func.finalize = &__ivug_spin_finialize;
 
 	return eng_spin;
 }
