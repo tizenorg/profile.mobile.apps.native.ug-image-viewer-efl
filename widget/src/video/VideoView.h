@@ -67,7 +67,7 @@ public:
 
 	Evas_Load_Error SetFile(const char *file)
 	{
-		m_player = ivug_player_create();
+//		m_player = ivug_player_create();
 
 		ivug_player_set_file(m_player, file);
 
