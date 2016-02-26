@@ -73,6 +73,7 @@ Definition "PREFIX" is declared in CMakelist.txt
 
 #define DEFAULT_IMAGE_FOLDER "/opt/usr/media/Images"
 #define DEFAULT_THUMBNAIL		"/opt/usr/share/media/.thumb/thumb_default.png"
+#define DEFAULT_THUMBNAIL_PATH			IMAGE_PATH"/T01_Nocontents_broken.png"
 
 #define PATH_SDCARD		"/opt/storage/sdcard/"
 

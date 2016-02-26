@@ -638,7 +638,7 @@ void ivug_set_prev_next_photocam_images(void *data, Evas_Object **prev_pc, Evas_
 
 			if (EVAS_LOAD_ERROR_NONE != err) {
 				MSG_HIGH("Loading default Thumbnail");
-				elm_photocam_file_set(*prev_pc, DEFAULT_THUMBNAIL);
+				elm_photocam_file_set(*prev_pc, DEFAULT_THUMBNAIL_PATH);
 			}
 		}
 		evas_object_show(*prev_pc);
@@ -666,7 +666,7 @@ void ivug_set_prev_next_photocam_images(void *data, Evas_Object **prev_pc, Evas_
 
 			if (EVAS_LOAD_ERROR_NONE != err) {
 				MSG_HIGH("Loading default Thumbnail");
-				elm_photocam_file_set(*next_pc, DEFAULT_THUMBNAIL);
+				elm_photocam_file_set(*next_pc, DEFAULT_THUMBNAIL_PATH);
 			}
 		}
 		evas_object_show(*next_pc);

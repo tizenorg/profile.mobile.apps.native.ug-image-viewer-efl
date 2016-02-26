@@ -47,7 +47,6 @@
 
 extern "C" int app_control_send_terminate_request(app_control_h service);
 
-#define DEFAULT_THUMBNAIL_PATH			IMAGE_PATH"/T01_Nocontents_broken.png"
 
 #define LONGTAP_TIMEOUT	(2.0) // 2secs
 
@@ -1652,7 +1651,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 
 			if (EVAS_LOAD_ERROR_NONE != e) {
 				MSG_HIGH("Loading default Thumbnail");
-				elm_photocam_file_set(pMainView->photocam, DEFAULT_THUMBNAIL);
+				elm_photocam_file_set(pMainView->photocam, DEFAULT_THUMBNAIL_PATH);
 			}
 			evas_object_geometry_get(pMainView->photocam, &bx, &by, &bw, &bh);
 		}
@@ -1707,7 +1706,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 
 		if (EVAS_LOAD_ERROR_NONE != e) {
 			MSG_HIGH("Loading default Thumbnail");
-			elm_photocam_file_set(pMainView->photocam, DEFAULT_THUMBNAIL);
+			elm_photocam_file_set(pMainView->photocam, DEFAULT_THUMBNAIL_PATH);
 		}
 	}
 
@@ -1736,7 +1735,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 
 				if (EVAS_LOAD_ERROR_NONE != e) {
 					MSG_HIGH("Loading default Thumbnail");
-					elm_photocam_file_set(pMainView->photocam2, DEFAULT_THUMBNAIL);
+					elm_photocam_file_set(pMainView->photocam2, DEFAULT_THUMBNAIL_PATH);
 				}
 			}
 
@@ -1755,7 +1754,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 				e = elm_photocam_file_set(pMainView->photocam0, pmData->filepath);
 				if (EVAS_LOAD_ERROR_NONE != e) {
 					MSG_HIGH("Loading default Thumbnail");
-					elm_photocam_file_set(pMainView->photocam0, DEFAULT_THUMBNAIL);
+					elm_photocam_file_set(pMainView->photocam0, DEFAULT_THUMBNAIL_PATH);
 				}
 			}
 
