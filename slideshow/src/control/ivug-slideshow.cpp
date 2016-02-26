@@ -36,8 +36,6 @@
 
 #include "ivug-image.h"
 
-#include "ivug-player.h"
-
 #include <Elementary.h>
 #include <device/power.h>
 #include <assert.h>

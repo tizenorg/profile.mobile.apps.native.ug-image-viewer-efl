@@ -33,7 +33,6 @@
 #include "ivug-medialist.h"
 #include "ivug-config.h"
 #include "ivug-effect.h"
-#include "ivug-player.h"
 
 using namespace std;
 
