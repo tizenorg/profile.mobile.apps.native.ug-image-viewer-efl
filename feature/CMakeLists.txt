@@ -5,7 +5,6 @@ SET(PREFIX ${CMAKE_INSTALL_PREFIX})
 SET(VERSION 0.1.0)
 
 SET(SRCS
-	src/ivug-player.cpp
 	src/ivug-motion.cpp
 	src/ivug-vibration.c
 	src/ivug-transcoder.cpp
