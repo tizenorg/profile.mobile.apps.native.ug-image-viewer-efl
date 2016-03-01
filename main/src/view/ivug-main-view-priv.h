@@ -103,6 +103,9 @@ struct _Ivug_MainView{
 
 //for select view
 	int total_selected;
+	int max_count;
+	long long int select_size;
+	long long int limit_size;
 	Evas_Object *select_bar;
 	Evas_Object *check;
 	Eina_List *selected_path_list;	// data is char *

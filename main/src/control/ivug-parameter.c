@@ -76,6 +76,7 @@ W/IV-COMMON(1356): 0:00:00.013[F:ivug-parameter.c L:  418][HIGH] ***************
 #define IVUG_BUNDLE_KEY_GROUP_ID		"Group id"
 
 #define IVUG_BUNDLE_KEY_SELECTED_INDEX	"Selected index"
+#define IVUG_BUNDLE_KEY_SELECT_SIZE     "Select Size"
 #define IVUG_BUNDLE_KEY_SELECTED_INDEX_FAV	"Selected index fav"
 
 #define IVUG_BUNDLE_SORT_DATE			"Date"
@@ -761,6 +762,21 @@ ivug_param_create_from_bundle(app_control_h service)
 		app_control_get_extra_data_array(service, IVUG_BUNDLE_KEY_SELECTED_INDEX, &index_list, &index_len);
 		app_control_get_extra_data_array(service, IVUG_BUNDLE_KEY_SELECTED_INDEX_FAV, &index_list_fav, &index_len_fav);
 		app_control_get_extra_data (service, IVUG_BUNDLE_KEY_ALBUM_IDX, &val);
+
+		long long int *limitsize;
+		long long int *selsize;
+		int *max_count;
+		app_control_get_extra_data(service,APP_CONTROL_DATA_TOTAL_SIZE,&limitsize);
+		app_control_get_extra_data(service,IVUG_BUNDLE_KEY_SELECT_SIZE,&selsize);
+		app_control_get_extra_data(service,APP_CONTROL_DATA_TOTAL_COUNT,&max_count);
+
+		data->select_view_limit_size = limitsize;
+		data->select_view_selected_size = selsize;
+		data->select_view_max_count = max_count;
+
+		MSG_MAIN_HIGH("limit size is  = %ld ,  selsize is  = %ld , max count is = %d ",*limitsize,*selsize,*max_count);
+
+
 		if(strcmp(val,  "GALLERY_ALBUM_FAVOURITE_ALBUMS_ID")==0){
 			if (index_list_fav != NULL) {
 				int i;
