@@ -104,10 +104,21 @@ _check_changed_cb(void *data, Evas_Object *obj, void *event_info)
 	}
 
 	if (state == true) {
-		pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list, mdata->filepath);
-		pMainView->total_selected++;
-		evas_object_color_set(obj, 255, 255, 255, 255);
-		elm_check_state_set(obj, EINA_TRUE);
+		struct stat stFileInfo;
+		stat(mdata->fileurl, &stFileInfo);
+
+		if (pMainView->total_selected < pMainView->max_count &&
+				(pMainView->select_size + stFileInfo.st_size) <= pMainView->limit_size) {
+
+			pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list, mdata->filepath);
+			pMainView->total_selected++;
+			evas_object_color_set(obj, 255, 255, 255, 255);
+			elm_check_state_set(obj, EINA_TRUE);
+		} else {
+			//[ToDo] Show the popup for Max count or size
+			evas_object_color_set(obj, 128, 138, 137, 255);
+			elm_check_state_set(obj, EINA_FALSE);
+		}
 	} else {
 		pMainView->selected_path_list = eina_list_remove(pMainView->selected_path_list, mdata->filepath);
 		if ((pMainView->total_selected - 1) >= 0) {
@@ -1405,6 +1416,9 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 			}
 		}
 		pMainView->total_selected = ivug_param->total_selected ;
+		pMainView->max_count = ivug_param->select_view_max_count;
+		pMainView->limit_size = ivug_param->select_view_limit_size;
+		pMainView->select_size = ivug_param->select_view_selected_size;
 	}
 
 	ivug_slider_new_set_list(pMainView->pSliderNew, mlist, current);

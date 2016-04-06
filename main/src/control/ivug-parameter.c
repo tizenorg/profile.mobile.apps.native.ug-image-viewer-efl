@@ -16,6 +16,7 @@
 */
 
 #include <string.h>
+#include <limits.h>
 
 #include "ivug-common.h"
 #include "ivug-debug.h"
@@ -76,6 +77,7 @@ W/IV-COMMON(1356): 0:00:00.013[F:ivug-parameter.c L:  418][HIGH] ***************
 #define IVUG_BUNDLE_KEY_GROUP_ID		"Group id"
 
 #define IVUG_BUNDLE_KEY_SELECTED_INDEX	"Selected index"
+#define IVUG_BUNDLE_KEY_SELECT_SIZE		"Select Size"
 #define IVUG_BUNDLE_KEY_SELECTED_INDEX_FAV	"Selected index fav"
 
 #define IVUG_BUNDLE_SORT_DATE			"Date"
@@ -758,9 +760,20 @@ ivug_param_create_from_bundle(app_control_h service)
 		char **index_list_fav = NULL;
 		int index_len_fav = 0;
 		char *val = NULL;
+		long long int limitsize = LLONG_MAX;
+		long long int selsize = 0;
+		int max_count = INT_MAX;
+
 		app_control_get_extra_data_array(service, IVUG_BUNDLE_KEY_SELECTED_INDEX, &index_list, &index_len);
 		app_control_get_extra_data_array(service, IVUG_BUNDLE_KEY_SELECTED_INDEX_FAV, &index_list_fav, &index_len_fav);
 		app_control_get_extra_data (service, IVUG_BUNDLE_KEY_ALBUM_IDX, &val);
+		app_control_get_extra_data(service, APP_CONTROL_DATA_TOTAL_SIZE, &limitsize);
+		app_control_get_extra_data(service, IVUG_BUNDLE_KEY_SELECT_SIZE, &selsize);
+		app_control_get_extra_data(service, APP_CONTROL_DATA_TOTAL_COUNT, &max_count);
+
+		data->select_view_limit_size = limitsize;
+		data->select_view_selected_size = selsize;
+		data->select_view_max_count = max_count;
 		if(strcmp(val,  "GALLERY_ALBUM_FAVOURITE_ALBUMS_ID")==0){
 			if (index_list_fav != NULL) {
 				int i;
