@@ -760,9 +760,9 @@ ivug_param_create_from_bundle(app_control_h service)
 		char **index_list_fav = NULL;
 		int index_len_fav = 0;
 		char *val = NULL;
-		long long int limitsize = LLONG_MAX;
-		long long int selsize = 0;
-		int max_count = INT_MAX;
+		char *limitsize = NULL;
+		char *selsize = NULL;
+		char *max_count = NULL;
 
 		app_control_get_extra_data_array(service, IVUG_BUNDLE_KEY_SELECTED_INDEX, &index_list, &index_len);
 		app_control_get_extra_data_array(service, IVUG_BUNDLE_KEY_SELECTED_INDEX_FAV, &index_list_fav, &index_len_fav);
@@ -771,9 +771,10 @@ ivug_param_create_from_bundle(app_control_h service)
 		app_control_get_extra_data(service, IVUG_BUNDLE_KEY_SELECT_SIZE, &selsize);
 		app_control_get_extra_data(service, APP_CONTROL_DATA_TOTAL_COUNT, &max_count);
 
-		data->select_view_limit_size = limitsize;
-		data->select_view_selected_size = selsize;
-		data->select_view_max_count = max_count;
+		data->select_view_limit_size = atoll(limitsize);
+		data->select_view_selected_size = atoll(selsize);
+		data->select_view_max_count = atoi(max_count);
+
 		if(strcmp(val,  "GALLERY_ALBUM_FAVOURITE_ALBUMS_ID")==0){
 			if (index_list_fav != NULL) {
 				int i;
