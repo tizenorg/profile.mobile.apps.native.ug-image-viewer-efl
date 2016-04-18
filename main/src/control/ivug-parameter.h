@@ -94,8 +94,8 @@ typedef struct {
 	Eina_List * /* filepath */ multiple_list;
 	int total_selected;
 	int select_view_max_count;
-	long long int select_view_limit_size;
-	long long int select_view_selected_size;
+	long int select_view_limit_size;
+	long int select_view_selected_size;
 } ivug_parameter;
 
 
