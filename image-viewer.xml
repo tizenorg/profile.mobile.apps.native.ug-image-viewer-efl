@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="image-viewer" version="1.6.88" install-location="internal-only" api-version="3.0">
+	<label>Image viewer Appcontrol</label>
+	<label xml:lang="ar-ae">Image viewer Appcontrol</label>
+	<label xml:lang="az-az">Image viewer Appcontrol</label>
+	<label xml:lang="bg-bg">Image viewer Appcontrol</label>
+	<label xml:lang="ca-es">Image viewer Appcontrol</label>
+	<label xml:lang="cs-cz">Image viewer Appcontrol</label>
+	<label xml:lang="da-dk">Image viewer Appcontrol</label>
+	<label xml:lang="de-de">Image viewer Appcontrol</label>
+	<label xml:lang="el-gr">Image viewer Appcontrol</label>
+	<label xml:lang="en-gb">Image viewer Appcontrol</label>
+	<label xml:lang="en-ph">Image viewer Appcontrol</label>
+	<label xml:lang="en-us">Image viewer Appcontrol</label>
+	<label xml:lang="es-es">Image viewer Appcontrol</label>
+	<label xml:lang="es-mx">Image viewer Appcontrol</label>
+	<label xml:lang="et-ee">Image viewer Appcontrol</label>
+	<label xml:lang="eu-es">Image viewer Appcontrol</label>
+	<label xml:lang="fi-fi">Image viewer Appcontrol</label>
+	<label xml:lang="fr-ca">Image viewer Appcontrol</label>
+	<label xml:lang="fr-fr">Image viewer Appcontrol</label>
+	<label xml:lang="ga-ie">Image viewer Appcontrol</label>
+	<label xml:lang="gl-es">Image viewer Appcontrol</label>
+	<label xml:lang="hi-in">Image viewer Appcontrol</label>
+	<label xml:lang="hr-hr">Image viewer Appcontrol</label>
+	<label xml:lang="hu-hu">Image viewer Appcontrol</label>
+	<label xml:lang="hy-am">Image viewer Appcontrol</label>
+	<label xml:lang="is-is">Image viewer Appcontrol</label>
+	<label xml:lang="it-it">Image viewer Appcontrol</label>
+	<label xml:lang="ja-jp">Image viewer Appcontrol</label>
+	<label xml:lang="ka-ge">Image viewer Appcontrol</label>
+	<label xml:lang="kk-kz">Image viewer Appcontrol</label>
+	<label xml:lang="ko-kr">Image viewer Appcontrol</label>
+	<label xml:lang="lt-lt">Image viewer Appcontrol</label>
+	<label xml:lang="lv-lv">Image viewer Appcontrol</label>
+	<label xml:lang="mk-mk">Image viewer Appcontrol</label>
+	<label xml:lang="nb-no">Image viewer Appcontrol</label>
+	<label xml:lang="nl-nl">Image viewer Appcontrol</label>
+	<label xml:lang="pl-pl">Image viewer Appcontrol</label>
+	<label xml:lang="pt-br">Image viewer Appcontrol</label>
+	<label xml:lang="pt-pt">Image viewer Appcontrol</label>
+	<label xml:lang="ro-ro">Image viewer Appcontrol</label>
+	<label xml:lang="ru-ru">Image viewer Appcontrol</label>
+	<label xml:lang="sk-sk">Image viewer Appcontrol</label>
+	<label xml:lang="sl-si">Image viewer Appcontrol</label>
+	<label xml:lang="sr-rs">Image viewer Appcontrol</label>
+	<label xml:lang="sv-se">Image viewer Appcontrol</label>
+	<label xml:lang="tr-tr">Image viewer Appcontrol</label>
+	<label xml:lang="uk-ua">Image viewer Appcontrol</label>
+	<label xml:lang="uz-uz">Image viewer Appcontrol</label>
+	<label xml:lang="zh-cn">Image viewer Appcontrol</label>
+	<label xml:lang="zh-hk">Image viewer Appcontrol</label>
+	<label xml:lang="zh-sg">Image viewer Appcontrol</label>
+	<label xml:lang="zh-tw">Image viewer Appcontrol</label>
+	<author email="jcastle.ahn@samsung.com" href="www.samsung.com">Jisung Ahn</author>
+	<author email="hw4444.kim@samsung.com" href="www.samsung.com">Hyunwoo Kim</author>
+	<description>Image viewer Application</description>
+	<ui-application appid="org.tizen.image-viewer" exec="/usr/apps/org.tizen.image-viewer/bin/image-viewer" hw-acceleration="use-GL" nodisplay="true" multiple="true" type="capp" taskmanage="false" process-pool="true"  launch_mode="caller">
+		<icon>org.tizen.image-viewer.png</icon>
+		<label>Image viewer</label>
+		<label xml:lang="ar-ae">عرض الصور</label>
+		<label xml:lang="az-az">Şəkil göstərici</label>
+		<label xml:lang="bg-bg">Програма за преглед на изображения</label>
+		<label xml:lang="ca-es">Visor d'imatges</label>
+		<label xml:lang="cs-cz">Prohlížeč obrázků</label>
+		<label xml:lang="da-dk">Billedvisning</label>
+		<label xml:lang="de-de">Bildanzeigeprogramm</label>
+		<label xml:lang="el-gr">Προβολή εικόνων</label>
+		<label xml:lang="en-gb">Image viewer</label>
+		<label xml:lang="en-ph">Image viewer</label>
+		<label xml:lang="en-us">Image viewer</label>
+		<label xml:lang="es-es">Visor de imagenes</label>
+		<label xml:lang="es-mx">Visor de imagenes</label>
+		<label xml:lang="et-ee">Pildivaatur</label>
+		<label xml:lang="eu-es">Irudi bisorea</label>
+		<label xml:lang="fi-fi">Kuvan katseluohjelma</label>
+		<label xml:lang="fr-ca">Visualiseur d'images</label>
+		<label xml:lang="fr-fr">Visualiseur d'images</label>
+		<label xml:lang="ga-ie">Amharcoir iomhanna</label>
+		<label xml:lang="gl-es">Visor de imaxes</label>
+		<label xml:lang="hi-in">छवि व्यूअर</label>
+		<label xml:lang="hr-hr">Preglednik slika</label>
+		<label xml:lang="hu-hu">Képmegjelenítő</label>
+		<label xml:lang="hy-am">Պատկերների դիտարկիչ</label>
+		<label xml:lang="is-is">Myndbirting</label>
+		<label xml:lang="it-it">Visualizzatore immagini</label>
+		<label xml:lang="ja-jp">画像ビューア</label>
+		<label xml:lang="ka-ge">სურათის დამთვალიერებელი</label>
+		<label xml:lang="kk-kz">Сурет қарап шығу бағдарламасы</label>
+		<label xml:lang="ko-kr">이미지뷰어</label>
+		<label xml:lang="lt-lt">Vaizdų žiūryklė</label>
+		<label xml:lang="lv-lv">Attēlu skatītājs</label>
+		<label xml:lang="mk-mk">Прегледник на слики</label>
+		<label xml:lang="nb-no">Bildevisning</label>
+		<label xml:lang="nl-nl">Afbeeldingenviewer</label>
+		<label xml:lang="pl-pl">Przeglądarka obrazów</label>
+		<label xml:lang="pt-br">Visualizador de imagens</label>
+		<label xml:lang="pt-pt">Visualizador de imagens</label>
+		<label xml:lang="ro-ro">Vizualizator de imagini</label>
+		<label xml:lang="ru-ru">Просмотр изображения</label>
+		<label xml:lang="sk-sk">Zobrazovač obrázkov</label>
+		<label xml:lang="sl-si">Pregledovalnik slik</label>
+		<label xml:lang="sr-rs">Prikazivač slika</label>
+		<label xml:lang="sv-se">Bildvisare</label>
+		<label xml:lang="tr-tr">Resim goruntuleyici</label>
+		<label xml:lang="uk-ua">Перегляд зображень</label>
+		<label xml:lang="uz-uz">Rasmni ko‘rib chiqish vositasi</label>
+		<label xml:lang="zh-cn">图片浏览器</label>
+		<label xml:lang="zh-hk">圖像檢視器</label>
+		<label xml:lang="zh-sg">图片浏览器</label>
+		<label xml:lang="zh-tw">影像檢視器</label>
+		<app-control>
+			<operation name="http://tizen.org/appcontrol/operation/view"/>
+			<mime name="image/jpeg"/>
+			<mime name="image/png"/>
+			<mime name="image/bmp"/>
+			<mime name="image/gif"/>
+			<mime name="image/vnd.wap.wbmp"/>
+		</app-control>
+		<app-control>
+			<operation name="http://tizen.org/appcontrol/operation/view"/>
+			<uri name="file"/>
+		</app-control>
+	</ui-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/messaging.write</privilege>
+		<privilege>http://tizen.org/privilege/contact.read</privilege>
+		<privilege>http://tizen.org/privilege/contact.write</privilege>
+		<privilege>http://tizen.org/privilege/mediastorage</privilege>
+		<privilege>http://tizen.org/privilege/display</privilege>
+		<privilege>http://tizen.org/privilege/externalstorage</privilege>
+		<privilege>http://tizen.org/privilege/content.write</privilege>
+		<privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+	</privileges>
+</manifest>
