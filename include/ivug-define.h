@@ -57,7 +57,7 @@ ADD_DEFINITIONS("-D_USE_MEDIAINFO_STRINGID_")
 
 #define USE_NEW_DB_API
 #define USE_THUMBLIST
-#define USE_EXT_SLIDESHOW
+//#define USE_EXT_SLIDESHOW
 #define USE_VIDEOCAM
 
 #define USE_ADD_COMMENT
@@ -69,8 +69,6 @@ ADD_DEFINITIONS("-D_USE_MEDIAINFO_STRINGID_")
 #define FIXME(x) DO_PRAGMA(message ("FIXME - " #x))
 
 #define INVALID_FILENAME_CHAR "\\/;:*?<>|\""
-
-//#define IV_EXTENDED_FEATURES
 
 //#define USE_BROWSE_FUNC	//allshare browse
 

@@ -366,7 +366,7 @@ void __custom_sec_debug_msg(debug_msg_type *debug_msg, const char *msg, ...)
 		vsnprintf(buf + i, 2048 - i, msg, va);
 
 // Prevent Format string attack
-		SECURE_LOG_(LOG_ID_APPS, convert_to_dlog_priority(debug_msg->msg_level), debug_msg->szcategory, "%s", buf);
+//		SECURE_LOG_(LOG_ID_APPS, convert_to_dlog_priority(debug_msg->msg_level), debug_msg->szcategory, "%s", buf);
 //		print_log(prio, _DEBUG_MODULE, "%s[F:%-16.16s L:%5d][%s:%s] ",time_string , pFileName, debug_msg->nline , szCategory[debug_msg->category], level);
 //		vprint_log(prio,_DEBUG_MODULE, msg, va);
 	}

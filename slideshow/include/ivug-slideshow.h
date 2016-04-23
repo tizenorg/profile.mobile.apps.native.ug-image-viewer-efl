@@ -30,7 +30,6 @@
 #include "ivug-medialist.h"
 #include "ivug-config.h"
 
-
 typedef enum {
 	SLIDE_SHOW_STOPPED = 0x00,
 	SLIDE_SHOW_INTERRUPTED,

@@ -38,7 +38,7 @@ public:
 		if (_smart_ == NULL )
 		{	// Damm buggy! Implement using template
 			const char* name = eina_stringshare_add(classname);
-			MSG_HIGH("Create smart class name=%s", name);
+			//MSG_HIGH("Create smart class name=%s", name);
 			static Evas_Smart_Class sc =
 			{
 				NULL,
@@ -70,7 +70,7 @@ public:
 		m_obj = evas_object_smart_add(evas_object_evas_get(parent), _smart_);	//create smart object.
 		evas_object_smart_data_set(m_obj, this);
 
-		MSG_ASSERT(m_obj != NULL);
+		//MSG_ASSERT(m_obj != NULL);
 
 		return m_obj;
 	}

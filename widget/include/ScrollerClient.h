@@ -20,7 +20,7 @@
 #include <Elementary.h>
 #include "Object.h"
 
-#include "Scroller.h"
+//#include "Scroller.h"
 
 #undef DISABLE_ORIGIN
 
@@ -32,7 +32,7 @@ public:
 	};
 
 	virtual ~CScrollerClient(){
-		MSG_HIGH("CScrollerClient destructor");
+		//MSG_HIGH("CScrollerClient destructor");
 	};
 
 public:
@@ -47,22 +47,22 @@ public:
 	virtual void PanX(int x) { topleft.X(x);	};
 	virtual void PanY(int y) { topleft.Y(y);	};
 
-	virtual void Draw() { MSG_HIGH("Scroller client Draw"); };
+	virtual void Draw() { //MSG_HIGH("Scroller client Draw"); };
 
 	virtual void BeginUpdate() {
 		m_update++;
 
-		MSG_HIGH("Begin update. Count=%d", m_update);
+		//MSG_HIGH("Begin update. Count=%d", m_update);
 	};
 	virtual void EndUpdate() {
 		m_update--;
 
-		MSG_HIGH("End update. Count=%d", m_update);
+		//MSG_HIGH("End update. Count=%d", m_update);
 	};
 
 	// Scroller client original size
 	virtual void SetSize(const CSize &size) {
-		MSG_HIGH("CScrollerClient SetSize(%d,%d)", size.Width(), size.Height());
+		//MSG_HIGH("CScrollerClient SetSize(%d,%d)", size.Width(), size.Height());
 
 		m_size = size;
 	};
@@ -76,7 +76,7 @@ public:
 
 		m_extent = m_size * m_zoom;
 
-		MSG_LOW("Set Zoom=%f", m_zoom);
+		//MSG_LOW("Set Zoom=%f", m_zoom);
 	};
 
 	CPoint &GetOrigin() { return m_origin; };

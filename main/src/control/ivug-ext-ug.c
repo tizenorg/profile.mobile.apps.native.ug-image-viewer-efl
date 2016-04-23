@@ -15,7 +15,7 @@
 *
 */
 
-#include <ui-gadget.h>
+//#include <ui-gadget.h>
 #include <app.h>
 #include <Elementary.h>
 
@@ -69,13 +69,14 @@
 #define MIME_TYPE_LEN			255
 
 #define FILE_PREFIX		"file://"
-
+#if 0//Chandan
 typedef struct {
 	ug_destroy_cb destroy_func;
 	ug_result_cb result_func;
 	ug_end_cb    end_func;
 	void *cb_data;
 }ext_ug_t;
+#endif
 
 #if 0//Tizen3.0 Build error
 static bool _data_print(app_control_h service, const char *key, void *user_data)
@@ -123,6 +124,7 @@ static void print_app_control_data(app_control_h service)
 }
 #endif
 
+#if 0//Chandan
 static void
 _ivug_ext_ug_layout_cb(ui_gadget_h ug, enum ug_mode mode, void *priv)
 {
@@ -158,7 +160,7 @@ _ivug_ext_ug_layout_cb(ui_gadget_h ug, enum ug_mode mode, void *priv)
 #endif
 
 }
-
+#endif
 #if 0//Tizen3.0 Build error
 static void
 _ivug_ext_ug_result_cb(ui_gadget_h ug, app_control_h result, void *priv)
@@ -178,7 +180,7 @@ _ivug_ext_ug_result_cb(ui_gadget_h ug, app_control_h result, void *priv)
 	}
 }
 #endif
-
+#if 0//Chandan
 static void
 _ivug_ext_ug_destroy_cb(ui_gadget_h ug, void *priv)
 {
@@ -282,7 +284,7 @@ ui_gadget_h _ivug_ext_launch_ug_with_result(const char *pkgname,
 	return ug;
 }
 
-
+#endif
 void ivug_ext_app_control_reply_cb(app_control_h request, app_control_h reply, app_control_result_e result, void *user_data)
 {
 	MSG_IMAGEVIEW_HIGH("ivug_ext_app_control_reply_cb");
@@ -302,7 +304,7 @@ void ivug_ext_app_control_reply_cb(app_control_h request, app_control_h reply, a
 			break;
 	}
 }
-
+#if 0//Chandan
 ui_gadget_h  ivug_ext_launch_wifi_file_transfer(const char *uri, ug_destroy_cb func, void *data)
 {
 	MSG_IMAGEVIEW_HIGH("%s. URI=%s", __func__, uri);
@@ -369,7 +371,7 @@ WIFI_TRANSFER_END:
 
 	return (ret == APP_CONTROL_ERROR_NONE ? ug : NULL);
 }
-
+#endif
 bool ivug_ext_launch_videoeditor(const char *uri, app_control_reply_cb callback, void *data)
 {
 /*
@@ -457,7 +459,7 @@ VIDEO_EDITOR_END:
 
 	return (ret == APP_CONTROL_ERROR_NONE ? true : false);
 }
-
+#if 0//Chandan
 ui_gadget_h ivug_ext_launch_s_note(const char *uri, ug_destroy_cb func, void *data)
 {
 	MSG_IMAGEVIEW_HIGH("%s. URI=%s", __func__, uri);
@@ -597,7 +599,7 @@ MESSAGE_END:
 	}
 	return (ret == APP_CONTROL_ERROR_NONE ? ug : NULL);
 }
-
+#endif
 #ifdef IV_EXTENDED_FEATURES
 bool  ivug_ext_launch_email(const char *uri)
 {
@@ -690,7 +692,7 @@ EMAIL_END:
 	return (ret == APP_CONTROL_ERROR_NONE ? true : false);
 }
 #endif
-
+#if 0//Chandan
 ui_gadget_h  ivug_ext_launch_contact(const char *uri, ug_destroy_cb func, void *data)
 {
 	MSG_IMAGEVIEW_SEC("%s. URI=%s", __func__, uri);
@@ -905,7 +907,7 @@ BT_PRINT_END:
 
 	return (ret == APP_CONTROL_ERROR_NONE ? ug : NULL);
 }
-
+#endif
 bool ivug_ext_launch_videoplayer(const char *uri)
 {
 	MSG_IMAGEVIEW_HIGH("%s. URI=%s", __func__, uri);
@@ -1246,7 +1248,8 @@ bool ivug_ext_launch_picasa(const char *uri)
 		goto PICASA_END;
 	}
 
-	Ecore_X_Window xwin_id = elm_win_xwindow_get(ug_get_window());
+//	Ecore_X_Window xwin_id = elm_win_xwindow_get(ug_get_window()); [ToDo] Check Appropriate replacement
+	Ecore_X_Window xwin_id = -1;
 	eina_convert_itoa(xwin_id, xwin_id_str);
 	ret = app_control_add_extra_data(handle, "XWINDOW_ID", xwin_id_str);
 	if (ret != APP_CONTROL_ERROR_NONE)
@@ -1706,7 +1709,7 @@ LAUNCH_END:
 	return (ret == APP_CONTROL_ERROR_NONE ? true : false);
 }
 #endif
-
+#if 0 //Chandan
 bool ivug_ext_launch_setting_gallery(ug_result_cb resultcb,ug_destroy_cb destorycb, ug_end_cb endcb, void *data)
 {
 	int ret = 0;
@@ -1795,7 +1798,7 @@ bool ivug_ext_launch_select_image(app_control_h serviceHandle, ug_result_cb resu
 	return true;
 #endif
 }
-
+#endif
 
 #ifdef IV_EXTENDED_FEATURES
 bool ivug_ext_launch_allshare_cast(const char *szMacAddr, void *pUserData)

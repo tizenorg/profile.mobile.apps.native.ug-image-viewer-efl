@@ -24,8 +24,8 @@
 
 #include "iv-button.h"
 
-#define EDJ_PATH PREFIX"/res/edje/"PACKAGE
-#define IMG_PATH PREFIX"/res/images/"PACKAGE
+#define EDJ_PATH PREFIX"/res/edje/"
+#define IMG_PATH PREFIX"/res/edje/images/"
 
 namespace iv
 {

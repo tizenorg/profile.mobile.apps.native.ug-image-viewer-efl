@@ -20,6 +20,7 @@
 
 #include <stdbool.h>
 #include <Elementary.h>
+#include "ivug-slideshow.h"
 #include "ivug-anim.h"
 
 #define	EFFECT_LBYTES_ARGB8888(w)	(((w) * 4))
@@ -47,7 +48,7 @@ typedef struct {
 	struct {
 		Effect_Data (*init) (Evas_Object *src, Evas_Object *dst);
 		bool (*set_size) (Effect_Data data, int screen_w, int screen_h, int rotation);
-		void (*animate) (Effect_Data data, double percent);
+		void (*animate) (Effect_Data data, double percent, SlideShow *pSlideshow);
 		void (*pause) (Effect_Data data);		/* Not used*/
 		void (*resume) (Effect_Data data);		/* Not used*/
 		void (*finalize) (Effect_Data data);

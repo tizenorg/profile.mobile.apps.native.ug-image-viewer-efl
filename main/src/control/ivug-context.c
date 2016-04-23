@@ -15,16 +15,9 @@
 *
 */
 
-#include "ivug-common.h"
-#include "ivug-util.h"
-#include "ivug-widget.h"
 
-#include "ivug-db.h"
-
-#include <ui-gadget-module.h>		// ug_destroy_me
 #include "ivug-context.h"
 
-#include "ivug-language-mgr.h"
 
 #define MAX_INSTALNCE (5)
 
@@ -33,7 +26,7 @@
 typedef struct
 {
 	int index;
-	ui_gadget_h ug;			// ug handle
+//	ui_gadget_h ug;			// ug handle
 
 	Evas_Object *parent_win;
 	Evas_Object *parent_layout;
@@ -104,7 +97,9 @@ gSetRotationDegree(int degree)
 int
 gGetRotationDegree(void)
 {
-	return elm_win_rotation_get(ug_get_window());
+	AppData *ugContext;
+	ugContext = eina_list_data_get(ContextList);
+	return elm_win_rotation_get(ugContext->parent_win);
 }
 
 int gGetScreenWidth()
@@ -128,7 +123,7 @@ int gGetScreenHeight()
 	return ugContext->win_h;
 
 }
-
+#if 0//Chandan
 ui_gadget_h
 gGetUGHandle(void)
 {
@@ -141,7 +136,7 @@ gGetUGHandle(void)
 
 	return ugContext->ug;
 }
-
+#endif
 Evas_Object *
 gGetCurrentWindow(void)
 {
@@ -149,8 +144,6 @@ gGetCurrentWindow(void)
 	ugContext = eina_list_data_get(ContextList);
 
 	IV_ASSERT(ugContext != NULL);
-
-	MSG_IMAGEVIEW_HIGH("Get ug handle = 0x%08x", ugContext->ug);
 
 	return ugContext->parent_win;
 }
@@ -198,6 +191,7 @@ const char* gGetAlbumIndex()
 	return ugContext->ALBUM_INDEX;
 }
 
+#if 0//Chandan
 Evas_Object *gGetParentLayout()
 {
 	AppData *ugContext;
@@ -208,7 +202,7 @@ Evas_Object *gGetParentLayout()
 	return ugContext->parent_layout;
 
 }
-
+#endif
 
 bool gGetDestroying()
 {
@@ -290,7 +284,7 @@ static void _dump_context(const char *title)
 
 
 bool
-ivug_context_init(ui_gadget_h ug)
+ivug_context_init(Evas_Object *win, Evas_Object *conform)
 {
 	static int index = 0;
 
@@ -302,8 +296,8 @@ ivug_context_init(ui_gadget_h ug)
 	}
 
 	Context->index = ++index;
-	Context->ug = ug;
-	Context->parent_win = ug_get_window();
+//	Context->ug = ug;
+	Context->parent_win = win;
 
 	if (Context->parent_win)
 	{
@@ -315,7 +309,7 @@ ivug_context_init(ui_gadget_h ug)
 		Context->rot = 0;
 	}
 
-	Context->parent_layout = ug_get_parent_layout(ug);
+//	Context->parent_layout = ug_get_parent_layout(ug);
 //get window width, height
 	int w, h;
 
@@ -328,7 +322,7 @@ ivug_context_init(ui_gadget_h ug)
 	Context->indi_mode = elm_win_indicator_mode_get(Context->parent_win);
 	Context->indi_o_mode = elm_win_indicator_opacity_get(Context->parent_win);
 
-	int overlap = (int)evas_object_data_get((Evas_Object *)ug_get_conformant(), "overlap");
+	int overlap = (int)evas_object_data_get(conform, "overlap");
 
 	if (overlap == 0)
 	{
@@ -408,7 +402,7 @@ ERROR:
 		elm_theme_free(Context->th);
 	}
 
-	MSG_IVUG_HIGH("Remove from list. Context=0x%08x, ug=0x%08x", Context, Context->ug);
+	MSG_IVUG_HIGH("Remove from list. Context=0x%08x", Context);
 
 	free(Context);
 
@@ -417,7 +411,7 @@ ERROR:
 
 
 bool
-ivug_context_deinit(ui_gadget_h ug)
+ivug_context_deinit()
 {
 	AppData *Context = NULL;
 
@@ -439,13 +433,13 @@ ivug_context_deinit(ui_gadget_h ug)
 			MSG_IVUG_ERROR("Context is NULL");
 			return false;
 		}
-		if (Context->ug == ug)
+		/*if (Context->ug == ug)
 		{
 			ContextList = eina_list_remove_list(ContextList, l);
 			MSG_IVUG_HIGH("Find ug handle(0x%08x) from ContextList.", ug);
 
 			break;
-		}
+		}*/
 	}
 
 	if (Context->language_handle)
@@ -482,7 +476,7 @@ ivug_context_deinit(ui_gadget_h ug)
 
 	PERF_CHECK_END(LVL2, "elm_theme_free");
 
-	MSG_IVUG_HIGH("Remove from list. Context=0x%08x, ug=0x%08x", Context, Context->ug);
+	MSG_IVUG_HIGH("Remove from list. Context=0x%08x", Context);
 
 	free(Context);
 
@@ -509,7 +503,7 @@ void ivug_context_destroy_me(const char *file, int line)
 	{
 		_dump_context("DestroyME");
 
-		MSG_IMAGEVIEW_HIGH("Request to destory ug. UGhandle(0x%08x) from L(%d) %s", Context->ug, line, fname);
+		MSG_IMAGEVIEW_HIGH("Request to destory ug. from L(%d) %s", line, fname);
 		// Store indicator mode
 		elm_win_indicator_mode_set(Context->parent_win, Context->indi_mode);
 
@@ -534,7 +528,7 @@ void ivug_context_destroy_me(const char *file, int line)
 
 		MSG_IMAGEVIEW_HIGH("Restore Indicator(%s,%s,%s)", szMode[Context->indi_mode], szOpacity[Context->indi_o_mode], szOverlap[Context->oMode]);
 
-		ug_destroy_me(Context->ug);
+		//ug_destroy_me(Context->ug);
 	}
 	else
 	{

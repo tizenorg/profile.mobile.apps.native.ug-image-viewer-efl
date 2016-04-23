@@ -18,7 +18,7 @@
 #pragma once
 
 #include "ScrollerClient.h"
-#include "ivug-player.h"
+//#include "ivug-player.h"
 
 
 /*

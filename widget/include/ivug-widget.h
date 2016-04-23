@@ -42,10 +42,10 @@ void ivug_on_obj_deleted_cancel(Evas_Object* obj);
 */
 Evas_Object *
 ivug_bg_add(Evas_Object* parent, int r, int g, int b);
-
+#if 0 //Chandan
 Evas_Object *
 ivug_layout_add(Evas_Object *win, const char *edjname, const char *groupname);
-
+#endif
 Evas_Object *
 ivug_layout_add2(Evas_Object *parent, const char *edj, const char *group);
 
@@ -82,9 +82,9 @@ void _ivug_set_indicator_overlap_mode(const char *func, int line, bool bOverlap)
 	Set indicator visibility.
 */
 
-void _ivug_set_indicator_visibility(const char *func, int line, bool bShow);
+void _ivug_set_indicator_visibility(const char *func, int line, Evas_Object *win, bool bShow);
 
-#define ivug_set_indicator_visibility(bShow) _ivug_set_indicator_visibility(__FUNCTION__, __LINE__, bShow)
+#define ivug_set_indicator_visibility(win,bShow) _ivug_set_indicator_visibility(__FUNCTION__, __LINE__, win,bShow)
 
 
 

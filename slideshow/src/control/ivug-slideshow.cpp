@@ -16,7 +16,7 @@
 */
 
 #include <stdlib.h>
-#include <ui-gadget-module.h>
+//#include <ui-gadget-module.h>
 
 #include <efl_extension.h>
 
@@ -78,9 +78,9 @@ struct st_temp {
 	SlideShow *pSlideshow;
 };
 
-void ivug_ss_get_screen_size(int *width, int *height)
+void ivug_ss_get_screen_size(Evas_Object *win, int *width, int *height)
 {
-	int rotation = elm_win_rotation_get((Evas_Object *)ug_get_window());
+	int rotation = elm_win_rotation_get(win);
 
 
 	int screen_x = 0;
@@ -88,7 +88,7 @@ void ivug_ss_get_screen_size(int *width, int *height)
 	int screen_w = 0;
 	int screen_h = 0;
 
-	elm_win_screen_size_get((Evas_Object *)ug_get_window(), &screen_x, &screen_y, &screen_w, &screen_h);
+	elm_win_screen_size_get(win, &screen_x, &screen_y, &screen_w, &screen_h);
 	MSG_HIGH("screen_Size : Win(%d,%d,%d,%d)", screen_x, screen_y, screen_w, screen_h);
 
 	if (rotation == 0 || rotation == 180) {
@@ -438,8 +438,8 @@ static Eina_Bool _ivug_ss_on_slide_interval(void *data)
 
 	ivug_effect_init(pSlideShow->effect_engine, sLyCurrent->layout, sLyNext->layout);
 
-	int rotation = elm_win_rotation_get((Evas_Object *)ug_get_window());
-	ivug_ss_get_screen_size(&pSlideShow->screen_w, &pSlideShow->screen_h);
+	int rotation = elm_win_rotation_get(gGetCurrentWindow());
+	ivug_ss_get_screen_size(gGetCurrentWindow(), &pSlideShow->screen_w, &pSlideShow->screen_h);
 
 	if (ivug_effect_set_size(pSlideShow->effect_engine, pSlideShow->screen_w, pSlideShow->screen_h, rotation) == false) {
 		pSlideShow->ss_timer = NULL;
@@ -688,7 +688,7 @@ bool ivug_ss_start(SlideShow *pSlideShow , Media_Item *current, Media_List *list
 {
 	MSG_ASSERT(pSlideShow != NULL);
 
-	ivug_ss_get_screen_size(&pSlideShow->screen_w, &pSlideShow->screen_h);
+	ivug_ss_get_screen_size(gGetCurrentWindow(), &pSlideShow->screen_w, &pSlideShow->screen_h);
 
 	if (pSlideShow->ss_interval_time < 0) {
 		MSG_ERROR("slide show interval time is invalid !!!");
@@ -1041,12 +1041,12 @@ Evas_Object *ivug_list_popoup_show(const char *title_id, void *data)
 	Evas_Object *radio;
 	int i;
 
-	popup = elm_popup_add((Evas_Object *)ug_get_window());
+	popup = elm_popup_add(gGetCurrentWindow());
 	elm_popup_align_set(popup, ELM_NOTIFY_ALIGN_FILL, 1.0);
 	ivug_elm_object_part_text_set(gGetLanguageHandle(), popup, "title,text", title_id);
 	eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK, eext_popup_back_cb, pSlideshow);
 	evas_object_size_hint_weight_set(popup, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-	evas_object_smart_callback_add(popup, "block,clicked", popup_block_clicked_cb, (Evas_Object *)ug_get_window());
+	evas_object_smart_callback_add(popup, "block,clicked", popup_block_clicked_cb, gGetCurrentWindow());
 
 	/* genlist */
 	genlist = elm_genlist_add(popup);
@@ -1313,7 +1313,7 @@ void ivug_ss_resize(SlideShow *pSlideShow)
 	}
 
 	if ((pSlideShow->obj) && (pSlideShow->event)) {
-		ivug_ss_get_screen_size(&pSlideShow->screen_w, &pSlideShow->screen_h);
+		ivug_ss_get_screen_size(gGetCurrentWindow(), &pSlideShow->screen_w, &pSlideShow->screen_h);
 		evas_object_resize(pSlideShow->obj, pSlideShow->screen_w, pSlideShow->screen_h);
 		Evas_Coord ox, oy, ow, oh;
 		evas_object_geometry_get(pSlideShow->obj, &ox, &oy, &ow, &oh);

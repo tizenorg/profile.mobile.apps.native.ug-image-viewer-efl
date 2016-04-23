@@ -23,7 +23,7 @@
 
 #include "EFLUtil.h"
 #include <mime_type.h>
-#include <ui-gadget-module.h>		// ug_destroy_me, ug_send_result
+//#include <ui-gadget-module.h>		// ug_destroy_me
 
 #define MIME_TYPE_LEN			(255)
 #define MIME_TYPE_3GPP			"video/3gpp"
@@ -115,7 +115,7 @@ static void _on_btn_selectok_clicked(void *data, Evas_Object *obj, const char *e
 	if (retcode != APP_CONTROL_ERROR_NONE) {
 		MSG_MAIN_HIGH("app_control_add_extra_data failed");
 	}
-	ug_send_result(gGetUGHandle(), service);
+	app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
 
 	app_control_destroy(service);
 

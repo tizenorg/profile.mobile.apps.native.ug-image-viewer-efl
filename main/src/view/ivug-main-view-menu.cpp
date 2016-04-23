@@ -33,7 +33,7 @@
 
 #include "ivug-exif.h"
 
-#include <ui-gadget-module.h>
+//#include <ui-gadget-module.h>
 #include <shortcut_manager.h>
 #include <app_manager.h>
 #include <notification.h>
@@ -74,7 +74,7 @@ ivug_notification_popup_create(Evas_Object * pParent, const char* text)
 	elm_popup_orient_set(pPopup, ELM_POPUP_ORIENT_BOTTOM);
 	evas_object_show(pPopup);
 }
-
+#if 0//Chandan
 static void
 _on_ext_ug_destroy_cb(ui_gadget_h ug, void *priv)
 {
@@ -88,7 +88,7 @@ _on_ext_ug_destroy_cb(ui_gadget_h ug, void *priv)
 
 	ivug_main_view_set_hide_timer(pMainView);
 }
-
+#endif
 static Eina_Bool _on_back_timer_expired(void *data)
 {
 	ivug_retv_if(!data, ECORE_CALLBACK_CANCEL);
@@ -115,9 +115,9 @@ static void _launch_share_app(Ivug_MainView *pMainView, const char* filepath)
 #endif
 }
 
-bool ivug_is_agif(const char *filepath)
+bool ivug_is_agif(Ivug_MainView *pMainView, const char *filepath)
 {
-	Evas_Object *obj = evas_object_image_add(evas_object_evas_get((Evas_Object *)ug_get_window()));
+	Evas_Object *obj = evas_object_image_add(evas_object_evas_get(gGetCurrentWindow()));
 	evas_object_image_file_set(obj, filepath, NULL);
 
 	return evas_object_image_animated_get(obj);
@@ -217,7 +217,7 @@ static void _ivug_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, void *ev
 	ivug_medialist_set_current_item(pMainView->mList, mitem);
 	ivug_slider_new_update_list(pMainView->pSliderNew, pMainView->mList);
 }
-
+#if 0 //Chandan
 static void _setas_trans_finished(void *data, Evas_Object *obj, void *event_info)
 {
 	MSG_MAIN_HIGH("Setas transition is finished");
@@ -237,14 +237,14 @@ static void _setas_trans_finished(void *data, Evas_Object *obj, void *event_info
 		lcd_h = temp;
 	}
 }
-
+#endif
 static int
 _on_addhome_result_cb(int ret, void *data)
 {
 	return 0;
 }
 
-
+#if 0//Chandan
 void _on_setas_selected(void *data, Evas_Object *obj, void *event_info)
 {
 	IV_ASSERT(data != NULL);
@@ -292,7 +292,7 @@ void _on_setas_selected(void *data, Evas_Object *obj, void *event_info)
 	evas_object_del(pMainView->ctx_popup2);
 	pMainView->ctx_popup2 = NULL;
 }
-
+#endif
 
 void _on_addtag_btn_selected(void *data, Evas_Object *obj, void *event_info)
 {
@@ -715,7 +715,7 @@ _idler_delete(void *data)
 			if (ret != APP_CONTROL_ERROR_NONE) {
 				MSG_MAIN_HIGH("app_control_add_extra_data failed");
 			}
-			ug_send_result(gGetUGHandle(), service);
+			app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
 
 			app_control_destroy(service);
 
@@ -1326,7 +1326,7 @@ void _on_mainview_save(Ivug_MainView *pMainView)
 #endif	//USE_DEFAULT_DOWNLOADS_FOLDER
 	return;
 }
-
+#ifndef USE_THUMBLIST //Chandan
 static void _ivug_slideshow_ext_ug_destroy_cb(ui_gadget_h ug, void *priv)
 {
 	IV_ASSERT(priv != NULL);
@@ -1460,7 +1460,6 @@ void _on_slideshow_selected(void *data, Evas_Object *obj, void *event_info)
 	}
 }
 
-
 void _on_slideshow_btn_cancel(void *data, Evas_Object *obj, void *event_info)
 {
 	evas_object_del(obj);
@@ -1487,7 +1486,7 @@ void _ivug_slideshow_popup_create_menu(void *data, Evas_Object *obj, void *event
 
 	MSG_MAIN_HIGH("Create slideshow Popup(0x%08x)", popup);
 }
-
+#endif
 
 static void
 _on_slideshow_finished(void *data, Evas_Object *obj, void *event_info)
@@ -1745,7 +1744,7 @@ void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 #ifdef BACK_BTN
 	ivug_listpopup_context_show(popup, pMainView->layout, x + w / 2, y + h / 2);
 #else
-	Evas_Object *win = (Evas_Object *)ug_get_window();
+	Evas_Object *win = gGetCurrentWindow();
 	elm_win_screen_size_get(win, NULL, NULL, &w, &h);
 
 	ivug_listpopup_context_set_rotate_enable(popup, true);

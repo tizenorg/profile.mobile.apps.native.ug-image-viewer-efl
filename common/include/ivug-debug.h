@@ -71,10 +71,10 @@ enum {
 #undef LOG_TAG
 #define LOG_TAG "IV-COMMON"
 
-#define IVUG_DEBUG_MSG(fmt, arg...)			LOGD("[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
-#define IVUG_DEBUG_WARNING(fmt, arg...)		LOGW("[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
-#define IVUG_DEBUG_ERROR(fmt, arg...)		LOGE("[%s : %05d]" fmt "\n", __func__, __LINE__ , ##arg)
-#define IVUG_DEBUG_CRITICAL(fmt, arg...)	LOGE("[%s : %05d]" fmt "\n", __func__, __LINE__ , ##arg)
+#define IVUG_DEBUG_MSG(fmt, arg...)			dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
+#define IVUG_DEBUG_WARNING(fmt, arg...)		dlog_print(DLOG_WARN, LOG_TAG,  "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
+#define IVUG_DEBUG_ERROR(fmt, arg...)		dlog_print(DLOG_ERROR,  LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__ , ##arg)
+#define IVUG_DEBUG_CRITICAL(fmt, arg...)	dlog_print(DLOG_ERROR,  LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__ , ##arg)
 
 #else	//USE_DLOG
 #define IVUG_DEBUG_MSG(fmt, arg...)			fprintf(stdout, "[D: %s : %05d]" fmt "\n", __func__, __LINE__, ##arg)

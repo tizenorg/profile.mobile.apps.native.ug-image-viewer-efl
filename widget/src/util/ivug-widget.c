@@ -15,7 +15,7 @@
 *
 */
 
-#include <ui-gadget-module.h>
+//#include <ui-gadget-module.h>
 #include <Elementary.h>
 
 #include "ivug-debug.h"
@@ -34,12 +34,12 @@ static void _on_obj_deleted(void * data, Evas * e, Evas_Object * obj, void * eve
 
 	free(szMsg);
 }
-
+#if 0 //Chandan
 void ivug_layout_attach_to_window(Evas_Object *parent, Evas_Object* layout)
 {
 	elm_win_resize_object_add(ug_get_window(), layout);
 }
-
+#endif
 void ivug_on_obj_deleted(Evas_Object* obj, const char *msg, const char *func, int line)
 {
 	char buf[128];
@@ -70,7 +70,7 @@ Evas_Object* ivug_bg_add(Evas_Object* parent, int r, int g, int b)
 
 	return bg;
 }
-
+#if 0 //Chandan
 Evas_Object *
 ivug_layout_add(Evas_Object *parent, const char *edj, const char *group)
 {
@@ -98,7 +98,7 @@ ivug_layout_add(Evas_Object *parent, const char *edj, const char *group)
 
 	return layout;
 }
-
+#endif
 Evas_Object*
 ivug_default_layout_add(Evas_Object *win)
 {
@@ -274,9 +274,8 @@ void _ivug_set_indicator_overlap_mode(const char *func, int line, bool bOverlap)
 }
 
 
-void _ivug_set_indicator_visibility(const char *func, int line, bool bShow)
+void _ivug_set_indicator_visibility(const char *func, int line,Evas_Object *win, bool bShow)
 {
-	Evas_Object *win = (Evas_Object *)ug_get_window();
 	IV_ASSERT(win != NULL);
 
 	if (bShow == true) {

@@ -33,6 +33,7 @@
 #include "ivug-medialist.h"
 #include "ivug-config.h"
 #include "ivug-effect.h"
+#include "ivug-main-view.h"
 
 using namespace std;
 

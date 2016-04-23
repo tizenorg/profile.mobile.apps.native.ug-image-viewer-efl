@@ -18,7 +18,7 @@
 #include "ivug-debug.h"
 #include "ivug-motion.h"
 
-#include <ui-gadget.h>
+//#include <ui-gadget.h>
 #include <Elementary.h>
 #include <sensor.h>
 
@@ -445,7 +445,8 @@ void CMotion::on_motion(unsigned long long timestamp, int x, int y, void *data)
 	CMotion *thiz = (CMotion *) data;
 	IV_ASSERT(data != NULL);
 
-	int rot = elm_win_rotation_get((Evas_Object *) ug_get_window());
+//	int rot = elm_win_rotation_get((Evas_Object *) ug_get_window()); [ToDo] Check Appropriate replacement
+	int rot = 90;
 
 	thiz->set_rotate(rot);
 

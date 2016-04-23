@@ -17,8 +17,8 @@
 
 #include "ivug-debug.h"
 #include "ivug-effect.h"
-#include <ui-gadget.h>
-#include <ui-gadget-module.h>
+//#include <ui-gadget.h>
+//#include <ui-gadget-module.h>
 
 
 typedef struct {
@@ -57,16 +57,16 @@ static bool __ivug_slide_set_size(void *data, int screen_w, int screen_h, int ro
 	return true;
 }
 
-static void _ivug_slide_get_screen_dimension(int *width, int *height)
+static void _ivug_slide_get_screen_dimension(SlideShow *pSlideshow, int *width, int *height)
 {
-	int rotation = elm_win_rotation_get((Evas_Object *)ug_get_window());
+	int rotation = elm_win_rotation_get(gGetCurrentWindow());
 
 	int screen_x = 0;
 	int screen_y = 0;
 	int screen_w = 0;
 	int screen_h = 0;
 
-	elm_win_screen_size_get((Evas_Object *)ug_get_window(), &screen_x, &screen_y, &screen_w, &screen_h);
+	elm_win_screen_size_get(gGetCurrentWindow(), &screen_x, &screen_y, &screen_w, &screen_h);
 	//MSG_HIGH("screen_Size : Win(%d,%d,%d,%d)", screen_x, screen_y, screen_w, screen_h);
 	if (rotation == 0 || rotation == 180)
 	{
@@ -80,7 +80,7 @@ static void _ivug_slide_get_screen_dimension(int *width, int *height)
 	}
 }
 
-static void __ivug_slide_anim(Effect_Data data, double percent)
+static void __ivug_slide_anim(Effect_Data data, double percent, SlideShow *pSlideshow)
 {
 	Priv_Data *pData = (Priv_Data *)data;
 
@@ -98,7 +98,7 @@ static void __ivug_slide_anim(Effect_Data data, double percent)
 	*  it's wrong, so let's use _ivug_slide_get_screen_dimension() to update
 	*pData->screen_w and pData->screen_h
 	*/
-	_ivug_slide_get_screen_dimension(&pData->screen_w, &pData->screen_h);
+	_ivug_slide_get_screen_dimension(pSlideshow, &pData->screen_w, &pData->screen_h);
 
 	ow = pData->screen_w;
 	//MSG_EFFECT_HIGH("in __ivug_slide_anim, pData->screen_w, pData->screen_h is %d, %d\n", ow, oh);

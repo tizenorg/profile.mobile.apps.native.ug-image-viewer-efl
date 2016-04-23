@@ -16,8 +16,8 @@
 */
 
 #include <Elementary.h>
-#include <ui-gadget.h>
-#include <ui-gadget-module.h>
+//#include <ui-gadget.h>
+//#include <ui-gadget-module.h>
 #include <app.h>
 
 #include "ivug-debug.h"
@@ -38,7 +38,7 @@
 #endif
 
 static int nRunCount = 0;
-
+/*
 extern "C" UG_MODULE_API int UG_MODULE_INIT(struct ug_module_ops *ops)
 {
 	ug_data *ugd;
@@ -119,9 +119,10 @@ extern "C" UG_MODULE_API int UG_MODULE_INIT(struct ug_module_ops *ops)
 
 	return 0;
 }
-
+*/
+/*
 extern "C" UG_MODULE_API void UG_MODULE_EXIT(struct ug_module_ops *ops)
-{
+{/*
 	ug_data *ugd;
 	if (!ops) {
 		MSG_IMAGEVIEW_ERROR("OPS Pointer is NULL");
@@ -153,9 +154,8 @@ extern "C" UG_MODULE_API void UG_MODULE_EXIT(struct ug_module_ops *ops)
 #endif
 
 	IV_PERF_DEINIT();
-
 }
-
+*/
 
 #define _CONSTRUCTOR __attribute__ ((constructor))
 #define _DESTRUCTOR __attribute__ ((destructor))
@@ -170,8 +170,43 @@ _DESTRUCTOR void _DLLExit(void)
 	MSG_IMAGEVIEW_HIGH("Image Viewer - Called DLL destructor");
 }
 
-int main()
+int main(int argc, char *argv[])
 {
-	/*	For detecting undefined symbol */
-	return -1;
+
+	struct _ug_data ugd;
+
+	MSG_IMAGEVIEW_HIGH("IMAGE_VIEWER_MODULE ENTRANCE. Ver=12.0. RunCount=%d", nRunCount);
+
+	ui_app_lifecycle_callback_s ops;
+
+	int ret = APP_ERROR_NONE;
+
+	app_event_handler_h hLanguageChangedHandle;
+	app_event_handler_h hRegionFormatChangedHandle;
+
+	memset(&ops, 0x0, sizeof(ui_app_lifecycle_callback_s));
+	memset(&ugd, 0x0, sizeof(struct _ug_data));
+
+	nRunCount++;
+
+	MSG_IMAGEVIEW_HIGH("IMAGE_VIEWER_MODULE REGISTER SYSTEM CALBBACKS");
+
+	ops.create = on_create;
+	ops.terminate = on_destroy;
+	ops.pause = on_pause;
+	ops.resume = on_resume;
+	ops.app_control = ivug_param_create_from_bundle;
+
+	/*ret = ui_app_add_event_handler(&hRegionFormatChangedHandle, APP_EVENT_REGION_FORMAT_CHANGED, _language_changed_cb, (void*)&ugd);
+	if (ret != APP_ERROR_NONE) {
+		MSG_IMAGEVIEW_ERROR("APP_EVENT_REGION_FORMAT_CHANGED ui_app_add_event_handler failed : [%d]!!!", ret);
+		return -1;
+	}
+
+	ret = ui_app_add_event_handler(&hLanguageChangedHandle, APP_EVENT_LANGUAGE_CHANGED, _language_changed_cb, (void*)&ugd);
+	if (ret != APP_ERROR_NONE) {
+		MSG_IMAGEVIEW_ERROR("APP_EVENT_LANGUAGE_CHANGED ui_app_add_event_handler failed : [%d]!!!", ret);
+		return -1;
+	}*/
+	return ui_app_main(argc, argv, &ops, &ugd);
 }
