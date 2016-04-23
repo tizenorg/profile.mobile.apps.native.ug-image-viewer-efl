@@ -1,11 +1,9 @@
-%define cflags	" -Wall -Wextra -g -fPIC -O3 -Wno-unused-parameter -Wno-missing-field-initializers -fvisibility=hidden -finstrument-functions -Wl,--as-needed -fdata-sections -ffunction-sections -Wl,--gc-sections -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
-%define cxxflags	" -Wall -Wextra -g -fPIC -fpermissive -O3 -Wno-unused-parameter -Wno-missing-field-initializers -fvisibility=hidden -fvisibility-inlines-hidden -finstrument-functions -Wl,--as-needed -fdata-sections -ffunction-sections -Wl,--gc-sections -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
 
-Name:       ug-image-viewer-efl
-Summary:    Image Viewer UI Gadget v1.0
+Name:       org.tizen.image-viewer
+Summary:    image-viewer
 Version:    2.0.73
-Release:    0
-Group:      TO_BE/FILLED_IN
+Release:    1
+Group:      Applications/Multimedia Applications
 License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
 
@@ -18,13 +16,11 @@ BuildRequires: edje-tools
 BuildRequires: gettext-tools
 BuildRequires: prelink
 BuildRequires: libicu-devel
-
 BuildRequires: pkgconfig(elementary)
 BuildRequires: pkgconfig(edje)
 BuildRequires: pkgconfig(evas)
 BuildRequires: pkgconfig(ecore)
 BuildRequires: pkgconfig(libmedia-utils)
-BuildRequires: pkgconfig(ui-gadget-1)
 BuildRequires: pkgconfig(efreet)
 BuildRequires: pkgconfig(mm-fileinfo)
 BuildRequires: pkgconfig(dlog)
@@ -57,54 +53,68 @@ BuildRequires: pkgconfig(storage)
 BuildRequires: pkgconfig(libtzplatform-config)
 
 %description
-Description: Image Viewer UI Gadget v1.0
+Myfile Application v1.0.
+%define _smack_domain %{name}
+
+
+%description
+Description: Image Viewer
+
+%define PREFIX    	 %{TZ_SYS_RO_APP}/%{name}
+%define MANIFESTDIR      %{TZ_SYS_RO_PACKAGES}
+%define ICONDIR          %{TZ_SYS_RO_ICONS}/default/small
+
+%define RESDIR           %{PREFIX}/res
+%define EDJDIR           %{RESDIR}/edje
+%define IMGDIR           %{EDJDIR}/images
+%define BINDIR           %{PREFIX}/bin
+%define LIBDIR           %{PREFIX}/lib
+%define LOCALEDIR        %{RESDIR}/locale
+%define IMGICONDIR       %{EDJDIR}/icons
 
 %prep
 %setup -q
 
 %build
-%define _app_license_dir          %{TZ_SYS_SHARE}/license
-
-CFLAGS+=%cflags
-CXXFLAGS+=%cxxflags
-
-%ifarch %{arm}
-%define ARCH arm
-CXXFLAGS+=" -D_ARCH_ARM_ -mfpu=neon "
-CFLAGS+=" -D_ARCH_ARM_ -mfpu=neon "
-%else
-%define ARCH i586
+%if 0%{?sec_build_binary_debug_enable}
+export CFLAGS="$CFLAGS -DTIZEN_DEBUG_ENABLE"
+export CXXFLAGS="$CXXFLAGS -DTIZEN_DEBUG_ENABLE"
+export FFLAGS="$FFLAGS -DTIZEN_DEBUG_ENABLE"
 %endif
 
-export CXXFLAGS
-export CFLAGS
-
-cmake . -DCMAKE_INSTALL_PREFIX=%{TZ_SYS_RO_UG} \
-				-DARCH=%{ARCH} \
-				-DTZ_SYS_RO_PACKAGES=%{TZ_SYS_RO_PACKAGES}
+cmake . \
+    -DPREFIX=%{PREFIX}   \
+    -DPKGDIR=%{name}     \
+    -DIMGDIR=%{IMGDIR}   \
+    -DEDJDIR=%{EDJDIR}   \
+    -DPKGNAME=%{name}    \
+    -DBINDIR=%{BINDIR}   \
+    -DMANIFESTDIR=%{MANIFESTDIR}   \
+    -DEDJIMGDIR=%{EDJIMGDIR}   \
+    -DLIBDIR=%{LIBDIR}   \
+    -DICONDIR=%{ICONDIR}   \
+    -DLOCALEDIR=%{LOCALEDIR}   \
+    -DIMGICONDIR=%{IMGICONDIR}   \
+    -DRESDIR=%{RESDIR}
 
 make %{?jobs:-j%jobs}
 
 %install
 rm -rf %{buildroot}
-
 %make_install
-mkdir -p %{buildroot}%{_app_license_dir}
-cp LICENSE %{buildroot}%{_app_license_dir}/ug-image-viewer-efl
+mkdir -p %{buildroot}/%{LIBDIR}
 
 %post
-mkdir -p /usr/ug/bin/
-ln -sf /usr/bin/ug-client %{TZ_SYS_RO_UG}/bin/image-viewer-efl
+GOPTION="-g 6514"
 
 %files
-%manifest ug-image-viewer-efl.manifest
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
-
-%defattr(-,root,root,-)
-%{TZ_SYS_RO_UG}/lib/libug-image-viewer-efl.so*
-%{TZ_SYS_RO_UG}/res/edje/ug-image-viewer-efl/*
-%{TZ_SYS_RO_UG}/res/images/ug-image-viewer-efl/*
-%{TZ_SYS_RO_UG}/res/locale/*/*/ug-image-viewer-efl.mo
-
-%{TZ_SYS_SHARE}/license/ug-image-viewer-efl
-%{TZ_SYS_RO_PACKAGES}/image-viewer-efl.xml
+%dir
+%{LIBDIR}
+%{BINDIR}/*
+%{MANIFESTDIR}/*.xml
+%{ICONDIR}/*
+%{RESDIR}/*
+%{IMGICONDIR}/*
+%{LOCALEDIR}/* 
