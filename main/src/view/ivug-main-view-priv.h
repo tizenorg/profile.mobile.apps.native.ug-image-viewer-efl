@@ -44,6 +44,7 @@ struct _Ivug_MainView{
 	Evas_Object *navi_bar;
 	Evas_Object *lyContent;			// Content layout. contain toolbar, title, thumblist
 	Elm_Object_Item *navi_it;
+	Evas_Object *window;
 
 	Evas_Object *back_btn;
 	int prev_mouse_point;
@@ -117,7 +118,7 @@ struct _Ivug_MainView{
 	ivug_view_by view_by;
 	ivug_media_type media_type;
 
-	ui_gadget_h ext_ug;
+//	ui_gadget_h ext_ug;
 	app_control_h ext_svc;
 
 	Ecore_Event_Handler *keydown_handler;
@@ -165,7 +166,7 @@ struct _Ivug_MainView{
 
 void _update_favorite(struct _Ivug_MainView *pMainView);
 
-bool ivug_is_agif(const char *filepath);
+bool ivug_is_agif(struct _Ivug_MainView *pMainView, const char *filepath);
 
 #ifdef __cplusplus
 }

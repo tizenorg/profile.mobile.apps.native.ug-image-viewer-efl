@@ -16,49 +16,19 @@
 */
 
 #include <Elementary.h>
-#include <ui-gadget-module.h>
 #include <app.h>
 #include <storage.h>
 #include <efl_extension.h>
 
 #include "ivug-common.h"
 #include "ivug-util.h"
-#include "ivug-main-view.h"
-#include "ivug-crop-ug.h"
 #include "ivug-popup.h"
-#include "ivug-slideshow-view.h"
-
 #include "EFLUtil.h"
 
 #include "ivug-callback.h"
 #include "ivug-context.h"
-#include "ivug-parameter.h"
 #include "ivug-language-mgr.h"
 #include "ivug-base.h"
-#include <notification.h>
-
-typedef struct _ug_data ug_data;
-
-struct _ug_data {
-	Evas_Object *base;			// UG layout
-
-// View Data;
-	Ivug_MainView *main_view;
-	IvugCropUG *crop_ug;
-
-	Ivug_SlideShowView *ss_view;
-
-	ivug_parameter* ivug_param;
-
-	bool bError;
-	char *bErrMsg;
-
-	Evas_Object *icon;
-	Ecore_Timer *exit_timer;
-
-	Evas_Object *navi_bar;
-	Elm_Object_Item *navi_it;
-};
 
 #define SHORTCUT_ICON_PATH	"/usr/share/icons/default/small/com.samsung.image-viewer.png"
 
@@ -75,16 +45,6 @@ bool getSupportedStorages_cb(int storageId, storage_type_e type, storage_state_e
 	return true;
 }
 
-
-ug_data *AllocUGData()
-{
-	ug_data *ugd = NULL;
-
-	ugd = (ug_data *)calloc(1, sizeof(ug_data));	//alloc ug_data memory
-
-	return ugd;
-}
-
 void FreeUGData(ug_data *ug)
 {
 	IV_ASSERT(ug != NULL);
@@ -92,7 +52,7 @@ void FreeUGData(ug_data *ug)
 	free(ug);
 }
 
-
+#if 0
 static void _send_result_to_caller(ui_gadget_h ug)
 {
 	int ret = 0;
@@ -107,12 +67,13 @@ static void _send_result_to_caller(ui_gadget_h ug)
 	if (ret != APP_CONTROL_ERROR_NONE) {
 		MSG_IMAGEVIEW_HIGH("app_control_add_extra_data failed");
 	}
-	ug_send_result(ug, service);
+	app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
 
 	app_control_destroy(service);
 
 	MSG_IMAGEVIEW_HIGH("Send load started event to caller");
 }
+#endif
 
 #ifdef TRACE_WINDOW
 static void _on_win_resize(void *data, Evas *e, Evas_Object *obj, void *event_info)
@@ -138,7 +99,7 @@ static void _on_base_resize(void *data, Evas *e, Evas_Object *obj, void *event_i
 	Evas_Coord x, y, w, h;
 	evas_object_geometry_get(obj, &x, &y, &w, &h);
 
-	MSG_IMAGEVIEW_HIGH("Base layout(0x%08x) resized geomtery XYWH(%d,%d,%d,%d) angle=%d", obj, x, y, w, h, elm_win_rotation_get((Evas_Object *)ug_get_window()));
+	MSG_IMAGEVIEW_HIGH("Base layout(0x%08x) resized geomtery XYWH(%d,%d,%d,%d)", obj, x, y, w, h);
 }
 
 static void _on_base_move(void *data, Evas *e, Evas_Object *obj, void *event_info)
@@ -146,7 +107,7 @@ static void _on_base_move(void *data, Evas *e, Evas_Object *obj, void *event_inf
 	Evas_Coord x, y, w, h;
 	evas_object_geometry_get(obj, &x, &y, &w, &h);
 
-	MSG_IMAGEVIEW_HIGH("Base layout(0x%08x) moved geomtery XYWH(%d,%d,%d,%d) angle=%d", obj, x, y, w, h, elm_win_rotation_get((Evas_Object *)ug_get_window()));
+	MSG_IMAGEVIEW_HIGH("Base layout(0x%08x) moved geomtery XYWH(%d,%d,%d,%d)", obj, x, y, w, h);
 }
 
 
@@ -211,7 +172,7 @@ static void _on_mmc_state_changed(int storage_id, storage_state_e state, void *u
 			return;
 		}
 
-		MSG_IMAGEVIEW_WARN("Request destroy UG=0x%08x", gGetUGHandle());
+		MSG_IMAGEVIEW_WARN("Request destroy UG");
 
 		if (ugd->main_view) {
 			_ivug_main_on_mmc_state_changed(ugd->main_view);
@@ -313,49 +274,58 @@ static Evas_Object *create_frameview(Evas_Object *parent, ug_data *ugd)
 	return base;
 }
 
-void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *priv)
+bool on_create( void *priv)
 {
 	ug_data *ugd;
 
 	MSG_IMAGEVIEW_HIGH("on_create. CHECKING CONFORMANT");
 
-	Evas_Object *conform = (Evas_Object *)ug_get_conformant();
-	IV_ASSERT(conform != NULL);
+	/*Evas_Object *conform = (Evas_Object *)ug_get_conformant();
+	IV_ASSERT(conform != NULL);*/
 
 	PERF_CHECK_END(LVL0, "UG_MODULE_INIT -> On Create");
 
 	PERF_CHECK_BEGIN(LVL0, "On Create");
 
-	MSG_IMAGEVIEW_HIGH("on_create. UG & PRIV");
+	MSG_IMAGEVIEW_HIGH("on_create. IV & PRIV");
 
-	if (!ug || !priv) {
-		MSG_IMAGEVIEW_ERROR("Error. ug=0x%08x priv=0x%08x", ug, priv);
-		return NULL;
+	if (!priv) {
+		MSG_IMAGEVIEW_ERROR("Error. priv=0x%08x", priv);
+		return false;
 	}
 
 	ugd = (ug_data *)priv;
 
-	MSG_IMAGEVIEW_HIGH("Image Viewer : %s ug=0x%08x, data=0x%08x", __func__, ug, ugd);
+	MSG_IMAGEVIEW_HIGH("Image Viewer : %s  data=0x%08x", __func__, ugd);
 
-	Evas_Object *win = (Evas_Object *)ug_get_window();
+	Evas_Object *win = elm_win_util_standard_add("ug-image-viewer-efl", "ug-image-viewer-efl");
+	ugd->window = win;
 
 	int wx, wy, ww, wh;
 	int error_code = -1;
 
 	evas_object_geometry_get(win, &wx, &wy, &ww, &wh);
 
-	MSG_IMAGEVIEW_HIGH("Parent Info. Layout(0x%08x) Win(0x%08x) Size(%d,%d,%d,%d) rotation=%d",
-	                   ug_get_parent_layout(ug), win, wx, wy, ww, wh,  elm_win_rotation_get(win));
+	MSG_IMAGEVIEW_HIGH("Parent Info. Win(0x%08x) Size(%d,%d,%d,%d) rotation=%d",
+					   win, wx, wy, ww, wh,  elm_win_rotation_get(win));
+
+	Evas_Object *conform = elm_conformant_add(win);
+	if (!conform)
+		return false;
+	evas_object_size_hint_weight_set(parent, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+	elm_win_resize_object_add(win, parent);
+	evas_object_show(parent);
+	evas_object_show(win);
 
 	PERF_CHECK_BEGIN(LVL1, "init context");
-	//init
-	if (!ivug_context_init(ug)) {
+	//init Chandan ...Donno.. what is the use????
+	if (!ivug_context_init(win, conform)) {
 		MSG_IMAGEVIEW_ERROR("ivug_main_init error");
-		return NULL;
+		return false;
 	}
 	PERF_CHECK_END(LVL1, "init context");
 
-	PERF_CHECK_BEGIN(LVL1, "parse bundle");
+/*	PERF_CHECK_BEGIN(LVL1, "parse bundle");
 
 	ugd->ivug_param = ivug_param_create_from_bundle(service);
 	if (ugd->ivug_param == NULL) {
@@ -365,17 +335,19 @@ void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *
 		goto ON_CREATE_ERROR;
 	}
 	PERF_CHECK_END(LVL1, "parse bundle");
-
+*/
 	PERF_CHECK_BEGIN(LVL1, "creating base");
 
 	//create base
-	if (mode == UG_MODE_FULLVIEW) {
+/*	if (mode == UG_MODE_FULLVIEW) {
 		MSG_IMAGEVIEW_HIGH("create base layout for FullView");
 		ugd->base = create_fullview(conform, ugd);
 	} else {
 		MSG_IMAGEVIEW_HIGH("create base layout for FrameView");
 		ugd->base = create_frameview(conform, ugd);
-	}
+	}*/
+
+	ugd->base = create_fullview(conform, ugd);
 
 	PERF_CHECK_END(LVL1, "creating base");
 
@@ -409,7 +381,7 @@ void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *
 	if (error_code != STORAGE_ERROR_NONE) {
 		MSG_IMAGEVIEW_ERROR("storage_set_state_changed_cb() failed!!");
 	}
-
+#if 0//Chandan
 	if (ugd->ivug_param->mode == IVUG_MODE_SETAS && ugd->ivug_param->setas_type != IVUG_SET_AS_UG_TYPE_CALLER_ID && ugd->ivug_param->setas_type != IVUG_SET_AS_UG_TYPE_WALLPAPER_CROP) {
 #ifdef TEST_FOR_CROP
 		ugd->ivug_param->setas_type = IVUG_SET_AS_UG_TYPE_CROP;
@@ -515,21 +487,17 @@ void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *
 	evas_object_event_callback_add(ugd->base, EVAS_CALLBACK_DEL, _on_base_deleted, ugd);
 
 	return ugd->base;
-
+#endif
 ON_CREATE_ERROR:
-	if (ugd->main_view) {
-		ivug_main_view_destroy(ugd->main_view);
-		ugd->main_view = NULL;
-	}
 
 	if (ugd->base == NULL) {
-		ugd->base = elm_layout_add((Evas_Object *)ug_get_window());
+		ugd->base = elm_layout_add(win);
 		elm_layout_theme_set(ugd->base, "layout", "application", "default");
 	}
 
-	return ugd->base;
+	return true;
 }
-
+#if 0 //Chandan
 void on_start(ui_gadget_h ug, app_control_h service, void *priv)
 {
 	MSG_IMAGEVIEW_HIGH("Image Viewer BEGIN %s, ug=0x%08x, data=0x%08x", __func__, ug, priv);
@@ -555,7 +523,7 @@ void on_start(ui_gadget_h ug, app_control_h service, void *priv)
 		PERF_CHECK_END(LVL0, "On Start");
 		MSG_IMAGEVIEW_ERROR("UG create has ERROR");
 		notification_status_message_post(GET_STR(IDS_UNABLE_TO_OPEN_FILE));
-		ug_destroy_me(gGetUGHandle());
+//		ug_destroy_me(gGetUGHandle());
 		return;
 	}
 
@@ -577,13 +545,14 @@ void on_start(ui_gadget_h ug, app_control_h service, void *priv)
 		_send_result_to_caller(ug);
 	}
 }
-
-void on_pause(ui_gadget_h ug, app_control_h service, void *priv)
+#endif
+//void on_pause(ui_gadget_h ug, app_control_h service, void *priv)
+void on_pause( void *priv)
 {
-	MSG_IMAGEVIEW_HIGH("Image Viewer : %s, ug=0x%08x, data=0x%08x", __func__, ug, priv);
+	MSG_IMAGEVIEW_HIGH("Image Viewer : %s, data=0x%08x", __func__, priv);
 
-	if (!ug || !priv) {
-		MSG_IMAGEVIEW_ERROR("Invalid UG. UG=0x%08x Priv=0x%08x", ug, priv);
+	if (!priv) {
+		MSG_IMAGEVIEW_ERROR("Invalid UG. Priv=0x%08x", priv);
 		return ;
 	}
 
@@ -606,11 +575,11 @@ void on_pause(ui_gadget_h ug, app_control_h service, void *priv)
 	}
 }
 
-void on_resume(ui_gadget_h ug, app_control_h service, void *priv)
+void on_resume(void *priv)
 {
-	MSG_IMAGEVIEW_HIGH("Image Viewer : %s, ug=0x%08x, data=0x%08x", __func__, ug, priv);
+	MSG_IMAGEVIEW_HIGH("Image Viewer : %s, data=0x%08x", __func__, priv);
 
-	if (!ug || !priv) {
+	if (!priv) {
 		IVUG_DEBUG_MSG("Invalid UG. UG=0x%08x Priv=0x%08x", ug, priv);
 		return ;
 	}
@@ -625,20 +594,18 @@ void on_resume(ui_gadget_h ug, app_control_h service, void *priv)
 
 }
 
-void on_destroy(ui_gadget_h ug, app_control_h service, void *priv)
+void on_destroy(void *priv)
 {
-	MSG_IMAGEVIEW_HIGH("Image Viewer : %s(0x%08x) UG=0x%08x data=0x%08x", __func__, on_destroy, ug, priv);
+	MSG_IMAGEVIEW_HIGH("Image Viewer : %s(0x%08x) data=0x%08x", __func__, on_destroy, priv);
 
 	PERF_CHECK_BEGIN(LVL0, "On Destroy");
 
 	if (!ug || !priv) {
-		MSG_IMAGEVIEW_ERROR("Invalid UG. UG=0x%08x Priv=0x%08x", ug, priv);
+		MSG_IMAGEVIEW_ERROR("Invalid UG. Priv=0x%08x",priv);
 		return ;
 	}
 
 	ug_data *ugd = (ug_data *)priv;
-
-	MSG_IMAGEVIEW_HIGH("On Destroy : ug=0x%08x", ug);
 
 	if (ugd->bErrMsg) {
 		free(ugd->bErrMsg);
@@ -673,7 +640,7 @@ void on_destroy(ui_gadget_h ug, app_control_h service, void *priv)
 
 	//finalize data
 	PERF_CHECK_BEGIN(LVL1, "Context");
-	if (!ivug_context_deinit(ug)) {
+	if (!ivug_context_deinit()) {
 		MSG_IMAGEVIEW_ERROR("ivug_main_deinit failed");
 	}
 	PERF_CHECK_END(LVL1, "Context");
@@ -703,7 +670,7 @@ static bool _data_print(app_control_h service, const char *key, void *user_data)
 
 	return true;
 }
-
+#if 0//Chandan
 void on_message(ui_gadget_h ug, app_control_h msg, app_control_h service, void *priv)
 {
 	MSG_IMAGEVIEW_HIGH("Image Viewer : %s UG=0x%08x", __func__, ug);	//on message
@@ -782,12 +749,12 @@ void on_event(ui_gadget_h ug, enum ug_event event, app_control_h service, void *
 	}
 }
 
-void on_destroying(ui_gadget_h ug, app_control_h service, void *priv)
+void on_destroying(app_control_h service, void *priv)
 {
-	MSG_IMAGEVIEW_HIGH("Image Viewer : %s UG=0x%08x", __func__, ug);
+	MSG_IMAGEVIEW_HIGH("Image Viewer : %s", __func__);
 
-	if (!ug || !priv) {
-		MSG_IMAGEVIEW_ERROR("Invalid UG. UG=0x%08x Priv=0x%08x", ug, priv);
+	if (!priv) {
+		MSG_IMAGEVIEW_ERROR("Invalid UG. Priv=0x%08x", priv);
 		return;
 	}
 
@@ -797,4 +764,11 @@ void on_destroying(ui_gadget_h ug, app_control_h service, void *priv)
 	}
 
 	gSetDestroying(true);
+}
+#endif
+
+void _language_changed_cb(void *user_data)
+{
+	MSG_IMAGEVIEW_HIGH("Image Viewer : %s UG=0x%08x", __func__, ug);
+
 }

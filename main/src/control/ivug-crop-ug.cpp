@@ -16,8 +16,8 @@
 */
 
 #include <Elementary.h>
-#include <ui-gadget.h>
-#include <ui-gadget-module.h>		// ug_destroy_me, ug_send_result
+//#include <ui-gadget.h>
+//#include <ui-gadget-module.h>		// ug_destroy_me
 
 #include "ivug-crop-ug.h"
 #include "ivug-crop-view.h"
@@ -109,7 +109,7 @@ struct _IvugCropUG {
 } ;
 
 static void
-_send_result(ui_gadget_h ug, const char *key1, const char *val1, const char *key2, const char *val2)
+_send_result(const char *key1, const char *val1, const char *key2, const char *val2)
 {
 	ivug_ret_if(!ug);
 
@@ -135,7 +135,7 @@ _send_result(ui_gadget_h ug, const char *key1, const char *val1, const char *key
 		}
 	}
 
-	ug_send_result(gGetUGHandle(), service);
+	app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
 
 	app_control_destroy(service);
 }
@@ -159,7 +159,7 @@ static void  _ivug_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, void *e
 		}
 	}
 
-	_send_result(gGetUGHandle(), "crop_image_path", path, "http://tizen.org/appcontrol/data/selected", path);
+	_send_result("crop_image_path", path, "http://tizen.org/appcontrol/data/selected", path);
 
 	MSG_HIGH("Start destroy crop ug. bAddToDB=%d", crop_ug->bAddtoDB);
 
@@ -188,17 +188,17 @@ static void _ivug_setas_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, vo
 	if (type == IVUG_CTRLBAR_SET_SCREEN_HOME) {
 		ivug_copy_file(path, homescreen_path);
 
-		_send_result(gGetUGHandle(), "homescreen_path", homescreen_path, NULL, NULL);
+		_send_result("homescreen_path", homescreen_path, NULL, NULL);
 	} else if (type == IVUG_CTRLBAR_SET_SCREEN_LOCK) {
 		ivug_copy_file(path, lockscreen_path);
 
-		_send_result(gGetUGHandle(), "lockscreen_path", lockscreen_path, NULL, NULL);
+		_send_result("lockscreen_path", lockscreen_path, NULL, NULL);
 	} else if (type == IVUG_CTRLBAR_SET_SCREEN_BOTH) {
 		ivug_copy_file(path, homescreen_path);
 		ivug_config_set_homescreen_image(homescreen_path);
 		ivug_copy_file(path, lockscreen_path);
 
-		_send_result(gGetUGHandle(), "homescreen_path", homescreen_path, "lockscreen_path", lockscreen_path);
+		_send_result("homescreen_path", homescreen_path, "lockscreen_path", lockscreen_path);
 	}
 
 	MSG_HIGH("Start destroy ug");
@@ -216,9 +216,9 @@ static void _ivug_crop_view_cancel_clicked_cb(void *data, Evas_Object *obj, void
 
 	evas_object_smart_callback_del(obj, "cancel,clicked", _ivug_crop_view_cancel_clicked_cb);
 
-	_send_result(gGetUGHandle(), "crop_image_path", NULL, "http://tizen.org/appcontrol/data/selected", NULL);
+	_send_result("crop_image_path", NULL, "http://tizen.org/appcontrol/data/selected", NULL);
 
-	MSG_HIGH("Start destroy ug. ugHandle=0x%08x", gGetUGHandle());
+	MSG_HIGH("Start destroy ug.");
 
 //	ivug_set_indicator_overlap_mode(false);
 //	ug_destroy_me(gGetUGHandle());

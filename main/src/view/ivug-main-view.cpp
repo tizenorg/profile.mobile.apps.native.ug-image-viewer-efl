@@ -15,7 +15,7 @@
 *
 */
 
-#include <ui-gadget-module.h>
+//#include <ui-gadget-module.h>
 #include <efl_extension.h>
 #include <media_content.h>
 
@@ -306,7 +306,7 @@ static Eina_Bool _on_btn_back_clicked(void *data, Elm_Object_Item *it)
 		} else {
 			app_control_add_extra_data_array(service, "Selected index", (const char **)files, count_selected);
 		}
-		ug_send_result(gGetUGHandle(), service);
+		app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
 		app_control_destroy(service);
 		free(files);
 	}
@@ -343,7 +343,7 @@ static Eina_Bool _on_btn_back_clicked(void *data, Elm_Object_Item *it)
 		if (pMainView->bStandAlone == true) {
 			MSG_MAIN_HIGH("appsvc hide");
 
-			elm_win_lower((Evas_Object *)ug_get_window());
+			elm_win_lower(pMainView->window);
 
 			return EINA_FALSE;
 		}
@@ -370,7 +370,7 @@ static Eina_Bool _on_btn_back_clicked(void *data, Elm_Object_Item *it)
 			app_control_destroy(service);
 			return EINA_FALSE;
 		}
-		ug_send_result(gGetUGHandle(), service);
+		app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
 		app_control_destroy(service);
 	}
 
@@ -405,7 +405,7 @@ static void _on_save_btn_clicked(void *data, Evas_Object *obj, const char * s, c
 		app_control_destroy(service);
 		return;
 	}
-	ug_send_result(gGetUGHandle(), service);
+	app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
 
 	app_control_destroy(service);
 	DESTROY_ME();
@@ -481,7 +481,7 @@ static void _on_layout_resize(void *data, Evas_Object *obj, void *event_info)
 			evas_object_del(pMainView->ctx_popup);
 			pMainView->ctx_popup = NULL;
 		} else {
-			Evas_Object *win = (Evas_Object *)ug_get_window();
+			Evas_Object *win = pMainView->window;
 			elm_win_screen_size_get(win, NULL, NULL, &w, &h);
 
 			if ((rot == 270) || (rot == 90)) {
@@ -546,9 +546,9 @@ void _ivug_main_on_mmc_state_changed(void *data)
 		return;
 	}
 
-	if (pMainView->ext_ug) {
+	/*if (pMainView->ext_ug) {
 		MSG_IMAGEVIEW_HIGH("Extern UG is running");
-	}
+	}*/
 
 	if (pMainView->ssHandle) {
 		ivug_ss_set_stop(pMainView->ssHandle);
@@ -698,7 +698,7 @@ _on_slider_long_press_start(void *data, Evas_Object *obj, void *event_info)
 		return;
 	}
 
-	bool bUseExtMenu = !(ivug_is_agif(mdata->filepath));	//agif cannot use manual tag
+	bool bUseExtMenu = !(ivug_is_agif(pMainView,mdata->filepath));	//agif cannot use manual tag
 	if (pMainView->mode == IVUG_MODE_DISPLAY) {
 		bUseExtMenu = false;	//disable manualtag at display mode
 	}
@@ -1224,7 +1224,7 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 		edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,enable,title_full", "user");
 	}
 
-	evas_object_smart_callback_add((Evas_Object *)ug_get_window(), "wm,rotation,changed", _on_layout_resize, pMainView);
+	evas_object_smart_callback_add(pMainView->window, "wm,rotation,changed", _on_layout_resize, pMainView);
 
 	pMainView->keydown_handler = ecore_event_handler_add(ECORE_EVENT_KEY_DOWN, _on_key_down, (void *)pMainView);
 
@@ -1448,7 +1448,7 @@ void ivug_main_view_start_slideshow(Ivug_MainView *pMainView, Eina_Bool bSlideFi
 //	ivug_prohibit_lcd_off();
 	//ivug_main_view_hide_menu_bar(pMainView);
 
-	pMainView->ssHandle = ivug_ss_create(pMainView->layout);
+	pMainView->ssHandle = ivug_ss_create(pMainView);
 	pMainView->isSliding = true;
 
 // Register callback
@@ -1958,11 +1958,11 @@ ivug_main_view_destroy(Ivug_MainView *pMainView)
 		pMainView->access_popup = NULL;
 	}
 
-	if (pMainView->ext_ug) {
+	/*if (pMainView->ext_ug) {
 		MSG_MAIN_HIGH("External UG Destroy");
 		ug_destroy(pMainView->ext_ug);
 		pMainView->ext_ug = NULL;
-	}
+	}*/
 
 	if (pMainView->ext_svc) {
 		app_control_send_terminate_request(pMainView->ext_svc);

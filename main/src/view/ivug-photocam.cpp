@@ -424,7 +424,7 @@ bool _main_view_object_move_(Ivug_MainView *pMainView, Evas_Object *obj, int pho
 {
 	int bx, by, bw, bh;
 	evas_object_geometry_get(obj, &bx, &by, &bw, &bh);
-	Evas_Object *win = (Evas_Object *)ug_get_window();
+	Evas_Object *win = pMainView->window;
 	int wx, wy, ww, wh;
 	evas_object_geometry_get(win, &wx, &wy, &ww, &wh);
 

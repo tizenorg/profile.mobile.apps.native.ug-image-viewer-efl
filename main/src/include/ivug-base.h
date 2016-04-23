@@ -19,48 +19,82 @@
 #define __IVUG_BASE_H__
 
 #include <Elementary.h>
-#include <ui-gadget.h>
+#include "ivug-parameter.h"
+#include "ivug-slideshow-view.h"
+#include "ivug-crop-ug.h"
+#include "ivug-main-view.h"
 
 typedef struct _ug_data ug_data;
+
+struct _ug_data {
+	Evas_Object *base;			// UG layout
+
+// View Data;
+	struct _Ivug_MainView *main_view;
+	IvugCropUG *crop_ug;
+
+	Ivug_SlideShowView *ss_view;
+
+	ivug_parameter* ivug_param;
+
+	bool bError;
+	char *bErrMsg;
+
+	Evas_Object *icon;
+	Ecore_Timer *exit_timer;
+
+	Evas_Object *navi_bar;
+	Evas_Object *window;
+	Elm_Object_Item *navi_it;
+};
 
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-ug_data *AllocUGData();
 void FreeUGData(ug_data *ug);
 
 
-void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *priv);
-
+//void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *priv);
+bool on_create(void *priv);
+#if 0//Chandan
 void on_start(ui_gadget_h ug, app_control_h service, void *priv);
+#endif
+void on_pause(void *priv);
 
-void on_pause(ui_gadget_h ug, app_control_h service, void *priv);
-
-void on_resume(ui_gadget_h ug, app_control_h service, void *priv);
+void on_resume(void *priv);
 
 
 /*
 
 */
+#if 0//Chandan
 void on_message(ui_gadget_h ug, app_control_h msg, app_control_h service, void *priv);
+#endif
 
 /*
 
 */
+#if 0//Chandan
 void on_event(ui_gadget_h ug, enum ug_event event, app_control_h service, void *priv);
+#endif
+/*
+
+*/
+void _language_changed_cb(void *user_data);
 
 /*
 
 */
-void on_destroying(ui_gadget_h ug, app_control_h service, void *priv);
-
+#if 0//Chandan
+void on_destroying(app_control_h service, void *priv);
+#endif
 
 /*
 
 */
-void on_destroy(ui_gadget_h ug, app_control_h service, void *priv);
+void on_destroy(void *priv);
 
 
 #ifdef __cplusplus

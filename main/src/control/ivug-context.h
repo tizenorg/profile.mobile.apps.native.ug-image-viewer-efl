@@ -24,7 +24,13 @@
 #include "ivug-callback.h"
 
 #include "ivug-language-mgr.h"
-#include <ui-gadget.h>
+#include "ivug-common.h"
+#include "ivug-util.h"
+#include "ivug-widget.h"
+
+#include "ivug-db.h"
+
+#include "ivug-language-mgr.h"
 
 /*
 	Managing context(instance)
@@ -34,10 +40,10 @@ extern "C" {
 #endif
 
 bool
-ivug_context_deinit(ui_gadget_h ug);
+ivug_context_deinit();
 
 bool
-ivug_context_init(ui_gadget_h ug);
+ivug_context_init(Evas_Object *win, Evas_Object *conform);
 
 void
 ivug_context_destroy_me(const char *file, int line);
@@ -58,9 +64,10 @@ gGetSystemTheme(void);
 int
 gGetRotationDegree(void);
 
+#if 0//Chandan
 ui_gadget_h
 gGetUGHandle(void);
-
+#endif
 Evas_Object *
 gGetCurrentWindow(void);
 
@@ -79,12 +86,18 @@ gGetScreenHeight();
 void gSetAlbumIndex(const char* val);
 const char* gGetAlbumIndex();
 
+app_control_h
+gGetServiceHandle(void);
+
+void
+gSetServiceHandle(app_control_h service);
+
 bool gGetDestroying();
 
 void gSetDestroying(bool isDestroying);
-
+#if 0//Chandan
 Evas_Object *gGetParentLayout();
-
+#endif
 #ifdef __cplusplus
 }
 #endif

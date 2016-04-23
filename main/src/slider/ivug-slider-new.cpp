@@ -15,7 +15,7 @@
 *
 */
 
-#include <ui-gadget-module.h>		// ug_destroy_me, ug_send_result
+//#include <ui-gadget-module.h>		// ug_destroy_me
 #include <algorithm>    // std::swap
 
 #include <pthread.h>
@@ -123,7 +123,7 @@ static void _on_obj_resize(void *data, Evas *e, Evas_Object *obj, void *event_in
 	}
 #endif
 
-	MSG_HIGH("QSlider(0x%08x) resized geomtery XYWH(%d,%d,%d,%d) angle=%d", obj, x, y, w, h, elm_win_rotation_get((Evas_Object *)ug_get_window()));
+	MSG_HIGH("QSlider(0x%08x) resized geomtery XYWH(%d,%d,%d,%d) angle=%d", obj, x, y, w, h, elm_win_rotation_get(slider_new->pMainView->window));
 }
 
 static void _on_obj_move(void *data, Evas *e, Evas_Object *obj, void *event_info)
@@ -144,7 +144,7 @@ static void _on_obj_move(void *data, Evas *e, Evas_Object *obj, void *event_info
 	}
 #endif
 
-	MSG_HIGH("QSlider(0x%08x) moved geomtery XYWH(%d,%d,%d,%d) angle=%d", obj, x, y, w, h, elm_win_rotation_get((Evas_Object *)ug_get_window()));
+	MSG_HIGH("QSlider(0x%08x) moved geomtery XYWH(%d,%d,%d,%d) angle=%d", obj, x, y, w, h, elm_win_rotation_get(slider_new->pMainView->window));
 }
 
 
@@ -606,7 +606,7 @@ Ivug_SliderNew * ivug_slider_new_init(Evas_Object *parent, void *pMainView)
 	slider_new->bSliding = true;
 
 
-	Evas_Object *win = (Evas_Object *)ug_get_window();
+	Evas_Object *win = slider_new->pMainView->window;
 	int wx, wy, ww, wh;
 
 	evas_object_geometry_get(win, &wx, &wy, &ww, &wh);
@@ -680,7 +680,7 @@ Ivug_SliderNew * ivug_slider_new_init(Evas_Object *parent, void *pMainView)
 
 #if 1
 	int x, y, w, h;
-	evas_object_geometry_get((Evas_Object *)ug_get_window(), &x, &y, &w, &h);
+	evas_object_geometry_get(slider_new->pMainView->window, &x, &y, &w, &h);
 #else
 // \B0\A1\B7η\CE \BD\C3\C0\DB\C7ϴ\C2 \B0\E6\BF\EC \B5\BF\C0\DB \C0̻\F3\C7\D4.
 	int w, h;
@@ -829,16 +829,16 @@ void ivug_slider_new_change_view_size(Ivug_SliderNew *slider_new, int w, int h)
 {
 
 	int wx, wy, ww, wh;
-	evas_object_geometry_get((Evas_Object *)ug_get_window(), &wx, &wy, &ww, &wh);
+	evas_object_geometry_get(slider_new->pMainView->window, &wx, &wy, &ww, &wh);
 
-	int rot = elm_win_rotation_get((Evas_Object *)ug_get_window());
+	int rot = elm_win_rotation_get(slider_new->pMainView->window);
 
 	int screen_x = 0;
 	int screen_y = 0;
 	int screen_w = 0;
 	int screen_h = 0;
 
-	elm_win_screen_size_get((Evas_Object *)ug_get_window(), &screen_x, &screen_y, &screen_w, &screen_h);
+	elm_win_screen_size_get(slider_new->pMainView->window, &screen_x, &screen_y, &screen_w, &screen_h);
 	MSG_HIGH("screen_Size : Win(%d,%d,%d,%d)", screen_x, screen_y, screen_w, screen_h);
 
 	if ((rot % 180) != 0) {

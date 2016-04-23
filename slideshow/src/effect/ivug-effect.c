@@ -60,7 +60,7 @@ _on_effect_animator(void *data)
 
 		MSG_EFFECT_HIGH("Last effect frame. value=%f", value);
 
-		engine->func.animate(engine->eng_data, value);		// Draw last frame.
+		engine->func.animate(engine->eng_data, value, (SlideShow*)(engine->ClientData));		// Draw last frame.
 		// Inform to user.
 		if (engine->pFinishedCB)
 		{
@@ -70,7 +70,7 @@ _on_effect_animator(void *data)
 		return ECORE_CALLBACK_CANCEL;
 	}
 
-	engine->func.animate(engine->eng_data, value);
+	engine->func.animate(engine->eng_data, value, (SlideShow*)(engine->ClientData));
 
 	return ECORE_CALLBACK_RENEW;
 }

@@ -104,8 +104,8 @@ extern "C" {
 #endif
 
 
-ivug_parameter*
-ivug_param_create_from_bundle(app_control_h service);
+void
+ivug_param_create_from_bundle(app_control_h service, void *ugdata);
 
 void
 ivug_param_delete(ivug_parameter* data);

@@ -33,6 +33,7 @@
 #include "ivug-medialist.h"
 #include "ivug-config.h"
 #include "ivug-effect.h"
+#include "ivug-main-view.h"
 
 using namespace std;
 
@@ -102,5 +103,6 @@ typedef struct _SlideShow
 	Eina_Bool bSS_StopFlag; /* request slide show stop flag */
 	bool bMouse_event;
 	bool bPlayButton;
+	Ivug_MainView *pMainView;
 }SlideShow;
 

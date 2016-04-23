@@ -30,6 +30,8 @@
 #include "ivug-medialist.h"
 #include "ivug-config.h"
 
+#include "ivug-main-view.h"
+#include "ivug-main-view-priv.h"
 
 typedef enum {
 	SLIDE_SHOW_STOPPED = 0x00,
@@ -44,13 +46,14 @@ Signals
 */
 
 typedef struct _SlideShow SlideShow;
+//typedef struct _Ivug_MainView Ivug_MainView;//Chandan Check
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 SlideShow *
-ivug_ss_create(Evas_Object *parent);
+ivug_ss_create(struct _Ivug_MainView *pMainView);
 
 bool
 ivug_ss_start(SlideShow *pSlideShow , Media_Item *current, Media_List *list, Eina_Bool bSlideFirst);

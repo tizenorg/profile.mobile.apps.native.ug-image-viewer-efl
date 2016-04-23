@@ -19,18 +19,18 @@
 #define __IVUG_EXT_UG_H__
 
 #include <stdbool.h>
-#include <ui-gadget.h>
+//#include <ui-gadget.h>
 
 #include "ivug-define.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+#if 0//Chandan
 typedef void (*ug_destroy_cb)(ui_gadget_h ug, void *data);
 typedef void (*ug_result_cb)(ui_gadget_h ug, app_control_h service, void *data);
 typedef void (*ug_end_cb)(ui_gadget_h ug, void *data);
-
+#endif
 #define OPERATION_NAME_CALL "http://tizen.org/appcontrol/operation/call"
 
 /*
@@ -38,9 +38,9 @@ typedef void (*ug_end_cb)(ui_gadget_h ug, void *data);
 */
 bool ivug_ext_launch_videoplayer_simple(const char *filepath);
 bool ivug_ext_launch_videoplayer(const char *uri);
-
+#if 0//Chandan
 ui_gadget_h  ivug_ext_launch_contact(const char *uri, ug_destroy_cb func, void *data);
-
+#endif
 #ifdef USE_EXT_SLIDESHOW
 ui_gadget_h  ivug_ext_launch_select_music(ug_result_cb result_func, ug_destroy_cb destroy_func, void *data);
 #endif
@@ -65,6 +65,7 @@ bool ivug_ext_launch_default(const char *uri, const char *operation, const char 
 #ifdef IV_EXTENDED_FEATURES
 bool ivug_ext_launch_sns(const char *pkgname, const char *uri);
 #endif
+#if 0//Chandan
 ui_gadget_h  ivug_ext_launch_wifi_file_transfer(const char *uri, ug_destroy_cb func, void *data);
 ui_gadget_h  ivug_ext_launch_bluetooth_print(const char *uri, ug_destroy_cb func, void *data);
 ui_gadget_h  ivug_ext_launch_bluetooth_send(const char *uri, ug_destroy_cb func, void *data);
@@ -72,7 +73,7 @@ ui_gadget_h  ivug_ext_launch_bluetooth_send(const char *uri, ug_destroy_cb func,
 
 ui_gadget_h  ivug_ext_launch_message(const char *uri, ug_destroy_cb func, void *data);
 ui_gadget_h  ivug_ext_launch_s_note(const char *uri, ug_destroy_cb func, void *data);
-
+#endif
 #ifdef IV_EXTENDED_FEATURES
 bool ivug_ext_launch_email(const char *uri);
 #endif
@@ -90,11 +91,12 @@ bool ivug_ext_launch_twitter(const char *uri);
 /*
 	Below functions are for gallery setting efl and select picture ug
 */
+#if 0//Chandan
 bool ivug_ext_launch_setting_gallery(ug_result_cb resultcb,ug_destroy_cb destorycb,  ug_end_cb endcb, void *data);
 
 //ivug_ext_launch_select_image serviceHandle create and destroy have to be outside
 bool ivug_ext_launch_select_image(app_control_h serviceHandle, ug_result_cb resultcb, ug_destroy_cb destorycb, void *data);
-
+#endif
 
 /*
 	Start mira cast ug.

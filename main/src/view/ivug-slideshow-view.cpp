@@ -20,7 +20,7 @@
 
 #include "ivug-slideshow-view.h"
 
-#include <ui-gadget-module.h>
+//#include <ui-gadget-module.h>
 #include <device/power.h>
 
 #include "ivug-filter.h"
@@ -43,7 +43,7 @@ static void
 _on_slideshow_finished(void *data, Evas_Object *obj, void *event_info);
 
 static void
-_send_result(ui_gadget_h ug, const char *key1, const char *val1, const char *key2, const char *val2)
+_send_result(const char *key1, const char *val1, const char *key2, const char *val2)
 {
 	ivug_ret_if(!ug);
 
@@ -66,7 +66,7 @@ _send_result(ui_gadget_h ug, const char *key1, const char *val1, const char *key
 		app_control_add_extra_data(service, key2, val2);
 	}
 
-	ug_send_result(gGetUGHandle(), service);
+	app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
 
 	app_control_destroy(service);
 }
@@ -82,7 +82,7 @@ static bool _destory_slideshow_and_ug(Ivug_SlideShowView *pSSView,
 //	ivug_allow_lcd_off();
 	/* send msg to caller */
 	if (state == SLIDE_SHOW_STOPPED) {
-		_send_result(gGetUGHandle(), "EXIT", "NORMAL", NULL, NULL);
+		_send_result("EXIT", "NORMAL", NULL, NULL);
 	}
 
 	/*from gallery ablum*/
