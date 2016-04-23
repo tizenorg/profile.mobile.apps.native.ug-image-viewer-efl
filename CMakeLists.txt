@@ -1,125 +1,82 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+PROJECT(image-viewer C CXX)
 
-PROJECT(ug-image-viewer-efl C CXX)
+SET(PREFIX ${CMAKE_INSTALL_PREFIX})
 
-SET(IVUG_PACKAGE_NAME "ug-image-viewer-efl")
+# subdir
+ADD_SUBDIRECTORY(src)
+ADD_SUBDIRECTORY(src/common)
+ADD_SUBDIRECTORY(src/feature)
+ADD_SUBDIRECTORY(src/main)
+ADD_SUBDIRECTORY(src/main/control)
+ADD_SUBDIRECTORY(src/main/decolayer)
+ADD_SUBDIRECTORY(src/main/popup)
+ADD_SUBDIRECTORY(src/main/slider)
+ADD_SUBDIRECTORY(src/main/thumblist)
+ADD_SUBDIRECTORY(src/main/view)
+ADD_SUBDIRECTORY(src/medialist)
+ADD_SUBDIRECTORY(src/slideshow)
+ADD_SUBDIRECTORY(src/slideshow/control)
+ADD_SUBDIRECTORY(src/slideshow/effect)
+ADD_SUBDIRECTORY(res/edje)
+ADD_SUBDIRECTORY(res/edje/icons)
+ADD_SUBDIRECTORY(res/edje/images)
+ADD_SUBDIRECTORY(res/po)
+ADD_SUBDIRECTORY(res/edje/sounds)
 
-SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+CONFIGURE_FILE(image-viewer.manifest-3.0.in ${PKGNAME}.manifest)
 
-SET(CMAKE_INSTALL_PREFIX ${TZ_SYS_RO_UG})
-
-IF("${ARCH}" STREQUAL "arm")
-	ADD_DEFINITIONS("-DTARGET")
-ENDIF("${ARCH}" STREQUAL "arm")
-
-ADD_DEFINITIONS("-DUG_MODULE_API=__attribute__ \(\(visibility\(\"default\"\)\)\)")
-ADD_DEFINITIONS("-DPACKAGE=\"${PROJECT_NAME}\"")
-ADD_DEFINITIONS("-DDATADIR=\"${CMAKE_DATA_DIR}\"")
-ADD_DEFINITIONS("-DPREFIX=\"${CMAKE_INSTALL_PREFIX}\"")
-ADD_DEFINITIONS("-DIVAPI=")
-
-SET(IVUG_SOURCE_COMMON_DIR 		"${CMAKE_SOURCE_DIR}/common")
-SET(IVUG_SOURCE_WIDGET_DIR 		"${CMAKE_SOURCE_DIR}/widget")
-SET(IVUG_SOURCE_MAIN_DIR 		"${CMAKE_SOURCE_DIR}/main")
-SET(IVUG_SOURCE_MEDIA_DIR 		"${CMAKE_SOURCE_DIR}/medialist")
-SET(IVUG_SOURCE_SLIDESHOW_DIR 	"${CMAKE_SOURCE_DIR}/slideshow")
-SET(IVUG_SOURCE_FEATURE_DIR 	"${CMAKE_SOURCE_DIR}/feature")
-SET(IVUG_SOURCE_RESOURCE_DIR 	"${CMAKE_SOURCE_DIR}/res")
-SET(IVUG_SOURCE_EXTERN_DIR 		"${CMAKE_SOURCE_DIR}/extern")
-SET(IVUG_SOURCE_DEFINE_DIR 	"${CMAKE_SOURCE_DIR}/include")
-SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${EXTRA_CFLAGS}")
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${EXTRA_CXXFLAGS}")
-
-message("CFLAGS="${CMAKE_C_FLAGS})
-message("CXXFLAGS="${CMAKE_CXX_FLAGS})
-message("LDFLAGS="${CMAKE_LDFLAGS})
-
-FUNCTION (BUILD_EDJ _in _out _base _dir)
+FUNCTION (BUILD_EDJ _in _out)
 	ADD_CUSTOM_TARGET(${_out}
 			COMMAND
 				edje_cc
-				-id ${_base}/${_dir}
-				-sd ${_base}/${_dir}
-				-DDEFINE_H=${IVUG_SOURCE_DEFINE_DIR}
-				${CMAKE_CURRENT_SOURCE_DIR}/${_base}/${_in}
-				${CMAKE_CURRENT_SOURCE_DIR}/${_base}/${_out}
+				-id ${CMAKE_CURRENT_SOURCE_DIR}/res/edje/images
+				-id ${CMAKE_CURRENT_SOURCE_DIR}/res/edje/icons
+				-sd ${CMAKE_CURRENT_SOURCE_DIR}/res/edje/sounds
+				${CMAKE_CURRENT_SOURCE_DIR}/res/edje/${_in}
+				${CMAKE_BINARY_DIR}/${_out}
 			DEPENDS
-				${CMAKE_CURRENT_SOURCE_DIR}/${_base}/${_in}
+				${CMAKE_CURRENT_SOURCE_DIR}/res/edje/${_in}
 	)
 	ADD_DEPENDENCIES(${PROJECT_NAME} ${_out})
-	INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/${_base}/${_out} DESTINATION ${CMAKE_INSTALL_PREFIX}/res/edje/${IVUG_PACKAGE_NAME})
+	INSTALL(FILES ${CMAKE_BINARY_DIR}/${_out} DESTINATION ${RESDIR}/edje)
 ENDFUNCTION (BUILD_EDJ)
 
-FUNCTION (BUILD_EDJ_SOUND _in _out _base _dir _sound)
-	ADD_CUSTOM_TARGET(${_out}
-			COMMAND
-				edje_cc
-				-id ${_base}/${_dir}
-				-sd ${_base}/${_sound}
-				-DDEFINE_H=${IVUG_SOURCE_DEFINE_DIR}
-				${CMAKE_CURRENT_SOURCE_DIR}/${_base}/${_in}
-				${CMAKE_CURRENT_SOURCE_DIR}/${_base}/${_out}
-			DEPENDS
-				${CMAKE_CURRENT_SOURCE_DIR}/${_base}/${_in}
-	)
-	ADD_DEPENDENCIES(${PROJECT_NAME} ${_out})
-	INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/${_base}/${_out} DESTINATION ${CMAKE_INSTALL_PREFIX}/res/edje/${IVUG_PACKAGE_NAME})
-ENDFUNCTION (BUILD_EDJ_SOUND)
 
-ADD_SUBDIRECTORY(main)
-ADD_SUBDIRECTORY(common)
-ADD_SUBDIRECTORY(medialist)
-ADD_SUBDIRECTORY(widget)
-ADD_SUBDIRECTORY(slideshow)
-ADD_SUBDIRECTORY(feature)
-ADD_SUBDIRECTORY(res)
-ADD_SUBDIRECTORY(theme)
+INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/res/edje)
 
-IF (BUILD_TC)
-	ADD_SUBDIRECTORY(TC)
-ENDIF()
+# Build edc files
+BUILD_EDJ(ivug-base.edc ivug-base.edj)
+BUILD_EDJ(ivug-best.edc ivug-best.edj)
+BUILD_EDJ(ivug-buddy-view.edc ivug-buddy-view.edj)
+BUILD_EDJ(ivug-button_new.edc ivug-button_new.edj)
+BUILD_EDJ(ivug-crop-view.edc ivug-crop-view.edj)
+BUILD_EDJ(ivug-custom.edc ivug-custom.edj)
+BUILD_EDJ(ivug-details.edc ivug-details.edj)
+BUILD_EDJ(ivug-edit-weather-view.edc ivug-edit-weather-view.edj)
+BUILD_EDJ(ivug-effect.edc ivug-effect.edj)
+BUILD_EDJ(ivug-face-view.edc ivug-face-view.edj)
+BUILD_EDJ(ivug-icons.edc ivug-icons.edj)
+BUILD_EDJ(ivug-main.edc ivug-main.edj)
+BUILD_EDJ(ivug-name-view.edc ivug-name-view.edj)
+BUILD_EDJ(ivug-nearby-device.edc ivug-nearby-device.edj)
+BUILD_EDJ(ivug-popup.edc ivug-popup.edj)
+BUILD_EDJ(ivug-scroller.edc ivug-scroller.edj)
+BUILD_EDJ(ivug-setas.edc ivug-setas.edj)
+BUILD_EDJ(ivug-slider-new.edc ivug-slider-new.edj)
+BUILD_EDJ(ivug-slider-new-hd.edc ivug-slider-new-hd.edj)
+BUILD_EDJ(ivug-slider.edc ivug-slider.edj)
+BUILD_EDJ(ivug-ss-ly.edc ivug-ss-ly.edj)
+BUILD_EDJ(ivug-tag-buddy.edc ivug-tag-buddy.edj)
+BUILD_EDJ(ivug-thumblist.edc ivug-thumblist.edj)
+BUILD_EDJ(ivug-widget-button.edc ivug-widget-button.edj)
+BUILD_EDJ(ivug-widget-icons.edc ivug-widget-icons.edj)
+BUILD_EDJ(weather-tag-buddy.edc weather-tag-buddy.edj)
 
-SET(SRCS
-	ug-image-viewer.cpp
-)
-INCLUDE(FindPkgConfig)
-pkg_check_modules(pkgs REQUIRED
-	elementary
-	ui-gadget-1
-	capi-appfw-application
-	capi-appfw-app-manager
-	appsvc
-	efl-extension
-	capi-system-runtime-info
-	capi-system-system-settings
-	libtzplatform-config
-)
-INCLUDE_DIRECTORIES(
-	include
-	common/include
-	main/src/control
-	main/src/include
-)
+INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/res/edje/images DESTINATION ${RESDIR}/edje)
+INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/res/edje/icons DESTINATION ${RESDIR}/edje)
 
-FOREACH(flag ${pkgs_CFLAGS})
-	SET(EXTRA_FLAGS "${EXTRA_FLAGS} ${flag}")
-ENDFOREACH(flag)
 
-ADD_LIBRARY(${PROJECT_NAME} SHARED ${SRCS})
-
-SET(VERSION_MAJOR 0)
-SET(VERSION "${VERSION_MAJOR}.1.0")
-SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--as-needed -pie -Wl,-z,noexecstack")
-
-SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES SOVERSION ${VERSION_MAJOR})
-SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES VERSION ${VERSION})
-SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS "${EXTRA_FLAGS}")
-SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES INSTALL_RPATH ${CMAKE_INSTALL_PREFIX}/lib)
-TARGET_LINK_LIBRARIES(${PROJECT_NAME}
-	${pkgs_LDFLAGS}
-	image-viewer
-)
-
-INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
-
-INSTALL(FILES ug-image-viewer-efl.xml DESTINATION ${TZ_SYS_RO_PACKAGES} RENAME image-viewer-efl.xml)
+INSTALL(FILES image-viewer.manifest.xml DESTINATION ${MANIFESTDIR} RENAME ${PKGNAME}.xml)
+INSTALL(FILES shared/res/org.tizen.image-viewer.png DESTINATION ${ICONDIR})
+#INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/res/edje/images/ DESTINATION ${IMGDIR})
