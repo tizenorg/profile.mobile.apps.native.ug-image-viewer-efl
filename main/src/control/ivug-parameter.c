@@ -753,6 +753,7 @@ ivug_param_create_from_bundle(app_control_h service)
 		}
 		_ivug_free(&val);
 	}
+	app_control_error_e ret = APP_CONTROL_ERROR_NONE;
 
 	if (data->mode == IVUG_MODE_SELECT) {
 		char **index_list = NULL;
@@ -767,13 +768,32 @@ ivug_param_create_from_bundle(app_control_h service)
 		app_control_get_extra_data_array(service, IVUG_BUNDLE_KEY_SELECTED_INDEX, &index_list, &index_len);
 		app_control_get_extra_data_array(service, IVUG_BUNDLE_KEY_SELECTED_INDEX_FAV, &index_list_fav, &index_len_fav);
 		app_control_get_extra_data (service, IVUG_BUNDLE_KEY_ALBUM_IDX, &val);
-		app_control_get_extra_data(service, APP_CONTROL_DATA_TOTAL_SIZE, &limitsize);
-		app_control_get_extra_data(service, IVUG_BUNDLE_KEY_SELECT_SIZE, &selsize);
-		app_control_get_extra_data(service, APP_CONTROL_DATA_TOTAL_COUNT, &max_count);
+		ret = app_control_get_extra_data(service, APP_CONTROL_DATA_TOTAL_SIZE, &limitsize);
+		if (ret != APP_CONTROL_ERROR_NONE) {
+			MSG_MAIN_ERROR("app_control_operation failed for APP_CONTROL_DATA_TOTAL_SIZE");
+		} else {
+			if (limitsize) {
+				data->select_view_limit_size = atoll(limitsize);
+			}
+		}
 
-		data->select_view_limit_size = atoll(limitsize);
-		data->select_view_selected_size = atoll(selsize);
-		data->select_view_max_count = atoi(max_count);
+		ret = app_control_get_extra_data(service, IVUG_BUNDLE_KEY_SELECT_SIZE, &selsize);
+		if (ret != APP_CONTROL_ERROR_NONE) {
+			MSG_MAIN_ERROR("app_control_operation failed for SELECTED_SIZE");
+		} else {
+			if (selsize) {
+				data->select_view_selected_size = atoll(selsize);
+			}
+		}
+
+		ret = app_control_get_extra_data(service, APP_CONTROL_DATA_TOTAL_COUNT, &max_count);
+		if (ret != APP_CONTROL_ERROR_NONE) {
+			MSG_MAIN_ERROR("app_control_operation failed for APP_CONTROL_DATA_TOTAL_COUNT");
+		} else {
+			if (max_count) {
+				data->select_view_max_count = atoi(max_count);
+			}
+		}
 
 		if(strcmp(val,  "GALLERY_ALBUM_FAVOURITE_ALBUMS_ID")==0){
 			if (index_list_fav != NULL) {
