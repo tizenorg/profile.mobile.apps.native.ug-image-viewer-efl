@@ -2,7 +2,7 @@ msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
 msgstr "პერსონალური"
 
 msgid "IDS_VIDEO_OPT_RENAME"
-msgstr "ხელახლა დასათაურება"
+msgstr "სახელის გადარქმევა"
 
 msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
 msgstr "ეს ვიდეო წაიშლება."
@@ -24,6 +24,9 @@ msgstr "ნათება"
 
 msgid "IDS_COM_SK_STOP"
 msgstr "შეჩერება"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "გაუქმება"
 
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "%1$s გამორთულია ამ პროგრამაში. ამ ფუნქციის ჩასართავად გახსენით %2$s, აირჩიეთ ეს ფუნქცია და შემდეგ აირჩიეთ ეს პროგრამა"
@@ -976,7 +979,7 @@ msgstr "არ გაიგზავნოს"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 წამი"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d წამი"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "ჩაქრობა"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "გადიდება"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "გადარქმ."
 

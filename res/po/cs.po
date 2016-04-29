@@ -25,6 +25,9 @@ msgstr "Blesk"
 msgid "IDS_COM_SK_STOP"
 msgstr "Stop"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Zrušit"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "%1$s je v této aplikaci vypnuto. Chcete-li funkci zapnout, přejděte na %2$s, vyberte tuto funkci a potom vyberte tuto aplikaci."
 
@@ -976,7 +979,7 @@ msgstr "Neodesílat"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 sekunda"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "Počet sekund: %d"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Zeslabit"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Přiblížit"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Přejmenovat"
 

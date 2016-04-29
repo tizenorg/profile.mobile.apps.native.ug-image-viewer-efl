@@ -5,7 +5,7 @@ msgid "IDS_VIDEO_OPT_RENAME"
 msgstr "تغيير الاسم"
 
 msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
-msgstr "سيتم حذف هذا الفيديو."
+msgstr "سيتم حذف مقطع فيديو واحد."
 
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "اسم الملف مستخدم بالفعل"
@@ -24,6 +24,9 @@ msgstr "فلاش"
 
 msgid "IDS_COM_SK_STOP"
 msgstr "إيقاف"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "إلغاء"
 
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "تم إلغاء تفعيل %1$s في هذا التطبيق. لتفعيل هذه الوظيفة، انتقل إلى %2$s وحدد هذه الوظيفة، ثم حدد هذا التطبيق."
@@ -62,7 +65,7 @@ msgid "IDS_IV_BUTTON_CANCEL"
 msgstr "إلغاء"
 
 msgid "IDS_IV_POP_DELETED"
-msgstr "تم المسح."
+msgstr "تم الحذف."
 
 msgid "IDS_IV_BODY_FAVOURITE"
 msgstr "المفضلة"
@@ -134,7 +137,7 @@ msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACT
 msgstr "قد تختلف معلومات الطقس المسجلة عن حالة الطقس الفعلية بسبب تحديث الفاصل الزمني."
 
 msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
-msgstr "يمكن استخدام المحتوى الشخصي المنسوخ إلى الحافظة لإنشاء محتوى جديد. قد لا يتم إخفاء المحتوى الجديد تلقائيًا."
+msgstr "يمكن استخدام المحتوى الشخصي المنسوح إلى الحافظة لإنشاء محتوى جديد. قد لا يتم إخفاء المحتوى الجديد تلقائيًا."
 
 msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
 msgstr "الصورة صغير جدا."
@@ -194,7 +197,7 @@ msgid "IDS_IV_POP_FLASH_USED_ABB"
 msgstr "الفلاش مستخدم"
 
 msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
-msgstr "ليس تنسيق الملف مدعومًا."
+msgstr "تنسيق الملف غير مدعوم."
 
 msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
 msgstr "المدخل خالي."
@@ -410,7 +413,7 @@ msgid "IDS_IV_BODY_TIMED_COUNT"
 msgstr "عداد محدد زمنيا"
 
 msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MSG_CHN"
-msgstr "The recorded weather information should be edited manually. Your device does not support receiving recorded weather info from the weather widget."
+msgstr "ينبغي تعديل معلومات الطقس المسجلة يدوياً. لا يدعم جهازك تلقي معلومات الطقس المسجلة من التطبيق المصغر الخاص بالطقس."
 
 msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
 msgstr "انقر على الوجوه لعرض معلومات حول الأشخاص"
@@ -719,7 +722,7 @@ msgid "IDS_ST_SK_RENAME"
 msgstr "تغيير الاسم"
 
 msgid "IDS_COM_BODY_NONE"
-msgstr "لا شيء"
+msgstr "لاشيء"
 
 msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
 msgstr "تم تحديد %d"
@@ -743,7 +746,7 @@ msgid "IDS_IV_OPT_3_SECS_ABB"
 msgstr "٣ ثوان"
 
 msgid "IDS_IV_OPT_5_SECS_ABB"
-msgstr "٥ ثواني"
+msgstr "٥  ثوان"
 
 msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
 msgstr "موقع وحدة التخزين"
@@ -976,7 +979,7 @@ msgstr "لا ترسل"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "ثانية واحدة"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d ثانية"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "تلاشي"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "تقريب"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "تغيير الاسم"
 

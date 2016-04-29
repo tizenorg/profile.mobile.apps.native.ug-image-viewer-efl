@@ -25,6 +25,9 @@ msgstr "Жарық"
 msgid "IDS_COM_SK_STOP"
 msgstr "Үзіліс"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Тоқтату"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "Бұл бағдарламада %1$s өшірілді. Бұл функцияны іске қосу үшін %2$s ішіне өтіп, осы функцияны таңдаңыз және осы бағдарламаны таңдаңыз"
 
@@ -976,7 +979,7 @@ msgstr "Жібермеу"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 секунд"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d секунд"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Бәсеңдету"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Үлкейту"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Бсқш атау"
 

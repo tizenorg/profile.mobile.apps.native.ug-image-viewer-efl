@@ -25,6 +25,9 @@ msgstr "Flash"
 msgid "IDS_COM_SK_STOP"
 msgstr "Ferma"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Annulla"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "%1$s è disattivato in questa applicazione. Per attivare questa funzione, andate in %2$s, selezionate la funzione, quindi l'applicazione."
 
@@ -374,7 +377,7 @@ msgid "IDS_IV_BUTTON_STOP"
 msgstr "Ferma"
 
 msgid "IDS_IV_BUTTON_SCAN"
-msgstr "Scansione"
+msgstr "Cerca"
 
 msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
 msgstr "Potete condividere i contenuti multimediali con altri dispositivi utilizzando la funzione di ricerca di dispositivi vicini."
@@ -401,7 +404,7 @@ msgid "IDS_IV_BODY_VALIDITY"
 msgstr "Validità"
 
 msgid "IDS_IV_BODY_UNLIMITED"
-msgstr "Senza limitazioni"
+msgstr "Illimitato"
 
 msgid "IDS_IV_BODY_UNABLE_TO_LOAD_PHOTO_ABB"
 msgstr "Impossibile caricare la foto."
@@ -976,7 +979,7 @@ msgstr "Non inviare"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 secondo"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d secondi"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Sfumatura"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Zoom avanti"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Rinomina"
 

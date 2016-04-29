@@ -25,6 +25,9 @@ msgstr "Splanc"
 msgid "IDS_COM_SK_STOP"
 msgstr "Stop"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cuir ar ceal"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "Tá %1$s díchumasaithe san fheidhmchlár seo. Leis an bhfeidhm seo a chumasú, gabh chuig %2$s, roghnaigh an fheidhm seo, agus ansin roghnaigh an feidhmchlár seo."
 
@@ -976,7 +979,7 @@ msgstr "Ná seol"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 soicind"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d soicind"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Céimnigh"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Zúmáil isteach"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Athainmnigh"
 

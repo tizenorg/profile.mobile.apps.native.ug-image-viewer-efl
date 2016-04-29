@@ -25,6 +25,9 @@ msgstr "Bliskavica"
 msgid "IDS_COM_SK_STOP"
 msgstr "Ustavi"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Prekliči"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "Funkcija %1$s je onemogočena v tej aplikaciji. Če želite omogočiti to funkcijo, pojdite v meni %2$s, izberite to funkcijo in nato izberite to aplikacijo."
 
@@ -976,7 +979,7 @@ msgstr "Ne pošlji"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 sekunda"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d sekund"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Zatemnitev"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Povečava"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Preimenuj"
 

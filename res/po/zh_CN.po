@@ -5,7 +5,7 @@ msgid "IDS_VIDEO_OPT_RENAME"
 msgstr "重命名"
 
 msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
-msgstr "将删除此视频。"
+msgstr "是否删除所选视频？"
 
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "文件名已被使用"
@@ -24,6 +24,9 @@ msgstr "闪光灯"
 
 msgid "IDS_COM_SK_STOP"
 msgstr "停止"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "取消"
 
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "此应用程序中，%1$s 已禁用。若要启用该功能，请进入 %2$s，选择该功能，然后选择该应用程序。"
@@ -47,10 +50,10 @@ msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
 msgstr "仅有一个相册"
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
-msgstr "最多可选择%d个项目。"
+msgstr "最多可选择 %d 个视频。"
 
 msgid "IDS_IV_OPT_DETAILS"
-msgstr "详情"
+msgstr "详细信息"
 
 msgid "IDS_IV_OPT_DELETE_ABB"
 msgstr "删除"
@@ -74,7 +77,7 @@ msgid "IDS_IV_POP_SAVED"
 msgstr "已保存"
 
 msgid "IDS_IV_BODY_SETTINGS"
-msgstr "设定"
+msgstr "设置"
 
 msgid "IDS_IV_BODY_SIZE"
 msgstr "大小"
@@ -125,7 +128,7 @@ msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO
 msgstr "视频文件不包含关于人物的信息，因为其不支持脸部标记功能。"
 
 msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
-msgstr "无法共享该图像。它受 DRM 保护。"
+msgstr "该图片受 DRM 保护，无法分享。"
 
 msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
 msgstr "无法打开文件。"
@@ -137,19 +140,19 @@ msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
 msgstr "复制到剪贴板的个人内容可用于创建新内容。您的新内容可能不会自动隐藏。"
 
 msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
-msgstr "图像太小"
+msgstr "图片太小。"
 
 msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
 msgstr "日期信息仅在其他标记可见时显示"
 
 msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
-msgstr "轻敲并按住缩略图以选择最佳照片。"
+msgstr "长按缩略图以选择最佳照片。"
 
 msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
-msgstr "幻灯片播放设定"
+msgstr "幻灯片播放设置"
 
 msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
-msgstr "为主屏幕和锁定屏幕设置墙纸"
+msgstr "为主屏幕和锁定屏幕设置壁纸。"
 
 msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
 msgstr "是否将该照片设置为 %s 来电 ID？"
@@ -170,16 +173,16 @@ msgid "IDS_IV_POP_PERMISSION_DENIED"
 msgstr "许可被拒绝。"
 
 msgid "IDS_IV_POP_NO_LOCATION"
-msgstr "无位置"
+msgstr "无位置信息"
 
 msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
-msgstr "无已标记脸部。标记照片中的脸部。"
+msgstr "没有已做标记的脸部。请标记照片中的脸部。"
 
 msgid "IDS_IV_POP_NO_FACES_DETECTED"
 msgstr "未侦测到脸部。"
 
 msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
-msgstr "存储空间不足。请删除部分项目。"
+msgstr "存储空间不足。请删除部分内容。"
 
 msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
 msgstr "网络连接失败"
@@ -188,7 +191,7 @@ msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
 msgstr "已达到最大字符数(%d)。"
 
 msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
-msgstr "图像文件无效"
+msgstr "图片文件无效。"
 
 msgid "IDS_IV_POP_FLASH_USED_ABB"
 msgstr "开"
@@ -203,7 +206,7 @@ msgid "IDS_IV_POP_ENTER_TAG_NAME"
 msgstr "输入标签名称。"
 
 msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
-msgstr "在天气壁纸中启用自动刷新以查看天气标签。"
+msgstr "在天气壁纸中启用自动刷新可查看天气标签。"
 
 msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
 msgstr "下载完成"
@@ -248,7 +251,7 @@ msgid "IDS_IV_OPT_SHOW_ITEMS"
 msgstr "显示项目"
 
 msgid "IDS_IV_OPT_SHARE"
-msgstr "共享"
+msgstr "分享"
 
 msgid "IDS_IV_OPT_ROTATE_RIGHT"
 msgstr "向右旋转"
@@ -269,7 +272,7 @@ msgid "IDS_IV_OPT_MANUALLY_DETECT"
 msgstr "手动检测"
 
 msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
-msgstr "主屏和锁屏壁纸"
+msgstr "主屏幕和锁定屏幕壁纸"
 
 msgid "IDS_IV_OPT_HIDDEN_ITEMS"
 msgstr "隐藏的项目"
@@ -305,7 +308,7 @@ msgid "IDS_IV_OPT_CLOUD"
 msgstr "云服务"
 
 msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
-msgstr "好友照片共享"
+msgstr "好友照片分享"
 
 msgid "IDS_IV_OPT_BEST_FACE_ABB"
 msgstr "面部优选"
@@ -314,7 +317,7 @@ msgid "IDS_IV_OPT_AS_VIDEO_FILES"
 msgstr "作为视频文件"
 
 msgid "IDS_IV_OPT_AS_IMAGE_FILES"
-msgstr "作为图像文件"
+msgstr "作为图片文件"
 
 msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
 msgstr "动态照片"
@@ -332,28 +335,28 @@ msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
 msgstr "幻灯片音乐"
 
 msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
-msgstr "共享留声拍摄照片"
+msgstr "分享留声拍摄照片"
 
 msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
-msgstr "设定为"
+msgstr "设置为"
 
 msgid "IDS_IV_HEADER_SEND_PICTURE_TO_ABB"
 msgstr "发送该图片至"
 
 msgid "IDS_IV_HEADER_SELECT_CONTACT_TO_SHARE"
-msgstr "选择要共享的联系人"
+msgstr "选择要分享的联系人"
 
 msgid "IDS_IV_HEADER_PLAY_SPEED"
 msgstr "播放速度"
 
 msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
-msgstr "锁定屏幕墙纸"
+msgstr "锁定屏幕壁纸"
 
 msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
 msgstr "了解倾斜"
 
 msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
-msgstr "主屏幕墙纸"
+msgstr "主屏幕壁纸"
 
 msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
 msgstr "编辑天气标签"
@@ -377,10 +380,10 @@ msgid "IDS_IV_BUTTON_SCAN"
 msgstr "扫描"
 
 msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
-msgstr "您可使用附近设备与其他设备共享您的媒体。"
+msgstr "您可使用附近设备与其他设备分享您的媒体。"
 
 msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
-msgstr "%s 和 %d 个其他人"
+msgstr "与%s和其他 %d 人一起"
 
 msgid "IDS_IV_BODY_WITH_PS"
 msgstr "与%s"
@@ -416,7 +419,7 @@ msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
 msgstr "轻敲面部以查看关于此人的信息。"
 
 msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
-msgstr "手指按住两点，然后前后倾斜手机以缩小或放大屏幕。"
+msgstr "手指长按两点，然后前后倾斜手机以缩小或放大屏幕。"
 
 msgid "IDS_IV_BODY_SUNNY_DAY"
 msgstr "晴天"
@@ -425,7 +428,7 @@ msgid "IDS_IV_BODY_SNOWY_DAY"
 msgstr "雪天"
 
 msgid "IDS_IV_BODY_SHARE_VIA"
-msgstr "共享通过"
+msgstr "分享通过"
 
 msgid "IDS_IV_BODY_SERVER_NAME"
 msgstr "服务器名称"
@@ -437,7 +440,7 @@ msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
 msgstr "将打印选中区域。"
 
 msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_WALLPAPER"
-msgstr "选中区域将应用至壁纸。"
+msgstr "选中的区域将应用至壁纸。"
 
 msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_APPLIED_TO_THE_CONTACT_PICTURE"
 msgstr "选中区域将应用至联系人图片。"
@@ -470,7 +473,7 @@ msgid "IDS_IV_BODY_NO_TAG"
 msgstr "无标签"
 
 msgid "IDS_IV_BODY_NEW_TAG"
-msgstr "新标签"
+msgstr "新页面"
 
 msgid "IDS_IV_BODY_NEARBY_DEVICES_T_ALLSHARE"
 msgstr "附近的设备"
@@ -509,7 +512,7 @@ msgid "IDS_IV_BODY_LATITUDE"
 msgstr "纬度"
 
 msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
-msgstr "在 %s"
+msgstr "在%s"
 
 msgid "IDS_IV_BODY_INTERVAL"
 msgstr "间隔"
@@ -524,7 +527,7 @@ msgid "IDS_IV_BODY_IMPOSSIBLE"
 msgstr "不可以"
 
 msgid "IDS_IV_BODY_HOME_SCREEN"
-msgstr "主屏"
+msgstr "主屏幕"
 
 msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
 msgstr "主屏幕与锁定屏幕"
@@ -551,7 +554,7 @@ msgid "IDS_IV_BODY_EXECUTE"
 msgstr "执行"
 
 msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
-msgstr "在相机中启用 GPS 标签以查看位置标签。"
+msgstr "在【相机】中启用【GPS 标签】以查看位置信息。"
 
 msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
 msgstr "在天气小组件中启用自动刷新以查看天气标签。"
@@ -563,7 +566,7 @@ msgid "IDS_IV_BODY_DRM_INFO"
 msgstr "授权状态"
 
 msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
-msgstr "不要再显示"
+msgstr "不再显示"
 
 msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
 msgstr "不再询问"
@@ -590,7 +593,7 @@ msgid "IDS_IV_BODY_CLEAR_NIGHT"
 msgstr "晴朗的夜晚"
 
 msgid "IDS_IV_BODY_CALLER_IMAGE"
-msgstr "来电图片"
+msgstr "来电显示图片"
 
 msgid "IDS_IV_BODY_BASIC"
 msgstr "基本"
@@ -641,13 +644,13 @@ msgid "IDS_ST_BODY_DATE"
 msgstr "日期"
 
 msgid "IDS_EMAIL_OPT_ACCOUNTS"
-msgstr "账户"
+msgstr "帐户"
 
 msgid "IDS_GALLERY_BODY_DOWNLOAD"
 msgstr "下载"
 
 msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
-msgstr "在您上传照片至 Dropbox 后，将显示项目。"
+msgstr "在您上传照片至 Dropbox 后，将显示照片。"
 
 msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
 msgstr "下载中..."
@@ -680,7 +683,7 @@ msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
 msgstr "正在开始下载…"
 
 msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
-msgstr "存储空间不足。请删除部分项目。"
+msgstr "存储空间不足。请删除部分内容。"
 
 msgid "IDS_ST_BODY_PRIVATE_STORAGE"
 msgstr "私人存储空间"
@@ -689,7 +692,7 @@ msgid "IDS_IV_BODY_DRAG_HERE"
 msgstr "拖拽至此处"
 
 msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
-msgstr "点击添加图像"
+msgstr "点击添加图片"
 
 msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
 msgstr "文件已存在"
@@ -698,7 +701,7 @@ msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
 msgstr "该项目将被删除。"
 
 msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
-msgstr "在您上传照片至 Facebook 后，将显示项目。"
+msgstr "在您上传照片至 Facebook 后，将显示照片。"
 
 msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
 msgstr "字符无效"
@@ -722,7 +725,7 @@ msgid "IDS_COM_BODY_NONE"
 msgstr "无"
 
 msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
-msgstr "%d 已选择"
+msgstr "已选择 %d"
 
 msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
 msgstr "设备存储"
@@ -767,7 +770,7 @@ msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
 msgstr "保存更改"
 
 msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
-msgstr "是否放弃您所做的更改？"
+msgstr "保存更改？"
 
 msgid "IDS_IV_BUTTON_DISCARD_ABB2"
 msgstr "放弃"
@@ -776,7 +779,7 @@ msgid "IDS_IV_BUTTON_SAVE"
 msgstr "保存"
 
 msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
-msgstr "仿旧"
+msgstr "复古"
 
 msgid "IDS_IV_OPT_SUNSHINE_M_EFFECT"
 msgstr "阳光"
@@ -788,7 +791,7 @@ msgid "IDS_IV_OPT_RETRO_M_EFFECT"
 msgstr "复古"
 
 msgid "IDS_IV_OPT_GREYSCALE_M_EFFECT"
-msgstr "灰阶"
+msgstr "灰度"
 
 msgid "IDS_IV_OPT_SEPIA_M_EFFECT"
 msgstr "褐色"
@@ -833,7 +836,7 @@ msgid "IDS_IMGE_BODY_ROTATE"
 msgstr "旋转"
 
 msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
-msgstr "您的设备存储空间不足。请进入设定 > 电源和存储 > 存储，然后删除部分文件并重试。"
+msgstr "您的设备存储空间不足。请进入【设置】>【电源和存储】>【存储】，然后删除部分文件并重试。"
 
 msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
 msgstr "幻灯片间隔"
@@ -869,7 +872,7 @@ msgid "IDS_IV_BUTTON_RENAME_ABB2"
 msgstr "重命名"
 
 msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
-msgstr "目标文件夹中已有同名文件。"
+msgstr "目标文件夹中已存在同名文件。"
 
 msgid "IDS_IV_BUTTON_REPLACE_ABB"
 msgstr "替换"
@@ -878,43 +881,43 @@ msgid "IDS_IV_HEADER_SET_AS"
 msgstr "设置为"
 
 msgid "IDS_IV_OPT_HOME_SCREEN_WALLPAPER_ABB2"
-msgstr "主屏幕墙纸"
+msgstr "主屏幕壁纸"
 
 msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
-msgstr "锁定屏幕墙纸"
+msgstr "锁定屏幕壁纸"
 
 msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
-msgstr "主屏和锁屏墙纸"
+msgstr "主屏幕和锁定屏幕壁纸"
 
 msgid "IDS_IV_HEADER_DETAILS"
-msgstr "详情"
+msgstr "详细信息"
 
 msgid "IDS_IV_BODY_DATE"
 msgstr "日期"
 
 msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
-msgstr "无法保存图像"
+msgstr "无法保存图片"
 
 msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
 msgstr "您的设备存储空间不足 (%d MB)。"
 
 msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
-msgstr "您的 SD 卡上空间不足 (%d MB)。"
+msgstr "您的 SD 卡空间不足 (%d MB)。"
 
 msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
 msgstr "删除部分文件并重试。"
 
 msgid "IDS_IV_HEADER_SAVE_IMAGE"
-msgstr "保存图像"
+msgstr "保存图片"
 
 msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
-msgstr "您的设备存储空间不足 (剩余 %d MB)。该项目将保存至您的 SD 卡。"
+msgstr "您的设备存储空间不足 (剩余 %d MB)。该项目将保存到 SD 卡。"
 
 msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
-msgstr "SD 卡上空间不足 (剩余 %d MB)。该项目将保存至您的设备存储。"
+msgstr "SD 卡空间不足 (剩余 %d MB)。该项目将保存到您的设备存储上。"
 
 msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
-msgstr "图像将被删除。"
+msgstr "将删除图片。"
 
 msgid "IDS_IV_BUTTON_STOP_ABB4"
 msgstr "停止"
@@ -947,7 +950,7 @@ msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
 msgstr "负片"
 
 msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
-msgstr "无法打开相册"
+msgstr "无法打开【相册】"
 
 msgid "IDS_360V_TPOP_LOADING_ING"
 msgstr "正在载入..."
@@ -959,7 +962,7 @@ msgid "IDS_IV_POP_LOADING_FAILED"
 msgstr "加载失败"
 
 msgid "IDS_IV_POP_LOADING_IMAGE_ING"
-msgstr "读取图片..."
+msgstr "正在读取图片…"
 
 msgid "IDS_IV_SK_DISCARD"
 msgstr "放弃"
@@ -976,7 +979,7 @@ msgstr "不要发送"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 秒"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d秒"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "淡化"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "放大"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "重命名"
 
