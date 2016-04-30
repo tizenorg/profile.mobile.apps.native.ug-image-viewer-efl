@@ -35,6 +35,7 @@
 
 #include <ui-gadget-module.h>
 #include <shortcut_manager.h>
+#include <efl_extension.h>
 #include <app_manager.h>
 #include <notification.h>
 #include <string>
@@ -1520,10 +1521,9 @@ _on_slideshow_finished(void *data, Evas_Object *obj, void *event_info)
 }
 
 
-void on_btn_slideshow_clicked(void *data, Evas_Object *obj, void *event_info)
+void on_btn_slideshow_clicked(Ivug_MainView *pMainView)
 {
 #ifdef USE_THUMBLIST
-	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	Eina_List *selected_list = NULL;
 	Eina_List *list = NULL;
 	Eina_List *l = NULL;
@@ -1652,6 +1652,189 @@ static void _on_add_comment_view_destroy(void *data, Evas_Object *obj, void *eve
 	                               _on_add_comment_view_destroy);
 }
 
+static void
+popup_block_clicked_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	MSG_MAIN_HIGH("popup_block_clicked_cb");
+	evas_object_del(obj);
+}
+
+static void
+gl_download_item_sel_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	Elm_Object_Item *it = (Elm_Object_Item*) event_info;
+	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+
+	_on_btn_download_clicked(pMainView);
+
+	if (pMainView->ctx_popup) {
+		evas_object_del(pMainView->ctx_popup);
+		pMainView->ctx_popup = NULL;
+	}
+}
+
+static void
+gl_item_sel_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	Elm_Object_Item *it = (Elm_Object_Item*) event_info;
+	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+
+	int index = elm_genlist_item_index_get(it);
+
+	if (pMainView->ctx_popup) {
+		evas_object_del(pMainView->ctx_popup);
+		pMainView->ctx_popup = NULL;
+	}
+
+	if (index == 1) {
+		on_btn_slideshow_clicked(pMainView);
+	} else if (index == 2 && pMainView->view_by != IVUG_VIEW_BY_FAVORITES) {
+		_on_mainview_delete(pMainView);
+	} else if (index == 3 || pMainView->view_by == IVUG_VIEW_BY_FAVORITES) {
+		_on_btn_rename_clicked(pMainView);
+	}
+}
+
+static char *
+_gl_email_text_get_cb(void *data, Evas_Object *obj, const char *part)
+{
+	char buf[50] = {0, };
+	char *str = GET_STR(IDS_FILE_DOWNLOAD);
+	snprintf(buf, sizeof(buf), "%s", str);
+	MSG_MAIN_HIGH("buffer %s", buf);
+	return strdup(buf);
+}
+
+static char *
+_gl_text_get_cb(void *data, Evas_Object *obj, const char *part)
+{
+	int index = (int) data;
+	char buf[50] = {0, };
+	char *str = NULL;
+
+	switch (index) {
+	case 1:
+		str = GET_STR(IDS_SLIDE_SHOW);
+		snprintf(buf, sizeof(buf), "%s", str);
+		break;
+	case 2:
+		str = GET_STR(IDS_DELETE_IMAGE);
+		snprintf(buf, sizeof(buf), str, 3);
+		break;
+	case 3:
+		str = GET_STR(IDS_RENAME_IMAGE);
+		snprintf(buf, sizeof(buf), str, 5);
+		break;
+	default:
+		str = GET_STR(IDS_SLIDE_SHOW);
+		snprintf(buf, sizeof(buf), "%s", str);
+	}
+
+	MSG_MAIN_HIGH("buffer %s", buf);
+	return strdup(buf);
+}
+
+static char *
+_gl_favorite_text_get_cb(void *data, Evas_Object *obj, const char *part)
+{
+	int index = (int) data;
+	char buf[50] = {0, };
+	char *str = NULL;
+
+	switch (index) {
+	case 1:
+		str = GET_STR(IDS_SLIDE_SHOW);
+		snprintf(buf, sizeof(buf), "%s", str);
+		break;
+	case 2:
+		str = GET_STR(IDS_RENAME_IMAGE);
+		snprintf(buf, sizeof(buf), str, 5);
+		break;
+	default:
+		str = GET_STR(IDS_SLIDE_SHOW);
+		snprintf(buf, sizeof(buf), "%s", str);
+	}
+
+	MSG_MAIN_HIGH("buffer %s", buf);
+	return strdup(buf);
+
+}
+
+static inline void
+_popup_back_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+	IV_ASSERT(pMainView != NULL);
+
+	if (pMainView->ctx_popup) {
+		evas_object_del(pMainView->ctx_popup);
+		pMainView->ctx_popup = NULL;
+	}
+}
+
+Evas_Object* ivug_popup_create(Ivug_MainView *pMainView)
+{
+	IV_ASSERT(pMainView != NULL);
+	IV_ASSERT(pMainView->layout != NULL);
+
+	static Elm_Genlist_Item_Class itc;
+	Evas_Object *popup;
+	Evas_Object *genlist;
+	int i;
+
+	popup = elm_popup_add(pMainView->layout);
+	elm_popup_align_set(popup, ELM_NOTIFY_ALIGN_FILL, 1.0);
+	elm_object_style_set(popup,"more/default");
+	eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK, _popup_back_cb, pMainView);
+	eext_object_event_callback_add(popup, EEXT_CALLBACK_MORE, _popup_back_cb, pMainView);
+
+
+	evas_object_size_hint_weight_set(popup, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+	evas_object_smart_callback_add(popup, "block,clicked", popup_block_clicked_cb, (Evas_Object *)ug_get_window());
+
+	/* genlist */
+	genlist = elm_genlist_add(popup);
+	elm_genlist_mode_set(genlist, ELM_LIST_COMPRESS);
+	evas_object_size_hint_weight_set(genlist, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+	evas_object_size_hint_align_set(genlist, EVAS_HINT_FILL, EVAS_HINT_FILL);
+
+	elm_object_style_set(genlist, "popup");
+	elm_genlist_homogeneous_set(genlist, EINA_TRUE);
+	elm_scroller_policy_set(genlist, ELM_SCROLLER_POLICY_OFF, ELM_SCROLLER_POLICY_AUTO);
+	elm_scroller_content_min_limit(genlist, EINA_FALSE, EINA_TRUE);
+
+	itc.item_style = "default_style";
+	itc.func.content_get = NULL;
+	itc.func.state_get = NULL;
+	itc.func.del = NULL;
+
+	if (pMainView->mode == IVUG_MODE_EMAIL) {
+		itc.func.text_get = _gl_email_text_get_cb;
+
+		elm_genlist_item_append(genlist, &itc, (void *) i, NULL, ELM_GENLIST_ITEM_NONE, gl_download_item_sel_cb, pMainView);
+	} else if (pMainView->view_by != IVUG_VIEW_BY_FAVORITES) {
+		itc.func.text_get = _gl_text_get_cb;
+
+		for (i = 1; i <= 3; i++) {
+			elm_genlist_item_append(genlist, &itc, (void *) i, NULL, ELM_GENLIST_ITEM_NONE, gl_item_sel_cb, pMainView);
+		}
+	} else {
+		itc.func.text_get = _gl_favorite_text_get_cb;
+
+		for (i = 1; i <= 2; i++) {
+			elm_genlist_item_append(genlist, &itc, (void *) i, NULL, ELM_GENLIST_ITEM_NONE, gl_item_sel_cb, pMainView);
+		}
+
+	}
+
+	evas_object_show(genlist);
+	elm_object_content_set(popup, genlist);
+	evas_object_show(popup);
+
+	return popup;
+}
+
+#ifdef LISTPOPUP
 static void _on_more_selected(void *data, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
@@ -1667,7 +1850,7 @@ static void _on_more_selected(void *data, Evas_Object *obj, void *event_info)
 	MSG_MAIN_HIGH("text(%s) is clicked", label);
 
 	if (strncmp(label, IDS_SLIDE_SHOW, strlen(label)) == 0) {
-		on_btn_slideshow_clicked(data, obj, event_info);
+		on_btn_slideshow_clicked(pMainView);
 	} else if (strncmp(label, IDS_DELETE_IMAGE, strlen(label)) == 0) {
 		_on_mainview_delete(pMainView);
 	} else if (strncmp(label, IDS_RENAME_IMAGE, strlen(label)) == 0) {
@@ -1679,6 +1862,7 @@ static void _on_more_selected(void *data, Evas_Object *obj, void *event_info)
 	evas_object_del(pMainView->ctx_popup);
 	pMainView->ctx_popup = NULL;
 }
+#endif
 
 void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 {
@@ -1718,10 +1902,9 @@ void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 		// If menu is visible, do not hide menu during popup is displaying
 		ivug_main_view_del_hide_timer(pMainView);
 	}
-
+#ifdef LISTPOPUP
 	popup = ivug_listpopup_add(pMainView->layout);
 	ivug_listpopup_lang_set(popup, gGetLanguageHandle());
-
 	evas_object_smart_callback_add(popup, "popup,dismissed", _dismissed_cb, pMainView);
 	evas_object_smart_callback_add(popup, "popup,selected", _on_more_selected, pMainView);
 
@@ -1734,7 +1917,6 @@ void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 		}
 		ivug_listpopup_item_append(popup, NULL, IDS_RENAME_IMAGE, GET_STR(IDS_RENAME_IMAGE));
 	}
-
 	pMainView->ctx_popup = popup;
 
 	evas_object_geometry_get(obj, &x, &y, &w, &h);
@@ -1754,6 +1936,11 @@ void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 	} else {
 		ivug_listpopup_context_show(popup, pMainView->layout, (w / 2), h);
 	}
+#endif
+#else
+	popup = ivug_popup_create(pMainView);
+
+	pMainView->ctx_popup = popup;
 #endif
 }
 

@@ -32,7 +32,9 @@ void ivug_notification_create(const char* text);
 	Button handlers for main view
 */
 
-void on_btn_slideshow_clicked(void *data, Evas_Object *obj, void *event_info);
+void on_btn_slideshow_clicked(Ivug_MainView *pMainView);
+
+Evas_Object* ivug_popup_create(Ivug_MainView *pMainView);
 
 void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info);
 
