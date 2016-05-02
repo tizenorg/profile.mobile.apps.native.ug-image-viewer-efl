@@ -25,6 +25,9 @@ msgstr "Kameralys"
 msgid "IDS_COM_SK_STOP"
 msgstr "Stop"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Annuller"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "%1$s er deaktiveret i dette program. For at aktivere denne funktion skal du gå til %2$s, vælge denne funktion og derefter vælge dette program."
 
@@ -35,7 +38,7 @@ msgid "IDS_MEDIABR_BUTTON_DONE"
 msgstr "Udført"
 
 msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
-msgstr "Annullér"
+msgstr "Annuller"
 
 msgid "IDS_GALLERY_HEADER_ENTER_NAME"
 msgstr "Angiv navn"
@@ -59,7 +62,7 @@ msgid "IDS_IV_POP_DELETE_Q"
 msgstr "Slet?"
 
 msgid "IDS_IV_BUTTON_CANCEL"
-msgstr "Annullér"
+msgstr "Annuller"
 
 msgid "IDS_IV_POP_DELETED"
 msgstr "Slettet."
@@ -143,7 +146,7 @@ msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VIS
 msgstr "Oplysninger om dato vises kun, når andre mærker er synlige."
 
 msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
-msgstr "Tap og hold nede på miniaturer for at vælge de bedste fotos."
+msgstr "Tryk og hold på miniaturer for at vælge de bedste fotos."
 
 msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
 msgstr "Indstillinger for diasshow"
@@ -203,7 +206,7 @@ msgid "IDS_IV_POP_ENTER_TAG_NAME"
 msgstr "Indtast navn på kode."
 
 msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
-msgstr "Aktivér automatisk opdatering i vejrtapetet for at se vejr-tags."
+msgstr "Aktiver automatisk opdatering i vejrtapetet for at se vejr-tags."
 
 msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
 msgstr "Overførsel fuldført"
@@ -215,7 +218,7 @@ msgid "IDS_IV_POP_ADDED"
 msgstr "Tilføjet."
 
 msgid "IDS_IV_OPT_WRITE_CAPTION"
-msgstr "Skriv tekst"
+msgstr "Skriv billedtekst"
 
 msgid "IDS_IV_OPT_USE_MOTION"
 msgstr "Brug bevægelse"
@@ -251,16 +254,16 @@ msgid "IDS_IV_OPT_SHARE"
 msgstr "Del"
 
 msgid "IDS_IV_OPT_ROTATE_RIGHT"
-msgstr "Rotér mod højre"
+msgstr "Roter mod højre"
 
 msgid "IDS_IV_OPT_ROTATE_LEFT"
-msgstr "Rotér mod venstre"
+msgstr "Roter mod venstre"
 
 msgid "IDS_IV_OPT_REMOVE_TAG"
 msgstr "Fjern mærke"
 
 msgid "IDS_IV_OPT_REFRESH"
-msgstr "Opdatér"
+msgstr "Opdater"
 
 msgid "IDS_IV_OPT_PRINT_VIA_BLUETOOTH"
 msgstr "Udskriv via Bluetooth"
@@ -284,19 +287,19 @@ msgid "IDS_IV_OPT_ERASER"
 msgstr "Viskelæder"
 
 msgid "IDS_IV_OPT_EDIT_WEATHER_TAG_ABB"
-msgstr "Redigér vejr-tag"
+msgstr "Rediger vejr-tag"
 
 msgid "IDS_IV_OPT_EDIT_TAG"
 msgstr "Red. kode"
 
 msgid "IDS_IV_OPT_EDIT_CAPTION"
-msgstr "Redigér tekst"
+msgstr "Rediger billedtekst"
 
 msgid "IDS_IV_OPT_DELETE_CAPTION"
 msgstr "Slet billedtekst"
 
 msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
-msgstr "Kopiér til udklipsholder"
+msgstr "Kopier til udklipsholder"
 
 msgid "IDS_IV_OPT_CONNECTION_INFO_ABB"
 msgstr "Forbindelsesopl."
@@ -326,13 +329,13 @@ msgid "IDS_IV_OPT_ADD_NAME_ABB"
 msgstr "Tilføj navn"
 
 msgid "IDS_IV_OPT_ADD_CAPTION"
-msgstr "Tilføj tekst"
+msgstr "Tilføj billedtekst"
 
 msgid "IDS_IV_HEADER_SLIDESHOW_MUSIC"
 msgstr "Musik til diasshow"
 
 msgid "IDS_IV_HEADER_SHARE_SOUND_N_SHOT_PICS_ABB"
-msgstr "Del Lyd & billede-fotos"
+msgstr "Del Lyd og foto-billeder"
 
 msgid "IDS_IV_HEADER_SET_AS_M_BACKGROUND"
 msgstr "Vælg som"
@@ -356,7 +359,7 @@ msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
 msgstr "Baggr. for startskærm"
 
 msgid "IDS_IV_HEADER_EDIT_WEATHER_TAG_ABB"
-msgstr "Redigér vejr-tag"
+msgstr "Rediger vejr-tag"
 
 msgid "IDS_IV_HEADER_EDIT_BURST_SHOT_ABB"
 msgstr "Red. burst-optagelse"
@@ -551,10 +554,10 @@ msgid "IDS_IV_BODY_EXECUTE"
 msgstr "Udfør"
 
 msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
-msgstr "Aktivér GPS-tags i Kamera for at mærker for placering."
+msgstr "Aktiver GPS-tags i Kamera for at placeringstags."
 
 msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
-msgstr "Aktivér automatisk opdatering i vejr-widget'en for at se vejr-tags."
+msgstr "Aktiver automatisk opdatering i vejrwidget'en for at se vejrtags."
 
 msgid "IDS_IV_BODY_DURATION"
 msgstr "Varighed"
@@ -635,7 +638,7 @@ msgid "IDS_ST_BODY_GB"
 msgstr "GB"
 
 msgid "IDS_ST_BODY_EDIT"
-msgstr "Redigér"
+msgstr "Rediger"
 
 msgid "IDS_ST_BODY_DATE"
 msgstr "Dato"
@@ -767,7 +770,7 @@ msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
 msgstr "Gem ændringer"
 
 msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
-msgstr "Gem dine ændringer eller slet dem?"
+msgstr "Gem dine ændringer eller kasser dem?"
 
 msgid "IDS_IV_BUTTON_DISCARD_ABB2"
 msgstr "Afvis"
@@ -830,7 +833,7 @@ msgid "IDS_IM_POP_ADD_TO_BLOCK_LIST_COMPLETE"
 msgstr "Føjet til blokeringslisten."
 
 msgid "IDS_IMGE_BODY_ROTATE"
-msgstr "Rotér"
+msgstr "Roter"
 
 msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
 msgstr "Der er ikke tilstrækkelig ledig plads på din enheds lager. Gå til Indstillinger > Strøm og lager > Lagring, slet nogle filer, og prøv igen."
@@ -848,7 +851,7 @@ msgid "IDS_VIDEO_OPT_NONE"
 msgstr "Ingen"
 
 msgid "IDS_IV_OPT_EDIT"
-msgstr "Redigér"
+msgstr "Rediger"
 
 msgid "IDS_IV_OPT_RENAME"
 msgstr "Omdøb"
@@ -962,7 +965,7 @@ msgid "IDS_IV_POP_LOADING_IMAGE_ING"
 msgstr "Indlæser billede..."
 
 msgid "IDS_IV_SK_DISCARD"
-msgstr "Slet"
+msgstr "Kasser"
 
 msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
 msgstr "Kunne ikke downloade"
@@ -976,7 +979,7 @@ msgstr "Send ikke"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 sekund"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d sekunder"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Udton"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Zoom ind"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Omdøb"
 

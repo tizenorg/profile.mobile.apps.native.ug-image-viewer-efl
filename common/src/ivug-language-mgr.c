@@ -94,10 +94,7 @@ static char *__get_text(const char *ID)
 	ivug_retv_if(ID == NULL, NULL);
 	char *str;
 
-	if (strstr(ID, "IDS_COM"))
-		str = dgettext("sys_string", ID);
-	else
-		str = dgettext(IVUG_TEXT_DOMAIN, ID);//gettext(ID);
+	str = dgettext(IVUG_TEXT_DOMAIN, ID);//gettext(ID);
 
 	return str;
 }
@@ -346,9 +343,6 @@ char * ivug_language_mgr_get_text_domain(const char *ID)
 {
 	ivug_retv_if(ID == NULL, NULL);
 
-	if (strstr(ID, "IDS_COM"))
-		return "sys_string";
-	else
-		return IVUG_TEXT_DOMAIN;
+	return IVUG_TEXT_DOMAIN;
 }
 

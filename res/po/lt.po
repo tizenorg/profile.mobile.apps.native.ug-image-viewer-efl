@@ -25,6 +25,9 @@ msgstr "Blykstė"
 msgid "IDS_COM_SK_STOP"
 msgstr "Stabdyti"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Atšaukti"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "%1$s išjungta šioje programoje. Norėdami įjungti šią funkciją, eikite į skirtuką %2$s, pasirinkite funkciją ir šią programą."
 
@@ -976,7 +979,7 @@ msgstr "Nesiųsti"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 sekundė"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d sek."
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Išblukimas"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Didinti mastelį"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Pervardyti"
 

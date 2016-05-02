@@ -25,6 +25,9 @@ msgstr "閃光燈"
 msgid "IDS_COM_SK_STOP"
 msgstr "停止"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "取消"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "%1$s 已在此應用程式中停用。若要啟用此功能，請前往 %2$s，選擇此功能，然後選擇此應用程式。"
 
@@ -380,7 +383,7 @@ msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVI
 msgstr "您可使用附近裝置與其他裝置分享您的媒體。"
 
 msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
-msgstr "與 %s 和 %d 個其他人"
+msgstr "與%s和 %d 個其他人"
 
 msgid "IDS_IV_BODY_WITH_PS"
 msgstr "與 %s"
@@ -509,7 +512,7 @@ msgid "IDS_IV_BODY_LATITUDE"
 msgstr "緯度"
 
 msgid "IDS_IV_BODY_IN_PS_M_LOCATION"
-msgstr "在 %s"
+msgstr "在%s"
 
 msgid "IDS_IV_BODY_INTERVAL"
 msgstr "間隔"
@@ -551,7 +554,7 @@ msgid "IDS_IV_BODY_EXECUTE"
 msgstr "執行"
 
 msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
-msgstr "在相機中啟用 GPS 標籤以查看位置標籤。"
+msgstr "在 [相機] 中啟用 [GPS 標籤] 以查看位置標籤。"
 
 msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
 msgstr "在天氣 Widget 啟用自動重新整理以查看天氣標籤。"
@@ -707,7 +710,7 @@ msgid "IDS_MEDIABR_OPT_MANUAL"
 msgstr "手動"
 
 msgid "IDS_ST_BODY_ERROR_VZW"
-msgstr "Error"
+msgstr "錯誤"
 
 msgid "IDS_ST_BUTTON2_PROCESSING_ING"
 msgstr "處理中..."
@@ -833,7 +836,7 @@ msgid "IDS_IMGE_BODY_ROTATE"
 msgstr "旋轉"
 
 msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
-msgstr "您的裝置儲存空間不足。請前往設定 > 電源與儲存空間 > 儲存空間，然後刪除部分檔案並重試。"
+msgstr "您的裝置儲存空間不足。請前往 [設定] > [電源與儲存空間] > [儲存空間]，然後刪除部分檔案並重試。"
 
 msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
 msgstr "投影片時間間隔"
@@ -947,7 +950,7 @@ msgid "IDS_IMGE_OPT_EFFECTS_NEGATIVE"
 msgstr "底片"
 
 msgid "IDS_HEALTH_TPOP_UNABLE_TO_OPEN_GALLERY"
-msgstr "無法開啟媒體瀏覽器。"
+msgstr "無法開啟 [媒體瀏覽器]。"
 
 msgid "IDS_360V_TPOP_LOADING_ING"
 msgstr "正在載入..."
@@ -976,7 +979,7 @@ msgstr "不要發送"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 秒"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d 秒"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "淡化"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "放大"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "重新命名"
 

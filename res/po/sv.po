@@ -25,6 +25,9 @@ msgstr "Fotolampa"
 msgid "IDS_COM_SK_STOP"
 msgstr "Stopp"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Avbryt"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "%1$s är inaktiverad i det här programmet. Om du vill aktivera den här funktionen går du till %2$s, väljer den här funktionen och väljer sedan det här programmet."
 
@@ -976,7 +979,7 @@ msgstr "Skicka inte"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 sekund"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d sekunder"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Tona"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Zooma in"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Byt namn"
 

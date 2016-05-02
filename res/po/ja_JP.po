@@ -25,6 +25,9 @@ msgstr "フラッシュ"
 msgid "IDS_COM_SK_STOP"
 msgstr "停止"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "キャンセル"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "%1$sはこのアプリケーションでは無効です。この機能を有効にするには、%2$sに移動した後、このアプリケーションを選択してください。"
 
@@ -707,7 +710,7 @@ msgid "IDS_MEDIABR_OPT_MANUAL"
 msgstr "手動"
 
 msgid "IDS_ST_BODY_ERROR_VZW"
-msgstr "Error"
+msgstr "エラー"
 
 msgid "IDS_ST_BUTTON2_PROCESSING_ING"
 msgstr "処理中..."
@@ -976,7 +979,7 @@ msgstr "送出しない"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1秒"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d秒"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "フェード"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "拡大"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "名前変更"
 

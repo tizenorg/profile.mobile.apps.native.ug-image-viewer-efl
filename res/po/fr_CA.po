@@ -25,6 +25,9 @@ msgstr "Flash"
 msgid "IDS_COM_SK_STOP"
 msgstr "Arrêter"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Annuler"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "La fonction %1$s est désactivée dans cette application. Pour l'activer, accédez à %2$s, sélectionnez la fonction, puis cette application."
 
@@ -773,7 +776,7 @@ msgid "IDS_IV_BUTTON_DISCARD_ABB2"
 msgstr "Ignorer"
 
 msgid "IDS_IV_BUTTON_SAVE"
-msgstr "Enregistrer"
+msgstr "Enreg."
 
 msgid "IDS_IV_OPT_VINTAGE_M_EFFECT"
 msgstr "Ancien"
@@ -976,7 +979,7 @@ msgstr "Ne pas envoyer"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 seconde"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d secondes"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Fondu"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Zoom avant"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Renommer"
 

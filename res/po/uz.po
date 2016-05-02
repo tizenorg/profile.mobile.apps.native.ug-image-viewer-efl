@@ -25,6 +25,9 @@ msgstr "Flesh"
 msgid "IDS_COM_SK_STOP"
 msgstr "To‘xtatish"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Bekor qilish"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "Ushbu ilovada %1$s o‘chirilgan. Ushbu funksiyani yoqish uchun %2$sga o‘ting, ushbu funksiyani tanlang va undan so‘ng ushbu ilovani tanlang"
 
@@ -976,7 +979,7 @@ msgstr "Yuborilmasin"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 soniya"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d soniya"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Xiralashish"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Kattalashtirish"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Nom o‘zg."
 

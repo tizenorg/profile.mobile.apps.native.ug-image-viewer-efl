@@ -25,6 +25,9 @@ msgstr "Salama"
 msgid "IDS_COM_SK_STOP"
 msgstr "Lopeta"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Peruuta"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "%1$s on poistettu tässä sovelluksessa käytöstä. Voit ottaa toiminnon käyttöön siirtymällä kohteeseen %2$s, valitsemalla tämän toiminnon ja sitten valitsemalla tämän sovelluksen."
 
@@ -976,7 +979,7 @@ msgstr "Älä lähetä"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 sekunti"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d sekuntia"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Häivytys"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Lähennä"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Nim. uud."
 

@@ -25,6 +25,9 @@ msgstr "Välk"
 msgid "IDS_COM_SK_STOP"
 msgstr "Lõpeta"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Tühista"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "%1$s on selles rakenduses desaktiveeritud. Selle funktsiooni aktiveerimiseks avage menüü %2$s, valige see funktsioon ja seejärel valige see rakendus."
 
@@ -976,7 +979,7 @@ msgstr "Ära saada"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 sekund"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d sekundit"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Hajumine"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Suurenda"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Nim. ümb."
 

@@ -242,10 +242,7 @@ Elm_Object_Item *ivug_toolbar_item_append(Evas_Object *toolbar, const char *text
 
 	char *domain = NULL;
 
-	if (strstr(text_id, "IDS_COM"))
-		domain = strdup("sys_string");
-	else
-		domain = strdup(IVUG_TEXT_DOMAIN);
+	domain = strdup(IVUG_TEXT_DOMAIN);
 
 	item = elm_toolbar_item_append(toolbar, NULL, text_id, callback, data);
 	elm_object_item_domain_translatable_text_set(item, domain, text_id);

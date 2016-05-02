@@ -25,6 +25,9 @@ msgstr "Блиц"
 msgid "IDS_COM_SK_STOP"
 msgstr "Запри"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Откажи"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "%1$s е исклучено за оваа апликација. За да ја вклучите оваа функција, одете во %2$s, изберете ја функцијата, па изберете ја апликацијата."
 
@@ -976,7 +979,7 @@ msgstr "Не праќај"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 секунда"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d секунди"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Затемнување"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Приближување"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Преименувај"
 

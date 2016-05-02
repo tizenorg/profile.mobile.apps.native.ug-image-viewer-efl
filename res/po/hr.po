@@ -25,6 +25,9 @@ msgstr "Bljeskalica"
 msgid "IDS_COM_SK_STOP"
 msgstr "Zaustavi"
 
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Prekid"
+
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
 msgstr "%1$s je isključen u ovoj aplikaciji. Da biste tu funkciju uključili, idite na %2$s, odaberite tu funkciju, a zatim odaberite ovu aplikaciju."
 
@@ -575,7 +578,7 @@ msgid "IDS_IV_BODY_DATE_CREATED"
 msgstr "Datum"
 
 msgid "IDS_IV_BODY_CROP"
-msgstr "Izreži"
+msgstr "Odreži"
 
 msgid "IDS_IV_BODY_CREATE_TAG"
 msgstr "Nova oznaka"
@@ -976,7 +979,7 @@ msgstr "Ne šalji"
 msgid "IDS_COM_BODY_1_SECOND"
 msgstr "1 sek"
 
-msgid "IDS_BODY_PD_SECONDS"
+msgid "IDS_COM_BODY_PD_SECONDS"
 msgstr "%d sekundi"
 
 msgid "IDS_IV_BODY_EFFECT"
@@ -993,4 +996,7 @@ msgstr "Zatamni"
 
 msgid "IDS_COM_OPT_VIEW_ZOOM_IN"
 msgstr "Povećaj"
+
+msgid "IDS_COM_SK_RENAME"
+msgstr "Preimenuj"
 
