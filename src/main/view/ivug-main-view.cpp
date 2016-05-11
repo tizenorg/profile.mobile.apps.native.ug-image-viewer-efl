@@ -1253,6 +1253,14 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 		edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,enable,title_full", "user");
 	}
 
+	int rot = elm_win_rotation_get(gGetCurrentWindow());
+	MSG_MAIN_HIGH("Current window rotation %d", rot);
+
+	if (elm_win_wm_rotation_supported_get(gGetCurrentWindow())) {
+		int rots[4] = { 0, 90, 180, 270 };
+		elm_win_wm_rotation_available_rotations_set(gGetCurrentWindow(), (const int *)(&rots), 4);
+	}
+
 	evas_object_smart_callback_add(gGetCurrentWindow(), "wm,rotation,changed", _on_layout_resize, pMainView);
 
 	pMainView->keydown_handler = ecore_event_handler_add(ECORE_EVENT_KEY_DOWN, _on_key_down, (void *)pMainView);
