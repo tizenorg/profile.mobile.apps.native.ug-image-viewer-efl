@@ -2,7 +2,7 @@
 <manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="org.tizen.image-viewer" version="2.0.73">
 	<label>Homescreen setting</label>
 	<description>Image Viewer AppControl</description>
-	<ui-application appid="org.tizen.image-viewer" exec="/usr/apps/org.tizen.image-viewer/bin/image-viewer" launch_mode="caller" nodisplay="true" multiple="false" type="capp" taskmanage="false" hw-acceleration="use-GL">
+	<ui-application appid="org.tizen.image-viewer" exec="/usr/apps/org.tizen.image-viewer/bin/image-viewer" launch_mode="caller" process-pool="true" nodisplay="true" multiple="false" type="capp" taskmanage="false" hw-acceleration="on">
 		<icon>/usr/share/icons/default/small/org.tizen.image-viewer.png</icon>
 		<label>image-viewer</label>
 	</ui-application>

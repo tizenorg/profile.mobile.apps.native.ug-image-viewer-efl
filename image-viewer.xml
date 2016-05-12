@@ -55,7 +55,7 @@
 	<author email="jcastle.ahn@samsung.com" href="www.samsung.com">Jisung Ahn</author>
 	<author email="hw4444.kim@samsung.com" href="www.samsung.com">Hyunwoo Kim</author>
 	<description>Image viewer Application</description>
-	<ui-application appid="org.tizen.image-viewer" exec="/usr/apps/org.tizen.image-viewer/bin/image-viewer" hw-acceleration="use-GL" nodisplay="true" multiple="true" type="capp" taskmanage="false" process-pool="true"  launch_mode="caller">
+	<ui-application appid="org.tizen.image-viewer" exec="/usr/apps/org.tizen.image-viewer/bin/image-viewer" hw-acceleration="on" nodisplay="true" multiple="true" type="capp" taskmanage="false" process-pool="true"  launch_mode="caller">
 		<icon>org.tizen.image-viewer.png</icon>
 		<label>Image viewer</label>
 		<label xml:lang="ar-ae">عرض الصور</label>
