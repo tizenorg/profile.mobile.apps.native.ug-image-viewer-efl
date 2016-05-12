@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="org.tizen.image-viewer" version="1.0.0">
     <profile name="mobile"/>
-    <ui-application appid="org.tizen.image-viewer" exec="image-viewer" multiple="false" nodisplay="true" splash-screen-display="true" taskmanage="false" type="capp">
+    <ui-application appid="org.tizen.image-viewer" exec="image-viewer" multiple="false" process-pool="true" hw-acceleration="on" nodisplay="true" splash-screen-display="true" taskmanage="false" type="capp">
         <label>image-viewer</label>
         <icon>org.tizen.image-viewer.png</icon>
     </ui-application>
