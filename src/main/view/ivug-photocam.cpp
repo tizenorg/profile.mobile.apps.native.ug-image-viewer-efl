@@ -494,8 +494,6 @@ _ivug_main_view_left_transit_by_item_complete_cb(void *data, Evas_Object * obj, 
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
 
-	ivug_enable_gesture(pMainView->pSliderNew);
-
 	if (pMainView->prevphotocam == PHOTOCAM_1) {
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_stop", "imageview_area_temp2");
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_left", "imageview_area");
@@ -515,9 +513,11 @@ _ivug_main_view_left_transit_by_item_complete_cb(void *data, Evas_Object * obj, 
 
 		if (mData->slide_type == SLIDE_TYPE_IMAGE) {
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "hide,icon", "video_play_icon");
+			ivug_enable_gesture(pMainView->pSliderNew);
 			pMainView->is_play_Icon = false;
 		} else {
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "show,icon", "video_play_icon");
+			ivug_disable_gesture(pMainView->pSliderNew);
 			pMainView->is_play_Icon = true;
 		}
 	}
@@ -554,8 +554,6 @@ _ivug_main_view_right_transit_by_item_complete_cb(void *data, Evas_Object * obj,
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
 
-	ivug_enable_gesture(pMainView->pSliderNew);
-
 	if (pMainView->prevphotocam == PHOTOCAM_1) {
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_stop", "imageview_area_temp0");
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_right", "imageview_area");
@@ -573,9 +571,11 @@ _ivug_main_view_right_transit_by_item_complete_cb(void *data, Evas_Object * obj,
 
 		if (mData->slide_type == SLIDE_TYPE_IMAGE) {
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "hide,icon", "video_play_icon");
+			ivug_enable_gesture(pMainView->pSliderNew);
 			pMainView->is_play_Icon = false;
 		} else {
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "show,icon", "video_play_icon");
+			ivug_disable_gesture(pMainView->pSliderNew);
 			pMainView->is_play_Icon = true;
 		}
 	}

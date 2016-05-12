@@ -1693,6 +1693,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "show,icon", "video_play_icon");
 			pMainView->is_play_Icon = true;
 			elm_photocam_file_set(pMainView->photocam, mdata->thumbnail_path);
+			ivug_disable_gesture(pMainView->pSliderNew);
 		} else {
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "hide,icon", "video_play_icon");
 			pMainView->is_play_Icon = false;
@@ -1732,6 +1733,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "show,icon", "video_play_icon");
 			pMainView->is_play_Icon = true;
 			elm_photocam_file_set(pMainView->photocam, mdata->thumbnail_path);
+			ivug_disable_gesture(pMainView->pSliderNew);
 		} else {
 			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "hide,icon", "video_play_icon");
 			pMainView->is_play_Icon = false;
