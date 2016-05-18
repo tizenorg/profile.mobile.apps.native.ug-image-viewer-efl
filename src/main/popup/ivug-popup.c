@@ -110,7 +110,8 @@ static void _on_btn_back_clicked(void *data, Evas_Object *obj, void *event_info)
 
 	if (iv_popup->callback)
 	{
-		iv_popup->callback(iv_popup->data, iv_popup->popup, (void *)POPUP_RESPONSE_CANCEL);
+		iv_popup->response = POPUP_RESPONSE_CANCEL;
+		iv_popup->callback(iv_popup->data, iv_popup->popup, &(iv_popup->response));
 	}
 
 	ivug_popup_delete(iv_popup);
@@ -132,7 +133,8 @@ static void _on_popup_response(void *data, Evas_Object *obj, void *event_info)
 
 	if (iv_popup->callback)
 	{
-		iv_popup->callback(iv_popup->data, iv_popup->popup, (void *)response);
+		iv_popup->response = response;
+		iv_popup->callback(iv_popup->data, iv_popup->popup, &(iv_popup->response));
 	}
 
 	ivug_popup_delete(iv_popup);
@@ -148,7 +150,8 @@ static void _on_ctxpopup_dismissed(void *data, Evas_Object *obj, void *event_inf
 
 	if (iv_popup->callback)
 	{
-		iv_popup->callback(iv_popup->data, iv_popup->popup, (void *)LPPOPUP_RESPONSE_NONE);
+		iv_popup->response = LPPOPUP_RESPONSE_NONE;
+		iv_popup->callback(iv_popup->data, iv_popup->popup, &(iv_popup->response));
 	}
 
 	ivug_popup_delete(iv_popup);
@@ -379,7 +382,8 @@ _ivug_rename_enter_click_cb(void *data, Evas_Object *obj, void *event_info)
 		elm_object_text_set(entry, new_name);
 		if (iv_popup->callback)
 		{
-			iv_popup->callback(iv_popup->data, iv_popup->popup, (void *)POPUP_RESPONSE_OK);
+			iv_popup->response = POPUP_RESPONSE_OK;
+			iv_popup->callback(iv_popup->data, iv_popup->popup, &(iv_popup->response));
 		}
 		ivug_popup_delete(iv_popup);
 	}
@@ -522,7 +526,8 @@ static void _block_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 
 	if (iv_popup->callback)
 	{
-		iv_popup->callback(iv_popup->data, iv_popup->popup, (void *)response);
+		iv_popup->response = response;
+		iv_popup->callback(iv_popup->data, iv_popup->popup, &(iv_popup->response));
 	}
 
 	ivug_popup_delete(iv_popup);
@@ -603,7 +608,8 @@ _gl_sel(void *data, Evas_Object *obj, void *event_info)
 
 		if (iv_popup->callback)
 		{
-			iv_popup->callback(iv_popup->data, iv_popup->popup, (void *)iv_popup->selected_index);
+			iv_popup->response = iv_popup->selected_index;
+			iv_popup->callback(iv_popup->data, iv_popup->popup, &(iv_popup->response));
 		}
 
 		ivug_popup_delete(iv_popup);

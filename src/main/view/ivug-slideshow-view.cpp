@@ -104,8 +104,8 @@ _on_slideshow_finished(void *data, Evas_Object *obj, void *event_info)
 
 	Ivug_SlideShowView *pSSView = static_cast<Ivug_SlideShowView *>(data);
 
-	int ss_state = (int)event_info;
-	_destory_slideshow_and_ug(pSSView, ss_state, false);
+	int *ss_state = (int *)event_info;
+	_destory_slideshow_and_ug(pSSView, *ss_state, false);
 }
 
 void _ivug_slideshow_view_on_mmc_state_changed(void *data)

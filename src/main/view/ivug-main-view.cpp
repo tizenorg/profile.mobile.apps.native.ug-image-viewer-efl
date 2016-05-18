@@ -257,7 +257,7 @@ _on_longpress_popup_selected(void *data, Evas_Object *obj, void *event_info)
 // Destroy copy popup
 	pMainView->longpress_popup = NULL;		// object is removed automatically
 
-	int response = (int)event_info;
+	int *response = (int *)event_info;
 
 	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
@@ -267,7 +267,7 @@ _on_longpress_popup_selected(void *data, Evas_Object *obj, void *event_info)
 		return;
 	}
 
-	if (response == LPPOPUP_RESPONSE_COPY) {
+	if (*response == LPPOPUP_RESPONSE_COPY) {
 		//get current file path.
 		int len = 0;
 		// This Will add to the article
@@ -768,8 +768,8 @@ _on_slider_long_press_end(void *data, Evas_Object *obj, void *event_info)
 		ecore_timer_del(pMainView->popup_timer);
 		pMainView->popup_timer = NULL;
 	}
-
-	if ((int)event_info == LONGTAP_CANCELED) {
+	int *value = (int *)event_info ;
+	if (*value == LONGTAP_CANCELED) {
 		if (pMainView->longpress_popup) {
 			IVUG_DEBUG_WARNING("copy popup remove");
 			evas_object_del(pMainView->longpress_popup);
@@ -864,9 +864,9 @@ _on_slideshow_finished(void *data, Evas_Object *obj, void *event_info)
 	IV_ASSERT(data != NULL);
 
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
-	int ss_state = (int)event_info;
+	int *ss_state = (int *)event_info;
 	bool bDestoryed = false;
-	bDestoryed = _destory_slideshow_and_ug(pMainView, ss_state, false);
+	bDestoryed = _destory_slideshow_and_ug(pMainView, *ss_state, false);
 	if (bDestoryed) {
 		return;
 	}

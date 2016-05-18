@@ -1127,6 +1127,7 @@ Media_Item *ivug_medialist_get_random_item(Media_List *mList)
 	}
 }
 
+#if 0
 Media_Item *ivug_medialist_get_shuffle_item(Media_List *mList, Media_Item *item)
 {
 	IV_ASSERT(mList != NULL);
@@ -1175,6 +1176,7 @@ Media_Item *ivug_medialist_get_shuffle_item(Media_List *mList, Media_Item *item)
 	MSG_SDATA_ERROR("Cannot find data. Index=%d", pData->index);
 	return NULL;
 }
+#endif
 
 Media_Item *
 ivug_medialist_find_item_by_index(Media_List *mList, int index)

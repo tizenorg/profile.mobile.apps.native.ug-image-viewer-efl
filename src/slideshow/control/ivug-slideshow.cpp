@@ -152,7 +152,7 @@ Media_Item *ivug_ss_get_next_item(Media_List *mList,
 			item = ivug_medialist_get_next(mList, current);
 		}
 		break;
-
+/*
 	case SLIDE_SHOW_MODE_SHUFFLE_REPEAT:
 		item = ivug_medialist_get_shuffle_item(mList, current);
 		if (item == NULL) {
@@ -167,7 +167,7 @@ Media_Item *ivug_ss_get_next_item(Media_List *mList,
 			return NULL;
 		}
 		break;
-
+*/
 	default:
 		MSG_ERROR("Unknown mode : %d", mode);
 		item = NULL;
@@ -575,10 +575,11 @@ _ivug_ss_photocam_loaded_cb(void *data, Evas_Object *obj, void *event_info)
 		return;
 	}
 
-	Evas_Load_Error error = static_cast<Evas_Load_Error>(reinterpret_cast<int>(event_info));
-	if (error != EVAS_LOAD_ERROR_NONE) {
+//	Evas_Load_Error error = static_cast<Evas_Load_Error>(reinterpret_cast<int >(event_info));//check
+	int *error = (int *)event_info;
+	if (*error != EVAS_LOAD_ERROR_NONE) {
 		MSG_SEC("Image loading failed. Error=%d File=%s",
-		        error, mdata->filepath);
+		        *error, mdata->filepath);
 		_ivug_ss_load_next_image((SlideShow *)sLy->pSlideshow);
 		return;
 	}
@@ -886,7 +887,8 @@ static void _stop_icon_cb(void *data, Evas_Object *obj, const char *emission, co
 static char *
 _gl_text_get_effect_type(void *data, Evas_Object *obj, const char *part)
 {
-	int index = (int) data;
+	st_temp *ob = (st_temp *)data;
+	int index = ob->index;
 	char buf[255] = {0, };
 
 	switch (index) {
@@ -906,7 +908,8 @@ _gl_text_get_effect_type(void *data, Evas_Object *obj, const char *part)
 static char *
 _gl_text_get_slide_interval(void *data, Evas_Object *obj, const char *part)
 {
-	int index = (int) data;
+	st_temp *ob = (st_temp *)data;
+	int index = ob->index;
 	char buf[50] = {0, };
 	char *str = NULL;
 
@@ -984,7 +987,8 @@ gl_effect_radio_sel_cb(void *data, Evas_Object *obj, void *event_info)
 static Evas_Object*
 gl_radio_slide_interval_content_get_cb(void *data, Evas_Object *obj, const char *part)
 {
-	int index = (int) data;
+	st_temp *ob = (st_temp *)data;
+	int index = ob->index;
 	if (!strcmp(part, "elm.swallow.end")) {
 		Evas_Object *radio;
 		Evas_Object *radio_main = (Evas_Object*)evas_object_data_get(obj, "radio");
@@ -1012,7 +1016,8 @@ gl_radio_slide_interval_content_get_cb(void *data, Evas_Object *obj, const char 
 static Evas_Object*
 gl_radio_effects_content_get_cb(void *data, Evas_Object *obj, const char *part)
 {
-	int index = (int) data;
+	st_temp *ob = (st_temp *)data;
+	int index = ob->index;
 	if (!strcmp(part, "elm.swallow.end")) {
 		Evas_Object *radio;
 		Evas_Object *radio_main = (Evas_Object*)evas_object_data_get(obj, "radio");
@@ -1088,7 +1093,7 @@ Evas_Object *ivug_list_popoup_show(const char *title_id, void *data)
 				ob->index = i;
 				ob->pSlideshow = pSlideshow;
 
-				elm_genlist_item_append(genlist, &itc, (void *) i, NULL, ELM_GENLIST_ITEM_NONE, gl_slide_interval_radio_sel_cb, (void *) ob);
+				elm_genlist_item_append(genlist, &itc, (void *) ob, NULL, ELM_GENLIST_ITEM_NONE, gl_slide_interval_radio_sel_cb, (void *) ob);
 			}
 		}
 	} else {
@@ -1104,7 +1109,7 @@ Evas_Object *ivug_list_popoup_show(const char *title_id, void *data)
 				ob->index = i;
 				ob->pSlideshow = pSlideshow;
 
-				elm_genlist_item_append(genlist, &itc, (void *) i, NULL, ELM_GENLIST_ITEM_NONE, gl_effect_radio_sel_cb, (void *) ob);
+				elm_genlist_item_append(genlist, &itc, (void *) ob, NULL, ELM_GENLIST_ITEM_NONE, gl_effect_radio_sel_cb, (void *) ob);
 			}
 		}
 	}

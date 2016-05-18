@@ -61,6 +61,10 @@
 #define ICON_NEAR_BY_UNKNOWN	"icon.nearby.unknown"
 
 
+struct st_temp {
+	int index;
+};
+
 static void
 ivug_notification_popup_create(Evas_Object * pParent, const char* text)
 {
@@ -291,7 +295,7 @@ void _on_setas_selected(void *data, Evas_Object *obj, void *event_info)
 	evas_object_del(pMainView->ctx_popup2);
 	pMainView->ctx_popup2 = NULL;
 }
-#endif
+
 
 void _on_addtag_btn_selected(void *data, Evas_Object *obj, void *event_info)
 {
@@ -321,6 +325,7 @@ void _on_addtag_btn_selected(void *data, Evas_Object *obj, void *event_info)
 
 	evas_object_del(obj);
 }
+#endif
 
 void *ivug_listpopup_item_get_data(Ivug_ListPopup_Item *item)
 {
@@ -519,6 +524,7 @@ static void _on_save_view_response(Ivug_NameView *pView, ivug_name_response resp
 	ivug_main_view_set_hide_timer(pMainView);
 }
 
+#if 0
 void _on_save_btn_selected(void *data, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
@@ -548,6 +554,7 @@ void _on_save_btn_selected(void *data, Evas_Object *obj, void *event_info)
 
 	evas_object_del(obj);
 }
+#endif
 
 void _on_save_selected(void *data, Evas_Object *obj, void *event_info)
 {
@@ -778,8 +785,8 @@ _on_delete_selected(void *data, Evas_Object *obj, void *event_info)
 	evas_object_del(pMainView->popup);
 	pMainView->popup = NULL;
 
-	int response_id = (int)event_info;
-	if (response_id == POPUP_RESPONSE_CANCEL) {
+	int *response_id = (int *)event_info;
+	if (*response_id == POPUP_RESPONSE_CANCEL) {
 		MSG_MAIN_HIGH("cancel selected");
 		ivug_main_view_set_hide_timer(pMainView);
 		return;
@@ -1719,7 +1726,8 @@ _gl_email_text_get_cb(void *data, Evas_Object *obj, const char *part)
 static char *
 _gl_text_get_cb(void *data, Evas_Object *obj, const char *part)
 {
-	int index = (int) data;
+	st_temp *ob = (st_temp *)data;
+	int index = ob->index;
 	char buf[50] = {0, };
 	char *str = NULL;
 
@@ -1748,7 +1756,8 @@ _gl_text_get_cb(void *data, Evas_Object *obj, const char *part)
 static char *
 _gl_favorite_text_get_cb(void *data, Evas_Object *obj, const char *part)
 {
-	int index = (int) data;
+	st_temp *ob = (st_temp *)data;
+	int index = ob->index;
 	char buf[50] = {0, };
 	char *str = NULL;
 
@@ -1826,14 +1835,22 @@ Evas_Object* ivug_ctx_popup_create(Ivug_MainView *pMainView)
 	} else if (pMainView->view_by != IVUG_VIEW_BY_FAVORITES) {
 		itc.func.text_get = _gl_text_get_cb;
 
-		for (i = 1; i <= 3; i++) {
-			elm_genlist_item_append(genlist, &itc, (void *) i, NULL, ELM_GENLIST_ITEM_NONE, gl_item_sel_cb, pMainView);
+	for (i = 1; i <= 3; i++) {
+		st_temp *ob = (st_temp *) calloc(1, sizeof(st_temp));
+		if (ob) {
+			ob->index = i;
+			elm_genlist_item_append(genlist, &itc, (void *) ob, NULL, ELM_GENLIST_ITEM_NONE, gl_item_sel_cb, pMainView);
 		}
+	}
 	} else {
 		itc.func.text_get = _gl_favorite_text_get_cb;
 
 		for (i = 1; i <= 2; i++) {
-			elm_genlist_item_append(genlist, &itc, (void *) i, NULL, ELM_GENLIST_ITEM_NONE, gl_item_sel_cb, pMainView);
+			st_temp *ob = (st_temp *) calloc(1, sizeof(st_temp));
+			if (ob) {
+				ob->index = i;
+				elm_genlist_item_append(genlist, &itc, (void *) ob, NULL, ELM_GENLIST_ITEM_NONE, gl_item_sel_cb, pMainView);
+			}
 		}
 
 	}
