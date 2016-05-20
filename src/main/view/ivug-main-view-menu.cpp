@@ -2014,11 +2014,12 @@ _on_content_set(void *data, Evas_Object *obj, const char *part)
 		Evas_Object *icon;
 
 		icon = elm_icon_add(obj);
-		char edc_path[100];
+		char *icon_edj_path = full_path(EDJ_PATH, "/ivug-icons.edj");
 //		snprintf(edc_path, 100,"%s/res/edje/%s/ivug-icons.edj", PREFIX, PACKAGE);
-		elm_image_file_set(icon, full_path(EDJ_PATH, "/ivug-icons.edj"), item->iconpath);
+		elm_image_file_set(icon, icon_edj_path, item->iconpath);
 //		elm_image_file_set(icon, edc_path,item->iconpath);
 
+		free(icon_edj_path);
 		return icon;
 	}
 

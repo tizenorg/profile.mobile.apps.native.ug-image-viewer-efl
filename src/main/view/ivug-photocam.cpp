@@ -185,7 +185,13 @@ void update_check(Ivug_MainView *pMainView)
 			elm_check_state_set(pMainView->check, EINA_FALSE);
 		}
 	}
+
+	i--;
+	while(i >= 0) {
+		free(files[i--]);
+	}
 	free(files);
+
 
 	char buf[64] = {0,};
 	snprintf(buf, 64, GET_STR(IDS_PD_SELECTED), pMainView->total_selected);
@@ -629,6 +635,7 @@ void ivug_set_prev_next_photocam_images(void *data, Evas_Object **prev_pc, Evas_
 
 	Media_Item *prev_mitem = ivug_medialist_get_prev(pMainView->mList, pMainView->cur_mitem);
 
+	char *edj_file = DEFAULT_THUMBNAIL_PATH;
 	// Update Main View.
 	if (pMainView->bShowMenu == true) {
 		PERF_CHECK_BEGIN(LVL5, "Update main view");
@@ -648,7 +655,7 @@ void ivug_set_prev_next_photocam_images(void *data, Evas_Object **prev_pc, Evas_
 
 			if (EVAS_LOAD_ERROR_NONE != err) {
 				MSG_HIGH("Loading default Thumbnail");
-				elm_photocam_file_set(*prev_pc, DEFAULT_THUMBNAIL_PATH);
+				elm_photocam_file_set(*prev_pc, edj_file);
 			}
 		}
 		evas_object_show(*prev_pc);
@@ -676,10 +683,11 @@ void ivug_set_prev_next_photocam_images(void *data, Evas_Object **prev_pc, Evas_
 
 			if (EVAS_LOAD_ERROR_NONE != err) {
 				MSG_HIGH("Loading default Thumbnail");
-				elm_photocam_file_set(*next_pc, DEFAULT_THUMBNAIL_PATH);
+				elm_photocam_file_set(*next_pc, edj_file);
 			}
 		}
 		evas_object_show(*next_pc);
 		edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_right", next_iva);
 	}
+	free(edj_file);
 }

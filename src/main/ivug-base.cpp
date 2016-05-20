@@ -274,11 +274,14 @@ static Evas_Object *create_fullview(Evas_Object *win, ug_data *ugd)
 	Evas_Object *base;
 
 	/* Create Full view */
-	base = create_layout(win, full_path(EDJ_PATH, "/ivug-base.edj"), "ivug_base");
+	char *edj_path = full_path(EDJ_PATH, "/ivug-base.edj");
+	base = create_layout(win, edj_path, "ivug_base");
 	if (base == NULL) {
-		MSG_IMAGEVIEW_HIGH("Cannot set layout. EDJ=%s Group=%s", full_path(EDJ_PATH, "/ivug-base.edj"), "ivug_base");
+		MSG_IMAGEVIEW_HIGH("Cannot set layout. EDJ=%s Group=%s", edj_path, "ivug_base");
+		free(edj_path);
 		return NULL;
 	}
+	free(edj_path);
 
 	evas_object_name_set(base, "Base layout");
 
@@ -330,7 +333,9 @@ bool on_create( void *priv)
 	int wx, wy, ww, wh;
 	int error_code = -1;
 
-	elm_theme_extension_add(NULL, full_path(EDJ_PATH, "/ivug-base.edj"));
+	char *edj_path = full_path(EDJ_PATH, "/ivug-base.edj");
+	elm_theme_extension_add(NULL, edj_path);
+	free(edj_path);
 
 	evas_object_geometry_get(win, &wx, &wy, &ww, &wh);
 

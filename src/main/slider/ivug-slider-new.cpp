@@ -607,6 +607,7 @@ Ivug_SliderNew * ivug_slider_new_init(Evas_Object *parent, void *pMainView)
 	int wx, wy, ww, wh;
 
 	evas_object_geometry_get(win, &wx, &wy, &ww, &wh);
+	char *hd_edj_filepath = SLIDER_NEW_HD_EDJ_FILE;
 #if 0 //Issue TSAM-1681
 	if (ww == 720 && wh == 1280) {
 		MSG_WARN("HD Loading");
@@ -616,7 +617,8 @@ Ivug_SliderNew * ivug_slider_new_init(Evas_Object *parent, void *pMainView)
 		slider_new->layout = ivug_layout_add2(parent, SLIDER_NEW_EDJ_FILE, "slider_new");
 	}
 #else
-	slider_new->layout = ivug_layout_add2(parent, SLIDER_NEW_HD_EDJ_FILE, "slider_new");
+	slider_new->layout = ivug_layout_add2(parent, hd_edj_filepath, "slider_new");
+	free(hd_edj_filepath);
 #endif
 	if (slider_new->layout == NULL) {
 		MSG_WARN("layout sawllow failed");

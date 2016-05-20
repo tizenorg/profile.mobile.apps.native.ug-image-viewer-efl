@@ -239,12 +239,14 @@ static Evas_Object* _create_favorite_button(Evas_Object *parent)
 {
 	Evas_Object *focusButton = elm_button_add(parent);
 	elm_object_style_set(focusButton, "focus");
+	char *edj_path = full_path(EDJ_PATH, "/ivug-button_new.edj");
 
-	Evas_Object *btnlayout = create_layout(parent, full_path(EDJ_PATH, "/ivug-button_new.edj"), "ivug.btn.favorite");
+	Evas_Object *btnlayout = create_layout(parent, edj_path, "ivug.btn.favorite");
 	edje_object_signal_emit(_EDJ(btnlayout), "image,dim", "prog");
 	elm_object_part_content_set(focusButton, "elm.swallow.content", btnlayout);
 	evas_object_show(focusButton);
 
+	free(edj_path);
 	return focusButton;
 }
 
@@ -330,6 +332,10 @@ static Eina_Bool _on_btn_back_clicked(void *data, Elm_Object_Item *it)
 		}
 		app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
 		app_control_destroy(service);
+		i--;
+		while(i >= 0) {
+			free(files[i--]);
+		}
 		free(files);
 	}
 
@@ -940,11 +946,14 @@ _thumb_realized_cb(void *data, Evas_Object *obj, void *event_info)
 	}
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
 
-	if (strcmp(mdata->thumbnail_path, DEFAULT_THUMBNAIL_PATH) == 0) {
+	char *edj_default_path = DEFAULT_THUMBNAIL_PATH;
+
+	if (strcmp(mdata->thumbnail_path, edj_default_path) == 0) {
 		if (mdata->thumb_handle == NULL) {
 			mdata->thumb_handle = ivug_db_create_thumbnail(mdata->m_handle, _ivug_main_view_thumbnail_cb, (void *)mdata);
 		}
 	}
+	free(edj_default_path);
 }
 
 static void
@@ -1134,7 +1143,9 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 
 	PERF_CHECK_BEGIN(LVL2, "elm_layout_add");
 
-	pMainView->lyContent = create_layout(layout, IVUG_MAIN_EDJ, "navi_content");
+	char *main_edj_path = IVUG_MAIN_EDJ;
+	pMainView->lyContent = create_layout(layout, main_edj_path, "navi_content");
+	free(main_edj_path);
 	if (pMainView->lyContent == NULL) {
 		IVUG_DEBUG_WARNING("layout create failed");
 		ivug_main_view_destroy(pMainView);
@@ -1673,12 +1684,15 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 	int count = -1;
 	int currentindex = -1;
 	Evas_Load_Error e = EVAS_LOAD_ERROR_NONE;
+	char *default_thumbnail_edj_path = DEFAULT_THUMBNAIL_PATH;
 
 	if (pMainView->mode != IVUG_MODE_HIDDEN) {
 		Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
+		if (!mitem) free(default_thumbnail_edj_path);
 		ivug_ret_if(mitem == NULL);
 
 		Media_Data *mdata = ivug_medialist_get_data(mitem);
+		if (!mdata) free(default_thumbnail_edj_path);
 		ivug_ret_if(mdata == NULL);
 
 		pMainView->cur_mitem = mitem;
@@ -1703,7 +1717,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 
 			if (EVAS_LOAD_ERROR_NONE != e) {
 				MSG_HIGH("Loading default Thumbnail");
-				elm_photocam_file_set(pMainView->photocam, DEFAULT_THUMBNAIL_PATH);
+				elm_photocam_file_set(pMainView->photocam, default_thumbnail_edj_path);
 			}
 			evas_object_geometry_get(pMainView->photocam, &bx, &by, &bw, &bh);
 		}
@@ -1741,7 +1755,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 
 			if (EVAS_LOAD_ERROR_NONE != e) {
 				MSG_HIGH("Loading default Thumbnail");
-				elm_photocam_file_set(pMainView->photocam, DEFAULT_THUMBNAIL_PATH);
+				elm_photocam_file_set(pMainView->photocam, default_thumbnail_edj_path);
 			}
 		}
 	} else {
@@ -1759,7 +1773,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 
 		if (EVAS_LOAD_ERROR_NONE != e) {
 			MSG_HIGH("Loading default Thumbnail");
-			elm_photocam_file_set(pMainView->photocam, DEFAULT_THUMBNAIL_PATH);
+			elm_photocam_file_set(pMainView->photocam, default_thumbnail_edj_path);
 		}
 	}
 
@@ -1788,7 +1802,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 
 				if (EVAS_LOAD_ERROR_NONE != e) {
 					MSG_HIGH("Loading default Thumbnail");
-					elm_photocam_file_set(pMainView->photocam2, DEFAULT_THUMBNAIL_PATH);
+					elm_photocam_file_set(pMainView->photocam2, default_thumbnail_edj_path);
 				}
 			}
 
@@ -1807,7 +1821,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 				e = elm_photocam_file_set(pMainView->photocam0, pmData->filepath);
 				if (EVAS_LOAD_ERROR_NONE != e) {
 					MSG_HIGH("Loading default Thumbnail");
-					elm_photocam_file_set(pMainView->photocam0, DEFAULT_THUMBNAIL_PATH);
+					elm_photocam_file_set(pMainView->photocam0, default_thumbnail_edj_path);
 				}
 			}
 
@@ -1822,7 +1836,9 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 		edje_object_signal_callback_add(elm_layout_edje_get(pMainView->lyContent), "button_clicked", "elm", _back_button_clicked, pMainView);
 	}
 	if (pMainView->mode == IVUG_MODE_SELECT) {
-		Evas_Object *sel_bar = create_layout(pMainView->layout, IVUG_MAIN_EDJ, "select_bar");
+		char *main_edj_path = IVUG_MAIN_EDJ;
+		Evas_Object *sel_bar = create_layout(pMainView->layout, main_edj_path, "select_bar");
+		free(main_edj_path);
 		if (sel_bar == NULL) {
 			IVUG_DEBUG_WARNING("layout create failed");
 		}
@@ -1858,6 +1874,10 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 				}
 			}
 		}
+		i--;
+		while(i >= 0) {
+			free(files[i--]);
+		}
 		free(files);
 		elm_object_part_text_set(pMainView->select_bar, "elm.text.title", buf);
 		evas_object_show(check);
@@ -1866,6 +1886,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 		edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,hide", "user");
 		pMainView->bShowMenu = false ;
 	}
+	free(default_thumbnail_edj_path);
 }
 
 

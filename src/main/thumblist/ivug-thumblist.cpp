@@ -142,7 +142,9 @@ static Evas_Object *create_contents(Evas_Object *parent, const char *path)
 	if (EVAS_LOAD_ERROR_NONE != err) {
 		MSG_ERROR("Cannot load file : Err(%d) %s", err, path);
 		// Load default.
-		evas_object_image_file_set(image, DEFAULT_THUMBNAIL_PATH, NULL);
+		char *edj_path = DEFAULT_THUMBNAIL_PATH;
+		evas_object_image_file_set(image, edj_path, NULL);
+		free(edj_path);
 
 		Evas_Load_Error err = evas_object_image_load_error_get(image);
 
@@ -193,10 +195,13 @@ static Evas_Object *create_edje_content(Evas_Object *parent, const char *path)
 
 	layout = elm_layout_add(parent);
 
-	if (elm_layout_file_set(layout, EDJ_THUMBLIST, "thumblist.item") == EINA_FALSE) {
+	char *edj_path = EDJ_THUMBLIST;
+	if (elm_layout_file_set(layout, edj_path, "thumblist.item") == EINA_FALSE) {
 		MSG_ERROR("Cannot load thumlist edj");
+		free(edj_path);
 		return NULL;
 	}
+	free(edj_path);
 
 	evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(layout, EVAS_HINT_FILL, EVAS_HINT_FILL);
@@ -240,6 +245,7 @@ grid_content_get(void *data, Evas_Object *obj, const char *part)
 	Thumbnail *thm = (Thumbnail *)data;
 // TODO : For bestshot, use edje.
 	MSG_LOW("Content get : %s", part);
+	char *edj_path = EDJ_ICON;
 
 	if (!strcmp(part, "elm.swallow.icon")) {
 		Evas_Object *contents = create_edje_content(obj, (thm->path));
@@ -258,7 +264,7 @@ grid_content_get(void *data, Evas_Object *obj, const char *part)
 			elm_image_no_scale_set(icon, EINA_TRUE);
 			elm_image_aspect_fixed_set(icon, EINA_TRUE);
 
-			if (elm_image_file_set(icon, EDJ_ICON, "icon.sound_scene") == EINA_FALSE) {
+			if (elm_image_file_set(icon, edj_path, "icon.sound_scene") == EINA_FALSE) {
 				MSG_ERROR("Cannot load EDJ_ICON");
 			}
 
@@ -273,7 +279,7 @@ grid_content_get(void *data, Evas_Object *obj, const char *part)
 			elm_image_no_scale_set(icon, EINA_TRUE);
 			elm_image_aspect_fixed_set(icon, EINA_TRUE);
 
-			if (elm_image_file_set(icon, EDJ_ICON, "icon.panorama") == EINA_FALSE) {
+			if (elm_image_file_set(icon, edj_path, "icon.panorama") == EINA_FALSE) {
 				MSG_ERROR("Cannot load EDJ_ICON");
 			}
 
@@ -288,7 +294,7 @@ grid_content_get(void *data, Evas_Object *obj, const char *part)
 			elm_image_no_scale_set(icon, EINA_TRUE);
 			elm_image_aspect_fixed_set(icon, EINA_TRUE);
 
-			if (elm_image_file_set(icon, EDJ_ICON, "icon.burst") == EINA_FALSE) {
+			if (elm_image_file_set(icon, edj_path, "icon.burst") == EINA_FALSE) {
 				MSG_ERROR("Cannot load EDJ_ICON");
 			}
 
@@ -306,7 +312,7 @@ grid_content_get(void *data, Evas_Object *obj, const char *part)
 			elm_image_no_scale_set(icon, EINA_TRUE);
 			elm_image_aspect_fixed_set(icon, EINA_TRUE);
 
-			if (elm_image_file_set(icon, EDJ_ICON, "btn.video.play.80.80") == EINA_FALSE) {
+			if (elm_image_file_set(icon, edj_path, "btn.video.play.80.80") == EINA_FALSE) {
 				MSG_ERROR("Cannot load EDJ_ICON");
 			}
 
@@ -330,6 +336,8 @@ grid_content_get(void *data, Evas_Object *obj, const char *part)
 #endif
 		}
 
+		free(edj_path);
+
 		return contents;
 	} else if (thm->thmlist->eGridMode == IV_THUMBLIST_MODE_EDIT && !strcmp(part, "elm.swallow.end")) {
 		MSG_MED("Checked ! %d", thm->bChecked);
@@ -347,9 +355,11 @@ grid_content_get(void *data, Evas_Object *obj, const char *part)
 			elm_access_object_unregister(ck);
 		}
 
+		free(edj_path);
 		return ck;
 	}
 
+	free(edj_path);
 	return NULL;
 }
 
@@ -723,7 +733,7 @@ Image_Object *ivug_thumblist_append_item(Evas_Object *obj, const char *thumbnail
 	Thumbnail *thm = _alloc_thumb(thmlist);
 
 	if (thumbnail_path == NULL) {
-		thm->path = strdup(DEFAULT_THUMBNAIL_PATH);
+		thm->path = DEFAULT_THUMBNAIL_PATH;
 	} else {
 		thm->path = strdup(thumbnail_path);
 	}
@@ -747,7 +757,7 @@ Image_Object *ivug_thumblist_prepend_item(Evas_Object *obj, const char *thumbnai
 	Thumbnail *thm = _alloc_thumb(thmlist);
 
 	if (thumbnail_path == NULL) {
-		thm->path = strdup(DEFAULT_THUMBNAIL_PATH);
+		thm->path = DEFAULT_THUMBNAIL_PATH;
 	} else {
 		thm->path = strdup(thumbnail_path);
 	}
@@ -781,7 +791,7 @@ ivug_thumblist_update_item(Evas_Object* obj, Image_Object *img, const char *thum
 
 	free(thm->path);
 	if (thumbnail_path == NULL) {
-		thm->path = strdup(DEFAULT_THUMBNAIL_PATH);
+		thm->path = DEFAULT_THUMBNAIL_PATH;
 	} else {
 		thm->path = strdup(thumbnail_path);
 	}
