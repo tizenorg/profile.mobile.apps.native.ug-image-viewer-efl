@@ -213,10 +213,12 @@ static void _create_tool_menu(Ivug_MainView *pMainView)
 		return;
 	}
 
+	char *edj_path = full_path(EDJ_PATH, "/ivug-button.edj");
+
 	if (pMainView->mode == IVUG_MODE_SAVE) {
 		Evas_Object *btnSave;
 
-		btnSave = create_layout(pMainView->lyContent, full_path(EDJ_PATH, "/ivug-button.edj"), "ivug.btn.save");
+		btnSave = create_layout(pMainView->lyContent, edj_path, "ivug.btn.save");
 		elm_object_part_content_set(pMainView->lyContent, "ivug.swallow.btn1", btnSave); //swallow
 		pMainView->toolbtns.download = btnSave;
 
@@ -224,14 +226,14 @@ static void _create_tool_menu(Ivug_MainView *pMainView)
 	} else if (pMainView->view_by == IVUG_VIEW_BY_HIDDEN_ALL || pMainView->view_by == IVUG_VIEW_BY_HIDDEN_FOLDER) {
 		Evas_Object *btnDelete;
 
-		btnDelete = create_layout(pMainView->lyContent, full_path(EDJ_PATH, "/ivug-button.edj"), "ivug.btn.delete");
+		btnDelete = create_layout(pMainView->lyContent, edj_path, "ivug.btn.delete");
 		elm_object_part_content_set(pMainView->lyContent, "ivug.swallow.btn1", btnDelete); //swallow
 		pMainView->toolbtns.del = btnDelete;
 
 		elm_layout_signal_callback_add(btnDelete, "image_click", "ivug.btn.delete", _on_btn_delete_cb, pMainView);
 
 		Evas_Object *btnShare;
-		btnShare = create_layout(pMainView->lyContent, full_path(EDJ_PATH, "/ivug-button.edj"), "ivug.btn.share");
+		btnShare = create_layout(pMainView->lyContent, edj_path, "ivug.btn.share");
 		elm_object_part_content_set(pMainView->lyContent, "ivug.swallow.btn2", btnShare); //swallow
 		pMainView->toolbtns.share = btnShare;
 
@@ -239,7 +241,7 @@ static void _create_tool_menu(Ivug_MainView *pMainView)
 
 		Evas_Object *btnNearBy;
 
-		btnNearBy = create_layout(pMainView->lyContent, full_path(EDJ_PATH, "/ivug-button.edj"), "ivug.btn.nearby");
+		btnNearBy = create_layout(pMainView->lyContent, edj_path, "ivug.btn.nearby");
 		elm_object_part_content_set(pMainView->lyContent, "ivug.swallow.btn3", btnNearBy); //swallow
 		pMainView->toolbtns.nearby = btnNearBy;
 
@@ -250,7 +252,7 @@ static void _create_tool_menu(Ivug_MainView *pMainView)
 		if (storage_type != IV_STORAGE_TYPE_WEB) {	// not Facebook image
 			Evas_Object *btnDelete;
 
-			btnDelete = create_layout(pMainView->lyContent, full_path(EDJ_PATH, "/ivug-button.edj"), "ivug.btn.delete");
+			btnDelete = create_layout(pMainView->lyContent, edj_path, "ivug.btn.delete");
 			elm_object_part_content_set(pMainView->lyContent, "ivug.swallow.btn1", btnDelete); //swallow
 			pMainView->toolbtns.del = btnDelete;
 
@@ -258,14 +260,14 @@ static void _create_tool_menu(Ivug_MainView *pMainView)
 
 			Evas_Object *btnEdit;
 
-			btnEdit = create_layout(pMainView->lyContent, full_path(EDJ_PATH, "/ivug-button.edj"), "ivug.btn.edit");
+			btnEdit = create_layout(pMainView->lyContent, edj_path, "ivug.btn.edit");
 			elm_object_part_content_set(pMainView->lyContent, "ivug.swallow.btn2", btnEdit); //swallow
 			pMainView->toolbtns.edit = btnEdit;
 
 			elm_layout_signal_callback_add(btnEdit, "image_click", "ivug.btn.edit", _on_btn_edit_cb, pMainView);
 
 			Evas_Object *btnShare;
-			btnShare = create_layout(pMainView->lyContent, full_path(EDJ_PATH, "/ivug-button.edj"), "ivug.btn.share");
+			btnShare = create_layout(pMainView->lyContent, edj_path, "ivug.btn.share");
 			elm_object_part_content_set(pMainView->lyContent, "ivug.swallow.btn3", btnShare); //swallow
 			pMainView->toolbtns.share = btnShare;
 
@@ -273,7 +275,7 @@ static void _create_tool_menu(Ivug_MainView *pMainView)
 
 			Evas_Object *btnNearBy;
 
-			btnNearBy = create_layout(pMainView->lyContent, full_path(EDJ_PATH, "/ivug-button.edj"), "ivug.btn.nearby");
+			btnNearBy = create_layout(pMainView->lyContent, edj_path, "ivug.btn.nearby");
 			elm_object_part_content_set(pMainView->lyContent, "ivug.swallow.btn4", btnNearBy); //swallow
 			pMainView->toolbtns.nearby = btnNearBy;
 
@@ -282,7 +284,7 @@ static void _create_tool_menu(Ivug_MainView *pMainView)
 		} else {	// Facebook image
 			Evas_Object *btnShare;
 
-			btnShare = create_layout(pMainView->lyContent, full_path(EDJ_PATH,"/ivug-button.edj"), "ivug.btn.share");
+			btnShare = create_layout(pMainView->lyContent, edj_path, "ivug.btn.share");
 			elm_object_part_content_set(pMainView->lyContent, "ivug.swallow.btn1", btnShare); //swallow
 			pMainView->toolbtns.share = btnShare;
 
@@ -290,13 +292,14 @@ static void _create_tool_menu(Ivug_MainView *pMainView)
 
 			Evas_Object *btnSave;
 
-			btnSave = create_layout(pMainView->lyContent, full_path(EDJ_PATH,"/ivug-button.edj"), "ivug.btn.save");
+			btnSave = create_layout(pMainView->lyContent, edj_path, "ivug.btn.save");
 			elm_object_part_content_set(pMainView->lyContent, "ivug.swallow.btn2", btnSave); //swallow
 			pMainView->toolbtns.download = btnSave;
 
 			elm_layout_signal_callback_add(btnSave, "image_click", "ivug.btn.save", _on_btn_save_cb, pMainView);
 		}
 	}
+	free(edj_path);
 }
 
 static void _delete_tool_menu(Ivug_MainView *pMainView)

@@ -64,14 +64,17 @@ Evas_Object *CButton::CreateObject(Evas_Object *parent)
 	evas_object_smart_callbacks_descriptions_set(sObj, _signals);
 
 	m_edje = edje_object_add(evas_object_evas_get(parent));
+	char *edj_path = full_path(EDJ_PATH, "/ivug-widget-button.edj");
 
-	if (!edje_object_file_set(m_edje, full_path(EDJ_PATH, "/ivug-widget-button.edj"), "iv/button")) {
+	if (!edje_object_file_set(m_edje, edj_path, "iv/button")) {
 		Edje_Load_Error err = edje_object_load_error_get(m_edje);
 		const char *errmsg = edje_load_error_str(err);
 		MSG_ERROR("could not load 'group_name' from theme.edj: %s",  errmsg);
 		evas_object_del(m_edje);
+		free(edj_path);
 		return NULL;
 	}
+	free(edj_path);
 
 	evas_object_smart_member_add(m_edje, sObj);
 

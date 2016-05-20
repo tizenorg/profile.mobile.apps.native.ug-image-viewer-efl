@@ -594,7 +594,9 @@ _ivug_ss_photocam_loaded_cb(void *data, Evas_Object *obj, void *event_info)
 static bool _ivug_ss_create_image_layout(Evas_Object *parent, Slide_Layout *sLayout)
 {
 	/* Create Layout for the current item */
-	sLayout->layout = _ivug_ss_create_layout(parent, IVUG_SS_LY_EDJ_PATH, "slayout");
+	char *edj_path = IVUG_SS_LY_EDJ_PATH;
+	sLayout->layout = _ivug_ss_create_layout(parent, edj_path, "slayout");
+	free(edj_path);
 
 	if (sLayout->layout == NULL) {
 		MSG_ERROR("Cannot create current layout");
@@ -646,7 +648,9 @@ SlideShow *ivug_ss_create(Evas_Object *parent)
 	pSlideShow->effect_type = _ivug_ss_get_trans_effect(ivug_effect);
 
 // If Non-DALI slideshow.
-	pSlideShow->obj = _ivug_ss_create_layout(parent, IVUG_SS_LY_EDJ_PATH, "view.slideshow");
+	char *edj_path = IVUG_SS_LY_EDJ_PATH;
+	pSlideShow->obj = _ivug_ss_create_layout(parent, edj_path, "view.slideshow");
+	free(edj_path);
 	MSG_ASSERT(pSlideShow->obj != NULL);
 	evas_object_name_set(pSlideShow->obj, "slideshow");
 
@@ -1146,12 +1150,13 @@ static void ivug_show_pause_state_layout(SlideShow *pSlideShow)
 	IV_ASSERT(pSlideShow != NULL);
 
 //Current Layout
+	char *edj_path = IVUG_SS_LY_EDJ_PATH;
 	pSlideShow->pauseLayout = elm_layout_add(pSlideShow->sLayout[0].layout);
 	evas_object_size_hint_expand_set(pSlideShow->pauseLayout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-	Eina_Bool ret = elm_layout_file_set(pSlideShow->pauseLayout, IVUG_SS_LY_EDJ_PATH, "slideshow_overlay");
+	Eina_Bool ret = elm_layout_file_set(pSlideShow->pauseLayout, edj_path, "slideshow_overlay");
 
 	if (ret == EINA_FALSE) {
-		MSG_ERROR("Layout file set failed! slideshow_overlay in %s", IVUG_SS_LY_EDJ_PATH);
+		MSG_ERROR("Layout file set failed! slideshow_overlay in %s", edj_path);
 	}
 
 	/*text*/
@@ -1172,11 +1177,12 @@ static void ivug_show_pause_state_layout(SlideShow *pSlideShow)
 //Next Layout
 	pSlideShow->pauseLayout2 = elm_layout_add(pSlideShow->sLayout[1].layout);
 	evas_object_size_hint_expand_set(pSlideShow->pauseLayout2, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-	ret = elm_layout_file_set(pSlideShow->pauseLayout2, IVUG_SS_LY_EDJ_PATH, "slideshow_overlay");
+	ret = elm_layout_file_set(pSlideShow->pauseLayout2, edj_path, "slideshow_overlay");
 
 	if (ret == EINA_FALSE) {
-		MSG_ERROR("Layout file set failed! slideshow_overlay in %s", IVUG_SS_LY_EDJ_PATH);
+		MSG_ERROR("Layout file set failed! slideshow_overlay in %s", edj_path);
 	}
+	free(edj_path);
 
 	/*text*/
 	elm_object_domain_translatable_part_text_set(pSlideShow->pauseLayout2, "slide_interval_setting.icon.text", textdomain(NULL), GET_STR(IDS_SLIDESHOW_SLIDE_INTERVAL));
