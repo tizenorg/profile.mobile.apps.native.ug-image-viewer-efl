@@ -1000,3 +1000,6 @@ msgstr "Nagyítás"
 msgid "IDS_COM_SK_RENAME"
 msgstr "Átnevez"
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "Írja be a nevet."
+

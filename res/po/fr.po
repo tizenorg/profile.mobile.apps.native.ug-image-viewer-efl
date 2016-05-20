@@ -1000,3 +1000,6 @@ msgstr "Zoom avant"
 msgid "IDS_COM_SK_RENAME"
 msgstr "Renommer"
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "Saisissez un nom."
+

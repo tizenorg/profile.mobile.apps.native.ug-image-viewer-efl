@@ -44,7 +44,7 @@ msgid "IDS_GALLERY_HEADER_ENTER_NAME"
 msgstr "Introduceţi numele"
 
 msgid "IDS_MEDIABR_POP_NO_NAME"
-msgstr "Nici un nume"
+msgstr "Niciun nume"
 
 msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
 msgstr "Există un singur album."
@@ -999,4 +999,7 @@ msgstr "Mărire"
 
 msgid "IDS_COM_SK_RENAME"
 msgstr "Redenumire"
+
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "Introduceţi numele."
 

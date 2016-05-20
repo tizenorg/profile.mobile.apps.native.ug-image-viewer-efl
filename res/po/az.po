@@ -1000,3 +1000,6 @@ msgstr "Miqyasını artır"
 msgid "IDS_COM_SK_RENAME"
 msgstr "Adını dəyişdir"
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "Xahiş olunur adı daxil edin."
+

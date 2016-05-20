@@ -1000,3 +1000,6 @@ msgstr "放大"
 msgid "IDS_COM_SK_RENAME"
 msgstr "重新命名"
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "輸入名稱。"
+

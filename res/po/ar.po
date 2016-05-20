@@ -1000,3 +1000,6 @@ msgstr "تقريب"
 msgid "IDS_COM_SK_RENAME"
 msgstr "تغيير الاسم"
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "أدخل الاسم."
+

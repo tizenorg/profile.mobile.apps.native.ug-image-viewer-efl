@@ -1000,3 +1000,6 @@ msgstr "Aumentar zoom"
 msgid "IDS_COM_SK_RENAME"
 msgstr "Renomear"
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "Inserir nome."
+

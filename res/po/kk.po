@@ -1000,3 +1000,6 @@ msgstr "Үлкейту"
 msgid "IDS_COM_SK_RENAME"
 msgstr "Бсқш атау"
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "Атын енгізіңіз."
+

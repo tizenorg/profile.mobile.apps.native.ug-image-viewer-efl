@@ -1000,3 +1000,6 @@ msgstr "Zúmáil isteach"
 msgid "IDS_COM_SK_RENAME"
 msgstr "Athainmnigh"
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "Iontráil ainm"
+

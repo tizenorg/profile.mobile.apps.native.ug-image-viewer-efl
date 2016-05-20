@@ -1000,3 +1000,6 @@ msgstr "Zoom ind"
 msgid "IDS_COM_SK_RENAME"
 msgstr "Omdøb"
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "Angiv navn."
+

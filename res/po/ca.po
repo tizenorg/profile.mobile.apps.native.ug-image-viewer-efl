@@ -1000,3 +1000,6 @@ msgstr "Apropar"
 msgid "IDS_COM_SK_RENAME"
 msgstr "Canv. nom"
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "Introduir nom"
+

@@ -1000,3 +1000,6 @@ msgstr "Inzoomen"
 msgid "IDS_COM_SK_RENAME"
 msgstr "Hernoemen"
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "Naam invoeren."
+

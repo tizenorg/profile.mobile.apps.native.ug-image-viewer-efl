@@ -1000,3 +1000,6 @@ msgstr "Aumentar"
 msgid "IDS_COM_SK_RENAME"
 msgstr "Renombrar"
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "Introducir nombre."
+

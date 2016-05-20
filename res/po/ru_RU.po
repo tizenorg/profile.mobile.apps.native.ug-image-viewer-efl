@@ -1000,3 +1000,6 @@ msgstr "Увеличить"
 msgid "IDS_COM_SK_RENAME"
 msgstr "Переименовать"
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "Введите название."
+

@@ -1000,3 +1000,6 @@ msgstr "Kattalashtirish"
 msgid "IDS_COM_SK_RENAME"
 msgstr "Nom o‘zg."
 
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "Nom kiriting."
+

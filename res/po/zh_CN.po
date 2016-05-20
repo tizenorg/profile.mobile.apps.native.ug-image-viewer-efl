@@ -44,7 +44,7 @@ msgid "IDS_GALLERY_HEADER_ENTER_NAME"
 msgstr "输入名称"
 
 msgid "IDS_MEDIABR_POP_NO_NAME"
-msgstr "无名称"
+msgstr "无姓名"
 
 msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
 msgstr "仅有一个相册"
@@ -999,4 +999,7 @@ msgstr "放大"
 
 msgid "IDS_COM_SK_RENAME"
 msgstr "重命名"
+
+msgid "IDS_COM_BODY_ENTER_NAME"
+msgstr "输入名字。"
 
