@@ -245,14 +245,14 @@ static bool _ivug_ss_set_content(Slide_Layout *pSlide, Media_Item *item)
 			return false;
 		}
 	} else {
+		MSG_SEC("Photocam Object is %p  and File is %s", pSlide->photocam, mdata->filepath);
 		ret = elm_photocam_file_set(pSlide->photocam, mdata->filepath);
-
+		MSG_SEC("elm_photocam_file_set API envoked");
 		if (EVAS_LOAD_ERROR_NONE != ret) {
 			MSG_HIGH("elm_photocam_file_set failed. Loading default Thumbnail");
 			elm_photocam_file_set(pSlide->photocam, DEFAULT_THUMBNAIL);
 			return false;
 		}
-
 		if (elm_image_file_set(pSlide->thumbnail, mdata->thumbnail_path, NULL)
 		        == EINA_FALSE) {
 			MSG_ERROR("Cannot load thumbnail : %s", mdata->thumbnail_path);

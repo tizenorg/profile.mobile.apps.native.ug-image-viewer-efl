@@ -5,5 +5,29 @@
 	<ui-application appid="org.tizen.image-viewer" exec="/usr/apps/org.tizen.image-viewer/bin/image-viewer" launch_mode="caller" process-pool="true" nodisplay="true" multiple="false" type="capp" taskmanage="false" hw-acceleration="on">
 		<icon>/usr/share/icons/default/small/org.tizen.image-viewer.png</icon>
 		<label>image-viewer</label>
+		<app-control>
+			<operation name="http://tizen.org/appcontrol/operation/view"/>
+			<mime name="image/jpeg"/>
+			<mime name="image/png"/>
+			<mime name="image/bmp"/>
+			<mime name="image/gif"/>
+			<mime name="image/vnd.wap.wbmp"/>
+		</app-control>
+		<app-control>
+			<operation name="http://tizen.org/appcontrol/operation/view"/>
+			<uri name="file"/>
+		</app-control>
 	</ui-application>
+    	<privileges>
+        	<privilege>http://tizen.org/privilege/packagemanager.info</privilege>
+	        <privilege>http://tizen.org/privilege/datasharing</privilege>
+        	<privilege>http://tizen.org/privilege/mediastorage</privilege>
+        	<privilege>http://tizen.org/privilege/contact.write</privilege>
+        	<privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+        	<privilege>http://tizen.org/privilege/content.write</privilege>
+        	<privilege>http://tizen.org/privilege/message.write</privilege>
+        	<privilege>http://tizen.org/privilege/display</privilege>
+        	<privilege>http://tizen.org/privilege/externalstorage</privilege>
+        	<privilege>http://tizen.org/privilege/contact.read</privilege>
+    	</privileges>
 </manifest>
