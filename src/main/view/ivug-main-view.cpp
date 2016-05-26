@@ -669,8 +669,6 @@ _on_slider_clicked(void *data, Evas_Object *obj, void *event_info)
 		}
 	}
 #endif
-
-	FIXME("Bug. menu bar is blinking when stopping slide show.")
 	if (pMainView->mode != IVUG_MODE_SELECT && pMainView->mode != IVUG_MODE_EMAIL) {
 		if (pMainView->bShowMenu) {
 			ivug_main_view_hide_menu_bar(pMainView);
@@ -907,7 +905,6 @@ _on_slideshow_finished(void *data, Evas_Object *obj, void *event_info)
 
 		if (img == NULL) {
 			MSG_MAIN_ERROR("Cannot find item");
-			TODO(" Reload data again!.")
 		} else {
 			MSG_MAIN_HIGH("pMainView->bSetThmByUser : %d", pMainView->bSetThmByUser);
 
@@ -1004,7 +1001,7 @@ static Eina_Bool _on_hide_timer_expired(void *data)
 
 	return ECORE_CALLBACK_CANCEL;
 }
-
+#if 0
 static const char *_getIvugMode(ivug_mode mode)
 {
 	static const char *szMode[] = {
@@ -1043,7 +1040,7 @@ static const char *_getIvugViewBy(ivug_view_by view_by)
 
 	return szViewBy[view_by];
 }
-
+#endif
 static inline void
 _naviframe_back_cb(void *data, Evas_Object *obj, void *event_info)
 {
@@ -1401,7 +1398,6 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 	} else if (filter->view_by == IVUG_VIEW_BY_HIDDEN_ALL) {
 		pMainView->album_name = strdup(IDS_HIDDEN);
 	} else if (filter->view_by == IVUG_VIEW_BY_FOLDER) {
-		TODO("it is not run!! DB problem!!!")
 		/*
 		media_handle m_handle = ivug_db_get_folder_handle(ivug_dir_get(ivug_param->filepath));
 		if (m_handle == NULL)
@@ -1417,7 +1413,6 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 			pMainView->album_name = strdup(IDS_NO_NAME);
 		}
 	} else if (filter->view_by == IVUG_VIEW_BY_HIDDEN_FOLDER) {
-		TODO("it is not run!! DB problem!!!")
 		/*
 		media_handle m_handle = ivug_db_get_folder_handle(ivug_dir_get(ivug_param->filepath));
 		if (m_handle == NULL)

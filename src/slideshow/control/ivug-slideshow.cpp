@@ -47,32 +47,6 @@
 #undef LOG_CAT
 #define LOG_CAT "IV-SLIDESHOW"
 
-/*
-	Basic functionality is implemented.
-	but codes have many bugs. plz check this.
-
-	TODO:
-		Resize is not handled.
-		Mouse routine is not handled.
-		Decoding faied is not processed.
-
-		Not test except slide effect.
-
-*/
-/*
-static inline char * ivug_get_resource_path() {
-	char * path = app_get_resource_path();
-	return path;
-}
-
-static inline char* full_path(char *str1, char *str2) {
-	char path[1024] = {};
-	snprintf(path, 1024, "%s%s", str1, str2);
-	char *full_path = strdup(path);
-	return full_path;
-}
-
-*/
 #define UG_RES_PATH 		ivug_get_resource_path()
 #define EDJ_PATH				full_path(UG_RES_PATH, "edje")
 #define IVUG_SS_LY_EDJ_PATH 	full_path(EDJ_PATH, "/ivug-ss-ly.edj")

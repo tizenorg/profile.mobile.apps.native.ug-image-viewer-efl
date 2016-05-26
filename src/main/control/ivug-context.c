@@ -349,9 +349,9 @@ ivug_context_init(Evas_Object *win, Evas_Object *conform)
 	Context->indi_mode = elm_win_indicator_mode_get(Context->parent_win);
 	Context->indi_o_mode = elm_win_indicator_opacity_get(Context->parent_win);
 
-	int overlap = (int)evas_object_data_get(conform, "overlap");
+	int *overlap = (int *)evas_object_data_get(conform, "overlap");
 
-	if (overlap == 0)
+	if (*overlap == 0)
 	{
 		Context->oMode = EINA_FALSE;
 	}

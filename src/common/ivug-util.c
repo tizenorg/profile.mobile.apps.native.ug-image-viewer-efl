@@ -446,7 +446,7 @@ bool ivug_is_facebook_image(const char *file)
 	free(dir);
 	return false;
 }
-
+#if 0
 /*
 	Shuld free returned value after use
 */
@@ -529,7 +529,7 @@ _get_icu_time_string(const char *locale, const char *customSkeleton, const char 
 
 	return strdup(formattedString);
 }
-#if 0
+
 char*
 ivug_get_icu_date(time_t mtime)
 {

@@ -30,7 +30,7 @@ static inline char * ivug_get_resource_path() {
 	return path;
 }
 
-static inline char* full_path(char *str1, char *str2) {
+static inline char* full_path(const char *str1, const char *str2) {
 	char path[1024] = {};
 	snprintf(path, 1024, "%s%s", str1, str2);
 	char *full_path = strdup(path);

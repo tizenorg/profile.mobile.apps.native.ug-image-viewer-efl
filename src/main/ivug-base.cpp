@@ -29,8 +29,6 @@
 #include "ivug-language-mgr.h"
 #include "ivug-base.h"
 
-#define SHORTCUT_ICON_PATH	"/usr/share/icons/default/small/com.samsung.image-viewer.png"
-
 static int __externalStorageId = 0;
 
 bool getSupportedStorages_cb(int storageId, storage_type_e type, storage_state_e state, const char *
@@ -191,7 +189,7 @@ static void _on_base_deleted(void * data, Evas * e, Evas_Object * obj, void * ev
 {
 	MSG_IMAGEVIEW_ERROR("_on_base_deleted");
 }
-
+#if 0
 static void _destroy_manually(void *priv)
 {
 	ug_data *ugd = (ug_data *)priv;
@@ -242,7 +240,7 @@ static void _destroy_manually(void *priv)
 		PERF_CHECK_END(LVL1, "Base layout");
 	}
 }
-
+#endif
 Evas_Object *create_layout(Evas_Object *parent, const char *edj, const char *group)
 {
 	IV_ASSERT(parent != NULL);
@@ -289,7 +287,7 @@ static Evas_Object *create_fullview(Evas_Object *win, ug_data *ugd)
 
 	return base;
 }
-
+#if 0
 static Evas_Object *create_frameview(Evas_Object *parent, ug_data *ugd)
 {
 	Evas_Object *base = NULL;
@@ -301,7 +299,7 @@ static Evas_Object *create_frameview(Evas_Object *parent, ug_data *ugd)
 
 	return base;
 }
-
+#endif
 bool on_create( void *priv)
 {
 	ug_data *ugd;
@@ -667,7 +665,7 @@ void on_destroy(void *priv)
 
 	PERF_CHECK_END(LVL0, "On Destroy");
 }
-
+#if 0
 static bool _data_print(app_control_h service, const char *key, void *user_data)
 {
 	char *value;
@@ -680,7 +678,7 @@ static bool _data_print(app_control_h service, const char *key, void *user_data)
 
 	return true;
 }
-#if 0
+
 void on_message(ui_gadget_h ug, app_control_h msg, app_control_h service, void *priv)
 {
 	MSG_IMAGEVIEW_HIGH("Image Viewer : %s UG=0x%08x", __func__, ug);	//on message

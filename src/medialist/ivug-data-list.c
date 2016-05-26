@@ -278,31 +278,31 @@ ivug_list_load_DB_items_list(const Filter_struct *filter, Eina_List *list)
 
 	Eina_List *l = NULL;
 	void *data = NULL;
-	int index = -1;
+	int *index = NULL;
 	Eina_List *item_list = NULL;
 	int start = -1;
 	int end = -1;
 
 	EINA_LIST_FOREACH(list, l, data)
 	{
-		index = (int)data;
+		index = (int *)data;
 		if (start == -1)
 		{
-			start = index;
+			start = *index;
 			end = start;
 			continue;
 		}
-		else if (index == end+1)
+		else if (*index == end+1)
 		{
-			end = index;
+			end = *index;
 			continue;
 		}
 		else
 		{
 			_load_list_db(filter, media_filter, start, end, &item_list);
 
-			start = index;
-			end = index;
+			start = *index;
+			end = *index;
 		}
 	}
 	_load_list_db(filter, media_filter, start, end, &item_list);	//load remain
