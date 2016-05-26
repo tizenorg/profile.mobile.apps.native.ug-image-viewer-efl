@@ -1,11 +1,73 @@
+
+# Project Name
 APPNAME = image-viewer
 
+# Project Type
 type = app
+
+# Project Profile
 profile = mobile-3.0
 
-USER_SRCS = src/image-viewer.c
-USER_DEFS =
-USER_INC_DIRS = inc
-USER_OBJS =
-USER_LIBS =
-USER_EDCS =
+# C Sources
+USER_SRCS = src/main/control/ivug-context.c src/common/ivug-uuid.c src/medialist/ivug-mediadata.c src/main/popup/ivug-popup.c src/slideshow/effect/ivug-fade.c src/slideshow/effect/ivug-effect.c src/medialist/ivug-filter.c src/main/view/ivug-name-view.c src/main/control/ivug-parameter.c src/common/ivug-exif.c src/slideshow/effect/ivug-anim.c src/medialist/ivug-data-list.c src/common/ivug-file-info.c src/common/ivug-message.c src/common/debug.c src/common/statistics.c src/common/ivug-util.c src/slideshow/effect/template.c src/common/ivug-language-mgr.c src/common/ivug-config.c src/common/ivug-db.c src/main/control/ivug-ext-ug.c src/common/ivug-callback.c src/slideshow/effect/ivug-slide.c src/common/ivug-file-util.c src/main/decolayer/iv-button.cpp src/medialist/ivug-medialist.cpp src/main/control/ivug-crop-ug.cpp src/main/thumblist/ivug-thumblist.cpp src/main/view/ivug-main-view-menu.cpp src/main/view/ivug-photocam.cpp src/main/decolayer/ivug-decolayer.cpp src/medialist/ivug-mediainfo.cpp src/slideshow/control/ivug-slideshow.cpp src/common/ivug-dir.cpp src/ug-image-viewer.cpp src/main/slider/ivug-slider-new.cpp src/main/ivug-base.cpp src/main/view/ivug-slideshow-view.cpp src/main/view/ivug-main-view-toolbar.cpp src/main/view/ivug-main-view.cpp 
+
+# EDC Sources
+USER_EDCS =  
+
+# PO Sources
+USER_POS = res/po/es_ES.po res/po/mk.po res/po/tr_TR.po res/po/fi.po res/po/ro.po res/po/lt.po res/po/lv.po res/po/ga.po res/po/de.po res/po/uk.po res/po/pl.po res/po/hr.po res/po/en_US.po res/po/hi.po res/po/sr.po res/po/hu.po res/po/ru_RU.po res/po/uz.po res/po/sv.po res/po/fr.po res/po/nb.po res/po/zh_TW.po res/po/zh_HK.po res/po/hy.po res/po/gl.po res/po/es_US.po res/po/pt_PT.po res/po/el_GR.po res/po/sk.po res/po/pt_BR.po res/po/nl.po res/po/ca.po res/po/zh_CN.po res/po/ja_JP.po res/po/sl.po res/po/bg.po res/po/fr_CA.po res/po/cs.po res/po/en.po res/po/da.po res/po/en_PH.po res/po/ar.po res/po/ko_KR.po res/po/ka.po res/po/is.po res/po/it_IT.po res/po/kk.po res/po/eu.po res/po/et.po res/po/az.po 
+
+# User Defines
+USER_DEFS = PREFIX='"/home/owner/apps_rw/org.tizen.image-viewer"' UG_MODULE_API PACKAGE=org.tizen.image-viewer IVAPI LOCALEDIR='"/home/owner/apps_rw/org.tizen.image-viewer/res/locale"' 
+USER_CPP_DEFS = PREFIX='"/home/owner/apps_rw/org.tizen.image-viewer"' UG_MODULE_API PACKAGE=org.tizen.image-viewer IVAPI 
+
+# User Undefines
+USER_UNDEFS = 
+USER_CPP_UNDEFS = 
+
+# User Libraries
+USER_LIBS = 
+
+# User Objects
+USER_OBJS = 
+USER_OBJS_ABS = 
+
+# User Includes
+## C Compiler
+USER_INC_DIRS = inc res/edje/sounds res/po shared/res src/common src/feature src/main/control src/main/decolayer src/main/popup src/main/slider src/main/thumblist src/main/view src/medialist src/slideshow/control src/slideshow/effect res/edje/icons res/edje/images 
+USER_INC_DIRS_ABS = 
+USER_INC_FILES = 
+USER_INC_FILES_ABS = 
+## C++ Compiler
+USER_CPP_INC_DIRS = inc res/edje/icons res/edje/images res/edje/sounds res/po shared/res src/common src/feature src/main/control src/main/decolayer src/main/popup src/main/slider src/main/thumblist src/main/view src/medialist src/slideshow/control src/slideshow/effect 
+USER_CPP_INC_DIRS_ABS = 
+USER_CPP_INC_FILES = 
+USER_CPP_INC_FILES_ABS = 
+
+# User Library Path
+USER_LIB_DIRS = 
+USER_LIB_DIRS_ABS = 
+
+# EDC Resource Path
+USER_EDCS_IMAGE_DIRS = res/edje/icons res/edje/images 
+USER_EDCS_IMAGE_DIRS_ABS = 
+USER_EDCS_SOUND_DIRS = res/edje/sounds 
+USER_EDCS_SOUND_DIRS_ABS = 
+USER_EDCS_FONT_DIRS = edje/fonts 
+USER_EDCS_FONT_DIRS_ABS = 
+
+# EDC Flags
+USER_EXT_EDC_KEYS = EDC0 
+
+USER_EXT_EDC0_EDCS = res/edje/ivug-edit-weather-view.edc res/edje/ivug-icons.edc res/edje/ivug-button_new.edc res/edje/ivug-best.edc res/edje/ivug-setas.edc res/edje/ivug-crop-view.edc res/edje/ivug-buddy-view.edc res/edje/ivug-nearby-device.edc res/edje/weather-tag-buddy.edc res/edje/ivug-widget-icons.edc res/edje/ivug-effect.edc res/edje/ivug-name-view.edc res/edje/ivug-widget-button.edc res/edje/ivug-slider-new-hd.edc res/edje/ivug-tag-buddy.edc res/edje/ivug-details.edc res/edje/ivug-thumblist.edc res/edje/ivug-face-view.edc res/edje/ivug-slider.edc res/edje/ivug-main.edc res/edje/ivug-popup.edc res/edje/ivug-custom.edc res/edje/ivug-slider-new.edc res/edje/ivug-scroller.edc res/edje/ivug-base.edc res/edje/ivug-ss-ly.edc 
+USER_EXT_EDC0_EDCS_IMAGE_DIRS = res/edje/icons res/edje/images 
+USER_EXT_EDC0_EDCS_IMAGE_DIRS_ABS = 
+USER_EXT_EDC0_EDCS_SOUND_DIRS = res/edje/sounds 
+USER_EXT_EDC0_EDCS_SOUND_DIRS_ABS = 
+USER_EXT_EDC0_EDCS_FONT_DIRS = edje/fonts 
+USER_EXT_EDC0_EDCS_FONT_DIRS_ABS = 
+
+# Resource Filter
+USER_RES_INCLUDE = 
+USER_RES_EXCLUDE = 
+
