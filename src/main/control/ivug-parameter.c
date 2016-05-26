@@ -32,19 +32,6 @@
 #include "ivug-util.h"
 
 /*
-static inline char * ivug_get_resource_path() {
-	char * path = app_get_resource_path();
-	return path;
-}
-
-static inline char* full_path(char *str1, char *str2) {
-	char path[1024] = {};
-	snprintf(path, 1024, "%s%s", str1, str2);
-	char *full_path = strdup(path);
-	return full_path;
-}*/
-
-/*
 
 Phone -> Menu -> Call setting -> Videocall Image
 

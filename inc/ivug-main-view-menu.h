@@ -31,7 +31,7 @@
 extern "C" {
 #endif
 
-typedef struct Ivug_ListPopup_Item;
+struct Ivug_ListPopup_Item;
 
 typedef enum {
 	IVUG_POPUP_STYLE_LIST,		/* Default */

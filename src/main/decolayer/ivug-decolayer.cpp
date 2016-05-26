@@ -39,7 +39,7 @@ static inline char * ivug_get_resource_path() {
 	return path;
 }
 
-static inline char* full_path(char *str1, char *str2) {
+static inline char* full_path(const char *str1, const char *str2) {
 	char path[1024] = {};
 	snprintf(path, 1024, "%s%s", str1, str2);
 	char *full_path = strdup(path);
@@ -197,7 +197,7 @@ public:
 		m_deco = deco;
 
 		if (m_deco == IVUG_DECO_BURST) {
-			eConfigPlaySpeed cState;
+			eConfigPlaySpeed cState = PLAYSPEED_UNDEFINED;
 
 			/*if (ivug_config_get_playspeed(&cState) == false) {
 				cState = PLAYSPEED_1;

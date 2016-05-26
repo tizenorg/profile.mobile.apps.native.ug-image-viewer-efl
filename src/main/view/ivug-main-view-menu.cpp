@@ -51,7 +51,6 @@
 #define GALLERY_PKG_NAME	"com.samsung.gallery"
 #define SHORTCUT_PREFIX		"gallery:imageviewer:"
 #define SHORTCUT_PREFIX_LEN	strlen(SHORTCUT_PREFIX)
-#define SHORTCUT_ICON_PATH	"/usr/share/icons/default/small/com.samsung.image-viewer.png"
 
 
 
@@ -240,14 +239,14 @@ static void _setas_trans_finished(void *data, Evas_Object *obj, void *event_info
 		lcd_h = temp;
 	}
 }
-#endif
+
 static int
 _on_addhome_result_cb(int ret, void *data)
 {
 	return 0;
 }
 
-#if 0
+
 void _on_setas_selected(void *data, Evas_Object *obj, void *event_info)
 {
 	IV_ASSERT(data != NULL);
@@ -494,7 +493,6 @@ static void _on_save_view_response(Ivug_NameView *pView, ivug_name_response resp
 		mitem = ivug_medialist_get_current_item(pMainView->mList);
 		mdata = ivug_medialist_get_data(mitem);
 
-		TODO("create new album")
 		snprintf(buf, (size_t)sizeof(buf), "%s/%s",	DEFAULT_IMAGE_FOLDER, str);
 		_save_to_folder(pMainView, mdata->filepath, buf);
 
@@ -664,8 +662,6 @@ static bool _idler_delete_end(void *data)
 		if (img) {
 			ivug_thumblist_set_edit_mode(pMainView->thumbs, EINA_FALSE);
 			ivug_thumblist_select_item(pMainView->thumbs, img);
-		} else {
-			TODO("select current")
 		}
 	} else {
 		ug_end = true;
@@ -841,7 +837,7 @@ _on_delete_selected(void *data, Evas_Object *obj, void *event_info)
 //
 // Button handlers
 //
-
+#if 0
 static void _dismissed_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
@@ -868,7 +864,7 @@ static void _dismissed_cb(void *data, Evas_Object *obj, void *event_info)
 	}
 
 }
-
+#endif
 void _on_remove_main_view_ui(Ivug_MainView *pMainView)
 {
 	IV_ASSERT(pMainView != NULL);
@@ -1680,7 +1676,6 @@ popup_block_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 static void
 gl_download_item_sel_cb(void *data, Evas_Object *obj, void *event_info)
 {
-	Elm_Object_Item *it = (Elm_Object_Item*) event_info;
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 
 	_on_btn_download_clicked(pMainView);
@@ -2342,10 +2337,12 @@ void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
 	Evas_Object* popup = NULL;
+#ifdef LISTPOPUP
 	Evas_Coord x;
 	Evas_Coord y;
 	Evas_Coord w;
 	Evas_Coord h;
+#endif
 
 	MSG_MAIN_HIGH("More clicked. Mode=%d", pMainView->mode);
 

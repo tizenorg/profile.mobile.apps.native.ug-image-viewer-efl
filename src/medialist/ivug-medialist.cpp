@@ -407,6 +407,7 @@ static int _sort_cb(const void *d1, const void *d2)
 	return (rand() % 4 - 2) ;
 }
 
+#if 0
 static Media_Item *_find_item(Media_List *mList, int index)
 {
 	IV_ASSERT(mList != NULL);
@@ -425,7 +426,7 @@ static Media_Item *_find_item(Media_List *mList, int index)
 
 	return NULL;
 }
-
+#endif
 
 #ifdef DEBUG_DUMP_LIST
 static void _print_shuffle(void *data)

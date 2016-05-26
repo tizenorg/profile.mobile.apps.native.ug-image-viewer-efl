@@ -51,7 +51,7 @@
 #define EMAIL_PKG_NAME 			"com.samsung.email"
 #define FACEBOOK_PKG_NAME 		"com.samsung.facebook"
 #define IMAGE_EDITOR_PKG_NAME 	"com.samsung.image-editor"
-#define IMAGE_VIEWER_PKG_NAME 	"com.samsung.image-viewer"
+#define IMAGE_VIEWER_PKG_NAME 	"org.tizen.image-viewer"
 
 #define WIFI_FILE_TRANSFER_UG_NAME	"fileshare-efl"
 

@@ -20,6 +20,7 @@
 
 #include <dlog.h>
 #include "statistics.h"
+#include "debug.h"
 
 #define IVUG_LOG_OUTPUT_DLOG
 
@@ -67,9 +68,6 @@ enum {
 
 
 #ifdef IVUG_LOG_OUTPUT_DLOG
-
-#undef LOG_TAG
-#define LOG_TAG "IV-COMMON"
 
 #define IVUG_DEBUG_MSG(fmt, arg...)			dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
 #define IVUG_DEBUG_WARNING(fmt, arg...)		dlog_print(DLOG_WARN, LOG_TAG,  "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
@@ -320,8 +318,6 @@ enum {
 					return (val); \
 				} \
 			} while (0)
-
-#include "debug.h"
 
 
 #endif //_IVUG_DEBUG_H_
