@@ -89,6 +89,9 @@ enum
 #define DBG_MSG_LVL_LOW		(DBG_MSG_LVL_MED	| DBG_MSG_BIT_LOW | DBG_MSG_BIT_CUST12)
 #define DBG_MSG_LVL_NONE		(0)
 
+#undef LOG_TAG
+#define LOG_TAG "IMAGE_VIEWER"
+
 
 // Get time of day
 #include <sys/time.h>

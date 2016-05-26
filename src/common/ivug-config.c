@@ -79,8 +79,6 @@ bool ivug_config_set_homescreen_image(const char* filepath)
 		return FALSE;
 	}
 
-	TODO("Need to check file existence?????")
-
 	MSG_IMAGEVIEW_HIGH("Set Homescreen filepath = %s", filepath);
 	return TRUE;
 }
@@ -222,8 +220,6 @@ ivug_config_set_transition_effect(int index)
 char *
 ivug_config_get_slideshow_effect_type(void)
 {
-	TODO("Free returned string??")
-
 	char *effect_str = "DissolveFade";
 	bool existing = false;
 

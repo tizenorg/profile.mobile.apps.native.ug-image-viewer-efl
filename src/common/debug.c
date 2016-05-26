@@ -42,9 +42,6 @@
 	#define G_UNLIKELY(x) x
 #endif
 
-
-#define LOG_TAG "IMAGE_VIEWER"
-
 /*
 	Enable when Do file logging in case of FATAL
 */
