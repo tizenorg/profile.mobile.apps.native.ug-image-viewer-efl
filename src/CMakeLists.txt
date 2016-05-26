@@ -52,7 +52,7 @@ SET(SRCS
 	slideshow/effect/ivug-effect.c
 	slideshow/effect/ivug-fade.c
 	slideshow/effect/ivug-slide.c
-	slideshow/effect/template.c
+	#slideshow/effect/template.c
 )
 
 

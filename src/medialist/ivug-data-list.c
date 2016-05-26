@@ -285,7 +285,7 @@ ivug_list_load_DB_items_list(const Filter_struct *filter, Eina_List *list)
 
 	EINA_LIST_FOREACH(list, l, data)
 	{
-		index = (int)data;
+		index = (int )data;
 		if (start == -1)
 		{
 			start = index;

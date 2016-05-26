@@ -151,7 +151,7 @@ Effect_Engine *ivug_fade_add(void)
 
 	eng_fade->func.init = &__ivug_fade_init;
 	eng_fade->func.set_size = &__ivug_fade_set_size;
-	eng_fade->func.animate = &__ivug_fade_anim;
+	eng_fade->func.animate = (void *)(&__ivug_fade_anim);
 	eng_fade->func.pause = &__ivug_fade_pause;
 	eng_fade->func.resume = &__ivug_fade_resume;
 	eng_fade->func.finalize = &__ivug_fade_finialize;
