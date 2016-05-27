@@ -344,7 +344,8 @@ bool on_create( void *priv)
 	if (!conform)
 		return false;
 	evas_object_size_hint_weight_set(conform, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-	//elm_win_resize_object_add(win, conform);
+	elm_object_signal_emit(conform, "elm,state,virtualkeypad,enable", "");
+	elm_win_resize_object_add(win, conform);
 	evas_object_show(conform);
 	evas_object_show(win);
 
