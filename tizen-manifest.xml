@@ -3,11 +3,21 @@
     <profile name="mobile"/>
     <ui-application appid="org.tizen.image-viewer" exec="image-viewer" multiple="false" process-pool="true" hw-acceleration="on" nodisplay="true" splash-screen-display="true" taskmanage="false" type="capp">
         <label>image-viewer</label>
-        <icon>org.tizen.image-viewer.png</icon>
+		<icon>org.tizen.image-viewer.png</icon>
+		<app-control>
+			<operation name="http://tizen.org/appcontrol/operation/view"/>
+			<mime name="image/jpeg"/>
+			<mime name="image/png"/>
+			<mime name="image/bmp"/>
+			<mime name="image/gif"/>
+			<mime name="image/vnd.wap.wbmp"/>
+		</app-control>
+		<app-control>
+			<operation name="http://tizen.org/appcontrol/operation/view"/>
+			<uri name="file"/>
+		</app-control>
     </ui-application>
     <privileges>
-        <privilege>http://tizen.org/privilege/packagemanager.info</privilege>
-        <privilege>http://tizen.org/privilege/datasharing</privilege>
         <privilege>http://tizen.org/privilege/mediastorage</privilege>
         <privilege>http://tizen.org/privilege/contact.write</privilege>
         <privilege>http://tizen.org/privilege/appmanager.launch</privilege>
