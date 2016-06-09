@@ -479,7 +479,6 @@ Evas_Event_Flags _zoom_move(void *data, void *event_info)
 				elm_photocam_zoom_set(slider_new->photocam, zoom_level - 0.2);
 			}
 		} else if (zoomfactordiff <= -0.1) {
-			elm_photocam_zoom_mode_set(slider_new->photocam,  ELM_PHOTOCAM_ZOOM_MODE_AUTO_FIT);
 			if (slider_new->zoom_internal_level > 0 &&  zoom_level  !=  slider_new->zoom_level) {
 				slider_new->zoom_factor_prev = p->zoom;
 				slider_new->zoom_internal_level--;
