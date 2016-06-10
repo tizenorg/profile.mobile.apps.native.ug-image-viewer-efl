@@ -652,9 +652,8 @@ _on_slider_playvideo_icon_clicked(void *data, Evas_Object *obj, const char *sour
 
 }
 
-
-static void
-_on_slider_clicked(void *data, Evas_Object *obj, void *event_info)
+void
+on_slider_clicked(void *data, Evas_Object *obj, void *event_info)
 {
 	IV_ASSERT(data != NULL);
 
@@ -1218,7 +1217,7 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 		elm_object_signal_callback_add(sn_layout, "play", "elm", _on_slider_playvideo_icon_clicked, pMainView);
 //		evas_object_smart_callback_add(sn_layout, "slider,playburst", _on_slider_playburst_icon_clicked, pMainView);
 
-		evas_object_smart_callback_add(sn_layout, "slider,clicked", _on_slider_clicked, pMainView);
+		evas_object_smart_callback_add(sn_layout, "slider,clicked", on_slider_clicked, pMainView);
 		evas_object_smart_callback_add(sn_layout, "slider,longpress,start", _on_slider_long_press_start, pMainView);
 		evas_object_smart_callback_add(sn_layout, "slider,longpress,end", _on_slider_long_press_end, pMainView);
 
@@ -1876,11 +1875,11 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 		free(files);
 		elm_object_part_text_set(pMainView->select_bar, "elm.text.title", buf);
 		evas_object_show(check);
-	} else {
+	} /*else {
 		edje_object_signal_emit(elm_layout_edje_get(pMainView->lyContent), "hide,back,btn", "user");
 		edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,hide", "user");
 		pMainView->bShowMenu = false ;
-	}
+	}*/
 	free(default_thumbnail_edj_path);
 }
 
@@ -2145,7 +2144,7 @@ void _ivug_main_view_set_hide_timer(Ivug_MainView *pMainView, const char *func, 
 			ecore_timer_del(pMainView->hide_timer);
 			pMainView->hide_timer = NULL;
 		}
-		pMainView->hide_timer = ecore_timer_add(MENUBAR_TIMEOUT_SEC, _on_hide_timer_expired, (void *)pMainView);
+//		pMainView->hide_timer = ecore_timer_add(MENUBAR_TIMEOUT_SEC, _on_hide_timer_expired, (void *)pMainView);
 	} else {
 		MSG_MAIN_WARN("Called set_hide_timer. when Menu is invisible. %s(%d)", func, line);
 	}
@@ -2201,7 +2200,7 @@ ivug_main_view_show_menu_bar(Ivug_MainView *pMainView)
 #endif
 
 	edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,show", "user");
-	edje_object_signal_emit(elm_layout_edje_get(pMainView->lyContent), "show,back,btn", "user");
+//	edje_object_signal_emit(elm_layout_edje_get(pMainView->lyContent), "show,back,btn", "user");
 
 	ivug_main_view_set_hide_timer(pMainView);
 }
@@ -2226,6 +2225,6 @@ ivug_main_view_hide_menu_bar(Ivug_MainView *pMainView)
 	pMainView->bShowMenu = false;
 
 	edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,hide", "user");
-	edje_object_signal_emit(elm_layout_edje_get(pMainView->lyContent), "hide,back,btn", "user");
+//	edje_object_signal_emit(elm_layout_edje_get(pMainView->lyContent), "hide,back,btn", "user");
 }
 

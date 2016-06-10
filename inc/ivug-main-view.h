@@ -94,6 +94,8 @@ extern "C" {
 /*
 	Create MainView layout
 */
+void
+on_slider_clicked(void *data, Evas_Object *obj, void *event_info);
 Ivug_MainView *
 ivug_main_view_create(Evas_Object* parent, ivug_parameter *param);
 
