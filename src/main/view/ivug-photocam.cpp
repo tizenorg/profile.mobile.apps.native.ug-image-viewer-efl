@@ -35,6 +35,7 @@
 /*initialize the values on finger touch to the screen*/
 void _on_slider_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
+	on_slider_clicked(data, obj, event_info);
 	IV_ASSERT(data != NULL);
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	Evas_Event_Mouse_Down *ev = (Evas_Event_Mouse_Down *) event_info;
