@@ -1003,3 +1003,9 @@ msgstr "Athainmnigh"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Iontráil ainm"
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Carachtair neamhbhailí."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Cóipeáil"
+

@@ -1003,3 +1003,9 @@ msgstr "Mudar nome"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Introduzir nome."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Caracteres inválidos."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Copiar"
+

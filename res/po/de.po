@@ -11,7 +11,7 @@ msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Dateiname wird bereits verwendet."
 
 msgid "IDS_ST_BODY_OFF"
-msgstr "Aus"
+msgstr "Deaktiviert"
 
 msgid "IDS_COM_BODY_DONE"
 msgstr "OK"
@@ -1002,4 +1002,10 @@ msgstr "Umbenennen"
 
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Name eingeben"
+
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Ungültige Zeichen"
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Kopieren"
 

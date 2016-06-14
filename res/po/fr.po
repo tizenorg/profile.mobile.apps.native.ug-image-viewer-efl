@@ -740,7 +740,7 @@ msgid "IDS_VDOE_BODY_BACKGROUND_MUSIC"
 msgstr "Musique en arrière-plan"
 
 msgid "IDS_IV_OPT_1_SEC_ABB"
-msgstr "1 s"
+msgstr "1 sec"
 
 msgid "IDS_IV_OPT_3_SECS_ABB"
 msgstr "3 sec"
@@ -1002,4 +1002,10 @@ msgstr "Renommer"
 
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Saisissez un nom."
+
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Caractères non valides"
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Copier"
 

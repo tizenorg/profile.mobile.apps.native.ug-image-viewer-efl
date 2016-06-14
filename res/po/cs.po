@@ -1003,3 +1003,9 @@ msgstr "Přejmenovat"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Zadat jméno."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Neplatné znaky."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Kopírovat"
+

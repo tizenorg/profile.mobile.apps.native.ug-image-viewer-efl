@@ -74,7 +74,7 @@ msgid "IDS_IV_SK_SAVE"
 msgstr "Guardar"
 
 msgid "IDS_IV_POP_SAVED"
-msgstr "Guardado"
+msgstr "Guardado."
 
 msgid "IDS_IV_BODY_SETTINGS"
 msgstr "Ajustes"
@@ -188,7 +188,7 @@ msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
 msgstr "Error de conexión de red"
 
 msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
-msgstr "Número máximo de caracteres (%d) alcanzado"
+msgstr "Número máximo de caracteres (%d) alcanzado."
 
 msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
 msgstr "Archivo de imagen no válido"
@@ -620,7 +620,7 @@ msgid "IDS_IV_BODY_ACCUMULATED_TIME"
 msgstr "Tiempo acumulado"
 
 msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
-msgstr "Alcanzado el número máximo de caracteres"
+msgstr "Alcanzado el número máximo de caracteres."
 
 msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
 msgstr "Error"
@@ -1002,4 +1002,10 @@ msgstr "Camb. nom"
 
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Introducir nombre"
+
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Caracteres no válidos"
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Copiar"
 

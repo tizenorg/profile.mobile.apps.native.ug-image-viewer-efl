@@ -1003,3 +1003,9 @@ msgstr "Canv. nom"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Introduir nom"
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Caràcters no vàlids"
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Copia"
+

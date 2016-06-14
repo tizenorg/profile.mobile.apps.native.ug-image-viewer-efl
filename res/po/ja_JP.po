@@ -1003,3 +1003,9 @@ msgstr "名前変更"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "名前を入力してください。"
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "無効な文字です。"
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "コピー"
+

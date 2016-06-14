@@ -1003,3 +1003,9 @@ msgstr "Վրանվանել"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Մուտքագրեք անունը:"
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Անվավեր նիշեր:"
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Պատճենել"
+

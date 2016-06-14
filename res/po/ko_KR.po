@@ -53,7 +53,7 @@ msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "%d개까지 선택할 수 있습니다."
 
 msgid "IDS_IV_OPT_DETAILS"
-msgstr "상세 정보"
+msgstr "상세정보"
 
 msgid "IDS_IV_OPT_DELETE_ABB"
 msgstr "삭제"
@@ -164,7 +164,7 @@ msgid "IDS_IV_POP_SENDING_ING"
 msgstr "보내는 중..."
 
 msgid "IDS_IV_POP_SELECT_DEVICE"
-msgstr "기기 선택"
+msgstr "디바이스 선택"
 
 msgid "IDS_IV_POP_SD_CARD_REMOVED"
 msgstr "SD 카드를 분리하였습니다."
@@ -863,7 +863,7 @@ msgid "IDS_IV_OPT_DOWNLOAD"
 msgstr "다운로드"
 
 msgid "IDS_IV_HEADER_RENAME"
-msgstr "이름 바꾸기"
+msgstr "이름 변경"
 
 msgid "IDS_IV_BUTTON_RENAME_ABB"
 msgstr "이름 변경"
@@ -890,7 +890,7 @@ msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
 msgstr "홈 & 잠금 배경화면"
 
 msgid "IDS_IV_HEADER_DETAILS"
-msgstr "상세 정보"
+msgstr "상세정보"
 
 msgid "IDS_IV_BODY_DATE"
 msgstr "날짜"
@@ -956,7 +956,7 @@ msgid "IDS_360V_TPOP_LOADING_ING"
 msgstr "불러오는 중..."
 
 msgid "IDS_IV_HEADER_LOADING_ING"
-msgstr "로딩 중..."
+msgstr "불러오는 중..."
 
 msgid "IDS_IV_POP_LOADING_FAILED"
 msgstr "불러오지 못하였습니다."
@@ -1002,4 +1002,10 @@ msgstr "이름 변경"
 
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "이름을 입력하세요."
+
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "글자가 바르지 않습니다."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "복사"
 

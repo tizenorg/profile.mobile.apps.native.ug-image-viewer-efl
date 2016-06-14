@@ -1003,3 +1003,9 @@ msgstr "नाम बदलें"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "नाम प्रविष्ट करें"
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "अमान्य वर्ण।"
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "कॉपी करें"
+

@@ -1003,3 +1003,9 @@ msgstr "Berrizendatu"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Izena idatzi"
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Karaktere baliogabeak"
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Kopiatu"
+

@@ -1003,3 +1003,9 @@ msgstr "Byt namn"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Ange namn."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Ogiltiga tecken."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Kopiera"
+

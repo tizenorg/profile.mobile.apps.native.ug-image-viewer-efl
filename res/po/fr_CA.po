@@ -1003,3 +1003,9 @@ msgstr "Renommer"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Saisissez un nom."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Caractères non valides."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Copier"
+

@@ -1003,3 +1003,9 @@ msgstr "Renombrar"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Introducir nombre."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Caracteres no válidos."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Copiar"
+

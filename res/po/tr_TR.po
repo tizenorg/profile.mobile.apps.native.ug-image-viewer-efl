@@ -1003,3 +1003,9 @@ msgstr "Yen. ad."
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "İsim girin."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Karakter geçersiz."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Kopyala"
+

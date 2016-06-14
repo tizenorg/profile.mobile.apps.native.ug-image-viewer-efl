@@ -163,6 +163,7 @@ static inline char* full_path(const char *str1, const char *str2) {
 #define IDS_CALLER_IMAGE		"IDS_IV_BODY_CALLER_IMAGE"
 #define IDS_CONNECTION_INFO		"IDS_IV_OPT_CONNECTION_INFO_ABB"
 #define IDS_COPY_TO_CLIPBOARD	"IDS_IV_OPT_COPY_TO_CLIPBOARD"
+#define IDS_COPY				"IDS_CAM_POP_COPY"
 #define IDS_COUNT 				"IDS_IV_BODY_COUNT"
 #define IDS_CREATE_TAG			"IDS_IV_BODY_CREATE_TAG"
 #define IDS_CROP 				"IDS_IV_BODY_CROP"

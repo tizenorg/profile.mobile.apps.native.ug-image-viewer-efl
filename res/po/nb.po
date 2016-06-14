@@ -1003,3 +1003,9 @@ msgstr "Endre navn"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Angi navn."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Ugyldige tegn."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Kopier"
+

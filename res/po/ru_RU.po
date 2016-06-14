@@ -1003,3 +1003,9 @@ msgstr "Переименовать"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Введите название."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Недопустимые символы"
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Копировать"
+

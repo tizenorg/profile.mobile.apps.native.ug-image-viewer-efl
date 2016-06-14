@@ -5,10 +5,10 @@ msgid "IDS_VIDEO_OPT_RENAME"
 msgstr "Redenumire"
 
 msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
-msgstr "Acest videoclip va fi şters."
+msgstr "Acest videoclip va fi șters."
 
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
-msgstr "Numele de fişier este deja utilizat."
+msgstr "Numele de fișier este deja utilizat."
 
 msgid "IDS_ST_BODY_OFF"
 msgstr "Oprit"
@@ -20,7 +20,7 @@ msgid "IDS_FB_BODY_FACEBOOK"
 msgstr "Facebook"
 
 msgid "IDS_CAM_BODY_FLASH"
-msgstr "Bliţ"
+msgstr "Bliț"
 
 msgid "IDS_COM_SK_STOP"
 msgstr "Oprire"
@@ -29,7 +29,7 @@ msgid "IDS_COM_SK_CANCEL"
 msgstr "Anulare"
 
 msgid "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"
-msgstr "Funcţia %1$s este dezactivată în această aplicaţie. Pentru a activa această funcţie, accesaţi %2$s, selectaţi-o, apoi selectaţi această aplicaţie."
+msgstr "Funcția %1$s este dezactivată în această aplicație. Pentru a activa această funcție, accesați %2$s, selectați-o, apoi selectați această aplicație."
 
 msgid "IDS_MEDIABR_BUTTON_OK"
 msgstr "OK"
@@ -41,7 +41,7 @@ msgid "IDS_GALLERY_BUTTON_CANCEL_ABB2"
 msgstr "Anulare"
 
 msgid "IDS_GALLERY_HEADER_ENTER_NAME"
-msgstr "Introduceţi numele"
+msgstr "Introduceți numele"
 
 msgid "IDS_MEDIABR_POP_NO_NAME"
 msgstr "Niciun nume"
@@ -50,22 +50,22 @@ msgid "IDS_IV_BODY_THERE_IS_ONLY_ONE_ALBUM"
 msgstr "Există un singur album."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
-msgstr "Puteţi selecta maximum %d elemente."
+msgstr "Puteți selecta maximum %d elemente."
 
 msgid "IDS_IV_OPT_DETAILS"
 msgstr "Detalii"
 
 msgid "IDS_IV_OPT_DELETE_ABB"
-msgstr "Ştergere"
+msgstr "Ștergere"
 
 msgid "IDS_IV_POP_DELETE_Q"
-msgstr "Ştergeţi?"
+msgstr "Ștergeți?"
 
 msgid "IDS_IV_BUTTON_CANCEL"
 msgstr "Anulare"
 
 msgid "IDS_IV_POP_DELETED"
-msgstr "Şters"
+msgstr "Șters"
 
 msgid "IDS_IV_BODY_FAVOURITE"
 msgstr "Favorit"
@@ -92,10 +92,10 @@ msgid "IDS_CAM_BODY_ISO"
 msgstr "ISO"
 
 msgid "IDS_CAM_BODY_FOCAL_LENGTH"
-msgstr "Distanţă focală"
+msgstr "Distanță focală"
 
 msgid "IDS_CAM_BODY_FLASH_ON"
-msgstr "Bliţ pornit"
+msgstr "Bliț pornit"
 
 msgid "IDS_COM_POP_IMAGE_VIEWER"
 msgstr "Vizualizator de imagini"
@@ -113,49 +113,49 @@ msgid "IDS_MP_BODY_DURATION"
 msgstr "Durată"
 
 msgid "IDS_ST_POP_SET"
-msgstr "Afişare"
+msgstr "Afișare"
 
 msgid "IDS_GALLERY_BODY_TAGS"
 msgstr "Etichete"
 
 msgid "IDS_IV_SK3_ADD_COMMENT"
-msgstr "Adăugaţi coment."
+msgstr "Adăugați coment."
 
 msgid "IDS_IV_POP_VIEW_YOUR_MEDIA_ON_OTHER_DEVICES_USING_NEARBY_DEVICES"
-msgstr "Vizualizaţi conţinutul media pe alte dispozitive cu ajutorul dispozitivelor din apropiere."
+msgstr "Vizualizați conținutul media pe alte dispozitive cu ajutorul dispozitivelor din apropiere."
 
 msgid "IDS_IV_POP_VIDEO_FILES_DO_NOT_CONTAIN_INFORMATION_ABOUT_PEOPLE_AS_THEY_DO_NOT_SUPPORT_THE_FACE_TAG_FUNCTION"
-msgstr "Fişierele video nu conţin informaţii despre persoane, întrucât nu acceptă funcţia etichetă faţă."
+msgstr "Fișierele video nu conțin informații despre persoane, întrucât nu acceptă funcția etichetă față."
 
 msgid "IDS_IV_POP_UNABLE_TO_SHARE_THIS_IMAGE_IT_IS_DRM_PROTECTED"
 msgstr "Imaginea nu poate fi partajată. Este protejată prin DRM."
 
 msgid "IDS_IV_POP_UNABLE_TO_OPEN_FILE"
-msgstr "Imposibil de deschis fişierul"
+msgstr "Imposibil de deschis fișierul"
 
 msgid "IDS_IV_POP_THE_RECORDED_WEATHER_INFORMATION_MAY_BE_DIFFERENT_FROM_THE_ACTUAL_WEATHER_BECAUSE_OF_THE_UPDATE_INTERVAL"
-msgstr "Informaţiile meteo înregistrate pot să difere de starea efectivă a vremii, din cauza intervalului de actualizare."
+msgstr "Informațiile meteo înregistrate pot să difere de starea efectivă a vremii, din cauza intervalului de actualizare."
 
 msgid "IDS_IV_POP_THE_PERSONAL_CONTENT_COPIED_TO_THE_CLIPBOARD_CAN_BE_USED_MSG"
-msgstr "Conţinutul personal copiat în clipboard poate fi utilizat pentru a crea conţinut nou. Este posibil ca noul conţinut să nu fie ascuns în mod automat."
+msgstr "Conținutul personal copiat în clipboard poate fi utilizat pentru a crea conținut nou. Este posibil ca noul conținut să nu fie ascuns în mod automat."
 
 msgid "IDS_IV_POP_THE_IMAGE_IS_TOO_SMALL"
 msgstr "Imaginea este prea mică."
 
 msgid "IDS_IV_POP_THE_DATE_INFORMATION_IS_ONLY_DISPLAYED_WHEN_OTHER_TAGS_ARE_VISIBLE"
-msgstr "Informaţiile despre dată sunt afişate doar când sunt vizibile alte etichete."
+msgstr "Informațiile despre dată sunt afișate doar când sunt vizibile alte etichete."
 
 msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
-msgstr "Ţineţi apăsat pe miniaturi pentru a selecta cele mai bune fotografii."
+msgstr "Țineți apăsat pe miniaturi pentru a selecta cele mai bune fotografii."
 
 msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
 msgstr "Setări expunere diapozitive"
 
 msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
-msgstr "Setare fundal pentru ecran de pornire şi blocare ecran."
+msgstr "Setare fundal pentru ecran de pornire și blocare ecran."
 
 msgid "IDS_IV_POP_SET_THIS_PICTURE_AS_PSS_CALLER_ID_Q"
-msgstr "Setaţi imaginea ca ID de apelant pentru %s?"
+msgstr "Setați imaginea ca ID de apelant pentru %s?"
 
 msgid "IDS_IV_POP_SET_AS_CALLER_ID_M_PAST_TENSE"
 msgstr "Setare ca identitate apelant"
@@ -173,40 +173,40 @@ msgid "IDS_IV_POP_PERMISSION_DENIED"
 msgstr "Permisiunea a fost refuzată."
 
 msgid "IDS_IV_POP_NO_LOCATION"
-msgstr "Fără locaţie"
+msgstr "Fără locație"
 
 msgid "IDS_IV_POP_NO_FACES_HAVE_BEEN_TAGGED_TAG_FACES_IN_THE_PICTURE"
-msgstr "Nu au fost etichetate feţe. Etichetaţi feţele din imagine"
+msgstr "Nu au fost etichetate fețe. Etichetați fețele din imagine"
 
 msgid "IDS_IV_POP_NO_FACES_DETECTED"
-msgstr "Nicio faţă detectată"
+msgstr "Nicio față detectată"
 
 msgid "IDS_IV_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
-msgstr "Memorie insuficientă. Ştergeţi câteva elemente"
+msgstr "Memorie insuficientă. Ștergeți câteva elemente"
 
 msgid "IDS_IV_POP_NETWORK_CONNECTION_FAILED"
-msgstr "Conectarea la reţea a eşuat."
+msgstr "Conectarea la rețea a eșuat."
 
 msgid "IDS_IV_POP_MAXIMUM_NUMBER_OF_CHARACTERS_HPD_REACHED"
 msgstr "Numărul maxim de caractere (%d) a fost atins."
 
 msgid "IDS_IV_POP_INVALID_IMAGE_FILE"
-msgstr "Fişier de imagini nevalid"
+msgstr "Fișier de imagini nevalid"
 
 msgid "IDS_IV_POP_FLASH_USED_ABB"
 msgstr "Flash utilizat"
 
 msgid "IDS_IV_POP_FILE_FORMAT_NOT_SUPPORTED"
-msgstr "Formatul de fişier nu este acceptat."
+msgstr "Formatul de fișier nu este acceptat."
 
 msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
-msgstr "Locaţie liberă"
+msgstr "Locație liberă"
 
 msgid "IDS_IV_POP_ENTER_TAG_NAME"
-msgstr "Introduceţi numele unei etichete."
+msgstr "Introduceți numele unei etichete."
 
 msgid "IDS_IV_POP_ENABLE_AUTO_REFRESH_IN_WEATHER_WALLPAPER_TO_SEE_WEATHER_TAGS"
-msgstr "Activaţi reîmprospătarea automată în imaginea de fundal meteo pentru a vedea etichetele meteo."
+msgstr "Activați reîmprospătarea automată în imaginea de fundal meteo pentru a vedea etichetele meteo."
 
 msgid "IDS_IV_POP_DOWNLOAD_COMPLETE"
 msgstr "Descărcare finalizată"
@@ -218,10 +218,10 @@ msgid "IDS_IV_POP_ADDED"
 msgstr "Adăugat"
 
 msgid "IDS_IV_OPT_WRITE_CAPTION"
-msgstr "Scrieţi legenda"
+msgstr "Scrieți legenda"
 
 msgid "IDS_IV_OPT_USE_MOTION"
-msgstr "Utilizare mişcare"
+msgstr "Utilizare mișcare"
 
 msgid "IDS_IV_OPT_UNFAVOURITE"
 msgstr "Revocare preferat"
@@ -230,7 +230,7 @@ msgid "IDS_IV_OPT_TRIM"
 msgstr "Decupare"
 
 msgid "IDS_IV_OPT_TAG_FACE_ABB"
-msgstr "Etichetare faţă"
+msgstr "Etichetare față"
 
 msgid "IDS_IV_OPT_TAG_BUDDY"
 msgstr "Asistent pentru etichete"
@@ -248,7 +248,7 @@ msgid "IDS_IV_OPT_SLIDESHOW_ABB"
 msgstr "Expunere de diapozitive"
 
 msgid "IDS_IV_OPT_SHOW_ITEMS"
-msgstr "Afişare elemente"
+msgstr "Afișare elemente"
 
 msgid "IDS_IV_OPT_SHARE"
 msgstr "Partajare"
@@ -272,16 +272,16 @@ msgid "IDS_IV_OPT_MANUALLY_DETECT"
 msgstr "Detectare manuală"
 
 msgid "IDS_IV_OPT_HOME_AND_LOCK_SCREEN_WALLPAPER"
-msgstr "Fundal ecran de pornire şi de blocare"
+msgstr "Fundal ecran de pornire și de blocare"
 
 msgid "IDS_IV_OPT_HIDDEN_ITEMS"
 msgstr "Elemente ascunse"
 
 msgid "IDS_IV_OPT_GET_DIRECTIONS_ABB"
-msgstr "Obţinere indicaţii"
+msgstr "Obținere indicații"
 
 msgid "IDS_IV_OPT_FILE_TRANSFER"
-msgstr "Transfer fişier"
+msgstr "Transfer fișier"
 
 msgid "IDS_IV_OPT_ERASER"
 msgstr "Radieră"
@@ -296,7 +296,7 @@ msgid "IDS_IV_OPT_EDIT_CAPTION"
 msgstr "Editare legendă"
 
 msgid "IDS_IV_OPT_DELETE_CAPTION"
-msgstr "Ştergere legendă"
+msgstr "Ștergere legendă"
 
 msgid "IDS_IV_OPT_COPY_TO_CLIPBOARD"
 msgstr "Copiere în clipboard"
@@ -311,13 +311,13 @@ msgid "IDS_IV_OPT_BUDDY_PHOTO_SHARE"
 msgstr "Partajare foto prieten"
 
 msgid "IDS_IV_OPT_BEST_FACE_ABB"
-msgstr "Faţă optimă"
+msgstr "Față optimă"
 
 msgid "IDS_IV_OPT_AS_VIDEO_FILES"
-msgstr "Ca fişiere video"
+msgstr "Ca fișiere video"
 
 msgid "IDS_IV_OPT_AS_IMAGE_FILES"
-msgstr "Ca fişiere imagine"
+msgstr "Ca fișiere imagine"
 
 msgid "IDS_IV_OPT_ANIMATED_PHOTO_ABB"
 msgstr "Fotografie animată"
@@ -353,7 +353,7 @@ msgid "IDS_IV_HEADER_LOCK_SCREEN_WALLPAPER_ABB"
 msgstr "Bloc. fundal ec. por."
 
 msgid "IDS_IV_HEADER_LEARN_ABOUT_TILT"
-msgstr "Aflaţi despre înclinare"
+msgstr "Aflați despre înclinare"
 
 msgid "IDS_IV_HEADER_HOME_SCREEN_WALLPAPER_ABB"
 msgstr "Fundal ecran pornire"
@@ -380,10 +380,10 @@ msgid "IDS_IV_BUTTON_SCAN"
 msgstr "Căutare"
 
 msgid "IDS_IV_BODY_YOU_CAN_SHARE_YOUR_MEDIA_WITH_OTHER_DEVICES_USING_NEARBY_DEVICES"
-msgstr "Puteţi partaja conţinutul media cu alte dispozitive cu ajutorul dispozitivelor din apropiere."
+msgstr "Puteți partaja conținutul media cu alte dispozitive cu ajutorul dispozitivelor din apropiere."
 
 msgid "IDS_IV_BODY_WITH_PS_AND_PD_OTHERS"
-msgstr "Cu %s şi încă %d persoane"
+msgstr "Cu %s și încă %d persoane"
 
 msgid "IDS_IV_BODY_WITH_PS"
 msgstr "Cu %s"
@@ -416,10 +416,10 @@ msgid "IDS_IV_BODY_THE_RECORDED_WEATHER_INFORMATION_SHOULD_BE_EDITED_MANUALLY_MS
 msgstr "The recorded weather information should be edited manually. Your device does not support receiving recorded weather info from the weather widget."
 
 msgid "IDS_IV_BODY_TAP_FACES_TO_VIEW_INFORMATION_ABOUT_THE_PEOPLE"
-msgstr "Atingeţi feţe pentru a vedea informaţii despre persoane."
+msgstr "Atingeți fețe pentru a vedea informații despre persoane."
 
 msgid "IDS_IV_BODY_TAP_AND_HOLD_AT_TWO_POINTS_THEN_TILT_DEVICE_BACK_AND_FORTH_TO_REDUCE_OR_ENLARGE_SCREEN"
-msgstr "Atingeţi şi menţineţi două puncte, apoi înclinaţi dispozitivul înainte şi înapoi pentru a micşora sau pentru a mări ecranul."
+msgstr "Atingeți și mențineți două puncte, apoi înclinați dispozitivul înainte și înapoi pentru a micșora sau pentru a mări ecranul."
 
 msgid "IDS_IV_BODY_SUNNY_DAY"
 msgstr "Zi însorită"
@@ -434,7 +434,7 @@ msgid "IDS_IV_BODY_SERVER_NAME"
 msgstr "Nume server"
 
 msgid "IDS_IV_BODY_SELECT_AN_AREA_TO_CROP_THE_PICTURE"
-msgstr "Selectaţi o zonă pentru a trunchia imaginea."
+msgstr "Selectați o zonă pentru a trunchia imaginea."
 
 msgid "IDS_IV_BODY_SELECTED_AREA_WILL_BE_PRINTED"
 msgstr "Zona selectată va fi imprimată."
@@ -449,7 +449,7 @@ msgid "IDS_IV_BODY_RIGHT_STATUS"
 msgstr "Stare drepturi"
 
 msgid "IDS_IV_BODY_RESOLUTION"
-msgstr "Rezoluţie"
+msgstr "Rezoluție"
 
 msgid "IDS_IV_BODY_REMOVE_FROM_FAVOURITES"
 msgstr "Eliminare din Favorite"
@@ -464,7 +464,7 @@ msgid "IDS_IV_BODY_POSSIBLE"
 msgstr "Posibil"
 
 msgid "IDS_IV_BODY_PEOPLE"
-msgstr "Participanţi"
+msgstr "Participanți"
 
 msgid "IDS_IV_BODY_N_A"
 msgstr "Nedisponibil"
@@ -497,16 +497,16 @@ msgid "IDS_IV_BODY_LOCK_SCREEN"
 msgstr "Blocare ecran"
 
 msgid "IDS_IV_BODY_LOCATION_M_PATH"
-msgstr "Locaţie"
+msgstr "Locație"
 
 msgid "IDS_IV_BODY_LOCATION_ABB2"
-msgstr "Locaţie"
+msgstr "Locație"
 
 msgid "IDS_IV_BODY_LOCATIONS"
-msgstr "Locaţii"
+msgstr "Locații"
 
 msgid "IDS_IV_BODY_LOCATION"
-msgstr "Locaţie"
+msgstr "Locație"
 
 msgid "IDS_IV_BODY_LATITUDE"
 msgstr "Latitudine"
@@ -530,22 +530,22 @@ msgid "IDS_IV_BODY_HOME_SCREEN"
 msgstr "Ecran de pornire"
 
 msgid "IDS_IV_BODY_HOME_AND_LOCK_SCREENS"
-msgstr "Ecrane de pornire şi de blocare"
+msgstr "Ecrane de pornire și de blocare"
 
 msgid "IDS_IV_BODY_FORWARDING"
-msgstr "Redirecţionare"
+msgstr "Redirecționare"
 
 msgid "IDS_IV_BODY_FLASH"
 msgstr "Meniu Flash"
 
 msgid "IDS_IV_BODY_FILE_NAME"
-msgstr "Nume fişier"
+msgstr "Nume fișier"
 
 msgid "IDS_IV_BODY_FILE_LOCATION"
-msgstr "Locaţie fişier"
+msgstr "Locație fișier"
 
 msgid "IDS_IV_BODY_FILE_FORMAT"
-msgstr "Format fişier"
+msgstr "Format fișier"
 
 msgid "IDS_IV_BODY_EXPOSURE_TIME_ABB"
 msgstr "Timp expunere"
@@ -554,19 +554,19 @@ msgid "IDS_IV_BODY_EXECUTE"
 msgstr "Executare"
 
 msgid "IDS_IV_BODY_ENABLE_GPS_TAGS_IN_CAMERA_TO_SEE_LOCATION_TAGS"
-msgstr "Activaţi etichetele GPS pe Cameră pentru a vedea etichetele de locaţie."
+msgstr "Activați etichetele GPS pe Cameră pentru a vedea etichetele de locație."
 
 msgid "IDS_IV_BODY_ENABLE_AUTO_REFRESH_IN_THE_WEATHER_WIDGET_TO_SEE_WEATHER_TAGS"
-msgstr "Activaţi reîmprospătarea automată în widget-ul meteo pentru a vedea etichetele meteo."
+msgstr "Activați reîmprospătarea automată în widget-ul meteo pentru a vedea etichetele meteo."
 
 msgid "IDS_IV_BODY_DURATION"
 msgstr "Durată"
 
 msgid "IDS_IV_BODY_DRM_INFO"
-msgstr "Informaţii DRM"
+msgstr "Informații DRM"
 
 msgid "IDS_IV_BODY_DO_NOT_SHOW_AGAIN"
-msgstr "Nu se mai afişează"
+msgstr "Nu se mai afișează"
 
 msgid "IDS_IV_BODY_DONT_ASK_AGAIN"
 msgstr "Nu se întreabă din nou"
@@ -605,7 +605,7 @@ msgid "IDS_IV_BODY_AUTO"
 msgstr "Automat"
 
 msgid "IDS_IV_BODY_APPLY_A_MATCHING_COLOUR_THEME_TO_APPLICATIONS"
-msgstr "Adăugaţi o temă de culoare potrivită pentru aplicaţii."
+msgstr "Adăugați o temă de culoare potrivită pentru aplicații."
 
 msgid "IDS_IV_BODY_APERTURE"
 msgstr "Deschidere"
@@ -623,7 +623,7 @@ msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Adăugare la marcaje"
 
 msgid "IDS_EMAIL_BODY_FAILED_M_STATUS"
-msgstr "Nereuşit"
+msgstr "Nereușit"
 
 msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
 msgstr "Dropbox"
@@ -650,7 +650,7 @@ msgid "IDS_GALLERY_BODY_DOWNLOAD"
 msgstr "Descărcare"
 
 msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_DROPBOX_ITEMS_WILL_BE_SHOWN"
-msgstr "După ce încărcaţi imagini în Dropbox, se vor afişa elementele."
+msgstr "După ce încărcați imagini în Dropbox, se vor afișa elementele."
 
 msgid "IDS_MEDIABR_POP_DOWNLOADING_ING"
 msgstr "Se descarcă..."
@@ -659,10 +659,10 @@ msgid "IDS_IV_BODY_ADD_PICTURES"
 msgstr "Adăugare imagini"
 
 msgid "IDS_IV_BODY_AFTER_YOU_TAG_PICTURES_AS_YOUR_FAVOURITES_PICTURES_WILL_BE_SHOWN"
-msgstr "După ce etichetaţi imagini ca preferate, acestea vor fi afişate."
+msgstr "După ce etichetați imagini ca preferate, acestea vor fi afișate."
 
 msgid "IDS_IV_BODY_REMOVE_FACE_IDENTIFICATION_Q"
-msgstr "Eliminaţi identificarea feţelor?"
+msgstr "Eliminați identificarea fețelor?"
 
 msgid "IDS_IV_OPT_ASSIGN_NAME"
 msgstr "Atribuire nume"
@@ -683,25 +683,25 @@ msgid "IDS_MEDIABR_POP_STARTING_DOWNLOAD_ABB"
 msgstr "Se începe descărcarea..."
 
 msgid "IDS_MF_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
-msgstr "Memorie insuficientă. Ştergeţi câteva elemente"
+msgstr "Memorie insuficientă. Ștergeți câteva elemente"
 
 msgid "IDS_ST_BODY_PRIVATE_STORAGE"
-msgstr "Spaţiu de stocare privat"
+msgstr "Spațiu de stocare privat"
 
 msgid "IDS_IV_BODY_DRAG_HERE"
-msgstr "Glisaţi aici."
+msgstr "Glisați aici."
 
 msgid "IDS_IV_BODY_TAP_TO_ADD_IMAGES"
-msgstr "Atingeţi pentru a adăuga imagini."
+msgstr "Atingeți pentru a adăuga imagini."
 
 msgid "IDS_VIDEO_POP_FILE_ALREADY_EXISTS"
-msgstr "Fişierul există deja."
+msgstr "Fișierul există deja."
 
 msgid "IDS_VIDEO_POP_THIS_ITEM_WILL_BE_DELETED"
-msgstr "Acest element va fi şters."
+msgstr "Acest element va fi șters."
 
 msgid "IDS_IV_BODY_AFTER_YOU_UPLOAD_PICTURES_TO_FACEBOOK_ITEMS_WILL_BE_SHOWN"
-msgstr "După ce încărcaţi imagini pe Facebook, se vor afişa elementele."
+msgstr "După ce încărcați imagini pe Facebook, se vor afișa elementele."
 
 msgid "IDS_MUSIC_POP_INVALID_CHARACTER"
 msgstr "Caracter incorect"
@@ -728,7 +728,7 @@ msgid "IDS_GALLERY_HEADER_PD_SELECTED_ABB"
 msgstr "%d selectate"
 
 msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
-msgstr "Spaţiu stocare dispozitiv"
+msgstr "Spațiu stocare dispozitiv"
 
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "Card SD"
@@ -749,13 +749,13 @@ msgid "IDS_IV_OPT_5_SECS_ABB"
 msgstr "5 sec."
 
 msgid "IDS_IV_BODY_STORAGE_LOCATION_ABB2"
-msgstr "Locaţie stocare"
+msgstr "Locație stocare"
 
 msgid "IDS_IV_BODY_FILE_SIZE"
-msgstr "Dimensiune fişier"
+msgstr "Dimensiune fișier"
 
 msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
-msgstr "1 album va fi şters."
+msgstr "1 album va fi șters."
 
 msgid "IDS_IV_OPT_NOSTALGIA_M_EFFECT"
 msgstr "Nostalgia"
@@ -770,7 +770,7 @@ msgid "IDS_IV_HEADER_SAVE_CHANGES_ABB2"
 msgstr "Salvare schimbări"
 
 msgid "IDS_IV_POP_SAVE_YOUR_CHANGES_OR_DISCARD_THEM_Q"
-msgstr "Salvaţi modificările sau renunţaţi la acestea?"
+msgstr "Salvați modificările sau renunțați la acestea?"
 
 msgid "IDS_IV_BUTTON_DISCARD_ABB2"
 msgstr "Renunţ."
@@ -809,7 +809,7 @@ msgid "IDS_IV_OPT_SHARPEN_M_EFFECT"
 msgstr "Mărire claritate"
 
 msgid "IDS_IV_OPT_SKETCH_M_EFFECT"
-msgstr "Schiţă"
+msgstr "Schiță"
 
 msgid "IDS_IV_OPT_INVERTED_COLOURS_M_EFFECT"
 msgstr "Culori inversate"
@@ -836,7 +836,7 @@ msgid "IDS_IMGE_BODY_ROTATE"
 msgstr "Rotire"
 
 msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
-msgstr "Spaţiul din memoria dispozitivului este insuficient. Deschideţi meniul Setări > Energie şi stocare > Stocare, apoi ştergeţi câteva fişiere şi încercaţi din nou."
+msgstr "Spațiul din memoria dispozitivului este insuficient. Deschideți meniul Setări > Energie și stocare > Stocare, apoi ștergeți câteva fișiere și încercați din nou."
 
 msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
 msgstr "Interval diapozitive"
@@ -860,7 +860,7 @@ msgid "IDS_IV_OPT_SET_AS"
 msgstr "Setare ca"
 
 msgid "IDS_IV_OPT_DOWNLOAD"
-msgstr "Descărcaţi"
+msgstr "Descărcați"
 
 msgid "IDS_IV_HEADER_RENAME"
 msgstr "Redenumire"
@@ -872,7 +872,7 @@ msgid "IDS_IV_BUTTON_RENAME_ABB2"
 msgstr "Redenum."
 
 msgid "IDS_IV_POP_THERE_IS_ALREADY_A_FILE_WITH_THIS_NAME_IN_THE_DESTINATION_FOLDER"
-msgstr "Numele fişierului este deja utilizat în folderul de destinaţie."
+msgstr "Numele fișierului este deja utilizat în folderul de destinație."
 
 msgid "IDS_IV_BUTTON_REPLACE_ABB"
 msgstr "Înloc."
@@ -887,7 +887,7 @@ msgid "IDS_IV_OPT_LOCK_SCREEN_WALLPAPER_ABB2"
 msgstr "Fundal ecran de blocare"
 
 msgid "IDS_IV_OPT_HOME_N_LOCK_SCREEN_WALLPAPERS_ABB"
-msgstr "Fundaluri ecr. acasă şi bloc."
+msgstr "Fundaluri ecr. acasă și bloc."
 
 msgid "IDS_IV_HEADER_DETAILS"
 msgstr "Detalii"
@@ -899,31 +899,31 @@ msgid "IDS_IV_HEADER_UNABLE_TO_SAVE_IMAGE_ABB"
 msgstr "Imposibil de salvat imaginea"
 
 msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_IN_YOUR_DEVICE_STORAGE"
-msgstr "Nu există spaţiu suficient (%d MB) în memoria dispozitivului."
+msgstr "Nu există spațiu suficient (%d MB) în memoria dispozitivului."
 
 msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_ON_YOUR_SD_CARD"
-msgstr "Nu există spaţiu suficient (%d MO) pe cardul SD."
+msgstr "Nu există spațiu suficient (%d MO) pe cardul SD."
 
 msgid "IDS_IV_POP_DELETE_SOME_FILES_AND_TRY_AGAIN"
-msgstr "Ştergeţi câteva fişiere şi încercaţi din nou."
+msgstr "Ștergeți câteva fișiere și încercați din nou."
 
 msgid "IDS_IV_HEADER_SAVE_IMAGE"
 msgstr "Salvare imagine"
 
 msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_IN_YOUR_DEVICE_STORAGE_THIS_ITEM_WILL_BE_SAVED_ON_YOUR_SD_CARD"
-msgstr "Spaţiu insuficient (mai aveţi %d MB) în memoria dispozitivului. Elementul va fi salvat pe cardul SD."
+msgstr "Spațiu insuficient (mai aveți %d MB) în memoria dispozitivului. Elementul va fi salvat pe cardul SD."
 
 msgid "IDS_IV_POP_THERE_IS_NOT_ENOUGH_SPACE_HPD_MB_REMAINING_ON_THE_SD_CARD_THIS_ITEM_WILL_BE_SAVED_IN_YOUR_DEVICE_STORAGE"
-msgstr "Spaţiu insuficient (mai aveţi %d MB) pe cardul SD. Elementul va fi salvat în memoria dispozitivului."
+msgstr "Spațiu insuficient (mai aveți %d MB) pe cardul SD. Elementul va fi salvat în memoria dispozitivului."
 
 msgid "IDS_IV_POP_THIS_IMAGE_WILL_BE_DELETED"
-msgstr "Această imagine va fi ştearsă."
+msgstr "Această imagine va fi ștearsă."
 
 msgid "IDS_IV_BUTTON_STOP_ABB4"
 msgstr "Oprire"
 
 msgid "IDS_MUSIC_OPT_DELETE"
-msgstr "Ştergere"
+msgstr "Ștergere"
 
 msgid "IDS_COM_BODY_ERROR_T_MAINMENU_STATE_ABB"
 msgstr "Eroare"
@@ -935,7 +935,7 @@ msgid "IDS_GALLERY_BUTTON_DONE"
 msgstr "Efectuat"
 
 msgid "IDS_GALLERY_BODY_FAILED_TO_LOAD_THIS_ITEM"
-msgstr "Încărcarea acestui element nu a reuşit."
+msgstr "Încărcarea acestui element nu a reușit."
 
 msgid "IDS_CAM_OPT_NEGATIVE"
 msgstr "Negativ"
@@ -959,19 +959,19 @@ msgid "IDS_IV_HEADER_LOADING_ING"
 msgstr "Încărcare..."
 
 msgid "IDS_IV_POP_LOADING_FAILED"
-msgstr "Încărcarea nu a reuşit."
+msgstr "Încărcarea nu a reușit."
 
 msgid "IDS_IV_POP_LOADING_IMAGE_ING"
 msgstr "Se încarcă imaginea..."
 
 msgid "IDS_IV_SK_DISCARD"
-msgstr "Renunţare"
+msgstr "Renunțare"
 
 msgid "IDS_BR_HEADER_UNABLE_TO_DOWNLOAD_ABB"
 msgstr "Nu se poate descărca"
 
 msgid "IDS_MF_POP_MOBILE_DATA_IS_TURNED_OFF_CONNECT_TO_A_WI_FI_NETWORK_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
-msgstr "Datele mobile sunt dezactivate. Conectaţi-vă la o reţea Wi-Fi sau activaţi Datele mobile şi încercaţi din nou."
+msgstr "Datele mobile sunt dezactivate. Conectați-vă la o rețea Wi-Fi sau activați Datele mobile și încercați din nou."
 
 msgid "IDS_IV_BODY_DO_NOT_SEND"
 msgstr "Nu se trimite"
@@ -1001,5 +1001,11 @@ msgid "IDS_COM_SK_RENAME"
 msgstr "Redenumire"
 
 msgid "IDS_COM_BODY_ENTER_NAME"
-msgstr "Introduceţi numele."
+msgstr "Introduceți numele."
+
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Caractere nevalide"
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Copiere"
 

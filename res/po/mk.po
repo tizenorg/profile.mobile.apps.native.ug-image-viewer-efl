@@ -77,7 +77,7 @@ msgid "IDS_IV_POP_SAVED"
 msgstr "Меморирано."
 
 msgid "IDS_IV_BODY_SETTINGS"
-msgstr "Опции"
+msgstr "Поставувања"
 
 msgid "IDS_IV_BODY_SIZE"
 msgstr "Големина"
@@ -149,7 +149,7 @@ msgid "IDS_IV_POP_TAP_AND_HOLD_THUMBNAILS_TO_SELECT_THE_BEST_PHOTOS"
 msgstr "Допрете и држете ги сликичките за да ги изберете најдобрите фотографии."
 
 msgid "IDS_IV_POP_SLIDESHOW_SETTINGS"
-msgstr "Опции за слајдовите"
+msgstr "Поставувања за слајдовите"
 
 msgid "IDS_IV_POP_SET_WALLPAPER_FOR_HOME_SCREEN_AND_LOCK_SCREEN"
 msgstr "Постави заднина за основниот екран и заклучи екран"
@@ -836,7 +836,7 @@ msgid "IDS_IMGE_BODY_ROTATE"
 msgstr "Заврти"
 
 msgid "IDS_MF_POP_THERE_IS_NOT_ENOUGH_SPACE_IN_YOUR_DEVICE_STORAGE_GO_TO_SETTINGS_POWER_AND_STORAGE_STORAGE_THEN_DELETE_SOME_FILES_AND_TRY_AGAIN"
-msgstr "Нема доволно место во меморијата на уредот. Одете во Поставки > Енергија и меморија > Меморија, избришете некој фајл и обидете се повторно."
+msgstr "Нема доволно место во меморијата на уредот. Одете во Поставувања > Енергија и меморија > Меморија, избришете некој фајл и обидете се повторно."
 
 msgid "IDS_IV_HEADER_SLIDE_INTERVAL_ABB"
 msgstr "Интервал на слајдовите"
@@ -1002,4 +1002,10 @@ msgstr "Преименувај"
 
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Внеси име."
+
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Погрешни знаци."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Копирај"
 

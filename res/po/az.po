@@ -1003,3 +1003,9 @@ msgstr "Adını dəyişdir"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Xahiş olunur adı daxil edin."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Simvollar səhvdir."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Köçür"
+

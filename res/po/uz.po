@@ -1003,3 +1003,9 @@ msgstr "Nom o‘zg."
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Nom kiriting."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Mumkin bo‘lmagan belgilar."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Nusxa olish"
+

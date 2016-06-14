@@ -1003,3 +1003,9 @@ msgstr "Átnevez"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Írja be a nevet."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Érvénytelen karakterek"
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Másol"
+

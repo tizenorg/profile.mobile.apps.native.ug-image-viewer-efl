@@ -1003,3 +1003,9 @@ msgstr "Бсқш атау"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Атын енгізіңіз."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Қате әріптер."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Көшіру"
+

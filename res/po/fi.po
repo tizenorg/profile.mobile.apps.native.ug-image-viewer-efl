@@ -1003,3 +1003,9 @@ msgstr "Nim. uud."
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Kirjoita nimi."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Virheellisiä merkkejä"
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Kopioi"
+

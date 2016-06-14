@@ -1003,3 +1003,9 @@ msgstr "Pārdēvēt"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Ievadiet vārdu."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Nederīgas rakstzīmes."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Kopēt"
+

@@ -1003,3 +1003,9 @@ msgstr "Cam. nome"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Introducir nome"
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Caracteres non válidos"
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Copiar"
+

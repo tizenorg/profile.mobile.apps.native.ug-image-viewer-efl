@@ -1003,3 +1003,9 @@ msgstr "Pervardyti"
 msgid "IDS_COM_BODY_ENTER_NAME"
 msgstr "Įvesti vardą."
 
+msgid "IDS_COM_POP_INVALID_CHARACTERS"
+msgstr "Neteisingi simboliai."
+
+msgid "IDS_CAM_POP_COPY"
+msgstr "Kopijuoti"
+
