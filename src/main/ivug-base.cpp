@@ -372,7 +372,7 @@ bool on_create( void *priv)
 
 	evas_object_geometry_get(ugd->base, &ux1, &uy1, &uw1, &uh1);
 
-	MSG_IMAGEVIEW_HIGH("UG base created : 0x%08x (%d,%d,%d,%d)", ugd->base, ux1, uy1, uw1, uh1);
+	MSG_MAIN_HIGH("UG base created : 0x%08x (%d,%d,%d,%d)", ugd->base, ux1, uy1, uw1, uh1);
 
 	evas_object_event_callback_add(ugd->base, EVAS_CALLBACK_MOUSE_DOWN, _on_receive_mouse_down, NULL);
 
@@ -389,7 +389,7 @@ bool on_create( void *priv)
 
 	error_code = storage_set_state_changed_cb(__externalStorageId, _on_mmc_state_changed, ugd);
 	if (error_code != STORAGE_ERROR_NONE) {
-		MSG_ERROR("storage_set_state_changed_cb() failed!!");
+		MSG_MAIN_ERROR("storage_set_state_changed_cb() failed!!");
 	}
 #if 0
 	if (ugd->ivug_param->mode == IVUG_MODE_SETAS && ugd->ivug_param->setas_type != IVUG_SET_AS_UG_TYPE_CALLER_ID && ugd->ivug_param->setas_type != IVUG_SET_AS_UG_TYPE_WALLPAPER_CROP) {
@@ -558,38 +558,38 @@ void on_start(ui_gadget_h ug, app_control_h service, void *priv)
 #endif
 void on_pause( void *priv)
 {
-	MSG_IMAGEVIEW_HIGH("Image Viewer : %s, data=0x%08x", __func__, priv);
+	MSG_MAIN_HIGH("Image Viewer : %s, data=0x%08x", __func__, priv);
 
 	if (!priv) {
-		MSG_IMAGEVIEW_ERROR("Invalid UG. Priv=0x%08x", priv);
+		MSG_MAIN_HIGH("Invalid UG. Priv=0x%08x", priv);
 		return ;
 	}
 
 	if (gGetDestroying() == true) {
-		MSG_IMAGEVIEW_WARN("Image Viewer is destroying");
+		MSG_MAIN_HIGH("Image Viewer is destroying");
 		return;
 	}
 
 	ug_data *ugd = (ug_data *)priv;
 
 	if (ugd->ivug_param == NULL) {
-		MSG_IMAGEVIEW_ERROR("UG is destroying");
+		MSG_MAIN_HIGH("UG is destroying");
 		return;
 	}
 
 	if (ugd->main_view) {
 		ivug_main_view_pause(ugd->main_view);
 	} else {
-		MSG_IMAGEVIEW_HIGH("don't need to pause");
+		MSG_MAIN_HIGH("don't need to pause");
 	}
 }
 
 void on_resume(void *priv)
 {
-	MSG_IMAGEVIEW_HIGH("Image Viewer : %s, data=0x%08x", __func__, priv);
+	MSG_MAIN_HIGH("Image Viewer : %s, data=0x%08x", __func__, priv);
 
 	if (!priv) {
-		IVUG_DEBUG_MSG("Invalid UG. Priv=0x%08x",priv);
+		MSG_MAIN_SEC("Invalid UG. Priv=0x%08x",priv);
 		return ;
 	}
 
@@ -598,19 +598,19 @@ void on_resume(void *priv)
 	if (ugd->main_view) {
 		ivug_main_view_resume(ugd->main_view);
 	} else {
-		MSG_IMAGEVIEW_HIGH("don't need to resume");
+		MSG_MAIN_HIGH("don't need to resume");
 	}
 
 }
 
 void on_destroy(void *priv)
 {
-	MSG_IMAGEVIEW_HIGH("Image Viewer : %s(0x%08x) data=0x%08x", __func__, on_destroy, priv);
+	MSG_MAIN_HIGH("Image Viewer : %s(0x%08x) data=0x%08x", __func__, on_destroy, priv);
 
 	PERF_CHECK_BEGIN(LVL0, "On Destroy");
 
 	if (!priv) {
-		MSG_IMAGEVIEW_ERROR("Invalid UG. Priv=0x%08x",priv);
+		MSG_MAIN_ERROR("Invalid UG. Priv=0x%08x",priv);
 		return ;
 	}
 
@@ -662,7 +662,7 @@ void on_destroy(void *priv)
 		PERF_CHECK_END(LVL1, "Base layout");
 	}
 
-	MSG_IMAGEVIEW_HIGH("Destroyed ug");
+	MSG_MAIN_HIGH("Destroyed ug");
 
 	PERF_CHECK_END(LVL0, "On Destroy");
 }

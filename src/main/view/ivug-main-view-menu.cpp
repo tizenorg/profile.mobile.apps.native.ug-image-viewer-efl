@@ -51,6 +51,7 @@
 #define GALLERY_PKG_NAME	"com.samsung.gallery"
 #define SHORTCUT_PREFIX		"gallery:imageviewer:"
 #define SHORTCUT_PREFIX_LEN	strlen(SHORTCUT_PREFIX)
+//#define IV_CTXPOPUP_OBJ_ROTATE_KEY "iv_ctxpopup_rotate_key"
 
 
 
@@ -1665,49 +1666,68 @@ static void _on_add_comment_view_destroy(void *data, Evas_Object *obj, void *eve
 	evas_object_smart_callback_del(pMainView->navi_bar, "transition,finished",
 	                               _on_add_comment_view_destroy);
 }
-
+#if 0
 static void
 popup_block_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	MSG_MAIN_HIGH("popup_block_clicked_cb");
 	evas_object_del(obj);
 }
+#endif
 
 static void
-gl_download_item_sel_cb(void *data, Evas_Object *obj, void *event_info)
+_ivug_ctxpopup_download_sel_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+
+	if (pMainView->ctx_popup) {
+		evas_object_del(pMainView->ctx_popup);
+		pMainView->ctx_popup = NULL;
+	}
 
 	_on_btn_download_clicked(pMainView);
-
-	if (pMainView->ctx_popup) {
-		evas_object_del(pMainView->ctx_popup);
-		pMainView->ctx_popup = NULL;
-	}
 }
 
 static void
-gl_item_sel_cb(void *data, Evas_Object *obj, void *event_info)
+_ivug_ctxpopup_slideshow_sel_cb(void *data, Evas_Object *obj, void *event_info)
 {
-	Elm_Object_Item *it = (Elm_Object_Item*) event_info;
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
-
-	int index = elm_genlist_item_index_get(it);
 
 	if (pMainView->ctx_popup) {
 		evas_object_del(pMainView->ctx_popup);
 		pMainView->ctx_popup = NULL;
 	}
 
-	if (index == 1) {
-		on_btn_slideshow_clicked(pMainView);
-	} else if (index == 2 && pMainView->view_by != IVUG_VIEW_BY_FAVORITES) {
-		_on_mainview_delete(pMainView);
-	} else if (index == 3 || pMainView->view_by == IVUG_VIEW_BY_FAVORITES) {
-		_on_btn_rename_clicked(pMainView);
-	}
+	on_btn_slideshow_clicked(pMainView);
 }
 
+static void
+_ivug_ctxpopup_delete_sel_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+
+	if (pMainView->ctx_popup) {
+		evas_object_del(pMainView->ctx_popup);
+		pMainView->ctx_popup = NULL;
+	}
+
+	_on_mainview_delete(pMainView);
+}
+
+static void
+_ivug_ctxpopup_rename_sel_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+
+	if (pMainView->ctx_popup) {
+		evas_object_del(pMainView->ctx_popup);
+		pMainView->ctx_popup = NULL;
+	}
+
+	_on_btn_rename_clicked(pMainView);
+}
+
+#if 0
 static char *
 _gl_email_text_get_cb(void *data, Evas_Object *obj, const char *part)
 {
@@ -1856,7 +1876,7 @@ Evas_Object* ivug_ctx_popup_create(Ivug_MainView *pMainView)
 
 	return popup;
 }
-
+#endif
 #ifdef LISTPOPUP
 static void _on_more_selected(void *data, Evas_Object *obj, void *event_info)
 {
@@ -2329,6 +2349,117 @@ bool ivug_listpopup_context_show(Evas_Object *obj, Evas_Object *hover, int x, in
 	return true;
 }
 
+static void _ivug_move_more_ctxpopup( Evas_Object *win, Evas_Object *ctxpopup)
+{
+	Evas_Coord w, h;
+	int pos = -1;
+	elm_win_screen_size_get(win, NULL, NULL, &w, &h);
+	pos = elm_win_rotation_get(win);
+	switch (pos) {
+	case 0:
+	case 180:
+		evas_object_move(ctxpopup, 0, h);
+		break;
+	case 90:
+	case 270:
+		evas_object_move(ctxpopup, h/2, w);
+		break;
+	}
+}
+
+static void __ivug_ctxpopup_hide_cb(void *data, Evas_Object *obj, void *ei)
+{
+	IV_ASSERT(data != NULL);
+	IV_ASSERT(obj != NULL);
+	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+	IV_ASSERT(pMainView != NULL);
+
+//	bool ct_rotate = (bool)evas_object_data_get(obj,
+//					 IV_CTXPOPUP_OBJ_ROTATE_KEY);
+
+//	if (!ct_rotate) {
+//		evas_object_del(obj);
+//		pMainView->ctx_popup = NULL;
+//	} else {
+
+//		evas_object_data_set(obj, IV_CTXPOPUP_OBJ_ROTATE_KEY,
+//							 (void *)false);
+//		if (pMainView->ctx_popup) {
+//			_ivug_move_more_ctxpopup(gGetCurrentWindow(), pMainView->ctx_popup);
+//			evas_object_show(pMainView->ctx_popup);
+//		}
+//	}
+
+	if (pMainView->ctx_popup) {
+		evas_object_del(pMainView->ctx_popup);
+		pMainView->ctx_popup = NULL;
+	}
+}
+
+static void __ivug_ctxpopup_parent_resize_cb(void *data, Evas *e,
+		Evas_Object *obj, void *ei)
+{
+	IV_ASSERT(data != NULL);
+//	evas_object_data_set((Evas_Object *)data, IV_CTXPOPUP_OBJ_ROTATE_KEY,
+//						 (void*)true);
+}
+
+static void __ivug_ctxpopup_rotate_cb(void *data, Evas_Object *obj, void *ei)
+{
+	IV_ASSERT(data != NULL);
+	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+
+	if (pMainView->ctx_popup) {
+		_ivug_move_more_ctxpopup(gGetCurrentWindow(), pMainView->ctx_popup);
+		evas_object_show(pMainView->ctx_popup);
+	}
+}
+
+static void __ivug_ctxpopup_del_cb(void *data, Evas *e, Evas_Object *obj, void *ei)
+{
+	IV_ASSERT(data != NULL);
+	IV_ASSERT(obj != NULL);
+	Evas_Object *ctxpopup = obj;
+	IV_ASSERT(ctxpopup != NULL);
+
+//	evas_object_data_del(ctxpopup, IV_CTXPOPUP_OBJ_ROTATE_KEY);
+	evas_object_smart_callback_del(ctxpopup, "dismissed",
+								   __ivug_ctxpopup_hide_cb);
+	evas_object_event_callback_del(gGetCurrentWindow(),
+								   EVAS_CALLBACK_RESIZE,
+								   __ivug_ctxpopup_parent_resize_cb);
+
+	evas_object_smart_callback_del(elm_object_top_widget_get(ctxpopup),
+								   "rotation,changed",
+								   __ivug_ctxpopup_rotate_cb);
+	evas_object_event_callback_del(ctxpopup, EVAS_CALLBACK_DEL,
+								   __ivug_ctxpopup_del_cb);
+}
+
+static int _ivug_ctxpopup_add_callbacks(void *data, Evas_Object *ctxpopup)
+{
+	IV_ASSERT(data != NULL);
+	IV_ASSERT(ctxpopup != NULL);
+	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+	IV_ASSERT(pMainView != NULL);
+
+	evas_object_smart_callback_add(ctxpopup, "dismissed",
+								   __ivug_ctxpopup_hide_cb, data);
+	evas_object_event_callback_add(ctxpopup, EVAS_CALLBACK_DEL,
+								   __ivug_ctxpopup_del_cb, data);
+	evas_object_event_callback_add(gGetCurrentWindow(),
+								   EVAS_CALLBACK_RESIZE,
+								   __ivug_ctxpopup_parent_resize_cb,
+								   ctxpopup);
+	evas_object_smart_callback_add(elm_object_top_widget_get(ctxpopup),
+								   "rotation,changed",
+								   __ivug_ctxpopup_rotate_cb, data);
+	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_BACK, eext_ctxpopup_back_cb, NULL);
+	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_MORE, eext_ctxpopup_back_cb, NULL);
+
+	return 0;
+}
+
 void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
@@ -2336,7 +2467,6 @@ void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 
 	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
-	Evas_Object* popup = NULL;
 #ifdef LISTPOPUP
 	Evas_Coord x;
 	Evas_Coord y;
@@ -2405,9 +2535,34 @@ void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 	}
 #endif
 #else
-	popup = ivug_ctx_popup_create(pMainView);
+	Evas_Object *ctxpopup = elm_ctxpopup_add(gGetCurrentWindow());
+	elm_object_style_set(ctxpopup, "more/default");
 
-	pMainView->ctx_popup = popup;
+	elm_ctxpopup_direction_priority_set(ctxpopup, ELM_CTXPOPUP_DIRECTION_UP,
+										ELM_CTXPOPUP_DIRECTION_UNKNOWN,
+										ELM_CTXPOPUP_DIRECTION_UNKNOWN,
+										ELM_CTXPOPUP_DIRECTION_UNKNOWN);
+
+	pMainView->ctx_popup = ctxpopup;
+
+	if (pMainView->mode == IVUG_MODE_EMAIL) {
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_FILE_DOWNLOAD), NULL, _ivug_ctxpopup_download_sel_cb, pMainView);
+
+	} else if (pMainView->view_by != IVUG_VIEW_BY_FAVORITES) {
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_SLIDE_SHOW), NULL, _ivug_ctxpopup_slideshow_sel_cb, pMainView);
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_DELETE_IMAGE), NULL, _ivug_ctxpopup_delete_sel_cb, pMainView);
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_RENAME_IMAGE), NULL, _ivug_ctxpopup_rename_sel_cb, pMainView);
+	} else {
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_SLIDE_SHOW), NULL, _ivug_ctxpopup_slideshow_sel_cb, pMainView);
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_RENAME_IMAGE), NULL, _ivug_ctxpopup_rename_sel_cb, pMainView);
+	}
+
+	_ivug_move_more_ctxpopup(gGetCurrentWindow(), ctxpopup);
+	evas_object_show(ctxpopup);
+
+	if (ctxpopup) {
+		_ivug_ctxpopup_add_callbacks(pMainView, ctxpopup);
+	}
 #endif
 }
 
