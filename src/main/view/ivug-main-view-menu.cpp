@@ -1667,225 +1667,56 @@ static void _on_add_comment_view_destroy(void *data, Evas_Object *obj, void *eve
 }
 
 static void
-popup_block_clicked_cb(void *data, Evas_Object *obj, void *event_info)
-{
-	MSG_MAIN_HIGH("popup_block_clicked_cb");
-	evas_object_del(obj);
-}
-
-static void
-gl_download_item_sel_cb(void *data, Evas_Object *obj, void *event_info)
+_ivug_ctxpopup_download_sel_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+
+	if (pMainView->ctx_popup) {
+		evas_object_del(pMainView->ctx_popup);
+		pMainView->ctx_popup = NULL;
+	}
 
 	_on_btn_download_clicked(pMainView);
-
-	if (pMainView->ctx_popup) {
-		evas_object_del(pMainView->ctx_popup);
-		pMainView->ctx_popup = NULL;
-	}
 }
 
 static void
-gl_item_sel_cb(void *data, Evas_Object *obj, void *event_info)
+_ivug_ctxpopup_slideshow_sel_cb(void *data, Evas_Object *obj, void *event_info)
 {
-	Elm_Object_Item *it = (Elm_Object_Item*) event_info;
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
-
-	int index = elm_genlist_item_index_get(it);
 
 	if (pMainView->ctx_popup) {
 		evas_object_del(pMainView->ctx_popup);
 		pMainView->ctx_popup = NULL;
 	}
 
-	if (index == 1) {
-		on_btn_slideshow_clicked(pMainView);
-	} else if (index == 2 && pMainView->view_by != IVUG_VIEW_BY_FAVORITES) {
-		_on_mainview_delete(pMainView);
-	} else if (index == 3 || pMainView->view_by == IVUG_VIEW_BY_FAVORITES) {
-		_on_btn_rename_clicked(pMainView);
-	}
+	on_btn_slideshow_clicked(pMainView);
 }
 
-static char *
-_gl_email_text_get_cb(void *data, Evas_Object *obj, const char *part)
-{
-	char buf[50] = {0, };
-	char *str = GET_STR(IDS_FILE_DOWNLOAD);
-	snprintf(buf, sizeof(buf), "%s", str);
-	MSG_MAIN_HIGH("buffer %s", buf);
-	return strdup(buf);
-}
-
-static char *
-_gl_text_get_cb(void *data, Evas_Object *obj, const char *part)
-{
-	st_temp *ob = (st_temp *)data;
-	int index = ob->index;
-	char buf[50] = {0, };
-	char *str = NULL;
-
-	switch (index) {
-	case 1:
-		str = GET_STR(IDS_SLIDE_SHOW);
-		snprintf(buf, sizeof(buf), "%s", str);
-		break;
-	case 2:
-		str = GET_STR(IDS_DELETE_IMAGE);
-		snprintf(buf, sizeof(buf), str, 3);
-		break;
-	case 3:
-		str = GET_STR(IDS_RENAME_IMAGE);
-		snprintf(buf, sizeof(buf), str, 5);
-		break;
-	default:
-		str = GET_STR(IDS_SLIDE_SHOW);
-		snprintf(buf, sizeof(buf), "%s", str);
-	}
-
-	MSG_MAIN_HIGH("buffer %s", buf);
-	return strdup(buf);
-}
-
-static char *
-_gl_favorite_text_get_cb(void *data, Evas_Object *obj, const char *part)
-{
-	st_temp *ob = (st_temp *)data;
-	int index = ob->index;
-	char buf[50] = {0, };
-	char *str = NULL;
-
-	switch (index) {
-	case 1:
-		str = GET_STR(IDS_SLIDE_SHOW);
-		snprintf(buf, sizeof(buf), "%s", str);
-		break;
-	case 2:
-		str = GET_STR(IDS_RENAME_IMAGE);
-		snprintf(buf, sizeof(buf), str, 5);
-		break;
-	default:
-		str = GET_STR(IDS_SLIDE_SHOW);
-		snprintf(buf, sizeof(buf), "%s", str);
-	}
-
-	MSG_MAIN_HIGH("buffer %s", buf);
-	return strdup(buf);
-
-}
-
-static inline void
-_popup_back_cb(void *data, Evas_Object *obj, void *event_info)
+static void
+_ivug_ctxpopup_delete_sel_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
-	IV_ASSERT(pMainView != NULL);
 
 	if (pMainView->ctx_popup) {
 		evas_object_del(pMainView->ctx_popup);
 		pMainView->ctx_popup = NULL;
 	}
+
+	_on_mainview_delete(pMainView);
 }
 
-Evas_Object* ivug_ctx_popup_create(Ivug_MainView *pMainView)
-{
-	IV_ASSERT(pMainView != NULL);
-	IV_ASSERT(pMainView->layout != NULL);
-
-	static Elm_Genlist_Item_Class itc;
-	Evas_Object *popup;
-	Evas_Object *genlist;
-	int i = 1;
-
-	popup = elm_popup_add(pMainView->layout);
-	elm_popup_align_set(popup, ELM_NOTIFY_ALIGN_FILL, 1.0);
-	elm_object_style_set(popup,"more/default");
-	eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK, _popup_back_cb, pMainView);
-	eext_object_event_callback_add(popup, EEXT_CALLBACK_MORE, _popup_back_cb, pMainView);
-
-
-	evas_object_size_hint_weight_set(popup, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-	evas_object_smart_callback_add(popup, "block,clicked", popup_block_clicked_cb, gGetCurrentWindow());
-
-	/* genlist */
-	genlist = elm_genlist_add(popup);
-	elm_genlist_mode_set(genlist, ELM_LIST_COMPRESS);
-	evas_object_size_hint_weight_set(genlist, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-	evas_object_size_hint_align_set(genlist, EVAS_HINT_FILL, EVAS_HINT_FILL);
-
-	elm_object_style_set(genlist, "popup");
-	elm_genlist_homogeneous_set(genlist, EINA_TRUE);
-	elm_scroller_policy_set(genlist, ELM_SCROLLER_POLICY_OFF, ELM_SCROLLER_POLICY_AUTO);
-	elm_scroller_content_min_limit(genlist, EINA_FALSE, EINA_TRUE);
-
-	itc.item_style = "default_style";
-	itc.func.content_get = NULL;
-	itc.func.state_get = NULL;
-	itc.func.del = NULL;
-
-	if (pMainView->mode == IVUG_MODE_EMAIL) {
-		itc.func.text_get = _gl_email_text_get_cb;
-
-		elm_genlist_item_append(genlist, &itc, (void *) i, NULL, ELM_GENLIST_ITEM_NONE, gl_download_item_sel_cb, pMainView);
-	} else if (pMainView->view_by != IVUG_VIEW_BY_FAVORITES) {
-		itc.func.text_get = _gl_text_get_cb;
-
-	for (i = 1; i <= 3; i++) {
-		st_temp *ob = (st_temp *) calloc(1, sizeof(st_temp));
-		if (ob) {
-			ob->index = i;
-			elm_genlist_item_append(genlist, &itc, (void *) ob, NULL, ELM_GENLIST_ITEM_NONE, gl_item_sel_cb, pMainView);
-		}
-	}
-	} else {
-		itc.func.text_get = _gl_favorite_text_get_cb;
-
-		for (i = 1; i <= 2; i++) {
-			st_temp *ob = (st_temp *) calloc(1, sizeof(st_temp));
-			if (ob) {
-				ob->index = i;
-				elm_genlist_item_append(genlist, &itc, (void *) ob, NULL, ELM_GENLIST_ITEM_NONE, gl_item_sel_cb, pMainView);
-			}
-		}
-
-	}
-
-	evas_object_show(genlist);
-	elm_object_content_set(popup, genlist);
-	evas_object_show(popup);
-
-	return popup;
-}
-
-#ifdef LISTPOPUP
-static void _on_more_selected(void *data, Evas_Object *obj, void *event_info)
+static void
+_ivug_ctxpopup_rename_sel_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 
-	Ivug_ListPopup_Item *item = (Ivug_ListPopup_Item *)event_info;
-
-	const char *label = ivug_listpopup_item_get_text(item);
-	if (label == NULL) {
-		ivug_main_view_set_hide_timer(pMainView);
-		return;
+	if (pMainView->ctx_popup) {
+		evas_object_del(pMainView->ctx_popup);
+		pMainView->ctx_popup = NULL;
 	}
 
-	MSG_MAIN_HIGH("text(%s) is clicked", label);
-
-	if (strncmp(label, IDS_SLIDE_SHOW, strlen(label)) == 0) {
-		on_btn_slideshow_clicked(pMainView);
-	} else if (strncmp(label, IDS_DELETE_IMAGE, strlen(label)) == 0) {
-		_on_mainview_delete(pMainView);
-	} else if (strncmp(label, IDS_RENAME_IMAGE, strlen(label)) == 0) {
-		_on_btn_rename_clicked(pMainView);
-	} else if (strncmp(label, IDS_FILE_DOWNLOAD, strlen(label)) == 0) {
-		_on_btn_download_clicked(pMainView);
-	}
-
-	evas_object_del(pMainView->ctx_popup);
-	pMainView->ctx_popup = NULL;
+	_on_btn_rename_clicked(pMainView);
 }
-#endif
 
 Evas_Object *ivug_listpopup_add(Evas_Object *parent)
 {
@@ -2329,6 +2160,86 @@ bool ivug_listpopup_context_show(Evas_Object *obj, Evas_Object *hover, int x, in
 	return true;
 }
 
+static void _ivug_move_more_ctxpopup( Evas_Object *win, Evas_Object *ctxpopup)
+{
+	Evas_Coord w, h;
+	int pos = -1;
+	elm_win_screen_size_get(win, NULL, NULL, &w, &h);
+	pos = elm_win_rotation_get(win);
+	switch (pos) {
+	case 0:
+	case 180:
+		evas_object_move(ctxpopup, 0, h);
+		break;
+	case 90:
+	case 270:
+		evas_object_move(ctxpopup, h/2, w);
+		break;
+	}
+}
+
+static void __ivug_ctxpopup_hide_cb(void *data, Evas_Object *obj, void *ei)
+{
+	IV_ASSERT(data != NULL);
+	IV_ASSERT(obj != NULL);
+	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+	IV_ASSERT(pMainView != NULL);
+
+	if (pMainView->ctx_popup) {
+		evas_object_del(pMainView->ctx_popup);
+		pMainView->ctx_popup = NULL;
+	}
+}
+
+static void __ivug_ctxpopup_rotate_cb(void *data, Evas_Object *obj, void *ei)
+{
+	IV_ASSERT(data != NULL);
+	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+
+	if (pMainView->ctx_popup) {
+		_ivug_move_more_ctxpopup(gGetCurrentWindow(), pMainView->ctx_popup);
+		evas_object_show(pMainView->ctx_popup);
+	}
+}
+
+static void __ivug_ctxpopup_del_cb(void *data, Evas *e, Evas_Object *obj, void *ei)
+{
+	IV_ASSERT(data != NULL);
+	IV_ASSERT(obj != NULL);
+	Evas_Object *ctxpopup = obj;
+	IV_ASSERT(ctxpopup != NULL);
+
+	evas_object_smart_callback_del(ctxpopup, "dismissed",
+								   __ivug_ctxpopup_hide_cb);
+
+	evas_object_smart_callback_del(elm_object_top_widget_get(ctxpopup),
+								   "rotation,changed",
+								   __ivug_ctxpopup_rotate_cb);
+	evas_object_event_callback_del(ctxpopup, EVAS_CALLBACK_DEL,
+								   __ivug_ctxpopup_del_cb);
+}
+
+static int _ivug_ctxpopup_add_callbacks(void *data, Evas_Object *ctxpopup)
+{
+	IV_ASSERT(data != NULL);
+	IV_ASSERT(ctxpopup != NULL);
+	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+	IV_ASSERT(pMainView != NULL);
+
+	evas_object_smart_callback_add(ctxpopup, "dismissed",
+								   __ivug_ctxpopup_hide_cb, data);
+	evas_object_event_callback_add(ctxpopup, EVAS_CALLBACK_DEL,
+								   __ivug_ctxpopup_del_cb, data);
+
+	evas_object_smart_callback_add(elm_object_top_widget_get(ctxpopup),
+								   "rotation,changed",
+								   __ivug_ctxpopup_rotate_cb, data);
+	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_BACK, eext_ctxpopup_back_cb, NULL);
+	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_MORE, eext_ctxpopup_back_cb, NULL);
+
+	return 0;
+}
+
 void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
@@ -2336,7 +2247,6 @@ void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 
 	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
-	Evas_Object* popup = NULL;
 #ifdef LISTPOPUP
 	Evas_Coord x;
 	Evas_Coord y;
@@ -2369,45 +2279,34 @@ void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 		// If menu is visible, do not hide menu during popup is displaying
 		ivug_main_view_del_hide_timer(pMainView);
 	}
-#ifdef LISTPOPUP
-	popup = ivug_listpopup_add(pMainView->layout);
-	ivug_listpopup_lang_set(popup, gGetLanguageHandle());
-	evas_object_smart_callback_add(popup, "popup,dismissed", _dismissed_cb, pMainView);
-	evas_object_smart_callback_add(popup, "popup,selected", _on_more_selected, pMainView);
+
+	Evas_Object *ctxpopup = elm_ctxpopup_add(gGetCurrentWindow());
+	elm_object_style_set(ctxpopup, "more/default");
+
+	elm_ctxpopup_direction_priority_set(ctxpopup, ELM_CTXPOPUP_DIRECTION_UP,
+										ELM_CTXPOPUP_DIRECTION_UNKNOWN,
+										ELM_CTXPOPUP_DIRECTION_UNKNOWN,
+										ELM_CTXPOPUP_DIRECTION_UNKNOWN);
+
+	pMainView->ctx_popup = ctxpopup;
 
 	if (pMainView->mode == IVUG_MODE_EMAIL) {
-		ivug_listpopup_item_append(popup, NULL, IDS_FILE_DOWNLOAD, NULL);
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_FILE_DOWNLOAD), NULL, _ivug_ctxpopup_download_sel_cb, pMainView);
+
+	} else if (pMainView->view_by != IVUG_VIEW_BY_FAVORITES) {
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_SLIDE_SHOW), NULL, _ivug_ctxpopup_slideshow_sel_cb, pMainView);
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_DELETE_IMAGE), NULL, _ivug_ctxpopup_delete_sel_cb, pMainView);
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_RENAME_IMAGE), NULL, _ivug_ctxpopup_rename_sel_cb, pMainView);
 	} else {
-		ivug_listpopup_item_append(popup, NULL, IDS_SLIDE_SHOW, GET_STR(IDS_SLIDE_SHOW));
-		if (pMainView->view_by != IVUG_VIEW_BY_FAVORITES) {
-			ivug_listpopup_item_append(popup, NULL, IDS_DELETE_IMAGE, GET_STR(IDS_DELETE_IMAGE));
-		}
-		ivug_listpopup_item_append(popup, NULL, IDS_RENAME_IMAGE, GET_STR(IDS_RENAME_IMAGE));
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_SLIDE_SHOW), NULL, _ivug_ctxpopup_slideshow_sel_cb, pMainView);
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_RENAME_IMAGE), NULL, _ivug_ctxpopup_rename_sel_cb, pMainView);
 	}
-	pMainView->ctx_popup = popup;
 
-	evas_object_geometry_get(obj, &x, &y, &w, &h);
-	MSG_MAIN_MED("x = %d, y = %d, w = %d, h = %d", x, y, w, h);
+	_ivug_move_more_ctxpopup(gGetCurrentWindow(), ctxpopup);
+	evas_object_show(ctxpopup);
 
-	int rot = gGetRotationDegree();
-
-#ifdef BACK_BTN
-	ivug_listpopup_context_show(popup, pMainView->layout, x + w / 2, y + h / 2);
-#else
-	Evas_Object *win = gGetCurrentWindow();
-	elm_win_screen_size_get(win, NULL, NULL, &w, &h);
-
-	ivug_listpopup_context_set_rotate_enable(popup, true);
-	if ((rot == 270) || (rot == 90)) {
-		ivug_listpopup_context_show(popup, pMainView->layout, (h / 2), w);
-	} else {
-		ivug_listpopup_context_show(popup, pMainView->layout, (w / 2), h);
+	if (ctxpopup) {
+		_ivug_ctxpopup_add_callbacks(pMainView, ctxpopup);
 	}
-#endif
-#else
-	popup = ivug_ctx_popup_create(pMainView);
-
-	pMainView->ctx_popup = popup;
-#endif
 }
 

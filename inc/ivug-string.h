@@ -275,7 +275,6 @@ static inline char* full_path(const char *str1, const char *str2) {
 #define IDS_CANCEL 			"IDS_COM_SK_CANCEL"
 #define IDS_CLOSE 			"IDS_COM_BODY_CLOSE"
 #define IDS_CHANGE_NAME		"IDS_COM_BODY_CHANGE_NAME"
-#define IDS_COPY			"IDS_COM_BODY_COPY"
 #define IDS_COPIED_TO_CLIPBOARD		"IDS_COM_POP_COPIED_TO_CLIPBOARD"
 #define IDS_DATE			"IDS_COM_BODY_DATE"
 #define IDS_DETAILS			"IDS_COM_BODY_DETAILS"
