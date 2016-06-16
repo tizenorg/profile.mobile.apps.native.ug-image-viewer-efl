@@ -550,13 +550,13 @@ _ivug_ss_photocam_loaded_cb(void *data, Evas_Object *obj, void *event_info)
 	}
 
 //	Evas_Load_Error error = static_cast<Evas_Load_Error>(reinterpret_cast<int >(event_info));//check
-	int *error = (int *)event_info;
+	/*int *error = (int *)event_info;
 	if (*error != EVAS_LOAD_ERROR_NONE) {
 		MSG_SEC("Image loading failed. Error=%d File=%s",
 		        *error, mdata->filepath);
 		_ivug_ss_load_next_image((SlideShow *)sLy->pSlideshow);
 		return;
-	}
+	}*/
 	edje_object_signal_emit(_EDJ(pSlideShow->sLayout[pSlideShow->sCurrent].layout), "elm,state,hide_thumbnail", "slideshow");
 
 	MSG_SEC("Photocam Pre-loaded. File=%s",

@@ -64,7 +64,7 @@ typedef enum {
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //
-static bool _destory_slideshow_and_ug(Ivug_MainView *pMainView, int state, bool bMmc_out);
+static bool _destory_slideshow_and_ug(Ivug_MainView *pMainView, bool bMmc_out);
 static void _on_slideshow_finished(void *data, Evas_Object *obj, void *event_info);
 
 #ifdef USE_THUMBLIST
@@ -554,7 +554,6 @@ static void _on_layout_resize(void *data, Evas_Object *obj, void *event_info)
 }
 
 static bool _destory_slideshow_and_ug(Ivug_MainView *pMainView,
-                                      int state,
                                       bool bMmc_out)
 {
 	IV_ASSERT(pMainView != NULL);
@@ -587,7 +586,7 @@ void _ivug_main_on_mmc_state_changed(void *data)
 
 	if (pMainView->ssHandle) {
 		ivug_ss_set_stop(pMainView->ssHandle);
-		_destory_slideshow_and_ug(pMainView, SLIDE_SHOW_STOPPED, true);
+		_destory_slideshow_and_ug(pMainView, true);
 	} else {
 		if (pMainView->exit_timer == NULL) {
 			pMainView->exit_timer = ecore_timer_add(0.2, _on_exit_timer_expired, data);
@@ -867,9 +866,8 @@ _on_slideshow_finished(void *data, Evas_Object *obj, void *event_info)
 	IV_ASSERT(data != NULL);
 
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
-	int *ss_state = (int *)event_info;
 	bool bDestoryed = false;
-	bDestoryed = _destory_slideshow_and_ug(pMainView, *ss_state, false);
+	bDestoryed = _destory_slideshow_and_ug(pMainView, false);
 	if (bDestoryed) {
 		return;
 	}
