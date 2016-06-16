@@ -705,71 +705,6 @@ static bool _delete_mitem(Ivug_MainView *pMainView, Media_Item *mitem)
 	return true;
 }
 
-static Eina_Bool
-_idler_delete(void *data)
-{
-	Ivug_MainView *pMainView = (Ivug_MainView *)data;
-	if (pMainView->delete_list == NULL) {
-		/* delete end */
-		bool ug_end = _idler_delete_end(data);
-
-		evas_object_del(pMainView->progress_popup);
-		pMainView->progress_popup = NULL;
-		pMainView->delete_idler = NULL;
-
-		if (ug_end == true) {
-			MSG_MAIN_ERROR("No item is remained. exit UG");
-
-			int ret = 0;
-			app_control_h service = NULL;
-			ret = app_control_create(&service);
-			if (ret != APP_CONTROL_ERROR_NONE) {
-				MSG_MAIN_HIGH("app_control_create failed");
-			}
-
-			ret = app_control_add_extra_data(service, "delete file", "true");
-			if (ret != APP_CONTROL_ERROR_NONE) {
-				MSG_MAIN_HIGH("app_control_add_extra_data failed");
-			}
-			app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
-
-			app_control_destroy(service);
-
-			_on_remove_main_view_ui(pMainView);
-
-			DESTROY_ME();
-		}
-		return ECORE_CALLBACK_DONE;
-	}
-
-	Image_Object *img = eina_list_data_get(pMainView->delete_list);
-	Media_Item *mitem = (Media_Item *)ivug_thumblist_get_item_data(pMainView->thumbs, img);
-	if (pMainView->cur_mitem == mitem) {
-		pMainView->cur_mitem = ivug_medialist_get_next(pMainView->mList, mitem);
-		if (pMainView->cur_mitem == NULL) {
-			pMainView->cur_mitem = ivug_medialist_get_prev(pMainView->mList, mitem);
-		}
-	}
-	ivug_thumblist_delete_item(pMainView->thumbs, img);
-	_delete_mitem(pMainView, mitem);
-
-	pMainView->delete_list = eina_list_remove_list(pMainView->delete_list, pMainView->delete_list);
-
-	Evas_Object *progressbar = (Evas_Object *)evas_object_data_get(pMainView->progress_popup, "pbar");
-	int delete_cnt = pMainView->delete_total - eina_list_count(pMainView->delete_list);
-	double progressbar_value = (double)(delete_cnt) / pMainView->delete_total;
-	elm_progressbar_value_set(progressbar, progressbar_value);
-
-	int ratio = (int)(progressbar_value * 100);
-	char buf[256] = {0,};
-	snprintf(buf, 256, " %d %%", ratio);
-	elm_object_text_set(progressbar, buf);
-
-	usleep(50000);
-
-	return ECORE_CALLBACK_RENEW;
-}
-
 static void
 _on_delete_selected(void *data, Evas_Object *obj, void *event_info)
 {
@@ -804,7 +739,6 @@ _on_delete_selected(void *data, Evas_Object *obj, void *event_info)
 			pMainView->cur_mitem = ivug_medialist_get_current_item(pMainView->mList);
 			pMainView->delete_total = eina_list_count(pMainView->delete_list);
 			pMainView->progress_popup = ivug_progress_popup_show(pMainView->layout, (char *)IDS_DELETE, _progress_delete_end_cb, pMainView);
-			pMainView->delete_idler = ecore_idler_add(_idler_delete, pMainView);
 			return;
 		} else if (deleted) {	/* remove current thumbnail item */
 			ivug_thumblist_delete_item(pMainView->thumbs, deleted);
@@ -1516,10 +1450,9 @@ _on_slideshow_finished(void *data, Evas_Object *obj, void *event_info)
 	evas_object_smart_callback_del_full(ivug_ss_object_get(pMainView->ssHandle),
 	                                    "slideshow,finished", _on_slideshow_finished, pMainView);
 
-	if (pMainView->ssHandle) {
-		ivug_ss_delete(pMainView->ssHandle);
-		pMainView->ssHandle = NULL;
-	}
+	ivug_ss_delete(pMainView->ssHandle);
+	pMainView->ssHandle = NULL;
+
 
 #ifdef USE_THUMBLIST
 	if (pMainView->thumbs) {

@@ -169,7 +169,7 @@ Media_Data *ivug_alloc_mediadata_from_media_handle(media_handle media)
 			mdata->slide_type = SLIDE_TYPE_IMAGE;
 			mdata->filepath = strdup(mdata->fileurl);
 
-			Ivug_Media_Type mType;
+			Ivug_Media_Type mType = IV_MEDIA_TYPE_NORMAL;
 
 			ivug_db_get_media_type(media, &mType);
 
