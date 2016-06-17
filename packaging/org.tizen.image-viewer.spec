@@ -1,6 +1,6 @@
 Name:       org.tizen.image-viewer
 #VCS_FROM:   profile/mobile/apps/native/ug-image-viewer-efl#f225821739a754799e55ae4a9aa0423c60a284ae
-#RS_Ver:    20160616_1 
+#RS_Ver:    20160616_2 
 Summary:    image-viewer
 Version:    1.0.0
 Release:    1
