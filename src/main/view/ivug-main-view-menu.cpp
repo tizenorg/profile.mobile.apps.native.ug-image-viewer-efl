@@ -59,11 +59,6 @@
 #define ICON_NEAR_BY_PHONE		"icon.nearby.phone"
 #define ICON_NEAR_BY_UNKNOWN	"icon.nearby.unknown"
 
-
-struct st_temp {
-	int index;
-};
-
 static void
 ivug_notification_popup_create(Evas_Object * pParent, const char* text)
 {
@@ -2098,11 +2093,13 @@ static void _ivug_move_more_ctxpopup( Evas_Object *win, Evas_Object *ctxpopup)
 	Evas_Coord w, h;
 	int pos = -1;
 	elm_win_screen_size_get(win, NULL, NULL, &w, &h);
+
 	pos = elm_win_rotation_get(win);
+
 	switch (pos) {
 	case 0:
 	case 180:
-		evas_object_move(ctxpopup, 0, h);
+		evas_object_move(ctxpopup, w/2, h);
 		break;
 	case 90:
 	case 270:
@@ -2118,6 +2115,7 @@ static void __ivug_ctxpopup_hide_cb(void *data, Evas_Object *obj, void *ei)
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	IV_ASSERT(pMainView != NULL);
 
+
 	if (pMainView->ctx_popup) {
 		evas_object_del(pMainView->ctx_popup);
 		pMainView->ctx_popup = NULL;
@@ -2125,6 +2123,7 @@ static void __ivug_ctxpopup_hide_cb(void *data, Evas_Object *obj, void *ei)
 }
 
 static void __ivug_ctxpopup_rotate_cb(void *data, Evas_Object *obj, void *ei)
+
 {
 	IV_ASSERT(data != NULL);
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
@@ -2142,14 +2141,17 @@ static void __ivug_ctxpopup_del_cb(void *data, Evas *e, Evas_Object *obj, void *
 	Evas_Object *ctxpopup = obj;
 	IV_ASSERT(ctxpopup != NULL);
 
+
 	evas_object_smart_callback_del(ctxpopup, "dismissed",
 								   __ivug_ctxpopup_hide_cb);
 
 	evas_object_smart_callback_del(elm_object_top_widget_get(ctxpopup),
 								   "rotation,changed",
 								   __ivug_ctxpopup_rotate_cb);
+
 	evas_object_event_callback_del(ctxpopup, EVAS_CALLBACK_DEL,
 								   __ivug_ctxpopup_del_cb);
+
 }
 
 static int _ivug_ctxpopup_add_callbacks(void *data, Evas_Object *ctxpopup)
@@ -2167,6 +2169,7 @@ static int _ivug_ctxpopup_add_callbacks(void *data, Evas_Object *ctxpopup)
 	evas_object_smart_callback_add(elm_object_top_widget_get(ctxpopup),
 								   "rotation,changed",
 								   __ivug_ctxpopup_rotate_cb, data);
+
 	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_BACK, eext_ctxpopup_back_cb, NULL);
 	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_MORE, eext_ctxpopup_back_cb, NULL);
 
@@ -2180,12 +2183,6 @@ void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 
 	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
-#ifdef LISTPOPUP
-	Evas_Coord x;
-	Evas_Coord y;
-	Evas_Coord w;
-	Evas_Coord h;
-#endif
 
 	MSG_MAIN_HIGH("More clicked. Mode=%d", pMainView->mode);
 
@@ -2234,6 +2231,7 @@ void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_SLIDE_SHOW), NULL, _ivug_ctxpopup_slideshow_sel_cb, pMainView);
 		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_RENAME_IMAGE), NULL, _ivug_ctxpopup_rename_sel_cb, pMainView);
 	}
+	elm_ctxpopup_auto_hide_disabled_set(ctxpopup, EINA_TRUE);
 
 	_ivug_move_more_ctxpopup(gGetCurrentWindow(), ctxpopup);
 	evas_object_show(ctxpopup);
