@@ -515,22 +515,6 @@ static void _on_layout_resize(void *data, Evas_Object *obj, void *event_info)
 	int rot = gGetRotationDegree();
 	MSG_MAIN_HIGH("MainView resized geomtery XYWH(%d,%d,%d,%d) Rotate=%d", x, y, w, h, rot);
 
-	if (pMainView->ctx_popup) {	// when rotated context popup will disapper at EFL
-		if (ivug_listpopup_context_get_rotate_enable(pMainView->ctx_popup) == false) {
-			evas_object_del(pMainView->ctx_popup);
-			pMainView->ctx_popup = NULL;
-		} else {
-			Evas_Object *win = gGetCurrentWindow();
-			elm_win_screen_size_get(win, NULL, NULL, &w, &h);
-
-			if ((rot == 270) || (rot == 90)) {
-				ivug_listpopup_context_move(pMainView->ctx_popup, (h / 2), w);
-			} else {
-				ivug_listpopup_context_move(pMainView->ctx_popup, (w / 2), h);
-			}
-		}
-	}
-
 	if (pMainView->pSliderNew) {
 		MSG_HIGH("Inslide sn layout ");
 		ivug_slider_new_change_view_size(pMainView->pSliderNew, w, h);
