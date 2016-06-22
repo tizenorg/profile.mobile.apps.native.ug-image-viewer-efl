@@ -1038,7 +1038,6 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		Evas_Object *layout = ivug_main_view_object_get(ugd->main_view);
 		elm_object_part_content_set(ugd->base, "elm.swallow.content", layout);	//swallow
 
-		elm_win_resize_object_add(ugd->window, ugd->base);//chandan
 		PERF_CHECK_END(LVL1, "main_view_set_list");
 	}
 

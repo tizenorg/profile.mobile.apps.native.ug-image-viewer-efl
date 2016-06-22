@@ -471,7 +471,6 @@ ivug_name_view_create(Evas_Object *parent, ivug_name_mode mode)
 #endif
 
 	pNameView->popup = elm_popup_add(parent);
-	elm_popup_align_set(pNameView->popup, 0.5, 0.5);
 
 	elm_object_domain_translatable_part_text_set(pNameView->popup, "title,text", IVUG_TEXT_DOMAIN, IDS_RENAME);
 	/* Create view base layout */

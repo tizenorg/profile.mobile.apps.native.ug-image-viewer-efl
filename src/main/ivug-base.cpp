@@ -267,7 +267,7 @@ Evas_Object *create_layout(Evas_Object *parent, const char *edj, const char *gro
 	return layout;
 }
 
-static Evas_Object *create_fullview(Evas_Object *win, ug_data *ugd)
+static Evas_Object *create_fullview(Evas_Object *win)
 {
 	Evas_Object *base;
 
@@ -344,10 +344,11 @@ bool on_create( void *priv)
 	if (!conform)
 		return false;
 	evas_object_size_hint_weight_set(conform, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-	elm_object_signal_emit(conform, "elm,state,virtualkeypad,enable", "");
+	evas_object_size_hint_align_set(conform, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	elm_win_resize_object_add(win, conform);
 	evas_object_show(conform);
 	evas_object_show(win);
+	elm_win_conformant_set(win, EINA_TRUE);
 
 	PERF_CHECK_BEGIN(LVL1, "init context");
 	if (!ivug_context_init(win, conform)) {
@@ -357,7 +358,8 @@ bool on_create( void *priv)
 	PERF_CHECK_END(LVL1, "init context");
 	PERF_CHECK_BEGIN(LVL1, "creating base");
 
-	ugd->base = create_fullview(conform, ugd);
+	ugd->base = create_fullview(conform);
+	elm_object_content_set(conform, ugd->base);
 
 	PERF_CHECK_END(LVL1, "creating base");
 
