@@ -830,6 +830,8 @@ bool ivug_ss_resume(SlideShow *pSlideShow)
 
 	if (pSlideShow->ss_timer) {
 		ecore_timer_thaw(pSlideShow->ss_timer);
+	} else {
+		pSlideShow->ss_timer = ecore_timer_add(pSlideShow->ss_interval_time, _ivug_ss_on_slide_interval, pSlideShow);
 	}
 
 	pSlideShow->state = SLIDE_SHOW_RUNNING;
@@ -928,8 +930,10 @@ gl_slide_interval_radio_sel_cb(void *data, Evas_Object *obj, void *event_info)
 	ivug_config_set_interval_time(index + 1);
 	ob->pSlideshow->ss_interval_time = (double) ivug_config_get_slideshow_interval_time();
 
-	ecore_timer_del(ob->pSlideshow->ss_timer);
-	ob->pSlideshow->ss_timer = ecore_timer_add(ob->pSlideshow->ss_interval_time, _ivug_ss_on_slide_interval, ob->pSlideshow);
+	if (ob->pSlideshow->ss_timer) {
+		ecore_timer_del(ob->pSlideshow->ss_timer);
+		ob->pSlideshow->ss_timer = NULL;
+	}
 
 	if (ob->pSlideshow->popup) {
 		evas_object_del(ob->pSlideshow->popup);
