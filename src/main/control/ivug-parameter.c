@@ -312,16 +312,16 @@ static bool _data_print(app_control_h service, const char *key, void *user_data)
 	if (array == false)
 	{
 		app_control_get_extra_data(service, key, &value);
-		MSG_HIGH("  %s : %s", key, value);
+		MSG_MAIN_HIGH("  %s : %s", key, value);
 		free(value);
 	}
 	else
 	{
 		app_control_get_extra_data_array(service, key, &value_array, &array_len);
-		MSG_HIGH("  %s :", key);
+		MSG_MAIN_HIGH("  %s :", key);
 		for (i=0; i<array_len; i++)
 		{
-			MSG_HIGH(" %s", value_array[i]);
+			MSG_MAIN_HIGH(" %s", value_array[i]);
 		}
 		for (i=0; i<array_len; i++)
 		{
@@ -339,7 +339,7 @@ static void _print_app_control_data(app_control_h service)
 
 	if (APP_CONTROL_ERROR_NONE != ret)
 	{
-		MSG_HIGH("app_control_foreach_extra_data ERROR");
+		MSG_MAIN_HIGH("app_control_foreach_extra_data ERROR");
 	}
 }
 
@@ -457,15 +457,15 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 	ugd->ivug_param = NULL;
 
 	//print key and value.
-	MSG_HIGH("**********************************");
+	MSG_MAIN_HIGH("**********************************");
 	_print_app_control_data(service);
-	MSG_HIGH("**********************************");
+	MSG_MAIN_HIGH("**********************************");
 
 	//parsing param
 	ivug_parameter* data = (ivug_parameter*)calloc(1, sizeof(ivug_parameter));
 
 	if (data == NULL) {
-		MSG_HIGH("Cannot allocate memory");
+		MSG_MAIN_HIGH("Cannot allocate memory");
 		return ;
 	}
 
@@ -485,7 +485,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 
 		app_control_get_extra_data (service, IVUG_BUNDLE_KEY_VIEW_BY, &szViewBy);
 		if (szViewBy != NULL) {
-			MSG_HIGH("View By = %s", szViewBy);
+			MSG_MAIN_HIGH("View By = %s", szViewBy);
 
 			data->view_by = _get_view_by(szViewBy);
 
@@ -496,7 +496,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 				if (szTagName != NULL) {
 					tag_handle t_handle = ivug_db_get_tag_handle(szTagName);
 					if (t_handle == NULL) {
-						MSG_HIGH("View by Tag. but tag handle is NULL");
+						MSG_MAIN_HIGH("View by Tag. but tag handle is NULL");
 						ivug_param_delete(data);
 						return;
 					}
@@ -505,11 +505,11 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 
 					ivug_db_destroy_tag(t_handle);
 
-					MSG_HIGH("Tag name=%s", szTagName);
-					MSG_HIGH("Tag id=%d", data->tag_id);
+					MSG_MAIN_HIGH("Tag name=%s", szTagName);
+					MSG_MAIN_HIGH("Tag id=%d", data->tag_id);
 					_ivug_free(&szTagName);
 				} else {
-					MSG_HIGH("View by Tag. but Tagname is NULL");
+					MSG_MAIN_HIGH("View by Tag. but Tagname is NULL");
 
 					_ivug_free(&szViewBy);
 					ivug_param_delete(data);
@@ -518,7 +518,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 			}
 			_ivug_free(&szViewBy);
 		} else {
-			MSG_HIGH("View By is NULL");
+			MSG_MAIN_HIGH("View By is NULL");
 		}
 	}
 
@@ -529,11 +529,11 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		app_control_get_extra_data (service, IVUG_BUNDLE_KEY_VIEW_MODE, &szMode);
 		if (szMode != NULL) {
 			data->mode = _get_view_mode(data, szMode);
-			MSG_HIGH("View mode is %s(%d)", szMode, data->mode);
+			MSG_MAIN_HIGH("View mode is %s(%d)", szMode, data->mode);
 			_ivug_free(&szMode);
 		} else {
 			data->mode = IVUG_DEFAULT_MODE;
-			MSG_HIGH("View mode is NULL. Set Default(%d)", data->mode);
+			MSG_MAIN_HIGH("View mode is NULL. Set Default(%d)", data->mode);
 		}
 	}
 //parse path
@@ -549,7 +549,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 
 		for (i=0; i<array_length; i++)
 		{
-			MSG_HIGH("[%d]File path is %s", i, path_array[i]);
+			MSG_MAIN_HIGH("[%d]File path is %s", i, path_array[i]);
 			if (strncmp(IVUG_FILE_PREFIX, path_array[i], strlen(IVUG_FILE_PREFIX)) == 0) {
 				file_path = strdup(path_array[i] + strlen(IVUG_FILE_PREFIX));
 			} else {
@@ -566,6 +566,11 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 
 		free(path_array);
 		app_control_get_uri(service, &szFilePath);	// app gadget
+
+		//[TSAM-4648] temp Fix.. [ToDo]
+		if (szFilePath == NULL) {
+			app_control_get_extra_data (service, IVUG_BUNDLE_KEY_PATH, &szFilePath);
+		}
 
 		data->mode = IVUG_MODE_DISPLAY;
 		data->view_by = IVUG_VIEW_BY_FILE;
@@ -598,7 +603,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		} else {
 			data->filepath = strdup(szFilePath);
 		}
-		MSG_HIGH("Current File = %s", data->filepath);
+		MSG_MAIN_HIGH("Current File = %s", data->filepath);
 		_ivug_free(&szFilePath);
 	} else {
 		ivug_param_delete(data);
@@ -611,10 +616,10 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		&& ivug_is_web_uri(data->filepath) == false) {
 		media_handle file_handle = ivug_db_get_file_handle(data->filepath);
 		if (file_handle == NULL) {
-			MSG_HIGH("Current File = %s is not in DB", data->filepath);
+			MSG_MAIN_HIGH("Current File = %s is not in DB", data->filepath);
 			data->view_by = IVUG_VIEW_BY_FILE;
 		} else {
-			MSG_HIGH("Current File = %s is in DB", data->filepath);
+			MSG_MAIN_HIGH("Current File = %s is in DB", data->filepath);
 			ivug_db_destroy_file_handle(file_handle);
 		}
 	}
@@ -625,16 +630,16 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 	app_control_get_extra_data (service, IVUG_BUNDLE_KEY_INDEX, &val);
 	if (val) {
 		data->start_index = ivug_atoi(val);
-		MSG_HIGH("Slide Index = %d", data->start_index);
+		MSG_MAIN_HIGH("Slide Index = %d", data->start_index);
 		_ivug_free(&val);
 	} else {
 		if (data->view_by == IVUG_VIEW_BY_FOLDER) {		// when by foloder mode, if index is not exist. we cannot determin what image is show. so close applicationb
-			MSG_HIGH("IVUG_VIEW_BY_FOLDER but index was not set. Setas Invalid(%d)", IVUG_INVALID_INDEX);
+			MSG_MAIN_HIGH("IVUG_VIEW_BY_FOLDER but index was not set. Setas Invalid(%d)", IVUG_INVALID_INDEX);
 			data->start_index = IVUG_INVALID_INDEX;
 		} else {
 			data->start_index = IVUG_DEFAULT_INDEX;
 		}
-		MSG_HIGH("Slide Index is not set. Set as default : %d", data->start_index);
+		MSG_MAIN_HIGH("Slide Index is not set. Set as default : %d", data->start_index);
 	}
 
 /* Adding sort by option */
@@ -653,10 +658,10 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 	if (val && data->view_by != IVUG_VIEW_BY_ALL) {
 		gSetAlbumIndex(val);
 		data->album_id = uuid_getuuid(val);
-		MSG_HIGH("album_uuid is %s", uuid_getchar(data->album_id));
+		MSG_MAIN_HIGH("album_uuid is %s", uuid_getchar(data->album_id));
 	} else {
 		data->album_id = INVALID_UUID;
-		MSG_HIGH("Album UUID is NULL");
+		MSG_MAIN_HIGH("Album UUID is NULL");
 	}
 	if (val) {
 		_ivug_free(&val);
@@ -672,7 +677,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 
 	app_control_get_extra_data (service, IVUG_BUNDLE_KEY_VIEW_BY, &viewBy);
 	if (viewBy != NULL) {
-		MSG_HIGH("View By is = %s", viewBy);
+		MSG_MAIN_HIGH("View By is = %s", viewBy);
 		data->view_by = _get_view_by(viewBy);
 	}
 
@@ -692,7 +697,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 
 		if (data->album_id == INVALID_UUID) {
 			if (m_handle == NULL) {
-				MSG_HIGH("View by Folder. but media handle is NULL");
+				MSG_MAIN_HIGH("View by Folder. but media handle is NULL");
 				//ivug_param_delete(data);
 				//return NULL;
 				data->view_by = IVUG_VIEW_BY_DIRECTORY;	// check manually
@@ -701,7 +706,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 
 				gSetAlbumIndex(uuid_getchar(data->album_id));
 
-				MSG_HIGH("Get Album ID(%s) from file %s", uuid_getchar(data->album_id), data->filepath);
+				MSG_MAIN_HIGH("Get Album ID(%s) from file %s", uuid_getchar(data->album_id), data->filepath);
 			}
 		}
 		if (m_handle) {
@@ -713,10 +718,10 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 	app_control_get_extra_data (service, IVUG_BUNDLE_KEY_MEDIA_TYPE, &val);
 	if (val != NULL) {
 		data->media_type = _get_media_type(val);
-		MSG_HIGH("Media Type=%s(%d)", val, data->media_type);
+		MSG_MAIN_HIGH("Media Type=%s(%d)", val, data->media_type);
 		_ivug_free(&val);
 	} else {
-		MSG_HIGH("Media type is not specified.");
+		MSG_MAIN_HIGH("Media type is not specified.");
 	}
 
 	long long int m = 0;
@@ -727,10 +732,10 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		eina_convert_atod(val, strlen(val), &m, &e);
 		data->max_longitude = ldexp((double)m, e);
 
-		MSG_HIGH("Max Longitude =%f", data->max_longitude);
+		MSG_MAIN_HIGH("Max Longitude =%f", data->max_longitude);
 		_ivug_free(&val);
 	} else {
-		MSG_HIGH("Max Longitude is not specified.");
+		MSG_MAIN_HIGH("Max Longitude is not specified.");
 	}
 
 	app_control_get_extra_data (service, IVUG_BUNDLE_KEY_MIN_LONGITUDE, &val);
@@ -738,10 +743,10 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		eina_convert_atod(val, strlen(val), &m, &e);
 		data->min_longitude = ldexp((double)m, e);
 
-		MSG_HIGH("Min Longitude =%f", data->min_longitude);
+		MSG_MAIN_HIGH("Min Longitude =%f", data->min_longitude);
 		_ivug_free(&val);
 	} else {
-		MSG_HIGH("Min Longitude is not specified.");
+		MSG_MAIN_HIGH("Min Longitude is not specified.");
 	}
 
 /*
@@ -756,10 +761,10 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		eina_convert_atod(val, strlen(val), &m, &e);
 		data->max_latitude = ldexp((double)m, e);
 
-		MSG_HIGH("Max Latitude =%f", data->max_latitude);
+		MSG_MAIN_HIGH("Max Latitude =%f", data->max_latitude);
 		_ivug_free(&val);
 	} else {
-		MSG_HIGH("Max Latitude is not specified.");
+		MSG_MAIN_HIGH("Max Latitude is not specified.");
 	}
 
 	app_control_get_extra_data (service, IVUG_BUNDLE_KEY_MIN_LATITUDE, &val);
@@ -767,29 +772,29 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		eina_convert_atod(val, strlen(val), &m, &e);
 		data->min_latitude = ldexp((double)m, e);
 
-		MSG_HIGH("Min Latitude =%f", data->min_latitude);
+		MSG_MAIN_HIGH("Min Latitude =%f", data->min_latitude);
 		_ivug_free(&val);
 	} else {
-		MSG_HIGH("Min Latitude is not specified.");
+		MSG_MAIN_HIGH("Min Latitude is not specified.");
 	}
 
 	app_control_get_extra_data (service, IVUG_BUNDLE_KEY_TIMELINE_START, &val);
 	if (val != NULL) {
 		data->timeline_start = ivug_atoi(val);
-		MSG_HIGH("time line start = %ld", data->timeline_start);
+		MSG_MAIN_HIGH("time line start = %ld", data->timeline_start);
 		_ivug_free(&val);
 	}
 
 	app_control_get_extra_data (service, IVUG_BUNDLE_KEY_TIMELINE_END, &val);
 	if (val != NULL) {
 		data->timeline_end = ivug_atoi(val);
-		MSG_HIGH("time line end = %ld", data->timeline_end);
+		MSG_MAIN_HIGH("time line end = %ld", data->timeline_end);
 		_ivug_free(&val);
 	}
 
 	app_control_get_extra_data (service, IVUG_BUNDLE_KEY_SETAS_TYPE, &val);
 	if (val) {
-		MSG_HIGH("SetAs UG Type=%s", val);
+		MSG_MAIN_HIGH("SetAs UG Type=%s", val);
 		data->setas_type = _get_setas_type(val);
 
 		char* resolution = NULL;
@@ -797,7 +802,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		app_control_get_extra_data (service, IVUG_BUNDLE_KEY_RESOLUTION, &resolution);
 		if (resolution) {
 			sscanf(resolution, "%5dx%5d", &(data->width), &(data->height));
-			MSG_HIGH("Rectangle width = %d, height = %d", data->width, data->height);
+			MSG_MAIN_HIGH("Rectangle width = %d, height = %d", data->width, data->height);
 			if (data->width == 0 || data->height == 0) {
 				MSG_IVUG_ERROR("Resolution is invalid");
 				_ivug_free(&resolution);
@@ -809,7 +814,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 			// WH(0,0) means initial scissorbox size is same as image size.
 			data->width = 0;
 			data->height = 0;
-			MSG_HIGH("Rectangle ratio is not set. Set as default : %dx%d", data->width, data->height);
+			MSG_MAIN_HIGH("Rectangle ratio is not set. Set as default : %dx%d", data->width, data->height);
 		}
 
 		data->bRatioFix = false;
@@ -817,7 +822,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 
 		app_control_get_extra_data (service, IVUG_BUNDLE_KEY_FIXED_RATIO, &bRatioFix);
 		if (bRatioFix) {
-			MSG_HIGH("Fixed ratio=%s", bRatioFix);
+			MSG_MAIN_HIGH("Fixed ratio=%s", bRatioFix);
 			if (strcmp(bRatioFix, "TRUE") == 0) {
 				data->bRatioFix = true;
 			}
@@ -829,7 +834,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		char* crop_mode = NULL;
 		app_control_get_extra_data (service, IVUG_BUNDLE_KEY_CROP_MODE, &crop_mode);
 		if (crop_mode) {
-			MSG_HIGH("Crop mode=%s", crop_mode);
+			MSG_MAIN_HIGH("Crop mode=%s", crop_mode);
 			if (strcmp(crop_mode, IVUG_BUNDLE_VALUE_CROP_MODE_FIT_TO_SCREEN) == 0) {
 				int lcd_x = 0;
 				int lcd_y = 0;
@@ -856,7 +861,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 	data->footsteps = false;	/* default */
 	app_control_get_extra_data (service, IVUG_BUNDLE_KEY_FOOTSTEPS, &val);
 	if (val) {
-		MSG_HIGH("Footsteps=%s", val);
+		MSG_MAIN_HIGH("Footsteps=%s", val);
 		if (strcmp(val, "TRUE") == 0) {
 			data->footsteps = true;
 		}
@@ -934,7 +939,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		}
 
 		data->total_selected = index_len + index_len_fav ;
-		MSG_HIGH(" total count of images is %d",data->total_selected);
+		MSG_MAIN_HIGH(" total count of images is %d",data->total_selected);
 		free(index_list);
 	}
 	ugd->ivug_param = data;
@@ -951,45 +956,45 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		ugd->ivug_param->height = 300;
 		ugd->ivug_param->bRatioFix = true;
 #endif
-		MSG_HIGH("UG types=%d", ugd->ivug_param->setas_type);
+		MSG_MAIN_HIGH("UG types=%d", ugd->ivug_param->setas_type);
 
 		switch (ugd->ivug_param->setas_type) {
 		case IVUG_SET_AS_UG_TYPE_CALLER_ID:
-			MSG_HIGH("IVUG_SET_AS_UG_TYPE_CALLER_ID");
+			MSG_MAIN_HIGH("IVUG_SET_AS_UG_TYPE_CALLER_ID");
 			return;
 			break;
 
 		case IVUG_SET_AS_UG_TYPE_VIDEO_CALL_ID:
-			MSG_HIGH("IVUG_SET_AS_UG_TYPE_VIDEO_CALL_ID");
+			MSG_MAIN_HIGH("IVUG_SET_AS_UG_TYPE_VIDEO_CALL_ID");
 			return;
 			break;
 
 		case IVUG_SET_AS_UG_TYPE_WALLPAPER:
-			MSG_HIGH("IVUG_SET_AS_UG_TYPE_WALLPAPER");
+			MSG_MAIN_HIGH("IVUG_SET_AS_UG_TYPE_WALLPAPER");
 			return;
 			break;
 
 		case IVUG_SET_AS_UG_TYPE_LOCKSCREEN:
-			MSG_HIGH("IVUG_SET_AS_UG_TYPE_LOCKSCREEN");
+			MSG_MAIN_HIGH("IVUG_SET_AS_UG_TYPE_LOCKSCREEN");
 			return;
 			break;
 
 		case IVUG_SET_AS_UG_TYPE_WALLPAPER_N_LOCKSCREEN:
-			MSG_HIGH("IVUG_SET_AS_UG_TYPE_WALLPAPER_N_LOCKSCREEN");
+			MSG_MAIN_HIGH("IVUG_SET_AS_UG_TYPE_WALLPAPER_N_LOCKSCREEN");
 			return;
 			break;
 
 		case IVUG_SET_AS_UG_TYPE_WALLPAPER_CROP:
-			MSG_HIGH("IVUG_SET_AS_UG_TYPE_WALLPAPER_CROP");
+			MSG_MAIN_HIGH("IVUG_SET_AS_UG_TYPE_WALLPAPER_CROP");
 			return;
 			break;
 
 		case IVUG_SET_AS_UG_TYPE_CROP:
-			MSG_HIGH("IVUG_SET_AS_UG_TYPE_CROP");
+			MSG_MAIN_HIGH("IVUG_SET_AS_UG_TYPE_CROP");
 			return;
 			break;
 		default:
-			MSG_HIGH("Invalid SetAS UG Type:%d", ugd->ivug_param->setas_type);
+			MSG_MAIN_HIGH("Invalid SetAS UG Type:%d", ugd->ivug_param->setas_type);
 			return;
 
 		}
@@ -1047,7 +1052,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 
 	evas_object_geometry_get(ugd->base, &ux, &uy, &uw, &uh);
 
-	MSG_HIGH("Image Viewer : %s Base(0x%08x) Geometry(%d,%d,%d,%d)", __func__, ugd->base, ux, uy, uw, uh);
+	MSG_MAIN_HIGH("Image Viewer : %s Base(0x%08x) Geometry(%d,%d,%d,%d)", __func__, ugd->base, ux, uy, uw, uh);
 
 	evas_object_event_callback_add(ugd->base, EVAS_CALLBACK_DEL, _on_base_deleted, ugd);
 
