@@ -249,7 +249,7 @@ void ivug_language_mgr_object_item_text_ID_set(language_handle_t handle, Elm_Obj
 
 	G_LIST_FOREACH(mgr->obj_items, l, data)
 	{
-		if (data->obj_item == object_item)
+		if (data->obj_item && data->obj_item == object_item)
 		{
 			MSG_MED("set ID: %s", text_ID);
 			data->text_id = text_ID;

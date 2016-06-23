@@ -277,8 +277,10 @@ static Evas_Object *create_fullview(Evas_Object *win)
 	if (base == NULL) {
 		MSG_IMAGEVIEW_HIGH("Cannot set layout. EDJ=%s Group=%s", edj_path, "ivug_base");
 		free(edj_path);
+		free(EDJ_PATH);
 		return NULL;
 	}
+	free(EDJ_PATH);
 	free(edj_path);
 
 	evas_object_name_set(base, "Base layout");

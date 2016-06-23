@@ -547,11 +547,9 @@ static bool _destory_slideshow_and_ug(Ivug_MainView *pMainView,
 //	ivug_allow_lcd_off();
 	/*from gallery ablum*/
 	if (bMmc_out) {
-		if (pMainView->ssHandle) {
-			MSG_MAIN_HIGH("image viewer end cause slide show ended");
-			ivug_ss_delete(pMainView->ssHandle);
-			pMainView->ssHandle = NULL;
-		}
+		MSG_MAIN_HIGH("image viewer end cause slide show ended");
+		ivug_ss_delete(pMainView->ssHandle);
+		pMainView->ssHandle = NULL;
 
 		DESTROY_ME();
 		return true;
