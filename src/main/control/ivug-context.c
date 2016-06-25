@@ -548,13 +548,12 @@ void ivug_context_destroy_me(const char *file, int line)
 
 		MSG_IMAGEVIEW_HIGH("Restore Indicator(%s,%s,%s)", szMode[Context->indi_mode], szOpacity[Context->indi_o_mode], szOverlap[Context->oMode]);
 
-		//ug_destroy_me(Context->ug);
+		ui_app_exit();
 	}
 	else
 	{
 		MSG_IMAGEVIEW_WARN("Context is NULL. from L(%d) %s", line, fname);
 	}
-	elm_exit();
 }
 
 

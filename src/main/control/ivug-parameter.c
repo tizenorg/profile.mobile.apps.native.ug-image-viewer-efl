@@ -1030,7 +1030,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 			// Need popup?
 			if (ugd->ivug_param->mode != IVUG_MODE_HIDDEN) {
 				ugd->bError = true;
-				ugd->bErrMsg = strdup(IDS_UNABLE_TO_OPEN_FILE);
+				notification_status_message_post(GET_STR(IDS_UNABLE_TO_OPEN_FILE));
 				goto ON_CREATE_ERROR;
 			}
 		}
@@ -1060,15 +1060,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 	return;
 
 ON_CREATE_ERROR:
-	if (ugd->main_view) {
-		ivug_main_view_destroy(ugd->main_view);
-		ugd->main_view = NULL;
-	}
-
-	if (ugd->base == NULL) {
-		ugd->base = elm_layout_add(ugd->window);
-		elm_layout_theme_set(ugd->base, "layout", "application", "default");
-	}
+	ui_app_exit();
 
 	return;
 }

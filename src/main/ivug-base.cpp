@@ -609,7 +609,7 @@ void on_resume(void *priv)
 
 void on_destroy(void *priv)
 {
-	MSG_MAIN_HIGH("Image Viewer : %s(0x%08x) data=0x%08x", __func__, on_destroy, priv);
+	MSG_IMAGEVIEW_HIGH("Image Viewer : %s(0x%08x) data=0x%08x", __func__, on_destroy, priv);
 
 	PERF_CHECK_BEGIN(LVL0, "On Destroy");
 
@@ -657,16 +657,21 @@ void on_destroy(void *priv)
 		MSG_IMAGEVIEW_ERROR("ivug_main_deinit failed");
 	}
 	PERF_CHECK_END(LVL1, "Context");
-
 	if (ugd->base) {
 		PERF_CHECK_BEGIN(LVL1, "Base layout");
+		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_MOUSE_DOWN, _on_receive_mouse_down);
+		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_RESIZE, _on_base_resize);
+		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_MOVE, _on_base_move);
+		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_SHOW, _on_base_show);
+		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_HIDE, _on_base_hide);
 		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_DEL, _on_base_deleted);
+
 		evas_object_del(ugd->base);
 		ugd->base = NULL;
 		PERF_CHECK_END(LVL1, "Base layout");
 	}
 
-	MSG_MAIN_HIGH("Destroyed ug");
+	MSG_IMAGEVIEW_HIGH("Destroyed ug");
 
 	PERF_CHECK_END(LVL0, "On Destroy");
 }
