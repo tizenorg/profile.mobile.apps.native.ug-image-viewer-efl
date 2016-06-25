@@ -287,7 +287,7 @@ static inline char* full_path(const char *str1, const char *str2) {
 #define IDS_EDIT			"IDS_COM_BODY_EDIT"
 #define IDS_ENTER_NAME		"IDS_COM_BODY_ENTER_NAME"
 #define IDS_ERROR			"IDS_COM_POP_ERROR"
-#define IDS_FAILED 			"IDS_COM_POP_FAILED"
+#define IDS_FAILED 			"IDS_EMAIL_BODY_FAILED_M_STATUS"
 #define IDS_FAVOURITE		"IDS_COM_BODY_FAVOURITE"
 #define IDS_FAVOURITES		"IDS_COM_BODY_FAVOURITES"
 #define IDS_LOADING 		"IDS_COM_BODY_LOADING"
