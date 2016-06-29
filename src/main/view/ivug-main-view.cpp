@@ -857,22 +857,19 @@ _on_slideshow_finished(void *data, Evas_Object *obj, void *event_info)
 	Media_Item * item = NULL;
 	pMainView->isSliding = false;
 
-	if (pMainView->ssHandle) {
 
-		item = ivug_ss_item_get(pMainView->ssHandle);
-		ivug_ss_delete(pMainView->ssHandle);
-		pMainView->ssHandle = NULL;
+	item = ivug_ss_item_get(pMainView->ssHandle);
+	ivug_ss_delete(pMainView->ssHandle);
+	pMainView->ssHandle = NULL;
 
-		if (gGetDestroying() == true) {
-			MSG_MAIN_WARN("ug is destroying");
-			return;
-		}
+	if (gGetDestroying() == true) {
+		MSG_MAIN_WARN("ug is destroying");
+		return;
+	}
 
-		if (item) {
-			ivug_medialist_set_current_item(pMainView->mList, item);
-			ivug_main_view_start(pMainView, NULL);
-//			ivug_slider_new_move_item(pMainView->pSliderNew, item);
-		}
+	if (item) {
+		ivug_medialist_set_current_item(pMainView->mList, item);
+		ivug_main_view_start(pMainView, NULL);
 	}
 
 #ifdef USE_THUMBLIST
