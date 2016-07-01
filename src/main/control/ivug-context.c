@@ -123,20 +123,7 @@ int gGetScreenHeight()
 	return ugContext->win_h;
 
 }
-#if 0
-ui_gadget_h
-gGetUGHandle(void)
-{
-	AppData *ugContext;
-	ugContext = eina_list_data_get(ContextList);
 
-	IV_ASSERT(ugContext != NULL);
-
-	MSG_IMAGEVIEW_HIGH("Get ug handle = 0x%08x", ugContext->ug);
-
-	return ugContext->ug;
-}
-#endif
 Evas_Object *
 gGetCurrentWindow(void)
 {
@@ -218,19 +205,6 @@ const char* gGetAlbumIndex()
 
 	return ugContext->ALBUM_INDEX;
 }
-
-#if 0
-Evas_Object *gGetParentLayout()
-{
-	AppData *ugContext;
-	ugContext = eina_list_data_get(ContextList);
-
-	IV_ASSERT(ugContext != NULL);
-
-	return ugContext->parent_layout;
-
-}
-#endif
 
 bool gGetDestroying()
 {

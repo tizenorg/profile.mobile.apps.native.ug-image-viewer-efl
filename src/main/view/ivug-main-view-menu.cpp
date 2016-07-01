@@ -71,21 +71,7 @@ ivug_notification_popup_create(Evas_Object * pParent, const char* text)
 	elm_popup_orient_set(pPopup, ELM_POPUP_ORIENT_BOTTOM);
 	evas_object_show(pPopup);
 }
-#if 0
-static void
-_on_ext_ug_destroy_cb(ui_gadget_h ug, void *priv)
-{
-	IV_ASSERT(ug != NULL);
 
-	Ivug_MainView *pMainView = (Ivug_MainView *)priv;
-
-	MSG_IMAGEVIEW_HIGH("Extern UG destroyed. ug=0x%08x", ug);
-
-	pMainView->ext_ug = NULL;
-
-	ivug_main_view_set_hide_timer(pMainView);
-}
-#endif
 static Eina_Bool _on_back_timer_expired(void *data)
 {
 	ivug_retv_if(!data, ECORE_CALLBACK_CANCEL);
@@ -214,112 +200,6 @@ static void _ivug_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, void *ev
 	ivug_medialist_set_current_item(pMainView->mList, mitem);
 	ivug_slider_new_update_list(pMainView->pSliderNew, pMainView->mList);
 }
-#if 0
-static void _setas_trans_finished(void *data, Evas_Object *obj, void *event_info)
-{
-	MSG_MAIN_HIGH("Setas transition is finished");
-	evas_object_smart_callback_del(obj, "transition,finished", _setas_trans_finished);
-
-	int lcd_x = 0;
-	int lcd_y = 0;
-	int lcd_w = 0;
-	int lcd_h = 0;
-	int rot = 0;
-
-	evas_object_geometry_get((Evas_Object *)ug_get_window(), &lcd_x, &lcd_y, &lcd_w, &lcd_h);
-	rot = gGetRotationDegree();
-	if (rot == 90 || rot == 270) {
-		int temp = lcd_w;
-		lcd_w = lcd_h;
-		lcd_h = temp;
-	}
-}
-
-static int
-_on_addhome_result_cb(int ret, void *data)
-{
-	return 0;
-}
-
-
-void _on_setas_selected(void *data, Evas_Object *obj, void *event_info)
-{
-	IV_ASSERT(data != NULL);
-
-	Ivug_MainView *pMainView = (Ivug_MainView *)data;
-
-	Ivug_ListPopup_Item *item = (Ivug_ListPopup_Item *)event_info;
-
-	const char *label = ivug_listpopup_item_get_text(item);
-
-	if (label == NULL) {
-		MSG_MAIN_ERROR("label is NULL");
-		evas_object_del(pMainView->ctx_popup2);
-		pMainView->ctx_popup2 = NULL;
-		ivug_main_view_set_hide_timer(pMainView);
-		return;
-	}
-	MSG_MAIN_HIGH("text(%s) is clicked", label);
-
-	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
-	Media_Data *mdata = ivug_medialist_get_data(mitem);
-	if (mdata == NULL) {
-		MSG_MAIN_ERROR("sd is NULL");
-		evas_object_del(pMainView->ctx_popup2);
-		pMainView->ctx_popup2 = NULL;
-		ivug_main_view_set_hide_timer(pMainView);
-		return;
-	}
-
-	if (strncmp(label, IDS_CALLER_IMAGE, strlen(label)) == 0) {
-		pMainView->ext_ug = ivug_ext_launch_contact(mdata->filepath, _on_ext_ug_destroy_cb, data);
-	} else if (strncmp(label, IDS_DYNAMIC_BOX, strlen(label)) == 0) {
-		char str[IVUG_MAX_FILE_PATH_LEN + SHORTCUT_PREFIX_LEN];
-		snprintf(str, IVUG_MAX_FILE_PATH_LEN + SHORTCUT_PREFIX_LEN,
-		         SHORTCUT_PREFIX"%s", mdata->fileurl);
-
-		shortcut_add_to_home(mdata->fileurl,
-		                     LAUNCH_BY_APP,
-		                     str,
-		                     mdata->thumbnail_path,
-		                     1, //allow duplicate
-		                     _on_addhome_result_cb, NULL);
-	}
-
-	evas_object_del(pMainView->ctx_popup2);
-	pMainView->ctx_popup2 = NULL;
-}
-
-
-void _on_addtag_btn_selected(void *data, Evas_Object *obj, void *event_info)
-{
-	Ivug_MainView *pMainView = (Ivug_MainView *)data;
-	IV_ASSERT(pMainView != NULL);
-	int nIndex = (int)event_info;
-
-	if (nIndex == 1) {
-		pMainView->pNameView = ivug_name_view_create(pMainView->layout, NAME_VIEW_MODE_SINGLE_LINE);
-		IV_ASSERT(pMainView->pNameView != NULL);
-
-		ivug_name_view_set_title(pMainView->pNameView, IDS_CREATE_TAG);
-		ivug_name_view_set_max_length(pMainView->pNameView, MAX_BYTE_LEN);
-		ivug_name_view_set_guide_text(pMainView->pNameView, IDS_ENTER_TAG_NAME);
-
-		ivug_name_view_set_response_callback(pMainView->pNameView, _on_add_tag_view_response, (void*)pMainView);
-
-		Evas_Object *layout = ivug_name_view_object_get(pMainView->pNameView);
-
-		pMainView->navi_it = elm_naviframe_item_push(pMainView->navi_bar, NULL, NULL, NULL, layout, NULL);
-
-		elm_naviframe_item_title_enabled_set(pMainView->navi_it, EINA_FALSE, EINA_FALSE);
-		elm_object_item_signal_emit(pMainView->navi_it, "elm,state,toolbar,close", "");
-
-		ivug_name_view_set_focus(pMainView->pNameView);
-	}
-
-	evas_object_del(obj);
-}
-#endif
 
 void *ivug_listpopup_item_get_data(Ivug_ListPopup_Item *item)
 {
@@ -516,38 +396,6 @@ static void _on_save_view_response(Ivug_NameView *pView, ivug_name_response resp
 
 	ivug_main_view_set_hide_timer(pMainView);
 }
-
-#if 0
-void _on_save_btn_selected(void *data, Evas_Object *obj, void *event_info)
-{
-	Ivug_MainView *pMainView = (Ivug_MainView *)data;
-	IV_ASSERT(pMainView != NULL);
-	int nIndex = (int)event_info;
-
-	if (nIndex == 1) {
-		pMainView->pNameView = ivug_name_view_create(pMainView->layout, NAME_VIEW_MODE_SINGLE_LINE);
-		IV_ASSERT(pMainView->pNameView != NULL);
-
-		ivug_name_view_set_title(pMainView->pNameView, IDS_CREATE_ALBUM);
-		ivug_name_view_set_max_length(pMainView->pNameView, MAX_BYTE_LEN);
-		ivug_name_view_set_guide_text(pMainView->pNameView, IDS_ENTER_NAME);
-		ivug_name_view_set_filter_text(pMainView->pNameView, INVALID_FILENAME_CHAR);
-
-		ivug_name_view_set_response_callback(pMainView->pNameView, _on_save_view_response, (void*)pMainView);
-
-		Evas_Object *layout = ivug_name_view_object_get(pMainView->pNameView);
-
-		pMainView->navi_it = elm_naviframe_item_push(pMainView->navi_bar, NULL, NULL, NULL, layout, NULL);
-
-		elm_naviframe_item_title_enabled_set(pMainView->navi_it, EINA_FALSE, EINA_FALSE);
-		elm_object_item_signal_emit(pMainView->navi_it, "elm,state,toolbar,close", "");
-
-		ivug_name_view_set_focus(pMainView->pNameView);
-	}
-
-	evas_object_del(obj);
-}
-#endif
 
 void _on_save_selected(void *data, Evas_Object *obj, void *event_info)
 {
@@ -761,39 +609,6 @@ _on_delete_selected(void *data, Evas_Object *obj, void *event_info)
 	ivug_main_view_start(pMainView, NULL);
 }
 
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
-// Button handlers
-//
-#if 0
-static void _dismissed_cb(void *data, Evas_Object *obj, void *event_info)
-{
-	Ivug_MainView *pMainView = (Ivug_MainView *)data;
-	//evas_object_del(obj);
-	ivug_main_view_set_hide_timer(pMainView);
-
-	edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,enable,toolbtn", "user");
-
-	if (pMainView->ctx_popup) {
-		MSG_MAIN_HIGH("Removing CtxPopup(0x%08x)", pMainView->ctx_popup);
-		evas_object_del(pMainView->ctx_popup);
-		pMainView->ctx_popup = NULL;
-	} else  if (pMainView->ctx_popup2) {
-		MSG_MAIN_HIGH("Removing CtxPopup2(0x%08x)", pMainView->ctx_popup2);
-		evas_object_del(pMainView->ctx_popup2);
-		pMainView->ctx_popup2 = NULL;
-	} else  if (pMainView->popup) {
-		MSG_MAIN_HIGH("Removing Popup(0x%08x)", pMainView->popup);
-		evas_object_del(pMainView->popup);
-		pMainView->popup = NULL;
-	} else {
-		MSG_MAIN_HIGH("Removing Popup Object(0x%08x)", obj);
-		evas_object_del(obj);
-	}
-
-}
-#endif
 void _on_remove_main_view_ui(Ivug_MainView *pMainView)
 {
 	IV_ASSERT(pMainView != NULL);

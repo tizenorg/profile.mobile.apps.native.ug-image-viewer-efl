@@ -63,10 +63,6 @@ gGetSystemTheme(void);
 int
 gGetRotationDegree(void);
 
-#if 0
-ui_gadget_h
-gGetUGHandle(void);
-#endif
 Evas_Object *
 gGetCurrentWindow(void);
 
@@ -97,9 +93,6 @@ gSetServiceHandle(app_control_h service);
 bool gGetDestroying();
 
 void gSetDestroying(bool isDestroying);
-#if 0
-Evas_Object *gGetParentLayout();
-#endif
 #ifdef __cplusplus
 }
 #endif

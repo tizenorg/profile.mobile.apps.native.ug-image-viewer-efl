@@ -977,46 +977,7 @@ static Eina_Bool _on_hide_timer_expired(void *data)
 
 	return ECORE_CALLBACK_CANCEL;
 }
-#if 0
-static const char *_getIvugMode(ivug_mode mode)
-{
-	static const char *szMode[] = {
-		"IVUG_MODE_INVAILD",
-		"IVUG_MODE_NORMAL",
-		"IVUG_MODE_SINGLE",
-		"IVUG_MODE_DISPLAY",
-		"IVUG_MODE_SAVE",
-		"IVUG_MODE_FILE",
-		"IVUG_MODE_CAMERA",
-		"IVUG_MODE_SETAS",
-		"IVUG_MODE_SLIDESHOW",
-		"IVUG_MODE_SELECT",
-	};
 
-	return szMode[mode];
-
-}
-
-static const char *_getIvugViewBy(ivug_view_by view_by)
-{
-	static const char *szViewBy[] = {
-		"IVUG_VIEW_BY_INVAILD",
-		"IVUG_VIEW_BY_FILE",
-		"IVUG_VIEW_BY_ALL",
-		"IVUG_VIEW_BY_HIDDEN_ALL",
-		"IVUG_VIEW_BY_FAVORITES",
-		"IVUG_VIEW_BY_TAG",
-		"IVUG_VIEW_BY_FOLDER",
-		"IVUG_VIEW_BY_HIDDEN_FOLDER",
-		"IVUG_VIEW_BY_PLACES",
-		"IVUG_VIEW_BY_TIMELINE",
-		"IVUG_VIEW_BY_DIRECTORY",
-	};
-
-
-	return szViewBy[view_by];
-}
-#endif
 static inline void
 _naviframe_back_cb(void *data, Evas_Object *obj, void *event_info)
 {

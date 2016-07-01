@@ -55,47 +55,16 @@ extern "C" {
 
 void FreeUGData(ug_data *ug);
 
-
-//void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h service, void *priv);
 bool on_create(void *priv);
-#if 0
-void on_start(ui_gadget_h ug, app_control_h service, void *priv);
-#endif
+
 void on_pause(void *priv);
 
 void on_resume(void *priv);
 
 Evas_Object *create_layout(Evas_Object *parent, const char *edj, const char *group);
 
-
-/*
-
-*/
-#if 0
-void on_message(ui_gadget_h ug, app_control_h msg, app_control_h service, void *priv);
-#endif
-
-/*
-
-*/
-#if 0
-void on_event(ui_gadget_h ug, enum ug_event event, app_control_h service, void *priv);
-#endif
-/*
-
-*/
 void _language_changed_cb(void *user_data);
 
-/*
-
-*/
-#if 0
-void on_destroying(app_control_h service, void *priv);
-#endif
-
-/*
-
-*/
 void on_destroy(void *priv);
 
 

@@ -164,48 +164,7 @@ static void  _ivug_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, void *e
 	DESTROY_ME();
 
 }
-#if 0
-static void _ivug_setas_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, void *event_info)
-{
-	char *path = (char *)event_info;
 
-	MSG_MAIN_HIGH("_ivug_setas_crop_view_ok_clicked_cb path = %s", path);
-
-	evas_object_smart_callback_del(obj, "ok,clicked", _ivug_setas_crop_view_ok_clicked_cb);
-
-	// do not insert to db
-
-	int setas_data = (int)evas_object_data_get(obj, "setas_type");
-	ivug_set_screen_type type = (ivug_set_screen_type)setas_data;
-
-	const char* homescreen_path = IVUG_HOME_SCREEN_PATH;
-	const char* lockscreen_path = IVUG_LOCK_SCREEN_PATH;
-
-	if (type == IVUG_CTRLBAR_SET_SCREEN_HOME) {
-		ivug_copy_file(path, homescreen_path);
-
-		_send_result("homescreen_path", homescreen_path, NULL, NULL);
-	} else if (type == IVUG_CTRLBAR_SET_SCREEN_LOCK) {
-		ivug_copy_file(path, lockscreen_path);
-
-		_send_result("lockscreen_path", lockscreen_path, NULL, NULL);
-	} else if (type == IVUG_CTRLBAR_SET_SCREEN_BOTH) {
-		ivug_copy_file(path, homescreen_path);
-		ivug_config_set_homescreen_image(homescreen_path);
-		ivug_copy_file(path, lockscreen_path);
-
-		_send_result("homescreen_path", homescreen_path, "lockscreen_path", lockscreen_path);
-	}
-
-	MSG_HIGH("Start destroy ug");
-
-//	ivug_set_indicator_overlap_mode(false);
-//	ug_destroy_me(gGetUGHandle());
-	DESTROY_ME();
-
-}
-
-#endif
 static void _ivug_crop_view_cancel_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	//ivug_crop_ug_destroy((IvugCropUG *)data);

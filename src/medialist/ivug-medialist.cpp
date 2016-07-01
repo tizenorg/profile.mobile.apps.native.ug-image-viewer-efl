@@ -407,27 +407,6 @@ static int _sort_cb(const void *d1, const void *d2)
 	return (rand() % 4 - 2) ;
 }
 
-#if 0
-static Media_Item *_find_item(Media_List *mList, int index)
-{
-	IV_ASSERT(mList != NULL);
-	_Media_List *_mList = (_Media_List *)mList;
-
-	Eina_List *l;
-	void *data;
-
-	EINA_LIST_FOREACH(_mList->header, l, data) {
-		Media_Data *mdata = (Media_Data *)data;
-
-		if (mdata->index == index) {
-			return (Media_Item *)l;
-		}
-	}
-
-	return NULL;
-}
-#endif
-
 #ifdef DEBUG_DUMP_LIST
 static void _print_shuffle(void *data)
 {
@@ -1127,57 +1106,6 @@ Media_Item *ivug_medialist_get_random_item(Media_List *mList)
 		return NULL;
 	}
 }
-
-#if 0
-Media_Item *ivug_medialist_get_shuffle_item(Media_List *mList, Media_Item *item)
-{
-	IV_ASSERT(mList != NULL);
-	_Media_List *_mList = (_Media_List *)mList;
-
-	Media_Data *pData = (Media_Data *)eina_list_data_get((Eina_List *)item);
-
-	Eina_List *found = eina_list_data_find_list(_mList->shufflelist, (void *)pData->index);
-
-	if (found != NULL) {
-		Media_Item *next;
-		Eina_List *iter;
-
-		iter = eina_list_next(found);
-
-		if (iter == NULL) {
-			int nFirstIdx = (int)eina_list_data_get(_mList->shufflelist);
-
-			next = _find_item(mList, nFirstIdx);
-
-			MSG_SDATA_HIGH("End reached. rewind to first. Index=%d", nFirstIdx);
-
-			return next;
-		}
-
-		do {
-			next = _find_item(mList, (int)eina_list_data_get(iter));
-
-			if (next == NULL) {
-				MSG_SDATA_HIGH("Index : %d is not loaded", (int)eina_list_data_get(iter));
-				_mList->shufflelist = eina_list_demote_list(_mList->shufflelist, iter);
-			}
-
-			iter = eina_list_next(found);
-
-		} while (next == NULL);
-
-		Media_Data *nData = (Media_Data *)eina_list_data_get((Eina_List *)next);
-
-		MSG_SDATA_HIGH("Shuffle : %d->%d", pData->index, nData->index);
-
-//		_dump_list(_mList->shufflelist, _print_shuffle);
-		return next;
-	}
-
-	MSG_SDATA_ERROR("Cannot find data. Index=%d", pData->index);
-	return NULL;
-}
-#endif
 
 Media_Item *
 ivug_medialist_find_item_by_index(Media_List *mList, int index)

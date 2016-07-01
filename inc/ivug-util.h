@@ -89,12 +89,6 @@ char * ivug_strip_string(char* name);
 
 bool ivug_is_facebook_image(const char *file);
 
-/*
-	returned values should be freed by user
-*/
-#if 0
-char * ivug_get_icu_date(time_t mtime);
-#endif
 char * ivug_get_duration_string(int millisecond);
 
 
