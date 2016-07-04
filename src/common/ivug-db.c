@@ -347,7 +347,7 @@ media_handle ivug_db_insert_file_to_DB(const char* filepath)
 	ret = media_info_insert_to_db(filepath, (media_info_h *)&m_handle);
 	if (ret != MEDIA_CONTENT_ERROR_NONE)
 	{
-		MSG_ERROR("media_info_insert_to_db is failed, err = %s", _strerror_db(ret));
+		MSG_MAIN_ERROR("media_info_insert_to_db is failed, err = %s", _strerror_db(ret));
 		return NULL;
 	}
 
