@@ -1813,7 +1813,9 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 		free(files);
 		elm_object_part_text_set(pMainView->select_bar, "elm.text.title", buf);
 		evas_object_show(check);
-	} /*else {
+	} else if (pMainView->mode == IVUG_MODE_EMAIL) {
+		edje_object_signal_callback_add(elm_layout_edje_get(pMainView->lyContent), "button_clicked", "elm", _back_button_clicked, pMainView);
+	}/*else {
 		edje_object_signal_emit(elm_layout_edje_get(pMainView->lyContent), "hide,back,btn", "user");
 		edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,hide", "user");
 		pMainView->bShowMenu = false ;
@@ -2061,9 +2063,9 @@ void _ivug_main_view_set_hide_timer(Ivug_MainView *pMainView, const char *func, 
 	IV_ASSERT(pMainView != NULL);
 
 	if (pMainView->mode == IVUG_MODE_DISPLAY
-	        || pMainView->mode == IVUG_MODE_SAVE
-	        || pMainView->mode == IVUG_MODE_SETAS) {
-
+			|| pMainView->mode == IVUG_MODE_SAVE
+			|| pMainView->mode == IVUG_MODE_SETAS
+			|| pMainView->mode == IVUG_MODE_EMAIL) {
 		return;
 	}
 
