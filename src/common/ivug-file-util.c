@@ -16,6 +16,7 @@
 */
 
 #include "ivug-file-util.h"
+#include <errno.h>
 
 #define PATH_MAX_SIZE 16384
 #define BUF_MAX 16384
@@ -289,8 +290,8 @@ int ivug_file_cp(const char *src, const char *dst)
 	FILE *f1 = NULL;
 	FILE *f2 = NULL;
 	char buf[BUF_MAX] = {0,}; //TODO: How about moving buf to heap instead of stack
-	char realpath1[PATH_MAX_SIZE] = {0,};
-	char realpath2[PATH_MAX_SIZE] = {0,};
+	/*char realpath1[PATH_MAX_SIZE] = {0,};
+	char realpath2[PATH_MAX_SIZE] = {0,};*/
 	size_t num;
 	int ret = 1;
 
@@ -298,11 +299,14 @@ int ivug_file_cp(const char *src, const char *dst)
 		return 0;
 	}
 
-	if (!realpath(src, realpath1))
+
+	/*if (!realpath(src, realpath1)) {   //TODO: Check permission Issue for realPath failure.
+		MSG_MAIN_ERROR("RealPath Failed with error %s(%d)",stderror(errno), errno);
 		return 0;
+	}
 
 	if (realpath(dst, realpath2) && !strcmp(realpath1, realpath2))
-		return 0;
+		return 0;*/
 
 	f1 = fopen(src, "rb");
 	if (!f1)
