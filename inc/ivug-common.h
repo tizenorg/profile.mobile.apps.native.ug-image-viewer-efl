@@ -59,7 +59,7 @@
 #define USE_DEFAULT_DOWNLOADS_FOLDER
 
 #ifdef USE_DEFAULT_DOWNLOADS_FOLDER
-#define DEFAULT_DOWNLOADS_FOLDER "/opt/usr/media/Downloads"
+#define DEFAULT_DOWNLOADS_FOLDER "/home/owner/content/Downloads"
 #endif
 
 #define DEFAULT_IMAGE_FOLDER "/opt/usr/media/Images"
