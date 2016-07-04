@@ -16,6 +16,7 @@
 */
 
 #include "ivug-file-util.h"
+#include <errno.h>
 
 #define PATH_MAX_SIZE 16384
 #define BUF_MAX 16384
@@ -298,15 +299,20 @@ int ivug_file_cp(const char *src, const char *dst)
 		return 0;
 	}
 
-	if (!realpath(src, realpath1))
+	/*if (!realpath(src, realpath1)) {
+		MSG_MAIN_ERROR("chandan 2222   %s(%d)", strerror(errno), errno);
 		return 0;
+	}
 
-	if (realpath(dst, realpath2) && !strcmp(realpath1, realpath2))
+	if (realpath(dst, realpath2) && !strcmp(realpath1, realpath2)) {
+		MSG_MAIN_ERROR("chandan 3333");
 		return 0;
+	}*/
 
 	f1 = fopen(src, "rb");
-	if (!f1)
+	if (!f1) {
 		return 0;
+	}
 
 	f2 = fopen(dst, "wb");
 	if (!f2) {
@@ -315,8 +321,9 @@ int ivug_file_cp(const char *src, const char *dst)
 	}
 
 	while ((num = fread(buf, 1, sizeof(buf), f1)) > 0) {
-		if (fwrite(buf, 1, num, f2) != num)
+		if (fwrite(buf, 1, num, f2) != num) {
 			ret = 0;
+		}
 	}
 
 	fclose(f1);
