@@ -24,7 +24,6 @@
 #include <sys/stat.h>
 #include <dirent.h>
 #include <Elementary.h>
-#include "ivug-debug.h"
 
 
 #ifdef __cplusplus
