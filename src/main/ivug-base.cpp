@@ -29,19 +29,6 @@
 #include "ivug-language-mgr.h"
 #include "ivug-base.h"
 
-static int __externalStorageId = 0;
-
-bool getSupportedStorages_cb(int storageId, storage_type_e type, storage_state_e state, const char *
-                             path, void *userData)
-{
-	MSG_NOTI_ERROR("");
-	if (type == STORAGE_TYPE_EXTERNAL) {
-		__externalStorageId = storageId;
-		return false;
-	}
-	return true;
-}
-
 void FreeUGData(ug_data *ug)
 {
 	IV_ASSERT(ug != NULL);
@@ -113,33 +100,14 @@ static Eina_Bool _on_exit_timer_expired(void *data)
 	return ECORE_CALLBACK_CANCEL;
 }
 
-static bool _is_mmc_inserted(void)
-{
-	int error = storage_foreach_device_supported(getSupportedStorages_cb, NULL);
-
-	if (error == STORAGE_ERROR_NONE) {
-		storage_state_e mmc_state;
-		int ret = storage_get_state(__externalStorageId, &mmc_state);
-		if (ret != STORAGE_ERROR_NONE) {
-			MSG_NOTI_ERROR("storage_get_state %d is failed", mmc_state);
-			return false;
-		}
-
-		if (mmc_state == STORAGE_STATE_MOUNTED) {
-			return true;
-		}
-	}
-
-	return false;
-}
-
-static void _on_mmc_state_changed(int storage_id, storage_state_e state, void *user_data)
+static void _on_mmc_state_changed(int storage_id, storage_dev_e dev, storage_state_e state,
+								  const char *fstype, const char *fsuuid, const char *mountpath,
+								  bool primary, int flags, void *user_data)
 {
 	ug_data *ugd = (ug_data *)user_data;
 	IV_ASSERT(ugd != NULL);
 
-	if (_is_mmc_inserted() == false) {
-		MSG_IMAGEVIEW_WARN("MMC Removed!");
+	if (state == STORAGE_STATE_REMOVED) {
 		if (strncmp(ugd->ivug_param->filepath, PATH_SDCARD, strlen(PATH_SDCARD)) != 0
 		        && ugd->ivug_param->view_by != IVUG_VIEW_BY_ALL
 		        && ugd->ivug_param->view_by != IVUG_VIEW_BY_HIDDEN_ALL) {
@@ -157,7 +125,7 @@ static void _on_mmc_state_changed(int storage_id, storage_state_e state, void *u
 				ugd->exit_timer = ecore_timer_add(0.2, _on_exit_timer_expired, ugd);
 			}
 		}
-	} else {
+	} else if (state == STORAGE_STATE_MOUNTED){
 		MSG_IMAGEVIEW_WARN("MMC Inserted!");
 	}
 }
@@ -170,7 +138,6 @@ static void _on_base_deleted(void * data, Evas * e, Evas_Object * obj, void * ev
 Evas_Object *create_layout(Evas_Object *parent, const char *edj, const char *group)
 {
 	IV_ASSERT(parent != NULL);
-//	MSG_ASSERT(parent != NULL);
 
 	Evas_Object *layout;
 	layout = elm_layout_add(parent);
@@ -305,7 +272,7 @@ bool on_create( void *priv)
 	evas_object_event_callback_add(win, EVAS_CALLBACK_MOVE, _on_win_move, NULL);
 #endif
 
-	error_code = storage_set_state_changed_cb(__externalStorageId, _on_mmc_state_changed, ugd);
+	error_code = storage_set_changed_cb(STORAGE_TYPE_EXTERNAL, _on_mmc_state_changed, ugd);
 	if (error_code != STORAGE_ERROR_NONE) {
 		MSG_MAIN_ERROR("storage_set_state_changed_cb() failed!!");
 	}
