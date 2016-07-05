@@ -66,7 +66,7 @@
 #define DEFAULT_THUMBNAIL		"/opt/usr/share/media/.thumb/thumb_default.png"
 #define DEFAULT_THUMBNAIL_PATH			full_path(IMAGE_PATH,"/T01_Nocontents_broken.png")
 
-#define PATH_SDCARD		"/opt/media/sdcard/"
+#define PATH_SDCARD		"/opt/media/SDCardA1/"
 
 #define _EDJ(o)			elm_layout_edje_get(o)
 
