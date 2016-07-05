@@ -333,11 +333,11 @@ static bool _save_to_folder(Ivug_MainView *pMainView, const char *path, const ch
 
 	/* Add to album */
 	media_handle m_handle = ivug_db_insert_file_to_DB(dest_file);
-	/*if (m_handle == NULL) {
+	if (m_handle == NULL) {
 		ivug_notification_popup_create(pMainView->layout, "File download failed");
 		MSG_MAIN_ERROR("Cannot insert to db %s", dest_file);
 		return false;
-	}*/
+	}
 	ivug_db_destroy_file_handle(m_handle);
 	ivug_notification_popup_create(pMainView->layout, "File downloaded");
 	return true;
