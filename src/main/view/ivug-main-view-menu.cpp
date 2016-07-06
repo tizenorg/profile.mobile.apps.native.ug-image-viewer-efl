@@ -32,6 +32,7 @@
 
 #include "ivug-exif.h"
 
+#include <storage/storage.h>
 #include <shortcut_manager.h>
 #include <efl_extension.h>
 #include <app_manager.h>
@@ -946,9 +947,12 @@ _on_btn_download_clicked(void *data)
 
 	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
+	char *download_folder = NULL;
+	storage_get_directory(STORAGE_TYPE_INTERNAL, STORAGE_DIRECTORY_DOWNLOADS, &download_folder);
 
 	char buf[IVUG_MAX_FILE_PATH_LEN] = {0,};
-	snprintf(buf, (size_t)sizeof(buf), "%s", DEFAULT_DOWNLOADS_FOLDER);
+	snprintf(buf, (size_t)sizeof(buf), "%s", download_folder);
+	free(download_folder);
 	MSG_MAIN_HIGH("%s", buf);
 	if (_save_to_folder(pMainView, mdata->filepath, buf)) {
 		MSG_MAIN_HIGH("File Downloaded");
@@ -1059,31 +1063,6 @@ void _on_mainview_save(Ivug_MainView *pMainView)
 	}
 
 	MSG_MAIN_SEC("Web image filepath %s, fileurl %s", mdata->filepath, mdata->fileurl);
-
-#ifdef USE_DEFAULT_DOWNLOADS_FOLDER
-	char *path = NULL;
-	{
-		path = strdup(DEFAULT_DOWNLOADS_FOLDER);
-	}
-
-	free(path);
-#else
-	ivug_main_view_del_hide_timer(pMainView);
-
-	ivug_listpopup_itemlist items = ivug_listpopup_itemlist_new();
-
-// Get local album name.
-
-	bool ret = ivug_db_get_all_folder_list(_iter_album_list, items);
-	if (ret == false) {
-		MSG_SDATA_ERROR("ivug_db_get_all_folder_list failed: %d", ret);
-		return;
-	}
-
-	pMainView->popup = ivug_listpopup_show(pMainView->layout, IDS_SAVE, items, _on_save_selected, pMainView);
-
-	ivug_listpopup_itemlist_free(items);
-#endif	//USE_DEFAULT_DOWNLOADS_FOLDER
 	return;
 }
 #ifndef USE_THUMBLIST

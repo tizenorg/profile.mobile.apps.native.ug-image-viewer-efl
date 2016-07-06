@@ -58,10 +58,6 @@
 
 #define USE_DEFAULT_DOWNLOADS_FOLDER
 
-#ifdef USE_DEFAULT_DOWNLOADS_FOLDER
-#define DEFAULT_DOWNLOADS_FOLDER "/home/owner/content/Downloads"
-#endif
-
 #define DEFAULT_IMAGE_FOLDER "/home/owner/content/Images"
 #define DEFAULT_THUMBNAIL		"/opt/usr/share/media/.thumb/thumb_default.png"
 #define DEFAULT_THUMBNAIL_PATH			full_path(IMAGE_PATH,"/T01_Nocontents_broken.png")
