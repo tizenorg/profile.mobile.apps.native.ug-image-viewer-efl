@@ -289,20 +289,12 @@ int ivug_file_cp(const char *src, const char *dst)
 	FILE *f1 = NULL;
 	FILE *f2 = NULL;
 	char buf[BUF_MAX] = {0,}; //TODO: How about moving buf to heap instead of stack
-	char realpath1[PATH_MAX_SIZE] = {0,};
-	char realpath2[PATH_MAX_SIZE] = {0,};
 	size_t num;
 	int ret = 1;
 
 	if (!src || !dst) {
 		return 0;
 	}
-
-	if (!realpath(src, realpath1))
-		return 0;
-
-	if (realpath(dst, realpath2) && !strcmp(realpath1, realpath2))
-		return 0;
 
 	f1 = fopen(src, "rb");
 	if (!f1)
