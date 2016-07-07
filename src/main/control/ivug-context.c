@@ -416,8 +416,7 @@ ivug_context_deinit()
 {
 	AppData *Context = NULL;
 
-	if (ContextList == NULL)
-	{
+	if (ContextList == NULL) {
 		MSG_IVUG_ERROR("ContextList is NULL");
 		return false;
 	}
@@ -429,32 +428,29 @@ ivug_context_deinit()
 
 	EINA_LIST_FOREACH_SAFE(ContextList, l, l_next, Context)
 	{
-		if (Context == NULL)
-		{
+		if (Context == NULL) {
 			MSG_IVUG_ERROR("Context is NULL");
 			return false;
 		}
 	}
 
-	if (Context->language_handle)
-	{
-		ivug_language_mgr_destroy(Context->language_handle);
-		Context->language_handle = NULL;
-	}
+	if (Context != NULL) {
+		if (Context->language_handle) {
+			ivug_language_mgr_destroy(Context->language_handle);
+			Context->language_handle = NULL;
+		}
 
-	if (Context->callback_handle)
-	{
-		MSG_IVUG_HIGH("Removing Callback");
-		ivug_callback_unregister(Context->callback_handle);
-		Context->callback_handle = NULL;
-	}
+		if (Context->callback_handle) {
+			MSG_IVUG_HIGH("Removing Callback");
+			ivug_callback_unregister(Context->callback_handle);
+			Context->callback_handle = NULL;
+		}
 
-	if (Context->app_control_handle)
-	{
-		app_control_destroy(Context->app_control_handle);
-		Context->app_control_handle = NULL;
+		if (Context->app_control_handle) {
+			app_control_destroy(Context->app_control_handle);
+			Context->app_control_handle = NULL;
+		}
 	}
-
 #ifdef USE_NEW_DB_API
 	PERF_CHECK_BEGIN(LVL2, "ivug_db_destroy");
 	ivug_db_destroy();
@@ -462,8 +458,7 @@ ivug_context_deinit()
 #endif
 
 	PERF_CHECK_BEGIN(LVL2, "elm_theme_free");
-	if (Context->th)
-	{
+	if (Context && Context->th) {
 		elm_theme_extension_del(Context->th, full_path(EDJ_PATH, "/ivug-custom.edj"));
 		elm_theme_free(Context->th);
 	}
@@ -485,16 +480,15 @@ void ivug_context_destroy_me(const char *file, int line)
 	AppData *Context = NULL;
 	Eina_List *list = NULL;
 
-	EINA_LIST_FOREACH(ContextList, list, Context)
-	{
-		if (Context->bDestroying == false)
+	EINA_LIST_FOREACH(ContextList, list, Context) {
+		if (Context && Context->bDestroying == false) {
 			break;
+		}
 	}
 
 	char *fname = strrchr(file, '/');
 
-	if (NULL != Context)
-	{
+	if (NULL != Context) {
 		_dump_context("DestroyME");
 
 		MSG_IMAGEVIEW_HIGH("Request to destory ug. from L(%d) %s", line, fname);
@@ -504,28 +498,22 @@ void ivug_context_destroy_me(const char *file, int line)
 // When app does not set opacity mode, unknown is returned in _get()
 // W/IV-COMMON(5576): 0:00:00.003[F:ivug-context.c   L:  367][HIGH] Screen WH(720x1280) Indicator(Show,Unknown,Overlap) <--- From email.
 // Woraround. If opacity is unknown, set as different.
-		if (Context->indi_o_mode == ELM_WIN_INDICATOR_OPACITY_UNKNOWN)
-		{
+		if (Context->indi_o_mode == ELM_WIN_INDICATOR_OPACITY_UNKNOWN) {
 			Context->indi_o_mode = ELM_WIN_INDICATOR_OPAQUE;
 		}
 
 		elm_win_indicator_opacity_set(Context->parent_win, Context->indi_o_mode);
 
-		if (Context->oMode == EINA_TRUE)
-		{
+		if (Context->oMode == EINA_TRUE) {
 			ivug_set_indicator_overlap_mode(true);
-		}
-		else
-		{
+		} else {
 			ivug_set_indicator_overlap_mode(false);
 		}
 
 		MSG_IMAGEVIEW_HIGH("Restore Indicator(%s,%s,%s)", szMode[Context->indi_mode], szOpacity[Context->indi_o_mode], szOverlap[Context->oMode]);
 
 		ui_app_exit();
-	}
-	else
-	{
+	} else {
 		MSG_IMAGEVIEW_WARN("Context is NULL. from L(%d) %s", line, fname);
 	}
 }
