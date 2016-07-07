@@ -436,25 +436,26 @@ ivug_context_deinit()
 		}
 	}
 
-	if (Context->language_handle)
-	{
-		ivug_language_mgr_destroy(Context->language_handle);
-		Context->language_handle = NULL;
-	}
+	if (Context != NULL) {
+		if (Context->language_handle)
+		{
+			ivug_language_mgr_destroy(Context->language_handle);
+			Context->language_handle = NULL;
+		}
 
-	if (Context->callback_handle)
-	{
-		MSG_IVUG_HIGH("Removing Callback");
-		ivug_callback_unregister(Context->callback_handle);
-		Context->callback_handle = NULL;
-	}
+		if (Context->callback_handle)
+		{
+			MSG_IVUG_HIGH("Removing Callback");
+			ivug_callback_unregister(Context->callback_handle);
+			Context->callback_handle = NULL;
+		}
 
-	if (Context->app_control_handle)
-	{
-		app_control_destroy(Context->app_control_handle);
-		Context->app_control_handle = NULL;
+		if (Context->app_control_handle)
+		{
+			app_control_destroy(Context->app_control_handle);
+			Context->app_control_handle = NULL;
+		}
 	}
-
 #ifdef USE_NEW_DB_API
 	PERF_CHECK_BEGIN(LVL2, "ivug_db_destroy");
 	ivug_db_destroy();
@@ -462,7 +463,7 @@ ivug_context_deinit()
 #endif
 
 	PERF_CHECK_BEGIN(LVL2, "elm_theme_free");
-	if (Context->th)
+	if (Context && Context->th)
 	{
 		elm_theme_extension_del(Context->th, full_path(EDJ_PATH, "/ivug-custom.edj"));
 		elm_theme_free(Context->th);
