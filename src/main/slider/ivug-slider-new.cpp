@@ -739,7 +739,9 @@ void ivug_slider_new_set_mode(Ivug_SliderNew * slider_new, slider_mode_e mode)
 
 slider_mode_e ivug_slider_new_get_mode(Ivug_SliderNew * slider_new)
 {
-	return slider_new->mode;
+	if (slider_new)
+		return slider_new->mode;
+	return SLIDER_MODE_SINGLE;
 }
 
 void ivug_slider_new_set_list(Ivug_SliderNew * slider_new, Media_List *mList, Media_Item *current)
