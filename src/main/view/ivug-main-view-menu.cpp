@@ -601,7 +601,6 @@ _on_delete_selected(void *data, Evas_Object *obj, void *event_info)
 
 	if (mitem == NULL) {
 		MSG_MAIN_HIGH("Current item is NULL");
-		ivug_main_view_destroy(pMainView);
 		elm_exit();
 		return;
 	}

@@ -197,7 +197,6 @@ static void _on_btn_favorite_cb(void *data, Evas_Object *obj, void *event_info)
 				mitem = ivug_medialist_get_current_item(pMainView->mList);
 				if (mitem == NULL) {
 					MSG_MAIN_HIGH("Current item is NULL");
-					ivug_main_view_destroy(pMainView);
 					elm_exit();
 					return;
 				}
@@ -1014,6 +1013,7 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 	if (layout == NULL) {	//if failed
 		MSG_MAIN_ERROR("main layout create failed");
 		free(pMainView);
+		pMainView = NULL;
 		return NULL;
 	}
 	pMainView->layout = layout;
@@ -1920,7 +1920,7 @@ __attribute__((used)) void dump_obj(Evas_Object *obj, int lvl)
 		evas_object_size_hint_min_get(obj, &mW, &mH);
 		evas_object_size_hint_max_get(obj, &MW, &MH);
 
-		MSG_HIGH("Obj=%s(%s,0x%08x) (%d,%d,%d,%d) m(%d,%d) M(%d,%d) P%d|R%d|V%d|E%d", evas_object_name_get(obj), evas_object_type_get(obj), obj, x, y, w, h, mW, mH, MW, MH, pass, repeat, visible, propagate);
+		MSG_MAIN_HIGH("Obj=%s(%s,0x%08x) (%d,%d,%d,%d) m(%d,%d) M(%d,%d) P%d|R%d|V%d|E%d", evas_object_name_get(obj), evas_object_type_get(obj), obj, x, y, w, h, mW, mH, MW, MH, pass, repeat, visible, propagate);
 		lvl++;
 	}
 
@@ -1949,7 +1949,7 @@ __attribute__((used)) void dump_obj(Evas_Object *obj, int lvl)
 
 		space[lvl * 2] = '\0';
 
-		MSG_HIGH("%sObj=%s(%s,0x%08x) (%d,%d,%d,%d) m(%d,%d) M(%d,%d) P%d|R%d|V%d|E%d", space, evas_object_name_get(data), evas_object_type_get(data), data, x, y, w, h, mW, mH, MW, MH, pass, repeat, visible, propagate);
+		MSG_MAIN_HIGH("%sObj=%s(%s,0x%08x) (%d,%d,%d,%d) m(%d,%d) M(%d,%d) P%d|R%d|V%d|E%d", space, evas_object_name_get(data), evas_object_type_get(data), data, x, y, w, h, mW, mH, MW, MH, pass, repeat, visible, propagate);
 
 		delete[] space;
 
@@ -2035,7 +2035,9 @@ ivug_main_view_destroy(Ivug_MainView *pMainView)
 	_on_remove_main_view_ui(pMainView);
 
 	dump_obj(pMainView->parent, 0);
+
 	free(pMainView);
+	pMainView = NULL;
 
 	MSG_MAIN_HIGH("LEAVE : Main View Destroy.");
 
