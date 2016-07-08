@@ -471,11 +471,13 @@ ivug_name_view_create(Evas_Object *parent, ivug_name_mode mode)
 #endif
 
 	pNameView->popup = elm_popup_add(parent);
+	char *popup_edj = IVUG_POPUP_EDJ_NAME;
 
 	elm_object_domain_translatable_part_text_set(pNameView->popup, "title,text", IVUG_TEXT_DOMAIN, IDS_RENAME);
 	/* Create view base layout */
-	pNameView->layout = ivug_layout_add2(pNameView->popup, IVUG_POPUP_EDJ_NAME, "popup_input_text");
+	pNameView->layout = ivug_layout_add2(pNameView->popup, popup_edj, "popup_input_text");
 	evas_object_name_set(pNameView->layout, "NameBase");
+	free(popup_edj);
 	if (pNameView->layout == NULL) {
 		MSG_ERROR("Cannot create layout");
 		free(pNameView);

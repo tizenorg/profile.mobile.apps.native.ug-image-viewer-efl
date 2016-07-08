@@ -313,6 +313,9 @@ static int __gl_exif_add_header(FILE *fd, unsigned int *orientation)
 
 	t = time (NULL);
 	tm = localtime_r(&t, &tms);
+	if (tm == NULL) {
+		goto GL_EXIF_FAILED;
+	}
 
 	time_buf = (char *)calloc(1, GL_EXIF_BUF_TIME_LEN_MAX);
 	if (time_buf == NULL) {
@@ -388,7 +391,10 @@ static int __gl_exif_add_exif_to_jfif (const char *file_path, unsigned int *orie
 
 	memset(tmp, 0x00, GL_EXIF_BUF_LEN_MAX);
 	/* Write back tmp file after to JPEG image */
-	fseek(tmp_fd, 0, SEEK_SET);
+	if (fseek(tmp_fd, 0, SEEK_SET) != 0) {
+		gl_dbgE("Can't seek the file.");
+		goto GL_EXIF_FAILED;
+	}
 	while ((r_size = fread(tmp, 1, sizeof(tmp), tmp_fd)) > 0) {
 		gl_dbg("r_size: %ld", r_size);
 		if (fwrite(tmp, 1, r_size, fd) != r_size)
@@ -824,7 +830,10 @@ static int __gl_exif_add_orientation_tag(const char *file_path,
 
 	memset(tmp, 0x00, GL_EXIF_BUF_LEN_MAX);
 	/* Write back tmp file after to JPEG image */
-	fseek(tmp_fd, 0, SEEK_SET);
+	if (fseek(tmp_fd, 0, SEEK_SET) != 0) {
+		gl_dbgE("Cannot seek the file");
+		goto GL_EXIF_FAILED;
+	}
 	while ((r_size = fread(tmp, 1, sizeof(tmp), tmp_fd)) > 0) {
 		gl_dbg("r_size: %ld", r_size);
 		if (fwrite(tmp, 1, r_size, fd) != r_size)

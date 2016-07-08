@@ -464,7 +464,10 @@ Evas_Object *ivug_rename_popup_show(Evas_Object *parent, const char *filename, E
 	//elm_object_style_set(popup, "menustyle");
 	elm_object_part_text_set(popup, "title,text", "Rename");
 
-	layout = ivug_layout_add2(popup, IVUG_POPUP_EDJ_NAME, "popup_entryview");
+	char *popup_edj = IVUG_POPUP_EDJ_NAME;
+
+	layout = ivug_layout_add2(popup, popup_edj, "popup_entryview");
+	free(popup_edj);
 	if (!layout)
 	{
 		MSG_IMAGEVIEW_ERROR("layout is NULL");
@@ -785,7 +788,12 @@ Evas_Object *ivug_processing_popup_show(Evas_Object *parent)
 	evas_object_show(label);
 
 	layout = elm_layout_add(popup);
-	elm_layout_file_set(layout, IVUG_POPUP_EDJ_NAME, "popup_processingview_1button");
+	char *popup_edj = IVUG_POPUP_EDJ_NAME;
+	Eina_Bool ret = elm_layout_file_set(layout, popup_edj, "popup_processingview_1button");
+	if (ret == EINA_FALSE) {
+		MSG_IMAGEVIEW_ERROR("Layout file set failed!");
+	}
+	free(popup_edj);
 	evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
 	progressbar = elm_progressbar_add(popup);
