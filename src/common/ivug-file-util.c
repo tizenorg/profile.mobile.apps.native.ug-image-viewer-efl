@@ -335,7 +335,9 @@ int ivug_file_mv(const char *src, const char *dst)
 
 		if (S_ISREG(info.st_mode)) {
 	 		ivug_file_cp(src, dst);
-			chmod(dst, info.st_mode);
+			if (chmod(dst, info.st_mode) != 0) {
+				return 0;
+			}
 			unlink(src);
 			return 1;
 		}

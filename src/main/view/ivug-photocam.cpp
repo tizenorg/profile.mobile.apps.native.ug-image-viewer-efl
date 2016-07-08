@@ -315,7 +315,7 @@ void _on_slider_mouse_up(void *data, Evas *e, Evas_Object *obj, void *event_info
 			Media_Item *mItem = ivug_medialist_get_current_item(pMainView->mList);
 			Media_Data *mdata = ivug_medialist_get_data(mItem);
 			char *mime_type = ivug_fileinfo_get_mime_type(mdata->filepath);
-			if (strncmp(mime_type, "video/", strlen("video/")) == 0) {
+			if (mime_type && (strncmp(mime_type, "video/", strlen("video/")) == 0)) {
 				Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
 				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "show,icon", "video_play_icon");
 				pMainView->is_play_Icon = true;
