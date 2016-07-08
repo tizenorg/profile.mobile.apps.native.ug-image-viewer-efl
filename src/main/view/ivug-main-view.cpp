@@ -101,7 +101,10 @@ _check_changed_cb(void *data, Evas_Object *obj, void *event_info)
 
 	if (state == true) {
 		struct stat stFileInfo;
-		stat(mdata->fileurl, &stFileInfo);
+		if (stat(mdata->fileurl, &stFileInfo) != 0) {
+			MSG_MAIN_ERROR("File Size Info is not known");
+			stFileInfo.st_size = 0;
+		}
 
 		if (pMainView->total_selected < pMainView->max_count &&
 				(pMainView->select_size + stFileInfo.st_size) <= pMainView->limit_size) {
@@ -305,7 +308,7 @@ static Eina_Bool _on_btn_back_clicked(void *data, Elm_Object_Item *it)
 	MSG_MAIN_WARN("Back key from mainview(0x%08x) pressed", pMainView);
 
 	if (pMainView->mode == IVUG_MODE_SELECT) {
-		app_control_h service;
+		app_control_h service = NULL;
 
 		Eina_List *l = NULL;
 		void *data = NULL;
@@ -324,6 +327,15 @@ static Eina_Bool _on_btn_back_clicked(void *data, Elm_Object_Item *it)
 			}
 		}
 		app_control_create(&service);
+		if (service == NULL) {
+			MSG_MAIN_HIGH("app_control handle creation failed.");
+			i--;
+			while(i >= 0) {
+				free(files[i--]);
+			}
+			free(files);
+			return EINA_FALSE;
+		}
 		if (pMainView->view_by == IVUG_VIEW_BY_FAVORITES) {
 			app_control_add_extra_data_array(service, "Selected index fav", (const char **)files, count_selected);
 		} else {

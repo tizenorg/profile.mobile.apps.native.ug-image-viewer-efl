@@ -396,12 +396,14 @@ ERROR:
 
 	Context = eina_list_data_get(ContextList);
 	ContextList = eina_list_remove_list(ContextList, ContextList);
+	char *custom_edj_path = full_path(EDJ_PATH,"/ivug-custom.edj");
 
 	if (Context->th)
 	{
-		elm_theme_extension_del(Context->th, full_path(EDJ_PATH,"/ivug-custom.edj"));
+		elm_theme_extension_del(Context->th, custom_edj_path);
 		elm_theme_free(Context->th);
 	}
+	free(custom_edj_path);
 
 	MSG_IVUG_HIGH("Remove from list. Context=0x%08x", Context);
 
@@ -456,16 +458,19 @@ ivug_context_deinit()
 	ivug_db_destroy();
 	PERF_CHECK_END(LVL2, "ivug_db_destroy");
 #endif
+char *custom_edj_path = full_path(EDJ_PATH, "/ivug-custom.edj");
 
 	PERF_CHECK_BEGIN(LVL2, "elm_theme_free");
 	if (Context && Context->th) {
-		elm_theme_extension_del(Context->th, full_path(EDJ_PATH, "/ivug-custom.edj"));
+		elm_theme_extension_del(Context->th, custom_edj_path);
 		elm_theme_free(Context->th);
 	}
 
 	PERF_CHECK_END(LVL2, "elm_theme_free");
 
 	MSG_IVUG_HIGH("Remove from list. Context=0x%08x", Context);
+
+	free(custom_edj_path);
 
 	free(Context);
 
