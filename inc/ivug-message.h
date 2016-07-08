@@ -32,9 +32,6 @@ bool remove_message_handle(MessageHandle handle);
 
 MessageHandle create_message_handle();
 
-bool register_message(MessageHandle handle, const char *command, FnMessage cb, void *data );
-bool unregister_message(MessageHandle handle, const char *command, FnMessage cb);
-
 bool send_message(MessageHandle handle, const char *command, int param1, int param2, int param3, void *param4);
 
 #ifdef __cplusplus

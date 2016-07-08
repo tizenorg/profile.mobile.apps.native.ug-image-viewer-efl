@@ -56,7 +56,11 @@ _send_result(const char *key1, const char *val1, const char *key2, const char *v
 
 	if (key2 && val2) {
 		MSG_SEC("Bundle 2 : [%s = %s]", key2, val2);
-		app_control_add_extra_data(service, key2, val2);
+		ret = app_control_add_extra_data(service, key2, val2);
+		if (ret != APP_CONTROL_ERROR_NONE) {
+			MSG_SEC("app_control add extra data failed");
+			return;
+		}
 	}
 
 	app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
@@ -81,10 +85,8 @@ _destory_slideshow(Ivug_SlideShowView *pSSView,
 	/*from gallery ablum*/
 	// when standalone, slideshow window have to be capture, so don't destroy here
 	if (pSSView->bStandAlone == false) {
-		if (pSSView->ssHandle) {
-			MSG_HIGH("image viewer end cause slide show ended");
-			ivug_ss_delete(pSSView->ssHandle);
-		}
+		MSG_HIGH("image viewer end cause slide show ended");
+		ivug_ss_delete(pSSView->ssHandle);
 		pSSView->ssHandle = NULL;
 	}
 
