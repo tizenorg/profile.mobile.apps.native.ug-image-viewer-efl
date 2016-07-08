@@ -56,7 +56,11 @@ _send_result(const char *key1, const char *val1, const char *key2, const char *v
 
 	if (key2 && val2) {
 		MSG_SEC("Bundle 2 : [%s = %s]", key2, val2);
-		app_control_add_extra_data(service, key2, val2);
+		ret = app_control_add_extra_data(service, key2, val2);
+		if (ret != APP_CONTROL_ERROR_NONE) {
+			MSG_SEC("app_control add extra data failed");
+			return;
+		}
 	}
 
 	app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
