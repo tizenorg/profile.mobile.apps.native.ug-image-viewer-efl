@@ -65,7 +65,6 @@ typedef enum {
 //
 //
 static bool _destory_slideshow_and_ug(Ivug_MainView *pMainView, bool bMmc_out);
-static void _on_slideshow_finished(void *data, Evas_Object *obj, void *event_info);
 
 #ifdef USE_THUMBLIST
 static void _on_receive_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info);
@@ -442,7 +441,7 @@ static void _on_save_btn_clicked(void *data, Evas_Object *obj, const char * s, c
 static Eina_Bool _on_key_down(void *user_data, int type, void *event)
 {
 	if (!user_data) {
-		MSG_IMAGEVIEW_ERROR("user data is NULL");
+		MSG_MAIN_ERROR("user data is NULL");
 		return ECORE_CALLBACK_PASS_ON;
 	}
 
@@ -450,23 +449,23 @@ static Eina_Bool _on_key_down(void *user_data, int type, void *event)
 
 	Ecore_Event_Key *key_event = (Ecore_Event_Key *) event;
 
-	if (!strcmp(key_event->keyname, "XF86Stop")) {
-		MSG_IMAGEVIEW_HIGH("Back(End) key");
+	if (!strcmp(key_event->keyname, "XF86Back")) {
+		MSG_MAIN_HIGH("Back(End) key");
 		if (pMainView->ssHandle) {
 			ivug_ss_stop(pMainView->ssHandle);
 		}
 	} else if (!strcmp(key_event->keyname, "XF86Home")) {
-		MSG_IMAGEVIEW_HIGH("Home key");
+		MSG_MAIN_HIGH("Home key");
 	} else if (!strcmp(key_event->keyname, "XF86PowerOff")) {
-		MSG_IMAGEVIEW_HIGH("Power key");
+		MSG_MAIN_HIGH("Power key");
 		if (pMainView->ssHandle) {
 			ivug_ss_stop(pMainView->ssHandle);
 		}
 	} else if (!strcmp(key_event->keyname, "XF86Menu")) {
-		MSG_IMAGEVIEW_HIGH("Menu key");
+		MSG_MAIN_HIGH("Menu key");
 	}
 
-	MSG_IMAGEVIEW_LOW("Key down : %s", key_event->keyname);
+	MSG_MAIN_LOW("Key down : %s", key_event->keyname);
 
 	return ECORE_CALLBACK_PASS_ON;
 }
@@ -536,12 +535,66 @@ static void _on_layout_resize(void *data, Evas_Object *obj, void *event_info)
 	}
 }
 
+void
+on_slideshow_finished(void *data, Evas_Object *obj, void *event_info)
+{
+	MSG_MAIN_HIGH("on_slideshow_finished");
+	IV_ASSERT(data != NULL);
+
+	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+	bool bDestoryed = false;
+	bDestoryed = _destory_slideshow_and_ug(pMainView, false);
+	if (bDestoryed) {
+		return;
+	}
+
+	Media_Item * item = NULL;
+	pMainView->isSliding = false;
+
+
+	item = ivug_ss_item_get(pMainView->ssHandle);
+	ivug_ss_delete(pMainView->ssHandle);
+	pMainView->ssHandle = NULL;
+
+	if (gGetDestroying() == true) {
+		MSG_MAIN_WARN("ug is destroying");
+		return;
+	}
+
+	if (item) {
+		ivug_medialist_set_current_item(pMainView->mList, item);
+		ivug_main_view_start(pMainView, NULL);
+	}
+
+#ifdef USE_THUMBLIST
+	if (pMainView->thumbs) {
+		Image_Object *img = NULL;
+		if (item) {
+			img = ivug_thumblist_find_item_by_data(pMainView->thumbs, item);
+		}
+
+		if (img == NULL) {
+			MSG_MAIN_ERROR("Cannot find item");
+		} else {
+			MSG_MAIN_HIGH("pMainView->bSetThmByUser : %d", pMainView->bSetThmByUser);
+
+			pMainView->bSetThmByUser = true;
+			ivug_thumblist_select_item(pMainView->thumbs, img);
+		}
+	}
+#endif
+
+	ivug_slider_new_reload(pMainView->pSliderNew);
+	ivug_main_view_show_menu_bar(pMainView);
+
+}
+
 static bool _destory_slideshow_and_ug(Ivug_MainView *pMainView,
                                       bool bMmc_out)
 {
 	IV_ASSERT(pMainView != NULL);
 	evas_object_smart_callback_del_full(ivug_ss_object_get(pMainView->ssHandle),
-	                                    "slideshow,finished", _on_slideshow_finished, pMainView);
+										"slideshow,finished", on_slideshow_finished, pMainView);
 
 //	ivug_allow_lcd_off();
 	/*from gallery ablum*/
@@ -838,60 +891,6 @@ static char * _ivug_get_folder_name(char *filepath)
 	free(folder);
 
 	return NULL;
-}
-
-static void
-_on_slideshow_finished(void *data, Evas_Object *obj, void *event_info)
-{
-	MSG_MAIN_HIGH("_on_slideshow_finished");
-	IV_ASSERT(data != NULL);
-
-	Ivug_MainView *pMainView = (Ivug_MainView *)data;
-	bool bDestoryed = false;
-	bDestoryed = _destory_slideshow_and_ug(pMainView, false);
-	if (bDestoryed) {
-		return;
-	}
-
-	Media_Item * item = NULL;
-	pMainView->isSliding = false;
-
-
-	item = ivug_ss_item_get(pMainView->ssHandle);
-	ivug_ss_delete(pMainView->ssHandle);
-	pMainView->ssHandle = NULL;
-
-	if (gGetDestroying() == true) {
-		MSG_MAIN_WARN("ug is destroying");
-		return;
-	}
-
-	if (item) {
-		ivug_medialist_set_current_item(pMainView->mList, item);
-		ivug_main_view_start(pMainView, NULL);
-	}
-
-#ifdef USE_THUMBLIST
-	if (pMainView->thumbs) {
-		Image_Object *img = NULL;
-		if (item) {
-			img = ivug_thumblist_find_item_by_data(pMainView->thumbs, item);
-		}
-
-		if (img == NULL) {
-			MSG_MAIN_ERROR("Cannot find item");
-		} else {
-			MSG_MAIN_HIGH("pMainView->bSetThmByUser : %d", pMainView->bSetThmByUser);
-
-			pMainView->bSetThmByUser = true;
-			ivug_thumblist_select_item(pMainView->thumbs, img);
-		}
-	}
-#endif
-
-	ivug_slider_new_reload(pMainView->pSliderNew);
-	ivug_main_view_show_menu_bar(pMainView);
-
 }
 
 #ifdef USE_THUMBLIST
@@ -1432,7 +1431,7 @@ void ivug_main_view_start_slideshow(Ivug_MainView *pMainView, Eina_Bool bSlideFi
 	pMainView->isSliding = true;
 
 // Register callback
-	evas_object_smart_callback_add(ivug_ss_object_get(pMainView->ssHandle),  "slideshow,finished", _on_slideshow_finished, pMainView);
+	evas_object_smart_callback_add(ivug_ss_object_get(pMainView->ssHandle),  "slideshow,finished", on_slideshow_finished, pMainView);
 
 
 	ivug_main_view_hide_menu_bar(pMainView);

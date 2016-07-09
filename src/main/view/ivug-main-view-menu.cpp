@@ -1226,36 +1226,6 @@ void _ivug_slideshow_popup_create_menu(void *data, Evas_Object *obj, void *event
 }
 #endif
 
-static void
-_on_slideshow_finished(void *data, Evas_Object *obj, void *event_info)
-{
-	MSG_MAIN_HIGH("_on_slideshow_finished");
-	IV_ASSERT(data != NULL);
-
-	Ivug_MainView *pMainView = (Ivug_MainView *)data;
-	//int ss_state = (int)event_info;
-
-	evas_object_smart_callback_del_full(ivug_ss_object_get(pMainView->ssHandle),
-	                                    "slideshow,finished", _on_slideshow_finished, pMainView);
-
-	ivug_ss_delete(pMainView->ssHandle);
-	pMainView->ssHandle = NULL;
-
-
-#ifdef USE_THUMBLIST
-	if (pMainView->thumbs) {
-		ivug_thumblist_set_edit_mode(pMainView->thumbs, EINA_FALSE);
-	}
-#endif
-
-	ivug_main_view_show_menu_bar(pMainView);
-
-
-	ivug_medialist_del(pMainView->temp_mlist);
-	pMainView->temp_mlist = NULL;
-}
-
-
 void on_btn_slideshow_clicked(Ivug_MainView *pMainView)
 {
 #ifdef USE_THUMBLIST
@@ -1303,10 +1273,6 @@ void on_btn_slideshow_clicked(Ivug_MainView *pMainView)
 		pMainView->temp_mlist = mlist;
 
 		pMainView->ssHandle = ivug_ss_create(pMainView->layout);
-
-		// Register callback
-		evas_object_smart_callback_add(ivug_ss_object_get(pMainView->ssHandle),
-		                               "slideshow,finished", _on_slideshow_finished, pMainView);
 
 //		ivug_allow_lcd_off();
 

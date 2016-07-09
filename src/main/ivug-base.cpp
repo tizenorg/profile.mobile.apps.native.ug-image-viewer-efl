@@ -119,7 +119,7 @@ static void _on_mmc_state_changed(int storage_id, storage_dev_e dev, storage_sta
 		if (ugd->main_view) {
 			_ivug_main_on_mmc_state_changed(ugd->main_view);
 		} else if (ugd->ss_view) {
-			_ivug_slideshow_view_on_mmc_state_changed(ugd->ss_view);
+			ivug_slideshow_view_on_mmc_state_changed(ugd->ss_view);
 		} else {
 			if (ugd->exit_timer == NULL) {
 				ugd->exit_timer = ecore_timer_add(0.2, _on_exit_timer_expired, ugd);

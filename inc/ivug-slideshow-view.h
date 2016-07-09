@@ -53,7 +53,7 @@ void
 ivug_slideshow_view_destroy(Ivug_SlideShowView *pSSView);
 
 void
-_ivug_slideshow_view_on_mmc_state_changed(void *data);
+ivug_slideshow_view_on_mmc_state_changed(void *data);
 
 #ifdef __cplusplus
 }

@@ -96,6 +96,10 @@ extern "C" {
 */
 void
 on_slider_clicked(void *data, Evas_Object *obj, void *event_info);
+
+void
+on_slideshow_finished(void *data, Evas_Object *obj, void *event_info);
+
 Ivug_MainView *
 ivug_main_view_create(Evas_Object* parent, ivug_parameter *param);
 
