@@ -50,7 +50,7 @@ void _on_slider_mouse_moved(void *data, Evas *e, Evas_Object *obj, void *event_i
 	IV_ASSERT(data != NULL);
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	Evas_Event_Mouse_Move *ev = (Evas_Event_Mouse_Move *) event_info;
-	MSG_MAIN_LOW("mouse moved current(%d,%d) prev(%d,%d)", ev->cur.output.x, ev->cur.output.y, ev->prev.output.x, ev->prev.output.y);
+	MSG_MAIN_HIGH("mouse moved current(%d,%d) prev(%d,%d)", ev->cur.output.x, ev->cur.output.y, ev->prev.output.x, ev->prev.output.y);
 	int bx = 0;
 	int by = 0;
 	int bw = 0;
@@ -80,7 +80,7 @@ void _on_slider_mouse_moved(void *data, Evas *e, Evas_Object *obj, void *event_i
 			evas_object_geometry_get(pMainView->photocam2, &bx, &by, &bw, &bh);
 		}
 
-		MSG_HIGH("current index = %d , diff %d", currentindex, ev->cur.output.x - pMainView->prev_mouse_point);
+		MSG_MAIN_HIGH("current index = %d , diff %d", currentindex, ev->cur.output.x - pMainView->prev_mouse_point);
 		if ((ev->cur.output.x - pMainView->prev_mouse_point < 0 && (currentindex + 1 < count
 		        || (currentindex + 1 == count  && bx > 0))) || (ev->cur.output.x - pMainView->prev_mouse_point > 0
 		                && (currentindex > 0))) {
@@ -96,7 +96,7 @@ void _on_slider_mouse_moved(void *data, Evas *e, Evas_Object *obj, void *event_i
 			ivug_slider_set_Photocam_moved(pMainView->pSliderNew, pMainView->is_moved);
 			if (pMainView->currentphotocam == PHOTOCAM_0) {
 				evas_object_geometry_get(pMainView->photocam0, &bx, &by, &bw, &bh);
-				MSG_HIGH("_on_slider_mouse_moved current x,y %d,%d", bx, by);
+				MSG_MAIN_HIGH("_on_slider_mouse_moved current x,y %d,%d", bx, by);
 				evas_object_move(pMainView->photocam0, bx + (ev->cur.output.x - pMainView->prev_mouse_point) , by);
 				if (currentindex + 1 != count) {
 					evas_object_geometry_get(pMainView->photocam, &bx, &by, &bw, &bh);
@@ -109,7 +109,7 @@ void _on_slider_mouse_moved(void *data, Evas *e, Evas_Object *obj, void *event_i
 				}
 			} else if (pMainView->currentphotocam == PHOTOCAM_1) {
 				evas_object_geometry_get(pMainView->photocam, &bx, &by, &bw, &bh);
-				MSG_HIGH("_on_slider_mouse_moved current x,y %d,%d", bx, by);
+				MSG_MAIN_HIGH("_on_slider_mouse_moved current x,y %d,%d", bx, by);
 				evas_object_move(pMainView->photocam, bx + (ev->cur.output.x - pMainView->prev_mouse_point) , by);
 				if (currentindex + 1 != count) {
 					evas_object_geometry_get(pMainView->photocam2, &bx, &by, &bw, &bh);
@@ -122,7 +122,7 @@ void _on_slider_mouse_moved(void *data, Evas *e, Evas_Object *obj, void *event_i
 				}
 			} else if (pMainView->currentphotocam == PHOTOCAM_2) {
 				evas_object_geometry_get(pMainView->photocam2, &bx, &by, &bw, &bh);
-				MSG_HIGH("_on_slider_mouse_moved current x,y %d,%d", bx, by);
+				MSG_MAIN_HIGH("_on_slider_mouse_moved current x,y %d,%d", bx, by);
 				evas_object_move(pMainView->photocam2, bx + (ev->cur.output.x - pMainView->prev_mouse_point) , by);
 				if (currentindex + 1 != count) {
 					evas_object_geometry_get(pMainView->photocam0, &bx, &by, &bw, &bh);
@@ -315,10 +315,13 @@ void _on_slider_mouse_up(void *data, Evas *e, Evas_Object *obj, void *event_info
 			Media_Item *mItem = ivug_medialist_get_current_item(pMainView->mList);
 			Media_Data *mdata = ivug_medialist_get_data(mItem);
 			char *mime_type = ivug_fileinfo_get_mime_type(mdata->filepath);
+			Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
 			if (strncmp(mime_type, "video/", strlen("video/")) == 0) {
-				Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
 				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "show,icon", "video_play_icon");
 				pMainView->is_play_Icon = true;
+			} else {
+				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "hide,icon", "video_play_icon");
+				pMainView->is_play_Icon = false;
 			}
 		}
 	}

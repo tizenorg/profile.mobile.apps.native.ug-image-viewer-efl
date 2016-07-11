@@ -532,6 +532,15 @@ static void _on_layout_resize(void *data, Evas_Object *obj, void *event_info)
 				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "set_portrait", "glsurface");
 			}
 		}
+		Media_Item *item = ivug_medialist_get_current_item(pMainView->mList);
+		Media_Data *pData = ivug_medialist_get_data(item);
+		if (pData->slide_type == SLIDE_TYPE_IMAGE) {
+			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "hide,icon", "video_play_icon");
+			pMainView->is_play_Icon = false;
+		} else {
+			edje_object_signal_emit(elm_layout_edje_get(sn_layout), "show,icon", "video_play_icon");
+			pMainView->is_play_Icon = true;
+		}
 	}
 }
 
