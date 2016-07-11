@@ -19,7 +19,7 @@
 #define __IVUG_EXT_UG_H__
 
 #include <stdbool.h>
-
+#include <notification.h>
 #include "ivug-define.h"
 
 #ifdef __cplusplus

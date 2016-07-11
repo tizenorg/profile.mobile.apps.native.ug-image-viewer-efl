@@ -324,6 +324,7 @@ bool ivug_ext_launch_videoplayer(const char *uri)
 	if (ret != APP_CONTROL_ERROR_NONE)
 	{
 		MSG_IMAGEVIEW_ERROR("app_control_send_launch_request failed, 0x%08x", ret);
+		notification_status_message_post(GET_STR(IDS_UNABLE_TO_OPEN_FILE));
 		goto VIDEO_PLAYER_END;
 	}
 
