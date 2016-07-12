@@ -755,6 +755,11 @@ void ivug_slider_new_set_photocam(Ivug_SliderNew *slider_new, Evas_Object * phot
 	slider_new->photocam = photocam;
 }
 
+Evas_Object * ivug_slider_new_get_photocam(Ivug_SliderNew *slider_new)
+{
+	return slider_new->photocam;
+}
+
 bool ivug_slider_new_is_zoomed(Ivug_SliderNew *slider_new)
 {
 	return FALSE;

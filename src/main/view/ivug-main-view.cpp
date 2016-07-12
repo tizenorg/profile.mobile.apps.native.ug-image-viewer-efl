@@ -85,19 +85,23 @@ _check_changed_cb(void *data, Evas_Object *obj, void *event_info)
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	Eina_Bool state = elm_check_state_get(obj);
 	MSG_MAIN_HIGH("Check %d", state);
+	char *default_thumbnail_edj_path = DEFAULT_THUMBNAIL_PATH;
 
 	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
-	bool isSupported = ivug_is_supported_file_type(mdata->filepath);
 
 	/* Return only if caller is "ug-gallery-efl" */
-	if ((pMainView->media_type != IVUG_MEDIA_TYPE_ALL) && (isSupported == false)) {
+	if ((pMainView->media_type != IVUG_MEDIA_TYPE_ALL) &&
+			((mdata->thumbnail_path == NULL) || (!strcmp(elm_photocam_file_get(ivug_slider_new_get_photocam(pMainView->pSliderNew)),
+				default_thumbnail_edj_path)))) {
 		elm_check_state_set(obj, !state);
 		ivug_notification_create(IDS_UNKOWN_FORMAT);
 		MSG_MAIN_HIGH("Unsupported File");
+		free(default_thumbnail_edj_path);
 		return;
 	}
 
+	free(default_thumbnail_edj_path);
 	if (state == true) {
 		struct stat stFileInfo;
 		stat(mdata->fileurl, &stFileInfo);

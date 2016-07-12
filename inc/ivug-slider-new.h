@@ -58,6 +58,7 @@ slider_mode_e ivug_slider_new_get_mode(Ivug_SliderNew * slider_new);
 void ivug_slider_new_set_list(Ivug_SliderNew * slider_new, Media_List *mList,Media_Item *current);
 
 void ivug_slider_new_set_photocam(Ivug_SliderNew *slider_new,Evas_Object * photocam);
+Evas_Object * ivug_slider_new_get_photocam(Ivug_SliderNew *slider_new);
 void ivug_slider_set_current_Photocam(Ivug_SliderNew *slider_new,int pc);
 void ivug_slider_set_Photocam_moved(Ivug_SliderNew *slider_new,bool pcm);
 void  ivug_set_photocam_reset(Ivug_SliderNew *slider_new);
