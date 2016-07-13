@@ -231,7 +231,7 @@ DBG_MSG_CUST12	= 13,
 DBG_MSG_CUST13	= 14,
 */
 
-	static log_priority priority[] = {
+	static const log_priority priority[] = {
 		DLOG_WARN,
 		DLOG_WARN,
 		DLOG_WARN, 		// MSG HIGH

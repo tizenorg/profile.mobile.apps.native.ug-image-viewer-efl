@@ -152,6 +152,7 @@ static void _on_add_tag_view_response(Ivug_NameView *pView, ivug_name_response r
 	ivug_main_view_set_hide_timer(pMainView);
 }
 
+#if 0
 static void _on_edit_weather_view_destroy(void *data, Evas_Object *obj, void *event_info)
 {
 	MSG_MAIN_HIGH("transition finished");
@@ -161,8 +162,9 @@ static void _on_edit_weather_view_destroy(void *data, Evas_Object *obj, void *ev
 	evas_object_smart_callback_del(pMainView->navi_bar, "transition,finished",
 	                               _on_edit_weather_view_destroy);
 }
+#endif
 
-
+#if 0
 static void _ivug_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	char *path = (char *)event_info;
@@ -201,6 +203,7 @@ static void _ivug_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, void *ev
 	ivug_medialist_set_current_item(pMainView->mList, mitem);
 	ivug_slider_new_update_list(pMainView->pSliderNew, pMainView->mList);
 }
+#endif
 
 void *ivug_listpopup_item_get_data(Ivug_ListPopup_Item *item)
 {
@@ -703,7 +706,7 @@ void on_btn_copy_clicked(void *data, Evas_Object *obj, void *event_info)
 		// No need failed????
 	}
 }
-
+#if 0
 static void _on_name_view_destroy(void *data, Evas_Object *obj, void *event_info)
 {
 	MSG_MAIN_HIGH("transition finished");
@@ -715,7 +718,7 @@ static void _on_name_view_destroy(void *data, Evas_Object *obj, void *event_info
 	evas_object_smart_callback_del(pMainView->navi_bar, "transition,finished",
 	                               _on_name_view_destroy);
 }
-
+#endif
 static bool _is_exist(Media_Data *mdata, const char *file)
 {
 	IV_ASSERT(mdata != NULL);
@@ -1340,7 +1343,7 @@ void _on_mainview_edit(Ivug_MainView *pMainView)
 }
 
 #include <Ecore_File.h>
-
+#if 0
 static void _on_add_comment_view_destroy(void *data, Evas_Object *obj, void *event_info)
 {
 	MSG_MAIN_HIGH("transition finished");
@@ -1352,7 +1355,7 @@ static void _on_add_comment_view_destroy(void *data, Evas_Object *obj, void *eve
 	evas_object_smart_callback_del(pMainView->navi_bar, "transition,finished",
 	                               _on_add_comment_view_destroy);
 }
-
+#endif
 static void
 _ivug_ctxpopup_download_sel_cb(void *data, Evas_Object *obj, void *event_info)
 {

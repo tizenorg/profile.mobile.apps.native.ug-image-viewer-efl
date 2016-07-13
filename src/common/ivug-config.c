@@ -36,53 +36,6 @@
 
 enum { STATE_FALSE = 0, STATE_TRUE = 1, };
 
-/*
-	Set lock screen with given image.
-
-	CAUTION : does not check filepath integrity
-*/
-bool ivug_config_set_lockscreen_image(const char* filepath)
-{
-	if (filepath == NULL)
-	{
-		MSG_IMAGEVIEW_ERROR("Lock screen path is NULL");
-		return FALSE;
-	}
-
-	if (system_settings_set_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, filepath) != SYSTEM_SETTINGS_ERROR_NONE)
-	{
-		MSG_IMAGEVIEW_ERROR("Lockscreen set Error : %s", filepath);
-		return FALSE;
-	}
-
-	MSG_IMAGEVIEW_HIGH("Set Lockscreen filepath = %s", filepath);
-
-	return TRUE;
-}
-
-/*
-	Set home screen with given image
-
-	CAUTION : does not check filepath integrity
-*/
-bool ivug_config_set_homescreen_image(const char* filepath)
-{
-	if (filepath == NULL)
-	{
-		MSG_IMAGEVIEW_ERROR("Home screen path is NULL");
-		return FALSE;
-	}
-
-	if (system_settings_set_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_HOME_SCREEN, filepath) != SYSTEM_SETTINGS_ERROR_NONE)
-	{
-		MSG_IMAGEVIEW_ERROR("Homescreen set Error : %s", filepath);
-		return FALSE;
-	}
-
-	MSG_IMAGEVIEW_HIGH("Set Homescreen filepath = %s", filepath);
-	return TRUE;
-}
-
 static bool
 _ivug_config_get_slideshow_repeat_state(void)
 {

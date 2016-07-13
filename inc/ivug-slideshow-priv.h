@@ -35,7 +35,7 @@
 #include "ivug-effect.h"
 #include "ivug-main-view.h"
 
-using namespace std;
+//using namespace std;
 
 #define DATA_PATH 						DATADIR"/"
 

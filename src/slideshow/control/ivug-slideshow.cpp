@@ -275,6 +275,8 @@ static void _ivug_ss_update_pos(SlideShow *pSlideShow, Evas_Coord x, Evas_Coord 
 	                 x + pSlideShow->screen_w + IVUG_IMAGE_BETWEEN_MARGIN ,
 	                 y);
 }
+
+#if 0
 static bool _ivug_ss_load_next_image(SlideShow *pSlideShow)
 {
 	ivug_retv_if(!pSlideShow, false);
@@ -304,6 +306,7 @@ static bool _ivug_ss_load_next_image(SlideShow *pSlideShow)
 
 	return true;
 }
+#endif
 
 void _ivug_ss_effect_finished(void *data)
 {

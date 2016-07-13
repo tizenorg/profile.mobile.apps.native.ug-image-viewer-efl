@@ -110,7 +110,7 @@ RegisteredCallback *_find_callback(Eina_List *cb_list, FnMessage cb)
 
 	EINA_LIST_FOREACH(cb_list,l, pCallback)
 	{
-		if ((pCallback->callback == cb))
+		if (pCallback->callback == cb)
 		{
 			return pCallback;
 		}

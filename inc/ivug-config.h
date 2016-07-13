@@ -46,10 +46,6 @@ typedef enum {
 extern "C" {
 #endif
 
-bool ivug_config_set_lockscreen_image(const char* filepath);
-
-bool ivug_config_set_homescreen_image(const char* filepath);
-
 void ivug_config_set_interval_time(int index);
 
 ivug_effect_type

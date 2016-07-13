@@ -36,7 +36,7 @@ static double _anim_linear(double t, double b, double c, double d)
 static double _anim_sine(double t, double b, double c, double d)
 {
 /* TODO : Consider below table reconstruct. need only 0.0 ~ 1.0 range*/
-	static const double const SIN_TABLE[91] = {
+	static const double SIN_TABLE[91] = {
 		0.0000f, 0.0174f, 0.0349f, 0.0523f, 0.0698f,
 		0.0872f, 0.1045f, 0.1219f, 0.1392f, 0.1564f,
 		0.1736f, 0.1908f, 0.2079f, 0.2249f, 0.2419f,

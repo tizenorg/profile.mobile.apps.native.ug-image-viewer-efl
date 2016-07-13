@@ -150,7 +150,7 @@ static void _on_ctxpopup_dismissed(void *data, Evas_Object *obj, void *event_inf
 
 	if (iv_popup->callback)
 	{
-		iv_popup->response = LPPOPUP_RESPONSE_NONE;
+		iv_popup->response = (Popup_Response) LPPOPUP_RESPONSE_NONE;
 		iv_popup->callback(iv_popup->data, iv_popup->popup, &(iv_popup->response));
 	}
 

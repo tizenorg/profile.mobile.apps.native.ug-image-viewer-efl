@@ -106,6 +106,7 @@ struct _IvugCropUG {
 	bool bAddtoDB;
 } ;
 
+#if 0
 static void
 _send_result(const char *key1, const char *val1, const char *key2, const char *val2)
 {
@@ -135,7 +136,9 @@ _send_result(const char *key1, const char *val1, const char *key2, const char *v
 
 	app_control_destroy(service);
 }
+#endif
 
+#if 0
 static void  _ivug_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	IvugCropUG *crop_ug = (IvugCropUG *)data;
@@ -164,7 +167,9 @@ static void  _ivug_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, void *e
 	DESTROY_ME();
 
 }
+#endif
 
+#if 0
 static void _ivug_crop_view_cancel_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	//ivug_crop_ug_destroy((IvugCropUG *)data);
@@ -180,6 +185,7 @@ static void _ivug_crop_view_cancel_clicked_cb(void *data, Evas_Object *obj, void
 	DESTROY_ME();
 
 }
+#endif
 
 Evas_Object * ivug_crop_ug_get_layout(IvugCropUG * crop_ug)
 {
