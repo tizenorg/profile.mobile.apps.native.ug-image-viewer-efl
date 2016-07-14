@@ -15,10 +15,11 @@
 *
 */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 #include "ivug-uuid.h"
-#include <stdio.h>		// for NULL
-#include <stdlib.h>		// free
-#include <string.h>		// strdup
 
 inline UUID uuid_assign(UUID id)
 {

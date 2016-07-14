@@ -20,15 +20,8 @@
 
 #include "ivug-debug.h"
 #include "ivug-define.h"
-
 #include "ivug-base.h"
 
-
-/*
-	When turn on TRACE_MEMORY, you should set sticky bit to memsp.
-
-	#chmod 4777 /usr/bin/memps
-*/
 #undef TRACE_MEMORY
 
 #ifdef TRACE_MEMORY
@@ -52,18 +45,12 @@ _DESTRUCTOR void _DLLExit(void)
 
 int main(int argc, char *argv[])
 {
-
 	struct _ug_data ugd;
 
 	MSG_IMAGEVIEW_HIGH("IMAGE_VIEWER_MODULE ENTRANCE. Ver=12.0. RunCount=%d", nRunCount);
 
 	ui_app_lifecycle_callback_s ops;
 
-/*	int ret = APP_ERROR_NONE;
-
-	app_event_handler_h hLanguageChangedHandle;
-	app_event_handler_h hRegionFormatChangedHandle;
-*/
 	memset(&ops, 0x0, sizeof(ui_app_lifecycle_callback_s));
 	memset(&ugd, 0x0, sizeof(struct _ug_data));
 
@@ -77,16 +64,5 @@ int main(int argc, char *argv[])
 	ops.resume = on_resume;
 	ops.app_control = ivug_param_create_from_bundle;
 
-	/*ret = ui_app_add_event_handler(&hRegionFormatChangedHandle, APP_EVENT_REGION_FORMAT_CHANGED, _language_changed_cb, (void*)&ugd);
-	if (ret != APP_ERROR_NONE) {
-		MSG_IMAGEVIEW_ERROR("APP_EVENT_REGION_FORMAT_CHANGED ui_app_add_event_handler failed : [%d]!!!", ret);
-		return -1;
-	}
-
-	ret = ui_app_add_event_handler(&hLanguageChangedHandle, APP_EVENT_LANGUAGE_CHANGED, _language_changed_cb, (void*)&ugd);
-	if (ret != APP_ERROR_NONE) {
-		MSG_IMAGEVIEW_ERROR("APP_EVENT_LANGUAGE_CHANGED ui_app_add_event_handler failed : [%d]!!!", ret);
-		return -1;
-	}*/
 	return ui_app_main(argc, argv, &ops, &ugd);
 }

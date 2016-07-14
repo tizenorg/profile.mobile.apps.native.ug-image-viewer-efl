@@ -21,9 +21,7 @@
 #include "ivug-define.h"
 
 #include <Elementary.h>
-//#include "ivug-medialist.h"
 #include "ivug-media.h"
-#include "ivug-motion.h"
 
 typedef void (*callback_t)(void *handle, Media_Item *mItem, void *data);
 typedef void (*location_callback_t )(void *handle, int x, int y, int w, int h, void *data);
@@ -126,13 +124,6 @@ void ivug_slider_update_icon_layer(Ivug_SliderNew *slider_new);
 void  ivug_slider_new_hide_play_icon(Ivug_SliderNew *slider_new);
 
 void ivug_reset_zoom(Ivug_SliderNew *slider_new);
-
-
-/*
-	Below API will be deprecated!
-*/
-
-
 
 #ifdef __cplusplus
 }

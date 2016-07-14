@@ -336,8 +336,6 @@ ivug_context_init(Evas_Object *win, Evas_Object *conform)
 
 	MSG_IMAGEVIEW_HIGH("Screen WH(%dx%d) Indicator(%s,%s,%s)", w, h, szMode[Context->indi_mode], szOpacity[Context->indi_o_mode], szOverlap[Context->oMode]);
 
-	PERF_CHECK_BEGIN(LVL2, "theme add");
-
 	Context->th = elm_theme_new();
 
 	IV_ASSERT(Context->th != NULL);
@@ -347,18 +345,12 @@ ivug_context_init(Evas_Object *win, Evas_Object *conform)
 
 	elm_theme_extension_add(Context->th, full_path(EDJ_PATH, "/ivug-custom.edj"));
 
-	PERF_CHECK_END(LVL2, "theme add");
-
 	ContextList = eina_list_prepend(ContextList, Context);
 
 	MSG_IVUG_HIGH("Append to list. Context=0x%08x", Context);
 
 #ifdef USE_NEW_DB_API
-	PERF_CHECK_BEGIN(LVL2, "media svc connect");
-
 	ivug_db_create();
-
-	PERF_CHECK_END(LVL2, "media svc connect");
 #endif
 
 	Context->callback_handle = ivug_callback_register();
@@ -454,19 +446,13 @@ ivug_context_deinit()
 		}
 	}
 #ifdef USE_NEW_DB_API
-	PERF_CHECK_BEGIN(LVL2, "ivug_db_destroy");
 	ivug_db_destroy();
-	PERF_CHECK_END(LVL2, "ivug_db_destroy");
 #endif
 char *custom_edj_path = full_path(EDJ_PATH, "/ivug-custom.edj");
-
-	PERF_CHECK_BEGIN(LVL2, "elm_theme_free");
 	if (Context && Context->th) {
 		elm_theme_extension_del(Context->th, custom_edj_path);
 		elm_theme_free(Context->th);
 	}
-
-	PERF_CHECK_END(LVL2, "elm_theme_free");
 
 	MSG_IVUG_HIGH("Remove from list. Context=0x%08x", Context);
 

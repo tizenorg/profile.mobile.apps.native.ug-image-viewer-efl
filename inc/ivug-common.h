@@ -25,7 +25,6 @@
 #include <Elementary.h>
 #include <assert.h>
 
-#include "statistics.h"
 #include "ivug-debug.h"
 #include "ivug-string.h"
 #include "ivug-util.h"

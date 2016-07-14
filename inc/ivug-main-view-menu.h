@@ -102,43 +102,18 @@ struct Ivug_ListPopup_Item {
 
 void ivug_notification_create(const char* text);
 
-/*
-	Button handlers for main view
-*/
-
 void on_btn_slideshow_clicked(Ivug_MainView *pMainView);
 
 Evas_Object* ivug_ctx_popup_create(Ivug_MainView *pMainView);
-
-bool ivug_listpopup_context_set_rotate_enable(Evas_Object *obj, bool enable);
-
-bool ivug_listpopup_context_get_rotate_enable(Evas_Object *obj);
 
 void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info);
 
 void _on_remove_main_view_ui(Ivug_MainView *pMainView);
 
-
-/*
-	Save current contents to disk
-*/
-void _on_mainview_save(Ivug_MainView *pMainView);
-void _on_mainview_share(Ivug_MainView *pMainView);
 void _on_mainview_delete(Ivug_MainView *pMainView);
 
-
-/*
-	Edit Image or Video
-*/
-void _on_mainview_edit(Ivug_MainView *pMainView);
-void _on_play_continous_shot(Ivug_MainView *pMainView);
 void _set_thumblist_mode(Ivug_MainView *pMainView, Media_Data *mdata, Image_Object *image_obj);
 
-
-/*
-	Destroy detail view
-*/
-void _delete_details_view(Ivug_MainView *pMainView );
 
 #ifdef __cplusplus
 }
