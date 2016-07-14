@@ -96,96 +96,9 @@ struct _IvugCropUG {
 
 	Evas_Object *layout;
 	Evas_Object *parent;
-
-// Not using navi_bar
-//	Evas_Object *navi_bar;
-//	Elm_Object_Item *navi_it;
-
 	char *filepath;
-
 	bool bAddtoDB;
 } ;
-
-#if 0
-static void
-_send_result(const char *key1, const char *val1, const char *key2, const char *val2)
-{
-	app_control_h service = NULL;
-	int ret = app_control_create(&service);
-	if (ret != APP_CONTROL_ERROR_NONE) {
-		MSG_ERROR("app_control_create failed");
-	}
-
-	if (key1 && val1) {
-		MSG_SEC("Bundle 1 : [%s = %s]", key1, val1);
-		ret = app_control_add_extra_data(service, key1, val1);
-		if (ret != APP_CONTROL_ERROR_NONE) {
-			MSG_HIGH("app_control_add_extra_data failed");
-		}
-	}
-
-	if (key2 && val2) {
-		MSG_SEC("Bundle 2 : [%s = %s]", key2, val2);
-		ret = app_control_add_extra_data(service, key2, val2);
-		if (ret != APP_CONTROL_ERROR_NONE) {
-			MSG_HIGH("app_control_add_extra_data failed");
-		}
-	}
-
-	app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
-
-	app_control_destroy(service);
-}
-#endif
-
-#if 0
-static void  _ivug_crop_view_ok_clicked_cb(void *data, Evas_Object *obj, void *event_info)
-{
-	IvugCropUG *crop_ug = (IvugCropUG *)data;
-
-	char *path = (char *)event_info;
-
-	evas_object_smart_callback_del(obj, "ok,clicked", _ivug_crop_view_ok_clicked_cb);
-
-	if (crop_ug->bAddtoDB == true) {
-		media_handle m_handle = NULL;
-
-		m_handle = ivug_db_insert_file_to_DB(path);
-		if (m_handle == NULL) {
-			MSG_ERROR("ivug_db_insert_file_to_DB failed %s", path);
-		} else {
-			ivug_db_destroy_file_handle(m_handle);
-		}
-	}
-
-	_send_result("crop_image_path", path, "http://tizen.org/appcontrol/data/selected", path);
-
-	MSG_HIGH("Start destroy crop ug. bAddToDB=%d", crop_ug->bAddtoDB);
-
-//	ivug_set_indicator_overlap_mode(false);
-//	ug_destroy_me(gGetUGHandle());
-	DESTROY_ME();
-
-}
-#endif
-
-#if 0
-static void _ivug_crop_view_cancel_clicked_cb(void *data, Evas_Object *obj, void *event_info)
-{
-	//ivug_crop_ug_destroy((IvugCropUG *)data);
-
-	evas_object_smart_callback_del(obj, "cancel,clicked", _ivug_crop_view_cancel_clicked_cb);
-
-	_send_result("crop_image_path", NULL, "http://tizen.org/appcontrol/data/selected", NULL);
-
-	MSG_HIGH("Start destroy ug.");
-
-//	ivug_set_indicator_overlap_mode(false);
-//	ug_destroy_me(gGetUGHandle());
-	DESTROY_ME();
-
-}
-#endif
 
 Evas_Object * ivug_crop_ug_get_layout(IvugCropUG * crop_ug)
 {

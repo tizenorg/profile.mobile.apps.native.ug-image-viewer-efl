@@ -22,8 +22,6 @@
 #include <string.h>
 #include <assert.h>
 #include <time.h>
-
-#include "statistics.h"
 #include "debug.h"
 
 
