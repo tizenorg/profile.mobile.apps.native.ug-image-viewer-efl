@@ -23,8 +23,6 @@
 #include "ivug-db.h"
 #include "ivug-filter.h"
 
-//#include "ivug-medialist.h"//chandan
-
 #include <Eina.h>
 #include <stdbool.h>
 

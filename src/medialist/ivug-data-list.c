@@ -23,7 +23,6 @@
 #include "ivug-debug.h"
 #include "ivug-media.h"
 #include "ivug-mediadata.h"
-#include "ivug-medialist.h"//chandan
 
 #include "ivug-file-info.h"
 

@@ -32,7 +32,7 @@ extern "C" {
 	Launch extern module.
 */
 bool ivug_ext_launch_videoplayer_simple(const char *filepath);
-bool ivug_ext_launch_videoplayer(const char *uri);
+bool ivug_ext_launch_videoplayer(const char *uri, bool isLockScreen);
 
 #ifdef USE_EXT_SLIDESHOW
 ui_gadget_h  ivug_ext_launch_select_music(ug_result_cb result_func, ug_destroy_cb destroy_func, void *data);

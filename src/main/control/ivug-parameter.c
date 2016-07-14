@@ -114,6 +114,7 @@ _get_view_mode(ivug_parameter* data, const char* val)
 #define IVUG_BUNDLE_VALUE_VIEW_MODE_SINGLE 	"SINGLE"
 #define IVUG_BUNDLE_VALUE_VIEW_MODE_GALLERY 	"GALLERY"
 #define IVUG_BUNDLE_VALUE_VIEW_MODE_CAMERA	"CAMERA"
+#define IVUG_BUNDLE_VALUE_VIEW_MODE_CAMERA_SIMPLE	"CAMERA_SIMPLE"
 #define IVUG_BUNDLE_VALUE_VIEW_MODE_DISPLAY	"DISPLAY"
 #define IVUG_BUNDLE_VALUE_VIEW_MODE_SAVE	"SAVE"
 #define IVUG_BUNDLE_VALUE_VIEW_MODE_SETAS		"SETAS"
@@ -135,7 +136,11 @@ _get_view_mode(ivug_parameter* data, const char* val)
 		data->start_index = 1;						//apply window loading
 		data->view_by = IVUG_VIEW_BY_FOLDER;		// In camera case, All images should be shown in camera folder.
 		return IVUG_MODE_CAMERA;
-	} else if (strncmp(val, IVUG_BUNDLE_VALUE_VIEW_MODE_SINGLE, len) == 0) {
+	} else if (strncmp(val, IVUG_BUNDLE_VALUE_VIEW_MODE_CAMERA_SIMPLE, len) == 0) {
+		data->start_index = 1;						//apply window loading
+		data->view_by = IVUG_VIEW_BY_FOLDER;
+		return IVUG_MODE_CAMERA_SIMPLE;
+	}else if (strncmp(val, IVUG_BUNDLE_VALUE_VIEW_MODE_SINGLE, len) == 0) {
 		// All menu is available
 		if (data->view_by != IVUG_VIEW_BY_FOLDER)
 			data->view_by = IVUG_VIEW_BY_FILE;
@@ -572,7 +577,9 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 			app_control_get_extra_data (service, IVUG_BUNDLE_KEY_PATH, &szFilePath);
 		}
 
-		data->mode = IVUG_MODE_DISPLAY;
+		if (data->mode != IVUG_MODE_CAMERA_SIMPLE) {
+			data->mode = IVUG_MODE_DISPLAY;
+		}
 		data->view_by = IVUG_VIEW_BY_FILE;
 	} else {
 		app_control_get_extra_data (service, IVUG_BUNDLE_KEY_PATH, &szFilePath);
@@ -1014,9 +1021,6 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 			ugd->bErrMsg = strdup("Layout Loading Fail");
 			goto ON_CREATE_ERROR;
 		}
-//		ugd->main_view->window = ugd->window;
-
-		//elm_win_resize_object_add(ugd->window, ugd->main_view);//chandan
 
 		if (ugd->ivug_param->bTestMode == true) {
 			ivug_main_view_set_testmode(ugd->main_view, true);

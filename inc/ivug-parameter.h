@@ -34,6 +34,7 @@ typedef enum {
 	IVUG_MODE_SAVE,					// from "take a photo" in other app
 	IVUG_MODE_FILE,					// file viewer(can flick)
 	IVUG_MODE_CAMERA,				// camera(can flick)
+	IVUG_MODE_CAMERA_SIMPLE,		// Lockscreen Camera
 	IVUG_MODE_SETAS,				// SetAs in setting menu.
 	IVUG_MODE_SLIDESHOW,			// Slideshow
 	IVUG_MODE_HELP,

@@ -268,7 +268,7 @@ EMAIL_END:
 }
 #endif
 
-bool ivug_ext_launch_videoplayer(const char *uri)
+bool ivug_ext_launch_videoplayer(const char *uri, bool isLockScreen)
 {
 	MSG_IMAGEVIEW_HIGH("%s. URI=%s", __func__, uri);
 
@@ -298,9 +298,11 @@ bool ivug_ext_launch_videoplayer(const char *uri)
 		goto VIDEO_PLAYER_END;
 	}
 
-	ret = app_control_set_launch_mode(handle, APP_CONTROL_LAUNCH_MODE_GROUP);
-	if (ret != APP_CONTROL_ERROR_NONE) {
-		MSG_IMAGEVIEW_ERROR("app_control GROUP_MODE Failed");
+	if (isLockScreen == true) {
+		ret = app_control_set_launch_mode(handle, APP_CONTROL_LAUNCH_MODE_GROUP);
+		if (ret != APP_CONTROL_ERROR_NONE) {
+			MSG_IMAGEVIEW_ERROR("app_control GROUP_MODE Failed");
+		}
 	}
 
 	ret = app_control_add_extra_data(handle, "launching_application", "image_viewer");

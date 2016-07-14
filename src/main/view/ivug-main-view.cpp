@@ -702,11 +702,14 @@ _on_slider_playvideo_icon_clicked(void *data, Evas_Object *obj, const char *sour
 		return;
 	}
 
-	{
-		MSG_MAIN_HIGH("Launching video player");
-		ivug_ext_launch_videoplayer(mdata->filepath);
-		//ivug_ext_launch_default(mdata->filepath, APP_CONTROL_OPERATION_VIEW, NULL, NULL, NULL);
+	MSG_MAIN_HIGH("Launching video player");
+	if (pMainView->mode == IVUG_MODE_CAMERA_SIMPLE) {
+		ivug_ext_launch_videoplayer(mdata->filepath, true);
+	} else {
+		ivug_ext_launch_videoplayer(mdata->filepath, false);
 	}
+	//ivug_ext_launch_default(mdata->filepath, APP_CONTROL_OPERATION_VIEW, NULL, NULL, NULL);
+
 
 }
 
