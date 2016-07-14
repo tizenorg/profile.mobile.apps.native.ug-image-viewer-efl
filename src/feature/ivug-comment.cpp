@@ -17,8 +17,6 @@
 
 #include "ivug-comment.h"
 
-#include "jpeg.h"
-
 using namespace iv;
 
 extern "C" Handle ivug_comment_loadfile(const char *fname)

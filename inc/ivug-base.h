@@ -53,8 +53,6 @@ struct _ug_data {
 extern "C" {
 #endif
 
-void FreeUGData(ug_data *ug);
-
 bool on_create(void *priv);
 
 void on_pause(void *priv);
@@ -62,8 +60,6 @@ void on_pause(void *priv);
 void on_resume(void *priv);
 
 Evas_Object *create_layout(Evas_Object *parent, const char *edj, const char *group);
-
-void _language_changed_cb(void *user_data);
 
 void on_destroy(void *priv);
 

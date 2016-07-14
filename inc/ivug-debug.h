@@ -19,7 +19,6 @@
 #define _IVUG_DEBUG_H_
 
 #include <dlog.h>
-#include "statistics.h"
 #include "debug.h"
 
 #define IVUG_LOG_OUTPUT_DLOG
@@ -34,25 +33,6 @@
 #define LVL5 (5)
 #define LVL6 (6)
 #define LVL7 (7)
-
-#ifdef PERF_TIME
-
-// accum item handling
-#define PERF_CHECK_BEGIN(lvl, name)		iv_ta_accum_item_begin(lvl, name,false,__FILE__,__LINE__)
-#define PERF_CHECK_END(lvl, name)		iv_ta_accum_item_end(lvl, name,false,__FILE__,__LINE__)
-
-// Print out
-#define PERF_SHOW_RESULT(fp)		iv_ta_accum_show_result_fp(fp)
-
-#else
-
-#define PERF_CHECK_BEGIN(lvl, name)
-#define PERF_CHECK_END(lvl, name)
-
-// Print out
-#define PERF_SHOW_RESULT(fp)
-
-#endif		// PERF_TIME
 
 enum {
 	IVUG_MSG_COLOR_DEFAULT	= 0,

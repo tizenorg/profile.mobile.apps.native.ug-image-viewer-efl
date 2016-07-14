@@ -123,18 +123,6 @@ public:
 			return false;
 		}
 
-//		int ret = -1;
-
-		/*PERF_CHECK_BEGIN(LVL5, "sensor_start");
-		ret = sensor_start(mhandle_tilt, SENSOR_MOTION_TILT);
-		PERF_CHECK_END(LVL5, "sensor_start");
-		if(ret != SENSOR_ERROR_NONE)
-		{
-			MSG_ERROR("sensor_start SENSOR_MOTION_TILT fail. %d", ret);
-			bStarted_tilt = false;
-			return false;
-		}*/
-
 		bStarted_tilt = true;
 
 		return true;
@@ -146,18 +134,6 @@ public:
 			MSG_ERROR("Panning Sensor already started");
 			return false;
 		}
-
-//		int ret = -1;
-
-//		PERF_CHECK_BEGIN(LVL5, "sensor_start");
-//		ret = sensor_start(mhandle_panning, SENSOR_MOTION_PANNING_BROWSE);
-//		PERF_CHECK_END(LVL5, "sensor_start");
-//		if(ret != SENSOR_ERROR_NONE)
-//		{
-//			MSG_ERROR("sensor_start SENSOR_MOTION_PANNING_BROWSE fail. %d", ret);
-//			bStarted_panning = false;
-//			return false;
-//		}
 
 		bStarted_panning = true;
 		return true;
@@ -269,13 +245,7 @@ public:
 
 		if (client_list.size() == 1) {
 			MSG_HIGH("Start tilt sensor");
-#ifdef USE_SENSOR_THREAD
-			PERF_CHECK_BEGIN(LVL5, "sensor_start_async");
-			start_async_tilt();
-			PERF_CHECK_END(LVL5, "sensor_start_async");
-#else
 			start_tilt();
-#endif
 		}
 
 		MSG_HIGH("Add client. Client=%d Handle=0x%08x",
@@ -304,13 +274,7 @@ public:
 
 		if (client_list.size() == 1) {
 			MSG_HIGH("Start panning sensor");
-#ifdef USE_SENSOR_THREAD
-			PERF_CHECK_BEGIN(LVL5, "sensor_start_async");
-			start_async_panning();
-			PERF_CHECK_END(LVL5, "sensor_start_async");
-#else
 			start_panning();
-#endif
 		}
 
 		MSG_HIGH("Add client. Client=%d Handle=0x%08x",
@@ -461,33 +425,6 @@ bool CMotion::init_sensor_tilt()
 		return true;
 	}
 
-#ifdef TEST_SENSOR_ERROR
-	MSG_ERROR("motion sensor attach fail.");
-	return false;
-#endif
-	MSG_HIGH("init sensor");
-
-	PERF_CHECK_BEGIN(LVL4, "sensor_create");
-//	ret = sensor_create(&mhandle_tilt);
-//	if(ret != SENSOR_ERROR_NONE)
-//	{
-//		MSG_ERROR("tilt sensor_create fail. %d", ret);
-//		return false;
-//	}
-//	PERF_CHECK_END(LVL4, "sensor_create");
-//
-//	PERF_CHECK_BEGIN(LVL4, "sensor_motion_tilt_set_cb");
-//	ret = sensor_motion_tilt_set_cb(mhandle_tilt, on_motion, (void *)this);
-//	if(ret != SENSOR_ERROR_NONE)
-//	{
-//		MSG_ERROR("sensor_motion_tilt_set_cb fail. %d", ret);
-//		sensor_destroy(mhandle_tilt);
-//		return false;
-//	}
-	PERF_CHECK_END(LVL4, "sensor_motion_tilt_set_cb");
-
-	MSG_HIGH("sensor init succeded");
-
 	bInit_tilt = true;
 	return true;
 
@@ -495,39 +432,10 @@ bool CMotion::init_sensor_tilt()
 
 bool CMotion::init_sensor_panning()
 {
-//	int ret = -1;
-
 	if (bInit_panning == true) {
 		MSG_WARN("already sensor is initialized");
 		return true;
 	}
-
-#ifdef TEST_SENSOR_ERROR
-	MSG_ERROR("motion sensor attach fail.");
-	return false;
-#endif
-	MSG_HIGH("init sensor");
-
-//	PERF_CHECK_BEGIN(LVL4, "sensor_create");
-//	ret = sensor_create(&mhandle_panning);
-//	if(ret != SENSOR_ERROR_NONE)
-//	{
-//		MSG_ERROR("panning sensor_create fail. %d", ret);
-//		return false;
-//	}
-//	PERF_CHECK_END(LVL4, "sensor_create");
-//
-//	PERF_CHECK_BEGIN(LVL4, "sensor_motion_panning_browse_set_cb");
-//	ret = sensor_motion_panning_browse_set_cb(mhandle_panning, on_motion, (void *)this);
-//	if(ret != SENSOR_ERROR_NONE)
-//	{
-//		MSG_ERROR("sensor_motion_panning_set_cb fail. %d", ret);
-//		sensor_destroy(mhandle_panning);
-//		return false;
-//	}
-	PERF_CHECK_END(LVL4, "sensor_motion_panning_browse_set_cb");
-
-	MSG_HIGH("sensor init succeded");
 
 	bInit_panning = true;
 	return true;
@@ -536,8 +444,6 @@ bool CMotion::init_sensor_panning()
 
 bool CMotion::deinit_sensor_tilt()
 {
-//	int ret = -1;
-
 	if (bInit_tilt == false) {
 		return true;
 	}
@@ -551,25 +457,11 @@ bool CMotion::deinit_sensor_tilt()
 
 	MSG_HIGH("deinit sensor tilt");
 
-//	ret = sensor_motion_tilt_unset_cb(mhandle_tilt);
-//	if(ret != SENSOR_ERROR_NONE)
-//	{
-//		MSG_ERROR("sensor_motion_tilt_unset_cb fail. %d", ret);
-//	}
-//
-//	ret = sensor_destroy(mhandle_tilt);
-//	if(ret != SENSOR_ERROR_NONE)
-//	{
-//		MSG_ERROR("tilt sensor_destroy fail. %d", ret);
-//	}
-
 	return true;
 }
 
 bool CMotion::deinit_sensor_panning()
 {
-//	int ret = -1;
-
 	if (bInit_panning == false) {
 		return true;
 	}
@@ -609,15 +501,11 @@ extern "C" motion_handle_t ivug_motion_register_sensor(motion_type_e type, motio
 	if (type == IV_MOTION_TILT) {
 		motion.init_sensor_tilt();
 
-		PERF_CHECK_BEGIN(LVL4, "register_sensor");
 		client = motion.register_sensor_tilt(cb_func, data);
-		PERF_CHECK_END(LVL4, "register_sensor");
 	} else if (type == IV_MOTION_PANNING) {
 		motion.init_sensor_panning();
 
-		PERF_CHECK_BEGIN(LVL4, "register_sensor");
 		client = motion.register_sensor_panning(cb_func, data);
-		PERF_CHECK_END(LVL4, "register_sensor");
 	}
 
 	return (motion_handle_t) client;

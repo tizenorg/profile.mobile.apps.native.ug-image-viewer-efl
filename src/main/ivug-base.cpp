@@ -23,69 +23,10 @@
 #include "ivug-common.h"
 #include "ivug-util.h"
 #include "ivug-popup.h"
-
 #include "ivug-callback.h"
 #include "ivug-context.h"
 #include "ivug-language-mgr.h"
 #include "ivug-base.h"
-
-void FreeUGData(ug_data *ug)
-{
-	IV_ASSERT(ug != NULL);
-
-	free(ug);
-}
-
-#ifdef TRACE_WINDOW
-static void _on_win_resize(void *data, Evas *e, Evas_Object *obj, void *event_info)
-{
-	Evas_Coord x, y, w, h;
-	evas_object_geometry_get(obj, &x, &y, &w, &h);
-
-	MSG_IMAGEVIEW_HIGH("Parent win(0x%08x) resized geomtery XYWH(%d,%d,%d,%d) angle=%d", obj, x, y, w, h, elm_win_rotation_get((Evas_Object *)ug_get_window()));
-}
-
-static void _on_win_move(void *data, Evas *e, Evas_Object *obj, void *event_info)
-{
-	Evas_Coord x, y, w, h;
-	evas_object_geometry_get(obj, &x, &y, &w, &h);
-
-	MSG_IMAGEVIEW_HIGH("Parent win(0x%08x) moved geomtery XYWH(%d,%d,%d,%d) angle=%d", obj, x, y, w, h, elm_win_rotation_get((Evas_Object *)ug_get_window()));
-}
-#endif
-
-
-static void _on_base_resize(void *data, Evas *e, Evas_Object *obj, void *event_info)
-{
-	Evas_Coord x, y, w, h;
-	evas_object_geometry_get(obj, &x, &y, &w, &h);
-
-	MSG_IMAGEVIEW_HIGH("Base layout(0x%08x) resized geomtery XYWH(%d,%d,%d,%d)", obj, x, y, w, h);
-}
-
-static void _on_base_move(void *data, Evas *e, Evas_Object *obj, void *event_info)
-{
-	Evas_Coord x, y, w, h;
-	evas_object_geometry_get(obj, &x, &y, &w, &h);
-
-	MSG_IMAGEVIEW_HIGH("Base layout(0x%08x) moved geomtery XYWH(%d,%d,%d,%d)", obj, x, y, w, h);
-}
-
-
-static void _on_base_show(void *data, Evas *e, Evas_Object *obj, void *event_info)
-{
-	MSG_IMAGEVIEW_HIGH("Base(0x%08x) layout show", obj);
-}
-
-static void _on_base_hide(void *data, Evas *e, Evas_Object *obj, void *event_info)
-{
-	MSG_IMAGEVIEW_HIGH("Base(0x%08x) layout hide", obj);
-}
-
-static void _on_receive_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
-{
-	MSG_MAIN_HIGH("Base layout(0x%08x) clicked : %s Layer=%d", obj, evas_object_name_get(obj), evas_object_layer_get(obj));
-}
 
 static Eina_Bool _on_exit_timer_expired(void *data)
 {
@@ -128,11 +69,6 @@ static void _on_mmc_state_changed(int storage_id, storage_dev_e dev, storage_sta
 	} else if (state == STORAGE_STATE_MOUNTED){
 		MSG_IMAGEVIEW_WARN("MMC Inserted!");
 	}
-}
-
-static void _on_base_deleted(void * data, Evas * e, Evas_Object * obj, void * event_info)
-{
-	MSG_IMAGEVIEW_ERROR("_on_base_deleted");
 }
 
 Evas_Object *create_layout(Evas_Object *parent, const char *edj, const char *group)
@@ -189,13 +125,6 @@ bool on_create( void *priv)
 
 	MSG_MED("on_create.");
 
-	/*Evas_Object *conform = (Evas_Object *)ug_get_conformant();
-	IV_ASSERT(conform != NULL);*/
-
-	PERF_CHECK_END(LVL0, "UG_MODULE_INIT -> On Create");
-
-	PERF_CHECK_BEGIN(LVL0, "On Create");
-
 	MSG_MED("on_create. IV & PRIV");
 
 	if (!priv) {
@@ -233,18 +162,13 @@ bool on_create( void *priv)
 	evas_object_show(win);
 	elm_win_conformant_set(win, EINA_TRUE);
 
-	PERF_CHECK_BEGIN(LVL1, "init context");
 	if (!ivug_context_init(win, conform)) {
 		MSG_ERROR("ivug_main_init error");
 		return false;
 	}
-	PERF_CHECK_END(LVL1, "init context");
-	PERF_CHECK_BEGIN(LVL1, "creating base");
 
 	ugd->base = create_fullview(conform);
 	elm_object_content_set(conform, ugd->base);
-
-	PERF_CHECK_END(LVL1, "creating base");
 
 	if (ugd->base == NULL) {
 		MSG_ERROR("Cannot create base view");
@@ -258,19 +182,6 @@ bool on_create( void *priv)
 	evas_object_geometry_get(ugd->base, &ux1, &uy1, &uw1, &uh1);
 
 	MSG_MAIN_HIGH("UG base created : 0x%08x (%d,%d,%d,%d)", ugd->base, ux1, uy1, uw1, uh1);
-
-	evas_object_event_callback_add(ugd->base, EVAS_CALLBACK_MOUSE_DOWN, _on_receive_mouse_down, NULL);
-
-	evas_object_event_callback_add(ugd->base, EVAS_CALLBACK_RESIZE, _on_base_resize, ugd);
-	evas_object_event_callback_add(ugd->base, EVAS_CALLBACK_MOVE, _on_base_move, NULL);
-
-	evas_object_event_callback_add(ugd->base, EVAS_CALLBACK_SHOW, _on_base_show, NULL);
-	evas_object_event_callback_add(ugd->base, EVAS_CALLBACK_HIDE, _on_base_hide, NULL);
-
-#ifdef TRACE_WINDOW
-	evas_object_event_callback_add(win, EVAS_CALLBACK_RESIZE, _on_win_resize, NULL);
-	evas_object_event_callback_add(win, EVAS_CALLBACK_MOVE, _on_win_move, NULL);
-#endif
 
 	error_code = storage_set_changed_cb(STORAGE_TYPE_EXTERNAL, _on_mmc_state_changed, ugd);
 	if (error_code != STORAGE_ERROR_NONE) {
@@ -338,8 +249,6 @@ void on_destroy(void *priv)
 {
 	MSG_IMAGEVIEW_HIGH("Image Viewer : %s(0x%08x) data=0x%08x", __func__, on_destroy, priv);
 
-	PERF_CHECK_BEGIN(LVL0, "On Destroy");
-
 	if (!priv) {
 		MSG_MAIN_ERROR("Invalid UG. Priv=0x%08x",priv);
 		return ;
@@ -357,54 +266,32 @@ void on_destroy(void *priv)
 		ugd->crop_ug = NULL;
 	}
 
-	//destroy main view.
+	/*Destroy main view.*/
 	if (ugd->main_view) {
-		PERF_CHECK_BEGIN(LVL1, "MainView");
 		ivug_main_view_destroy(ugd->main_view);
 		ugd->main_view = NULL;
-		PERF_CHECK_END(LVL1, "MainView");
 	}
 
 	if (ugd->ss_view) {
-		PERF_CHECK_BEGIN(LVL1, "SlideShowView");
 		ivug_slideshow_view_destroy(ugd->ss_view);
 		ugd->ss_view = NULL;
-		PERF_CHECK_END(LVL1, "SlideShowView");
 	}
 
-	//delete param.
+	/*Delete param.*/
 	if (ugd->ivug_param) {
 		ivug_param_delete(ugd->ivug_param);
 		ugd->ivug_param = NULL;
 	}
 
-	//finalize data
-	PERF_CHECK_BEGIN(LVL1, "Context");
+	/*Finalize data*/
 	if (!ivug_context_deinit()) {
 		MSG_IMAGEVIEW_ERROR("ivug_main_deinit failed");
 	}
-	PERF_CHECK_END(LVL1, "Context");
-	if (ugd->base) {
-		PERF_CHECK_BEGIN(LVL1, "Base layout");
-		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_MOUSE_DOWN, _on_receive_mouse_down);
-		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_RESIZE, _on_base_resize);
-		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_MOVE, _on_base_move);
-		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_SHOW, _on_base_show);
-		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_HIDE, _on_base_hide);
-		evas_object_event_callback_del(ugd->base, EVAS_CALLBACK_DEL, _on_base_deleted);
 
+	if (ugd->base) {
 		evas_object_del(ugd->base);
 		ugd->base = NULL;
-		PERF_CHECK_END(LVL1, "Base layout");
 	}
 
 	MSG_IMAGEVIEW_HIGH("Destroyed ug");
-
-	PERF_CHECK_END(LVL0, "On Destroy");
-}
-
-void _language_changed_cb(void *user_data)
-{
-	MSG_IMAGEVIEW_HIGH("Image Viewer : %s", __func__);
-
 }
