@@ -37,8 +37,6 @@
 #include <device/power.h>
 #include <assert.h>
 
-#include "statistics.h"
-
 #define DEFAULT_THUMBNAIL		"/opt/usr/share/media/.thumb/thumb_default.png"
 
 #undef LOG_LVL
@@ -275,38 +273,6 @@ static void _ivug_ss_update_pos(SlideShow *pSlideShow, Evas_Coord x, Evas_Coord 
 	                 x + pSlideShow->screen_w + IVUG_IMAGE_BETWEEN_MARGIN ,
 	                 y);
 }
-
-#if 0
-static bool _ivug_ss_load_next_image(SlideShow *pSlideShow)
-{
-	ivug_retv_if(!pSlideShow, false);
-	MSG_HIGH("");
-
-	Slide_Layout* sLyCurrent = &pSlideShow->sLayout[pSlideShow->sCurrent];
-	Slide_Layout* sLy = &pSlideShow->sLayout[(pSlideShow->sCurrent + 1) % 2];
-
-	Media_Item *next = NULL;
-	Media_Item *current = sLyCurrent->mitem;
-	do {
-		next = ivug_ss_get_next_item(pSlideShow->media_list,
-		                             pSlideShow->ss_Header,
-		                             current,
-		                             pSlideShow->ss_mode);
-
-		if (next == NULL) {
-			sLy->mitem = NULL;
-			return false;
-		}
-		current = next;
-	} while (!_ivug_ss_set_content(sLy, next));
-
-	if (next) {
-		evas_object_show(sLy->layout);
-	}
-
-	return true;
-}
-#endif
 
 void _ivug_ss_effect_finished(void *data)
 {

@@ -18,7 +18,6 @@
 #include <efl_extension.h>
 
 #include "ivug-popup.h"
-#include "ivug-vibration.h"
 #include "ivug-name-view.h"
 
 #include "ivug-language-mgr.h"
@@ -44,10 +43,6 @@ typedef struct _Ivug_Popup
 
 	Popup_Response response;
 
-#ifdef USE_MAXLENGTH_VIBE
-	vibration_h haptic_handle;
-#endif
-
 	Evas_Smart_Cb callback;
 	void *data;
 
@@ -67,25 +62,11 @@ static Ivug_Popup * ivug_popup_create()
 {
 	Ivug_Popup *iv_popup = calloc(1, sizeof(Ivug_Popup));
 
-#ifdef USE_MAXLENGTH_VIBE
-	iv_popup->haptic_handle = INVALID_HAPTIC_HANDLE;
-#endif
-
 	return iv_popup;
 }
 
 static void ivug_popup_delete(Ivug_Popup *iv_popup)
 {
-#ifdef USE_MAXLENGTH_VIBE
-	if (iv_popup->haptic_handle != INVALID_HAPTIC_HANDLE)
-	{
-		ivug_vibration_stop(iv_popup->haptic_handle);
-		ivug_vibration_delete(iv_popup->haptic_handle);
-
-		iv_popup->haptic_handle = INVALID_HAPTIC_HANDLE;
-	}
-#endif
-
 	if (iv_popup->popup)
 	{
 		evas_object_del(iv_popup->popup);
@@ -417,31 +398,6 @@ _ivug_rename_entry_changed(void *data, Evas_Object *obj, void *event_info)
 	free(content);
 }
 
-void
-_ivug_rename_maxlength_reached(void *data, Evas_Object *obj, void *event_info)
-{
-#ifdef USE_MAXLENGTH_VIBE
-	Ivug_Popup *iv_popup = (Ivug_Popup *)data;
-	IV_ASSERT(iv_popup != NULL);
-
-	if (iv_popup->haptic_handle == INVALID_HAPTIC_HANDLE)
-	{
-		iv_popup->haptic_handle = ivug_vibration_create();
-		if (iv_popup->haptic_handle == INVALID_HAPTIC_HANDLE)
-		{
-			MSG_IMAGEVIEW_ERROR("ivug_vibration_create failed");
-			return;
-		}
-	}
-	else
-	{
-		ivug_vibration_stop(iv_popup->haptic_handle);
-	}
-
-	ivug_vibration_play(iv_popup->haptic_handle ,VIBRATION_DURATION);
-#endif
-}
-
 Evas_Object *ivug_rename_popup_show(Evas_Object *parent, const char *filename, Evas_Smart_Cb response, void *data)
 {
 	Evas_Object *popup = NULL;
@@ -460,8 +416,7 @@ Evas_Object *ivug_rename_popup_show(Evas_Object *parent, const char *filename, E
 		MSG_IMAGEVIEW_ERROR("popup is NULL");
 		goto ENTRY_POPUP_FREE;
 	}
-	//evas_object_size_hint_weight_set(popup, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-	//elm_object_style_set(popup, "menustyle");
+
 	elm_object_part_text_set(popup, "title,text", "Rename");
 
 	char *popup_edj = IVUG_POPUP_EDJ_NAME;
@@ -489,7 +444,6 @@ Evas_Object *ivug_rename_popup_show(Evas_Object *parent, const char *filename, E
 	limit_filter_data.max_char_count = 64;
 	limit_filter_data.max_byte_count = 0;
 	elm_entry_markup_filter_append(entry, elm_entry_filter_limit_size, &limit_filter_data);
-	evas_object_smart_callback_add(entry, "maxlength,reached", _ivug_rename_maxlength_reached, (void *)iv_popup);
 
 	evas_object_show(layout);
 

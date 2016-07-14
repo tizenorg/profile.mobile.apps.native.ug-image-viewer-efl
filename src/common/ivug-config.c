@@ -15,7 +15,6 @@
 *
 */
 
-//#include "ivug-common.h"
 #include "ivug-define.h"
 #include "ivug-datatypes.h"
 #include "ivug-uuid.h"
@@ -25,7 +24,6 @@
 #include <system_settings.h>
 #include <app_preference.h>
 
-#include "statistics.h"
 #include "ivug-debug.h"
 #include "ivug-config.h"
 

@@ -19,8 +19,6 @@
 #define __IVUG_NAME_VIEW_H__
 
 #include "ivug-common.h"
-#include "ivug-vibration.h"
-//#include "ivug-widgets.h"
 
 typedef enum {
 	NAME_VIEW_RESPONSE_OK,
