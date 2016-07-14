@@ -244,9 +244,7 @@ void _on_slider_mouse_up(void *data, Evas *e, Evas_Object *obj, void *event_info
 
 				// Update Main View.
 				if (pMainView->bShowMenu == true) {
-					PERF_CHECK_BEGIN(LVL5, "Update main view");
 					_update_main_view(pMainView);
-					PERF_CHECK_END(LVL5, "Update main view");
 				}
 				ivug_medialist_get_data(pMainView->cur_mitem);
 
@@ -287,9 +285,7 @@ void _on_slider_mouse_up(void *data, Evas *e, Evas_Object *obj, void *event_info
 
 				// Update Main View.
 				if (pMainView->bShowMenu == true) {
-					PERF_CHECK_BEGIN(LVL5, "Update main view");
 					_update_main_view(pMainView);
-					PERF_CHECK_END(LVL5, "Update main view");
 				}
 
 				ivug_medialist_get_data(pMainView->cur_mitem);
@@ -665,9 +661,7 @@ void ivug_set_prev_next_photocam_images(void *data, Evas_Object **prev_pc, Evas_
 	char *edj_file = DEFAULT_THUMBNAIL_PATH;
 	// Update Main View.
 	if (pMainView->bShowMenu == true) {
-		PERF_CHECK_BEGIN(LVL5, "Update main view");
 		_update_main_view(pMainView);
-		PERF_CHECK_END(LVL5, "Update main view");
 	}
 	if (prev_mitem) {
 		Media_Data *pmData = ivug_medialist_get_data(prev_mitem);
@@ -693,9 +687,7 @@ void ivug_set_prev_next_photocam_images(void *data, Evas_Object **prev_pc, Evas_
 
 	// Update Main View.
 	if (pMainView->bShowMenu == true) {
-		PERF_CHECK_BEGIN(LVL5, "Update main view");
 		_update_main_view(pMainView);
-		PERF_CHECK_END(LVL5, "Update main view");
 	}
 	if (next_mitem) {
 		Media_Data *pmData = ivug_medialist_get_data(next_mitem);

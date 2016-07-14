@@ -37,8 +37,6 @@
 #include <device/power.h>
 #include <assert.h>
 
-#include "statistics.h"
-
 #define DEFAULT_THUMBNAIL		"/opt/usr/share/media/.thumb/thumb_default.png"
 
 #undef LOG_LVL
@@ -276,38 +274,6 @@ static void _ivug_ss_update_pos(SlideShow *pSlideShow, Evas_Coord x, Evas_Coord 
 	                 y);
 }
 
-#if 0
-static bool _ivug_ss_load_next_image(SlideShow *pSlideShow)
-{
-	ivug_retv_if(!pSlideShow, false);
-	MSG_HIGH("");
-
-	Slide_Layout* sLyCurrent = &pSlideShow->sLayout[pSlideShow->sCurrent];
-	Slide_Layout* sLy = &pSlideShow->sLayout[(pSlideShow->sCurrent + 1) % 2];
-
-	Media_Item *next = NULL;
-	Media_Item *current = sLyCurrent->mitem;
-	do {
-		next = ivug_ss_get_next_item(pSlideShow->media_list,
-		                             pSlideShow->ss_Header,
-		                             current,
-		                             pSlideShow->ss_mode);
-
-		if (next == NULL) {
-			sLy->mitem = NULL;
-			return false;
-		}
-		current = next;
-	} while (!_ivug_ss_set_content(sLy, next));
-
-	if (next) {
-		evas_object_show(sLy->layout);
-	}
-
-	return true;
-}
-#endif
-
 void _ivug_ss_effect_finished(void *data)
 {
 	ivug_ret_if(!data);
@@ -356,7 +322,6 @@ void _ivug_ss_effect_finished(void *data)
 
 		pSlideShow->bSS_StopFlag = EINA_FALSE;
 	}
-	//EFL::dump_obj(pSlideShow->obj, 0);
 }
 
 Evas_Object *_ivug_ss_create_layout(Evas_Object *parent, const char *edj_path, const char *group)
@@ -433,8 +398,6 @@ static Eina_Bool _ivug_ss_on_slide_interval(void *data)
 		ivug_effect_finalize(pSlideShow->effect_engine);
 		return ECORE_CALLBACK_CANCEL;
 	}
-
-//	EFL::dump_obj(pSlideShow->obj, 0);
 
 	pSlideShow->cur_item = sLyNext->mitem;
 
@@ -661,8 +624,6 @@ SlideShow *ivug_ss_create(Evas_Object *parent)
 	evas_object_show(pSlideShow->event);
 	evas_object_repeat_events_set(pSlideShow->event, EINA_TRUE);
 
-	//EFL::dump_obj(pSlideShow->obj, 0);
-
 	evas_object_event_callback_add(pSlideShow->obj, EVAS_CALLBACK_MOVE, _moved, pSlideShow);
 	evas_object_event_callback_add(pSlideShow->obj, EVAS_CALLBACK_RESIZE, _resized, pSlideShow);
 	evas_object_event_callback_add(pSlideShow->obj, EVAS_CALLBACK_SHOW, _shown, pSlideShow);
@@ -750,8 +711,6 @@ bool ivug_ss_start(SlideShow *pSlideShow , Media_Item *current, Media_List *list
 	_ivug_ss_video_icon(pSlideShow->sLayout[(pSlideShow->sCurrent + 1) % 2].layout, mitem);
 
 	pSlideShow->state = SLIDE_SHOW_RUNNING;
-
-//	EFL::dump_obj(pSlideShow->obj, 0);
 
 	if (pSlideShow->ss_timer) {
 		ecore_timer_del(pSlideShow->ss_timer);

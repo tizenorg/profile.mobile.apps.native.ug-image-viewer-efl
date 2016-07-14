@@ -369,18 +369,9 @@ static void _send_result_to_caller()
 	MSG_IMAGEVIEW_HIGH("Send load started event to caller");
 }
 
-static void _on_base_deleted(void * data, Evas * e, Evas_Object * obj, void * event_info)
-{
-	MSG_IMAGEVIEW_ERROR("_on_base_deleted");
-}
-
 static void launch_image_viewer(app_control_h service, ug_data *ugd)
 {
 	MSG_IMAGEVIEW_HIGH("Image Viewer BEGIN %s, ", __func__);
-
-	PERF_CHECK_END(LVL0, "On Create -> On Start");
-
-	PERF_CHECK_BEGIN(LVL0, "On Start");
 
 	if (!ugd) {
 		MSG_IMAGEVIEW_ERROR("Invalid UG. Data=0x%08x", ugd);
@@ -394,24 +385,18 @@ static void launch_image_viewer(app_control_h service, ug_data *ugd)
 	MSG_IMAGEVIEW_HIGH("Image Viewer : %s BaseGeometry(%d,%d,%d,%d)", __func__, ux, uy, uw, uh);
 
 	if (ugd->bError == true) {
-		PERF_CHECK_END(LVL0, "On Start");
 		MSG_IMAGEVIEW_ERROR("UG create has ERROR");
 		notification_status_message_post(GET_STR(IDS_UNABLE_TO_OPEN_FILE));
-		//ug_destroy_me(gGetUGHandle());
 		return;
 	}
 
 	if (ugd->main_view) {
-		PERF_CHECK_BEGIN(LVL1, "main_view_start");
 		ivug_main_view_start(ugd->main_view, service);
-		PERF_CHECK_END(LVL1, "main_view_start");
 	} else if (ugd->crop_ug) {
 		ivug_crop_ug_start(ugd->crop_ug);
 	}
 
 	ivug_add_reg_idler(ugd->main_view);
-
-	PERF_CHECK_END(LVL0, "On Start");
 
 	if (ugd->ivug_param->bStandalone == true) {
 		_send_result_to_caller();
@@ -1009,14 +994,10 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 
 		}
 	} else {
-		PERF_CHECK_BEGIN(LVL1, "main_view_create");
-
 		ivug_set_indicator_visibility(ugd->window, false);		// Set indicator visibility false.
 		ivug_set_indicator_overlap_mode(true);				// Set comformant as no indicator mode
 
 		ugd->main_view = ivug_main_view_create(ugd->base, ugd->ivug_param);
-
-		PERF_CHECK_END(LVL1, "main_view_create");
 
 		if (ugd->main_view == NULL) {	//set main view.
 			MSG_ERROR("Main View Layout Loading Fail");
@@ -1030,7 +1011,6 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		}
 
 // Load list.
-		PERF_CHECK_BEGIN(LVL1, "main_view_set_list");
 
 		if (ivug_main_view_set_list(ugd->main_view, ugd->ivug_param) == false) {
 			MSG_ERROR("Cannot load media list.");
@@ -1044,14 +1024,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 
 		Evas_Object *layout = ivug_main_view_object_get(ugd->main_view);
 		elm_object_part_content_set(ugd->base, "elm.swallow.content", layout);	//swallow
-
-		PERF_CHECK_END(LVL1, "main_view_set_list");
 	}
-
-	PERF_CHECK_END(LVL0, "On Create");
-
-
-	PERF_CHECK_BEGIN(LVL0, "On Create -> On Start");
 
 	evas_object_size_hint_weight_set(ugd->base, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	int ux, uy, uw, uh;
@@ -1059,8 +1032,6 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 	evas_object_geometry_get(ugd->base, &ux, &uy, &uw, &uh);
 
 	MSG_MAIN_HIGH("Image Viewer : %s Base(0x%08x) Geometry(%d,%d,%d,%d)", __func__, ugd->base, ux, uy, uw, uh);
-
-	evas_object_event_callback_add(ugd->base, EVAS_CALLBACK_DEL, _on_base_deleted, ugd);
 
 	/*Added from on_start*/
 	launch_image_viewer(service, ugd);

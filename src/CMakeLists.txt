@@ -14,18 +14,11 @@ SET(SRCS
 	common/ivug-file-info.c
 	common/ivug-language-mgr.c
 	common/ivug-util.c
-	common/statistics.c
 	common/ivug-callback.c
 	common/ivug-db.c
-	common/ivug-exif.c
 	common/ivug-file-util.c
 	common/ivug-message.c
 	common/ivug-uuid.c
-	#feature/ivug-comment.cpp
-	#feature/ivug-motion.cpp
-	#feature/ivug-transcoder.cpp
-	#feature/ivug-vibration.c
-	#feature/jpeg.cpp
 	main/ivug-base.cpp
 	main/control/ivug-context.c
 	main/control/ivug-crop-ug.cpp

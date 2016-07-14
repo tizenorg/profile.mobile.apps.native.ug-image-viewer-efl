@@ -22,10 +22,8 @@
 #include "ivug-name-view.h"
 #include "ivug-popup.h"
 #include "ivug-media.h"
-#include "ivug-vibration.h"
 #include "ivug-util.h"
 #include "ivug-language-mgr.h"
-#include <notification.h>
 
 #undef LOG_LVL
 #define LOG_LVL DBG_MSG_LVL_HIGH
@@ -51,10 +49,6 @@ struct _Ivug_NameView
 
 	char *guide_txt;
 	char *init_txt;
-
-#ifdef USE_MAXLENGTH_VIBE
-	vibration_h haptic_handle;
-#endif
 
 	FNResponse fnresponse;
 	void *clientdata;
@@ -110,10 +104,6 @@ _on_keypad_hide(void *data, Evas_Object *obj, void *event_info)
 	elm_naviframe_item_title_enabled_set(navi_it, EINA_TRUE, EINA_FALSE);
 #endif
 
-}
-
-void _on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
-{
 }
 
 static void
@@ -178,19 +168,6 @@ _ivug_name_view_maxlength_reached(void *data, Evas_Object *obj, void *event_info
 	Ivug_NameView *pNameView = (Ivug_NameView *)data;
 	MSG_ASSERT(pNameView != NULL);
 
-#ifdef USE_MAXLENGTH_VIBE
-	if (pNameView->haptic_handle == INVALID_HAPTIC_HANDLE) {
-		pNameView->haptic_handle = ivug_vibration_create();
-		if (pNameView->haptic_handle == INVALID_HAPTIC_HANDLE) {
-			MSG_ERROR("ivug_vibration_create failed");
-			return;
-		}
-	} else {
-		ivug_vibration_stop(pNameView->haptic_handle);
-	}
-
-	ivug_vibration_play(pNameView->haptic_handle ,VIBRATION_DURATION);
-#else
 	char message[50] = {0,};
 	int ret = -1;
 	snprintf(message, 50, GET_STR(IDS_MAX_CHAR_LENGTH_REACHED), MAX_CHAR_LEN);
@@ -199,7 +176,6 @@ _ivug_name_view_maxlength_reached(void *data, Evas_Object *obj, void *event_info
 	if (ret != NOTIFICATION_ERROR_NONE) {
 		MSG_IMAGEVIEW_ERROR("notification_status_message_post() ERROR [0x%x]", ret);
 	}
-#endif
 }
 
 static void
@@ -466,10 +442,6 @@ ivug_name_view_create(Evas_Object *parent, ivug_name_mode mode)
 		return NULL;
 	}
 
-#ifdef USE_MAXLENGTH_VIBE
-	pNameView->haptic_handle = INVALID_HAPTIC_HANDLE;
-#endif
-
 	pNameView->popup = elm_popup_add(parent);
 	char *popup_edj = IVUG_POPUP_EDJ_NAME;
 
@@ -524,15 +496,6 @@ ivug_name_view_destroy(Ivug_NameView *pNameView)
 	ivug_ret_if(pNameView == NULL);
 
 	MSG_HIGH("Destroy Name View");
-
-#ifdef USE_MAXLENGTH_VIBE
-	if (pNameView->haptic_handle != INVALID_HAPTIC_HANDLE) {
-		ivug_vibration_stop(pNameView->haptic_handle);
-		ivug_vibration_delete(pNameView->haptic_handle);
-
-		pNameView->haptic_handle = INVALID_HAPTIC_HANDLE;
-	}
-#endif
 
 	if (pNameView->navibar) {
 		evas_object_del(pNameView->navibar);
