@@ -1027,8 +1027,6 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 
 	MSG_MAIN_HIGH("Creating main view.");
 
-	PERF_CHECK_BEGIN(LVL2, "Create layout");
-
 //create main view layout
 	Ivug_MainView *pMainView = (Ivug_MainView *)calloc(1, sizeof(Ivug_MainView));
 	IV_ASSERT(pMainView != NULL);
@@ -1052,8 +1050,6 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 	pMainView->layout = layout;
 	evas_object_name_set(pMainView->layout, "Main Layout");
 
-	PERF_CHECK_END(LVL2, "Create layout");
-
 	edje_object_signal_callback_add(_EDJ(pMainView->layout),
 	                                "menu,hide,finished",
 	                                "edc",
@@ -1067,7 +1063,6 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 	                                (void *)pMainView);
 
 // Navigation bar
-	PERF_CHECK_BEGIN(LVL2, "elm_naviframe_add");
 
 	pMainView->navi_bar = elm_naviframe_add(layout);
 	if (pMainView->navi_bar == NULL) {
@@ -1084,10 +1079,6 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 	if (pMainView->mode != IVUG_MODE_SETAS && pMainView->mode != IVUG_MODE_SELECT && pMainView->mode != IVUG_MODE_HIDDEN) {
 		eext_object_event_callback_add(pMainView->navi_bar, EEXT_CALLBACK_MORE, on_btn_more_clicked, pMainView);
 	}
-
-// Layout life cycle is controlled by application explictily.
-// Because for ex, "Add tag" view is pushed, then previous view is removed. so app control life cycle directly.  --> Not true
-//	elm_naviframe_content_preserve_on_pop_set(pMainView->navi_bar, EINA_TRUE);
 
 	if (pMainView->mode != IVUG_MODE_SETAS) {
 #if 1
@@ -1106,10 +1097,6 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 	}
 	elm_object_part_content_set(layout, "mainview.navibar", pMainView->navi_bar);	//swallow
 
-	PERF_CHECK_END(LVL2, "elm_naviframe_add");
-
-	PERF_CHECK_BEGIN(LVL2, "elm_layout_add");
-
 	char *main_edj_path = IVUG_MAIN_EDJ;
 	pMainView->lyContent = create_layout(layout, main_edj_path, "navi_content");
 	free(main_edj_path);
@@ -1120,16 +1107,6 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 	}
 
 	evas_object_name_set(pMainView->lyContent, "Navi content");
-	PERF_CHECK_END(LVL2, "elm_layout_add");
-
-#ifdef BACK_BTN
-	PERF_CHECK_BEGIN(LVL2, "ivug_button_add");
-	pMainView->back_btn = elm_button_add(pMainView->navi_bar);
-	elm_object_style_set(pMainView->back_btn, "naviframe/end_btn/default");
-	PERF_CHECK_END(LVL2, "ivug_button_add");
-#endif
-
-	PERF_CHECK_BEGIN(LVL2, "Init slider");
 
 	pMainView->pSliderNew = ivug_slider_new_init(pMainView->layout, pMainView);
 	if (pMainView->pSliderNew == NULL) {
@@ -1149,9 +1126,6 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 
 	elm_object_part_content_set(pMainView->lyContent, "mainview.slider", sn_layout);	//swallow
 
-	PERF_CHECK_END(LVL2, "Init slider");
-
-	PERF_CHECK_BEGIN(LVL2, "elm_naviframe_item_push");
 	if (pMainView->mode != IVUG_MODE_SETAS && pMainView->mode != IVUG_MODE_SELECT) {
 		pMainView->navi_it = elm_naviframe_item_push(pMainView->navi_bar, NULL, NULL, NULL, pMainView->lyContent, NULL);
 
@@ -1177,12 +1151,8 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 		evas_object_show(pSavebtn);
 	}
 
-	elm_naviframe_item_pop_cb_set(pMainView->navi_it, _on_btn_back_clicked, pMainView); //pop�� ���� �ݹ� ���.
+	elm_naviframe_item_pop_cb_set(pMainView->navi_it, _on_btn_back_clicked, pMainView);
 
-	PERF_CHECK_END(LVL2, "elm_naviframe_item_push");
-	PERF_CHECK_BEGIN(LVL2, "add event handler");
-
-//	PERF_CHECK_BEGIN(LVL2, "Register callback");
 // 3ms
 	if (pMainView->mode != IVUG_MODE_SETAS && pMainView->mode != IVUG_MODE_HIDDEN) {
 		elm_object_signal_callback_add(sn_layout, "play", "elm", _on_slider_playvideo_icon_clicked, pMainView);
@@ -1196,11 +1166,9 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 		evas_object_event_callback_add(sn_layout, EVAS_CALLBACK_MOUSE_MOVE,  _on_slider_mouse_moved, pMainView);
 		evas_object_event_callback_add(sn_layout, EVAS_CALLBACK_MOUSE_UP,  _on_slider_mouse_up, pMainView);
 	}
-//	PERF_CHECK_END(LVL2, "Register callback");
 
 	if ((pMainView->view_by != IVUG_VIEW_BY_FILE)
 	        && (pMainView->view_by != IVUG_VIEW_BY_INVAILD)) {
-		PERF_CHECK_BEGIN(LVL2, "Create thumblist");
 
 #ifdef USE_THUMBLIST
 		pMainView->thumbs = ivug_thumblist_add(pMainView->layout);
@@ -1224,7 +1192,6 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 
 #endif
 
-		PERF_CHECK_END(LVL2, "Create thumblist");
 	}
 
 	if (pMainView->mode == IVUG_MODE_DISPLAY) {
@@ -1278,8 +1245,6 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 // For debugging.
 //	DELETE_NOTIFY(pMainView->layout);
 
-	PERF_CHECK_END(LVL2, "add event handler");
-
 	return pMainView;
 
 }
@@ -1290,7 +1255,6 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 {
 	MSG_MAIN_HIGH("Load media list. pMainView=0x%08x", pMainView);
 
-	PERF_CHECK_BEGIN(LVL2, "create media list");
 	if (NULL == pMainView) {
 		return false;
 	}
@@ -1300,8 +1264,6 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 		MSG_MAIN_ERROR("Creating media list failed");
 		return false;
 	}
-	PERF_CHECK_END(LVL2, "create media list");
-	PERF_CHECK_BEGIN(LVL2, "create filter");
 
 	Filter_struct *filter = ivug_param_create_filter(ivug_param);
 	if (filter == NULL) {
@@ -1311,8 +1273,6 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 	}
 
 	//do not use ivug_param->view_by after here
-
-	PERF_CHECK_END(LVL2, "create filter");
 
 	Media_Item *current = NULL;
 	Media_Data *pData = NULL;
@@ -1399,7 +1359,6 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 		}
 	}
 	pMainView->mList = mlist;
-	PERF_CHECK_BEGIN(LVL2, "media list set");
 
 	if (ivug_medialist_get_count(mlist) == 1) {
 		if (ivug_param->mode == IVUG_MODE_DISPLAY) {
@@ -1435,8 +1394,6 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 	}
 
 	ivug_slider_new_set_list(pMainView->pSliderNew, mlist, current);
-
-	PERF_CHECK_END(LVL2, "media list set");
 
 	return true;
 
@@ -1755,9 +1712,7 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 
 		// Update Main View.
 		if (pMainView->bShowMenu == true) {
-			PERF_CHECK_BEGIN(LVL5, "Update main view");
 			_update_main_view(pMainView);
-			PERF_CHECK_END(LVL5, "Update main view");
 		}
 
 		if (count != -1 && currentindex != -1 && currentindex + 1 < count) {

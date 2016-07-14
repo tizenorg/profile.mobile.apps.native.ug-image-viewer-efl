@@ -45,10 +45,6 @@
 #define PERF_SHOW_RESULT(fp)		iv_ta_accum_show_result_fp(fp)
 
 #else
-
-#define PERF_CHECK_BEGIN(lvl, name)
-#define PERF_CHECK_END(lvl, name)
-
 // Print out
 #define PERF_SHOW_RESULT(fp)
 

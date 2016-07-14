@@ -605,8 +605,6 @@ Ivug_SliderNew * ivug_slider_new_init(Evas_Object *parent, void *pMainView)
 		return NULL;
 	}
 
-	PERF_CHECK_BEGIN(LVL3, "create slider layout");
-
 	slider_new->parent = parent;
 	slider_new->mainTID = pthread_self();
 	MSG_WARN("main tid = 0x%08x", slider_new->mainTID);
@@ -693,28 +691,16 @@ Ivug_SliderNew * ivug_slider_new_init(Evas_Object *parent, void *pMainView)
 		evas_object_smart_member_add(slider_new->icon_layer, _EDJ(slider_new->layout));
 	}
 
-#if 1
 	int x, y, w, h;
 	evas_object_geometry_get(gGetCurrentWindow(), &x, &y, &w, &h);
-#else
-// \B0\A1\B7η\CE \BD\C3\C0\DB\C7ϴ\C2 \B0\E6\BF\EC \B5\BF\C0\DB \C0̻\F3\C7\D4.
-	int w, h;
-	ecore_x_window_size_get(ecore_x_window_root_first_get(), &w, &h); 	// Portrait size.
-#endif
-
-	PERF_CHECK_END(LVL3, "create slider layout");
-
-	PERF_CHECK_BEGIN(LVL3, "QPhotoAPI::create()");
 
 	//Qphoto_init();
-
-#if (1)
 	evas_object_event_callback_add(slider_new->layout, EVAS_CALLBACK_RESIZE, _on_obj_resize, slider_new);
 	evas_object_event_callback_add(slider_new->layout, EVAS_CALLBACK_MOVE, _on_obj_move, slider_new);
 
 	evas_object_event_callback_add(slider_new->layout, EVAS_CALLBACK_SHOW, _on_obj_show, NULL);
 	evas_object_event_callback_add(slider_new->layout, EVAS_CALLBACK_HIDE, _on_obj_hide, NULL);
-#endif
+
 
 	return slider_new;
 }
