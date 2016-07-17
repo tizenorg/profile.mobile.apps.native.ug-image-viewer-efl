@@ -1,6 +1,6 @@
 Name:       org.tizen.image-viewer
-#VCS_FROM:   profile/mobile/apps/native/ug-image-viewer-efl#c4509d97cec681eed9b5fb1708e6176394e27863
-#RS_Ver:    20160714_1 
+#VCS_FROM:   profile/mobile/apps/native/ug-image-viewer-efl#a26d02ee3dae377a45db9271bc59c1ca31e5c252
+#RS_Ver:    20160717_1 
 Summary:    image-viewer
 Version:    1.0.0
 Release:    1
@@ -28,7 +28,7 @@ Requires(post):  /usr/bin/tpk-backend
 %endif
 
 %description
-profile/mobile/apps/native/ug-image-viewer-efl#c4509d97cec681eed9b5fb1708e6176394e27863
+profile/mobile/apps/native/ug-image-viewer-efl#a26d02ee3dae377a45db9271bc59c1ca31e5c252
 This is a container package which have preload TPK files
 
 %prep
