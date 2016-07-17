@@ -940,6 +940,8 @@ _on_btn_rename_clicked(void *data)
 	free(name);
 
 	ivug_name_view_set_focus(pMainView->pNameView);
+
+	pMainView->popup = ivug_name_view_get_popup(pMainView->pNameView);
 }
 
 static void

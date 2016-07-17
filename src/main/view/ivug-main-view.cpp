@@ -1873,6 +1873,10 @@ ivug_main_view_resume(Ivug_MainView *pMainView)
 			MSG_MAIN_HIGH("Current filepath : %s", mdata->filepath);
 		} else {
 			MSG_MAIN_ERROR("Center file is not exist. stype=%d name=%s", mdata->slide_type, mdata->filepath);
+			if (pMainView->popup ) {
+				evas_object_del(pMainView->popup);
+				pMainView->popup = NULL;
+			}
 			Media_Item *nxt_item = ivug_medialist_get_next(pMainView->mList, mitem);
 			if (nxt_item) {
 				ivug_medialist_set_current_item(pMainView->mList, nxt_item);

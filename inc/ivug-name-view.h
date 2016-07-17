@@ -79,6 +79,9 @@ ivug_name_view_set_guide_text(Ivug_NameView *pNameView, const char *text_id);
 void
 ivug_name_view_set_filter_text(Ivug_NameView *pNameView, const char *filter_text);
 
+Evas_Object *
+ivug_name_view_get_popup(Ivug_NameView *pNameView);
+
 
 /*
 	Default is FALSE

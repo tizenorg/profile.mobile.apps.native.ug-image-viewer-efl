@@ -592,6 +592,13 @@ ivug_name_view_set_response_callback(Ivug_NameView *pNameView, FNResponse resp, 
 	pNameView->clientdata = data;
 }
 
+Evas_Object *
+ivug_name_view_get_popup(Ivug_NameView *pNameView)
+{
+	MSG_ASSERT(pNameView != NULL);
+
+	return pNameView->popup;
+}
 
 void
 ivug_name_view_set_title(Ivug_NameView *pNameView, const char *title)
