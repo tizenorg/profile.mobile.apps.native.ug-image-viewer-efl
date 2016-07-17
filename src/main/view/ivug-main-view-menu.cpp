@@ -836,6 +836,7 @@ _on_button_rename_view_response(Ivug_NameView *pView, ivug_name_response resp, c
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)pClientData;
 
+	pMainView->popup = NULL;
 	if (resp != NAME_VIEW_RESPONSE_OK) {
 		MSG_MAIN_ERROR("rename is canceled");
 
