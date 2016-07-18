@@ -195,6 +195,8 @@ static void _ivug_slider_new_changed_cb(void *handle, Media_Item *mItem, void *d
 {
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
 
+	if (slider_new == NULL) return;
+
 	if (slider_new->changed_cb) {
 		MSG_LOW("START : Item Changed");
 		slider_new->changed_cb(NULL, mItem, slider_new->changed_data);
@@ -221,6 +223,7 @@ static Evas_Event_Flags _momentum_move(void *data , void *event_info)
 	MSG_ASSERT(slider_new != NULL);
 
 	Elm_Gesture_Momentum_Info *p = (Elm_Gesture_Momentum_Info *) event_info;
+	if (p == NULL) return EVAS_EVENT_FLAG_NONE;
 
 	MSG_LOW("No of Fingers = %d", p->n);
 
@@ -262,6 +265,7 @@ static Evas_Event_Flags _momentum_abort(void *data , void *event_info)
 static Evas_Event_Flags n_finger_tap_end(void *data , void *event_info)
 {
 	Elm_Gesture_Taps_Info *p = (Elm_Gesture_Taps_Info *) event_info;
+	if (p == NULL) return EVAS_EVENT_FLAG_NONE;
 
 	MSG_MED("Finger tab end. Time=%d", p->timestamp);
 
@@ -303,6 +307,7 @@ static Evas_Event_Flags n_finger_tap_end(void *data , void *event_info)
 static Evas_Event_Flags _dbl_click_start(void *data , void *event_info)
 {
 	Elm_Gesture_Taps_Info *p = (Elm_Gesture_Taps_Info *) event_info;
+	if (p == NULL) return EVAS_EVENT_FLAG_NONE;
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
 	MSG_ASSERT(slider_new != NULL);
 
@@ -317,6 +322,7 @@ static Evas_Event_Flags _dbl_click_start(void *data , void *event_info)
 static Evas_Event_Flags _dbl_click_end(void *data , void *event_info)
 {
 	Elm_Gesture_Taps_Info *p = (Elm_Gesture_Taps_Info *) event_info;
+	if (p == NULL) return EVAS_EVENT_FLAG_NONE;
 
 	MSG_HIGH("Double Tap End :: No of fingers: %d, CenterPointXY(%d,%d)", p->n, p->x, p->y);
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
@@ -340,6 +346,7 @@ static Evas_Event_Flags _dbl_click_end(void *data , void *event_info)
 static Evas_Event_Flags _dbl_click_abort(void *data , void *event_info)
 {
 	Elm_Gesture_Taps_Info *p = (Elm_Gesture_Taps_Info *) event_info;
+	if (p == NULL) return EVAS_EVENT_FLAG_NONE;
 	MSG_HIGH("Double Tap Abort :: No of fingers: %d", p->n);
 
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
@@ -355,6 +362,7 @@ static Evas_Event_Flags _dbl_click_abort(void *data , void *event_info)
 Evas_Event_Flags n_long_tap_start(void *data , void *event_info)
 {
 	Elm_Gesture_Taps_Info *p = (Elm_Gesture_Taps_Info *) event_info;
+	if (p == NULL) return EVAS_EVENT_FLAG_NONE;
 
 	MSG_HIGH("Long tab start, x=%d, y=%d", p->x, p->y);
 
@@ -382,6 +390,8 @@ void ivug_slider_set_Photocam_moved(Ivug_SliderNew *slider_new, bool pcm)
 Evas_Event_Flags _zoom_start(void *data, void *event_info)
 {
 	Elm_Gesture_Zoom_Info *p = (Elm_Gesture_Zoom_Info *) event_info;
+
+	if (p == NULL) return EVAS_EVENT_FLAG_NONE;
 	MSG_LOW("zoom start <%d,%d> <%f>", p->x, p->y, p->zoom);
 
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
@@ -450,6 +460,7 @@ Evas_Event_Flags _zoom_start(void *data, void *event_info)
 Evas_Event_Flags _zoom_move(void *data, void *event_info)
 {
 	Elm_Gesture_Zoom_Info *p = (Elm_Gesture_Zoom_Info *) event_info;
+	if (p == NULL) return EVAS_EVENT_FLAG_NONE;
 	MSG_LOW("zoom move <%d,%d> <%f>", p->x, p->y, p->zoom);
 	MSG_MAIN_HIGH(" _zoom_move");
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
@@ -494,6 +505,7 @@ Evas_Event_Flags _zoom_move(void *data, void *event_info)
 Evas_Event_Flags _zoom_end(void *data, void *event_info)
 {
 	Elm_Gesture_Zoom_Info *p = (Elm_Gesture_Zoom_Info *) event_info;
+	if (p == NULL) return EVAS_EVENT_FLAG_NONE;
 	MSG_MAIN_HIGH("zoom end <%d,%d> <%f>", p->x, p->y, p->zoom);
 
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
@@ -519,6 +531,7 @@ Evas_Event_Flags _zoom_end(void *data, void *event_info)
 Evas_Event_Flags _zoom_abort(void *data, void *event_info)
 {
 	Elm_Gesture_Zoom_Info *p = (Elm_Gesture_Zoom_Info *) event_info;
+	if (p == NULL) return EVAS_EVENT_FLAG_NONE;
 	MSG_LOW("zoom abort <%d,%d> <%f>", p->x, p->y, p->zoom);
 
 	Ivug_SliderNew *slider_new = (Ivug_SliderNew *)data;
