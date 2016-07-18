@@ -66,6 +66,7 @@ Media_Data *ivug_medialist_get_data(const Media_Item *item);
 
 Media_Item *ivug_medialist_get_random_item(Media_List *mList);
 Media_Item *ivug_medialist_get_shuffle_item(Media_List *mList, Media_Item *item);
+int ivug_medialist_get_tot_count(Media_List *mList);
 
 
 Media_Item *ivug_medialist_find_item_by_index(Media_List *mList, int index);

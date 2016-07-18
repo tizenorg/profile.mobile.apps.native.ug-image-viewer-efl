@@ -1903,6 +1903,12 @@ ivug_main_view_resume(Ivug_MainView *pMainView)
 		}
 #endif
 		mitem = ivug_medialist_reload(pMainView->mList, mitem);
+
+		if ((ivug_medialist_get_tot_count(pMainView->mList) == 0)) {
+			DESTROY_ME();
+			return;
+		}
+
 		ivug_main_view_start(pMainView, NULL);
 	}
 
@@ -1920,9 +1926,11 @@ ivug_main_view_pause(Ivug_MainView *pMainView)
 {
 	IV_ASSERT(pMainView != NULL);
 
+#if 0
 	if (ivug_slider_new_get_mode(pMainView->pSliderNew) != SLIDER_MODE_SINGLE) {
 		ivug_medialist_set_update_callback(pMainView->mList);
 	}
+#endif
 
 	if (pMainView->ssHandle) {
 		ivug_ss_stop(pMainView->ssHandle);

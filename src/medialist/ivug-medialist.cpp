@@ -208,6 +208,14 @@ static bool _ivug_medialist_set_medialist_to_media_item(Media_List *mList)
 	return true;
 }
 
+int ivug_medialist_get_count(Media_List *mList)
+{
+	IV_ASSERT(mList != NULL);
+	_Media_List *_mList = (_Media_List *)mList;
+
+	return _mList->count;
+}
+
 static void _call_loaded_callback(_Media_List *_mList)
 {
 	IV_ASSERT(_mList != NULL);
@@ -975,13 +983,13 @@ ivug_medialist_del(Media_List *mList)
 
 }
 
-
-int ivug_medialist_get_count(Media_List *mList)
+int ivug_medialist_get_tot_count(Media_List *mList)
 {
 	IV_ASSERT(mList != NULL);
 	_Media_List *_mList = (_Media_List *)mList;
 
-	return _mList->count;
+	const Filter_struct *filter = _mList->filter_str;
+	return ivug_list_get_item_cnt(filter);
 }
 
 int ivug_medialist_get_index(Media_List *mList, Media_Item *item)
