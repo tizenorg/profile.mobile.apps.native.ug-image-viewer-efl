@@ -892,11 +892,23 @@ _on_button_rename_view_response(Ivug_NameView *pView, ivug_name_response resp, c
 				}
 			}
 #endif
+			Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
+
+			if (mData->slide_type == SLIDE_TYPE_VIDEO) {
+				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "show,icon", "video_play_icon");
+				pMainView->is_play_Icon = true;
+				elm_photocam_file_set(ivug_slider_new_get_photocam(pMainView->pSliderNew), mData->thumbnail_path);
+			} else {
+				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "hide,icon", "video_play_icon");
+				pMainView->is_play_Icon = false;
+				Evas_Load_Error e = elm_photocam_file_set(ivug_slider_new_get_photocam(pMainView->pSliderNew), mData->filepath);
+
+				if (EVAS_LOAD_ERROR_NONE != e) {
+					MSG_HIGH("Loading default Thumbnail");
+					elm_photocam_file_set(pMainView->photocam, DEFAULT_THUMBNAIL_PATH);
+				}
+			}
 		}
-
-// No need to reload image when rename!it just change file name
-//		pMainView->pPhotoViewer->ReloadImage();
-
 	}
 
 	ivug_name_view_destroy(pMainView->pNameView);
