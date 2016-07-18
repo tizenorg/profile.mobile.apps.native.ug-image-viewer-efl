@@ -112,7 +112,7 @@ _check_changed_cb(void *data, Evas_Object *obj, void *event_info)
 		if (pMainView->total_selected < pMainView->max_count &&
 				(pMainView->select_size + stFileInfo.st_size) <= pMainView->limit_size) {
 
-			pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list, mdata->filepath);
+			pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list, strdup(mdata->filepath));
 			pMainView->total_selected++;
 			evas_object_color_set(obj, 255, 255, 255, 255);
 			elm_check_state_set(obj, EINA_TRUE);
@@ -1416,9 +1416,9 @@ ivug_main_view_set_list(Ivug_MainView *pMainView, ivug_parameter *ivug_param)
 				Media_Item *mitem = ivug_medialist_find_item_by_filename(mlist, temp);
 				if (mitem) {
 					Media_Data *mdata = ivug_medialist_get_data(mitem);
-					pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list, mdata->filepath);
+					pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list, strdup(mdata->filepath));
 				} else {
-					pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list, temp);
+					pMainView->selected_path_list = eina_list_append(pMainView->selected_path_list, strdup(temp));
 				}
 			}
 		}
