@@ -1502,7 +1502,7 @@ static Eina_Bool _ivug_db_update_idler(void *data)
 	IV_ASSERT(pMainView != NULL);
 	ivug_update_list(pMainView);
 	if (pMainView->db_idler != NULL) {
-		ecore_timer_del(pMainView->db_idler);
+		ecore_idler_del(pMainView->db_idler);
 		pMainView->db_idler = NULL;
 	}
 	return ECORE_CALLBACK_CANCEL;
@@ -1515,7 +1515,7 @@ static Eina_Bool _ivug_db_update_timer_cb(void *data)
 	IV_ASSERT(pMainView != NULL);
 
 	if (pMainView->db_idler != NULL) {
-		ecore_timer_del(pMainView->db_idler);
+		ecore_idler_del(pMainView->db_idler);
 		pMainView->db_idler = NULL;
 	}
 	pMainView->db_idler = ecore_idler_add(_ivug_db_update_idler, data);
