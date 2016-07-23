@@ -50,6 +50,9 @@ void _on_slider_mouse_moved(void *data, Evas *e, Evas_Object *obj, void *event_i
 	IV_ASSERT(data != NULL);
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	Evas_Event_Mouse_Move *ev = (Evas_Event_Mouse_Move *) event_info;
+
+	if (!ev->buttons) return;
+
 	MSG_MAIN_HIGH("mouse moved current(%d,%d) prev(%d,%d)", ev->cur.output.x, ev->cur.output.y, ev->prev.output.x, ev->prev.output.y);
 	int bx = 0;
 	int by = 0;
@@ -86,11 +89,11 @@ void _on_slider_mouse_moved(void *data, Evas *e, Evas_Object *obj, void *event_i
 		                && (currentindex > 0))) {
 			pMainView->is_moved = true;
 
-			/*int diffX = pMainView->last_prev_mouse_point - ev->cur.output.x ;
+			int diffX = pMainView->last_prev_mouse_point - ev->cur.output.x ;
 			if (pMainView->is_play_Icon == true && (diffX > 10 || diffX < -10)) {
 				pMainView->is_play_Icon = false;
 				edje_object_signal_emit(elm_layout_edje_get(sn_layout), "hide,icon", "video_play_icon");
-			}*/
+			}
 
 			ivug_slider_set_current_Photocam(pMainView->pSliderNew, pMainView->currentphotocam);
 			ivug_slider_set_Photocam_moved(pMainView->pSliderNew, pMainView->is_moved);
