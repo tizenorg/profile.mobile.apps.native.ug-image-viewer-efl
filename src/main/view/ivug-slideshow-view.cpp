@@ -36,7 +36,7 @@
 #undef LOG_CAT
 #define LOG_CAT "IV-SLIDESHOW"
 
-
+/*
 static void
 _send_result(const char *key1, const char *val1, const char *key2, const char *val2)
 {
@@ -67,7 +67,7 @@ _send_result(const char *key1, const char *val1, const char *key2, const char *v
 
 	app_control_destroy(service);
 }
-
+*/
 static bool
 _destory_slideshow(Ivug_SlideShowView *pSSView,
 									  int state)
@@ -78,9 +78,9 @@ _destory_slideshow(Ivug_SlideShowView *pSSView,
 
 //	ivug_allow_lcd_off();
 	/* send msg to caller */
-	if (state == SLIDE_SHOW_STOPPED) {
+	/*if (state == SLIDE_SHOW_STOPPED) {
 		_send_result("EXIT", "NORMAL", NULL, NULL);
-	}
+	}*/
 
 	/*from gallery ablum*/
 	// when standalone, slideshow window have to be capture, so don't destroy here

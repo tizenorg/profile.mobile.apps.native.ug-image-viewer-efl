@@ -63,6 +63,9 @@ ivug_list_popoup_show(const char *title, void *data);
 bool
 ivug_ss_pause(SlideShow *pSlideShow);
 
+Eina_Bool
+ivug_ss_get_state(SlideShow *pSlideShow);
+
 bool
 ivug_ss_stop(SlideShow *pSlideShow);
 

@@ -824,12 +824,12 @@ void ivug_slider_new_move_item(Ivug_SliderNew *slider_new, Media_Item *item)
 {
 
 }
-
+/*
 void ivug_slider_new_reload(Ivug_SliderNew *slider_new)
 {
 	MSG_HIGH("QSlider(0x%08x) Reload", slider_new);
 }
-
+*/
 void ivug_slider_new_region_get(Ivug_SliderNew *slider_new, int *x, int *y, int *w, int *h)
 {
 
