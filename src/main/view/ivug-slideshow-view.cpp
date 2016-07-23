@@ -36,51 +36,12 @@
 #undef LOG_CAT
 #define LOG_CAT "IV-SLIDESHOW"
 
-
-static void
-_send_result(const char *key1, const char *val1, const char *key2, const char *val2)
-{
-	int ret = 0;
-	app_control_h service = NULL;
-
-	ret = app_control_create(&service);
-	if (ret != APP_CONTROL_ERROR_NONE) {
-		MSG_SEC("app_control_create failed");
-		return;
-	}
-
-	if (key1 && val1) {
-		MSG_SEC("Bundle 1 : [%s = %s]", key1, val1);
-		app_control_add_extra_data(service, key1, val1);
-	}
-
-	if (key2 && val2) {
-		MSG_SEC("Bundle 2 : [%s = %s]", key2, val2);
-		ret = app_control_add_extra_data(service, key2, val2);
-		if (ret != APP_CONTROL_ERROR_NONE) {
-			MSG_SEC("app_control add extra data failed");
-			return;
-		}
-	}
-
-	app_control_reply_to_launch_request(service, gGetServiceHandle(), APP_CONTROL_RESULT_SUCCEEDED);
-
-	app_control_destroy(service);
-}
-
 static bool
-_destory_slideshow(Ivug_SlideShowView *pSSView,
-									  int state)
+_destory_slideshow(Ivug_SlideShowView *pSSView)
 {
 	IV_ASSERT(pSSView != NULL);
 	evas_object_smart_callback_del_full(ivug_ss_object_get(pSSView->ssHandle),
 										"slideshow,finished", on_slideshow_finished, pSSView);
-
-//	ivug_allow_lcd_off();
-	/* send msg to caller */
-	if (state == SLIDE_SHOW_STOPPED) {
-		_send_result("EXIT", "NORMAL", NULL, NULL);
-	}
 
 	/*from gallery ablum*/
 	// when standalone, slideshow window have to be capture, so don't destroy here
@@ -101,7 +62,7 @@ void ivug_slideshow_view_on_mmc_state_changed(void *data)
 
 	//ivug_timeout_popup_show(ivug_ss_object_get(pSSView->ssHandle), NULL, NULL, IDS_ERROR, IDS_SD_CARD_REMOVED);
 	ivug_ss_set_stop(pSSView->ssHandle);
-	_destory_slideshow(pSSView, SLIDE_SHOW_STOPPED);
+	_destory_slideshow(pSSView);
 }
 
 void

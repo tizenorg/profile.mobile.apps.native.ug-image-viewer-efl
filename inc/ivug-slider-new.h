@@ -96,9 +96,6 @@ void ivug_slider_set_location_callback(Ivug_SliderNew *slider_new, location_call
 
 void ivug_slider_new_image_size_get(Ivug_SliderNew *slider_new, int *w, int *h);
 
-//update current window
-void ivug_slider_new_reload(Ivug_SliderNew *slider_new);
-
 //update whole list
 void ivug_slider_new_update_list(Ivug_SliderNew *slider_new, Media_List *mList);
 

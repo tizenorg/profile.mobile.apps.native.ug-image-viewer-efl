@@ -577,40 +577,46 @@ on_slideshow_finished(void *data, Evas_Object *obj, void *event_info)
 	pMainView->isSliding = false;
 
 
-	item = ivug_ss_item_get(pMainView->ssHandle);
+	if (pMainView->ssHandle && ivug_ss_get_state(pMainView->ssHandle) == EINA_TRUE) {
+		item = ivug_ss_item_get(pMainView->ssHandle);
+	}
+
+	if (pMainView->ssHandle) {
 	ivug_ss_delete(pMainView->ssHandle);
 	pMainView->ssHandle = NULL;
+	}
 
 	if (gGetDestroying() == true) {
 		MSG_MAIN_WARN("ug is destroying");
 		return;
 	}
 
-	if (item) {
-		ivug_medialist_set_current_item(pMainView->mList, item);
-		ivug_main_view_start(pMainView, NULL);
-	}
+	if (pMainView->ssHandle && ivug_ss_get_state(pMainView->ssHandle) == EINA_TRUE) {
+		if (item) {
+			ivug_medialist_set_current_item(pMainView->mList, item);
+			ivug_main_view_start(pMainView, NULL);
+		}
 
 #ifdef USE_THUMBLIST
-	if (pMainView->thumbs) {
-		Image_Object *img = NULL;
-		if (item) {
-			img = ivug_thumblist_find_item_by_data(pMainView->thumbs, item);
-		}
+		if (pMainView->thumbs) {
+			Image_Object *img = NULL;
+			if (item) {
+				img = ivug_thumblist_find_item_by_data(pMainView->thumbs, item);
+			}
 
-		if (img == NULL) {
-			MSG_MAIN_ERROR("Cannot find item");
-		} else {
-			MSG_MAIN_HIGH("pMainView->bSetThmByUser : %d", pMainView->bSetThmByUser);
+			if (img == NULL) {
+				MSG_MAIN_ERROR("Cannot find item");
+			} else {
+				MSG_MAIN_HIGH("pMainView->bSetThmByUser : %d", pMainView->bSetThmByUser);
 
-			pMainView->bSetThmByUser = true;
-			ivug_thumblist_select_item(pMainView->thumbs, img);
+				pMainView->bSetThmByUser = true;
+				ivug_thumblist_select_item(pMainView->thumbs, img);
+			}
 		}
-	}
 #endif
 
-	ivug_slider_new_reload(pMainView->pSliderNew);
-	ivug_main_view_show_menu_bar(pMainView);
+		ivug_main_view_show_menu_bar(pMainView);
+	}
 
 }
 
@@ -618,10 +624,10 @@ static bool _destory_slideshow_and_ug(Ivug_MainView *pMainView,
                                       bool bMmc_out)
 {
 	IV_ASSERT(pMainView != NULL);
-	evas_object_smart_callback_del_full(ivug_ss_object_get(pMainView->ssHandle),
-										"slideshow,finished", on_slideshow_finished, pMainView);
+	if (! pMainView->ssHandle) return false;
+	evas_object_smart_callback_del(ivug_ss_object_get(pMainView->ssHandle),
+										"slideshow,finished", on_slideshow_finished);
 
-//	ivug_allow_lcd_off();
 	/*from gallery ablum*/
 	if (bMmc_out) {
 		MSG_MAIN_HIGH("image viewer end cause slide show ended");
@@ -1454,6 +1460,11 @@ void ivug_main_view_start_slideshow(Ivug_MainView *pMainView, Eina_Bool bSlideFi
 
 //	ivug_prohibit_lcd_off();
 	//ivug_main_view_hide_menu_bar(pMainView);
+
+	if (pMainView->ssHandle) {
+		ivug_ss_delete(pMainView->ssHandle);
+		pMainView->ssHandle = NULL;
+	}
 
 	pMainView->ssHandle = ivug_ss_create(pMainView->layout);
 	pMainView->isSliding = true;

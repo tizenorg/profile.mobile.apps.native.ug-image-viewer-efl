@@ -763,6 +763,12 @@ bool ivug_ss_start(SlideShow *pSlideShow , Media_Item *current, Media_List *list
 	return true;
 }
 
+Eina_Bool ivug_ss_get_state(SlideShow *pSlideShow)
+{
+	MSG_ASSERT(pSlideShow != NULL);
+
+	return pSlideShow->bSS_StopFlag;
+}
 
 bool ivug_ss_stop(SlideShow *pSlideShow)
 {
