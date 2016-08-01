@@ -585,7 +585,7 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 		app_control_get_extra_data (service, IVUG_BUNDLE_KEY_PATH, &szFilePath);
 		if (szFilePath == NULL) {
 			MSG_MAIN_HIGH("File path is NULL");
-			app_control_get_uri(service, &szFilePath);	// app gadget
+			app_control_get_uri(service, &szFilePath);
 			if (szFilePath) {
 				MSG_MAIN_HIGH("App gadget launched %s", szFilePath);
 				if (data->view_by != IVUG_VIEW_BY_FOLDER
@@ -595,6 +595,9 @@ ivug_param_create_from_bundle(app_control_h service, void *ugdata)
 				}
 				if (data->mode == IVUG_MODE_INVAILD) {
 					data->mode = IVUG_MODE_SINGLE;
+				}
+				if (strstr (szFilePath, "/.") != NULL) {
+					data->mode = IVUG_MODE_HIDDEN;
 				}
 			}
 		} else {

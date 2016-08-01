@@ -45,7 +45,7 @@ extern "C" int app_control_send_terminate_request(app_control_h service);
 
 
 #define LONGTAP_TIMEOUT	(2.0) // 2secs
-
+#define IVUG_FILE_PREFIX		"file://"
 #define ABS(x) ((x) < 0 ? -(x) : (x))
 
 typedef enum {
@@ -1736,15 +1736,27 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 		char *hidden_file_path = NULL;
 		int ret = app_control_get_extra_data(service, "Path", &hidden_file_path);
 		if (ret != APP_CONTROL_ERROR_NONE) {
-			MSG_HIGH("app_control_get_extra_data failed");
+			MSG_MAIN_HIGH("app_control_get_extra_data failed");
+		}
+
+		if (hidden_file_path == NULL) {
+			ret = app_control_get_uri(service, &hidden_file_path);
+			if (ret != APP_CONTROL_ERROR_NONE) {
+				MSG_MAIN_HIGH("app_control_get_uri failed");
+			}
+		}
+
+		if (strncmp(IVUG_FILE_PREFIX, hidden_file_path, strlen(IVUG_FILE_PREFIX)) == 0) {
+			hidden_file_path = hidden_file_path + strlen(IVUG_FILE_PREFIX);
 		}
 
 		e = elm_photocam_file_set(pMainView->photocam, hidden_file_path);
 
 		if (EVAS_LOAD_ERROR_NONE != e) {
-			MSG_HIGH("Loading default Thumbnail");
+			MSG_MAIN_HIGH("Loading default Thumbnail");
 			elm_photocam_file_set(pMainView->photocam, default_thumbnail_edj_path);
 		}
+		edje_object_signal_callback_add(elm_layout_edje_get(pMainView->lyContent), "button_clicked", "elm", _back_button_clicked, pMainView);
 	}
 
 	evas_object_show(pMainView->photocam);
@@ -1870,6 +1882,8 @@ ivug_main_view_resume(Ivug_MainView *pMainView)
 	MSG_MAIN_HIGH("Main View Update");
 
 	struct stat info = {0,};
+
+	if (pMainView->mList == NULL) return;
 	Media_Item *mitem = ivug_medialist_get_current_item(pMainView->mList);
 	Media_Data *mdata = ivug_medialist_get_data(mitem);
 

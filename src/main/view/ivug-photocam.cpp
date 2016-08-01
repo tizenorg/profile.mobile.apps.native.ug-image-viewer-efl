@@ -611,7 +611,7 @@ _ivug_main_view_right_transit_by_item_complete_cb(void *data, Evas_Object * obj,
 /* Used to create a new photocam image*/
 void ivug_create_new_photocam_image(void *data, Evas_Object **cur_pc, const char *cur_iva)
 {
-	MSG_MAIN_HIGH(" ivug_create_new_photocam_image");
+	MSG_MAIN_HIGH("ivug_create_new_photocam_image");
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
 	*cur_pc = elm_photocam_add(sn_layout);
@@ -629,7 +629,7 @@ void ivug_create_new_photocam_image(void *data, Evas_Object **cur_pc, const char
 /*Make the  previous and next photocam images ready for smooth movement of images*/
 void ivug_set_prev_next_photocam_images(void *data, Evas_Object **prev_pc, Evas_Object **next_pc, const char *prev_iva, const char *next_iva)
 {
-	MSG_MAIN_HIGH("  ivug_main_view_set_prev_next_photocam_images");
+	MSG_MAIN_HIGH("ivug_main_view_set_prev_next_photocam_images");
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
 	Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
 	Evas_Load_Error err = EVAS_LOAD_ERROR_NONE;
