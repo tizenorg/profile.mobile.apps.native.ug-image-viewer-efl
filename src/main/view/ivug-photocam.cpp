@@ -499,6 +499,8 @@ _ivug_main_view_left_transit_by_item_complete_cb(void *data, Evas_Object * obj, 
 {
 	MSG_MAIN_HIGH("emission: %s, source: %s", emission, source);
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+	char *default_thumbnail_edj_path = DEFAULT_THUMBNAIL_PATH;
+
 	Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
 
 	if (pMainView->prevphotocam == PHOTOCAM_1) {
@@ -551,6 +553,24 @@ _ivug_main_view_left_transit_by_item_complete_cb(void *data, Evas_Object * obj, 
 		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam0, &pMainView->photocam2, prev_iva, next_iva);
 	}
 	pMainView->slide_state = false;//Transition is completed.
+
+	if ((pMainView->mode == IVUG_MODE_NORMAL || pMainView->mode == IVUG_MODE_CAMERA || pMainView->view_by == IVUG_VIEW_BY_FOLDER || pMainView->view_by == IVUG_VIEW_BY_ALL)
+			&& pMainView->mode != IVUG_MODE_SETAS && pMainView->mode != IVUG_MODE_SELECT && pMainView->mode != IVUG_MODE_HIDDEN) {
+		if (!strcmp(elm_photocam_file_get(ivug_slider_new_get_photocam(pMainView->pSliderNew)),
+					default_thumbnail_edj_path)) {
+			if (pMainView->btn_favorite) {
+				evas_object_del(pMainView->btn_favorite);
+				pMainView->btn_favorite = NULL;
+			}
+		} else {
+			if (pMainView->btn_favorite == NULL) {
+				pMainView->btn_favorite = create_favorite_button(pMainView->lyContent);
+				evas_object_smart_callback_add(pMainView->btn_favorite, "clicked", _on_btn_favorite_cb, pMainView);
+				elm_object_part_content_set(pMainView->lyContent, "elm.swallow.favorite", pMainView->btn_favorite);
+			}
+		}
+	}
+	free (default_thumbnail_edj_path);
 }
 
 /* When the right transition is completed Rearrange the photocam images*/
@@ -559,6 +579,7 @@ _ivug_main_view_right_transit_by_item_complete_cb(void *data, Evas_Object * obj,
 {
 	MSG_MAIN_HIGH("emission: %s, source: %s", emission, source);
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+	char *default_thumbnail_edj_path = DEFAULT_THUMBNAIL_PATH;
 	Evas_Object *sn_layout = ivug_slider_new_get_layout(pMainView->pSliderNew);
 
 	if (pMainView->prevphotocam == PHOTOCAM_1) {
@@ -606,6 +627,24 @@ _ivug_main_view_right_transit_by_item_complete_cb(void *data, Evas_Object * obj,
 		ivug_set_prev_next_photocam_images(pMainView, &pMainView->photocam0, &pMainView->photocam2, prev_iva, next_iva);
 	}
 	pMainView->slide_state = false;//Transition is completed.
+
+	if ((pMainView->mode == IVUG_MODE_NORMAL || pMainView->mode == IVUG_MODE_CAMERA || pMainView->view_by == IVUG_VIEW_BY_FOLDER || pMainView->view_by == IVUG_VIEW_BY_ALL)
+			&& pMainView->mode != IVUG_MODE_SETAS && pMainView->mode != IVUG_MODE_SELECT && pMainView->mode != IVUG_MODE_HIDDEN) {
+		if (!strcmp(elm_photocam_file_get(ivug_slider_new_get_photocam(pMainView->pSliderNew)),
+					default_thumbnail_edj_path)) {
+			if (pMainView->btn_favorite) {
+				evas_object_del(pMainView->btn_favorite);
+				pMainView->btn_favorite = NULL;
+			}
+		} else {
+			if (pMainView->btn_favorite == NULL) {
+				pMainView->btn_favorite = create_favorite_button(pMainView->lyContent);
+				evas_object_smart_callback_add(pMainView->btn_favorite, "clicked", _on_btn_favorite_cb, pMainView);
+				elm_object_part_content_set(pMainView->lyContent, "elm.swallow.favorite", pMainView->btn_favorite);
+			}
+		}
+	}
+	free (default_thumbnail_edj_path);
 }
 
 /* Used to create a new photocam image*/
