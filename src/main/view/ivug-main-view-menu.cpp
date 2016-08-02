@@ -1411,6 +1411,21 @@ _ivug_ctxpopup_delete_sel_cb(void *data, Evas_Object *obj, void *event_info)
 }
 
 static void
+_ivug_ctxpopup_details_sel_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	IV_ASSERT(data != NULL);
+	Ivug_MainView *pMainView = (Ivug_MainView *)data;
+
+	if (pMainView->ctx_popup) {
+		evas_object_del(pMainView->ctx_popup);
+		pMainView->ctx_popup = NULL;
+	}
+
+	//[ToDo]
+	return;
+}
+
+static void
 _ivug_ctxpopup_rename_sel_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	Ivug_MainView *pMainView = (Ivug_MainView *)data;
@@ -1995,18 +2010,24 @@ void on_btn_more_clicked(void *data, Evas_Object *obj, void *event_info)
 										ELM_CTXPOPUP_DIRECTION_UNKNOWN);
 
 	pMainView->ctx_popup = ctxpopup;
+	char *default_thumbnail_edj_path = DEFAULT_THUMBNAIL_PATH;
 
 	if (pMainView->mode == IVUG_MODE_EMAIL) {
 		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_FILE_DOWNLOAD), NULL, _ivug_ctxpopup_download_sel_cb, pMainView);
-
-	} else if (pMainView->view_by != IVUG_VIEW_BY_FAVORITES) {
+	} else if (pMainView->view_by == IVUG_VIEW_BY_FAVORITES){
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_SLIDE_SHOW), NULL, _ivug_ctxpopup_slideshow_sel_cb, pMainView);
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_RENAME_IMAGE), NULL, _ivug_ctxpopup_rename_sel_cb, pMainView);
+	} else if (!strcmp(elm_photocam_file_get(ivug_slider_new_get_photocam(pMainView->pSliderNew)),
+					  default_thumbnail_edj_path)) {
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_DELETE_IMAGE), NULL, _ivug_ctxpopup_delete_sel_cb, pMainView);
+		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_DETAILS), NULL, _ivug_ctxpopup_details_sel_cb, pMainView);
+	} else {
 		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_SLIDE_SHOW), NULL, _ivug_ctxpopup_slideshow_sel_cb, pMainView);
 		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_DELETE_IMAGE), NULL, _ivug_ctxpopup_delete_sel_cb, pMainView);
 		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_RENAME_IMAGE), NULL, _ivug_ctxpopup_rename_sel_cb, pMainView);
-	} else {
-		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_SLIDE_SHOW), NULL, _ivug_ctxpopup_slideshow_sel_cb, pMainView);
-		elm_ctxpopup_item_append(ctxpopup, GET_STR(IDS_RENAME_IMAGE), NULL, _ivug_ctxpopup_rename_sel_cb, pMainView);
 	}
+
+	free(default_thumbnail_edj_path);
 	elm_ctxpopup_auto_hide_disabled_set(ctxpopup, EINA_TRUE);
 
 	_ivug_move_more_ctxpopup(gGetCurrentWindow(), ctxpopup);

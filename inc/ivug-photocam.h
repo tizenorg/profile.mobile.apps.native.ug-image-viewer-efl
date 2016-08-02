@@ -42,6 +42,7 @@ void _on_slider_mouse_up(void *data, Evas *e, Evas_Object *obj, void *event_info
  void _on_slider_mouse_moved (void *data, Evas *e, Evas_Object *obj, void *event_info);
  Eina_Bool _ivug_left_move_interval(void *data);
  Eina_Bool _ivug_right_move_interval(void *data);
+ void ivug_update_favourite_button(Ivug_MainView *pMainView);
  bool _main_view_object_move_ (Ivug_MainView *pMainView, Evas_Object *obj, int photocampos);
  void _ivug_main_view_left_transit_by_item_complete_cb(void *data, Evas_Object * obj, const char *emission, const char *source);
 void _ivug_main_view_right_transit_by_item_complete_cb(void *data, Evas_Object * obj, const char *emission, const char *source);

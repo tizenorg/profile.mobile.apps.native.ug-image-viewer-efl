@@ -142,7 +142,8 @@ void ivug_main_view_set_testmode(Ivug_MainView *pMainView, bool bTestMode);
 */
 void ivug_main_view_show_menu_bar(Ivug_MainView *pMainView);
 void ivug_main_view_hide_menu_bar(Ivug_MainView *pMainView);
-
+void _on_btn_favorite_cb(void *data, Evas_Object *obj, void *event_info);
+Evas_Object* create_favorite_button(Evas_Object *parent);
 
 void _ivug_main_view_del_hide_timer(Ivug_MainView *pMainView, const char *func, int line);
 
