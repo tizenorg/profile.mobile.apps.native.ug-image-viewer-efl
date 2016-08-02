@@ -164,7 +164,7 @@ void _update_favorite(Ivug_MainView *pMainView)
 	}
 }
 
-static void _on_btn_favorite_cb(void *data, Evas_Object *obj, void *event_info)
+void _on_btn_favorite_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	MSG_MAIN_HIGH("Btn Favorite clicked");
 
@@ -240,7 +240,7 @@ Evas_Object *create_layout(Evas_Object *parent, const char *edj, const char *gro
 	return layout;
 }*/
 
-static Evas_Object* _create_favorite_button(Evas_Object *parent)
+Evas_Object* create_favorite_button(Evas_Object *parent)
 {
 	Evas_Object *focusButton = elm_button_add(parent);
 	elm_object_style_set(focusButton, "focus");
@@ -1271,7 +1271,7 @@ ivug_main_view_create(Evas_Object* parent, ivug_parameter *param)
 
 	if ((pMainView->mode == IVUG_MODE_NORMAL || pMainView->mode == IVUG_MODE_CAMERA || pMainView->view_by == IVUG_VIEW_BY_FOLDER || pMainView->view_by == IVUG_VIEW_BY_ALL)
 	        && pMainView->mode != IVUG_MODE_SETAS && pMainView->mode != IVUG_MODE_SELECT && pMainView->mode != IVUG_MODE_HIDDEN) {
-		pMainView->btn_favorite = _create_favorite_button(pMainView->lyContent);
+		pMainView->btn_favorite = create_favorite_button(pMainView->lyContent);
 		evas_object_smart_callback_add(pMainView->btn_favorite, "clicked", _on_btn_favorite_cb, pMainView);
 		elm_object_part_content_set(pMainView->lyContent, "elm.swallow.favorite", pMainView->btn_favorite); //swallow
 	}
@@ -1870,6 +1870,12 @@ ivug_main_view_start(Ivug_MainView *pMainView, app_control_h service)
 		edje_object_signal_emit(_EDJ(pMainView->lyContent), "elm,state,hide", "user");
 		pMainView->bShowMenu = false ;
 	}*/
+
+	if (!strcmp(elm_photocam_file_get(ivug_slider_new_get_photocam(pMainView->pSliderNew)),
+						  default_thumbnail_edj_path)) {
+		evas_object_del(pMainView->btn_favorite);
+		pMainView->btn_favorite = NULL;
+	}
 	free(default_thumbnail_edj_path);
 }
 
