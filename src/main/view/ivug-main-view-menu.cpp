@@ -653,6 +653,11 @@ void _on_remove_main_view_ui(Ivug_MainView *pMainView)
 		pMainView->lyContent = NULL;
 	}
 
+	if (pMainView->slide_move_timer) {
+		ecore_timer_del(pMainView->slide_move_timer);
+		pMainView->slide_move_timer = NULL;
+	}
+
 	if (pMainView->mList) {
 		MSG_MAIN_HIGH("Remove media list. mList=0x%08x", pMainView->mList);
 		ivug_medialist_del(pMainView->mList);
